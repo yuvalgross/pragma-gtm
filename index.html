@@ -2885,6 +2885,16 @@ section {
 .philosophy-section {
     padding: 2.75rem 1rem;
   }
+/* ── Mobile overflow fixes for iPhone/small phones ── */
+.arch-divider {
+    padding: 2.5rem 0.875rem 3rem;
+  }
+.arch-interactive {
+    max-width: 100%; overflow: hidden;
+  }
+.arch-interactive > * {
+    min-width: 0;
+  }
 h1 {
     font-size: clamp(1.5rem, 6.5vw, 1.85rem);
   }
@@ -3933,14 +3943,14 @@ to {
       <path id="pulse-path-1" d="M 80 180 H 220 V 140 H 420 V 180 H 580" fill="none" visibility="hidden"/>
       <path id="pulse-path-2" d="M 160 240 L 260 320 L 340 280 L 460 360 L 560 300" fill="none" visibility="hidden"/>
       <path id="pulse-path-3" d="M 360 140 V 280 V 400 V 520" fill="none" visibility="hidden"/>
+    </g>
 
-      <!-- Agentic Engine Label - integrated into illustration inside mask -->
-      <g opacity="1">
-        <!-- Subtle background circle for the label -->
-        <circle cx="350" cy="300" r="70" fill="none" stroke="rgba(217,119,6,0.5)" stroke-width="2.5" stroke-dasharray="5 5"/>
-        <!-- Label text -->
-        <text x="350" y="315" font-family="'Cormorant Garamond', serif" font-size="18" font-weight="700" fill="rgba(217,119,6,0.9)" text-anchor="middle" letter-spacing="0.8">AGENTIC ENGINE</text>
-      </g>
+    <!-- Agentic Engine Label - OUTSIDE mask for full visibility on desktop -->
+    <g opacity="1">
+      <!-- Subtle background circle for the label -->
+      <circle cx="350" cy="300" r="70" fill="none" stroke="rgba(217,119,6,0.5)" stroke-width="2.5" stroke-dasharray="5 5"/>
+      <!-- Label text -->
+      <text x="350" y="315" font-family="'Cormorant Garamond', serif" font-size="18" font-weight="700" fill="rgba(217,119,6,0.9)" text-anchor="middle" letter-spacing="0.8">AGENTIC ENGINE</text>
     </g>
   </svg>
 
