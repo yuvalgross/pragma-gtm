@@ -3825,6 +3825,15 @@ to {
 </script>
 </head>
 <body>
+  <!-- PREVIEW BANNER — shows only on preview deployments -->
+  <div id="preview-banner" style="display: none; position: fixed; top: 0; left: 0; right: 0; background: #d97706; color: white; padding: 0.75rem; text-align: center; font-weight: 600; font-size: 0.875rem; z-index: 9999; letter-spacing: 0.05em;">[PREVIEW] — Changes not yet live. Deploy to production when ready.</div>
+  <script>
+    // Show [PREVIEW] banner only on preview deployment URLs
+    if (window.location.hostname.includes('pragma-gtm-git-preview')) {
+      document.getElementById('preview-banner').style.display = 'block';
+      document.body.style.paddingTop = '2.5rem';
+    }
+  </script>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
