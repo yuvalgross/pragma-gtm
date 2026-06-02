@@ -121,6 +121,8 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:image" content="https://pragma-gtm.com/og-image.png">
 <meta property="og:image:alt" content="Yuval Gross — GTM Engineer & Revenue Systems Architect, Berlin">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:image:alt" content="Yuval Gross — GTM Engineer & Revenue Systems Architect, Berlin">
 <meta name="twitter:creator" content="@yuvalgross">
 <meta name="twitter:site" content="@pragmagtm">
 <meta name="format-detection" content="telephone=no">
@@ -672,6 +674,7 @@ nav {
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+    max-width: 100vw;
   }
 .hero > .hero-inner {
     width: 100%;
@@ -3956,14 +3959,6 @@ to {
       <path id="pulse-path-2" d="M 160 240 L 260 320 L 340 280 L 460 360 L 560 300" fill="none" visibility="hidden"/>
       <path id="pulse-path-3" d="M 360 140 V 280 V 400 V 520" fill="none" visibility="hidden"/>
     </g>
-
-    <!-- Agentic Engine Label - OUTSIDE mask for full visibility on desktop -->
-    <g opacity="1">
-      <!-- Subtle background circle for the label -->
-      <circle cx="350" cy="300" r="70" fill="none" stroke="rgba(217,119,6,0.5)" stroke-width="2.5" stroke-dasharray="5 5"/>
-      <!-- Label text -->
-      <text x="350" y="315" font-family="'Cormorant Garamond', serif" font-size="18" font-weight="700" fill="rgba(217,119,6,0.9)" text-anchor="middle" letter-spacing="0.8">AGENTIC ENGINE</text>
-    </g>
   </svg>
 
   <div class="hero-inner">
@@ -4077,6 +4072,9 @@ to {
       <!-- ENGINEERING band -->
       <text class="hi-band-label" x="340" y="105" text-anchor="middle">ENGINEERING</text>
       <line class="hi-band-line" x1="270" y1="115" x2="410" y2="115"/>
+
+      <!-- AGENTIC ENGINE label — positioned above engine box -->
+      <text class="hi-agentic-label" x="340" y="85" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="700" fill="#d97706" letter-spacing="0.08em" text-transform="uppercase">AGENTIC ENGINE</text>
 
       <!-- Engine block -->
       <rect class="hi-engine" x="220" y="120" width="240" height="140" rx="6"/>
@@ -4849,7 +4847,7 @@ to {
         <div class="cv-divider"></div>
         <a href="mailto:contact@pragma-gtm.com" class="cv-contact-btn">Contact me</a>
         <a href="https://linkedin.com/in/yuvalgross" target="_blank" rel="noopener noreferrer" class="cv-linkedin-btn">LinkedIn</a>
-        <a href="/GTM_-_Yuval_Gross.pdf" download class="cv-download-btn">Download CV</a>
+        <a href="/GTM_-_Yuval_Gross.pdf" download type="application/pdf" class="cv-download-btn">Download CV</a>
       </div>
 
     </div><!-- end cv-solo-layout -->
@@ -5170,6 +5168,14 @@ to {
     }
   });
 
+  /* Close on Escape key */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('open')) {
+      closeMenu();
+      if (menuBtn) menuBtn.focus();
+    }
+  });
+
   /* SKILL BARS */
   const expObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -5195,22 +5201,29 @@ to {
     expObs.observe(card);
   });
 
-  /* NUMBER COUNTERS */
+  /* NUMBER COUNTERS — real values hardcoded in HTML; animate from 0 only when scrolled into view */
   const cObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const el = entry.target, raw = el.textContent.trim();
-      const isP = raw.includes('%'), isD = raw.includes('$'), isE = raw.includes('€');
-      const hasK = raw.toLowerCase().includes('k');
-      let num = parseFloat(raw.replace(/[^0-9.]/g, ''));
-      if (isNaN(num)) return;
+      const num = parseFloat(raw.replace(/[^0-9.]/g, ''));
+      if (isNaN(num)) { cObs.unobserve(el); return; }
+      const pre = raw.includes('$') ? '$' : raw.includes('€') ? '€' : '';
+      const hasK = /k/i.test(raw);
+      const suf = raw.includes('%') ? '%' : raw.includes('×') ? '×' : raw.includes('+') ? '+' : '';
+      const dec = (num % 1 !== 0) ? 1 : 0;
       const full = hasK ? num * 1000 : num;
+      const fmt = v => {
+        if (hasK) return pre + (v / 1000).toFixed((v / 1000) % 1 ? 1 : 0) + 'k' + suf;
+        if (dec) return pre + v.toFixed(1) + suf;
+        return pre + Math.round(v).toLocaleString('en-US') + suf;
+      };
+      el.textContent = fmt(0);
       let start = 0;
       (function step(ts) {
         if (!start) start = ts;
-        const p = Math.min((ts - start) / 1600, 1), e = 1 - Math.pow(1-p, 3);
-        const cur = Math.round(e * full);
-        el.textContent = (isD ? '$' : isE ? '€' : '') + cur.toLocaleString('en-US') + (isP ? '%' : '');
+        const p = Math.min((ts - start) / 1600, 1), e = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(e * full);
         if (p < 1) requestAnimationFrame(step); else el.textContent = raw;
       })(0);
       cObs.unobserve(el);
