@@ -3749,6 +3749,55 @@ to {
     .tool-chip-lg.anchor { background: transparent; border: none; }
   .tool-chip-lg.anchor img { filter: brightness(0) invert(1); }
   .tool-chip-lg.anchor:hover { background: var(--accent); border-color: var(--accent); }
+
+/* ═══════════════════════════════════════════════
+   AGENTIC ENGINE — ORGANIC ANIMATIONS
+   ═══════════════════════════════════════════════ */
+
+/* Engine box breathing glow */
+@keyframes engineBoxGlow {
+  0%, 100% { filter: drop-shadow(0 0 0px rgba(217, 119, 6, 0)); }
+  50% { filter: drop-shadow(0 0 12px rgba(217, 119, 6, 0.5)); }
+}
+
+/* Agentic engine label pulse */
+@keyframes engineLabelPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Signal ball glow: pulsing aura */
+@keyframes signalGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(217, 119, 6, 0.3)) drop-shadow(0 0 6px rgba(217, 119, 6, 0)); }
+  50% { filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.8)) drop-shadow(0 0 14px rgba(217, 119, 6, 0.4)); }
+}
+
+/* Trigger animations only when section is in view */
+.hero-illustration.in-view .hi-engine {
+  animation: engineBoxGlow 3s ease-in-out infinite;
+}
+
+.hero-illustration.in-view .hi-agentic-label {
+  animation: engineLabelPulse 2.5s ease-in-out infinite;
+}
+
+.hero-illustration.in-view circle[r="3"],
+.hero-illustration.in-view circle[r="2.5"],
+.hero-illustration.in-view circle[r="2"] {
+  animation: signalGlow 2s ease-in-out infinite;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-illustration.in-view .hi-engine,
+  .hero-illustration.in-view .hi-agentic-label,
+  .hero-illustration.in-view circle[r="3"],
+  .hero-illustration.in-view circle[r="2.5"],
+  .hero-illustration.in-view circle[r="2"] {
+    animation: none;
+    filter: none;
+  }
+}
 </style>
 <script>
 (function(){try{var t=localStorage.getItem('pragma-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -3931,27 +3980,30 @@ to {
 
       <!-- ── SIGNAL PULSES (animated circles moving along key paths) ── -->
       <!-- Pulse 1: horizontal main bus -->
-      <circle r="3" fill="rgba(217,119,6,0.8)">
+      <circle r="3" fill="rgba(217,119,6,0.8)" filter="url(#signalGlow)">
         <animateMotion dur="4s" repeatCount="indefinite" begin="0s">
           <mpath href="#pulse-path-1"/>
         </animateMotion>
         <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="r" values="3;6;3" dur="1.5s" repeatCount="indefinite"/>
       </circle>
 
       <!-- Pulse 2: diagonal dashed path -->
-      <circle r="2.5" fill="rgba(194,98,42,0.75)">
+      <circle r="2.5" fill="rgba(194,98,42,0.75)" filter="url(#signalGlow)">
         <animateMotion dur="5s" repeatCount="indefinite" begin="1.5s">
           <mpath href="#pulse-path-2"/>
         </animateMotion>
         <animate attributeName="opacity" values="0;0.75;0.75;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="r" values="2.5;5;2.5" dur="1.8s" repeatCount="indefinite"/>
       </circle>
 
       <!-- Pulse 3: vertical drop -->
-      <circle r="2" fill="rgba(251,191,36,0.8)">
+      <circle r="2" fill="rgba(251,191,36,0.8)" filter="url(#signalGlow)">
         <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.8s">
           <mpath href="#pulse-path-3"/>
         </animateMotion>
         <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.15;0.85;1" dur="3.5s" repeatCount="indefinite" begin="0.8s"/>
+        <animate attributeName="r" values="2;5;2" dur="1.6s" repeatCount="indefinite"/>
       </circle>
 
       <!-- Path definitions for pulse motion -->
@@ -4020,6 +4072,13 @@ to {
         <marker id="hi-ar-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M2 1 L8 5 L2 9" fill="none" stroke="#d97706" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
+        <filter id="signalGlow">
+          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
       </defs>
 
       <!-- SIGNAL band -->
@@ -4069,15 +4128,21 @@ to {
       <path class="hi-wire" id="hi-wire-4" d="M101 248 Q170 248 220 198"/>
       <path class="hi-wire" id="hi-wire-5" d="M101 306 Q170 306 220 215"/>
 
-      <!-- ENGINEERING band -->
-      <text class="hi-band-label" x="340" y="105" text-anchor="middle">ENGINEERING</text>
-      <line class="hi-band-line" x1="270" y1="115" x2="410" y2="115"/>
+      <!-- ENGINEERING band (moved to bottom of engine with spacing) -->
+      <text class="hi-band-label" x="340" y="280" text-anchor="middle">ENGINEERING</text>
+
 
       <!-- AGENTIC ENGINE label — positioned above engine box -->
-      <text class="hi-agentic-label" x="340" y="85" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="700" fill="#d97706" letter-spacing="0.08em" text-transform="uppercase">AGENTIC ENGINE</text>
+      <text class="hi-agentic-label" x="340" y="112" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="700" fill="#d97706" letter-spacing="0.08em" text-transform="uppercase">
+        <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite"/>
+        AGENTIC ENGINE
+      </text>
 
       <!-- Engine block -->
-      <rect class="hi-engine" x="220" y="120" width="240" height="140" rx="6"/>
+      <rect class="hi-engine" x="220" y="120" width="240" height="140" rx="6">
+        <animate attributeName="stroke-width" values="0;2.5;0" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke" values="rgba(217,119,6,0);rgba(217,119,6,1);rgba(217,119,6,0)" dur="3s" repeatCount="indefinite"/>
+      </rect>
       <line class="hi-engine-divider" x1="220" y1="148" x2="460" y2="148"/>
       <text class="hi-engine-title" x="240" y="140">The engine</text>
       <text class="hi-engine-fig" x="430" y="140">FIG. 01</text>
@@ -5269,8 +5334,21 @@ to {
   })();
 
   /* ═══════════════════════════════════════════════
-     9. CANVAS CONSTELLATION PARTICLE FIELD
+     AGENTIC ENGINE — Trigger animations on scroll into view
      ═══════════════════════════════════════════════ */
+  const engineIllustration = document.querySelector('.hero-illustration');
+  if (engineIllustration && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const engineObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+    engineObs.observe(engineIllustration);
+  }
+
+  /* CANVAS CONSTELLATION PARTICLE FIELD */
   (function() {
     const canvas = document.getElementById('hero-canvas');
     if (!canvas) return;
