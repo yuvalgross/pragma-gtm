@@ -5026,95 +5026,190 @@ to {
   </div>
 </section>
 
-<!-- ANIMATED GTM DEMO SECTION -->
-<section style="background: var(--bg-secondary); padding: 5rem var(--sp-section-h); text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">The GTM Stack in Action</h2>
-  <p style="color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Watch how signal flows through enrichment, orchestration, and outreach — turning intent into closed revenue.</p>
-  
-  <div style="position: relative; height: 400px; margin: 0 auto; max-width: 900px;">
-    <!-- Demo Container -->
-    <div style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 12px; border: 2px solid var(--accent); background: var(--bg-primary);">
+<!-- ANIMATED GTM DEMO SECTION - PREMIUM -->
+<section style="background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); padding: 6rem var(--sp-section-h); text-align: center; position: relative; overflow: hidden;">
+  <!-- Decorative blur elements -->
+  <div style="position: absolute; top: -200px; right: -200px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(217,119,6,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+  <div style="position: absolute; bottom: -200px; left: -200px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(217,119,6,0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+
+  <div style="position: relative; z-index: 1;">
+    <div style="color: var(--accent); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.15em; margin-bottom: 1rem; text-transform: uppercase;">WORKFLOW DEMO</div>
+    <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text-primary); background: linear-gradient(135deg, var(--text-primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Intent to Revenue</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 4rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Watch signal transform through your GTM engine — from raw intent to closed deals in seconds.</p>
+    
+    <!-- Progress Indicator -->
+    <div style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 3rem; flex-wrap: wrap;">
+      <div class="demo-stage" data-stage="0" style="cursor: pointer; text-align: center;">
+        <div style="width: 50px; height: 50px; background: rgba(217,119,6,0.2); border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; transition: all 0.3s; font-weight: 600; color: var(--accent);">1</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">Signal</div>
+      </div>
+      <div style="display: flex; align-items: center; margin-bottom: 1.5rem;"><div style="width: 30px; height: 2px; background: rgba(217,119,6,0.2);"></div></div>
       
-      <!-- Screen 1: Clay Data Ingestion -->
-      <div class="demo-screen" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none;">
-        <div style="padding: 3rem; text-align: left; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);">
-          <div style="color: var(--accent); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.1em; margin-bottom: 1rem;">01 · SIGNAL INGESTION</div>
-          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">Clay · 6sense · ZoomInfo</h3>
-          <div style="background: rgba(217,119,6,0.1); padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--accent); color: var(--text-secondary);">
-            <div style="margin-bottom: 0.75rem;"><strong>Pulling signals:</strong></div>
-            <div>→ Funding events detected</div>
-            <div>→ Hiring activity spotted</div>
-            <div>→ Tech stack identified</div>
-            <div style="margin-top: 1rem; color: var(--accent); font-weight: 600;">Data ready for enrichment ✓</div>
-          </div>
-        </div>
+      <div class="demo-stage" data-stage="1" style="cursor: pointer; text-align: center;">
+        <div style="width: 50px; height: 50px; background: rgba(217,119,6,0.2); border: 2px solid rgba(217,119,6,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; transition: all 0.3s; font-weight: 600; color: var(--text-secondary);">2</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">Enrich</div>
       </div>
-
-      <!-- Screen 2: Apollo Enrichment -->
-      <div class="demo-screen" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none;">
-        <div style="padding: 3rem; text-align: left; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);">
-          <div style="color: var(--accent); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.1em; margin-bottom: 1rem;">02 · ENRICHMENT & ICP</div>
-          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">Apollo · Lusha · Hunter.io</h3>
-          <div style="background: rgba(217,119,6,0.1); padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--accent); color: var(--text-secondary);">
-            <div style="margin-bottom: 0.75rem;"><strong>Scoring ICP fit:</strong></div>
-            <div>→ Company size: Enterprise ✓</div>
-            <div>→ Budget authority: Yes ✓</div>
-            <div>→ Pain point match: 95% ✓</div>
-            <div style="margin-top: 1rem; color: var(--accent); font-weight: 600;">Contact data + scoring complete ✓</div>
-          </div>
-        </div>
+      <div style="display: flex; align-items: center; margin-bottom: 1.5rem;"><div style="width: 30px; height: 2px; background: rgba(217,119,6,0.2);"></div></div>
+      
+      <div class="demo-stage" data-stage="2" style="cursor: pointer; text-align: center;">
+        <div style="width: 50px; height: 50px; background: rgba(217,119,6,0.2); border: 2px solid rgba(217,119,6,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; transition: all 0.3s; font-weight: 600; color: var(--text-secondary);">3</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">Orchestrate</div>
       </div>
-
-      <!-- Screen 3: n8n Orchestration -->
-      <div class="demo-screen" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none;">
-        <div style="padding: 3rem; text-align: left; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);">
-          <div style="color: var(--accent); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.1em; margin-bottom: 1rem;">03 · ORCHESTRATION</div>
-          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">n8n · Make.com · Zapier</h3>
-          <div style="background: rgba(217,119,6,0.1); padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--accent); color: var(--text-secondary);">
-            <div style="margin-bottom: 0.75rem;"><strong>Logic executing:</strong></div>
-            <div>→ Route to AI outreach channel</div>
-            <div>→ Sync to CRM for tracking</div>
-            <div>→ Trigger follow-up sequences</div>
-            <div style="margin-top: 1rem; color: var(--accent); font-weight: 600;">Workflow triggered ✓</div>
-          </div>
-        </div>
+      <div style="display: flex; align-items: center; margin-bottom: 1.5rem;"><div style="width: 30px; height: 2px; background: rgba(217,119,6,0.2);"></div></div>
+      
+      <div class="demo-stage" data-stage="3" style="cursor: pointer; text-align: center;">
+        <div style="width: 50px; height: 50px; background: rgba(217,119,6,0.2); border: 2px solid rgba(217,119,6,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; transition: all 0.3s; font-weight: 600; color: var(--text-secondary);">4</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">Outreach</div>
       </div>
-
-      <!-- Screen 4: Claude AI Outreach -->
-      <div class="demo-screen" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none;">
-        <div style="padding: 3rem; text-align: left; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);">
-          <div style="color: var(--accent); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.1em; margin-bottom: 1rem;">04 · AI OUTREACH</div>
-          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">Claude · OpenAI · Twain.ai</h3>
-          <div style="background: rgba(217,119,6,0.1); padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--accent); color: var(--text-secondary);">
-            <div style="margin-bottom: 0.75rem;"><strong>Email being personalized:</strong></div>
-            <div style="font-style: italic; margin: 1rem 0; color: var(--text-primary);">"Hi [Name], saw you just raised Series B... our customers in [Industry] reduced CAC by 42%..."</div>
-            <div style="margin-top: 1rem; color: var(--accent); font-weight: 600;">Message sent ✓</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Screen 5: HubSpot Close -->
-      <div class="demo-screen" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none;">
-        <div style="padding: 3rem; text-align: left; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, #1a1a1a 0%, #2d2416 100%);">
-          <div style="color: var(--accent); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.1em; margin-bottom: 1rem;">05 · CRM & PIPELINE</div>
-          <h3 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.5rem;">HubSpot · Salesforce · Pipedrive</h3>
-          <div style="background: rgba(217,119,6,0.1); padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--accent); color: var(--text-secondary);">
-            <div style="margin-bottom: 0.75rem;"><strong>Deal closed:</strong></div>
-            <div>→ Contract value: $390k</div>
-            <div>→ Close date: Q2 2026</div>
-            <div>→ Revenue synced to dashboard</div>
-            <div style="margin-top: 1rem; color: #10b981; font-weight: 600;">REVENUE CLOSED ✓</div>
-          </div>
-        </div>
+      <div style="display: flex; align-items: center; margin-bottom: 1.5rem;"><div style="width: 30px; height: 2px; background: rgba(217,119,6,0.2);"></div></div>
+      
+      <div class="demo-stage" data-stage="4" style="cursor: pointer; text-align: center;">
+        <div style="width: 50px; height: 50px; background: rgba(217,119,6,0.2); border: 2px solid rgba(217,119,6,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; transition: all 0.3s; font-weight: 600; color: var(--text-secondary);">5</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">Close</div>
       </div>
     </div>
+  
+    <div style="position: relative; height: 420px; margin: 0 auto; max-width: 950px; perspective: 1200px;">
+      <!-- Main Demo Container -->
+      <div style="position: relative; width: 100%; height: 100%; border-radius: 16px; background: linear-gradient(135deg, rgba(20,20,20,0.8), rgba(45,36,22,0.6)); backdrop-filter: blur(10px); border: 1px solid rgba(217,119,6,0.2); box-shadow: 0 20px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(217,119,6,0.1); overflow: hidden;">
+        
+        <!-- Screen 1 -->
+        <div class="demo-screen" data-index="0" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none; opacity: 0; transition: opacity 0.5s ease;">
+          <div style="padding: 3.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(20,20,20,0.5), rgba(45,36,22,0.3));">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent), #f59e0b); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(217,119,6,0.3);">🎯</div>
+              <div style="text-align: left;">
+                <div style="color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Stage 1</div>
+                <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0; font-weight: 700;">Signal Ingestion</h3>
+              </div>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(217,119,6,0.15), rgba(217,119,6,0.05)); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent); color: var(--text-secondary); backdrop-filter: blur(10px);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div>
+                  <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Clay, 6sense, ZoomInfo</div>
+                  <div style="color: var(--text-primary); font-weight: 500;">Detecting intent signals</div>
+                </div>
+                <div>
+                  <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Real-time data</div>
+                  <div style="color: var(--text-primary); font-weight: 500;">Funding, hiring, tech changes</div>
+                </div>
+              </div>
+              <div style="color: #10b981; font-weight: 600; font-size: 0.95rem;">✓ Ready for enrichment</div>
+            </div>
+          </div>
+        </div>
 
-    <!-- Controls -->
-    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; align-items: center; flex-wrap: wrap;">
-      <button id="demo-prev" style="background: var(--accent); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600;">← Prev</button>
-      <div id="demo-dots" style="display: flex; gap: 0.5rem;"></div>
-      <button id="demo-next" style="background: var(--accent); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600;">Next →</button>
-      <button id="demo-play" style="background: rgba(217,119,6,0.3); color: var(--accent); border: 1px solid var(--accent); padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600;">▶ Auto-play</button>
+        <!-- Screen 2 -->
+        <div class="demo-screen" data-index="1" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none; opacity: 0; transition: opacity 0.5s ease;">
+          <div style="padding: 3.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(20,20,20,0.5), rgba(45,36,22,0.3));">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent), #f59e0b); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(217,119,6,0.3);">🔍</div>
+              <div style="text-align: left;">
+                <div style="color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Stage 2</div>
+                <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0; font-weight: 700;">Enrichment & ICP Scoring</h3>
+              </div>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(217,119,6,0.15), rgba(217,119,6,0.05)); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent); color: var(--text-secondary); backdrop-filter: blur(10px);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div>
+                  <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Apollo, Hunter, Lusha</div>
+                  <div style="color: var(--text-primary); font-weight: 500;">Contact & company data</div>
+                </div>
+                <div>
+                  <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">ICP Fit Score</div>
+                  <div style="color: var(--text-primary); font-weight: 500;">Enterprise, budget authority</div>
+                </div>
+              </div>
+              <div style="color: #10b981; font-weight: 600; font-size: 0.95rem;">✓ High-quality leads scored</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screen 3 -->
+        <div class="demo-screen" data-index="2" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none; opacity: 0; transition: opacity 0.5s ease;">
+          <div style="padding: 3.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(20,20,20,0.5), rgba(45,36,22,0.3));">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent), #f59e0b); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(217,119,6,0.3);">⚙️</div>
+              <div style="text-align: left;">
+                <div style="color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Stage 3</div>
+                <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0; font-weight: 700;">Workflow Orchestration</h3>
+              </div>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(217,119,6,0.15), rgba(217,119,6,0.05)); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent); color: var(--text-secondary); backdrop-filter: blur(10px);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div>
+                  <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">n8n, Make, Zapier</div>
+                  <div style="color: var(--text-primary); font-weight: 500;">Conditional routing logic</div>
+                </div>
+                <div>
+                  <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">CRM Sync</div>
+                  <div style="color: var(--text-primary); font-weight: 500;">HubSpot, Salesforce ready</div>
+                </div>
+              </div>
+              <div style="color: #10b981; font-weight: 600; font-size: 0.95rem;">✓ Workflows activated</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screen 4 -->
+        <div class="demo-screen" data-index="3" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none; opacity: 0; transition: opacity 0.5s ease;">
+          <div style="padding: 3.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(20,20,20,0.5), rgba(45,36,22,0.3));">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent), #f59e0b); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(217,119,6,0.3);">📧</div>
+              <div style="text-align: left;">
+                <div style="color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Stage 4</div>
+                <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0; font-weight: 700;">AI-Powered Outreach</h3>
+              </div>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(217,119,6,0.15), rgba(217,119,6,0.05)); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent); color: var(--text-secondary); backdrop-filter: blur(10px);">
+              <div style="margin-bottom: 1.5rem;">
+                <div style="color: var(--accent); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.75rem;">Claude Personalization Engine</div>
+                <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px; border-left: 2px solid var(--accent); color: var(--text-primary); font-style: italic; font-size: 0.95rem;">
+                  "Hi [Name], saw your team just closed Series B in EdTech... we help similar companies reduce CAC by 42%..."
+                </div>
+              </div>
+              <div style="color: #10b981; font-weight: 600; font-size: 0.95rem;">✓ Message sent at optimal time</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Screen 5 -->
+        <div class="demo-screen" data-index="4" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0; display: none; opacity: 0; transition: opacity 0.5s ease;">
+          <div style="padding: 3.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, rgba(20,20,20,0.5), rgba(45,36,22,0.3));">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+              <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #10b981, #34d399); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(16,185,129,0.3);">💰</div>
+              <div style="text-align: left;">
+                <div style="color: #10b981; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Stage 5</div>
+                <h3 style="color: var(--text-primary); font-size: 1.8rem; margin: 0; font-weight: 700;">Revenue Closed</h3>
+              </div>
+            </div>
+            <div style="background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.05)); padding: 2rem; border-radius: 12px; border-left: 4px solid #10b981; color: var(--text-secondary); backdrop-filter: blur(10px);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;">
+                <div>
+                  <div style="color: #10b981; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Contract Value</div>
+                  <div style="color: var(--text-primary); font-weight: 700; font-size: 1.25rem;">$390k ARR</div>
+                </div>
+                <div>
+                  <div style="color: #10b981; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Close Timeline</div>
+                  <div style="color: var(--text-primary); font-weight: 700; font-size: 1.25rem;">28 days</div>
+                </div>
+                <div>
+                  <div style="color: #10b981; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.5rem;">Win Rate</div>
+                  <div style="color: var(--text-primary); font-weight: 700; font-size: 1.25rem;">87%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 3rem; align-items: center; flex-wrap: wrap;">
+        <button id="demo-prev" style="background: var(--accent); color: white; border: none; padding: 0.85rem 1.75rem; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(217,119,6,0.3); font-size: 0.95rem;">← Previous</button>
+        <div id="demo-dots" style="display: flex; gap: 0.75rem;"></div>
+        <button id="demo-next" style="background: var(--accent); color: white; border: none; padding: 0.85rem 1.75rem; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 15px rgba(217,119,6,0.3); font-size: 0.95rem;">Next →</button>
+        <button id="demo-play" style="background: rgba(217,119,6,0.2); color: var(--accent); border: 1.5px solid var(--accent); padding: 0.85rem 1.75rem; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s; font-size: 0.95rem;">▶ Auto-play</button>
+      </div>
     </div>
   </div>
 </section>
@@ -5126,13 +5221,14 @@ to {
     const prevBtn = document.getElementById('demo-prev');
     const nextBtn = document.getElementById('demo-next');
     const playBtn = document.getElementById('demo-play');
+    const stageButtons = document.querySelectorAll('.demo-stage');
     let currentScreen = 0;
     let autoPlayActive = false;
     let autoPlayInterval;
 
     screens.forEach((_, i) => {
       const dot = document.createElement('button');
-      dot.style.cssText = 'width:12px; height:12px; border-radius:50%; border:none; cursor:pointer; background:rgba(217,119,6,0.3); transition:all 0.3s;';
+      dot.style.cssText = 'width:14px; height:14px; border-radius:50%; border:none; cursor:pointer; background:rgba(217,119,6,0.3); transition:all 0.3s; box-shadow: 0 2px 8px rgba(217,119,6,0.2);';
       dot.onclick = () => goToScreen(i);
       dotsContainer.appendChild(dot);
     });
@@ -5140,37 +5236,54 @@ to {
     function updateDots() {
       document.querySelectorAll('#demo-dots button').forEach((dot, i) => {
         dot.style.background = i === currentScreen ? 'var(--accent)' : 'rgba(217,119,6,0.3)';
-        dot.style.transform = i === currentScreen ? 'scale(1.3)' : 'scale(1)';
+        dot.style.transform = i === currentScreen ? 'scale(1.4)' : 'scale(1)';
+        dot.style.boxShadow = i === currentScreen ? '0 0 20px rgba(217,119,6,0.5)' : '0 2px 8px rgba(217,119,6,0.2)';
+      });
+    }
+
+    function updateStages() {
+      stageButtons.forEach((btn, i) => {
+        const circle = btn.querySelector('div:first-child');
+        if (i <= currentScreen) {
+          circle.style.background = 'linear-gradient(135deg, var(--accent), #f59e0b)';
+          circle.style.borderColor = 'var(--accent)';
+          circle.style.color = 'white';
+          circle.style.boxShadow = '0 10px 30px rgba(217,119,6,0.3)';
+        } else {
+          circle.style.background = 'rgba(217,119,6,0.2)';
+          circle.style.borderColor = 'rgba(217,119,6,0.3)';
+          circle.style.color = 'var(--text-secondary)';
+          circle.style.boxShadow = 'none';
+        }
       });
     }
 
     function goToScreen(n) {
-      screens.forEach(s => s.style.display = 'none');
+      screens.forEach(s => s.style.opacity = '0');
       currentScreen = (n + screens.length) % screens.length;
-      screens[currentScreen].style.animation = 'fadeIn 0.6s ease-in';
       screens[currentScreen].style.display = 'block';
+      setTimeout(() => screens[currentScreen].style.opacity = '1', 10);
       updateDots();
+      updateStages();
     }
 
     function nextScreen() { goToScreen(currentScreen + 1); }
     function prevScreen() { goToScreen(currentScreen - 1); }
     function toggleAutoPlay() {
       autoPlayActive = !autoPlayActive;
-      playBtn.style.background = autoPlayActive ? 'var(--accent)' : 'rgba(217,119,6,0.3)';
+      playBtn.style.background = autoPlayActive ? 'var(--accent)' : 'rgba(217,119,6,0.2)';
       playBtn.style.color = autoPlayActive ? 'white' : 'var(--accent)';
       playBtn.textContent = autoPlayActive ? '⏸ Pause' : '▶ Auto-play';
-      if (autoPlayActive) autoPlayInterval = setInterval(nextScreen, 4000);
+      if (autoPlayActive) autoPlayInterval = setInterval(nextScreen, 4500);
       else clearInterval(autoPlayInterval);
     }
 
-    prevBtn.onclick = prevScreen;
-    nextBtn.onclick = nextScreen;
+    prevBtn.onclick = () => { clearInterval(autoPlayInterval); autoPlayActive = false; prevScreen(); playBtn.style.background = 'rgba(217,119,6,0.2)'; playBtn.style.color = 'var(--accent)'; playBtn.textContent = '▶ Auto-play'; };
+    nextBtn.onclick = () => { clearInterval(autoPlayInterval); autoPlayActive = false; nextScreen(); playBtn.style.background = 'rgba(217,119,6,0.2)'; playBtn.style.color = 'var(--accent)'; playBtn.textContent = '▶ Auto-play'; };
     playBtn.onclick = toggleAutoPlay;
-    goToScreen(0);
+    stageButtons.forEach((btn, i) => btn.onclick = () => { clearInterval(autoPlayInterval); autoPlayActive = false; goToScreen(i); playBtn.style.background = 'rgba(217,119,6,0.2)'; playBtn.style.color = 'var(--accent)'; playBtn.textContent = '▶ Auto-play'; });
 
-    const style = document.createElement('style');
-    style.textContent = '@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }';
-    document.head.appendChild(style);
+    goToScreen(0);
   })();
 </script>
 <footer role="contentinfo">
