@@ -5298,14 +5298,14 @@ to {
      AGENTIC ENGINE — Trigger animations on scroll into view
      ═══════════════════════════════════════════════ */
   const engineIllustration = document.querySelector('.hero-illustration');
-  if (engineIllustration && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  if (engineIllustration && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const engineObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.1 });
     engineObs.observe(engineIllustration);
   }
 
