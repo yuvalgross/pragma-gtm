@@ -3754,21 +3754,31 @@ to {
    AGENTIC ENGINE — ORGANIC ANIMATIONS
    ═══════════════════════════════════════════════ */
 
-/* Engine breathing pulse: subtle glow cycle */
-@keyframes enginePulse {
+/* Engine box breathing glow */
+@keyframes engineBoxGlow {
   0%, 100% { filter: drop-shadow(0 0 0px rgba(217, 119, 6, 0)); }
-  50% { filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.4)); }
+  50% { filter: drop-shadow(0 0 12px rgba(217, 119, 6, 0.5)); }
+}
+
+/* Agentic engine label pulse */
+@keyframes engineLabelPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 /* Signal ball glow: pulsing aura */
 @keyframes signalGlow {
-  0%, 100% { filter: drop-shadow(0 0 2px rgba(217, 119, 6, 0.2)) drop-shadow(0 0 4px rgba(217, 119, 6, 0)); }
-  50% { filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.6)) drop-shadow(0 0 10px rgba(217, 119, 6, 0.3)); }
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(217, 119, 6, 0.3)) drop-shadow(0 0 6px rgba(217, 119, 6, 0)); }
+  50% { filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.8)) drop-shadow(0 0 14px rgba(217, 119, 6, 0.4)); }
 }
 
 /* Trigger animations only when section is in view */
-.hero-illustration.in-view {
-  animation: enginePulse 3s ease-in-out infinite;
+.hero-illustration.in-view .hi-engine {
+  animation: engineBoxGlow 3s ease-in-out infinite;
+}
+
+.hero-illustration.in-view .hi-agentic-label {
+  animation: engineLabelPulse 2.5s ease-in-out infinite;
 }
 
 .hero-illustration.in-view circle[r="3"],
@@ -3779,7 +3789,8 @@ to {
 
 /* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .hero-illustration.in-view,
+  .hero-illustration.in-view .hi-engine,
+  .hero-illustration.in-view .hi-agentic-label,
   .hero-illustration.in-view circle[r="3"],
   .hero-illustration.in-view circle[r="2.5"],
   .hero-illustration.in-view circle[r="2"] {
