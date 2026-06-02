@@ -3749,6 +3749,44 @@ to {
     .tool-chip-lg.anchor { background: transparent; border: none; }
   .tool-chip-lg.anchor img { filter: brightness(0) invert(1); }
   .tool-chip-lg.anchor:hover { background: var(--accent); border-color: var(--accent); }
+
+/* ═══════════════════════════════════════════════
+   AGENTIC ENGINE — ORGANIC ANIMATIONS
+   ═══════════════════════════════════════════════ */
+
+/* Engine breathing pulse: subtle glow cycle */
+@keyframes enginePulse {
+  0%, 100% { filter: drop-shadow(0 0 0px rgba(217, 119, 6, 0)); }
+  50% { filter: drop-shadow(0 0 8px rgba(217, 119, 6, 0.4)); }
+}
+
+/* Signal ball glow: pulsing aura */
+@keyframes signalGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(217, 119, 6, 0.2)) drop-shadow(0 0 4px rgba(217, 119, 6, 0)); }
+  50% { filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.6)) drop-shadow(0 0 10px rgba(217, 119, 6, 0.3)); }
+}
+
+/* Trigger animations only when section is in view */
+.hero-illustration.in-view {
+  animation: enginePulse 3s ease-in-out infinite;
+}
+
+.hero-illustration.in-view circle[r="3"],
+.hero-illustration.in-view circle[r="2.5"],
+.hero-illustration.in-view circle[r="2"] {
+  animation: signalGlow 2s ease-in-out infinite;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-illustration.in-view,
+  .hero-illustration.in-view circle[r="3"],
+  .hero-illustration.in-view circle[r="2.5"],
+  .hero-illustration.in-view circle[r="2"] {
+    animation: none;
+    filter: none;
+  }
+}
 </style>
 <script>
 (function(){try{var t=localStorage.getItem('pragma-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -5257,8 +5295,21 @@ to {
   })();
 
   /* ═══════════════════════════════════════════════
-     9. CANVAS CONSTELLATION PARTICLE FIELD
+     AGENTIC ENGINE — Trigger animations on scroll into view
      ═══════════════════════════════════════════════ */
+  const engineIllustration = document.querySelector('.hero-illustration');
+  if (engineIllustration && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const engineObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.3 });
+    engineObs.observe(engineIllustration);
+  }
+
+  /* CANVAS CONSTELLATION PARTICLE FIELD */
   (function() {
     const canvas = document.getElementById('hero-canvas');
     if (!canvas) return;
