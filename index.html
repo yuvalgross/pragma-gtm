@@ -1848,6 +1848,42 @@ h1 {
     margin-left: 1rem;
     animation: borderGlow 5s ease-in-out infinite;
   }
+.gm-layer-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(217,119,6,0.06) 0%, rgba(15,118,110,0.06) 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    position: relative;
+    left: -2rem;
+    margin-left: 0;
+  }
+.gm-pillar {
+    text-align: center;
+  }
+.gm-pillar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+.gm-pillar-desc {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    line-height: 1.4;
+  }
+@media (max-width: 768px) {
+    .gm-layer-header {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
 .funnel-layer, .funnel-output {
     margin-bottom: 1.5rem;
     position: relative;
@@ -4548,9 +4584,25 @@ to {
   <div class="container">
     <div class="section-label">The system</div>
     <h2 id="system-heading">From raw signal to <em>closed deal.</em></h2>
-    <p class="section-intro">Every layer of the funnel is engineered, connected, and automated. No gaps. No manual bridges. This is what a modern GTM system actually looks like under the hood.</p>
+    <p class="section-intro">Every layer of the funnel is engineered, connected, and automated. This is GTM Engineering — three core layers working together to power defensible, scalable revenue growth.</p>
 
     <div class="funnel-wrap">
+
+      <!-- GTM ENGINEERING LAYER HEADER -->
+      <div class="gm-layer-header">
+        <div class="gm-pillar">
+          <div class="gm-pillar-title">Data Infrastructure</div>
+          <p class="gm-pillar-desc">Clean CRM, data models, integrations</p>
+        </div>
+        <div class="gm-pillar">
+          <div class="gm-pillar-title">Agentic Automation</div>
+          <p class="gm-pillar-desc">Workflows, AI scoring, routing</p>
+        </div>
+        <div class="gm-pillar">
+          <div class="gm-pillar-title">Performance & Reporting</div>
+          <p class="gm-pillar-desc">Automated insights, KPI tracking</p>
+        </div>
+      </div>
 
       <!-- LAYER 1 -->
       <div class="funnel-layer">
@@ -4575,10 +4627,10 @@ to {
         <div class="funnel-layer-left">
           <div class="funnel-layer-num">02</div>
           <div class="funnel-layer-title">Enrichment & ICP Scoring</div>
-          <p class="funnel-layer-desc">Raw signals are enriched with firmographic, technographic, and contact data. Every account is scored against your real closed-won ICP — not a spreadsheet guess.</p>
+          <p class="funnel-layer-desc">Raw signals are enriched with firmographic, technographic, and contact data. AI-assisted scoring ensures every account is ranked against your real closed-won ICP.</p>
           <div class="funnel-signals">
             <span class="fsig">Waterfall enrichment</span>
-            <span class="fsig">ICP fit scoring</span>
+            <span class="fsig">AI-assisted scoring</span>
             <span class="fsig">Account ranking</span>
             <span class="fsig">Contact finding</span>
           </div>
@@ -4590,11 +4642,11 @@ to {
       <div class="funnel-layer">
         <div class="funnel-layer-left">
           <div class="funnel-layer-num">03</div>
-          <div class="funnel-layer-title">Workflow Automation</div>
-          <p class="funnel-layer-desc">The connective layer. Signals trigger workflows, workflows route leads, leads enter sequences — all without a human touching it. This is where most orgs break. This is where I come in.</p>
+          <div class="funnel-layer-title">Workflow Automation & Routing</div>
+          <p class="funnel-layer-desc">The connective layer where GTM Engineering lives. Signals trigger agentic workflows, leads route automatically based on fit and availability — zero human touchpoints until it matters.</p>
           <div class="funnel-signals">
             <span class="fsig">Trigger logic</span>
-            <span class="fsig">Lead routing</span>
+            <span class="fsig">Agentic routing</span>
             <span class="fsig">CRM sync</span>
             <span class="fsig">Webhook flows</span>
             <span class="fsig">API integrations</span>
@@ -4607,13 +4659,13 @@ to {
       <div class="funnel-layer layer-alt">
         <div class="funnel-layer-left">
           <div class="funnel-layer-num">04</div>
-          <div class="funnel-layer-title">AI-Personalised Outreach</div>
-          <p class="funnel-layer-desc">Every message references the specific signal that triggered it. Claude and OpenAI generate personalised copy at scale — grounded in real context, reviewed before it sends.</p>
+          <div class="funnel-layer-title">AI-Driven Outreach & Engagement</div>
+          <p class="funnel-layer-desc">Every message is grounded in the specific signal that triggered it. AI generates personalised copy at scale with human-in-the-loop review before send. This is agentic at its best.</p>
           <div class="funnel-signals">
             <span class="fsig">Signal-led copy</span>
-            <span class="fsig">Multi-channel</span>
-            <span class="fsig">Email sequences</span>
-            <span class="fsig">LinkedIn outreach</span>
+            <span class="fsig">Multi-channel delivery</span>
+            <span class="fsig">Email + LinkedIn sequences</span>
+            <span class="fsig">Human review gates</span>
           </div>
         </div>
         <div class="funnel-arrow">↓</div>
@@ -4623,13 +4675,13 @@ to {
       <div class="funnel-layer">
         <div class="funnel-layer-left">
           <div class="funnel-layer-num">05</div>
-          <div class="funnel-layer-title">CRM & Pipeline Management</div>
-          <p class="funnel-layer-desc">Replies route automatically into CRM with full context attached — signal, enrichment, engagement history. Your AE picks up a warm lead, not a cold name on a list.</p>
+          <div class="funnel-layer-title">CRM & Performance Reporting</div>
+          <p class="funnel-layer-desc">Replies route into HubSpot with full context attached. Automated reporting surfaces lead quality, SDR efficiency, and pipeline health in real-time. Your team always knows what's working.</p>
           <div class="funnel-signals">
-            <span class="fsig">Auto-routing</span>
-            <span class="fsig">Deal stages</span>
-            <span class="fsig">Context handoff</span>
+            <span class="fsig">Auto-routing + context</span>
             <span class="fsig">Pipeline hygiene</span>
+            <span class="fsig">KPI dashboards</span>
+            <span class="fsig">Performance insights</span>
           </div>
         </div>
         <div class="funnel-arrow">↓</div>
