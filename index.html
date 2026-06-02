@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO -->
-<title>[PREVIEW] Yuval Gross — GTM Engineer & RevOps Architect | Berlin</title>
+<title>Yuval Gross — GTM Engineer & RevOps Architect | Berlin</title>
 <meta name="description" content="GTM Engineer & RevOps Architect in Berlin. 8+ yrs enterprise B2B sales. Builds signal-based pipelines with Clay, HubSpot & n8n. $390k secured. Open to roles.">
 <meta name="keywords" content="GTM Engineer Berlin, Revenue Operations, Sales Automation Expert, Clay expert, HubSpot architect, n8n workflow automation, Make.com, signal-based selling, outbound automation, B2B sales systems, RevOps consultant, AI GTM stack, MEDDPICC, SPICED framework, sales playbook, GTM engineering consultant Berlin, revenue systems architect, pipeline automation">
 <meta name="author" content="Yuval Gross">
@@ -3828,10 +3828,11 @@ to {
   <!-- PREVIEW BANNER — shows only on preview deployments -->
   <div id="preview-banner" style="display: none; position: fixed; top: 0; left: 0; right: 0; background: #d97706; color: white; padding: 0.75rem; text-align: center; font-weight: 600; font-size: 0.875rem; z-index: 9999; letter-spacing: 0.05em;">[PREVIEW] — Changes not yet live. Deploy to production when ready.</div>
   <script>
-    // Show [PREVIEW] banner only on preview deployment URLs
+    // Show [PREVIEW] indicator only on preview deployment URLs
     if (window.location.hostname.includes('pragma-gtm-git-preview')) {
       document.getElementById('preview-banner').style.display = 'block';
       document.body.style.paddingTop = '2.5rem';
+      document.title = '[PREVIEW] ' + document.title;
     }
   </script>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
