@@ -46,9 +46,10 @@
   } }
   * { box-sizing: border-box; }
   body { margin: 0; min-height: 100vh; font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink);
-    background: radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem 16px; perspective: 1600px; }
+    background: radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem 16px; }
   a { color: inherit; }
 
+  .stage { width: min(400px, 100%); perspective: 1600px; }
   .card { display: grid; width: min(400px, 100%); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,1,.4,1); line-height: 1.5; }
   .card.is-flipped { transform: rotateY(180deg); }
   .face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; color: var(--c-text); background: var(--c-bg);
@@ -83,7 +84,7 @@
   .links a[href]:hover, .links a[href]:focus-visible { color: var(--c-accent); outline: none; }
   .flip { font-family: inherit; font-size: .72rem; font-weight: 600; color: var(--c-accent); background: none; border: 1px solid color-mix(in srgb, var(--c-accent) 40%, transparent); border-radius: 999px; padding: .32rem .75rem; cursor: pointer; white-space: nowrap; }
   .flip:hover, .flip:focus-visible { background: color-mix(in srgb, var(--c-accent) 12%, transparent); outline: none; }
-  .back-link { width: min(400px, 100%); display: flex; align-items: center; gap: .4rem; font-size: .78rem; font-weight: 500; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+  .back-link { position: relative; z-index: 2; transform: translateZ(0); width: min(400px, 100%); display: flex; align-items: center; gap: .4rem; font-size: .78rem; font-weight: 500; color: var(--ink-2); text-decoration: none; transition: color .15s; }
   .back-link:hover, .back-link:focus-visible { color: var(--c-accent); outline: none; }
   .back-link svg { transition: transform .15s; }
   .back-link:hover svg { transform: translateX(-3px); }
@@ -95,7 +96,7 @@
 </head>
 <body>
 <a href="/" class="back-link" id="back"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M8.5 3 4.5 7l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to pragma-gtm.com</a>
-<div class="card" id="card"><div class="face"><p class="line" style="color:var(--c-muted)">Loading…</p></div></div>
+<div class="stage"><div class="card" id="card"><div class="face"><p class="line" style="color:var(--c-muted)">Loading…</p></div></div></div>
 <p class="credit">Make your own: <a href="https://github.com/babaliba-oss/gtm-card">github.com/babaliba-oss/gtm-card</a></p>
 
 <script>
@@ -127,11 +128,11 @@
     var card = document.getElementById('card');
     card.innerHTML = front + back;
     card.querySelectorAll('.flip').forEach(function (b) {
-      b.addEventListener('click', function () {
+      b.addEventListener('click', function (ev) {
         var f = card.classList.toggle('is-flipped');
         card.querySelector('.front').setAttribute('aria-hidden', f ? 'true' : 'false');
         card.querySelector('.back').setAttribute('aria-hidden', f ? 'false' : 'true');
-        card.querySelector(f ? '.back .flip' : '.front .flip').focus({ preventScroll: true });
+        if (ev.detail === 0) card.querySelector(f ? '.back .flip' : '.front .flip').focus({ preventScroll: true });
       });
     });
   }
