@@ -83,6 +83,10 @@
   .links a[href]:hover, .links a[href]:focus-visible { color: var(--c-accent); outline: none; }
   .flip { font-family: inherit; font-size: .72rem; font-weight: 600; color: var(--c-accent); background: none; border: 1px solid color-mix(in srgb, var(--c-accent) 40%, transparent); border-radius: 999px; padding: .32rem .75rem; cursor: pointer; white-space: nowrap; }
   .flip:hover, .flip:focus-visible { background: color-mix(in srgb, var(--c-accent) 12%, transparent); outline: none; }
+  .back-link { width: min(400px, 100%); display: flex; align-items: center; gap: .4rem; font-size: .78rem; font-weight: 500; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+  .back-link:hover, .back-link:focus-visible { color: var(--c-accent); outline: none; }
+  .back-link svg { transition: transform .15s; }
+  .back-link:hover svg { transform: translateX(-3px); }
   .credit { font-size: .72rem; color: var(--ink-2); text-align: center; }
   .credit a { color: var(--ink-2); }
   .err { max-width: 400px; font-size: .9rem; color: var(--ink-2); text-align: center; }
@@ -90,6 +94,7 @@
 </style>
 </head>
 <body>
+<a href="/" class="back-link" id="back"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M8.5 3 4.5 7l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to pragma-gtm.com</a>
 <div class="card" id="card"><div class="face"><p class="line" style="color:var(--c-muted)">Loading…</p></div></div>
 <p class="credit">Make your own: <a href="https://github.com/babaliba-oss/gtm-card">github.com/babaliba-oss/gtm-card</a></p>
 
@@ -130,6 +135,13 @@
       });
     });
   }
+
+  // Back: return to the exact spot on the site if the visitor came from it, else open the homepage
+  document.getElementById('back').addEventListener('click', function (e) {
+    try {
+      if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) { e.preventDefault(); history.back(); }
+    } catch (err) {}
+  });
 
   fetch('/card/card.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
