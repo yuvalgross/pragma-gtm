@@ -13,12 +13,37 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/><path d='M16,46 L16,6 L30,26 Z' fill='%23d97706'/><path d='M28,46 L28,6 L42,26 Z' fill='%23f59e0b'/><path d='M40,46 L40,6 L54,26 Z' fill='%23c2622a'/><circle cx='48' cy='26' r='5' fill='%23c2622a'/></svg>" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
 <style>
+  /* Light: pragma-gtm.com light tokens */
   :root {
     --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --ink-2: #6b6758;
-    --c-bg: #0e0d09; --c-panel: #161410; --c-line: #2c281f; --c-text: #f0ece0; --c-muted: #a8a090; --c-accent: #f59e0b; --c-teal: #2dd4bf;
+    --c-bg: #fffdf7; --c-panel: #f6f1e5; --c-line: #e6dfc9; --c-text: #1c1a14; --c-muted: #6b6758; --c-accent: #d97706; --c-teal: #0f766e;
+    --c-shadow: 0 30px 60px rgba(28,26,20,.12);
   }
-  @media (prefers-color-scheme: dark) { :root { --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --ink-2: #a8a090; } }
+  /* Dark: pragma-gtm.com dark tokens */
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --ink-2: #a8a090;
+    --c-bg: #0e0d09; --c-panel: #161410; --c-line: #2c281f; --c-text: #f0ece0; --c-muted: #a8a090; --c-accent: #f59e0b; --c-teal: #2dd4bf;
+    --c-shadow: 0 30px 60px rgba(0,0,0,.45);
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --ink-2: #a8a090;
+    --c-bg: #0e0d09; --c-panel: #161410; --c-line: #2c281f; --c-text: #f0ece0; --c-muted: #a8a090; --c-accent: #f59e0b; --c-teal: #2dd4bf;
+    --c-shadow: 0 30px 60px rgba(0,0,0,.45);
+  } }
   * { box-sizing: border-box; }
   body { margin: 0; min-height: 100vh; font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink);
     background: radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem 16px; perspective: 1600px; }
@@ -27,7 +52,7 @@
   .card { display: grid; width: min(400px, 100%); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,1,.4,1); line-height: 1.5; }
   .card.is-flipped { transform: rotateY(180deg); }
   .face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; color: var(--c-text); background: var(--c-bg);
-    border: 1px solid var(--c-line); box-shadow: 0 30px 60px rgba(0,0,0,.3); padding: 1.15rem 1.15rem 1rem; display: flex; flex-direction: column; gap: .85rem; }
+    border: 1px solid var(--c-line); box-shadow: var(--c-shadow); padding: 1.15rem 1.15rem 1rem; display: flex; flex-direction: column; gap: .85rem; }
   .back { transform: rotateY(180deg); }
 
   .head { display: flex; gap: .85rem; align-items: center; }
@@ -75,7 +100,6 @@
   function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : '#'; }
 
   function render(d) {
-    if (d.accent) document.documentElement.style.setProperty('--c-accent', d.accent);
     if (d.name) document.title = d.name + ' · GTM card';
     var links = map(d.links, function (l) { return '<a href="' + esc(safeUrl(l.url)) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '</a>'; });
     var front =
