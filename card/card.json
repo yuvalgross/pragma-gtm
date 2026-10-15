@@ -1,0 +1,38 @@
+{
+  "name": "Yuval Gross",
+  "role": "GTM Engineer · CloserStill Group (OEB Global)",
+  "location": "Berlin",
+  "avatar": "",
+  "line": "Sold enterprise SaaS for years, then automated it. I build the signal engine, the CRM rules and the outreach that sales teams actually use.",
+  "focus": ["Signal based outbound", "Clay enrichment", "HubSpot RevOps", "LLM outreach with guardrails", "Lead scoring & routing", "CRM data hygiene", "Sales enablement", "Enterprise deals"],
+  "stack": [
+    { "label": "Automation", "items": ["n8n", "Make", "Zapier", "HubSpot workflows"] },
+    { "label": "GTM data", "items": ["Clay", "Apollo", "Prospeo", "RB2B", "Sales Navigator"] },
+    { "label": "Outreach", "items": ["Instantly", "HeyReach"] },
+    { "label": "CRM", "items": ["HubSpot", "Salesforce (as a rep)"] },
+    { "label": "AI", "items": ["Claude API", "OpenAI API", "Claude Code"] },
+    { "label": "Sales", "items": ["Gong", "MEDDPICC", "SPICED"] },
+    { "label": "Code", "items": ["Python", "JavaScript", "APIs & webhooks"] }
+  ],
+  "nums": [
+    { "b": "€295k → €390k", "t": "OEB program revenue after the signal engine" },
+    { "b": "+42%", "t": "MQL rate from signal based outbound" },
+    { "b": "40% vs 12%", "t": "close rate, signal vs generic cohorts" },
+    { "b": "17 → 5", "t": "tools consolidated, 95% team adoption" },
+    { "b": "~20", "t": "salespeople running the engine across the group" },
+    { "b": "€921k", "t": "CoachHub enterprise quota, closed at 100%" }
+  ],
+  "builds": [
+    { "name": "Signal based outbound engine", "what": "Hiring signals → Clay waterfall → score gate → Claude opener → human review → send" },
+    { "name": "HubSpot data guardrails", "what": "Dedup check before every write, failure alerts, fixed stage rules; 3 hrs a week saved" },
+    { "name": "CRM auto updates & CS handoff", "what": "Closed deals update records and hand off to Customer Success without manual steps" },
+    { "name": "Signal cohort dashboards", "what": "HubSpot reports comparing signal vs generic cohorts from MQL to close" }
+  ],
+  "links": [
+    { "label": "Site", "url": "https://pragma-gtm.com" },
+    { "label": "GitHub", "url": "https://github.com/yuvalgross" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/yuvalgross" }
+  ],
+  "accent": "#f59e0b",
+  "updated": "2026-10-15"
+}

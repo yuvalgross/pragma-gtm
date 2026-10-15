@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuval Gross · GTM card</title>
+<meta name="description" content="My GTM card: what I work on, the stack I actually use, and the numbers behind it.">
+<meta property="og:title" content="Yuval Gross · GTM card">
+<meta property="og:description" content="What I work on, the stack I actually use, and the numbers behind it.">
+<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://pragma-gtm.com/card">
+<link rel="canonical" href="https://pragma-gtm.com/card">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/><path d='M16,46 L16,6 L30,26 Z' fill='%23d97706'/><path d='M28,46 L28,6 L42,26 Z' fill='%23f59e0b'/><path d='M40,46 L40,6 L54,26 Z' fill='%23c2622a'/><circle cx='48' cy='26' r='5' fill='%23c2622a'/></svg>" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --ink-2: #6b6758;
+    --c-bg: #0e0d09; --c-panel: #161410; --c-line: #2c281f; --c-text: #f0ece0; --c-muted: #a8a090; --c-accent: #f59e0b; --c-teal: #2dd4bf;
+  }
+  @media (prefers-color-scheme: dark) { :root { --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --ink-2: #a8a090; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink);
+    background: radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem 16px; perspective: 1600px; }
+  a { color: inherit; }
+
+  .card { display: grid; width: min(400px, 100%); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,1,.4,1); line-height: 1.5; }
+  .card.is-flipped { transform: rotateY(180deg); }
+  .face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; color: var(--c-text); background: var(--c-bg);
+    border: 1px solid var(--c-line); box-shadow: 0 30px 60px rgba(0,0,0,.3); padding: 1.15rem 1.15rem 1rem; display: flex; flex-direction: column; gap: .85rem; }
+  .back { transform: rotateY(180deg); }
+
+  .head { display: flex; gap: .85rem; align-items: center; }
+  .head img { width: 84px; height: 84px; border-radius: 12px; border: 1px solid var(--c-line); flex: none; image-rendering: pixelated; object-fit: cover; background: var(--c-panel); }
+  .name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.6rem; font-weight: 600; line-height: 1.05; }
+  .role { font-size: .74rem; color: var(--c-teal); margin-top: .15rem; }
+  .loc { font-size: .7rem; color: var(--c-muted); }
+  .line { font-size: .78rem; margin: 0; }
+  .h { font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--c-muted); margin: 0 0 .4rem; }
+  .focus { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .focus span { font-size: .66rem; padding: .2rem .55rem; border-radius: 999px; color: var(--c-accent); border: 1px solid color-mix(in srgb, var(--c-accent) 35%, transparent); background: color-mix(in srgb, var(--c-accent) 12%, transparent); }
+  .stack { display: grid; gap: .38rem; }
+  .row { display: grid; grid-template-columns: 6.4rem 1fr; gap: .5rem; align-items: start; }
+  .row > span { font-size: .66rem; color: var(--c-muted); padding-top: .18rem; }
+  .row div { display: flex; flex-wrap: wrap; gap: .25rem; }
+  .row div span { font-size: .66rem; padding: .16rem .5rem; border-radius: 6px; background: var(--c-panel); border: 1px solid var(--c-line); }
+  .nums { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
+  .num { background: var(--c-panel); border: 1px solid var(--c-line); border-radius: 12px; padding: .55rem .65rem; }
+  .num b { display: block; font-size: 1.1rem; color: var(--c-accent); }
+  .num span { font-size: .64rem; color: var(--c-muted); line-height: 1.35; display: block; }
+  .builds { display: grid; gap: .45rem; }
+  .build b { display: block; font-size: .74rem; font-weight: 600; }
+  .build span { display: block; font-size: .66rem; color: var(--c-muted); line-height: 1.4; }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: .5rem; border-top: 1px solid var(--c-line); padding-top: .7rem; }
+  .links { display: flex; flex-wrap: wrap; gap: .8rem; }
+  .links a { font-size: .68rem; color: var(--c-muted); text-decoration: none; }
+  .links a { transition: color .15s; }
+  .links a[href]:hover, .links a[href]:focus-visible { color: var(--c-accent); outline: none; }
+  .flip { font-family: inherit; font-size: .72rem; font-weight: 600; color: var(--c-accent); background: none; border: 1px solid color-mix(in srgb, var(--c-accent) 40%, transparent); border-radius: 999px; padding: .32rem .75rem; cursor: pointer; white-space: nowrap; }
+  .flip:hover, .flip:focus-visible { background: color-mix(in srgb, var(--c-accent) 12%, transparent); outline: none; }
+  .credit { font-size: .72rem; color: var(--ink-2); text-align: center; }
+  .credit a { color: var(--ink-2); }
+  .err { max-width: 400px; font-size: .9rem; color: var(--ink-2); text-align: center; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+<div class="card" id="card"><div class="face"><p class="line" style="color:var(--c-muted)">Loading…</p></div></div>
+<p class="credit">Make your own: <a href="https://github.com/babaliba-oss/gtm-card">github.com/babaliba-oss/gtm-card</a></p>
+
+<script>
+(function () {
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function map(list, fn) { return (list || []).map(fn).join(''); }
+  function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : '#'; }
+
+  function render(d) {
+    if (d.accent) document.documentElement.style.setProperty('--c-accent', d.accent);
+    if (d.name) document.title = d.name + ' · GTM card';
+    var links = map(d.links, function (l) { return '<a href="' + esc(safeUrl(l.url)) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + '</a>'; });
+    var front =
+      '<div class="face front">' +
+        '<div class="head">' + (d.avatar ? '<img src="' + esc(d.avatar) + '" alt="' + esc(d.name) + '" width="84" height="84">' : '') +
+          '<div><div class="name">' + esc(d.name) + '</div><div class="role">' + esc(d.role) + '</div><div class="loc">' + esc(d.location) + '</div></div></div>' +
+        (d.line ? '<p class="line">' + esc(d.line) + '</p>' : '') +
+        (d.focus && d.focus.length ? '<div><p class="h">What I work on</p><div class="focus">' + map(d.focus, function (f) { return '<span>' + esc(f) + '</span>'; }) + '</div></div>' : '') +
+        '<div><p class="h">Stack</p><div class="stack">' + map(d.stack, function (r) {
+          return '<div class="row"><span>' + esc(r.label) + '</span><div>' + map(r.items, function (i) { return '<span>' + esc(i) + '</span>'; }) + '</div></div>';
+        }) + '</div></div>' +
+        '<div class="foot"><div class="links">' + links + '</div><button type="button" class="flip">Numbers &amp; builds →</button></div>' +
+      '</div>';
+    var back =
+      '<div class="face back" aria-hidden="true">' +
+        '<div><p class="h">By the numbers</p><div class="nums">' + map(d.nums, function (n) { return '<div class="num"><b>' + esc(n.b) + '</b><span>' + esc(n.t) + '</span></div>'; }) + '</div></div>' +
+        (d.builds && d.builds.length ? '<div><p class="h">Running in production</p><div class="builds">' + map(d.builds, function (b) { return '<div class="build"><b>' + esc(b.name) + '</b><span>' + esc(b.what) + '</span></div>'; }) + '</div></div>' : '') +
+        '<div class="foot"><span class="links">' + (d.updated ? '<a>Updated ' + esc(d.updated) + '</a>' : '') + '</span><button type="button" class="flip">← Profile &amp; stack</button></div>' +
+      '</div>';
+    var card = document.getElementById('card');
+    card.innerHTML = front + back;
+    card.querySelectorAll('.flip').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = card.classList.toggle('is-flipped');
+        card.querySelector('.front').setAttribute('aria-hidden', f ? 'true' : 'false');
+        card.querySelector('.back').setAttribute('aria-hidden', f ? 'false' : 'true');
+        card.querySelector(f ? '.back .flip' : '.front .flip').focus({ preventScroll: true });
+      });
+    });
+  }
+
+  fetch('/card/card.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(function (e) {
+      document.getElementById('card').outerHTML = '<p class="err">Couldn\'t read card.json (' + esc(e.message) + '). If you opened this file directly, run it through a local server or GitHub Pages. See the README.</p>';
+    });
+})();
+</script>
+</body>
+</html>
