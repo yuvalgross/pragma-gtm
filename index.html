@@ -3497,6 +3497,11 @@ body {
 .ambient-orb.visible {
     opacity: 1;
   }
+/* orbs are sized in vw and centred near the edge, so they poke past the viewport and
+   widen the layout on phones; clip (not hidden) keeps sticky/scroll behaviour intact */
+:has(> .ambient-orb) {
+    overflow-x: clip;
+  }
 .h2-reveal {
     overflow: hidden; padding-bottom: 0.18em;
   }
