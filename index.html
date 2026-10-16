@@ -3795,6 +3795,162 @@ to {
     filter: none;
   }
 }
+
+/* ── Consent banner + legal dialog ───────────────────────────── */
+.consent {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 9500;
+  width: min(26rem, calc(100vw - 2.5rem));
+  background: var(--paper-warm);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.35rem 1.35rem 1.15rem;
+  box-shadow: 0 12px 40px rgba(28,26,20,0.14);
+  font-family: var(--font-body);
+}
+.consent[hidden] { display: none; }
+.consent:not([hidden]) { animation: consentIn 0.4s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes consentIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+:root[data-theme="dark"] .consent { box-shadow: 0 12px 40px rgba(0,0,0,0.55); }
+.consent:focus { outline: none; }
+.consent-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-display);
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+}
+.consent-text {
+  font-size: 0.875rem;
+  line-height: var(--lh-snug);
+  color: var(--ink-soft);
+  margin: 0 0 0.5rem;
+}
+.consent-state {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin: 0 0 0.5rem;
+}
+.consent-state[hidden] { display: none; }
+.consent-more {
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 0 1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent);
+  cursor: pointer;
+}
+.consent-actions { display: flex; gap: 0.6rem; }
+.consent-btn {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--ink);
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.consent-btn:hover { background: var(--ink); color: var(--paper); }
+
+.footer-link-btn {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border-gold);
+}
+.footer-link-btn:hover { text-decoration-color: var(--accent); }
+
+html.legal-open { overflow: hidden; }
+.legal {
+  /* the site's global margin reset removes the UA's margin:auto, which un-centres a modal dialog */
+  margin: auto;
+  inset: 0;
+  width: min(44rem, calc(100vw - 2rem));
+  max-height: min(86vh, 54rem);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+  overscroll-behavior: contain;
+}
+.legal::backdrop { background: rgba(14,13,9,0.55); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.legal-close {
+  position: sticky;
+  top: 0.75rem;
+  float: right;
+  margin: 0.75rem 0.75rem 0 0;
+  width: 2.25rem; height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--paper-warm);
+  color: var(--ink);
+  font-size: 1.1rem; line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.legal-close:hover { background: var(--ink); color: var(--paper); }
+.legal-inner { padding: 2rem 2.25rem 2.5rem; font-family: var(--font-body); }
+.legal h2 {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-display);
+  margin: 0 0 0.35rem;
+}
+.legal h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  margin: 2rem 0 0.5rem;
+  color: var(--ink);
+  scroll-margin-top: 1rem;
+}
+.legal p, .legal li { font-size: 0.92rem; line-height: var(--lh-prose); color: var(--ink-soft); }
+.legal p { margin: 0 0 0.75rem; }
+.legal ul { margin: 0 0 0.75rem; padding-left: 1.2rem; }
+.legal li { margin-bottom: 0.35rem; }
+.legal a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.legal .legal-meta { font-size: 0.8rem; color: var(--ink-muted); }
+.legal .ph { background: var(--accent-light); color: var(--ink); padding: 0 0.3em; border-radius: 3px; }
+
+@media (max-width: 600px) {
+  .consent {
+    left: 0.75rem; right: 0.75rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    width: auto;
+    padding: 1.15rem 1.1rem 1rem;
+  }
+  .legal-inner { padding: 1.5rem 1.25rem 2rem; }
+  .legal h2 { font-size: 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .consent:not([hidden]) { animation: none; }
+  .consent-btn { transition: none; }
+}
 </style>
 <script>
 (function(){try{var t=localStorage.getItem('pragma-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -4991,8 +5147,53 @@ to {
     <li><a href="#engagement">Work</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
   </ul>
-  <div class="footer-meta">© 2026 PragmaGTM · Berlin · Last updated May 2026</div>
+  <div class="footer-meta">© 2026 PragmaGTM · Berlin · Last updated May 2026 · <button type="button" class="footer-link-btn" data-legal="privacy">Privacy</button> · <button type="button" class="footer-link-btn" data-legal="imprint">Imprint</button> · <button type="button" class="footer-link-btn" data-consent-open>Cookie settings</button></div>
 </footer>
+
+<!-- CONSENT BANNER — Apollo visitor tracking stays off until the visitor accepts -->
+<div class="consent" id="consent" role="region" aria-labelledby="consentTitle" tabindex="-1" hidden>
+  <h2 class="consent-title" id="consentTitle">One optional tracker</h2>
+  <p class="consent-text">If you allow it, I use Apollo to see which companies visit this site, so I know when a team has looked at my work. It stays off unless you accept.</p>
+  <p class="consent-state" id="consentState" hidden></p>
+  <button type="button" class="consent-more" data-legal="privacy">What gets collected</button>
+  <div class="consent-actions">
+    <button type="button" class="consent-btn" id="consentDecline">Decline</button>
+    <button type="button" class="consent-btn" id="consentAccept">Accept</button>
+  </div>
+</div>
+
+<!-- PRIVACY + IMPRINT -->
+<dialog class="legal" id="legal" aria-labelledby="legalTitle">
+  <button type="button" class="legal-close" id="legalClose" aria-label="Close">✕</button>
+  <div class="legal-inner">
+    <h2 id="legalTitle">Privacy</h2>
+    <p class="legal-meta">Last updated 16 October 2026</p>
+
+    <h3>Who is responsible</h3>
+    <p>Yuval Gross, <span class="ph">[street and number, postcode]</span> Berlin, Germany. Email: <a href="mailto:contact@pragma-gtm.com">contact@pragma-gtm.com</a>.</p>
+
+    <h3>What happens when you just visit</h3>
+    <ul>
+      <li><strong>Hosting.</strong> The site is served by Vercel Inc. (USA). Like any web server, it processes your IP address, browser type, the page requested and the time, in logs, to deliver the page and keep it secure. Legal basis: Art. 6(1)(f) GDPR. Vercel acts on my behalf under a data processing agreement. <span class="ph">[confirm transfer safeguards against Vercel's DPA]</span></li>
+      <li><strong>Fonts and logos.</strong> The typefaces load from Google Fonts, and the tool logos in the stack section load through Google's favicon service. Both mean your browser contacts Google servers and your IP address is passed to Google when the page loads.</li>
+      <li><strong>Your browser's storage.</strong> The site saves two items in your browser only: your light or dark choice (<code>pragma-theme</code>) and your answer to the banner (<code>pragma-consent</code>). Neither is sent anywhere.</li>
+      <li><strong>Email.</strong> If you write to me, I use your message and address to reply. Legal basis: Art. 6(1)(b) or (f) GDPR.</li>
+    </ul>
+
+    <h3>Optional: company-level visitor analytics (only if you accept)</h3>
+    <p>If you press Accept on the banner, the site loads a script from Apollo.io, Inc. (USA). The script can set cookies or similar identifiers and sends Apollo your IP address, the pages you view, your referrer, and browser and device details with timestamps.</p>
+    <p>Purpose: to recognise which company a visit comes from, so I can see whether a team has looked at my work during a job search and follow up. I have switched off Apollo's individual (contact-level) identification for this domain, so the aim is company-level insight, not profiling you as a person. Apollo processes the data under its own terms, so I cannot promise what it does beyond that. <span class="ph">[confirm Apollo's DPA, transfer mechanism and retention period]</span></p>
+    <p>Legal basis: your consent under Art. 6(1)(a) GDPR and § 25(1) TDDDG. If you decline or ignore the banner, the script is never loaded. You can change your mind at any time through <em>Cookie settings</em> in the footer. Withdrawing does not affect processing that already happened. Your choice is remembered for 180 days, then the banner asks again.</p>
+
+    <h3>Your rights</h3>
+    <p>You can ask me for access to your data, correction, deletion, restriction, a portable copy, and you can object to processing based on legitimate interest. You can also complain to a data protection authority; for Berlin that is the Berliner Beauftragte für Datenschutz und Informationsfreiheit.</p>
+
+    <h3 id="imprint">Imprint</h3>
+    <p>Information under § 5 DDG.</p>
+    <p>Yuval Gross<br><span class="ph">[street and number]</span><br><span class="ph">[postcode]</span> Berlin, Germany</p>
+    <p>Email: <a href="mailto:contact@pragma-gtm.com">contact@pragma-gtm.com</a><br>VAT ID: <span class="ph">[number, or delete this line if none]</span></p>
+  </div>
+</dialog>
 
 <script>
   /* 1. CUSTOM MAGNETIC CURSOR */
@@ -5483,5 +5684,114 @@ to {
   })();
 </script>
 
+
+<script>
+/* Consent gate — Apollo is injected only after an explicit Accept.
+   Choice lives in localStorage (key pragma-consent), expires after 180 days. */
+(function () {
+  var KEY = 'pragma-consent', VER = 1, MAX_AGE = 180 * 24 * 60 * 60 * 1000;
+  var APOLLO_APP_ID = '691dbf579fda850015107e37';
+  var banner = document.getElementById('consent');
+  var legal  = document.getElementById('legal');
+  if (!banner) return;
+
+  var apolloLoaded = false, memory = null;
+
+  function stored() {
+    try {
+      var r = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (r && r.v === VER && typeof r.analytics === 'boolean' && Date.now() - r.ts < MAX_AGE) return r;
+    } catch (e) {}
+    return null;
+  }
+  function current() { return stored() || memory; }
+  function save(a) {
+    memory = { v: VER, analytics: a, ts: Date.now() };
+    try { localStorage.setItem(KEY, JSON.stringify(memory)); } catch (e) {}
+  }
+
+  function loadApollo() {
+    if (apolloLoaded) return;
+    apolloLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=' + Math.random().toString(36).substring(7);
+    s.async = true; s.defer = true;
+    s.onload = function () {
+      try { window.trackingFunctions.onLoad({ appId: APOLLO_APP_ID }); } catch (e) {}
+    };
+    document.head.appendChild(s);
+  }
+
+  /* The site sets no cookies of its own, so on decline every first-party cookie can go. */
+  function clearCookies() {
+    try {
+      var host = location.hostname, domains = ['', host, '.' + host], parts = host.split('.');
+      for (var i = 1; i < parts.length - 1; i++) domains.push('.' + parts.slice(i).join('.'));
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (!name) return;
+        domains.forEach(function (d) {
+          document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/' + (d ? ';domain=' + d : '');
+        });
+      });
+    } catch (e) {}
+  }
+
+  var stateEl = document.getElementById('consentState');
+  function show(reopened) {
+    var c = current();
+    if (reopened && c) {
+      stateEl.textContent = 'Your current choice: ' + (c.analytics ? 'accepted.' : 'declined.');
+      stateEl.hidden = false;
+    } else { stateEl.hidden = true; }
+    banner.hidden = false;
+    if (reopened) banner.focus();
+  }
+  function decide(accept) {
+    var prev = current();
+    save(accept);
+    banner.hidden = true;
+    if (accept) { loadApollo(); return; }
+    clearCookies();
+    /* a script that already ran cannot be unloaded, so a reload is the only clean stop */
+    if (prev && prev.analytics && apolloLoaded) location.reload();
+  }
+
+  document.getElementById('consentAccept').addEventListener('click', function () { decide(true); });
+  document.getElementById('consentDecline').addEventListener('click', function () { decide(false); });
+  document.querySelectorAll('[data-consent-open]').forEach(function (b) {
+    b.addEventListener('click', function () { show(true); });
+  });
+
+  var c0 = current();
+  if (c0) { if (c0.analytics) loadApollo(); } else { show(false); }
+
+  /* ── privacy / imprint dialog ── */
+  if (!legal || typeof legal.showModal !== 'function') return;
+  var lastFocus = null;
+  function openLegal(target) {
+    lastFocus = document.activeElement;
+    if (!legal.open) legal.showModal();
+    document.documentElement.classList.add('legal-open');
+    legal.scrollTop = 0;
+    if (target === 'imprint') {
+      var el = document.getElementById('imprint');
+      if (el) legal.scrollTop = el.offsetTop - 16;
+    }
+  }
+  function closeLegal() { if (legal.open) legal.close(); }
+  legal.addEventListener('close', function () {
+    document.documentElement.classList.remove('legal-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  });
+  legal.addEventListener('click', function (e) { if (e.target === legal) closeLegal(); });
+  document.getElementById('legalClose').addEventListener('click', closeLegal);
+  document.querySelectorAll('[data-legal]').forEach(function (b) {
+    b.addEventListener('click', function () { openLegal(b.getAttribute('data-legal')); });
+  });
+  var h = location.hash.replace('#', '');
+  if (h === 'privacy' || h === 'imprint') openLegal(h);
+})();
+</script>
 </body>
 </html>
