@@ -185,6 +185,7 @@ footer a{color:inherit}
   const fmt = d3.format(',');
   const ACC = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
 
+  const PREF=new Set(D.candidates.filter(r=>r.rank==='Preferred').map(r=>r.city));
   // scores
   const ev = {}, ag = {};
   D.events.filter(e => e.gtme !== 'adjacent').forEach(e => ev[e.city] = (ev[e.city]||0)+1);
@@ -196,7 +197,7 @@ footer a{color:inherit}
 
   // header
   const de = D.countries.find(c=>c.country==='Germany'), uk = D.countries.find(c=>c.country==='United Kingdom');
-  document.getElementById('lede').innerHTML = `Highest combined score: <b>${rows[0].city}</b> (${rows[0].score}), then <b>${rows[1].city}</b> (${rows[1].score}). By country, Germany has <b>${fmt(+de.postings_90d)}</b> GTM engineer postings in 90 days against <b>${fmt(+uk.postings_90d)}</b> for the UK. Snapshot taken 22 Oct 2026.`;
+  document.getElementById('lede').innerHTML = `Highest combined score: <b>${rows[0].city}</b> (${rows[0].score}), then <b>${rows[1].city}</b> (${rows[1].score}). By country, Germany has <b>${fmt(+de.postings_90d)}</b> GTM engineer postings in 90 days against <b>${fmt(+uk.postings_90d)}</b> for the UK. Preferred conference location: <b>Amsterdam</b> (see the Conference finance tab). Snapshot taken 22 Oct 2026.`;
   document.getElementById('k-post').textContent = fmt(+D.europe[0].postings_90d);
   document.getElementById('k-cos').textContent = fmt(+D.europe[0].companies_90d);
   document.getElementById('k-ev').textContent = fmt(D.events.filter(e=>e.gtme!=='adjacent').length);
@@ -219,12 +220,12 @@ footer a{color:inherit}
     g.append('circle').attr('r',d=>r(d.postings)).attr('fill',ACC).attr('fill-opacity',d=>op(d.score)).attr('stroke',ACC).attr('stroke-width',1.5)
       .on('mousemove',(e,d)=>{const [x,y]=d3.pointer(e,box);tip.style('display','block').html('');tip.append('div').attr('class','t').text(d.city);tip.append('div').text(`Score ${d.score} · ${fmt(d.postings)} postings · ${d.companies} hiring cos`);tip.append('div').text(`${d.events} events · ${d.agencies} agencies`);const tw=tip.node().offsetWidth;tip.style('left',Math.max(4,Math.min(W-tw-4,x+12))+'px').style('top',(y+12)+'px');})
       .on('mouseleave',()=>tip.style('display','none'));
-    g.append('text').text(d=>d.city).attr('y',d=>-r(d.postings)-4).attr('text-anchor','middle').attr('fill','var(--fg)').style('font-size','12px').style('pointer-events','none');
+    g.append('text').text(d=>PREF.has(d.city)?d.city+' ★ preferred':d.city).style('font-weight',d=>PREF.has(d.city)?'600':null).attr('y',d=>-r(d.postings)-4).attr('text-anchor','middle').attr('fill','var(--fg)').style('font-size','12px').style('pointer-events','none');
   }
 
   function drawRank(){
     const tb=document.querySelector('#rank tbody'); tb.replaceChildren();
-    rows.forEach(d=>{const tr=document.createElement('tr');[d.city,fmt(d.postings),fmt(d.companies),fmt(d.events),fmt(d.agencies)].forEach((v,i)=>{const td=document.createElement('td');td.textContent=v;if(i)td.className='n';tr.append(td);});const td=document.createElement('td');const b=document.createElement('span');b.className='sbar';b.style.width=(d.score*0.6)+'px';td.append(b,String(d.score));tr.append(td);tb.append(tr);});
+    rows.forEach(d=>{const tr=document.createElement('tr');[PREF.has(d.city)?d.city+' ★':d.city,fmt(d.postings),fmt(d.companies),fmt(d.events),fmt(d.agencies)].forEach((v,i)=>{const td=document.createElement('td');td.textContent=v;if(i)td.className='n';tr.append(td);});const td=document.createElement('td');const b=document.createElement('span');b.className='sbar';b.style.width=(d.score*0.6)+'px';td.append(b,String(d.score));tr.append(td);tb.append(tr);});
   }
 
   function drawBars(){
