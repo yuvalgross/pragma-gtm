@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /gtm-hubs
 Sitemap: https://pragma-gtm.com/sitemap.xml
