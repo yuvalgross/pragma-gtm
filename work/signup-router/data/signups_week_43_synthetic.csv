@@ -1,0 +1,21 @@
+account_id,domain,email_type,signup_date,volume_w1,volume_w2,volume_w3,volume_w4,products_used,integration_path,company_name,hq_city,country,headcount,category,last_funding_months_ago,pain_signals,existing_tool,hosting
+syn-016,company-p.example,work,2026-10-23,800,1200,1900,2600,core_a,partner_marketplace,Synthetic Company P,Toronto,CA,9,core_segment,4,,none,cloud
+syn-005,company-e.example,work,2026-10-24,4000,6000,8000,11000,core_a,partner_marketplace,Synthetic Company E,London,GB,15,other,40,,none,cloud
+syn-018,customer-one.example,work,2026-10-21,40000,42000,41000,43000,core_b,direct_api,Customer One,London,GB,300,core_segment,12,,none,self
+syn-010,company-j.example,work,2026-10-23,7000,7500,9000,12000,core_b;addon_y,open_framework,Synthetic Company J,Hamburg,DE,140,core_segment,16,job:specialist role;docs:technical need,none,cloud
+syn-009,company-i.example,work,2026-10-22,200,150,300,100,core_a,direct_api,Synthetic Company I,Lisbon,PT,2,other,99,,none,unknown
+syn-019,partner-two.example,work,2026-10-21,25000,26000,27000,28000,core_b;addon_y,direct_api,Partner Two,San Francisco,US,60,core_segment,10,,none,cloud
+syn-004,company-d.example,work,2026-10-23,3000,3200,3100,3400,core_a,direct_api,Synthetic Company D,Munich,DE,25,core_segment,6,,none,cloud
+syn-012,company-l.example,work,2026-10-19,2500,2400,2600,2500,core_a,direct_api,Synthetic Company L,Dublin,IE,48,core_segment,24,,incumbent,cloud
+syn-001,company-a.example,work,2026-10-20,18000,24000,31000,39000,core_a;addon_x,direct_api,Synthetic Company A,Berlin,DE,120,core_segment,9,job:specialist role;docs:technical need,incumbent,self
+syn-011,company-k.example,work,2026-10-24,15000,21000,28000,36000,core_b;addon_y,partner_marketplace,Synthetic Company K,Chicago,US,35,core_segment,8,blog:public problem statement,none,cloud
+syn-003,company-c.example,work,2026-10-22,9000,12000,15000,17000,core_b;addon_y,self_hosted,Synthetic Company C,Austin,US,60,core_segment,22,blog:public problem statement,none,cloud
+syn-006,company-f.example,work,2026-10-19,20000,22000,21000,25000,core_b,reseller_channel,Synthetic Company F,Vienna,AT,80,core_segment,30,job:specialist role,none,unknown
+syn-017,company-q.example,work,2026-10-24,11000,13000,12000,16000,core_b;addon_x,reseller_channel,Synthetic Company Q,Barcelona,ES,65,core_segment,13,docs:technical need,none,cloud
+syn-020,gmail.com,personal,2026-10-21,300,500,200,400,core_a,direct_api,,,,0,,0,,none,unknown
+syn-002,company-b.example,work,2026-10-21,52000,51000,53000,52000,core_b,open_framework,Synthetic Company B,Amsterdam,NL,300,core_segment,14,blog:public problem statement,none,cloud
+syn-015,company-o.example,work,2026-10-22,5000,5500,7000,9000,core_a;addon_z,direct_api,Synthetic Company O,Stuttgart,DE,900,other,99,job:specialist role,inhouse,self
+syn-007,company-g.example,work,2026-10-20,14000,19000,26000,33000,core_b;addon_y;addon_x,direct_api,Synthetic Company G,Zurich,CH,450,core_segment,11,job:specialist role;job:second hire;blog:public problem statement,inhouse,self
+syn-008,company-h.example,work,2026-10-21,1000,900,1100,1000,core_a,direct_api,Synthetic Company H,Paris,FR,700,other,5,,none,cloud
+syn-013,company-m.example,work,2026-10-20,600,800,400,900,core_b;addon_y;addon_x,direct_api,Synthetic Company M,Aachen,DE,12,other,99,,none,self
+syn-014,company-n.example,work,2026-10-21,30000,29000,31000,30000,core_b,direct_api,Synthetic Company N,Madrid,ES,220,core_segment,20,job:specialist role,incumbent,cloud

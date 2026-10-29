@@ -1,0 +1,4 @@
+account_id,domain,reason
+syn-018,customer-one.example,existing customer or partner
+syn-019,partner-two.example,existing customer or partner
+syn-020,gmail.com,personal email

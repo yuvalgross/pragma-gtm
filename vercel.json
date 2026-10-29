@@ -88,6 +88,33 @@
           "value": "public, max-age=604800"
         }
       ]
+    },
+    {
+      "source": "/work/signup-router/signup_router.py",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/work/signup-router/make_synthetic_signups.py",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/work/signup-router/README.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ]
 }

@@ -1384,6 +1384,106 @@ h2 em {
     line-height: 1.5;
     font-weight: var(--fw-regular);
   }
+
+/* eight nav links need a tighter gap between the phone menu and wide desktops */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .nav-links { gap: 1.05rem; }
+  .nav-links a { font-size: 0.82rem; }
+}
+
+/* WORK SAMPLES */
+.work {
+    background: var(--paper-warm);
+    padding: var(--sp-section) var(--sp-section-h);
+  }
+.work-intro {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 0 2rem;
+  }
+.work-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 820px;
+  }
+.work-card h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0;
+  }
+.work-sub {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    margin: 0.3rem 0 0;
+  }
+.work-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 62ch;
+  }
+.work-facts {
+    list-style: none;
+    margin: 0;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+.work-facts strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: var(--fw-light);
+    line-height: 1;
+    color: var(--accent-dark);
+  }
+.work-facts span {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.35;
+  }
+.work-card .work-limits {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+  }
+.work-link {
+    justify-self: start;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: var(--fw-medium);
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+.work-link:hover, .work-link:focus-visible {
+    color: var(--accent-dark);
+    border-color: var(--accent-dark);
+  }
+.work-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 640px) {
+  .work-card { padding: 1.4rem; }
+  .work-facts { grid-template-columns: repeat(2, 1fr); }
+}
 .cta-section {
     background: var(--paper-warm);
     padding: var(--sp-section) var(--sp-section-h);
@@ -3702,7 +3802,7 @@ to {
     position: relative; z-index: 1;
   }
 .nav-links a.active {
-    color: var(--ink) !important;
+    color: #f5f0e8 !important; /* the nav bar is dark in both themes; var(--ink) vanished on it in light mode */
     opacity: 1;
   }
 .nav-links a.active::after {
@@ -4011,6 +4111,7 @@ html.legal-open { overflow: hidden; }
       <li><a href="#philosophy">Philosophy</a></li>
       <li><a href="#how">The system</a></li>
       <li><a href="#results">Results</a></li>
+      <li><a href="#samples">Samples</a></li>
       <li><a href="#stack">CV</a></li>
       <li><a href="#engagement">Work</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -4035,6 +4136,7 @@ html.legal-open { overflow: hidden; }
   <a href="#philosophy" onclick="closeMenu()">Philosophy</a>
   <a href="#how" onclick="closeMenu()">The system</a>
   <a href="#results" onclick="closeMenu()">Results</a>
+  <a href="#samples" onclick="closeMenu()">Samples</a>
   <a href="#stack" onclick="closeMenu()">CV</a>
   <a href="#engagement" onclick="closeMenu()">Work</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-nav-cta">Contact</a>
@@ -4952,6 +5054,34 @@ html.legal-open { overflow: hidden; }
 </section>
 
 
+<!-- WORK SAMPLES -->
+<section class="work" id="samples" aria-labelledby="samplesHeading">
+  <div class="container">
+    <div class="section-label">Work samples</div>
+    <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
+    <p class="work-intro">One tool, end to end, with the data, the rules and the limits all on the page.</p>
+    <article class="work-card fade-up">
+      <div>
+        <h3>Signup router</h3>
+        <p class="work-sub">Who gets a human this week, and what that human does first.</p>
+      </div>
+      <p>A Python script that takes a week of product trial signups, drops existing customers, partners and personal emails, scores the rest from 0 to 100 on usage, company fit, integration path and pain signals, and assigns one next action per account. Every score comes with the evidence behind it. Adapted from a take home exercise I built in October 2026.</p>
+      <ul class="work-facts" aria-label="Result of the sample run">
+        <li><strong>20</strong><span>signups in</span></li>
+        <li><strong>3</strong><span>stopped by the gate</span></li>
+        <li><strong>17</strong><span>scored</span></li>
+        <li><strong>4</strong><span>sent for a custom benchmark</span></li>
+      </ul>
+      <p class="work-limits">Runs on synthetic data, no real companies. The Clay enrichment and the n8n step that writes tasks into HubSpot are designed, not running.</p>
+      <div class="exp-tags" style="margin-top:0">
+        <span class="exp-tag">Python</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing logic</span><span class="exp-tag">Synthetic data</span>
+      </div>
+      <a class="work-link" href="/work/signup-router/">Read the write up and source &rarr;</a>
+    </article>
+  </div>
+</section>
+
+
 <!-- CV SECTION -->
 <section id="stack">
   <div class="container">
@@ -5156,6 +5286,7 @@ html.legal-open { overflow: hidden; }
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#how">The system</a></li>
     <li><a href="#results">Results</a></li>
+    <li><a href="#samples">Samples</a></li>
     <li><a href="#stack">CV</a></li>
     <li><a href="#engagement">Work</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
