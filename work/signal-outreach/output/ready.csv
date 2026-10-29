@@ -1,140 +1,349 @@
 email,first_name,company_name,persona,signal,signal_score,step1_local,step1_utc,step2_date,step3_date,subject,step1,step2,step3,contact_id
-lena@company-a.example,Lena,Synthetic Company A,revops,hiring: a first RevOps analyst (9 days),4.0,2026-11-02 08:30 Europe/Berlin,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Lena,
+nora@company-q2.example,Nora,Synthetic Company Q2,sales_leader,hiring: a first RevOps analyst (10 days),5.0,2026-11-02 08:30 Europe/Brussels,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Nora,
 
-Saw Synthetic Company A is hiring a first RevOps analyst. New hires usually spend their first month working out who owns which lead.
-
-We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval","Hi Lena,
-
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
-
-Want it?
-
-Yuval","Hi Lena,
-
-I'll leave it here. If lead routing becomes a priority at Synthetic Company A, reply with ""routing"" and I'll send the checklist.
-
-Yuval",con-001
-leo@company-m.example,Leo,Synthetic Company M,revops,hiring: a sales ops analyst (20 days),4.0,2026-11-02 08:30 Europe/Dublin,2026-11-02 08:30,2026-11-05,2026-11-12,your hiring plan,"Hi Leo,
-
-Saw Synthetic Company M is hiring a sales ops analyst. New hires usually spend their first month working out who owns which lead.
-
-We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval","Hi Leo,
-
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
-
-Want it?
-
-Yuval","Hi Leo,
-
-I'll leave it here. If lead routing becomes a priority at Synthetic Company M, reply with ""routing"" and I'll send the checklist.
-
-Yuval",con-014
-jonas@company-d.example,Jonas,Synthetic Company D,revops,tech_change: moved from Salesforce to HubSpot (11 days),3.0,2026-11-02 08:30 Europe/Berlin,2026-11-02 07:30,2026-11-05,2026-11-12,routing after the switch,"Hi Jonas,
-
-Noticed Synthetic Company D moved from Salesforce to HubSpot. A CRM move is often when routing rules quietly break.
-
-We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval","Hi Jonas,
-
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
-
-Want it?
-
-Yuval","Hi Jonas,
-
-I'll leave it here. If lead routing becomes a priority at Synthetic Company D, reply with ""routing"" and I'll send the checklist.
-
-Yuval",con-004
-paul@company-f.example,Paul,Synthetic Company F,sales_leader,hiring: three account executives (13 days),3.0,2026-11-02 08:30 Europe/Zurich,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Paul,
-
-Saw Synthetic Company F is hiring three account executives. New hires usually spend their first month working out who owns which lead.
+Saw Synthetic Company Q2 is hiring a first RevOps analyst. New hires usually spend their first month working out who owns which lead.
 
 We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
 
 Worth a short call next week, or should I send a two minute walkthrough instead?
 
-Yuval","Hi Paul,
+Yuval","Hi Nora,
 
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
-
-Want it?
-
-Yuval","Hi Paul,
-
-I'll leave it here. If lead routing becomes a priority at Synthetic Company F, reply with ""routing"" and I'll send the checklist.
-
-Yuval",con-006
-eva@company-b.example,Eva,Synthetic Company B,revops,hiring: a RevOps lead (17 days),3.0,2026-11-02 08:30 Europe/Amsterdam,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Eva,
-
-Saw Synthetic Company B is hiring a RevOps lead. New hires usually spend their first month working out who owns which lead.
-
-We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval","Hi Eva,
-
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
 
 Want it?
 
-Yuval","Hi Eva,
+Yuval","Hi Nora,
 
-I'll leave it here. If lead routing becomes a priority at Synthetic Company B, reply with ""routing"" and I'll send the checklist.
+I'll leave it here. If lead routing becomes a priority at Synthetic Company Q2, reply with ""routing"" and I'll send the checklist.
 
-Yuval",con-009
-tom@company-b.example,Tom,Synthetic Company B,sales_leader,funding: Series B in October (21 days),2.0,2026-11-03 08:30 Europe/Amsterdam,2026-11-03 07:30,2026-11-06,2026-11-13,after the round,"Hi Tom,
+Yuval",con-052
+hanna@company-o3.example,Hanna,Synthetic Company O3,founder,hiring: three account executives (6 days),4.0,2026-11-02 08:30 Europe/Brussels,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Hanna,
 
-Congrats on the Series B in October. After a round, inbound tends to grow faster than the rules that route it.
-
-We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval","Hi Tom,
-
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
-
-Want it?
-
-Yuval","Hi Tom,
-
-I'll leave it here. If lead routing becomes a priority at Synthetic Company B, reply with ""routing"" and I'll send the checklist.
-
-Yuval",con-002
-sara@company-c.example,Sara,Synthetic Company C,founder,content: leads waiting over the weekend (6 days),2.0,2026-11-02 08:30 Europe/Vienna,2026-11-02 07:30,2026-11-05,2026-11-12,your post,"Hi Sara,
-
-Read your post on leads waiting over the weekend. That is the exact problem we work on.
+Saw Synthetic Company O3 is hiring three account executives. New hires usually spend their first month working out who owns which lead.
 
 We help small teams route inbound leads to the right person within a minute, without hiring for it.
 
 Worth a short call next week, or should I send a two minute walkthrough instead?
 
+Yuval","Hi Hanna,
+
+A short follow up. Most small teams start with a one week audit of where inbound leads land and who answers them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Hanna,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company O3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-084
+felix@company-v2.example,Felix,Synthetic Company V2,marketing_leader,tech_change: added a scheduling tool to their demo page (19 days),4.0,2026-11-02 08:30 Europe/Berlin,2026-11-02 07:30,2026-11-05,2026-11-12,routing after the switch,"Hi Felix,
+
+Noticed Synthetic Company V2 added a scheduling tool to their demo page. A change in the sales stack is often when routing rules quietly break.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Felix,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Felix,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company V2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-059
+noah@company-r3.example,Noah,Synthetic Company R3,founder,hiring: a sales ops analyst (21 days),4.0,2026-11-02 08:30 Europe/Berlin,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Noah,
+
+Saw Synthetic Company R3 is hiring a sales ops analyst. New hires usually spend their first month working out who owns which lead.
+
+We help small teams route inbound leads to the right person within a minute, without hiring for it.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Noah,
+
+A short follow up. Most small teams start with a one week audit of where inbound leads land and who answers them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Noah,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company R3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-087
+tim@company-s.example,Tim,Synthetic Company S,revops,hiring: a sales ops analyst (1 days),3.0,2026-11-02 08:30 Europe/Zurich,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Tim,
+
+Saw Synthetic Company S is hiring a sales ops analyst. New hires usually spend their first month working out who owns which lead.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Tim,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Tim,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company S, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-021
+tom@company-v.example,Tom,Synthetic Company V,sales_leader,event: the speaker list for a RevOps meetup (1 days),3.0,2026-11-02 08:30 Europe/Vienna,2026-11-02 07:30,2026-11-05,2026-11-12,leads from the event,"Hi Tom,
+
+Saw Synthetic Company V on the speaker list for a RevOps meetup. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Tom,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Tom,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company V, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-025
+mia@company-s3.example,Mia,Synthetic Company S3,sales_leader,event: the exhibitor list for a Berlin SaaS conference (2 days),3.0,2026-11-02 08:30 Europe/Warsaw,2026-11-02 07:30,2026-11-05,2026-11-12,leads from the event,"Hi Mia,
+
+Saw Synthetic Company S3 on the exhibitor list for a Berlin SaaS conference. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Mia,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Mia,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company S3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-088
+nina@company-c2.example,Nina,Synthetic Company C2,revops,hiring: two SDRs (3 days),3.0,2026-11-02 08:30 Europe/Dublin,2026-11-02 08:30,2026-11-05,2026-11-12,your hiring plan,"Hi Nina,
+
+Saw Synthetic Company C2 is hiring two SDRs. New hires usually spend their first month working out who owns which lead.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Nina,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Nina,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company C2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-033
+ali@company-v3.example,Ali,Synthetic Company V3,revops,hiring: two SDRs (3 days),3.0,2026-11-02 08:30 Europe/Berlin,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Ali,
+
+Saw Synthetic Company V3 is hiring two SDRs. New hires usually spend their first month working out who owns which lead.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Ali,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Ali,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company V3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-092
+sara@company-y2.example,Sara,Synthetic Company Y2,revops,funding: seed round (5 days),3.0,2026-11-02 08:30 Europe/Zurich,2026-11-02 07:30,2026-11-05,2026-11-12,after the round,"Hi Sara,
+
+Congrats on the seed round. After a round, inbound tends to grow faster than the rules that route it.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
 Yuval","Hi Sara,
 
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
 
 Want it?
 
 Yuval","Hi Sara,
 
-I'll leave it here. If lead routing becomes a priority at Synthetic Company C, reply with ""routing"" and I'll send the checklist.
+I'll leave it here. If lead routing becomes a priority at Synthetic Company Y2, reply with ""routing"" and I'll send the checklist.
 
-Yuval",con-003
-mia@company-e.example,Mia,Synthetic Company E,marketing_leader,event: the exhibitor list for a Berlin SaaS conference (4 days),2.0,2026-11-02 08:30 Europe/London,2026-11-02 08:30,2026-11-05,2026-11-12,leads from the event,"Hi Mia,
+Yuval",con-062
+sara@company-f3.example,Sara,Synthetic Company F3,sales_leader,tech_change: added a scheduling tool to their demo page (5 days),3.0,2026-11-02 08:30 Europe/Stockholm,2026-11-02 07:30,2026-11-05,2026-11-12,routing after the switch,"Hi Sara,
 
-Saw Synthetic Company E on the exhibitor list for a Berlin SaaS conference. Event weeks bring a spike of leads that often sit in a shared inbox.
+Noticed Synthetic Company F3 added a scheduling tool to their demo page. A change in the sales stack is often when routing rules quietly break.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Sara,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Sara,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company F3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-072
+jan@company-s2.example,Jan,Synthetic Company S2,revops,tech_change: replaced their chat widget (6 days),3.0,2026-11-02 08:30 Europe/Vienna,2026-11-02 07:30,2026-11-05,2026-11-12,routing after the switch,"Hi Jan,
+
+Noticed Synthetic Company S2 replaced their chat widget. A change in the sales stack is often when routing rules quietly break.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Jan,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Jan,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company S2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-054
+oskar@company-w.example,Oskar,Synthetic Company W,revops,hiring: a head of sales (7 days),3.0,2026-11-02 08:30 Europe/Zurich,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Oskar,
+
+Saw Synthetic Company W is hiring a head of sales. New hires usually spend their first month working out who owns which lead.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Oskar,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Oskar,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company W, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-026
+tom@company-x3.example,Tom,Synthetic Company X3,sales_leader,content: leads waiting over the weekend (7 days),3.0,2026-11-02 08:30 Europe/Berlin,2026-11-02 07:30,2026-11-05,2026-11-12,your post,"Hi Tom,
+
+Read your post on leads waiting over the weekend. That is the exact problem we work on.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Tom,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Tom,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company X3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-095
+omar@company-j4.example,Omar,Synthetic Company J4,revops,event: the exhibitor list for a London martech show (9 days),3.0,2026-11-02 08:30 Europe/Copenhagen,2026-11-02 07:30,2026-11-05,2026-11-12,leads from the event,"Hi Omar,
+
+Saw Synthetic Company J4 on the exhibitor list for a London martech show. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Omar,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Omar,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company J4, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-111
+paul@company-g2.example,Paul,Synthetic Company G2,revops,tech_change: moved from Salesforce to HubSpot (10 days),3.0,2026-11-02 08:30 Europe/London,2026-11-02 08:30,2026-11-05,2026-11-12,routing after the switch,"Hi Paul,
+
+Noticed Synthetic Company G2 moved from Salesforce to HubSpot. A change in the sales stack is often when routing rules quietly break.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Paul,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Paul,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company G2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-037
+nina@company-z2.example,Nina,Synthetic Company Z2,revops,event: the exhibitor list for a Berlin SaaS conference (10 days),3.0,2026-11-02 08:30 Europe/London,2026-11-02 08:30,2026-11-05,2026-11-12,leads from the event,"Hi Nina,
+
+Saw Synthetic Company Z2 on the exhibitor list for a Berlin SaaS conference. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Nina,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Nina,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company Z2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-064
+emma@company-e3.example,Emma,Synthetic Company E3,revops,hiring: a marketing ops manager (10 days),3.0,2026-11-02 08:30 Europe/Vienna,2026-11-02 07:30,2026-11-05,2026-11-12,your hiring plan,"Hi Emma,
+
+Saw Synthetic Company E3 is hiring a marketing ops manager. New hires usually spend their first month working out who owns which lead.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Emma,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Emma,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company E3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-071
+mia@company-y.example,Mia,Synthetic Company Y,marketing_leader,tech_change: started using Clay (11 days),3.0,2026-11-02 08:30 Europe/London,2026-11-02 08:30,2026-11-05,2026-11-12,routing after the switch,"Hi Mia,
+
+Noticed Synthetic Company Y started using Clay. A change in the sales stack is often when routing rules quietly break.
 
 We help marketing teams make sure the leads they paid for reach a rep the same hour.
 
@@ -142,12 +351,373 @@ Worth a short call next week, or should I send a two minute walkthrough instead?
 
 Yuval","Hi Mia,
 
-A short follow up. Most teams start with a one week audit of where inbound leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
 
 Want it?
 
 Yuval","Hi Mia,
 
-I'll leave it here. If lead routing becomes a priority at Synthetic Company E, reply with ""routing"" and I'll send the checklist.
+I'll leave it here. If lead routing becomes a priority at Synthetic Company Y, reply with ""routing"" and I'll send the checklist.
 
-Yuval",con-005
+Yuval",con-029
+aylin@company-a3.example,Aylin,Synthetic Company A3,marketing_leader,tech_change: replaced their chat widget (11 days),3.0,2026-11-02 08:30 Europe/Lisbon,2026-11-02 08:30,2026-11-05,2026-11-12,routing after the switch,"Hi Aylin,
+
+Noticed Synthetic Company A3 replaced their chat widget. A change in the sales stack is often when routing rules quietly break.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Aylin,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Aylin,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company A3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-066
+sara@company-i.example,Sara,Synthetic Company I,founder,hiring: a sales ops analyst (14 days),3.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,your hiring plan,"Hi Sara,
+
+Saw Synthetic Company I is hiring a sales ops analyst. New hires usually spend their first month working out who owns which lead.
+
+We help small teams route inbound leads to the right person within a minute, without hiring for it.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Sara,
+
+A short follow up. Most small teams start with a one week audit of where inbound leads land and who answers them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Sara,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company I, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-010
+paul@company-l2.example,Paul,Synthetic Company L2,sales_leader,funding: Series B (6 days),2.0,2026-11-03 08:30 Europe/Zurich,2026-11-03 07:30,2026-11-06,2026-11-13,after the round,"Hi Paul,
+
+Congrats on the Series B. After a round, inbound tends to grow faster than the rules that route it.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Paul,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Paul,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company L2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-045
+mia@company-d4.example,Mia,Synthetic Company D4,marketing_leader,event: the speaker list for a RevOps meetup (8 days),2.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,leads from the event,"Hi Mia,
+
+Saw Synthetic Company D4 on the speaker list for a RevOps meetup. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Mia,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Mia,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company D4, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-103
+tim@company-h2.example,Tim,Synthetic Company H2,marketing_leader,content: slow lead response times (9 days),2.0,2026-11-03 08:30 Europe/Zurich,2026-11-03 07:30,2026-11-06,2026-11-13,your post,"Hi Tim,
+
+Read your post on slow lead response times. That is the exact problem we work on.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Tim,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Tim,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company H2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-040
+felix@company-p2.example,Felix,Synthetic Company P2,founder,event: the sponsor list for a fintech summit (11 days),2.0,2026-11-03 08:30 Europe/Zurich,2026-11-03 07:30,2026-11-06,2026-11-13,leads from the event,"Hi Felix,
+
+Saw Synthetic Company P2 on the sponsor list for a fintech summit. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help small teams route inbound leads to the right person within a minute, without hiring for it.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Felix,
+
+A short follow up. Most small teams start with a one week audit of where inbound leads land and who answers them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Felix,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company P2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-050
+oskar@company-u.example,Oskar,Synthetic Company U,sales_leader,event: the exhibitor list for a London martech show (12 days),2.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,leads from the event,"Hi Oskar,
+
+Saw Synthetic Company U on the exhibitor list for a London martech show. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Oskar,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Oskar,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company U, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-024
+ben@company-u2.example,Ben,Synthetic Company U2,revops,funding: seed round (12 days),2.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,after the round,"Hi Ben,
+
+Congrats on the seed round. After a round, inbound tends to grow faster than the rules that route it.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Ben,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Ben,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company U2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-057
+ida@company-w2.example,Ida,Synthetic Company W2,marketing_leader,event: the exhibitor list for a Berlin SaaS conference (13 days),2.0,2026-11-03 08:30 Europe/Dublin,2026-11-03 08:30,2026-11-06,2026-11-13,leads from the event,"Hi Ida,
+
+Saw Synthetic Company W2 on the exhibitor list for a Berlin SaaS conference. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Ida,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Ida,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company W2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-060
+erik@company-k2.example,Erik,Synthetic Company K2,sales_leader,event: the speaker list for a RevOps meetup (14 days),2.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,leads from the event,"Hi Erik,
+
+Saw Synthetic Company K2 on the speaker list for a RevOps meetup. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Erik,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Erik,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company K2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-044
+jan@company-n.example,Jan,Synthetic Company N,revops,funding: seed round (15 days),2.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,after the round,"Hi Jan,
+
+Congrats on the seed round. After a round, inbound tends to grow faster than the rules that route it.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Jan,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Jan,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company N, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-015
+maya@company-l4.example,Maya,Synthetic Company L4,revops,content: slow lead response times (15 days),2.0,2026-11-03 08:30 Europe/Berlin,2026-11-03 07:30,2026-11-06,2026-11-13,your post,"Hi Maya,
+
+Read your post on slow lead response times. That is the exact problem we work on.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Maya,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Maya,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company L4, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-114
+ali@company-a2.example,Ali,Synthetic Company A2,revops,content: messy territory rules (16 days),2.0,2026-11-03 08:30 Europe/Zurich,2026-11-03 07:30,2026-11-06,2026-11-13,your post,"Hi Ali,
+
+Read your post on messy territory rules. That is the exact problem we work on.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Ali,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Ali,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company A2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-031
+clara@company-b2.example,Clara,Synthetic Company B2,marketing_leader,funding: Series A extension (16 days),2.0,2026-11-03 08:30 Europe/Vienna,2026-11-03 07:30,2026-11-06,2026-11-13,after the round,"Hi Clara,
+
+Congrats on the Series A extension. After a round, inbound tends to grow faster than the rules that route it.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Clara,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Clara,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company B2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-032
+hanna@company-k2.example,Hanna,Synthetic Company K2,founder,content: slow lead response times (16 days),2.0,2026-11-04 08:30 Europe/Berlin,2026-11-04 07:30,2026-11-09,2026-11-16,your post,"Hi Hanna,
+
+Read your post on slow lead response times. That is the exact problem we work on.
+
+We help small teams route inbound leads to the right person within a minute, without hiring for it.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Hanna,
+
+A short follow up. Most small teams start with a one week audit of where inbound leads land and who answers them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Hanna,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company K2, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-043
+luca@company-d.example,Luca,Synthetic Company D,sales_leader,event: the speaker list for a RevOps meetup (17 days),2.0,2026-11-03 08:30 Europe/Warsaw,2026-11-03 07:30,2026-11-06,2026-11-13,leads from the event,"Hi Luca,
+
+Saw Synthetic Company D on the speaker list for a RevOps meetup. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Luca,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Luca,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company D, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-004
+tim@company-k4.example,Tim,Synthetic Company K4,sales_leader,funding: Series A (18 days),2.0,2026-11-03 08:30 Europe/Dublin,2026-11-03 08:30,2026-11-06,2026-11-13,after the round,"Hi Tim,
+
+Congrats on the Series A. After a round, inbound tends to grow faster than the rules that route it.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Tim,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Tim,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company K4, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-112
+paul@company-s.example,Paul,Synthetic Company S,marketing_leader,funding: Series A extension (20 days),2.0,2026-11-03 08:30 Europe/Zurich,2026-11-03 07:30,2026-11-06,2026-11-13,after the round,"Hi Paul,
+
+Congrats on the Series A extension. After a round, inbound tends to grow faster than the rules that route it.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Paul,
+
+A short follow up. Most marketing teams start with a one week audit of how many paid leads reach a rep the same day. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Paul,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company S, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-022
+tom@company-t3.example,Tom,Synthetic Company T3,revops,event: the speaker list for a RevOps meetup (21 days),2.0,2026-11-03 08:30 Europe/Vienna,2026-11-03 07:30,2026-11-06,2026-11-13,leads from the event,"Hi Tom,
+
+Saw Synthetic Company T3 on the speaker list for a RevOps meetup. Event weeks bring a spike of leads that often sit in a shared inbox.
+
+We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval","Hi Tom,
+
+A short follow up. Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them. It takes about 30 minutes of your team's time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval","Hi Tom,
+
+I'll leave it here. If lead routing becomes a priority at Synthetic Company T3, reply with ""routing"" and I'll send the checklist.
+
+Yuval",con-090

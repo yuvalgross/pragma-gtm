@@ -70,6 +70,7 @@
   .mail { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; font-size: 15.5px; white-space: pre-wrap; margin: 0; font-family: var(--sans); }
   .mailhead { font-size: 13.5px; color: var(--muted); margin: 18px 0 6px; }
   .mails { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 18px; }
+  .funnel td.bar { width: 40%; } .funnel .b { display:block; height: 10px; background: var(--accent); opacity: .75; }
   ul.plain { margin: 6px 0 0; padding-left: 20px; } ul.plain li { margin-bottom: 4px; max-width: 70ch; }
   td.acct { min-width: 220px; }
   th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
@@ -99,94 +100,115 @@
   <header>
     <p class="eyebrow">Work sample</p>
     <h1>Signal outreach: write from the reason to reach out, and <em>send nothing without one.</em></h1>
-    <p class="lead">A small Python tool that takes an enriched contact list, holds back everyone who should not be emailed, picks each contact's freshest buying signal, writes a three step sequence from it, checks the copy, and schedules it in the contact's own time zone. Every email can be traced back to the rule that wrote it.</p>
+    <p class="lead">A small Python tool that takes an enriched contact list, cleans it, holds back everyone who should not be emailed, picks each contact's freshest buying signal, writes a three step sequence from it, checks the copy, and schedules it in the contact's own time zone. Every email can be traced back to the rule that wrote it, and 17 tests check those rules on every run.</p>
     <p class="origin">Built in October 2026 as a portfolio sample. Every contact, company and signal is invented. The rule it is built around comes from the outbound I run at OEB: signal aware cohorts closed at 40% against 12% for generic ones, so this tool would rather send nothing than send generic copy.</p>
   </header>
 
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
     <div class="flow">
-      <div class="step"><b>Input</b><span>A CRM export (status, last touch, opt out) joined with the columns Clay would add: title, email status and dated signals.</span></div>
+      <div class="step"><b>Clean</b><span>Emails lowercased, exact duplicates dropped, rows with unreadable signal data held. Nothing is guessed.</span></div>
       <div class="step"><b>Gate</b><span>Opt outs, customers, open deals, partners, anyone touched in the last 30 days, bad or personal emails, and titles outside the four personas are held with the reason.</span></div>
-      <div class="step"><b>Signal</b><span>Hiring and CRM changes weigh 3, funding, events and posts 2. Full weight up to 21 days, half to 45, nothing after. Below 2 means nurture.</span></div>
-      <div class="step"><b>Write</b><span>Opener from the signal, one line for the persona, one question as the ask. Follow ups three and eight business days later.</span></div>
+      <div class="step"><b>Signal</b><span>Hiring and stack changes weigh 3, funding, events and posts 2. Full weight up to 21 days, half to 45, nothing after. Extra signals add a point only while fresh. Below 2 means nurture.</span></div>
+      <div class="step"><b>Write</b><span>Opener from the signal, one line for the persona, one question as the ask. Step 2 is framed for what the persona is measured on. Step 3 closes the loop.</span></div>
       <div class="step"><b>Check</b><span>Step 1 under 90 words, short subject, no leftover placeholders, banned phrases, spam words or extra links. Risky emails too. Failures go to a person.</span></div>
-      <div class="step"><b>Schedule</b><span>Strongest signal first, one new contact per company per day, 30 per mailbox per day, weekdays at 08:30 local time.</span></div>
+      <div class="step"><b>Schedule</b><span>Strongest and freshest first, one new contact per company per day, 20 per mailbox per day, weekdays at 08:30 local time.</span></div>
     </div>
   </section>
 
   <section aria-labelledby="run">
     <h2 id="run">Run output, 29 October 2026</h2>
-    <p>20 contacts in. The gate held 7. Another 3 had no signal strong or fresh enough and went to nurture. 2 sequences were written but stopped by the copy check. 8 are ready to import, starting Monday 2 November. Two of them work at the same company, so the second one starts a day later.</p>
+    <p>A list of 119 contacts across 93 companies, built to look like a real CRM export joined with enrichment. 38 sequences (32% of the list) are ready to import. The daily cap of 20 pushed the rest to Tuesday, and the one company rule moved a second contact to Wednesday.</p>
+    <div class="tablewrap funnel" tabindex="0" role="region" aria-label="Funnel, scrolls sideways on small screens">
+    <table>
+      <thead><tr><th>Stage</th><th class="n">Contacts</th><th class="n">Share</th><th></th><th>Why</th></tr></thead>
+      <tbody>
+<tr><td>Contacts in</td><td class="n total">119</td><td class="n">100%</td><td class="bar"><span class="b" style="width:100.0%"></span></td><td></td></tr>
+<tr><td>Removed in cleaning</td><td class="n total">2</td><td class="n">2%</td><td class="bar"><span class="b" style="width:1.7%"></span></td><td>one exact duplicate, one row with unreadable signal data</td></tr>
+<tr><td>Held at the gate</td><td class="n total">43</td><td class="n">36%</td><td class="bar"><span class="b" style="width:36.1%"></span></td><td>11 contacted in the last 30 days, 9 opted out, 8 title matches no persona, check by hand, 4 existing customer, 3 email status invalid, 3 open deal, owned by an AE, 3 partner, 1 email status unknown, 1 personal email</td></tr>
+<tr><td>Nurture, no usable signal</td><td class="n total">33</td><td class="n">28%</td><td class="bar"><span class="b" style="width:27.7%"></span></td><td>24 no signal in the last 45 days, 9 signal score below 2</td></tr>
+<tr><td>Stopped by the copy check</td><td class="n total">3</td><td class="n">3%</td><td class="bar"><span class="b" style="width:2.5%"></span></td><td>2 spam word &#x27;free&#x27;, 1 email is risky (catch all), confirm before sending</td></tr>
+<tr><td>Ready to import</td><td class="n total">38</td><td class="n">32%</td><td class="bar"><span class="b" style="width:31.9%"></span></td><td>first emails: 20 on 02.11, 17 on 03.11, 1 on 04.11</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:16px">The ready 38 split by signal: 11 event, 9 hiring, 7 funding, 6 tech change, 5 content. By persona: 15 revops, 10 sales leader, 8 marketing leader, 5 founder. The largest single loss is 24 contacts with no signal at all in the last 45 days. In a real list that number measures enrichment coverage as much as buyer intent, so it is the first one I would watch.</p>
+    <p class="mailhead" style="margin-top:22px">Top 10 of 38 ready contacts. The full list with all three emails is in ready.csv.</p>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Ready contacts, scrolls sideways on small screens">
     <table>
       <thead><tr><th>Contact</th><th>Signal used</th><th class="n">Score</th><th>Subject</th><th>Step 1 goes out</th></tr></thead>
       <tbody>
-<tr><td class="acct">Lena, Synthetic Company A<span class="sub">revops</span></td><td>hiring: a first RevOps analyst (9 days)</td><td class="n total">4</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Berlin</td></tr>
-<tr><td class="acct">Leo, Synthetic Company M<span class="sub">revops</span></td><td>hiring: a sales ops analyst (20 days)</td><td class="n total">4</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Dublin</td></tr>
-<tr><td class="acct">Jonas, Synthetic Company D<span class="sub">revops</span></td><td>tech_change: moved from Salesforce to HubSpot (11 days)</td><td class="n total">3</td><td>routing after the switch</td><td>2026-11-02 08:30 Europe/Berlin</td></tr>
-<tr><td class="acct">Paul, Synthetic Company F<span class="sub">sales leader</span></td><td>hiring: three account executives (13 days)</td><td class="n total">3</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Zurich</td></tr>
-<tr><td class="acct">Eva, Synthetic Company B<span class="sub">revops</span></td><td>hiring: a RevOps lead (17 days)</td><td class="n total">3</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Amsterdam</td></tr>
-<tr><td class="acct">Tom, Synthetic Company B<span class="sub">sales leader</span></td><td>funding: Series B in October (21 days)</td><td class="n total">2</td><td>after the round</td><td>2026-11-03 08:30 Europe/Amsterdam</td></tr>
-<tr><td class="acct">Sara, Synthetic Company C<span class="sub">founder</span></td><td>content: leads waiting over the weekend (6 days)</td><td class="n total">2</td><td>your post</td><td>2026-11-02 08:30 Europe/Vienna</td></tr>
-<tr><td class="acct">Mia, Synthetic Company E<span class="sub">marketing leader</span></td><td>event: the exhibitor list for a Berlin SaaS conference (4 days)</td><td class="n total">2</td><td>leads from the event</td><td>2026-11-02 08:30 Europe/London</td></tr>
+<tr><td class="acct">Nora, Synthetic Company Q2<span class="sub">sales leader</span></td><td>hiring: a first RevOps analyst (10 days)</td><td class="n total">5</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Brussels</td></tr>
+<tr><td class="acct">Hanna, Synthetic Company O3<span class="sub">founder</span></td><td>hiring: three account executives (6 days)</td><td class="n total">4</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Brussels</td></tr>
+<tr><td class="acct">Felix, Synthetic Company V2<span class="sub">marketing leader</span></td><td>tech_change: added a scheduling tool to their demo page (19 days)</td><td class="n total">4</td><td>routing after the switch</td><td>2026-11-02 08:30 Europe/Berlin</td></tr>
+<tr><td class="acct">Noah, Synthetic Company R3<span class="sub">founder</span></td><td>hiring: a sales ops analyst (21 days)</td><td class="n total">4</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Berlin</td></tr>
+<tr><td class="acct">Tim, Synthetic Company S<span class="sub">revops</span></td><td>hiring: a sales ops analyst (1 days)</td><td class="n total">3</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Zurich</td></tr>
+<tr><td class="acct">Tom, Synthetic Company V<span class="sub">sales leader</span></td><td>event: the speaker list for a RevOps meetup (1 days)</td><td class="n total">3</td><td>leads from the event</td><td>2026-11-02 08:30 Europe/Vienna</td></tr>
+<tr><td class="acct">Mia, Synthetic Company S3<span class="sub">sales leader</span></td><td>event: the exhibitor list for a Berlin SaaS conference (2 days)</td><td class="n total">3</td><td>leads from the event</td><td>2026-11-02 08:30 Europe/Warsaw</td></tr>
+<tr><td class="acct">Nina, Synthetic Company C2<span class="sub">revops</span></td><td>hiring: two SDRs (3 days)</td><td class="n total">3</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Dublin</td></tr>
+<tr><td class="acct">Ali, Synthetic Company V3<span class="sub">revops</span></td><td>hiring: two SDRs (3 days)</td><td class="n total">3</td><td>your hiring plan</td><td>2026-11-02 08:30 Europe/Berlin</td></tr>
+<tr><td class="acct">Sara, Synthetic Company Y2<span class="sub">revops</span></td><td>funding: seed round (5 days)</td><td class="n total">3</td><td>after the round</td><td>2026-11-02 08:30 Europe/Zurich</td></tr>
       </tbody>
     </table>
     </div>
-    <h3 class="mailhead" style="font-size:15px;margin-top:26px">Two step 1 emails exactly as the script wrote them</h3>
-    <div class="mails"><div><p class="mailhead">To lena@company-a.example · subject: your hiring plan</p><pre class="mail">Hi Lena,
+    <h3 class="mailhead" style="font-size:15px;margin-top:26px">Emails exactly as the script wrote them</h3>
+    <div class="mails"><div><p class="mailhead">To nora@company-q2.example · step 1 · subject: your hiring plan</p><pre class="mail">Hi Nora,
 
-Saw Synthetic Company A is hiring a first RevOps analyst. New hires usually spend their first month working out who owns which lead.
-
-We help RevOps teams route every inbound lead to the right rep within a minute, with the rules kept in one place.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval</pre></div><div><p class="mailhead">To tom@company-b.example · subject: after the round</p><pre class="mail">Hi Tom,
-
-Congrats on the Series B in October. After a round, inbound tends to grow faster than the rules that route it.
+Saw Synthetic Company Q2 is hiring a first RevOps analyst. New hires usually spend their first month working out who owns which lead.
 
 We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
 
 Worth a short call next week, or should I send a two minute walkthrough instead?
 
+Yuval</pre></div><div><p class="mailhead">To felix@company-v2.example · step 1 · subject: routing after the switch</p><pre class="mail">Hi Felix,
+
+Noticed Synthetic Company V2 added a scheduling tool to their demo page. A change in the sales stack is often when routing rules quietly break.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval</pre></div></div>
+    <div class="mails"><div><p class="mailhead">To nora@company-q2.example · step 2, three business days later · subject: your hiring plan</p><pre class="mail">Hi Nora,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team&#x27;s time, and I can send the checklist we use without a call.
+
+Want it?
+
 Yuval</pre></div></div>
     <p class="mailhead" style="margin-top:22px">Stopped by the copy check, sent to a person</p>
-    <ul class="plain"><li><code>ali@company-h.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>clara@company-j.example</code>: email is risky (catch all), confirm before sending</li></ul>
-    <p class="mailhead" style="margin-top:18px">Held at the gate</p>
-    <ul class="plain"><li><code>max@company-k.example</code>: title &#x27;Office Manager&#x27; matches no persona, check by hand</li><li><code>kim@customer-one.example</code>: existing customer</li><li><code>ron@open-deal-two.example</code>: open deal, owned by an AE</li><li><code>ana@company-n.example</code>: contacted 12 days ago, cooldown is 30</li><li><code>jan@company-o.example</code>: opted out</li><li><code>eli@company-p.example</code>: email status invalid</li><li><code>dan@gmail.com</code>: personal email</li></ul>
-    <p class="mailhead" style="margin-top:18px">Nurture, no usable signal</p>
-    <ul class="plain"><li><code>nora@company-g.example</code>: nurture, no signal in the last 45 days</li><li><code>ben@company-i.example</code>: nurture, signal score 1 below 2</li><li><code>ida@company-l.example</code>: nurture, signal score 1.5 below 2</li></ul>
-    <p class="note">Synthetic input. Every domain ends in <code>.example</code> except the personal email row that tests the gate. Names and signals are invented to exercise the rules. The offer in the emails, lead routing, is a placeholder product so the copy reads like a real sequence.</p>
+    <ul class="plain"><li><code>sara@company-z2.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>rhea@company-z8.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>ugo@company-z7.example</code>: email is risky (catch all), confirm before sending</li></ul>
+    <p class="note">Synthetic input, generated from a fixed seed so every run gives the same rows. Every domain ends in <code>.example</code> except the personal email row that tests the gate. The gate rates are inputs set to look like a mixed export, not measurements. The offer in the emails, lead routing, is a placeholder product so the copy reads like a real sequence.</p>
   </section>
 
   <section aria-labelledby="change">
-    <h2 id="change">What I would change <em>first</em></h2>
-    <p>The extra point per additional signal is too generous. A 30 day old CRM change lifts one contact above a contact with a single 11 day old one, and the older signal is not even the one the email is written from. I would count extra signals only when they are fresh.</p>
-    <p>Persona matching is keyword based. "Head of Growth" lands in marketing, which is right at some companies and wrong at others, and the office manager is held for a person to decide. Step 2 and step 3 are the same for everyone. That is where I would add a model written line, kept behind the same copy check and the same review queue, never sent unread.</p>
+    <h2 id="change">What I changed after the first version, and <em>what is next</em></h2>
+    <p>The first version gave a point for every extra signal, so a 30 day old CRM change could lift a contact above someone with one fresh signal, and the email was not even written from it. Extra signals now count only while they are fresh, and ties go to the fresher signal. Reading all 38 openers also caught a line that said "a CRM move" when the signal was a new scheduling tool or chat widget. It now says "a change in the sales stack", and a test stops that line from naming the CRM again. I also added duplicate and bad data handling, persona specific follow ups, and the funnel counts.</p>
+    <p>Next: persona matching is still keyword based. "Head of Growth" lands in marketing, which is right at some companies and wrong at others. The step 2 and step 3 lines are where a model written sentence would add most, kept behind the same copy check and review queue and never sent unread.</p>
     <p>How I would judge it: positive reply rate and meetings booked per 100 contacts, split by signal type, against a small held out group. After two weeks, a signal type that does not beat the held out group loses its weight.</p>
   </section>
 
   <section aria-labelledby="built">
     <h2 id="built">How it was built</h2>
     <dl>
-      <dt>AI did</dt><dd>Claude Code wrote both scripts and a first draft of the email lines.</dd>
+      <dt>AI did</dt><dd>Claude Code wrote the scripts, the tests and a first draft of the email lines.</dd>
       <dt>I did</dt><dd>Set the gate rules, signal weights, freshness window and copy limits, and read every email in <code>ready.csv</code> against its input row.</dd>
-      <dt>Not built</dt><dd>The Clay enrichment (those columns are typed in for this run), the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All three are designed, none is running.</dd>
-      <dt>Run it</dt><dd><code>python3 make_synthetic_contacts.py</code> then <code>python3 signal_outreach.py data/contacts_synthetic.csv --out output --start 2026-11-02</code>. Standard library only.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All three are designed, none is running.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_contacts.py</code>, then <code>python3 signal_outreach.py data/contacts_synthetic.csv --out output --start 2026-11-02</code>, then <code>python3 -m unittest test_signal_outreach.py</code>. Standard library only.</dd>
     </dl>
   </section>
 
   <section aria-labelledby="files">
     <h2 id="files">Files</h2>
     <div class="files">
-      <div><a href="signal_outreach.py">signal_outreach.py</a><small>Gate, signal pick, copy, checks, schedule and outputs.</small></div>
-      <div><a href="make_synthetic_contacts.py">make_synthetic_contacts.py</a><small>Builds the labelled synthetic input.</small></div>
-      <div><a href="data/contacts_synthetic.csv">contacts_synthetic.csv</a><small>The 20 input rows.</small></div>
-      <div><a href="output/ready.csv">ready.csv</a><small>8 contacts with subject, three emails and send times.</small></div>
+      <div><a href="signal_outreach.py">signal_outreach.py</a><small>Clean, gate, signal pick, copy, checks, schedule and outputs.</small></div>
+      <div><a href="test_signal_outreach.py">test_signal_outreach.py</a><small>17 tests: single rules and whole run properties.</small></div>
+      <div><a href="make_synthetic_contacts.py">make_synthetic_contacts.py</a><small>Builds the seeded synthetic input.</small></div>
+      <div><a href="data/contacts_synthetic.csv">contacts_synthetic.csv</a><small>The 119 input rows.</small></div>
+      <div><a href="output/ready.csv">ready.csv</a><small>38 contacts with subject, three emails and send times.</small></div>
       <div><a href="output/review.csv">review.csv</a><small>Copy that failed a check.</small></div>
-      <div><a href="output/held.csv">held.csv</a><small>Who was held and why.</small></div>
-      <div><a href="output/summary.json">summary.json</a><small>Rules, counts and send days.</small></div>
+      <div><a href="output/held.csv">held.csv</a><small>Every contact held and why.</small></div>
+      <div><a href="output/summary.json">summary.json</a><small>Funnel, reason counts and rules.</small></div>
       <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
     </div>
     <details>
@@ -199,18 +221,22 @@ and holds back everyone who should not get it.
     python3 signal_outreach.py data/contacts_synthetic.csv --out output/ --start 2026-11-02
 
 Pipeline
-  1. Gate (hard, before any copy is written): opt outs, customers, open deals and
-     partners, anyone touched in the last 30 days, invalid emails, personal
-     domains, and titles outside the four personas. Log the reason.
-  2. Pick the signal: weight by type, half weight after 21 days, drop anything
-     older than 45 days. No fresh signal means nurture. Generic copy is never sent.
-  3. Write the sequence: opener from the signal, one line for the persona,
-     one question as the ask. Follow ups on day 3 and day 8.
-  4. Check the copy: word limit, banned phrases, spam words, leftover
-     placeholders, link count. Any failure goes to a human, not to the sender.
-  5. Schedule: one new contact per company per day, a daily cap per mailbox,
-     weekdays only, 08:30 in the contact's own time zone.
-  6. Write ready.csv, held.csv, review.csv, preview.md and a summary.
+  1. Clean: lowercase emails, drop exact duplicates (an export joined twice),
+     reject rows whose signal data cannot be parsed. Nothing is guessed.
+  2. Gate (hard, before any copy is written): opt outs, customers, open deals and
+     partners, anyone touched in the last 30 days, invalid or unknown emails,
+     personal domains, and titles outside the four personas. Log the reason.
+  3. Pick the signal: weight by type, half weight after 21 days, drop anything
+     older than 45 days. Extra signals add a point only while fresh. Below the
+     threshold the contact goes to nurture: generic copy is never sent.
+  4. Write the sequence: opener from the signal, one line for the persona, one
+     question as the ask. Step 2 is written for the persona, step 3 closes the loop.
+  5. Check the copy: word limit, banned phrases, spam words, leftover
+     placeholders, link count, risky emails. Any failure goes to a person.
+  6. Schedule: strongest and freshest first, one new contact per company per
+     day, a daily cap per mailbox, weekdays only, 08:30 in the contact's time zone.
+  7. Write ready.csv, review.csv, held.csv, preview.md and summary.json with the
+     full funnel and every reason count.
 
 The copy comes from fixed templates so every email can be traced to a rule.
 """
@@ -219,6 +245,8 @@ import csv
 import json
 import os
 import re
+import sys
+from collections import Counter
 from datetime import date, datetime, time, timedelta
 from zoneinfo import ZoneInfo
 
@@ -226,14 +254,20 @@ from zoneinfo import ZoneInfo
 
 SENDER = "Yuval"
 COOLDOWN_DAYS = 30          # nobody gets a new sequence within 30 days of a touch
-MAX_SIGNAL_AGE = 45         # older signals are ignored
+FULL_WEIGHT_DAYS = 21       # signals count in full up to this age
+MAX_SIGNAL_AGE = 45         # and at half weight up to this one, then not at all
 MIN_SIGNAL_SCORE = 2.0      # below this the contact goes to nurture
-DAILY_CAP = 30              # new contacts per mailbox per day
+DAILY_CAP = 20              # new contacts per mailbox per day, kept low for deliverability
 PER_COMPANY_PER_DAY = 1     # never start two people at one company on the same day
 SEND_AT = time(8, 30)       # local time of the contact
 FOLLOW_UP_DAYS = (3, 8)     # business days after step 1
 MAX_WORDS_STEP1 = 90
+MAX_SUBJECT_WORDS = 6
 
+REQUIRED_COLUMNS = {
+    "contact_id", "first_name", "title", "email", "company_name", "domain", "timezone",
+    "crm_status", "last_contacted_days", "opted_out", "email_status", "signals",
+}
 PERSONAL_DOMAINS = {
     "gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "yahoo.com",
     "icloud.com", "proton.me", "protonmail.com", "gmx.de", "gmx.net", "web.de",
@@ -253,7 +287,7 @@ SIGNAL_WEIGHT = {"hiring": 3, "tech_change": 3, "funding": 2, "event": 2, "conte
 
 
 def freshness(age):
-    if age &lt;= 21:
+    if age &lt;= FULL_WEIGHT_DAYS:
         return 1.0
     if age &lt;= MAX_SIGNAL_AGE:
         return 0.5
@@ -278,7 +312,7 @@ OPENER = {
 }
 BRIDGE = {
     "hiring": "New hires usually spend their first month working out who owns which lead.",
-    "tech_change": "A CRM move is often when routing rules quietly break.",
+    "tech_change": "A change in the sales stack is often when routing rules quietly break.",
     "funding": "After a round, inbound tends to grow faster than the rules that route it.",
     "event": "Event weeks bring a spike of leads that often sit in a shared inbox.",
     "content": "That is the exact problem we work on.",
@@ -291,9 +325,15 @@ PERSONA_LINE = {
 }
 ASK = "Worth a short call next week, or should I send a two minute walkthrough instead?"
 
-STEP2 = ("Hi {first},\n\nA short follow up. Most teams start with a one week audit of where inbound "
-         "leads wait and who picks them up. It takes about 30 minutes of your team's time, and I can "
-         "send the checklist we use without a call.\n\nWant it?\n\n{sender}")
+# Step 2 offers the same audit checklist, framed for what each persona is measured on.
+STEP2_LINE = {
+    "revops": "Most RevOps teams start with a one week audit of every routing rule and who owns the leads that fall through them.",
+    "sales_leader": "Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up.",
+    "marketing_leader": "Most marketing teams start with a one week audit of how many paid leads reach a rep the same day.",
+    "founder": "Most small teams start with a one week audit of where inbound leads land and who answers them.",
+}
+STEP2 = ("Hi {first},\n\nA short follow up. {line} It takes about 30 minutes of your team's time, "
+         "and I can send the checklist we use without a call.\n\nWant it?\n\n{sender}")
 STEP3 = ("Hi {first},\n\nI'll leave it here. If lead routing becomes a priority at {company}, reply "
          "with \"routing\" and I'll send the checklist.\n\n{sender}")
 
@@ -303,9 +343,13 @@ BANNED_PHRASES = (
     "game changer", "revolutionize", "leverage", "synergy", "circle back", "touch base",
     "cutting edge", "best in class", "in today's", "unlock",
 )
-SPAM_WORDS = ("free", "guarantee", "risk free", "act now", "limited time", "100%", "no obligation")
+SPAM_WORDS = ("free", "guarantee", "act now", "limited time", "100%", "no obligation")
 
 # ---- steps ------------------------------------------------------------------
+
+
+class BadRow(ValueError):
+    pass
 
 
 def persona_for(title):
@@ -316,48 +360,48 @@ def persona_for(title):
     return None
 
 
+def parse_signals(text):
+    out = []
+    for part in filter(None, (p.strip() for p in text.split(";"))):
+        bits = part.split("|", 2)
+        if len(bits) != 3 or not bits[1].isdigit() or bits[0] not in SIGNAL_WEIGHT:
+            raise BadRow(f"cannot read signal '{part}'")
+        out.append({"type": bits[0], "age": int(bits[1]), "detail": bits[2].strip()})
+    return out
+
+
 def gate(row):
-    domain = row["domain"].lower().strip()
     if row["opted_out"] == "yes":
         return "opted out"
     if row["crm_status"] in BLOCKED_CRM_STATUS:
         return BLOCKED_CRM_STATUS[row["crm_status"]]
     if row["last_contacted_days"] and int(row["last_contacted_days"]) &lt; COOLDOWN_DAYS:
-        return f"contacted {row['last_contacted_days']} days ago, cooldown is {COOLDOWN_DAYS}"
-    if domain in PERSONAL_DOMAINS:
+        return f"contacted in the last {COOLDOWN_DAYS} days"
+    if row["domain"].lower().strip() in PERSONAL_DOMAINS:
         return "personal email"
     if row["email_status"] in ("invalid", "unknown", ""):
         return f"email status {row['email_status'] or 'missing'}"
     if not persona_for(row["title"]):
-        return f"title '{row['title']}' matches no persona, check by hand"
+        return "title matches no persona, check by hand"
     return None
 
 
-def parse_signals(text):
-    out = []
-    for part in filter(None, text.split(";")):
-        kind, age, detail = part.split("|", 2)
-        out.append({"type": kind, "age": int(age), "detail": detail.strip()})
-    return out
-
-
 def pick_signal(signals):
-    """Strongest fresh signal leads. Each other fresh signal adds one point."""
-    scored = []
-    for s in signals:
-        pts = SIGNAL_WEIGHT.get(s["type"], 1) * freshness(s["age"])
-        if pts &gt; 0:
-            scored.append((pts, -s["age"], s))
-    if not scored:
+    """Strongest signal leads; ties go to the fresher one. Each other signal that is
+    still inside the full weight window adds one point. Returns (signal, score)."""
+    usable = [(SIGNAL_WEIGHT[s["type"]] * freshness(s["age"]), s) for s in signals]
+    usable = [(pts, s) for pts, s in usable if pts &gt; 0]
+    if not usable:
         return None, 0.0
-    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
-    best = scored[0]
-    return best[2], best[0] + (len(scored) - 1)
+    usable.sort(key=lambda x: (-x[0], x[1]["age"]))
+    best_pts, best = usable[0]
+    bonus = sum(1 for _, s in usable[1:] if s["age"] &lt;= FULL_WEIGHT_DAYS)
+    return best, best_pts + bonus
 
 
 def write_sequence(row, signal, persona):
     v = {"first": row["first_name"], "company": row["company_name"], "detail": signal["detail"],
-         "sender": SENDER}
+         "sender": SENDER, "line": STEP2_LINE[persona]}
     step1 = "\n\n".join([
         f"Hi {v['first']},",
         OPENER[signal["type"]].format(**v) + " " + BRIDGE[signal["type"]],
@@ -378,20 +422,17 @@ def check_copy(seq, row):
     words = len(re.findall(r"\b\w+\b", seq["step1"]))
     if words &gt; MAX_WORDS_STEP1:
         problems.append(f"step 1 is {words} words, limit {MAX_WORDS_STEP1}")
+    if len(seq["subject"].split()) &gt; MAX_SUBJECT_WORDS:
+        problems.append(f"subject over {MAX_SUBJECT_WORDS} words")
     for key in ("subject", "step1", "step2", "step3"):
         low = seq[key].lower()
         if re.search(r"[{}]", seq[key]):
             problems.append(f"{key}: placeholder left in")
-        for p in BANNED_PHRASES:
-            if p in low:
-                problems.append(f"{key}: banned phrase '{p}'")
-        for w in SPAM_WORDS:
-            if re.search(rf"\b{re.escape(w)}\b", low):
-                problems.append(f"{key}: spam word '{w}'")
+        problems += [f"{key}: banned phrase '{p}'" for p in BANNED_PHRASES if p in low]
+        problems += [f"{key}: spam word '{w}'" for w in SPAM_WORDS
+                     if re.search(rf"(?&lt;!\w){re.escape(w)}(?!\w)", low)]
         if len(re.findall(r"https?://", low)) &gt; 1:
             problems.append(f"{key}: more than one link")
-    if len(seq["subject"].split()) &gt; 6:
-        problems.append("subject over six words")
     if row["email_status"] == "risky":
         problems.append("email is risky (catch all), confirm before sending")
     return problems
@@ -413,16 +454,16 @@ def next_weekday(d):
 
 
 def schedule(ready, start):
-    """Highest signal score first. One new contact per company per day, DAILY_CAP per day."""
-    ready.sort(key=lambda r: (-r["signal_score"], r["contact_id"]))
-    day_load, company_days = {}, {}
+    """Highest score first, then the freshest signal. One new contact per company
+    per day and DAILY_CAP per day; whoever does not fit moves to the next weekday."""
+    ready.sort(key=lambda r: (-r["signal_score"], r["signal_age"], r["contact_id"]))
+    day_load, company_days = Counter(), Counter()
     for r in ready:
         d = next_weekday(start)
-        while (day_load.get(d, 0) &gt;= DAILY_CAP
-               or company_days.get((r["domain"], d), 0) &gt;= PER_COMPANY_PER_DAY):
+        while day_load[d] &gt;= DAILY_CAP or company_days[(r["domain"], d)] &gt;= PER_COMPANY_PER_DAY:
             d = next_weekday(d + timedelta(days=1))
-        day_load[d] = day_load.get(d, 0) + 1
-        company_days[(r["domain"], d)] = company_days.get((r["domain"], d), 0) + 1
+        day_load[d] += 1
+        company_days[(r["domain"], d)] += 1
         local = datetime.combine(d, SEND_AT, tzinfo=ZoneInfo(r["timezone"]))
         r["step1_date"] = d.isoformat()
         r["step1_local"] = f"{d.isoformat()} {SEND_AT.strftime('%H:%M')} {r['timezone']}"
@@ -434,16 +475,33 @@ def schedule(ready, start):
 
 def build(rows, start):
     ready, review, held = [], [], []
+    seen = {}
+
+    def hold(row, stage, reason):
+        held.append({"contact_id": row["contact_id"], "email": row["email"], "stage": stage, "reason": reason})
+
     for row in rows:
+        row = {k: (v or "").strip() for k, v in row.items()}
+        row["email"] = row["email"].lower()
+        if row["email"] in seen:
+            hold(row, "clean", f"duplicate of {seen[row['email']]}")
+            continue
+        seen[row["email"]] = row["contact_id"]
+        try:
+            signals = parse_signals(row["signals"])
+        except BadRow as e:
+            hold(row, "clean", f"bad signal data: {e}")
+            continue
         reason = gate(row)
         if reason:
-            held.append({"contact_id": row["contact_id"], "email": row["email"], "stage": "gate", "reason": reason})
+            hold(row, "gate", reason)
             continue
-        signal, score = pick_signal(parse_signals(row["signals"]))
-        if not signal or score &lt; MIN_SIGNAL_SCORE:
-            why = "no signal in the last 45 days" if not signal else f"signal score {score:g} below {MIN_SIGNAL_SCORE:g}"
-            held.append({"contact_id": row["contact_id"], "email": row["email"], "stage": "signal",
-                         "reason": f"nurture, {why}"})
+        signal, score = pick_signal(signals)
+        if not signal:
+            hold(row, "signal", f"nurture, no signal in the last {MAX_SIGNAL_AGE} days")
+            continue
+        if score &lt; MIN_SIGNAL_SCORE:
+            hold(row, "signal", f"nurture, signal score below {MIN_SIGNAL_SCORE:g}")
             continue
         persona = persona_for(row["title"])
         seq = write_sequence(row, signal, persona)
@@ -451,7 +509,8 @@ def build(rows, start):
         rec = {
             "contact_id": row["contact_id"], "email": row["email"], "first_name": row["first_name"],
             "company_name": row["company_name"], "domain": row["domain"], "timezone": row["timezone"],
-            "persona": persona, "signal": f"{signal['type']}: {signal['detail']} ({signal['age']} days)",
+            "persona": persona, "signal_type": signal["type"], "signal_age": signal["age"],
+            "signal": f"{signal['type']}: {signal['detail']} ({signal['age']} days)",
             "signal_score": score, **seq,
         }
         if problems:
@@ -467,6 +526,26 @@ def build(rows, start):
 READY_COLS = ["email", "first_name", "company_name", "persona", "signal", "signal_score",
               "step1_local", "step1_utc", "step2_date", "step3_date",
               "subject", "step1", "step2", "step3", "contact_id"]
+
+
+def funnel(ready, review, held):
+    stages = Counter(h["stage"] for h in held)
+    total = len(ready) + len(review) + len(held)
+    return {
+        "contacts_in": total,
+        "removed_in_cleaning": stages["clean"],
+        "held_at_gate": stages["gate"],
+        "nurture_no_signal": stages["signal"],
+        "sent_to_review": len(review),
+        "ready": len(ready),
+        "ready_share_of_input": round(len(ready) / total, 3) if total else 0.0,
+    }
+
+
+def reason_key(h):
+    if h["stage"] == "clean":
+        return "clean: " + ("duplicate" if h["reason"].startswith("duplicate") else "bad signal data")
+    return f"{h['stage']}: {h['reason']}"
 
 
 def write_outputs(ready, review, held, out_dir, source, start):
@@ -485,11 +564,39 @@ def write_outputs(ready, review, held, out_dir, source, start):
         w.writeheader()
         w.writerows(held)
 
-    total = len(ready) + len(review) + len(held)
+    fun = funnel(ready, review, held)
+    reasons = Counter(reason_key(h) for h in held)
+    review_reasons = Counter(re.sub(r"^step\d: |^subject: ", "", p)
+                             for r in review for p in r["problems"].split("; "))
+    per_day = Counter(r["step1_date"] for r in ready)
+    summary = {
+        "run_date": date.today().isoformat(),
+        "input": source,
+        "funnel": fun,
+        "held_reasons": dict(reasons.most_common()),
+        "review_reasons": dict(review_reasons.most_common()),
+        "ready_by_signal": dict(Counter(r["signal_type"] for r in ready).most_common()),
+        "ready_by_persona": dict(Counter(r["persona"] for r in ready).most_common()),
+        "first_sends_per_day": dict(sorted(per_day.items())),
+        "rules": {
+            "cooldown_days": COOLDOWN_DAYS, "full_weight_days": FULL_WEIGHT_DAYS,
+            "max_signal_age": MAX_SIGNAL_AGE, "min_signal_score": MIN_SIGNAL_SCORE,
+            "daily_cap": DAILY_CAP, "per_company_per_day": PER_COMPANY_PER_DAY,
+            "send_at_local": SEND_AT.strftime("%H:%M"), "follow_up_business_days": FOLLOW_UP_DAYS,
+            "max_words_step1": MAX_WORDS_STEP1, "max_subject_words": MAX_SUBJECT_WORDS,
+            "signal_weights": SIGNAL_WEIGHT,
+        },
+    }
+    with open(os.path.join(out_dir, "summary.json"), "w") as f:
+        json.dump(summary, f, indent=2)
+
     lines = [
         f"# Signal outreach, run {date.today().isoformat()}",
-        f"Input: {source} ({total} contacts). Ready {len(ready)}. Human review {len(review)}. "
-        f"Held {len(held)}. First send day {start.isoformat()}.",
+        f"Input: {source}. {fun['contacts_in']} in, {fun['removed_in_cleaning']} removed in cleaning, "
+        f"{fun['held_at_gate']} held at the gate, {fun['nurture_no_signal']} to nurture, "
+        f"{fun['sent_to_review']} to review, {fun['ready']} ready. First send day {start.isoformat()}.",
+        "",
+        "First sends per day: " + ", ".join(f"{d} {n}" for d, n in sorted(per_day.items())),
         "",
         "| Contact | Persona | Signal used | Score | Step 1 |",
         "| --- | --- | --- | --- | --- |",
@@ -500,34 +607,12 @@ def write_outputs(ready, review, held, out_dir, source, start):
     lines += ["", "## Two emails as they would go out", ""]
     for r in ready[:2]:
         lines += [f"**To {r['email']}, subject: {r['subject']}**", "", "```", r["step1"], "```", ""]
-    lines += ["## Sent to a human", ""]
-    lines += [f"- {r['email']}: {r['problems']}" for r in review]
-    lines += ["", "## Held", ""]
-    lines += [f"- {h['email']} ({h['stage']}): {h['reason']}" for h in held]
+    lines += ["## Why contacts did not make it", ""]
+    lines += [f"- {n} × {k}" for k, n in reasons.most_common()]
+    lines += [f"- {n} × review: {k}" for k, n in review_reasons.most_common()]
     with open(os.path.join(out_dir, "preview.md"), "w") as f:
         f.write("\n".join(lines) + "\n")
-
-    summary = {
-        "run_date": date.today().isoformat(),
-        "input": source,
-        "contacts_in": total,
-        "ready": len(ready),
-        "review": len(review),
-        "held_at_gate": sum(1 for h in held if h["stage"] == "gate"),
-        "held_no_signal": sum(1 for h in held if h["stage"] == "signal"),
-        "first_send_day": start.isoformat(),
-        "send_days": sorted({r["step1_date"] for r in ready}),
-        "rules": {
-            "cooldown_days": COOLDOWN_DAYS, "max_signal_age": MAX_SIGNAL_AGE,
-            "min_signal_score": MIN_SIGNAL_SCORE, "daily_cap": DAILY_CAP,
-            "per_company_per_day": PER_COMPANY_PER_DAY, "send_at_local": SEND_AT.strftime("%H:%M"),
-            "follow_up_business_days": FOLLOW_UP_DAYS, "max_words_step1": MAX_WORDS_STEP1,
-            "signal_weights": SIGNAL_WEIGHT,
-        },
-    }
-    with open(os.path.join(out_dir, "summary.json"), "w") as f:
-        json.dump(summary, f, indent=2)
-    print("\n".join(lines[:2 + len(ready) + 3]))
+    print("\n".join(lines[:4]))
 
 
 def main():
@@ -538,7 +623,11 @@ def main():
     a = ap.parse_args()
     start = date.fromisoformat(a.start) if a.start else next_weekday(date.today() + timedelta(days=1))
     with open(a.csv, newline="") as f:
-        rows = list(csv.DictReader(f))
+        reader = csv.DictReader(f)
+        missing = REQUIRED_COLUMNS - set(reader.fieldnames or [])
+        if missing:
+            sys.exit(f"input is missing columns: {', '.join(sorted(missing))}")
+        rows = list(reader)
     ready, review, held = build(rows, start)
     write_outputs(ready, review, held, a.out, os.path.basename(a.csv), start)
 

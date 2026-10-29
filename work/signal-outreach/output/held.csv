@@ -1,11 +1,79 @@
 contact_id,email,stage,reason
-con-007,nora@company-g.example,signal,"nurture, no signal in the last 45 days"
-con-010,ben@company-i.example,signal,"nurture, signal score 1 below 2"
-con-012,max@company-k.example,gate,"title 'Office Manager' matches no persona, check by hand"
-con-013,ida@company-l.example,signal,"nurture, signal score 1.5 below 2"
-con-015,kim@customer-one.example,gate,existing customer
-con-016,ron@open-deal-two.example,gate,"open deal, owned by an AE"
-con-017,ana@company-n.example,gate,"contacted 12 days ago, cooldown is 30"
-con-018,jan@company-o.example,gate,opted out
-con-019,eli@company-p.example,gate,email status invalid
-con-020,dan@gmail.com,gate,personal email
+con-001,luca@company-a.example,gate,"title matches no persona, check by hand"
+con-002,oskar@company-b.example,gate,contacted in the last 30 days
+con-003,eva@company-c.example,signal,"nurture, no signal in the last 45 days"
+con-005,mia@company-e.example,signal,"nurture, no signal in the last 45 days"
+con-006,paul@company-e.example,signal,"nurture, no signal in the last 45 days"
+con-007,sara@company-f.example,gate,email status invalid
+con-008,ali@company-g.example,gate,"title matches no persona, check by hand"
+con-009,jonas@company-h.example,gate,contacted in the last 30 days
+con-011,finn@company-j.example,signal,"nurture, no signal in the last 45 days"
+con-012,maya@company-k.example,gate,opted out
+con-013,ida@company-l.example,gate,email status invalid
+con-014,ali@company-m.example,gate,contacted in the last 30 days
+con-016,luca@company-o.example,signal,"nurture, no signal in the last 45 days"
+con-017,oskar@company-p.example,gate,opted out
+con-018,erik@company-p.example,gate,contacted in the last 30 days
+con-019,ida@company-q.example,gate,email status unknown
+con-020,rosa@company-r.example,gate,"open deal, owned by an AE"
+con-023,omar@company-t.example,gate,"title matches no persona, check by hand"
+con-027,jonas@company-x.example,gate,opted out
+con-028,jan@company-x.example,signal,"nurture, no signal in the last 45 days"
+con-030,omar@company-z.example,gate,opted out
+con-034,mia@company-d2.example,signal,"nurture, signal score below 2"
+con-035,marta@company-e2.example,signal,"nurture, no signal in the last 45 days"
+con-036,paul@company-f2.example,signal,"nurture, signal score below 2"
+con-038,tom@company-g2.example,signal,"nurture, no signal in the last 45 days"
+con-039,sara@company-h2.example,signal,"nurture, no signal in the last 45 days"
+con-041,maya@company-i2.example,signal,"nurture, signal score below 2"
+con-042,oskar@company-j2.example,signal,"nurture, signal score below 2"
+con-046,ali@company-m2.example,gate,"title matches no persona, check by hand"
+con-047,paul@company-n2.example,gate,contacted in the last 30 days
+con-048,noah@company-n2.example,gate,contacted in the last 30 days
+con-049,eva@company-o2.example,signal,"nurture, signal score below 2"
+con-051,emma@company-p2.example,signal,"nurture, no signal in the last 45 days"
+con-053,lena@company-r2.example,signal,"nurture, no signal in the last 45 days"
+con-055,emma@company-t2.example,gate,opted out
+con-056,clara@company-t2.example,gate,existing customer
+con-058,sofia@company-u2.example,gate,"title matches no persona, check by hand"
+con-061,omar@company-x2.example,gate,contacted in the last 30 days
+con-063,jan@company-y2.example,signal,"nurture, signal score below 2"
+con-067,aylin@company-b3.example,signal,"nurture, no signal in the last 45 days"
+con-068,lisa@company-c3.example,gate,existing customer
+con-069,aylin@company-c3.example,gate,existing customer
+con-070,ben@company-d3.example,gate,contacted in the last 30 days
+con-073,lisa@company-f3.example,signal,"nurture, no signal in the last 45 days"
+con-074,felix@company-g3.example,gate,partner
+con-075,paul@company-g3.example,gate,partner
+con-076,lisa@company-h3.example,gate,"open deal, owned by an AE"
+con-077,eva@company-i3.example,signal,"nurture, no signal in the last 45 days"
+con-078,omar@company-j3.example,gate,contacted in the last 30 days
+con-079,omar@company-k3.example,signal,"nurture, no signal in the last 45 days"
+con-080,clara@company-k3.example,signal,"nurture, no signal in the last 45 days"
+con-081,paul@company-l3.example,signal,"nurture, signal score below 2"
+con-082,noah@company-m3.example,gate,opted out
+con-083,erik@company-n3.example,signal,"nurture, signal score below 2"
+con-085,clara@company-p3.example,signal,"nurture, no signal in the last 45 days"
+con-086,nora@company-q3.example,gate,opted out
+con-089,paul@company-s3.example,signal,"nurture, no signal in the last 45 days"
+con-091,nina@company-u3.example,gate,existing customer
+con-093,sara@company-w3.example,signal,"nurture, no signal in the last 45 days"
+con-094,leo@company-x3.example,signal,"nurture, no signal in the last 45 days"
+con-096,jonas@company-y3.example,gate,"title matches no persona, check by hand"
+con-097,luca@company-z3.example,gate,opted out
+con-098,ida@company-a4.example,gate,"title matches no persona, check by hand"
+con-099,jonas@company-a4.example,signal,"nurture, no signal in the last 45 days"
+con-100,sofia@company-b4.example,signal,"nurture, no signal in the last 45 days"
+con-101,mia@company-b4.example,gate,"title matches no persona, check by hand"
+con-102,maya@company-c4.example,gate,"open deal, owned by an AE"
+con-104,sofia@company-e4.example,signal,"nurture, signal score below 2"
+con-105,noah@company-e4.example,gate,email status invalid
+con-106,max@company-f4.example,gate,contacted in the last 30 days
+con-107,hanna@company-g4.example,signal,"nurture, no signal in the last 45 days"
+con-108,max@company-g4.example,gate,opted out
+con-109,hanna@company-h4.example,signal,"nurture, no signal in the last 45 days"
+con-110,ida@company-i4.example,gate,partner
+con-113,paul@company-k4.example,gate,contacted in the last 30 days
+con-115,dan@gmail.com,gate,personal email
+con-116,ira@company-z9.example,clean,bad signal data: cannot read signal 'hiring|five|two SDRs'
+con-119,luca@company-a.example,clean,duplicate of con-001

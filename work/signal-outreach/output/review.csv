@@ -1,5 +1,14 @@
 contact_id,email,signal,problems,subject,step1
-con-008,ali@company-h.example,content: a free webinar on pipeline hygiene (10 days),step1: spam word 'free',your post,"Hi Ali,
+con-065,sara@company-z2.example,content: a free webinar on pipeline hygiene (13 days),step1: spam word 'free',your post,"Hi Sara,
+
+Read your post on a free webinar on pipeline hygiene. That is the exact problem we work on.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval"
+con-117,rhea@company-z8.example,content: a free webinar on pipeline hygiene (10 days),step1: spam word 'free',your post,"Hi Rhea,
 
 Read your post on a free webinar on pipeline hygiene. That is the exact problem we work on.
 
@@ -8,11 +17,11 @@ We help marketing teams make sure the leads they paid for reach a rep the same h
 Worth a short call next week, or should I send a two minute walkthrough instead?
 
 Yuval"
-con-011,clara@company-j.example,hiring: a growth marketer (8 days),"email is risky (catch all), confirm before sending",your hiring plan,"Hi Clara,
+con-118,ugo@company-z7.example,hiring: two SDRs (8 days),"email is risky (catch all), confirm before sending",your hiring plan,"Hi Ugo,
 
-Saw Synthetic Company J is hiring a growth marketer. New hires usually spend their first month working out who owns which lead.
+Saw Synthetic Company Z7 is hiring two SDRs. New hires usually spend their first month working out who owns which lead.
 
-We help marketing teams make sure the leads they paid for reach a rep the same hour.
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
 
 Worth a short call next week, or should I send a two minute walkthrough instead?
 

@@ -1,21 +1,58 @@
 {
   "run_date": "2026-10-29",
   "input": "contacts_synthetic.csv",
-  "contacts_in": 20,
-  "ready": 8,
-  "review": 2,
-  "held_at_gate": 7,
-  "held_no_signal": 3,
-  "first_send_day": "2026-11-02",
-  "send_days": [
-    "2026-11-02",
-    "2026-11-03"
-  ],
+  "funnel": {
+    "contacts_in": 119,
+    "removed_in_cleaning": 2,
+    "held_at_gate": 43,
+    "nurture_no_signal": 33,
+    "sent_to_review": 3,
+    "ready": 38,
+    "ready_share_of_input": 0.319
+  },
+  "held_reasons": {
+    "signal: nurture, no signal in the last 45 days": 24,
+    "gate: contacted in the last 30 days": 11,
+    "gate: opted out": 9,
+    "signal: nurture, signal score below 2": 9,
+    "gate: title matches no persona, check by hand": 8,
+    "gate: existing customer": 4,
+    "gate: email status invalid": 3,
+    "gate: open deal, owned by an AE": 3,
+    "gate: partner": 3,
+    "gate: email status unknown": 1,
+    "gate: personal email": 1,
+    "clean: bad signal data": 1,
+    "clean: duplicate": 1
+  },
+  "review_reasons": {
+    "spam word 'free'": 2,
+    "email is risky (catch all), confirm before sending": 1
+  },
+  "ready_by_signal": {
+    "event": 11,
+    "hiring": 9,
+    "funding": 7,
+    "tech_change": 6,
+    "content": 5
+  },
+  "ready_by_persona": {
+    "revops": 15,
+    "sales_leader": 10,
+    "marketing_leader": 8,
+    "founder": 5
+  },
+  "first_sends_per_day": {
+    "2026-11-02": 20,
+    "2026-11-03": 17,
+    "2026-11-04": 1
+  },
   "rules": {
     "cooldown_days": 30,
+    "full_weight_days": 21,
     "max_signal_age": 45,
     "min_signal_score": 2.0,
-    "daily_cap": 30,
+    "daily_cap": 20,
     "per_company_per_day": 1,
     "send_at_local": "08:30",
     "follow_up_business_days": [
@@ -23,6 +60,7 @@
       8
     ],
     "max_words_step1": 90,
+    "max_subject_words": 6,
     "signal_weights": {
       "hiring": 3,
       "tech_change": 3,
