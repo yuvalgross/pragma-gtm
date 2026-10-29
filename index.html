@@ -5234,36 +5234,36 @@ html.legal-open { overflow: hidden; }
         <h3>Signup router</h3>
         <p class="work-sub">Who gets a human this week, and what that human does first.</p>
       </div>
-      <p>A Python script that takes a week of product trial signups, drops existing customers, partners and personal emails, scores the rest from 0 to 100 on usage, company fit, integration path and pain signals, and assigns one next action per account. Every score comes with the evidence behind it. Built in October 2026 from an exercise I worked on; every name and input is replaced or invented.</p>
+      <p>Every week a sales team gets a pile of trial signups and one question: who deserves a human? This script drops customers, partners and personal emails first, then scores each account from 0 to 100 on usage, company fit, integration path and pain signals, and gives it one next action with the evidence behind it. Adapted from an exercise I worked on in October 2026; every name and input is replaced or invented.</p>
       <ul class="work-facts" aria-label="Result of the sample run">
         <li><strong>20</strong><span>signups in</span></li>
         <li><strong>3</strong><span>stopped by the gate</span></li>
         <li><strong>17</strong><span>scored</span></li>
         <li><strong>4</strong><span>sent for a custom benchmark</span></li>
       </ul>
-      <p class="work-limits">Runs on synthetic data, no real companies. The Clay enrichment and the n8n step that writes tasks into HubSpot are designed, not running.</p>
+      <p class="work-limits">Synthetic signups only. The Clay enrichment and the n8n step that writes tasks into HubSpot are designed, not running.</p>
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing logic</span><span class="exp-tag">Synthetic data</span>
       </div>
-      <a class="work-link" href="/work/signup-router/">Read the write up and source &rarr;</a>
+      <a class="work-link" href="/work/signup-router/">See the scores and the source &rarr;</a>
     </article>
     <article class="work-card fade-up">
       <div>
         <h3>Signal outreach</h3>
         <p class="work-sub">Write from a real signal, or send nothing.</p>
       </div>
-      <p>A Python script that takes an enriched contact list, cleans it, holds back opt outs, customers, open deals and recent touches, writes a three step sequence from each contact's freshest buying signal, checks the copy, and schedules sends at 08:30 local time. 17 tests check the rules on every run. Built in October 2026 as a portfolio sample; every contact and signal is invented.</p>
+      <p>Generic cold email is the one thing this tool will not send. It cleans a contact list, keeps out anyone who should not be emailed, finds each person's freshest buying signal and writes three emails around it, then checks the copy and sends at 08:30 their time. 17 tests guard the rules. I built signal based outreach at OEB in March 2026; this is a public version, rewritten in October 2026 with its own code and synthetic data.</p>
       <ul class="work-facts" aria-label="Result of the sample run">
         <li><strong>119</strong><span>contacts in</span></li>
         <li><strong>78</strong><span>held, cleaned out or sent to nurture</span></li>
         <li><strong>3</strong><span>stopped by the copy check</span></li>
         <li><strong>38</strong><span>sequences ready to import</span></li>
       </ul>
-      <p class="work-limits">Runs on synthetic data, no real people or companies. The Clay enrichment and the n8n step that pushes sequences into a sequencer are designed, not running.</p>
+      <p class="work-limits">Invented contacts only. Pushing the emails into a sequencer and handling replies are designed, not running.</p>
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Signal based outbound</span><span class="exp-tag">Copy QA</span><span class="exp-tag">Tests</span><span class="exp-tag">Send scheduling</span>
       </div>
-      <a class="work-link" href="/work/signal-outreach/">Read the write up and source &rarr;</a>
+      <a class="work-link" href="/work/signal-outreach/">Read the emails and the source &rarr;</a>
     </article>
     </div>
   </div>

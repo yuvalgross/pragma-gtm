@@ -1,6 +1,6 @@
 # Signal outreach builder
 
-Turns an enriched contact list into a ready to import three step email sequence, written from each contact's freshest buying signal, and holds back everyone who should not get it. Built in October 2026 as a portfolio sample. Every contact, company and signal is invented.
+Turns an enriched contact list into a ready to import three step email sequence, written from each contact's freshest buying signal, and holds back everyone who should not get it. I built signal based outreach at OEB in March 2026. This is a public version of the approach, rewritten in October 2026 with its own code and synthetic data. Every contact, company and signal is invented.
 
 ## Run it
 
