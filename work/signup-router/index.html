@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signup router · Yuval Gross</title>
+<meta name="description" content="A small Python tool that gates, scores and routes product trial signups, with the data, the rules and the limits on the page. Synthetic data.">
+<meta property="og:title" content="Signup router · Yuval Gross">
+<meta property="og:description" content="Who gets a human this week, and what that human does first. A scoring and routing tool with its source and its limits.">
+<meta property="og:url" content="https://pragma-gtm.com/work/signup-router/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/signup-router/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .origin { background: var(--panel); border: 1px solid var(--line); padding: 14px 18px; font-size: 15.5px; max-width: none; color: var(--muted); }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Signup router: who gets a human this week, and <em>what that human does first.</em></h1>
+    <p class="lead">A small Python tool that takes a week of product trial signups, drops anyone who is already a customer or partner, scores the rest from 0 to 100 on usage, company fit, integration path and pain signals, and assigns one next action per account. Every row carries the evidence behind its score.</p>
+    <p class="origin">Built in October 2026 from an exercise I worked on. Company, product and customer names are removed and all data is synthetic. I ran an earlier version and this one on the same 17 accounts: every score and total is identical.</p>
+  </header>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="flow">
+      <div class="step"><b>Input</b><span>Weekly signup export with usage volume per week, products used and integration path, plus the columns Clay would add: company, size, funding and pain signals.</span></div>
+      <div class="step"><b>Gate</b><span>Existing customers, partners and personal email domains are dropped before any scoring and logged with the reason.</span></div>
+      <div class="step"><b>Score</b><span>Usage 35, company 25, integration 25, pain 15. Accounts that arrive through a marketplace or a reseller score a quarter on integration, because a partner already sells to them.</span></div>
+      <div class="step"><b>Route</b><span>Above 70 and rising: custom benchmark and an enterprise conversation. 45 to 70: mid tier offer and a shared Slack channel. Below 45: nurture. Partner accounts go to the partner owner.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="run">
+    <h2 id="run">Run output, 29 October 2026</h2>
+    <p>20 rows in. The gate dropped 3: a customer, a partner and a personal email address. 17 were scored. Four get a custom benchmark and an enterprise conversation, five get a mid tier offer, and eight go to nurture, five of those flagged to a partner owner instead of sales.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Scored accounts, scrolls sideways on small screens">
+    <table>
+      <thead><tr><th class="n">#</th><th>Account</th><th class="n">Usage /35</th><th class="n">Company /25</th><th class="n">Integration /25</th><th class="n">Pain /15</th><th class="n">Score</th><th>Next action</th></tr></thead>
+      <tbody>
+<tr class="hot"><td class="n">1</td><td class="acct">Synthetic Company A<span class="sub">Berlin, 120 staff, direct api</span></td><td class="n">35</td><td class="n">25</td><td class="n">25</td><td class="n">15</td><td class="n total">100</td><td>Custom benchmark, open the enterprise conversation</td></tr>
+<tr class="hot"><td class="n">2</td><td class="acct">Synthetic Company G<span class="sub">Zurich, 450 staff, direct api</span></td><td class="n">35</td><td class="n">25</td><td class="n">25</td><td class="n">15</td><td class="n total">100</td><td>Custom benchmark, open the enterprise conversation</td></tr>
+<tr class="hot"><td class="n">3</td><td class="acct">Synthetic Company J<span class="sub">Hamburg, 140 staff, open framework</span></td><td class="n">32</td><td class="n">25</td><td class="n">25</td><td class="n">10</td><td class="n total">92</td><td>Custom benchmark, open the enterprise conversation</td></tr>
+<tr class="hot"><td class="n">4</td><td class="acct">Synthetic Company C<span class="sub">Austin, 60 staff, self hosted</span></td><td class="n">32</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">80</td><td>Custom benchmark, open the enterprise conversation</td></tr>
+<tr><td class="n">5</td><td class="acct">Synthetic Company B<span class="sub">Amsterdam, 300 staff, open framework</span></td><td class="n">16</td><td class="n">25</td><td class="n">25</td><td class="n">5</td><td class="n total">71</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">6</td><td class="acct">Synthetic Company K<span class="sub">Chicago, 35 staff, partner marketplace</span></td><td class="n">35</td><td class="n">25</td><td class="n">6</td><td class="n">5</td><td class="n total">71</td><td>Nurture, flag to the marketplace partner owner</td></tr>
+<tr><td class="n">7</td><td class="acct">Synthetic Company N<span class="sub">Madrid, 220 staff, direct api</span></td><td class="n">16</td><td class="n">18</td><td class="n">25</td><td class="n">10</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">8</td><td class="acct">Synthetic Company O<span class="sub">Stuttgart, 900 staff, direct api</span></td><td class="n">32</td><td class="n">4</td><td class="n">25</td><td class="n">8</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">9</td><td class="acct">Synthetic Company D<span class="sub">Munich, 25 staff, direct api</span></td><td class="n">9</td><td class="n">25</td><td class="n">25</td><td class="n">0</td><td class="n total">59</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">10</td><td class="acct">Synthetic Company Q<span class="sub">Barcelona, 65 staff, reseller channel</span></td><td class="n">23</td><td class="n">25</td><td class="n">6</td><td class="n">5</td><td class="n total">59</td><td>Nurture, flag to the reseller channel owner</td></tr>
+<tr><td class="n">11</td><td class="acct">Synthetic Company L<span class="sub">Dublin, 48 staff, direct api</span></td><td class="n">9</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">57</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">12</td><td class="acct">Synthetic Company F<span class="sub">Vienna, 80 staff, reseller channel</span></td><td class="n">16</td><td class="n">18</td><td class="n">6</td><td class="n">5</td><td class="n total">45</td><td>Nurture, flag to the reseller channel owner</td></tr>
+<tr><td class="n">13</td><td class="acct">Synthetic Company H<span class="sub">Paris, 700 staff, direct api</span></td><td class="n">6</td><td class="n">11</td><td class="n">25</td><td class="n">0</td><td class="n total">42</td><td>Nurture</td></tr>
+<tr><td class="n">14</td><td class="acct">Synthetic Company M<span class="sub">Aachen, 12 staff, direct api</span></td><td class="n">16</td><td class="n">0</td><td class="n">25</td><td class="n">0</td><td class="n total">41</td><td>Nurture</td></tr>
+<tr><td class="n">15</td><td class="acct">Synthetic Company P<span class="sub">Toronto, 9 staff, partner marketplace</span></td><td class="n">18</td><td class="n">17</td><td class="n">6</td><td class="n">0</td><td class="n total">41</td><td>Nurture, flag to the marketplace partner owner</td></tr>
+<tr><td class="n">16</td><td class="acct">Synthetic Company E<span class="sub">London, 15 staff, partner marketplace</span></td><td class="n">22</td><td class="n">0</td><td class="n">6</td><td class="n">0</td><td class="n total">28</td><td>Nurture, flag to the marketplace partner owner</td></tr>
+<tr><td class="n">17</td><td class="acct">Synthetic Company I<span class="sub">Lisbon, 2 staff, direct api</span></td><td class="n">0</td><td class="n">0</td><td class="n">25</td><td class="n">0</td><td class="n total">25</td><td>Nurture</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">Synthetic input. Every domain ends in <code>.example</code> except the personal email row that tests the gate. Company names, volumes and signals are invented to exercise the rules and say nothing about real companies. The column names are my assumption of what a product database and a Clay table would hold.</p>
+  </section>
+
+  <section aria-labelledby="change">
+    <h2 id="change">What I would change <em>first</em></h2>
+    <p>Two results from this run need a conversation before the weights are trusted. A 900 person company scores 69 and gets a mid tier offer, because integration and usage outrun a weak company fit. That is the first weight I would revisit. And two accounts hit 100, so the scale saturates at the top. A tie break on last week's volume is the simplest fix.</p>
+    <p>How I would judge the tool: flagged accounts should convert to a paid tier within 90 days at a higher rate than unflagged accounts of the same age. If they do not after two weekly cycles, change the weights or drop it. The weekly check is simpler still: does the account owner agree with the top five.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>AI did</dt><dd>Claude Code wrote both scripts from my written description of the gate, weights and thresholds.</dd>
+      <dt>I did</dt><dd>Set the weights and thresholds, wrote the exclusion rules, read every scored row against the input, and capped pain signals at 15 so no account clears the mid tier line on a keyword match alone.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment (those columns are typed in for this run) and the n8n step that writes the top rows into HubSpot as tasks, with the evidence in the task body. Both are designed, neither is running.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_signups.py</code> then <code>python3 signup_router.py data/signups_week_43_synthetic.csv --out output</code>. Standard library only.</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="files">
+    <h2 id="files">Files</h2>
+    <div class="files">
+      <div><a href="signup_router.py">signup_router.py</a><small>Gate, scoring, routing and outputs.</small></div>
+      <div><a href="make_synthetic_signups.py">make_synthetic_signups.py</a><small>Builds the labelled synthetic input.</small></div>
+      <div><a href="data/signups_week_43_synthetic.csv">signups_week_43_synthetic.csv</a><small>The 20 input rows.</small></div>
+      <div><a href="output/scored.csv">scored.csv</a><small>All 17 scored accounts with the evidence string per row.</small></div>
+      <div><a href="output/excluded.csv">excluded.csv</a><small>What the gate dropped and why.</small></div>
+      <div><a href="output/summary.json">summary.json</a><small>Weights, thresholds and action counts.</small></div>
+      <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
+    </div>
+    <details>
+      <summary>Read signup_router.py here</summary>
+      <pre><code>"""
+Signup router: decides which product trial signups get a human this week
+and what that human does first.
+
+    python3 signup_router.py data/signups_week_43_synthetic.csv --out output/
+
+Pipeline
+  1. Gate (hard, before any scoring): drop existing customers and partners, and
+     personal email domains. Log the reason.
+  2. Score 0 to 100: usage 35, company 25, integration 25, pain signals 15.
+  3. One next action per account from score and trend.
+  4. Write scored.csv, excluded.csv, top5.md and a summary.
+
+Exclusions are a gate, never a weight: no tuning can send a customer a sales
+task. Weights and rules are set by hand at the top of this file.
+"""
+import argparse
+import csv
+import json
+import os
+from datetime import date
+
+# ---- rules set by hand ------------------------------------------------------
+
+# In production this list comes from a CRM export of customers, partners and
+# open deals. Here it holds the two synthetic domains the test rows use.
+EXCLUDED_DOMAINS = {"customer-one.example", "partner-two.example"}
+PERSONAL_DOMAINS = {
+    "gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "yahoo.com",
+    "icloud.com", "proton.me", "protonmail.com", "gmx.de", "gmx.net", "web.de",
+}
+
+WEIGHTS = {"usage": 35, "company": 25, "integration": 25, "pain": 15}
+
+# Direct opportunity by integration path. Accounts that arrive through a
+# marketplace or a reseller already have a partner selling to them, so they
+# score a quarter of a direct deal and go to the partner owner instead.
+INTEGRATION_POINTS = {
+    "direct_api": 25, "open_framework": 25, "self_hosted": 25,
+    "partner_marketplace": 6, "reseller_channel": 6, "unknown": 10,
+}
+TARGET_CATEGORIES = {"core_segment"}
+
+THRESHOLD_ENTERPRISE = 70
+THRESHOLD_MIDTIER = 45
+
+# ---- scoring ----------------------------------------------------------------
+
+
+def volume(row):
+    return [int(row[f"volume_w{i}"] or 0) for i in range(1, 5)]
+
+
+def trend(vols):
+    """'rising' if three of three week over week steps are up and w4 &gt;= 1.3 x w1."""
+    steps = [b &gt; a for a, b in zip(vols, vols[1:])]
+    if all(steps) and vols[0] and vols[3] &gt;= 1.3 * vols[0]:
+        return "rising"
+    if vols[3] &lt; 0.8 * vols[0]:
+        return "falling"
+    return "flat"
+
+
+def score_usage(row):
+    vols = volume(row)
+    t = trend(vols)
+    pts, why = 0, []
+    if t == "rising":
+        pts += 15
+        why.append("volume up four weeks running")
+    elif t == "flat":
+        pts += 6
+    level = vols[-1]
+    if level &gt;= 25000:
+        pts += 10
+        why.append(f"{level:,} units last week")
+    elif level &gt;= 8000:
+        pts += 7
+        why.append(f"{level:,} units last week")
+    elif level &gt;= 2000:
+        pts += 3
+    products = set(row["products_used"].split(";")) if row["products_used"] else set()
+    if {"addon_x", "addon_y", "addon_z"} &amp; products and {"core_a", "core_b"} &amp; products:
+        pts += 10
+        why.append("add on used alongside core product")
+    return min(pts, WEIGHTS["usage"]), why, t
+
+
+def score_company(row):
+    pts, why = 0, []
+    if row["category"] in TARGET_CATEGORIES:
+        pts += 10
+        why.append(row["category"].replace("_", " "))
+    hc = int(row["headcount"] or 0)
+    if 20 &lt;= hc &lt;= 500:
+        pts += 8
+        why.append(f"{hc} staff")
+    elif hc &gt; 500:
+        pts += 4
+    try:
+        fund = int(row["last_funding_months_ago"])
+    except ValueError:
+        fund = 99
+    if fund &lt;= 18:
+        pts += 7
+        why.append(f"funded {fund} months ago")
+    return min(pts, WEIGHTS["company"]), why
+
+
+def score_integration(row):
+    path = row["integration_path"] or "unknown"
+    pts = INTEGRATION_POINTS.get(path, INTEGRATION_POINTS["unknown"])
+    why = [path.replace("_", " ")]
+    if path in ("partner_marketplace", "reseller_channel"):
+        why.append("scores a quarter, a partner already sells to this account")
+    if row["hosting"] == "self":
+        why.append("self hosted")
+    return pts, why
+
+
+def score_pain(row):
+    signals = [s for s in row["pain_signals"].split(";") if s]
+    pts = min(5 * len(signals), 15)
+    why = [s.replace(":", ": ") for s in signals]
+    if row["existing_tool"] == "incumbent":
+        pts = min(pts + 5, 15)
+        why.append("incumbent tool already in product (displacement, warm)")
+    elif row["existing_tool"] == "inhouse":
+        pts = min(pts + 3, 15)
+        why.append("in house build")
+    return pts, why
+
+
+def next_action(total, t, path):
+    if path == "partner_marketplace":
+        return "Nurture, flag to the marketplace partner owner"
+    if path == "reseller_channel":
+        return "Nurture, flag to the reseller channel owner"
+    if total &gt; THRESHOLD_ENTERPRISE and t == "rising":
+        return "Custom benchmark, open the enterprise conversation"
+    if total &gt;= THRESHOLD_MIDTIER:
+        return "Offer the mid tier, open a shared Slack channel"
+    return "Nurture"
+
+
+def gate(row):
+    domain = (row["domain"] or "").lower().strip()
+    if not domain:
+        return "no domain"
+    if domain in EXCLUDED_DOMAINS:
+        return "existing customer or partner"
+    if row["email_type"] == "personal" or domain in PERSONAL_DOMAINS:
+        return "personal email"
+    return None
+
+
+def route(rows):
+    scored, excluded = [], []
+    for row in rows:
+        reason = gate(row)
+        if reason:
+            excluded.append({"account_id": row["account_id"], "domain": row["domain"], "reason": reason})
+            continue
+        u, u_why, t = score_usage(row)
+        c, c_why = score_company(row)
+        s, s_why = score_integration(row)
+        p, p_why = score_pain(row)
+        total = u + c + s + p
+        scored.append({
+            "account_id": row["account_id"],
+            "company_name": row["company_name"],
+            "domain": row["domain"],
+            "hq_city": row["hq_city"],
+            "country": row["country"],
+            "headcount": row["headcount"],
+            "integration_path": row["integration_path"],
+            "trend": t,
+            "usage": u, "company": c, "integration": s, "pain": p,
+            "score": total,
+            "next_action": next_action(total, t, row["integration_path"]),
+            "why": "; ".join(u_why + c_why + s_why + p_why),
+        })
+    scored.sort(key=lambda r: (-r["score"], r["company_name"]))
+    for i, r in enumerate(scored, start=1):
+        r["rank"] = i
+    return scored, excluded
+
+
+def write_outputs(scored, excluded, out_dir, source):
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, "scored.csv"), "w", newline="") as f:
+        cols = ["rank", "account_id", "company_name", "domain", "hq_city", "country", "headcount",
+                "integration_path", "trend", "usage", "company", "integration", "pain", "score", "next_action", "why"]
+        w = csv.DictWriter(f, fieldnames=cols)
+        w.writeheader()
+        w.writerows(scored)
+    with open(os.path.join(out_dir, "excluded.csv"), "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["account_id", "domain", "reason"])
+        w.writeheader()
+        w.writerows(excluded)
+    top = scored[:5]
+    lines = [
+        f"# Signup router, run {date.today().isoformat()}",
+        f"Input: {source} ({len(scored) + len(excluded)} rows). Gate dropped {len(excluded)}. Scored {len(scored)}.",
+        "",
+        "| # | Account | Score | Why | Next action |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for r in top:
+        acct = f"{r['company_name']}, {r['hq_city']}, {r['headcount']} staff, {r['integration_path'].replace('_', ' ')}"
+        lines.append(f"| {r['rank']} | {acct} | {r['score']} | {r['why']} | {r['next_action']} |")
+    lines.append("")
+    lines.append("Dropped before scoring: " + "; ".join(f"{e['domain']} ({e['reason']})" for e in excluded))
+    with open(os.path.join(out_dir, "top5.md"), "w") as f:
+        f.write("\n".join(lines) + "\n")
+    summary = {
+        "run_date": date.today().isoformat(),
+        "input": source,
+        "rows_in": len(scored) + len(excluded),
+        "excluded": excluded,
+        "scored": len(scored),
+        "weights": WEIGHTS,
+        "thresholds": {"enterprise": THRESHOLD_ENTERPRISE, "mid_tier": THRESHOLD_MIDTIER},
+        "actions": {a: sum(1 for r in scored if r["next_action"] == a) for a in sorted({r["next_action"] for r in scored})},
+    }
+    with open(os.path.join(out_dir, "summary.json"), "w") as f:
+        json.dump(summary, f, indent=2)
+    print("\n".join(lines))
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("csv")
+    ap.add_argument("--out", default="output")
+    a = ap.parse_args()
+    with open(a.csv, newline="") as f:
+        rows = list(csv.DictReader(f))
+    scored, excluded = route(rows)
+    write_outputs(scored, excluded, a.out, os.path.basename(a.csv))
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+    </details>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>

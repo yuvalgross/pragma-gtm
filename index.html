@@ -6,7 +6,7 @@
 
 <!-- Primary SEO -->
 <title>Yuval Gross — GTM Engineer & RevOps Architect | Berlin</title>
-<meta name="description" content="GTM Engineer & RevOps Architect in Berlin. 8+ yrs enterprise B2B sales. Builds signal-based pipelines with Clay, HubSpot & n8n. $390k secured. Open to roles.">
+<meta name="description" content="GTM Engineer & RevOps Architect in Berlin. 8+ years in B2B revenue. Builds signal-based pipelines with Clay, HubSpot & n8n. Program revenue up from €295k to €390k. Open to roles.">
 <meta name="keywords" content="GTM Engineer Berlin, Revenue Operations, Sales Automation Expert, Clay expert, HubSpot architect, n8n workflow automation, Make.com, signal-based selling, outbound automation, B2B sales systems, RevOps consultant, AI GTM stack, MEDDPICC, SPICED framework, sales playbook, GTM engineering consultant Berlin, revenue systems architect, pipeline automation">
 <meta name="author" content="Yuval Gross">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -21,7 +21,7 @@
 <!-- Open Graph / LinkedIn -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Yuval Gross — GTM Engineer | Clay · HubSpot · n8n · Signal-Based Selling">
-<meta property="og:description" content="GTM Engineer with 8+ years B2B field sales experience. I build signal-based pipelines, automate outbound, and reduce bloated sales stacks into lean revenue systems. $390k revenue secured. 42% MQL rate increase.">
+<meta property="og:description" content="GTM Engineer with 8+ years in B2B revenue. I build signal-based pipelines, automate outbound, and reduce bloated sales stacks into lean revenue systems. Program revenue up from €295k to €390k. MQL rate up 42%.">
 <meta property="og:url" content="https://pragma-gtm.com">
 <meta property="og:locale" content="en_GB">
 <meta property="profile:first_name" content="Yuval">
@@ -30,7 +30,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Yuval Gross — GTM Engineer | Berlin">
-<meta name="twitter:description" content="Revenue systems architect with 8+ years field sales. Expert in Clay, HubSpot, n8n, signal-based selling and AI-powered outbound.">
+<meta name="twitter:description" content="GTM Engineer with 8+ years in B2B revenue. Expert in Clay, HubSpot, n8n, signal-based selling and AI-powered outbound.">
 
 <!-- Schema.org Person Markup -->
 <script type="application/ld+json">
@@ -43,7 +43,7 @@
     "givenName": "Yuval",
     "familyName": "Gross",
     "jobTitle": "GTM Engineer & Revenue Systems Architect",
-    "description": "GTM Engineer with 8+ years of B2B field sales experience. Expert in signal-based selling, Clay, HubSpot, n8n, Make.com, and AI-powered outbound automation. Based in Berlin, Germany.",
+    "description": "GTM Engineer with 8+ years in B2B revenue. Expert in signal-based selling, Clay, HubSpot, n8n, Make.com, and AI-powered outbound automation. Based in Berlin, Germany.",
     "url": "https://pragma-gtm.com",
     "email": "contact@pragma-gtm.com",
     "address": {
@@ -76,7 +76,21 @@
       "MEDDPICC",
       "Pipeline Automation",
       "RevOps",
-      "LinkedIn Sales Navigator"
+      "LinkedIn Sales Navigator",
+      "Claude API",
+      "OpenAI API",
+      "Model Context Protocol",
+      "LLM Prompt Design",
+      "Smartlead",
+      "HeyReach",
+      "Google Tag Manager",
+      "Gong",
+      "Webhooks",
+      "Lead Scoring",
+      "Lead Routing",
+      "Data Quality",
+      "Conversion Tracking",
+      "Sales Forecasting"
     ],
     "knowsLanguage": ["English", "German", "Hebrew"],
     "hasOccupation": {
@@ -86,7 +100,7 @@
         "@type": "City",
         "name": "Berlin"
       },
-      "skills": "Clay, HubSpot, n8n, Make.com, Signal-Based Selling, Revenue Operations, B2B Sales Automation"
+      "skills": "Clay, HubSpot, n8n, Make.com, Claude API, Signal-Based Selling, Lead Scoring, Lead Routing, Revenue Operations, B2B Sales Automation"
     },
     "worksFor": {
       "@type": "Organization",
@@ -100,7 +114,7 @@
     "@id": "https://pragma-gtm.com/#website",
     "url": "https://pragma-gtm.com",
     "name": "Pragma GTM — Yuval Gross",
-    "description": "GTM Engineer & Revenue Systems Architect. Signal-based pipelines, outbound automation, and RevOps built by someone who spent 8 years closing enterprise B2B deals.",
+    "description": "GTM Engineer & Revenue Systems Architect. Signal-based pipelines, outbound automation, and RevOps built by someone with 8+ years in B2B revenue.",
     "author": { "@id": "https://pragma-gtm.com/#yuval" },
     "inLanguage": "en-GB",
     "potentialAction": {
@@ -1384,6 +1398,106 @@ h2 em {
     line-height: 1.5;
     font-weight: var(--fw-regular);
   }
+
+/* eight nav links need a tighter gap between the phone menu and wide desktops */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .nav-links { gap: 1.05rem; }
+  .nav-links a { font-size: 0.82rem; }
+}
+
+/* WORK SAMPLES */
+.work {
+    background: var(--paper-warm);
+    padding: var(--sp-section) var(--sp-section-h);
+  }
+.work-intro {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 52ch;
+    margin: 0 0 2rem;
+  }
+.work-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 820px;
+  }
+.work-card h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0;
+  }
+.work-sub {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    margin: 0.3rem 0 0;
+  }
+.work-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 62ch;
+  }
+.work-facts {
+    list-style: none;
+    margin: 0;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+.work-facts strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: var(--fw-light);
+    line-height: 1;
+    color: var(--accent-dark);
+  }
+.work-facts span {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.35;
+  }
+.work-card .work-limits {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+  }
+.work-link {
+    justify-self: start;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: var(--fw-medium);
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+.work-link:hover, .work-link:focus-visible {
+    color: var(--accent-dark);
+    border-color: var(--accent-dark);
+  }
+.work-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 640px) {
+  .work-card { padding: 1.4rem; }
+  .work-facts { grid-template-columns: repeat(2, 1fr); }
+}
 .cta-section {
     background: var(--paper-warm);
     padding: var(--sp-section) var(--sp-section-h);
@@ -2984,7 +3098,7 @@ h2 {
 .logo-marquee {
     display: flex;
     gap: 0;
-    animation: marquee 22s linear infinite;
+    animation: marquee 46s linear infinite;
     width: max-content;
   }
 .logo-marquee:hover {
@@ -3015,6 +3129,18 @@ to {
     flex-shrink: 0;
     min-width: 72px;
   }
+a.logo-item { color: inherit; text-decoration: none; cursor: pointer; }
+a.logo-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-color: var(--border-gold); }
+.logo-marquee:focus-within { animation-play-state: paused; }
+.tool-tip {
+  position: fixed; z-index: 400; max-width: 260px; padding: 0.6rem 0.8rem;
+  background: var(--ink); color: var(--paper); border-radius: 10px;
+  font-family: var(--font-body); font-size: 0.8rem; line-height: 1.45;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22); pointer-events: none;
+  opacity: 0; transform: translateY(4px); transition: opacity 0.15s, transform 0.15s;
+}
+.tool-tip.show { opacity: 1; transform: translateY(0); }
+.tool-tip strong { display: block; font-weight: 600; margin-bottom: 0.15rem; }
 .logo-item:hover {
     border-color: var(--border-gold);
     transform: translateY(-2px);
@@ -3702,7 +3828,7 @@ to {
     position: relative; z-index: 1;
   }
 .nav-links a.active {
-    color: var(--ink) !important;
+    color: #f5f0e8 !important; /* the nav bar is dark in both themes; var(--ink) vanished on it in light mode */
     opacity: 1;
   }
 .nav-links a.active::after {
@@ -4011,6 +4137,7 @@ html.legal-open { overflow: hidden; }
       <li><a href="#philosophy">Philosophy</a></li>
       <li><a href="#how">The system</a></li>
       <li><a href="#results">Results</a></li>
+      <li><a href="#samples">Samples</a></li>
       <li><a href="#stack">CV</a></li>
       <li><a href="#engagement">Work</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -4035,6 +4162,7 @@ html.legal-open { overflow: hidden; }
   <a href="#philosophy" onclick="closeMenu()">Philosophy</a>
   <a href="#how" onclick="closeMenu()">The system</a>
   <a href="#results" onclick="closeMenu()">Results</a>
+  <a href="#samples" onclick="closeMenu()">Samples</a>
   <a href="#stack" onclick="closeMenu()">CV</a>
   <a href="#engagement" onclick="closeMenu()">Work</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-nav-cta">Contact</a>
@@ -4182,7 +4310,7 @@ html.legal-open { overflow: hidden; }
       <div class="hero-eyebrow"><em class="eyebrow-story">Sold it first. Then automated it.</em></div>
       <div class="hero-eyebrow-meta">GTM Engineer · Revenue Systems Architect · Berlin / Remote</div>
       <h1><em>Where field sales</em><br>meets engineering.</h1>
-      <p class="hero-sub">8 years closing enterprise B2B deals. Now I build the automated revenue systems I always wished I had. Clay, HubSpot, n8n, Make.com — signal-based, A/B tested, built to compound.</p>
+      <p class="hero-sub">8+ years in B2B revenue. Now I build the automated revenue systems I always wished I had. Clay, HubSpot, n8n, Make.com, signal based and built to compound.</p>
       <div class="hero-actions">
         <a href="mailto:contact@pragma-gtm.com" class="btn-primary" aria-label="Send email to Yuval Gross">Contact me</a>
         <a href="https://linkedin.com/in/yuvalgross" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn profile</a>
@@ -4192,8 +4320,8 @@ html.legal-open { overflow: hidden; }
         <div class="hero-card-label">By the numbers</div>
         <div class="stat-row">
           <div class="stat-item">
-            <span class="stat-num">$390k</span>
-            <span class="stat-label">revenue secured via outbound</span>
+            <span class="stat-num">€390k</span>
+            <span class="stat-label">program revenue, up from €295k</span>
           </div>
           <div class="stat-item">
             <span class="stat-num">42%</span>
@@ -4201,23 +4329,23 @@ html.legal-open { overflow: hidden; }
           </div>
           <div class="stat-item">
             <span class="stat-num">17%</span>
-            <span class="stat-label">YoY new opportunity growth at CoachHub</span>
+            <span class="stat-label">YoY new EMEA opportunity growth at CoachHub</span>
           </div>
           <div class="stat-item">
             <span class="stat-num">€921k</span>
             <span class="stat-label">annual quota hit — 100% attainment</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">2.4×</span>
-            <span class="stat-label">faster pipeline velocity vs manual ops</span>
+            <span class="stat-num">2.4x</span>
+            <span class="stat-label">revenue per rep after account scoring</span>
           </div>
           <div class="stat-item">
             <span class="stat-num">8+</span>
-            <span class="stat-label">years quota-carrying enterprise B2B sales</span>
+            <span class="stat-label">years in B2B revenue</span>
           </div>
           <div class="stat-item">
             <span class="stat-num">60%</span>
-            <span class="stat-label">reduction in manual SDR tasks via AI stack</span>
+            <span class="stat-label">reduction in manual sales work via AI stack</span>
           </div>
         </div>
         <div class="hero-card-tag">
@@ -4322,7 +4450,7 @@ html.legal-open { overflow: hidden; }
       </g>
       <g class="hi-node hi-node-accent" data-step="3">
         <circle class="hi-node-accent-circle" cx="340" cy="184" r="14"/>
-        <text class="hi-node-accent-label" x="340" y="184">A/B</text>
+        <text class="hi-node-accent-label" x="340" y="184">AI</text>
       </g>
       <g class="hi-node" data-step="4">
         <circle class="hi-node-circle" cx="380" cy="184" r="14"/>
@@ -4360,13 +4488,13 @@ html.legal-open { overflow: hidden; }
       </g>
       <g class="hi-outcome hi-outcome-accent" data-out="2">
         <rect class="hi-outcome-card-accent" x="520" y="160" width="120" height="48" rx="4"/>
-        <text class="hi-outcome-num-accent" x="580" y="183">$390k</text>
-        <text class="hi-outcome-label-accent" x="580" y="198">REVENUE</text>
+        <text class="hi-outcome-num-accent" x="580" y="183">€390k</text>
+        <text class="hi-outcome-label-accent" x="580" y="198">PROGRAM REV.</text>
       </g>
       <g class="hi-outcome" data-out="3">
         <rect class="hi-outcome-card" x="520" y="240" width="120" height="48" rx="4"/>
-        <text class="hi-outcome-num" x="580" y="263">2.4×</text>
-        <text class="hi-outcome-label" x="580" y="278">VELOCITY</text>
+        <text class="hi-outcome-num" x="580" y="263">2.4x</text>
+        <text class="hi-outcome-label" x="580" y="278">REV PER REP</text>
       </g>
 
       <!-- Outcome connectors -->
@@ -4515,7 +4643,7 @@ html.legal-open { overflow: hidden; }
           <rect x="815" y="60" width="155" height="4" rx="2" fill="#0d9488" opacity="0.7"/>
           <text x="892" y="79" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#99f6e4" letter-spacing="0.07em">05 · CRM & PIPELINE</text>
           <text x="892" y="96" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" font-weight="400" fill="#f9f6ee">HubSpot · Salesforce</text>
-          <text x="892" y="111" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="rgba(249,246,238,0.60)">Pipedrive · Seismic · Attio</text>
+          <text x="892" y="111" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="rgba(249,246,238,0.60)">Gong · LinkedIn Sales Navigator</text>
         </g>
 
         <!-- Output arrow + label -->
@@ -4526,7 +4654,7 @@ html.legal-open { overflow: hidden; }
         <!-- Attribution layer -->
         <path d="M487 136 L487 158" stroke="#d97706" stroke-width="1" stroke-dasharray="3 2"/>
         <rect x="385" y="158" width="205" height="20" rx="6" fill="rgba(217,119,6,0.07)" stroke="rgba(217,119,6,0.18)" stroke-width="1"/>
-        <text x="487" y="172" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">↑ HockeyStack · GA4 · GTM — attribution</text>
+        <text x="487" y="172" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">↑ Google Tag Manager · HubSpot forms: attribution</text>
 
         <!-- Tooltip -->
         <g class="arch-tooltip" id="archTooltip" opacity="0" pointer-events="none">
@@ -4539,113 +4667,209 @@ html.legal-open { overflow: hidden; }
 </div>
 
 <div class="logo-grid-section">
-  <div class="logo-grid-label">The full stack — tools I use every day</div>
+  <div class="logo-grid-label">The full stack: tools I use every day. Hover for what each does.</div>
   <div class="logo-marquee-wrap">
     <div class="logo-marquee">
-      <div class="logo-item">
-        <img src="/logos/clay.png" alt="Clay logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-label="HubSpot: The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified. Opens in a new tab.">
+        <img src="/logos/hubspot.png" alt="HubSpot logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HubSpot</span>
+      </a>
+      <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-label="Salesforce: The CRM I sold in as an enterprise rep at CoachHub. Opens in a new tab.">
+        <img src="/logos/salesforce.png" alt="Salesforce logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Salesforce</span>
+      </a>
+      <a class="logo-item" href="https://www.clay.com/" target="_blank" rel="noopener noreferrer" data-tool="Clay" data-tip="Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table." aria-label="Clay: Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table. Opens in a new tab.">
+        <img src="/logos/clay.png" alt="Clay logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Clay</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/attio.png" alt="Attio logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Attio</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/claude-code.png" alt="Claude Code logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Claude Code</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/n8n.png" alt="n8n logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://n8n.io/" target="_blank" rel="noopener noreferrer" data-tool="n8n" data-tip="Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach." aria-label="n8n: Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach. Opens in a new tab.">
+        <img src="/logos/n8n.png" alt="n8n logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">n8n</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/prospeo.png" alt="Prospeo logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Prospeo</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/ai-ark.png" alt="AI Ark logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">AI Ark</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/hypertide.png" alt="Hypertide logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Hypertide</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/instantly.png" alt="Instantly logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.make.com/" target="_blank" rel="noopener noreferrer" data-tool="Make" data-tip="Visual workflow automation, the second builder next to n8n." aria-label="Make: Visual workflow automation, the second builder next to n8n. Opens in a new tab.">
+        <img src="/logos/make.png" alt="Make logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Make</span>
+      </a>
+      <a class="logo-item" href="https://zapier.com/" target="_blank" rel="noopener noreferrer" data-tool="Zapier" data-tip="Quick app to app automations where a full workflow is not needed." aria-label="Zapier: Quick app to app automations where a full workflow is not needed. Opens in a new tab.">
+        <img src="/logos/zapier.png" alt="Zapier logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Zapier</span>
+      </a>
+      <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-label="Claude: Claude API and MCPs for account research, signal led openers and connecting tools. Opens in a new tab.">
+        <img src="/logos/claude.png" alt="Claude logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude</span>
+      </a>
+      <a class="logo-item" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer" data-tool="Claude Code" data-tip="Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations." aria-label="Claude Code: Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations. Opens in a new tab.">
+        <img src="/logos/claude-code.png" alt="Claude Code logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude Code</span>
+      </a>
+      <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-label="OpenAI: OpenAI API and ChatGPT for LLM workflows and drafting. Opens in a new tab.">
+        <img src="/logos/openai.png" alt="OpenAI logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">OpenAI</span>
+      </a>
+      <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-label="Apollo: Contact data and sequencing, part of my prospecting and enrichment stack. Opens in a new tab.">
+        <img src="/logos/apollo.png" alt="Apollo logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Apollo</span>
+      </a>
+      <a class="logo-item" href="https://www.smartlead.ai/" target="_blank" rel="noopener noreferrer" data-tool="Smartlead" data-tip="Cold email sequencing and inbox management. Home of my 45 day sequences." aria-label="Smartlead: Cold email sequencing and inbox management. Home of my 45 day sequences. Opens in a new tab.">
+        <img src="/logos/smartlead.png" alt="Smartlead logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Smartlead</span>
+      </a>
+      <a class="logo-item" href="https://instantly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Instantly" data-tip="Cold email sending and sequencing at scale." aria-label="Instantly: Cold email sending and sequencing at scale. Opens in a new tab.">
+        <img src="/logos/instantly.png" alt="Instantly logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Instantly</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/heyreach.jpg" alt="HeyReach logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-label="HeyReach: LinkedIn outreach automation across multiple senders. Opens in a new tab.">
+        <img src="/logos/heyreach.jpg" alt="HeyReach logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HeyReach</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/linkedin.png" alt="LinkedIn logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.gong.io/" target="_blank" rel="noopener noreferrer" data-tool="Gong" data-tip="Call recording and conversation intelligence for deal reviews." aria-label="Gong: Call recording and conversation intelligence for deal reviews. Opens in a new tab.">
+        <img src="/logos/gong.png" alt="Gong logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Gong</span>
+      </a>
+      <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-label="LinkedIn: Sales Navigator for account and lead search, and a core outreach channel. Opens in a new tab.">
+        <img src="/logos/linkedin.png" alt="LinkedIn logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">LinkedIn</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/trellus.png" alt="Trellus logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-label="Slack: Where my engine posts drafted openers for human review before anything sends. Opens in a new tab.">
+        <img src="/logos/slack.png" alt="Slack logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Slack</span>
+      </a>
+      <a class="logo-item" href="https://tagmanager.google.com/" target="_blank" rel="noopener noreferrer" data-tool="Google Tag Manager" data-tip="Conversion tracking with HubSpot forms, set up for clients." aria-label="Google Tag Manager: Conversion tracking with HubSpot forms, set up for clients. Opens in a new tab.">
+        <img src="/logos/google-tag-manager.png" alt="Google Tag Manager logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Google Tag Manager</span>
+      </a>
+      <a class="logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-tool="GitHub" data-tip="Where my code and this site live." aria-label="GitHub: Where my code and this site live. Opens in a new tab.">
+        <img src="/logos/github.png" alt="GitHub logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">GitHub</span>
+      </a>
+      <a class="logo-item" href="https://vercel.com/" target="_blank" rel="noopener noreferrer" data-tool="Vercel" data-tip="Hosts this site, deployed from GitHub." aria-label="Vercel: Hosts this site, deployed from GitHub. Opens in a new tab.">
+        <img src="/logos/vercel.png" alt="Vercel logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Vercel</span>
+      </a>
+      <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-label="Prospeo: Finds verified business emails and mobile numbers for outreach. Opens in a new tab.">
+        <img src="/logos/prospeo.png" alt="Prospeo logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Prospeo</span>
+      </a>
+      <a class="logo-item" href="https://ai-ark.com/" target="_blank" rel="noopener noreferrer" data-tool="AI Ark" data-tip="AI search for building lead and company lists that match an ICP." aria-label="AI Ark: AI search for building lead and company lists that match an ICP. Opens in a new tab.">
+        <img src="/logos/ai-ark.png" alt="AI Ark logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">AI Ark</span>
+      </a>
+      <a class="logo-item" href="https://www.hypertide.io/" target="_blank" rel="noopener noreferrer" data-tool="Hypertide" data-tip="Cold email infrastructure: sending domains and inboxes set up for deliverability." aria-label="Hypertide: Cold email infrastructure: sending domains and inboxes set up for deliverability. Opens in a new tab.">
+        <img src="/logos/hypertide.png" alt="Hypertide logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Hypertide</span>
+      </a>
+      <a class="logo-item" href="https://www.trellus.ai/" target="_blank" rel="noopener noreferrer" data-tool="Trellus" data-tip="AI auto dialer that runs calls inside the CRM or sales engagement tool." aria-label="Trellus: AI auto dialer that runs calls inside the CRM or sales engagement tool. Opens in a new tab.">
+        <img src="/logos/trellus.png" alt="Trellus logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Trellus</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/whitewhale.png" alt="WhiteWhale logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.getwhitewhale.com/" target="_blank" rel="noopener noreferrer" data-tool="WhiteWhale" data-tip="Custom buying signals on target accounts, from news, filings and job posts, each with a source." aria-label="WhiteWhale: Custom buying signals on target accounts, from news, filings and job posts, each with a source. Opens in a new tab.">
+        <img src="/logos/whitewhale.png" alt="WhiteWhale logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">WhiteWhale</span>
-      </div>
-      <div class="logo-item">
-        <img src="/logos/rb2b.png" alt="RB2B logo" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-label="RB2B: Website visitor identification: shows which people and companies visit a site. Opens in a new tab.">
+        <img src="/logos/rb2b.png" alt="RB2B logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">RB2B</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/clay.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-hidden="true" tabindex="-1">
+        <img src="/logos/hubspot.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HubSpot</span>
+      </a>
+      <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-hidden="true" tabindex="-1">
+        <img src="/logos/salesforce.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Salesforce</span>
+      </a>
+      <a class="logo-item" href="https://www.clay.com/" target="_blank" rel="noopener noreferrer" data-tool="Clay" data-tip="Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table." aria-hidden="true" tabindex="-1">
+        <img src="/logos/clay.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Clay</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/attio.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Attio</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/claude-code.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Claude Code</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/n8n.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://n8n.io/" target="_blank" rel="noopener noreferrer" data-tool="n8n" data-tip="Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach." aria-hidden="true" tabindex="-1">
+        <img src="/logos/n8n.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">n8n</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/prospeo.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Prospeo</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/ai-ark.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">AI Ark</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/hypertide.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
-        <span class="logo-item-name">Hypertide</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/instantly.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.make.com/" target="_blank" rel="noopener noreferrer" data-tool="Make" data-tip="Visual workflow automation, the second builder next to n8n." aria-hidden="true" tabindex="-1">
+        <img src="/logos/make.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Make</span>
+      </a>
+      <a class="logo-item" href="https://zapier.com/" target="_blank" rel="noopener noreferrer" data-tool="Zapier" data-tip="Quick app to app automations where a full workflow is not needed." aria-hidden="true" tabindex="-1">
+        <img src="/logos/zapier.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Zapier</span>
+      </a>
+      <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-hidden="true" tabindex="-1">
+        <img src="/logos/claude.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude</span>
+      </a>
+      <a class="logo-item" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer" data-tool="Claude Code" data-tip="Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations." aria-hidden="true" tabindex="-1">
+        <img src="/logos/claude-code.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude Code</span>
+      </a>
+      <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-hidden="true" tabindex="-1">
+        <img src="/logos/openai.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">OpenAI</span>
+      </a>
+      <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-hidden="true" tabindex="-1">
+        <img src="/logos/apollo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Apollo</span>
+      </a>
+      <a class="logo-item" href="https://www.smartlead.ai/" target="_blank" rel="noopener noreferrer" data-tool="Smartlead" data-tip="Cold email sequencing and inbox management. Home of my 45 day sequences." aria-hidden="true" tabindex="-1">
+        <img src="/logos/smartlead.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Smartlead</span>
+      </a>
+      <a class="logo-item" href="https://instantly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Instantly" data-tip="Cold email sending and sequencing at scale." aria-hidden="true" tabindex="-1">
+        <img src="/logos/instantly.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Instantly</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/heyreach.jpg" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-hidden="true" tabindex="-1">
+        <img src="/logos/heyreach.jpg" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HeyReach</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/linkedin.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.gong.io/" target="_blank" rel="noopener noreferrer" data-tool="Gong" data-tip="Call recording and conversation intelligence for deal reviews." aria-hidden="true" tabindex="-1">
+        <img src="/logos/gong.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Gong</span>
+      </a>
+      <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-hidden="true" tabindex="-1">
+        <img src="/logos/linkedin.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">LinkedIn</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/trellus.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-hidden="true" tabindex="-1">
+        <img src="/logos/slack.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Slack</span>
+      </a>
+      <a class="logo-item" href="https://tagmanager.google.com/" target="_blank" rel="noopener noreferrer" data-tool="Google Tag Manager" data-tip="Conversion tracking with HubSpot forms, set up for clients." aria-hidden="true" tabindex="-1">
+        <img src="/logos/google-tag-manager.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Google Tag Manager</span>
+      </a>
+      <a class="logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-tool="GitHub" data-tip="Where my code and this site live." aria-hidden="true" tabindex="-1">
+        <img src="/logos/github.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">GitHub</span>
+      </a>
+      <a class="logo-item" href="https://vercel.com/" target="_blank" rel="noopener noreferrer" data-tool="Vercel" data-tip="Hosts this site, deployed from GitHub." aria-hidden="true" tabindex="-1">
+        <img src="/logos/vercel.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Vercel</span>
+      </a>
+      <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-hidden="true" tabindex="-1">
+        <img src="/logos/prospeo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Prospeo</span>
+      </a>
+      <a class="logo-item" href="https://ai-ark.com/" target="_blank" rel="noopener noreferrer" data-tool="AI Ark" data-tip="AI search for building lead and company lists that match an ICP." aria-hidden="true" tabindex="-1">
+        <img src="/logos/ai-ark.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">AI Ark</span>
+      </a>
+      <a class="logo-item" href="https://www.hypertide.io/" target="_blank" rel="noopener noreferrer" data-tool="Hypertide" data-tip="Cold email infrastructure: sending domains and inboxes set up for deliverability." aria-hidden="true" tabindex="-1">
+        <img src="/logos/hypertide.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Hypertide</span>
+      </a>
+      <a class="logo-item" href="https://www.trellus.ai/" target="_blank" rel="noopener noreferrer" data-tool="Trellus" data-tip="AI auto dialer that runs calls inside the CRM or sales engagement tool." aria-hidden="true" tabindex="-1">
+        <img src="/logos/trellus.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Trellus</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/whitewhale.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.getwhitewhale.com/" target="_blank" rel="noopener noreferrer" data-tool="WhiteWhale" data-tip="Custom buying signals on target accounts, from news, filings and job posts, each with a source." aria-hidden="true" tabindex="-1">
+        <img src="/logos/whitewhale.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">WhiteWhale</span>
-      </div>
-      <div class="logo-item" aria-hidden="true">
-        <img src="/logos/rb2b.png" alt="" width="28" height="28" loading="lazy" onerror="this.style.display='none'">
+      </a>
+      <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-hidden="true" tabindex="-1">
+        <img src="/logos/rb2b.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">RB2B</span>
-      </div>
+      </a>
     </div>
   </div>
 </div>
@@ -4658,7 +4882,7 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="section-label">Expertise</div>
     <h2>Build. Run.<br><em>Sell.</em></h2>
-    <p class="section-intro">The rarest profile in GTM: someone who has held quota for 8 years and can also wire your entire revenue stack. I don't just know what good looks like — I've lived it and built it.</p>
+    <p class="section-intro">The rarest profile in GTM: someone with 8+ years in B2B revenue who can also wire your entire revenue stack. I don't just know what good looks like — I've lived it and built it.</p>
 
     <div class="expertise-grid">
 
@@ -4671,11 +4895,14 @@ html.legal-open { overflow: hidden; }
           <div class="exp-skill"><span class="exp-skill-name">Signal-based pipeline architecture</span></div>
           <div class="exp-skill"><span class="exp-skill-name">Clay · n8n · Make.com · Zapier</span></div>
           <div class="exp-skill"><span class="exp-skill-name">AI-powered outreach at scale</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Python · Claude Code · API integrations</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">ICP scoring · enrichment waterfalls</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Python · JavaScript · Claude Code · GitHub</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Claude API · OpenAI API · MCPs · LLM prompt design</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">APIs · webhooks · JSON</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">ICP scoring · lead enrichment waterfalls</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Smartlead · HeyReach · deliverability setup</span></div>
         </div>
         <div class="exp-tags">
-          <span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">Make.com</span><span class="exp-tag">Claude Code</span><span class="exp-tag">Apollo</span>
+          <span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">Make.com</span><span class="exp-tag">Claude Code</span><span class="exp-tag">Claude API</span><span class="exp-tag">Apollo</span><span class="exp-tag">Smartlead</span><span class="exp-tag">HeyReach</span>
         </div>
       </div>
 
@@ -4686,13 +4913,16 @@ html.legal-open { overflow: hidden; }
         </div>
         <div class="exp-skills">
           <div class="exp-skill"><span class="exp-skill-name">HubSpot — full architecture & automation</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Pipeline design · lead routing · hygiene</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Revenue attribution · HockeyStack · GA4</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">A/B testing · pipeline velocity · CAC</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Salesforce · Pipedrive · Attio</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Pipeline design · lead routing · lead scoring</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Data quality · deduplication · CRM hygiene</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Conversion tracking · Google Tag Manager · HubSpot forms</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Forecasting · pipeline coverage · Gong</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Revenue attribution · conversion tracking</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Funnel conversion · MQL rate reporting</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Salesforce · HubSpot · LinkedIn Sales Navigator</span></div>
         </div>
         <div class="exp-tags">
-          <span class="exp-tag">HubSpot</span><span class="exp-tag">Salesforce</span><span class="exp-tag">HockeyStack</span><span class="exp-tag">GA4</span>
+          <span class="exp-tag">HubSpot</span><span class="exp-tag">Salesforce</span><span class="exp-tag">Google Tag Manager</span><span class="exp-tag">Gong</span>
         </div>
       </div>
 
@@ -4703,13 +4933,14 @@ html.legal-open { overflow: hidden; }
         </div>
         <div class="exp-skills">
           <div class="exp-skill"><span class="exp-skill-name">Full-cycle enterprise B2B sales</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">SPICED · discovery · complex deal cycles</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">MEDDPICC · SPICED · discovery · complex deal cycles</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">C level and procurement · GDPR and InfoSec reviews</span></div>
           <div class="exp-skill"><span class="exp-skill-name">Sales playbook & battlecard design</span></div>
           <div class="exp-skill"><span class="exp-skill-name">Multi-stakeholder · champion navigation</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Sales enablement · coaching (Seismic)</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Sales enablement · SDR to AE handoffs and onboarding</span></div>
         </div>
         <div class="exp-tags">
-          <span class="exp-tag">SPICED</span><span class="exp-tag">Seismic</span><span class="exp-tag">Enterprise</span><span class="exp-tag">B2B</span>
+          <span class="exp-tag">MEDDPICC</span><span class="exp-tag">SPICED</span><span class="exp-tag">Enterprise</span><span class="exp-tag">B2B</span>
         </div>
       </div>
 
@@ -4755,20 +4986,20 @@ html.legal-open { overflow: hidden; }
       </div>
 
       <div class="phil-card fade-up">
-        <div class="phil-title">A/B tested, not assumed</div>
-        <p class="phil-desc">Every sequence and ICP segment tested against a control. What gets measured gets improved.</p>
+        <div class="phil-title">Measured, not assumed</div>
+        <p class="phil-desc">Every signal cohort is tracked against the rest of the pipeline. What gets measured gets improved.</p>
         <div class="phil-stat">
-          <span class="phil-stat-num">2–4×</span>
-          <span class="phil-stat-label">Reply rate from signal-based outreach</span>
+          <span class="phil-stat-num">40% vs 12%</span>
+          <span class="phil-stat-label">Close rate of signal cohorts</span>
         </div>
       </div>
 
       <div class="phil-card fade-up">
         <div class="phil-title">Experience over frameworks</div>
-        <p class="phil-desc">8 years quota-carrying. Every system stress-tested against real objections and deal cycles.</p>
+        <p class="phil-desc">8+ years in B2B revenue. Every system stress-tested against real objections and deal cycles.</p>
         <div class="phil-stat">
-          <span class="phil-stat-num">8 yrs</span>
-          <span class="phil-stat-label">Field sales before building workflow tools</span>
+          <span class="phil-stat-num">8+ yrs</span>
+          <span class="phil-stat-label">In B2B revenue before building workflow tools</span>
         </div>
       </div>
 
@@ -4912,15 +5143,15 @@ html.legal-open { overflow: hidden; }
     <h2>Numbers from the <em>field.</em></h2>
     <div class="results-grid">
       <div class="result-card fade-up">
-        <div class="result-num">$390k</div>
-        <div class="result-label">Revenue secured</div>
-        <p class="result-context">Full-cycle B2B outbound for OEB Global Conference — from ICP definition to closed contracts.</p>
+        <div class="result-num">€390k</div>
+        <div class="result-label">Program revenue</div>
+        <p class="result-context">OEB Global Conference program revenue grew from €295k to €390k, with signal based outbound from ICP definition to closed contracts.</p>
         <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,38 25,30 50,32 75,18 100,22 125,10 150,14 175,4 200,2" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,38 25,30 50,32 75,18 100,22 125,10 150,14 175,4 200,2 200,40" fill="rgba(217,119,6,0.07)"/></svg>
       </div>
       <div class="result-card fade-up">
         <div class="result-num">42%</div>
         <div class="result-label">MQL rate increase</div>
-        <p class="result-context">Trigger-based workflows built on hiring signals via Stepstone — outreach timed to the moment, not the calendar.</p>
+        <p class="result-context">Trigger based workflows built on hiring and funding signals, so outreach lands at the moment, not on the calendar.</p>
         <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,36 25,28 50,34 75,20 100,26 125,12 150,18 175,6 200,8" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,36 25,28 50,34 75,20 100,26 125,12 150,18 175,6 200,8 200,40" fill="rgba(217,119,6,0.07)"/></svg>
       </div>
       <div class="result-card fade-up">
@@ -4936,18 +5167,46 @@ html.legal-open { overflow: hidden; }
         <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,36 30,32 60,28 90,22 120,18 160,10 200,4" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,36 30,32 60,28 90,22 120,18 160,10 200,4 200,40" fill="rgba(217,119,6,0.07)"/></svg>
       </div>
       <div class="result-card fade-up">
-        <div class="result-num">2.4×</div>
-        <div class="result-label">Pipeline velocity uplift</div>
-        <p class="result-context">Signal-triggered sequences versus manual ops baseline — deals move faster when outreach lands at the right moment.</p>
+        <div class="result-num">2.4x</div>
+        <div class="result-label">Revenue per rep</div>
+        <p class="result-context">At CoachHub I narrowed 500 unscored accounts to 15 Tier 1 targets with CRM scoring, and revenue per rep rose 2.4x.</p>
         <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,38 20,36 50,30 70,28 100,18 130,14 160,8 200,2" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,38 20,36 50,30 70,28 100,18 130,14 160,8 200,2 200,40" fill="rgba(217,119,6,0.07)"/></svg>
       </div>
       <div class="result-card fade-up">
         <div class="result-num">60%</div>
-        <div class="result-label">Less manual SDR work</div>
+        <div class="result-label">Less manual sales work</div>
         <p class="result-context">Enrichment, scoring, and sequencing automated end-to-end — reps spend time selling, not researching.</p>
         <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,38 25,34 60,26 90,20 120,16 150,10 180,5 200,3" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,38 25,34 60,26 90,20 120,16 150,10 180,5 200,3 200,40" fill="rgba(217,119,6,0.07)"/></svg>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- WORK SAMPLES -->
+<section class="work" id="samples" aria-labelledby="samplesHeading">
+  <div class="container">
+    <div class="section-label">Work samples</div>
+    <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
+    <p class="work-intro">One tool, end to end, with the data, the rules and the limits all on the page.</p>
+    <article class="work-card fade-up">
+      <div>
+        <h3>Signup router</h3>
+        <p class="work-sub">Who gets a human this week, and what that human does first.</p>
+      </div>
+      <p>A Python script that takes a week of product trial signups, drops existing customers, partners and personal emails, scores the rest from 0 to 100 on usage, company fit, integration path and pain signals, and assigns one next action per account. Every score comes with the evidence behind it. Built in October 2026 from an exercise I worked on; every name and input is replaced or invented.</p>
+      <ul class="work-facts" aria-label="Result of the sample run">
+        <li><strong>20</strong><span>signups in</span></li>
+        <li><strong>3</strong><span>stopped by the gate</span></li>
+        <li><strong>17</strong><span>scored</span></li>
+        <li><strong>4</strong><span>sent for a custom benchmark</span></li>
+      </ul>
+      <p class="work-limits">Runs on synthetic data, no real companies. The Clay enrichment and the n8n step that writes tasks into HubSpot are designed, not running.</p>
+      <div class="exp-tags" style="margin-top:0">
+        <span class="exp-tag">Python</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing logic</span><span class="exp-tag">Synthetic data</span>
+      </div>
+      <a class="work-link" href="/work/signup-router/">Read the write up and source &rarr;</a>
+    </article>
   </div>
 </section>
 
@@ -4961,59 +5220,70 @@ html.legal-open { overflow: hidden; }
       <div class="cv-sidebar">
         <div class="cv-sidebar-label">Curriculum Vitae</div>
         <div class="cv-name">Yuval Gross</div>
-        <div class="cv-role">GTM Outbound Operator & Sales Manager</div>
+        <div class="cv-role">GTM Engineer</div>
         <div class="cv-location">📍 Berlin, Germany</div>
         <div class="cv-divider"></div>
 
         <div class="cv-section-title">Experience</div>
-        
+
         <div class="cv-item">
           <div class="cv-item-header">
-            <span class="cv-item-role">GTM Operation & Account Executive Consultant</span>
-            <span class="cv-item-date">2024–Now</span>
+            <span class="cv-item-role">GTM Engineer & Account Executive</span>
+            <span class="cv-item-date">Nov 2024 to Now</span>
           </div>
-          <div class="cv-item-company">OEB Global Conference · Berlin (Leading international EdTech & learning conference since 1995)</div>
+          <div class="cv-item-company">CloserStill Group / OEB Global Conference · Berlin</div>
           <div class="cv-item-bullets">
-            <div class="cv-bullet">Architected trigger-based outreach engine using hiring signals (Stepstone) → 42% MQL uplift</div>
-            <div class="cv-bullet">Built automated workflows across Clay, n8n, SendGrid, HeyReach, Apollo for signal-based lead generation</div>
-            <div class="cv-bullet">Restructured HubSpot lead scoring and lifecycle stages for clean MQL-to-SQL qualification</div>
+            <div class="cv-bullet">Run Clay waterfalls from hiring and funding signals into HubSpot; MQL rate up 42%</div>
+            <div class="cv-bullet">Signal cohorts close at 40% vs 12%; program revenue grew from €295k to €390k</div>
+            <div class="cv-bullet">Connect Clay, Smartlead, HeyReach and HubSpot through n8n and webhooks; stack cut from 17 tools to 5</div>
+            <div class="cv-bullet">Built the signal based outbound engine that 20 salespeople now use</div>
           </div>
         </div>
 
         <div class="cv-item">
           <div class="cv-item-header">
-            <span class="cv-item-role">Sales Executive (Pipeline Engineering)</span>
-            <span class="cv-item-date">2021–2024</span>
+            <span class="cv-item-role">Freelance GTM Specialist</span>
+            <span class="cv-item-date">Aug 2023 to Now</span>
           </div>
-          <div class="cv-item-company">CoachHub · Berlin (Fortune 500, $7.2B+ ACV clients)</div>
+          <div class="cv-item-company">Pragma GTM · Remote</div>
           <div class="cv-item-bullets">
-            <div class="cv-bullet">Built outbound engine for MEA/Europe via account-based plays on high-value A-Accounts → $750k+ annual quota</div>
-            <div class="cv-bullet">Developed persona-specific messaging playbooks for C-level (Travel, Hospitality, Logistics verticals)</div>
-            <div class="cv-bullet">Achieved high meeting-set rate through LinkedIn + Email channel optimization and cadence testing</div>
+            <div class="cv-bullet">Set up CRM, ICP, signals and sequences for an AI CRM startup in three weeks</div>
+            <div class="cv-bullet">Set up HubSpot forms and Google Tag Manager conversion tracking for clients; inbound leads up 11%</div>
           </div>
         </div>
 
         <div class="cv-item">
           <div class="cv-item-header">
-            <span class="cv-item-role">Account Management & Business Development</span>
-            <span class="cv-item-date">2017–2020</span>
+            <span class="cv-item-role">Sales Executive</span>
+            <span class="cv-item-date">Nov 2021 to Sep 2024</span>
           </div>
-          <div class="cv-item-company">Luns · Berlin (Mobile Media & AdTech)</div>
+          <div class="cv-item-company">CoachHub · Berlin (digital coaching for Fortune 500 enterprises)</div>
           <div class="cv-item-bullets">
-            <div class="cv-bullet">Acquired 13 net new customer logos ($150k revenue) through outbound prospecting and land-expand strategy</div>
-            <div class="cv-bullet">Managed high-budget performance campaigns ($45k/day) with real-time optimization and data-driven decision-making</div>
-            <div class="cv-bullet">Mentored 4 junior AMs on sales pipeline management, CRM hygiene, and outbound cadence best practices</div>
+            <div class="cv-bullet">Closed 100% of a €921k quota on €70k to €130k deals with C level and procurement</div>
+            <div class="cv-bullet">Narrowed 500 unscored accounts to 15 Tier 1 targets; revenue per rep 2.4x</div>
+            <div class="cv-bullet">Secured a €1.1M upsell with Customer Success and Marketing</div>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <span class="cv-item-role">Senior Key Account Manager</span>
+            <span class="cv-item-date">Jan 2017 to Jan 2020</span>
+          </div>
+          <div class="cv-item-company">Luns · Remote (Mobile Media & AdTech)</div>
+          <div class="cv-item-bullets">
+            <div class="cv-bullet">Won 13 new logos and $2M upsell at 95% retention; ran campaigns of up to $45k a day</div>
           </div>
         </div>
 
         <div class="cv-divider"></div>
         <div class="cv-section-title">Certifications & Frameworks</div>
         <div class="cv-cert-list">
-          <div class="cv-cert">✓ LinkedIn Sales Navigator — Certified</div>
-          <div class="cv-cert">✓ HubSpot Architecture & Automation</div>
-          <div class="cv-cert">✓ Clay · n8n · Make.com Practitioner</div>
-          <div class="cv-cert">✓ MEDDPICC — Enterprise qualification</div>
-          <div class="cv-cert">✓ SPICED — Discovery & deal methodology</div>
+          <div class="cv-cert">✓ LinkedIn Sales Navigator Certification</div>
+          <div class="cv-cert">✓ HubSpot Architect Certification</div>
+          <div class="cv-cert">✓ Clay Certification</div>
+          <div class="cv-cert">✓ MEDDPICC: enterprise qualification</div>
+          <div class="cv-cert">✓ SPICED: discovery and deal methodology</div>
         </div>
 
         <div class="cv-divider"></div>
@@ -5026,7 +5296,7 @@ html.legal-open { overflow: hidden; }
         <div class="cv-divider"></div>
         <a href="mailto:contact@pragma-gtm.com" class="cv-contact-btn">Contact me</a>
         <a href="https://linkedin.com/in/yuvalgross" target="_blank" rel="noopener noreferrer" class="cv-linkedin-btn">LinkedIn</a>
-        <a href="/GTM_-_Yuval_Gross.pdf" download type="application/pdf" class="cv-download-btn">Download CV</a>
+        <a href="/Yuval_Gross_CV.pdf" download type="application/pdf" class="cv-download-btn">Download CV</a>
       </div>
 
     </div><!-- end cv-solo-layout -->
@@ -5156,11 +5426,12 @@ html.legal-open { overflow: hidden; }
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#how">The system</a></li>
     <li><a href="#results">Results</a></li>
+    <li><a href="#samples">Samples</a></li>
     <li><a href="#stack">CV</a></li>
     <li><a href="#engagement">Work</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
   </ul>
-  <div class="footer-meta">© 2026 PragmaGTM · Berlin · Last updated May 2026 · <button type="button" class="footer-link-btn" data-legal="privacy">Privacy</button> · <button type="button" class="footer-link-btn" data-legal="imprint">Imprint</button> · <button type="button" class="footer-link-btn" data-consent-open>Cookie settings</button></div>
+  <div class="footer-meta">© 2026 PragmaGTM · Berlin · Last updated October 2026 · <button type="button" class="footer-link-btn" data-legal="privacy">Privacy</button> · <button type="button" class="footer-link-btn" data-legal="imprint">Imprint</button> · <button type="button" class="footer-link-btn" data-consent-open>Cookie settings</button></div>
 </footer>
 
 <!-- CONSENT BANNER — Apollo visitor tracking stays off until the visitor accepts -->
@@ -5804,6 +6075,31 @@ html.legal-open { overflow: hidden; }
   });
   var h = location.hash.replace('#', '');
   if (h === 'privacy' || h === 'imprint') openLegal(h);
+})();
+</script>
+<script>
+/* Tool strip: hover or focus shows what each tool is for. Plain links, no tracking. */
+(function () {
+  var tip = document.createElement('div');
+  tip.className = 'tool-tip'; tip.setAttribute('role', 'tooltip');
+  document.body.appendChild(tip);
+  function show(el) {
+    var d = el.getAttribute('data-tip'); if (!d) return;
+    tip.innerHTML = '';
+    var b = document.createElement('strong'); b.textContent = el.getAttribute('data-tool');
+    tip.appendChild(b); tip.appendChild(document.createTextNode(d));
+    var r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    var x = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), window.innerWidth - w - 8);
+    var y = r.top - h - 10; if (y < 8) y = r.bottom + 10;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px'; tip.classList.add('show');
+  }
+  function hide() { tip.classList.remove('show'); }
+  document.querySelectorAll('a.logo-item[data-tip]').forEach(function (el) {
+    el.addEventListener('mouseenter', function () { show(el); });
+    el.addEventListener('mouseleave', hide);
+    if (!el.hasAttribute('aria-hidden')) { el.addEventListener('focus', function () { show(el); }); el.addEventListener('blur', hide); }
+  });
+  window.addEventListener('scroll', hide, { passive: true });
 })();
 </script>
 </body>

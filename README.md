@@ -13,7 +13,7 @@ Portfolio website for Yuval Gross, GTM Engineer & RevOps Architect based in Berl
 - **og-image.png** — Open Graph image for social sharing (1200x630px)
 - **robots.txt** — Search engine crawler instructions
 - **sitemap.xml** — XML sitemap for SEO
-- **GTM_-_Yuval_Gross.pdf** — Downloadable CV
+- **Yuval_Gross_CV.pdf** — Downloadable CV (GTM_-_Yuval_Gross.pdf is a copy for old links)
 - **vercel.json** — Vercel deployment configuration
 - **.gitignore** — Git ignore patterns
 
