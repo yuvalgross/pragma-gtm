@@ -1494,6 +1494,32 @@ h2 em {
     border-color: var(--accent-dark);
   }
 .work-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+.work-grid .work-card {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+  }
+.work-grid .work-facts { grid-template-columns: repeat(2, 1fr); }
+.work-grid .work-link { align-self: flex-start; margin-top: auto; }
+@supports (grid-template-rows: subgrid) {
+  /* both cards share row tracks, so titles, text, numbers and links line up across the pair */
+  .work-grid .work-card {
+    display: grid;
+    grid-row: span 6;
+    grid-template-rows: subgrid;
+    row-gap: 1.5rem;
+  }
+  .work-grid .work-link { align-self: end; justify-self: start; margin-top: 0; }
+}
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 640px) {
   .work-card { padding: 1.4rem; }
   .work-facts { grid-template-columns: repeat(2, 1fr); }
@@ -5202,6 +5228,7 @@ html.legal-open { overflow: hidden; }
     <div class="section-label">Work samples</div>
     <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
     <p class="work-intro">Two tools, end to end, with the data, the rules and the limits all on the page.</p>
+    <div class="work-grid">
     <article class="work-card fade-up">
       <div>
         <h3>Signup router</h3>
@@ -5220,12 +5247,12 @@ html.legal-open { overflow: hidden; }
       </div>
       <a class="work-link" href="/work/signup-router/">Read the write up and source &rarr;</a>
     </article>
-    <article class="work-card fade-up" style="margin-top:1.5rem">
+    <article class="work-card fade-up">
       <div>
         <h3>Signal outreach</h3>
-        <p class="work-sub">Write from the reason to reach out, and send nothing without one.</p>
+        <p class="work-sub">Write from a real signal, or send nothing.</p>
       </div>
-      <p>A Python script that takes an enriched contact list, removes duplicates and bad data, holds back opt outs, customers, open deals, recent touches and bad emails, picks each contact's freshest buying signal, writes a three step sequence from it, checks the copy for length, spam words and phrasing that reads as automated, and schedules it at 08:30 in each contact's time zone, one person per company per day and 20 per mailbox. 17 tests check the rules on every run. Built in October 2026 as a portfolio sample; every contact and signal is invented.</p>
+      <p>A Python script that takes an enriched contact list, cleans it, holds back opt outs, customers, open deals and recent touches, writes a three step sequence from each contact's freshest buying signal, checks the copy, and schedules sends at 08:30 local time. 17 tests check the rules on every run. Built in October 2026 as a portfolio sample; every contact and signal is invented.</p>
       <ul class="work-facts" aria-label="Result of the sample run">
         <li><strong>119</strong><span>contacts in</span></li>
         <li><strong>78</strong><span>held, cleaned out or sent to nurture</span></li>
@@ -5238,6 +5265,7 @@ html.legal-open { overflow: hidden; }
       </div>
       <a class="work-link" href="/work/signal-outreach/">Read the write up and source &rarr;</a>
     </article>
+    </div>
   </div>
 </section>
 
