@@ -1,6 +1,6 @@
 # Signup router
 
-Decides which product trial signups get a human this week and what that human does first. Adapted from a take home exercise I built in October 2026. Company, product and customer names are removed and every input is synthetic.
+Decides which product trial signups get a human this week and what that human does first. Built in October 2026 from an exercise I worked on. Company, product and customer names are removed and every input is synthetic.
 
 ## Run it
 
@@ -21,9 +21,9 @@ Standard library only. Output lands in `output/`: `scored.csv` (every account th
 
 The input is synthetic. Every domain ends in `.example` except one personal email row that tests the gate. The column names are my assumption of what a product database and a Clay enrichment table would hold. In production Clay would fill the enrichment columns; here they are typed in. The step that writes one HubSpot task per top row, with the evidence in the body, via n8n, is designed and not part of this script.
 
-## Changes from the original
+## Changes from the earlier version
 
-Fields are renamed and one audio specific configuration check is removed. I ran the original and this version on the same 17 accounts: every usage, company, integration and pain score and every total is identical.
+Fields are renamed and one audio specific configuration check is removed. I ran an earlier version and this one on the same 17 accounts: every usage, company, integration and pain score and every total is identical.
 
 ## What AI did and what I checked
 
