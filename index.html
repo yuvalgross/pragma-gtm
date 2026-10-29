@@ -979,6 +979,7 @@ h1 em {
   .hero-illustration .hi-packet-3 { fill: #a78bfa; }
   .hero-illustration .hi-packet-4 { fill: var(--accent); }
   .hero-illustration .hi-packet-5 { fill: var(--teal-mid); }
+  .hero-illustration .hi-packet-6 { fill: #a78bfa; filter: drop-shadow(0 0 4px currentColor); opacity: 0.9; }
   .hero-illustration .hi-glyph-ring {
     fill: none;
     stroke: var(--ink);
@@ -1009,6 +1010,18 @@ h1 em {
 .hero-illustration #hi-wire-3 { animation-delay: 0.86s; }
 .hero-illustration #hi-wire-4 { animation-delay: 0.94s; }
 .hero-illustration #hi-wire-5 { animation-delay: 1.02s; }
+.hero-illustration .hi-engine-scan{fill:var(--accent);opacity:0.07;animation:hiSweep 4s ease-in-out infinite 2.6s}
+@keyframes hiSweep{0%{transform:translateX(0)}50%{transform:translateX(196px)}100%{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.hero-illustration .hi-engine-scan{animation:none}}
+.hero-illustration .hi-source-label--side{font-size:11px;text-anchor:end;letter-spacing:0.07em}
+.hero-illustration .hi-signal[data-signal="6"] { animation-delay: 0.70s; }
+.hero-illustration .hi-signal[data-signal="7"] { animation-delay: 0.80s; }
+.hero-illustration .hi-signal[data-signal="8"] { animation-delay: 0.90s; }
+.hero-illustration .hi-signal[data-signal="9"] { animation-delay: 1.00s; }
+.hero-illustration #hi-wire-6 { animation-delay: 1.10s; }
+.hero-illustration #hi-wire-7 { animation-delay: 1.18s; }
+.hero-illustration #hi-wire-8 { animation-delay: 1.26s; }
+.hero-illustration #hi-wire-9 { animation-delay: 1.34s; }
 .hero-illustration .hi-node[data-step="1"] { animation-delay: 1.00s; }
 .hero-illustration .hi-node[data-step="2"] { animation-delay: 1.10s; }
 .hero-illustration .hi-node[data-step="3"] { animation-delay: 1.20s; }
@@ -1048,6 +1061,7 @@ h1 em {
   .hero-illustration .hi-packet-3,
   .hero-illustration .hi-packet-4,
   .hero-illustration .hi-packet-5,
+  .hero-illustration .hi-packet-6,
   .hero-illustration .hi-packet-exit { display: none; }
 }
 .btn-primary {
@@ -4143,6 +4157,7 @@ html.legal-open { overflow: hidden; }
   .consent:not([hidden]) { animation: none; }
   .consent-btn { transition: none; }
 }
+.hero-paused, .hero-paused *, .hero-paused *::before, .hero-paused *::after { animation-play-state: paused !important; }
 </style>
 <script>
 (function(){try{var t=localStorage.getItem('pragma-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -4428,48 +4443,25 @@ html.legal-open { overflow: hidden; }
       <text class="hi-band-label" x="60" y="40">SIGNAL</text>
       <line class="hi-band-line" x1="40" y1="50" x2="170" y2="50"/>
 
-      <!-- Funding source -->
-      <g class="hi-signal" data-signal="1">
-        <circle class="hi-ring" cx="80" cy="74" r="18"/>
-        <circle class="hi-signal-dot" cx="80" cy="74" r="6"/>
-      </g>
-      <text class="hi-source-label" x="80" y="106">FUNDING</text>
+      <g class="hi-signal" data-signal="1"><g transform="translate(120 72) scale(0.8) translate(-80 -100)"><circle class="hi-ring" cx="80" cy="100" r="18"/><circle class="hi-signal-dot" cx="80" cy="100" r="6"/></g></g>
+      <text class="hi-source-label hi-source-label--side" x="98" y="76">FUNDING</text>
+      <g class="hi-signal" data-signal="2"><g transform="translate(120 120) scale(0.8) translate(-80 -100)"><circle class="hi-ring" cx="80" cy="100" r="18"/><path class="hi-glyph" d="M70 100 L77 107 L90 94"/></g></g>
+      <text class="hi-source-label hi-source-label--side" x="98" y="124">HIRING</text>
+      <g class="hi-signal" data-signal="3"><g transform="translate(120 168) scale(0.8) translate(-80 -100)"><circle class="hi-ring" cx="80" cy="100" r="18"/><path class="hi-glyph" d="M71 106 L72 95 L76.5 100 L80 92 L83.5 100 L88 95 L89 106 Z"/></g></g>
+      <text class="hi-source-label hi-source-label--side" x="98" y="172">LEADER</text>
+      <g class="hi-signal" data-signal="4"><g transform="translate(120 216) scale(0.8) translate(-80 -100)"><circle class="hi-ring" cx="80" cy="100" r="18"/><path class="hi-glyph" d="M71 106 L80 90 L89 106"/></g></g>
+      <text class="hi-source-label hi-source-label--side" x="98" y="220">INTENT</text>
+      <g class="hi-signal" data-signal="5"><g transform="translate(120 264) scale(0.8) translate(-80 -100)"><circle class="hi-ring" cx="80" cy="100" r="18"/><circle class="hi-glyph-ring" cx="80" cy="100" r="6"/><circle class="hi-signal-dot" cx="80" cy="100" r="2"/></g></g>
+      <text class="hi-source-label hi-source-label--side" x="98" y="268">WEB</text>
+      <g class="hi-signal" data-signal="6"><g transform="translate(120 312) scale(0.8) translate(-80 -100)"><circle class="hi-ring" cx="80" cy="100" r="18"/><path class="hi-glyph" d="M80 92 V108 M72 100 H88"/></g></g>
+      <text class="hi-source-label hi-source-label--side" x="98" y="316">SIGNUP</text>
 
-      <!-- Hiring source -->
-      <g class="hi-signal" data-signal="2">
-        <circle class="hi-ring" cx="80" cy="132" r="18"/>
-        <path class="hi-glyph" d="M70 132 L77 139 L90 126"/>
-      </g>
-      <text class="hi-source-label" x="80" y="164">HIRING</text>
-
-      <!-- Tech-stack source -->
-      <g class="hi-signal" data-signal="3">
-        <circle class="hi-ring" cx="80" cy="190" r="18"/>
-        <path class="hi-glyph" d="M72 184 L80 197 L88 184 M80 197 L80 179"/>
-      </g>
-      <text class="hi-source-label" x="80" y="222">TECH</text>
-
-      <!-- Intent source -->
-      <g class="hi-signal" data-signal="4">
-        <circle class="hi-ring" cx="80" cy="248" r="18"/>
-        <path class="hi-glyph" d="M71 254 L80 238 L89 254"/>
-      </g>
-      <text class="hi-source-label" x="80" y="280">INTENT</text>
-
-      <!-- Website-visits source -->
-      <g class="hi-signal" data-signal="5">
-        <circle class="hi-ring" cx="80" cy="306" r="18"/>
-        <circle class="hi-glyph-ring" cx="80" cy="306" r="6"/>
-        <circle class="hi-signal-dot" cx="80" cy="306" r="2"/>
-      </g>
-      <text class="hi-source-label" x="80" y="338">WEB</text>
-
-      <!-- Connectors signal → engine -->
-      <path class="hi-wire" id="hi-wire-1" d="M101 74 Q170 74 220 150"/>
-      <path class="hi-wire" id="hi-wire-2" d="M101 132 Q170 132 220 170"/>
-      <path class="hi-wire" id="hi-wire-3" d="M101 190 Q175 190 220 184"/>
-      <path class="hi-wire" id="hi-wire-4" d="M101 248 Q170 248 220 198"/>
-      <path class="hi-wire" id="hi-wire-5" d="M101 306 Q170 306 220 215"/>
+      <path class="hi-wire" id="hi-wire-1" d="M135 72 Q185 72 220 150"/>
+      <path class="hi-wire" id="hi-wire-2" d="M135 120 Q185 120 220 163"/>
+      <path class="hi-wire" id="hi-wire-3" d="M135 168 Q185 168 220 176"/>
+      <path class="hi-wire" id="hi-wire-4" d="M135 216 Q185 216 220 189"/>
+      <path class="hi-wire" id="hi-wire-5" d="M135 264 Q185 264 220 202"/>
+      <path class="hi-wire" id="hi-wire-6" d="M135 312 Q185 312 220 215"/>
 
       <!-- ENGINEERING band (moved to bottom of engine with spacing) -->
       <text class="hi-band-label" x="340" y="280" text-anchor="middle">ENGINEERING</text>
@@ -4489,6 +4481,10 @@ html.legal-open { overflow: hidden; }
       <line class="hi-engine-divider" x1="220" y1="148" x2="460" y2="148"/>
       <text class="hi-engine-title" x="240" y="140">The engine</text>
       <text class="hi-engine-fig" x="430" y="140">FIG. 01</text>
+
+      <!-- Engine scan sweep -->
+      <clipPath id="hi-engine-clip"><rect x="221" y="149" width="238" height="110" rx="5"/></clipPath>
+      <g clip-path="url(#hi-engine-clip)"><rect class="hi-engine-scan" x="222" y="150" width="40" height="108"/></g>
 
       <!-- Engine processing nodes -->
       <g class="hi-node" data-step="1">
@@ -4544,8 +4540,8 @@ html.legal-open { overflow: hidden; }
       </g>
       <g class="hi-outcome" data-out="3">
         <rect class="hi-outcome-card" x="520" y="240" width="120" height="48" rx="4"/>
-        <text class="hi-outcome-num" x="580" y="263">2.4x</text>
-        <text class="hi-outcome-label" x="580" y="278">REV PER REP</text>
+        <text class="hi-outcome-num" x="580" y="263">40% vs 12%</text>
+        <text class="hi-outcome-label" x="580" y="278">SIGNAL CLOSE RATE</text>
       </g>
 
       <!-- Outcome connectors -->
@@ -4555,13 +4551,14 @@ html.legal-open { overflow: hidden; }
       <!-- Full flow paths for animated balls (hidden, used by animateMotion) -->
       <defs>
         <!-- 5 inbound wires — each ball travels its own wire to engine entry -->
-        <path id="hi-flow-1" d="M80 74 Q170 74 220 150 Q230 165 240 175"/>
-        <path id="hi-flow-2" d="M80 132 Q150 132 240 178"/>
-        <path id="hi-flow-3" d="M80 190 Q175 190 220 184 Q230 183 240 182"/>
-        <path id="hi-flow-4" d="M80 248 Q170 248 220 198 Q230 192 240 186"/>
-        <path id="hi-flow-5" d="M80 306 Q170 306 220 215 Q230 200 240 190"/>
+        <path id="hi-flow-1" d="M135 72 Q185 72 220 150"/>
+        <path id="hi-flow-2" d="M135 120 Q185 120 220 163"/>
+        <path id="hi-flow-3" d="M135 168 Q185 168 220 176"/>
+        <path id="hi-flow-4" d="M135 216 Q185 216 220 189"/>
+        <path id="hi-flow-5" d="M135 264 Q185 264 220 202"/>
+        <path id="hi-flow-6" d="M135 312 Q185 312 220 215"/>
         <!-- Single exit path: engine entry → through nodes → outcome -->
-        <path id="hi-flow-exit" d="M240 182 L260 184 L300 184 L340 184 L380 184 L420 184 L460 184 L505 184"/>
+        <path id="hi-flow-exit" d="M220 184 L260 184 L300 184 L340 184 L380 184 L420 184 L460 184 L505 184"/>
       </defs>
 
       <!-- Ball 1 (amber) — funding wire, arrives at engine at 1.5s mark -->
@@ -4571,7 +4568,7 @@ html.legal-open { overflow: hidden; }
           <mpath href="#hi-flow-1"/>
         </animateMotion>
         <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s"
-          values="1;1;0;0;1" keyTimes="0;0.375;0.42;0.95;1"/>
+          values="0;1;1;0;0" keyTimes="0;0.04;0.36;0.4;1"/>
       </circle>
 
       <!-- Ball 2 (teal) — hiring wire, arrives same time -->
@@ -4581,7 +4578,7 @@ html.legal-open { overflow: hidden; }
           <mpath href="#hi-flow-2"/>
         </animateMotion>
         <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s"
-          values="1;1;0;0;1" keyTimes="0;0.375;0.42;0.95;1"/>
+          values="0;1;1;0;0" keyTimes="0;0.04;0.36;0.4;1"/>
       </circle>
 
       <!-- Ball 3 (purple) — tech wire, arrives same time -->
@@ -4591,7 +4588,7 @@ html.legal-open { overflow: hidden; }
           <mpath href="#hi-flow-3"/>
         </animateMotion>
         <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s"
-          values="1;1;0;0;1" keyTimes="0;0.375;0.42;0.95;1"/>
+          values="0;1;1;0;0" keyTimes="0;0.04;0.36;0.4;1"/>
       </circle>
 
       <!-- Ball 4 (amber) — intent wire, arrives same time -->
@@ -4601,7 +4598,7 @@ html.legal-open { overflow: hidden; }
           <mpath href="#hi-flow-4"/>
         </animateMotion>
         <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s"
-          values="1;1;0;0;1" keyTimes="0;0.375;0.42;0.95;1"/>
+          values="0;1;1;0;0" keyTimes="0;0.04;0.36;0.4;1"/>
       </circle>
 
       <!-- Ball 5 (teal) — web wire, arrives same time -->
@@ -4611,7 +4608,17 @@ html.legal-open { overflow: hidden; }
           <mpath href="#hi-flow-5"/>
         </animateMotion>
         <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s"
-          values="1;1;0;0;1" keyTimes="0;0.375;0.42;0.95;1"/>
+          values="0;1;1;0;0" keyTimes="0;0.04;0.36;0.4;1"/>
+      </circle>
+
+      <!-- Ball 6 (purple) — signup wire -->
+      <circle class="hi-packet hi-packet-6" r="4.5">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="0s"
+          keyPoints="0;1;1;1" keyTimes="0;0.375;0.9;1" calcMode="linear">
+          <mpath href="#hi-flow-6"/>
+        </animateMotion>
+        <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s"
+          values="0;1;1;0;0" keyTimes="0;0.04;0.36;0.4;1"/>
       </circle>
 
       <!-- Exit ball (amber) — appears at engine entry, travels through nodes to outcome -->
@@ -4632,90 +4639,71 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="arch-label">The GTM architecture at a glance: signal to closed deal</div>
     <div class="arch-interactive">
-      <svg class="arch-svg" viewBox="0 0 1130 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GTM architecture flow: 5 layers from signal to closed revenue">
+      <svg class="arch-svg" viewBox="0 0 1130 218" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GTM architecture flow: 5 layers from signal to closed revenue">
         <defs>
           <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#d97706"/></marker>
           <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c2622a"/></marker>
           <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
-
-        <!-- Animated connection lines -->
         <path class="arch-line" d="M188 133 L208 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
         <path class="arch-line" d="M398 133 L418 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
         <path class="arch-line" d="M630 133 L650 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
         <path class="arch-line" d="M840 133 L860 133" stroke="#c2622a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow2)"/>
-
-        <!-- Data packets -->
         <circle class="data-packet p1" cy="133" r="7" fill="#d97706" opacity="0"/>
         <circle class="data-packet p2" cy="133" r="7" fill="#d97706" opacity="0"/>
         <circle class="data-packet p3" cy="133" r="6.5" fill="#c2622a" opacity="0"/>
 
-        <!-- Layer 1: Signal Ingestion -->
-        <g class="arch-node" data-label="01 Signal Ingestion">
+        <g class="arch-node" data-label="Hiring and funding signals pulled into Clay the moment they fire">
           <rect x="2" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#d97706" stroke-width="1.8"/>
           <rect x="2" y="70" width="182" height="5" rx="2.5" fill="#d97706" opacity="0.4"/>
-          <text x="93.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">01 · SIGNAL INGESTION</text>
-          <text x="93.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#1c1a14">Clay · 6sense · ZoomInfo</text>
-          <text x="93.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">ZoomInfo · LinkedIn</text>
-          <text x="93.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Apollo</text>
+          <text x="93" y="90" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">01 · SIGNALS</text>
+          <text x="93" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" fill="#1c1a14">Spot the buying moment</text>
+          <text x="93" y="148" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Funding, hiring, intent</text>
+          <text x="93" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#92400e" letter-spacing="0.02em">RB2B · Sales Nav · AI Ark</text>
         </g>
 
-        <!-- Layer 2: Enrichment & ICP -->
-        <g class="arch-node" data-label="02 Enrichment &amp; ICP Scoring">
+        <g class="arch-node" data-label="Clay waterfalls rank every account against real closed-won deals">
           <rect x="212" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#d97706" stroke-width="1.8"/>
           <rect x="212" y="70" width="182" height="5" rx="2.5" fill="#d97706" opacity="0.4"/>
-          <text x="303.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">02 · ENRICHMENT &amp; ICP</text>
-          <text x="303.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#1c1a14">Clay · Apollo · Lusha</text>
-          <text x="303.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Hunter.io · Apollo</text>
-          <text x="303.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">ICP scoring</text>
+          <text x="303" y="90" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">02 · ENRICH &amp; SCORE</text>
+          <text x="303" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" fill="#1c1a14">Score against closed-won</text>
+          <text x="303" y="148" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Enrich, then tier by ICP</text>
+          <text x="303" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#92400e" letter-spacing="0.02em">Clay · Prospeo · Apollo</text>
         </g>
 
-        <!-- Layer 3: Orchestration (anchor) -->
-        <g class="arch-node arch-anchor" data-label="03 Workflow Orchestration">
-          <rect x="422" y="50" width="204" height="166" rx="12" fill="#1c1a14" stroke="#d97706" stroke-width="1.8" filter="url(#glow)"/>
-          <rect x="422" y="50" width="204" height="5" rx="2.5" fill="#d97706" opacity="0.8"/>
-          <text x="524.0" y="80" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#fbbf24" letter-spacing="0.07em">03 · ORCHESTRATION</text>
-          <text x="524.0" y="108" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#f9f6ee">n8n · Make.com · Zapier</text>
-          <text x="524.0" y="136" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14.5" font-weight="400" fill="rgba(249,246,238,0.62)">Claude Code · Python</text>
-          <text x="524.0" y="156" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="12.5" font-weight="400" fill="rgba(249,246,238,0.5)">Trigger logic · routing</text>
-          <text x="524.0" y="176" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="12.5" font-weight="400" fill="rgba(249,246,238,0.5)">CRM sync</text>
+        <g class="arch-node arch-anchor" data-label="n8n and webhooks connect Clay, Smartlead, HeyReach and HubSpot">
+          <rect x="422" y="60" width="204" height="146" rx="12" fill="#1c1a14" stroke="#d97706" stroke-width="1.8" filter="url(#glow)"/>
+          <rect x="422" y="60" width="204" height="5" rx="2.5" fill="#d97706" opacity="0.8"/>
+          <text x="524" y="82" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#fbbf24" letter-spacing="0.07em">03 · ORCHESTRATE</text>
+          <text x="524" y="126" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" fill="#f9f6ee">Route the right account</text>
+          <text x="524" y="152" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.72)">Triggers, routing, CRM sync</text>
+          <text x="524" y="178" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#fbbf24" letter-spacing="0.02em">n8n · Make · Claude Code</text>
           <circle class="pulse-ring" cx="524" cy="133" r="70" fill="none" stroke="#d97706" stroke-width="1" opacity="0"/>
         </g>
 
-        <!-- Layer 4: AI Outreach -->
-        <g class="arch-node" data-label="04 AI-Personalised Outreach">
+        <g class="arch-node" data-label="Copy grounded in the signal, approved in Slack before it sends">
           <rect x="654" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#c2622a" stroke-width="1.8"/>
           <rect x="654" y="70" width="182" height="5" rx="2.5" fill="#c2622a" opacity="0.4"/>
-          <text x="745.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">04 · AI OUTREACH</text>
-          <text x="745.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#1c1a14">Claude · OpenAI · Twain.ai</text>
-          <text x="745.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">HeyReach · Smartlead</text>
-          <text x="745.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Instantly</text>
+          <text x="745" y="90" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">04 · OUTREACH</text>
+          <text x="745" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" fill="#1c1a14">Write from the signal</text>
+          <text x="745" y="148" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Email + LinkedIn sequences</text>
+          <text x="745" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#92400e" letter-spacing="0.02em">Claude · Smartlead · HeyReach</text>
         </g>
 
-        <!-- Layer 5: CRM -->
-        <g class="arch-node" data-label="05 CRM &amp; Pipeline">
+        <g class="arch-node" data-label="Replies land in HubSpot with the signal attached. MQL rate up 42%">
           <rect x="864" y="70" width="182" height="126" rx="12" fill="#0f766e" stroke="#0d9488" stroke-width="1.8"/>
-          <rect x="864" y="70" width="182" height="5" rx="2.5" fill="#0d9488" opacity="0.7"/>
-          <text x="955.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#99f6e4" letter-spacing="0.07em">05 · CRM &amp; PIPELINE</text>
-          <text x="955.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#f9f6ee">HubSpot · Salesforce</text>
-          <text x="955.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.62)">Gong · LinkedIn</text>
-          <text x="955.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.62)">Sales Navigator</text>
+          <rect x="864" y="70" width="182" height="5" rx="2.5" fill="#0d9488" opacity="0.8"/>
+          <text x="955" y="90" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#99f6e4" letter-spacing="0.07em">05 · CRM &amp; REPORTING</text>
+          <text x="955" y="122" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" fill="#f9f6ee">Track it to revenue</text>
+          <text x="955" y="148" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.72)">Attribution and forecasting</text>
+          <text x="955" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#99f6e4" letter-spacing="0.02em">HubSpot · Salesforce · Gong</text>
         </g>
-
-        <!-- Output arrow + label -->
         <path d="M1048 133 L1070 133" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow2)"/>
         <text x="1102" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500" fill="#0f766e">Closed</text>
         <text x="1102" y="146" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-style="italic" fill="#0f766e">revenue.</text>
-
-        <!-- Attribution layer -->
-        <path d="M524 220 L524 244" stroke="#d97706" stroke-width="1.4" stroke-dasharray="3 2"/>
-        <rect x="372" y="244" width="304" height="32" rx="8" fill="rgba(217,119,6,0.07)" stroke="rgba(217,119,6,0.22)" stroke-width="1"/>
-        <text x="524" y="265" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">↑ Google Tag Manager · HubSpot forms: attribution</text>
-
-        <!-- Tooltip -->
         <g class="arch-tooltip" id="archTooltip" opacity="0" pointer-events="none">
-          <rect x="400" y="4" width="250" height="34" rx="8" fill="rgba(28,26,20,0.92)"/>
-          <text id="archTooltipText" x="525" y="26" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="14" font-weight="400" fill="#f9f6ee">Hover a layer</text>
+          <rect x="245" y="4" width="560" height="34" rx="8" fill="rgba(28,26,20,0.92)"/>
+          <text id="archTooltipText" x="525" y="26" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="14" font-weight="400" fill="#f9f6ee"></text>
         </g>
       </svg>
     </div>
@@ -4727,203 +4715,203 @@ html.legal-open { overflow: hidden; }
   <div class="logo-marquee-wrap">
     <div class="logo-marquee">
       <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-label="HubSpot: The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified. Opens in a new tab.">
-        <img src="/logos/hubspot.png" alt="HubSpot logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/hubspot.png" alt="HubSpot logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HubSpot</span>
       </a>
       <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-label="Salesforce: The CRM I sold in as an enterprise rep at CoachHub. Opens in a new tab.">
-        <img src="/logos/salesforce.png" alt="Salesforce logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/salesforce.png" alt="Salesforce logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Salesforce</span>
       </a>
       <a class="logo-item" href="https://www.clay.com/" target="_blank" rel="noopener noreferrer" data-tool="Clay" data-tip="Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table." aria-label="Clay: Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table. Opens in a new tab.">
-        <img src="/logos/clay.png" alt="Clay logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/clay.png" alt="Clay logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Clay</span>
       </a>
       <a class="logo-item" href="https://n8n.io/" target="_blank" rel="noopener noreferrer" data-tool="n8n" data-tip="Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach." aria-label="n8n: Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach. Opens in a new tab.">
-        <img src="/logos/n8n.png" alt="n8n logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/n8n.png" alt="n8n logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">n8n</span>
       </a>
       <a class="logo-item" href="https://www.make.com/" target="_blank" rel="noopener noreferrer" data-tool="Make" data-tip="Visual workflow automation, the second builder next to n8n." aria-label="Make: Visual workflow automation, the second builder next to n8n. Opens in a new tab.">
-        <img src="/logos/make.png" alt="Make logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/make.png" alt="Make logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Make</span>
       </a>
       <a class="logo-item" href="https://zapier.com/" target="_blank" rel="noopener noreferrer" data-tool="Zapier" data-tip="Quick app to app automations where a full workflow is not needed." aria-label="Zapier: Quick app to app automations where a full workflow is not needed. Opens in a new tab.">
-        <img src="/logos/zapier.png" alt="Zapier logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/zapier.png" alt="Zapier logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Zapier</span>
       </a>
       <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-label="Claude: Claude API and MCPs for account research, signal led openers and connecting tools. Opens in a new tab.">
-        <img src="/logos/claude.png" alt="Claude logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/claude.png" alt="Claude logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Claude</span>
       </a>
       <a class="logo-item" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer" data-tool="Claude Code" data-tip="Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations." aria-label="Claude Code: Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations. Opens in a new tab.">
-        <img src="/logos/claude-code.png" alt="Claude Code logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/claude-code.png" alt="Claude Code logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Claude Code</span>
       </a>
       <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-label="OpenAI: OpenAI API and ChatGPT for LLM workflows and drafting. Opens in a new tab.">
-        <img src="/logos/openai.png" alt="OpenAI logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/openai.png" alt="OpenAI logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">OpenAI</span>
       </a>
       <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-label="Apollo: Contact data and sequencing, part of my prospecting and enrichment stack. Opens in a new tab.">
-        <img src="/logos/apollo.png" alt="Apollo logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/apollo.png" alt="Apollo logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Apollo</span>
       </a>
       <a class="logo-item" href="https://www.smartlead.ai/" target="_blank" rel="noopener noreferrer" data-tool="Smartlead" data-tip="Cold email sequencing and inbox management. Home of my 45 day sequences." aria-label="Smartlead: Cold email sequencing and inbox management. Home of my 45 day sequences. Opens in a new tab.">
-        <img src="/logos/smartlead.png" alt="Smartlead logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/smartlead.png" alt="Smartlead logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Smartlead</span>
       </a>
       <a class="logo-item" href="https://instantly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Instantly" data-tip="Cold email sending and sequencing at scale." aria-label="Instantly: Cold email sending and sequencing at scale. Opens in a new tab.">
-        <img src="/logos/instantly.png" alt="Instantly logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/instantly.png" alt="Instantly logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Instantly</span>
       </a>
       <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-label="HeyReach: LinkedIn outreach automation across multiple senders. Opens in a new tab.">
-        <img src="/logos/heyreach.jpg" alt="HeyReach logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/heyreach.jpg" alt="HeyReach logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HeyReach</span>
       </a>
       <a class="logo-item" href="https://www.gong.io/" target="_blank" rel="noopener noreferrer" data-tool="Gong" data-tip="Call recording and conversation intelligence for deal reviews." aria-label="Gong: Call recording and conversation intelligence for deal reviews. Opens in a new tab.">
-        <img src="/logos/gong.png" alt="Gong logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/gong.png" alt="Gong logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Gong</span>
       </a>
       <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-label="LinkedIn: Sales Navigator for account and lead search, and a core outreach channel. Opens in a new tab.">
-        <img src="/logos/linkedin.png" alt="LinkedIn logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/linkedin.png" alt="LinkedIn logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">LinkedIn</span>
       </a>
       <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-label="Slack: Where my engine posts drafted openers for human review before anything sends. Opens in a new tab.">
-        <img src="/logos/slack.png" alt="Slack logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/slack.png" alt="Slack logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Slack</span>
       </a>
       <a class="logo-item" href="https://tagmanager.google.com/" target="_blank" rel="noopener noreferrer" data-tool="Google Tag Manager" data-tip="Conversion tracking with HubSpot forms, set up for clients." aria-label="Google Tag Manager: Conversion tracking with HubSpot forms, set up for clients. Opens in a new tab.">
-        <img src="/logos/google-tag-manager.png" alt="Google Tag Manager logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/google-tag-manager.png" alt="Google Tag Manager logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Google Tag Manager</span>
       </a>
       <a class="logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-tool="GitHub" data-tip="Where my code and this site live." aria-label="GitHub: Where my code and this site live. Opens in a new tab.">
-        <img src="/logos/github.png" alt="GitHub logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/github.png" alt="GitHub logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">GitHub</span>
       </a>
       <a class="logo-item" href="https://vercel.com/" target="_blank" rel="noopener noreferrer" data-tool="Vercel" data-tip="Hosts this site, deployed from GitHub." aria-label="Vercel: Hosts this site, deployed from GitHub. Opens in a new tab.">
-        <img src="/logos/vercel.png" alt="Vercel logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/vercel.png" alt="Vercel logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Vercel</span>
       </a>
       <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-label="Prospeo: Finds verified business emails and mobile numbers for outreach. Opens in a new tab.">
-        <img src="/logos/prospeo.png" alt="Prospeo logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/prospeo.png" alt="Prospeo logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Prospeo</span>
       </a>
       <a class="logo-item" href="https://ai-ark.com/" target="_blank" rel="noopener noreferrer" data-tool="AI Ark" data-tip="AI search for building lead and company lists that match an ICP." aria-label="AI Ark: AI search for building lead and company lists that match an ICP. Opens in a new tab.">
-        <img src="/logos/ai-ark.png" alt="AI Ark logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/ai-ark.png" alt="AI Ark logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">AI Ark</span>
       </a>
       <a class="logo-item" href="https://www.hypertide.io/" target="_blank" rel="noopener noreferrer" data-tool="Hypertide" data-tip="Cold email infrastructure: sending domains and inboxes set up for deliverability." aria-label="Hypertide: Cold email infrastructure: sending domains and inboxes set up for deliverability. Opens in a new tab.">
-        <img src="/logos/hypertide.png" alt="Hypertide logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/hypertide.png" alt="Hypertide logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Hypertide</span>
       </a>
       <a class="logo-item" href="https://www.trellus.ai/" target="_blank" rel="noopener noreferrer" data-tool="Trellus" data-tip="AI auto dialer that runs calls inside the CRM or sales engagement tool." aria-label="Trellus: AI auto dialer that runs calls inside the CRM or sales engagement tool. Opens in a new tab.">
-        <img src="/logos/trellus.png" alt="Trellus logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/trellus.png" alt="Trellus logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Trellus</span>
       </a>
       <a class="logo-item" href="https://www.getwhitewhale.com/" target="_blank" rel="noopener noreferrer" data-tool="WhiteWhale" data-tip="Custom buying signals on target accounts, from news, filings and job posts, each with a source." aria-label="WhiteWhale: Custom buying signals on target accounts, from news, filings and job posts, each with a source. Opens in a new tab.">
-        <img src="/logos/whitewhale.png" alt="WhiteWhale logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/whitewhale.png" alt="WhiteWhale logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">WhiteWhale</span>
       </a>
       <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-label="RB2B: Website visitor identification: shows which people and companies visit a site. Opens in a new tab.">
-        <img src="/logos/rb2b.png" alt="RB2B logo" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/rb2b.png" alt="RB2B logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">RB2B</span>
       </a>
       <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-hidden="true" tabindex="-1">
-        <img src="/logos/hubspot.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/hubspot.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HubSpot</span>
       </a>
       <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-hidden="true" tabindex="-1">
-        <img src="/logos/salesforce.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/salesforce.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Salesforce</span>
       </a>
       <a class="logo-item" href="https://www.clay.com/" target="_blank" rel="noopener noreferrer" data-tool="Clay" data-tip="Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table." aria-hidden="true" tabindex="-1">
-        <img src="/logos/clay.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/clay.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Clay</span>
       </a>
       <a class="logo-item" href="https://n8n.io/" target="_blank" rel="noopener noreferrer" data-tool="n8n" data-tip="Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach." aria-hidden="true" tabindex="-1">
-        <img src="/logos/n8n.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/n8n.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">n8n</span>
       </a>
       <a class="logo-item" href="https://www.make.com/" target="_blank" rel="noopener noreferrer" data-tool="Make" data-tip="Visual workflow automation, the second builder next to n8n." aria-hidden="true" tabindex="-1">
-        <img src="/logos/make.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/make.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Make</span>
       </a>
       <a class="logo-item" href="https://zapier.com/" target="_blank" rel="noopener noreferrer" data-tool="Zapier" data-tip="Quick app to app automations where a full workflow is not needed." aria-hidden="true" tabindex="-1">
-        <img src="/logos/zapier.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/zapier.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Zapier</span>
       </a>
       <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-hidden="true" tabindex="-1">
-        <img src="/logos/claude.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/claude.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Claude</span>
       </a>
       <a class="logo-item" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer" data-tool="Claude Code" data-tip="Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations." aria-hidden="true" tabindex="-1">
-        <img src="/logos/claude-code.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/claude-code.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Claude Code</span>
       </a>
       <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-hidden="true" tabindex="-1">
-        <img src="/logos/openai.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/openai.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">OpenAI</span>
       </a>
       <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-hidden="true" tabindex="-1">
-        <img src="/logos/apollo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/apollo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Apollo</span>
       </a>
       <a class="logo-item" href="https://www.smartlead.ai/" target="_blank" rel="noopener noreferrer" data-tool="Smartlead" data-tip="Cold email sequencing and inbox management. Home of my 45 day sequences." aria-hidden="true" tabindex="-1">
-        <img src="/logos/smartlead.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/smartlead.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Smartlead</span>
       </a>
       <a class="logo-item" href="https://instantly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Instantly" data-tip="Cold email sending and sequencing at scale." aria-hidden="true" tabindex="-1">
-        <img src="/logos/instantly.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/instantly.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Instantly</span>
       </a>
       <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-hidden="true" tabindex="-1">
-        <img src="/logos/heyreach.jpg" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/heyreach.jpg" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HeyReach</span>
       </a>
       <a class="logo-item" href="https://www.gong.io/" target="_blank" rel="noopener noreferrer" data-tool="Gong" data-tip="Call recording and conversation intelligence for deal reviews." aria-hidden="true" tabindex="-1">
-        <img src="/logos/gong.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/gong.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Gong</span>
       </a>
       <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-hidden="true" tabindex="-1">
-        <img src="/logos/linkedin.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/linkedin.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">LinkedIn</span>
       </a>
       <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-hidden="true" tabindex="-1">
-        <img src="/logos/slack.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/slack.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Slack</span>
       </a>
       <a class="logo-item" href="https://tagmanager.google.com/" target="_blank" rel="noopener noreferrer" data-tool="Google Tag Manager" data-tip="Conversion tracking with HubSpot forms, set up for clients." aria-hidden="true" tabindex="-1">
-        <img src="/logos/google-tag-manager.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/google-tag-manager.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Google Tag Manager</span>
       </a>
       <a class="logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-tool="GitHub" data-tip="Where my code and this site live." aria-hidden="true" tabindex="-1">
-        <img src="/logos/github.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/github.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">GitHub</span>
       </a>
       <a class="logo-item" href="https://vercel.com/" target="_blank" rel="noopener noreferrer" data-tool="Vercel" data-tip="Hosts this site, deployed from GitHub." aria-hidden="true" tabindex="-1">
-        <img src="/logos/vercel.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/vercel.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Vercel</span>
       </a>
       <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-hidden="true" tabindex="-1">
-        <img src="/logos/prospeo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/prospeo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Prospeo</span>
       </a>
       <a class="logo-item" href="https://ai-ark.com/" target="_blank" rel="noopener noreferrer" data-tool="AI Ark" data-tip="AI search for building lead and company lists that match an ICP." aria-hidden="true" tabindex="-1">
-        <img src="/logos/ai-ark.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/ai-ark.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">AI Ark</span>
       </a>
       <a class="logo-item" href="https://www.hypertide.io/" target="_blank" rel="noopener noreferrer" data-tool="Hypertide" data-tip="Cold email infrastructure: sending domains and inboxes set up for deliverability." aria-hidden="true" tabindex="-1">
-        <img src="/logos/hypertide.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/hypertide.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Hypertide</span>
       </a>
       <a class="logo-item" href="https://www.trellus.ai/" target="_blank" rel="noopener noreferrer" data-tool="Trellus" data-tip="AI auto dialer that runs calls inside the CRM or sales engagement tool." aria-hidden="true" tabindex="-1">
-        <img src="/logos/trellus.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/trellus.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Trellus</span>
       </a>
       <a class="logo-item" href="https://www.getwhitewhale.com/" target="_blank" rel="noopener noreferrer" data-tool="WhiteWhale" data-tip="Custom buying signals on target accounts, from news, filings and job posts, each with a source." aria-hidden="true" tabindex="-1">
-        <img src="/logos/whitewhale.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/whitewhale.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">WhiteWhale</span>
       </a>
       <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-hidden="true" tabindex="-1">
-        <img src="/logos/rb2b.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <img decoding="async" src="/logos/rb2b.png" alt="" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">RB2B</span>
       </a>
     </div>
@@ -5839,7 +5827,7 @@ html.legal-open { overflow: hidden; }
 
     const ctx = canvas.getContext('2d');
     let W, H, particles = [], mouse = { x: -9999, y: -9999 };
-    const COUNT = 90, CONNECT = 115, MOUSE_R = 160;
+    const COUNT = 45, CONNECT = 140, MOUSE_R = 160;
     const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
 
     function resize() {
@@ -5905,16 +5893,14 @@ html.legal-open { overflow: hidden; }
     }, { threshold: 0 });
     observer.observe(canvas);
 
-    // Track tab focus state
-    window.addEventListener('focus', () => { isTabFocused = true; });
-    window.addEventListener('blur', () => { isTabFocused = false; });
+    // Pause fully (no idle loop) when hero is off-screen or the tab is hidden
+    const canRun = () => isCanvasVisible && !document.hidden;
+    const resume = () => { if (canRun() && animationFrameId === null) animationFrameId = requestAnimationFrame(draw); };
+    document.addEventListener('visibilitychange', resume);
+    new IntersectionObserver(es => { es.forEach(e => { isCanvasVisible = e.isIntersecting; }); resume(); }, { threshold: 0 }).observe(canvas);
 
     function draw() {
-      // Only render if canvas is visible AND tab is focused
-      if (!isCanvasVisible || !isTabFocused) {
-        animationFrameId = requestAnimationFrame(draw);
-        return;
-      }
+      if (!canRun()) { animationFrameId = null; return; }
 
       ctx.clearRect(0, 0, W, H);
       const base = isDark() ? '251,191,36' : '217,119,6';
@@ -6136,6 +6122,20 @@ html.legal-open { overflow: hidden; }
     if (!el.hasAttribute('aria-hidden')) { el.addEventListener('focus', function () { show(el); }); el.addEventListener('blur', hide); }
   });
   window.addEventListener('scroll', hide, { passive: true });
+})();
+</script>
+<script>
+(function(){
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  let inView = true;
+  const apply = () => {
+    const run = inView && !document.hidden;
+    hero.classList.toggle('hero-paused', !run);
+    hero.querySelectorAll('svg').forEach(s => { try { run ? s.unpauseAnimations() : s.pauseAnimations(); } catch(e){} });
+  };
+  new IntersectionObserver(es => { inView = es[0].isIntersecting; apply(); }, { threshold: 0 }).observe(hero);
+  document.addEventListener('visibilitychange', apply);
 })();
 </script>
 </body>
