@@ -4603,9 +4603,9 @@ html.legal-open { overflow: hidden; }
         <path class="arch-line" d="M840 133 L860 133" stroke="#c2622a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow2)"/>
 
         <!-- Data packets -->
-        <circle class="data-packet p1" cy="133" r="5.5" fill="#d97706" opacity="0"/>
-        <circle class="data-packet p2" cy="133" r="5.5" fill="#d97706" opacity="0"/>
-        <circle class="data-packet p3" cy="133" r="5" fill="#c2622a" opacity="0"/>
+        <circle class="data-packet p1" cy="133" r="7" fill="#d97706" opacity="0"/>
+        <circle class="data-packet p2" cy="133" r="7" fill="#d97706" opacity="0"/>
+        <circle class="data-packet p3" cy="133" r="6.5" fill="#c2622a" opacity="0"/>
 
         <!-- Layer 1: Signal Ingestion -->
         <g class="arch-node" data-label="01 Signal Ingestion">
@@ -5768,7 +5768,7 @@ html.legal-open { overflow: hidden; }
   (function() {
     const svg = document.querySelector('.arch-svg');
     if (!svg) return;
-    const paths = [{ x: 20, x2: 440 }, { x: 230, x2: 440 }, { x: 660, x2: 880 }];
+    const paths = [{ x: 20, x2: 524 }, { x: 230, x2: 524 }, { x: 640, x2: 1050 }];
     svg.querySelectorAll('.data-packet').forEach((pkt, i) => {
       const p = paths[i] || paths[0]; let prog = 0, run = false;
       const spd = 0.6 + i * 0.15;
