@@ -3887,6 +3887,14 @@ to {
 }
 
 /* ═══════════════════════════════════════════════
+   ARCHITECTURE SECTION — LARGER (29 Oct 2026)
+   ═══════════════════════════════════════════════ */
+.arch-divider { padding: 4.5rem var(--sp-section-h) 5rem; }
+.arch-divider .container { max-width: 1280px; }
+.arch-label { font-size: 0.9rem; letter-spacing: 0.14em; margin-bottom: 0.5rem; }
+.arch-divider .arch-svg { margin: 0 auto; padding: 0; overflow: visible; }
+
+/* ═══════════════════════════════════════════════
    AGENTIC ENGINE — ORGANIC ANIMATIONS
    ═══════════════════════════════════════════════ */
 
@@ -4581,7 +4589,7 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="arch-label">The GTM architecture at a glance — signal to closed deal</div>
     <div class="arch-interactive">
-      <svg class="arch-svg" viewBox="0 0 1060 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GTM architecture flow: 5 layers from signal to closed revenue">
+      <svg class="arch-svg" viewBox="0 0 1130 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GTM architecture flow: 5 layers from signal to closed revenue">
         <defs>
           <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#d97706"/></marker>
           <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c2622a"/></marker>
@@ -4589,77 +4597,82 @@ html.legal-open { overflow: hidden; }
         </defs>
 
         <!-- Animated connection lines -->
-        <path class="arch-line" d="M160 90 L205 90" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-        <path class="arch-line" d="M365 90 L410 90" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-        <path class="arch-line" d="M565 90 L610 90" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-        <path class="arch-line" d="M770 90 L815 90" stroke="#c2622a" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow2)"/>
+        <path class="arch-line" d="M188 133 L208 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+        <path class="arch-line" d="M398 133 L418 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+        <path class="arch-line" d="M630 133 L650 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+        <path class="arch-line" d="M840 133 L860 133" stroke="#c2622a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow2)"/>
 
         <!-- Data packets -->
-        <circle class="data-packet p1" cy="90" r="4.5" fill="#d97706" opacity="0"/>
-        <circle class="data-packet p2" cy="90" r="4.5" fill="#d97706" opacity="0"/>
-        <circle class="data-packet p3" cy="90" r="4" fill="#c2622a" opacity="0"/>
+        <circle class="data-packet p1" cy="133" r="7" fill="#d97706" opacity="0"/>
+        <circle class="data-packet p2" cy="133" r="7" fill="#d97706" opacity="0"/>
+        <circle class="data-packet p3" cy="133" r="6.5" fill="#c2622a" opacity="0"/>
 
         <!-- Layer 1: Signal Ingestion -->
         <g class="arch-node" data-label="01 Signal Ingestion">
-          <rect x="5" y="60" width="155" height="62" rx="10" fill="#f9f6ee" stroke="#d97706" stroke-width="1.5"/>
-          <rect x="5" y="60" width="155" height="4" rx="2" fill="#d97706" opacity="0.4"/>
-          <text x="82" y="79" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#6b6758" letter-spacing="0.07em">01 · SIGNAL INGESTION</text>
-          <text x="82" y="96" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" font-weight="400" fill="#1c1a14">Clay · 6sense · ZoomInfo</text>
-          <text x="82" y="111" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">ZoomInfo · LinkedIn · Apollo</text>
+          <rect x="2" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#d97706" stroke-width="1.8"/>
+          <rect x="2" y="70" width="182" height="5" rx="2.5" fill="#d97706" opacity="0.4"/>
+          <text x="93.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">01 · SIGNAL INGESTION</text>
+          <text x="93.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#1c1a14">Clay · 6sense · ZoomInfo</text>
+          <text x="93.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">ZoomInfo · LinkedIn</text>
+          <text x="93.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Apollo</text>
         </g>
 
         <!-- Layer 2: Enrichment & ICP -->
         <g class="arch-node" data-label="02 Enrichment &amp; ICP Scoring">
-          <rect x="205" y="60" width="160" height="62" rx="10" fill="#f9f6ee" stroke="#d97706" stroke-width="1.5"/>
-          <rect x="205" y="60" width="160" height="4" rx="2" fill="#d97706" opacity="0.4"/>
-          <text x="285" y="79" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#6b6758" letter-spacing="0.07em">02 · ENRICHMENT & ICP</text>
-          <text x="285" y="96" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" font-weight="400" fill="#1c1a14">Clay · Apollo · Lusha</text>
-          <text x="285" y="111" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">Hunter.io · Apollo · ICP scoring</text>
+          <rect x="212" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#d97706" stroke-width="1.8"/>
+          <rect x="212" y="70" width="182" height="5" rx="2.5" fill="#d97706" opacity="0.4"/>
+          <text x="303.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">02 · ENRICHMENT &amp; ICP</text>
+          <text x="303.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#1c1a14">Clay · Apollo · Lusha</text>
+          <text x="303.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Hunter.io · Apollo</text>
+          <text x="303.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">ICP scoring</text>
         </g>
 
         <!-- Layer 3: Orchestration (anchor) -->
         <g class="arch-node arch-anchor" data-label="03 Workflow Orchestration">
-          <rect x="410" y="44" width="155" height="92" rx="10" fill="#1c1a14" stroke="#d97706" stroke-width="1.5" filter="url(#glow)"/>
-          <rect x="410" y="44" width="155" height="4" rx="2" fill="#d97706" opacity="0.8"/>
-          <text x="487" y="68" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#fbbf24" letter-spacing="0.07em">03 · ORCHESTRATION</text>
-          <text x="487" y="87" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" font-weight="400" fill="#f9f6ee">n8n · Make.com · Zapier</text>
-          <text x="487" y="104" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-weight="400" fill="rgba(249,246,238,0.60)">Claude Code · Python</text>
-          <text x="487" y="120" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="400" fill="rgba(249,246,238,0.40)">Trigger logic · routing · CRM sync</text>
-          <circle class="pulse-ring" cx="487" cy="90" r="55" fill="none" stroke="#d97706" stroke-width="1" opacity="0"/>
+          <rect x="422" y="50" width="204" height="166" rx="12" fill="#1c1a14" stroke="#d97706" stroke-width="1.8" filter="url(#glow)"/>
+          <rect x="422" y="50" width="204" height="5" rx="2.5" fill="#d97706" opacity="0.8"/>
+          <text x="524.0" y="80" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#fbbf24" letter-spacing="0.07em">03 · ORCHESTRATION</text>
+          <text x="524.0" y="108" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#f9f6ee">n8n · Make.com · Zapier</text>
+          <text x="524.0" y="136" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14.5" font-weight="400" fill="rgba(249,246,238,0.62)">Claude Code · Python</text>
+          <text x="524.0" y="156" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="12.5" font-weight="400" fill="rgba(249,246,238,0.5)">Trigger logic · routing</text>
+          <text x="524.0" y="176" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="12.5" font-weight="400" fill="rgba(249,246,238,0.5)">CRM sync</text>
+          <circle class="pulse-ring" cx="524" cy="133" r="70" fill="none" stroke="#d97706" stroke-width="1" opacity="0"/>
         </g>
 
         <!-- Layer 4: AI Outreach -->
         <g class="arch-node" data-label="04 AI-Personalised Outreach">
-          <rect x="610" y="60" width="160" height="62" rx="10" fill="#f9f6ee" stroke="#c2622a" stroke-width="1.5"/>
-          <rect x="610" y="60" width="160" height="4" rx="2" fill="#c2622a" opacity="0.4"/>
-          <text x="690" y="79" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#6b6758" letter-spacing="0.07em">04 · AI OUTREACH</text>
-          <text x="690" y="96" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" font-weight="400" fill="#1c1a14">Claude · OpenAI · Twain.ai</text>
-          <text x="690" y="111" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">HeyReach · Smartlead · Instantly</text>
+          <rect x="654" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#c2622a" stroke-width="1.8"/>
+          <rect x="654" y="70" width="182" height="5" rx="2.5" fill="#c2622a" opacity="0.4"/>
+          <text x="745.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#6b6758" letter-spacing="0.07em">04 · AI OUTREACH</text>
+          <text x="745.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#1c1a14">Claude · OpenAI · Twain.ai</text>
+          <text x="745.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">HeyReach · Smartlead</text>
+          <text x="745.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">Instantly</text>
         </g>
 
         <!-- Layer 5: CRM -->
         <g class="arch-node" data-label="05 CRM &amp; Pipeline">
-          <rect x="815" y="60" width="155" height="62" rx="10" fill="#0f766e" stroke="#0d9488" stroke-width="1.5"/>
-          <rect x="815" y="60" width="155" height="4" rx="2" fill="#0d9488" opacity="0.7"/>
-          <text x="892" y="79" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#99f6e4" letter-spacing="0.07em">05 · CRM & PIPELINE</text>
-          <text x="892" y="96" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12.5" font-weight="400" fill="#f9f6ee">HubSpot · Salesforce</text>
-          <text x="892" y="111" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="rgba(249,246,238,0.60)">Gong · LinkedIn Sales Navigator</text>
+          <rect x="864" y="70" width="182" height="126" rx="12" fill="#0f766e" stroke="#0d9488" stroke-width="1.8"/>
+          <rect x="864" y="70" width="182" height="5" rx="2.5" fill="#0d9488" opacity="0.7"/>
+          <text x="955.0" y="100" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11" font-weight="600" fill="#99f6e4" letter-spacing="0.07em">05 · CRM &amp; PIPELINE</text>
+          <text x="955.0" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="16" font-weight="500" fill="#f9f6ee">HubSpot · Salesforce</text>
+          <text x="955.0" y="154" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.62)">Gong · LinkedIn</text>
+          <text x="955.0" y="174" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.62)">Sales Navigator</text>
         </g>
 
         <!-- Output arrow + label -->
-        <path d="M970 90 L1005 90" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow2)"/>
-        <text x="1030" y="87" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-weight="400" fill="#0f766e">Closed</text>
-        <text x="1030" y="101" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="#0f766e">revenue.</text>
+        <path d="M1048 133 L1070 133" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow2)"/>
+        <text x="1102" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500" fill="#0f766e">Closed</text>
+        <text x="1102" y="146" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-style="italic" fill="#0f766e">revenue.</text>
 
         <!-- Attribution layer -->
-        <path d="M487 136 L487 158" stroke="#d97706" stroke-width="1" stroke-dasharray="3 2"/>
-        <rect x="385" y="158" width="205" height="20" rx="6" fill="rgba(217,119,6,0.07)" stroke="rgba(217,119,6,0.18)" stroke-width="1"/>
-        <text x="487" y="172" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="9" font-weight="400" fill="#6b6758">↑ Google Tag Manager · HubSpot forms: attribution</text>
+        <path d="M524 220 L524 244" stroke="#d97706" stroke-width="1.4" stroke-dasharray="3 2"/>
+        <rect x="372" y="244" width="304" height="32" rx="8" fill="rgba(217,119,6,0.07)" stroke="rgba(217,119,6,0.22)" stroke-width="1"/>
+        <text x="524" y="265" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="#6b6758">↑ Google Tag Manager · HubSpot forms: attribution</text>
 
         <!-- Tooltip -->
         <g class="arch-tooltip" id="archTooltip" opacity="0" pointer-events="none">
-          <rect x="380" y="6" width="215" height="26" rx="6" fill="rgba(28,26,20,0.92)"/>
-          <text id="archTooltipText" x="487" y="23" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="10.5" font-weight="400" fill="#f9f6ee">Hover a layer</text>
+          <rect x="400" y="4" width="250" height="34" rx="8" fill="rgba(28,26,20,0.92)"/>
+          <text id="archTooltipText" x="525" y="26" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="14" font-weight="400" fill="#f9f6ee">Hover a layer</text>
         </g>
       </svg>
     </div>
@@ -5755,7 +5768,7 @@ html.legal-open { overflow: hidden; }
   (function() {
     const svg = document.querySelector('.arch-svg');
     if (!svg) return;
-    const paths = [{ x: 10, x2: 540 }, { x: 195, x2: 540 }, { x: 585, x2: 920 }];
+    const paths = [{ x: 20, x2: 524 }, { x: 230, x2: 524 }, { x: 640, x2: 1050 }];
     svg.querySelectorAll('.data-packet').forEach((pkt, i) => {
       const p = paths[i] || paths[0]; let prog = 0, run = false;
       const spd = 0.6 + i * 0.15;
