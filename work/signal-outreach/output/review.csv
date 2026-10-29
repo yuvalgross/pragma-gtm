@@ -1,0 +1,19 @@
+contact_id,email,signal,problems,subject,step1
+con-008,ali@company-h.example,content: a free webinar on pipeline hygiene (10 days),step1: spam word 'free',your post,"Hi Ali,
+
+Read your post on a free webinar on pipeline hygiene. That is the exact problem we work on.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval"
+con-011,clara@company-j.example,hiring: a growth marketer (8 days),"email is risky (catch all), confirm before sending",your hiring plan,"Hi Clara,
+
+Saw Synthetic Company J is hiring a growth marketer. New hires usually spend their first month working out who owns which lead.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval"

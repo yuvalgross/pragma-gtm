@@ -1,0 +1,11 @@
+contact_id,email,stage,reason
+con-007,nora@company-g.example,signal,"nurture, no signal in the last 45 days"
+con-010,ben@company-i.example,signal,"nurture, signal score 1 below 2"
+con-012,max@company-k.example,gate,"title 'Office Manager' matches no persona, check by hand"
+con-013,ida@company-l.example,signal,"nurture, signal score 1.5 below 2"
+con-015,kim@customer-one.example,gate,existing customer
+con-016,ron@open-deal-two.example,gate,"open deal, owned by an AE"
+con-017,ana@company-n.example,gate,"contacted 12 days ago, cooldown is 30"
+con-018,jan@company-o.example,gate,opted out
+con-019,eli@company-p.example,gate,email status invalid
+con-020,dan@gmail.com,gate,personal email

@@ -1,0 +1,21 @@
+contact_id,first_name,title,email,company_name,domain,country,timezone,headcount,crm_status,last_contacted_days,opted_out,email_status,signals
+con-001,Lena,Head of Revenue Operations,lena@company-a.example,Synthetic Company A,company-a.example,DE,Europe/Berlin,140,none,,no,valid,hiring|9|a first RevOps analyst;tech_change|30|moved from Pipedrive to HubSpot
+con-002,Tom,VP Sales,tom@company-b.example,Synthetic Company B,company-b.example,NL,Europe/Amsterdam,220,none,,no,valid,funding|21|Series B in October
+con-003,Sara,Founder and CEO,sara@company-c.example,Synthetic Company C,company-c.example,AT,Europe/Vienna,18,none,,no,valid,content|6|leads waiting over the weekend
+con-004,Jonas,Revenue Operations Manager,jonas@company-d.example,Synthetic Company D,company-d.example,DE,Europe/Berlin,90,none,,no,valid,tech_change|11|moved from Salesforce to HubSpot
+con-005,Mia,Head of Marketing,mia@company-e.example,Synthetic Company E,company-e.example,GB,Europe/London,60,none,,no,valid,event|4|the exhibitor list for a Berlin SaaS conference
+con-006,Paul,Sales Director,paul@company-f.example,Synthetic Company F,company-f.example,CH,Europe/Zurich,310,none,,no,valid,hiring|13|three account executives
+con-007,Nora,Chief Revenue Officer,nora@company-g.example,Synthetic Company G,company-g.example,SE,Europe/Stockholm,400,none,,no,valid,funding|60|Series A last year;event|80|a sponsor slot at a fintech summit
+con-008,Ali,Marketing Director,ali@company-h.example,Synthetic Company H,company-h.example,FR,Europe/Paris,75,none,,no,valid,content|10|a free webinar on pipeline hygiene
+con-009,Eva,VP Revenue Operations,eva@company-b.example,Synthetic Company B,company-b.example,NL,Europe/Amsterdam,220,none,,no,valid,hiring|17|a RevOps lead
+con-010,Ben,Co founder,ben@company-i.example,Synthetic Company I,company-i.example,DE,Europe/Berlin,12,none,,no,valid,funding|35|a pre seed round
+con-011,Clara,Head of Growth,clara@company-j.example,Synthetic Company J,company-j.example,ES,Europe/Madrid,45,none,,no,risky,hiring|8|a growth marketer
+con-012,Max,Office Manager,max@company-k.example,Synthetic Company K,company-k.example,DE,Europe/Berlin,30,none,,no,valid,hiring|5|a sales assistant
+con-013,Ida,Head of Sales,ida@company-l.example,Synthetic Company L,company-l.example,DK,Europe/Copenhagen,150,none,,no,valid,tech_change|40|added a scheduling tool to their demo page
+con-014,Leo,Revenue Operations Lead,leo@company-m.example,Synthetic Company M,company-m.example,IE,Europe/Dublin,260,none,,no,valid,event|12|the speaker list for a RevOps meetup;hiring|20|a sales ops analyst
+con-015,Kim,VP Sales,kim@customer-one.example,Customer One,customer-one.example,GB,Europe/London,500,customer,,no,valid,hiring|3|two SDRs
+con-016,Ron,Head of RevOps,ron@open-deal-two.example,Open Deal Two,open-deal-two.example,DE,Europe/Berlin,80,open_deal,,no,valid,funding|10|Series A
+con-017,Ana,Sales Director,ana@company-n.example,Synthetic Company N,company-n.example,PT,Europe/Lisbon,70,none,12,no,valid,hiring|6|a sales manager
+con-018,Jan,VP Marketing,jan@company-o.example,Synthetic Company O,company-o.example,BE,Europe/Brussels,120,none,,yes,valid,event|7|a sponsor slot at a SaaS summit
+con-019,Eli,Head of Sales,eli@company-p.example,Synthetic Company P,company-p.example,PL,Europe/Warsaw,95,none,,no,invalid,hiring|9|an SDR team lead
+con-020,Dan,Founder,dan@gmail.com,,gmail.com,DE,Europe/Berlin,0,none,,no,valid,content|4|outbound reply rates

@@ -1,0 +1,34 @@
+{
+  "run_date": "2026-10-29",
+  "input": "contacts_synthetic.csv",
+  "contacts_in": 20,
+  "ready": 8,
+  "review": 2,
+  "held_at_gate": 7,
+  "held_no_signal": 3,
+  "first_send_day": "2026-11-02",
+  "send_days": [
+    "2026-11-02",
+    "2026-11-03"
+  ],
+  "rules": {
+    "cooldown_days": 30,
+    "max_signal_age": 45,
+    "min_signal_score": 2.0,
+    "daily_cap": 30,
+    "per_company_per_day": 1,
+    "send_at_local": "08:30",
+    "follow_up_business_days": [
+      3,
+      8
+    ],
+    "max_words_step1": 90,
+    "signal_weights": {
+      "hiring": 3,
+      "tech_change": 3,
+      "funding": 2,
+      "event": 2,
+      "content": 2
+    }
+  }
+}
