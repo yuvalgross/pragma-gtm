@@ -5201,7 +5201,7 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="section-label">Work samples</div>
     <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
-    <p class="work-intro">One tool, end to end, with the data, the rules and the limits all on the page.</p>
+    <p class="work-intro">Two tools, end to end, with the data, the rules and the limits all on the page.</p>
     <article class="work-card fade-up">
       <div>
         <h3>Signup router</h3>
@@ -5219,6 +5219,24 @@ html.legal-open { overflow: hidden; }
         <span class="exp-tag">Python</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing logic</span><span class="exp-tag">Synthetic data</span>
       </div>
       <a class="work-link" href="/work/signup-router/">Read the write up and source &rarr;</a>
+    </article>
+    <article class="work-card fade-up" style="margin-top:1.5rem">
+      <div>
+        <h3>Signal outreach</h3>
+        <p class="work-sub">Write from the reason to reach out, and send nothing without one.</p>
+      </div>
+      <p>A Python script that takes an enriched contact list, removes duplicates and bad data, holds back opt outs, customers, open deals, recent touches and bad emails, picks each contact's freshest buying signal, writes a three step sequence from it, checks the copy for length, spam words and phrasing that reads as automated, and schedules it at 08:30 in each contact's time zone, one person per company per day and 20 per mailbox. 17 tests check the rules on every run. Built in October 2026 as a portfolio sample; every contact and signal is invented.</p>
+      <ul class="work-facts" aria-label="Result of the sample run">
+        <li><strong>119</strong><span>contacts in</span></li>
+        <li><strong>78</strong><span>held, cleaned out or sent to nurture</span></li>
+        <li><strong>3</strong><span>stopped by the copy check</span></li>
+        <li><strong>38</strong><span>sequences ready to import</span></li>
+      </ul>
+      <p class="work-limits">Runs on synthetic data, no real people or companies. The Clay enrichment and the n8n step that pushes sequences into a sequencer are designed, not running.</p>
+      <div class="exp-tags" style="margin-top:0">
+        <span class="exp-tag">Python</span><span class="exp-tag">Signal based outbound</span><span class="exp-tag">Copy QA</span><span class="exp-tag">Tests</span><span class="exp-tag">Send scheduling</span>
+      </div>
+      <a class="work-link" href="/work/signal-outreach/">Read the write up and source &rarr;</a>
     </article>
   </div>
 </section>
