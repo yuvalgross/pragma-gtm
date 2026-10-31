@@ -7,14 +7,25 @@
   },
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "www.pragma-gtm.com"
         }
       ],
-      "destination": "https://pragma-gtm.com/:path*",
+      "destination": "https://pragma-gtm.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.pragma-gtm.com"
+        }
+      ],
+      "destination": "https://pragma-gtm.com/:path+",
       "permanent": true
     }
   ],
