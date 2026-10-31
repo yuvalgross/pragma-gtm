@@ -18,14 +18,14 @@
       "permanent": true
     },
     {
-      "source": "/:path+",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.pragma-gtm.com"
         }
       ],
-      "destination": "https://pragma-gtm.com/:path+",
+      "destination": "https://pragma-gtm.com/$1",
       "permanent": true
     }
   ],
