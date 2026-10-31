@@ -5,6 +5,19 @@
   "env": {
     "VERCEL_ENV": "production"
   },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.pragma-gtm.com"
+        }
+      ],
+      "destination": "https://pragma-gtm.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/robots.txt",
