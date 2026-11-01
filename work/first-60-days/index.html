@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First 60 days with a new client · Yuval Gross</title>
+<meta name="description" content="How I would spend the first 60 days with a B2B client that has product market fit, about 50 inbound leads a month and no outbound data. Timeline, phases, metrics.">
+<meta property="og:title" content="First 60 days with a new client · Yuval Gross">
+<meta property="og:description" content="Fix inbound first, warm the domains on day one, launch outbound on day 30, scale or kill on day 60.">
+<meta property="og:url" content="https://pragma-gtm.com/work/first-60-days/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/first-60-days/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .origin { background: var(--panel); border: 1px solid var(--line); padding: 14px 18px; font-size: 15.5px; max-width: none; color: var(--muted); }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+
+  .plan { display: grid; gap: 18px; margin-top: 6px; }
+  .phase { background: var(--panel); border: 1px solid var(--line); padding: 18px 20px; display: grid; grid-template-columns: 110px 1fr; gap: 6px 22px; min-width: 0; }
+  .phase .days { font-family: var(--serif); font-size: 26px; line-height: 1.1; color: var(--accent); }
+  .phase h3 { margin: 0 0 6px; font-size: 18px; font-weight: 500; }
+  .phase p { margin: 0 0 8px; font-size: 16px; max-width: none; }
+  .phase .get { color: var(--muted); font-size: 15px; }
+  .phase .get b { font-weight: 500; color: var(--ink); }
+  .tl { width: 100%; height: auto; display: block; margin-top: 8px; background: var(--panel); border: 1px solid var(--line); }
+  .tl text { font-family: var(--sans); fill: var(--ink); }
+  .tl .q { fill: var(--muted); }
+  .tl .grid { stroke: var(--line); }
+  .tl .bar { fill: var(--page-2); stroke: var(--muted); }
+  .tl .bar.hot { fill: var(--accent-soft); stroke: var(--accent); }
+  .tl .gate { stroke: var(--accent); }
+  .tl .lab { font-size: 12px; fill: var(--ink); }
+  @media (max-width: 560px) { .phase { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Plan</p>
+    <h1>The first 60 days with a new client: <em>fix inbound, then earn the right to go outbound.</em></h1>
+    <p class="lead">The brief: a B2B company with product market fit, about 50 inbound leads a month and no outbound data. This is how I would spend the first 60 days, in order, with what the client gets at each step.</p>
+    <p class="origin">Written in November 2026 as a case answer. The targets are assumptions I would agree with the client in week one, not promises. The order comes from the OEB build described at the bottom.</p>
+  </header>
+
+  <section aria-labelledby="short">
+    <h2 id="short">The short version</h2>
+    <p>Start with the 50 leads the client already has. They tell me who buys, and getting to them faster is the first win. Outbound starts on day 30, once I know the buyer, have a list worth sending to and the domains are warm. By day 60 each segment either gets more budget or gets cut.</p>
+    <svg class="tl" viewBox="0 0 760 330" role="img" aria-label="Five phases over 60 days, outbound live on day 30" xmlns="http://www.w3.org/2000/svg">
+<text x="24" y="30" font-size="15" font-weight="500">Outbound goes live on day 30, once inbound and the data are fixed</text>
+<line class="grid" x1="236" x2="236" y1="70" y2="310"/>
+<text class="q" x="236" y="62" font-size="11.5" text-anchor="middle">Start</text>
+<line class="grid" x1="316" x2="316" y1="70" y2="310"/>
+<text class="q" x="316" y="62" font-size="11.5" text-anchor="middle">Day 10</text>
+<line class="grid" x1="396" x2="396" y1="70" y2="310"/>
+<text class="q" x="396" y="62" font-size="11.5" text-anchor="middle">Day 20</text>
+<line class="grid" x1="476" x2="476" y1="70" y2="310"/>
+<text class="q" x="476" y="62" font-size="11.5" text-anchor="middle">Day 30</text>
+<line class="grid" x1="556" x2="556" y1="70" y2="310"/>
+<text class="q" x="556" y="62" font-size="11.5" text-anchor="middle">Day 40</text>
+<line class="grid" x1="636" x2="636" y1="70" y2="310"/>
+<text class="q" x="636" y="62" font-size="11.5" text-anchor="middle">Day 50</text>
+<line class="grid" x1="716" x2="716" y1="70" y2="310"/>
+<text class="q" x="716" y="62" font-size="11.5" text-anchor="middle">Day 60</text>
+<line class="gate" x1="476" x2="476" y1="70" y2="310" stroke-width="1.25" stroke-dasharray="4 4"/>
+<text class="lab" x="484" y="86" font-weight="500">Outbound live</text>
+<rect class="bar" x="244" y="98" width="72" height="20" rx="6" stroke-width="1.25"/>
+<text class="lab" x="280" y="112" text-anchor="middle" font-size="11.5">1 to 10</text>
+<text x="24" y="106" font-size="13" font-weight="500">Learn the buyer</text>
+<text class="q" x="24" y="121" font-size="11.5">ICP signed off, domains warming</text>
+<rect class="bar" x="316" y="142" width="80" height="20" rx="6" stroke-width="1.25"/>
+<text class="lab" x="356" y="156" text-anchor="middle" font-size="11.5">10 to 20</text>
+<text x="24" y="150" font-size="13" font-weight="500">Fix inbound follow up</text>
+<text class="q" x="24" y="165" font-size="11.5">Enrich, score, route, AE notes</text>
+<rect class="bar" x="356" y="186" width="120" height="20" rx="6" stroke-width="1.25"/>
+<text class="lab" x="416" y="200" text-anchor="middle" font-size="11.5">15 to 30</text>
+<text x="24" y="194" font-size="13" font-weight="500">Build the list</text>
+<text class="q" x="24" y="209" font-size="11.5">2 to 3 segments, one signal each</text>
+<rect class="bar hot" x="476" y="230" width="120" height="20" rx="6" stroke-width="1.25"/>
+<text class="lab" x="536" y="244" text-anchor="middle" font-size="11.5">30 to 45</text>
+<text x="24" y="238" font-size="13" font-weight="500">Run the outbound pilot</text>
+<text class="q" x="24" y="253" font-size="11.5">100 contact test, then 300 to 500 per segment</text>
+<rect class="bar" x="596" y="274" width="120" height="20" rx="6" stroke-width="1.25"/>
+<text class="lab" x="656" y="288" text-anchor="middle" font-size="11.5">45 to 60</text>
+<text x="24" y="282" font-size="13" font-weight="500">Keep, cut, hand over</text>
+<text class="q" x="24" y="297" font-size="11.5">Day 60 review, upsell, playbook</text>
+</svg>
+    <p class="note">The phases overlap on purpose. The list gets built while inbound is being fixed, so nothing waits that doesn't have to.</p>
+  </section>
+
+  <section aria-labelledby="phases">
+    <h2 id="phases">Phase by phase</h2>
+    <div class="plan">
+      <div class="phase"><div class="days">1 to 10</div><div><h3>Learn the buyer</h3><p>Sit down with whoever owns sales, go through the best customers and the last few months of inbound, enrich it all in Clay and find what the buyers have in common. Buy and warm the sending domains on day one; that takes two to three weeks and can't be rushed. Audit the CRM before I automate anything on top of it. At OEB that audit found broken stage criteria, miswired fields and duplicates; fixing them saved 3 hours a week and cut churn 8%.</p><p class="get"><b>You get:</b> a one page ICP to sign off.</p></div></div>
+      <div class="phase"><div class="days">10 to 20</div><div><h3>Fix inbound</h3><p>New leads get enriched, scored and routed in minutes. The AE gets a short note before each call: who they are, what probably hurts, a line to open with. Hot ones ping Slack.</p><p class="get"><b>You get:</b> faster follow up on leads you already pay for, and a baseline.</p></div></div>
+      <div class="phase"><div class="days">15 to 30</div><div><h3>Build the list</h3><p>Two or three segments from the ICP, each with one signal that says "now": a hire, a round, a new leader, a tool change. Map the buying committee, score on fit plus signal, only touch what clears the bar. Gate first, score second. The gate removes who we should never contact; the score ranks the rest. I learned that the hard way: my first OEB model skipped the gate and let too much through.</p><p class="get"><b>You get:</b> sized segments with a reason behind each.</p></div></div>
+      <div class="phase"><div class="days">30 to 45</div><div><h3>Run the pilot</h3><p>Before any volume, a 100 contact test per segment to check the scoring and the copy. Then one sequence per segment, email and LinkedIn, 300 to 500 contacts each so the numbers mean something. Claude drafts the opener from the signal, a person checks it before it goes out. Every meeting is tagged by segment and signal.</p><p class="get"><b>You get:</b> a weekly report: replies, meetings, cost per meeting.</p></div></div>
+      <div class="phase"><div class="days">45 to 60</div><div><h3>Decide</h3><p>Keep what books meetings at a sane cost, drop the rest, try one new angle. Score existing customers for upsell. Write it up with a short video per workflow so your team can run it without me.</p><p class="get"><b>You get:</b> a day 60 review and the plan for the next 30.</p></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="measure">
+    <h2 id="measure">How I'd measure it</h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Metrics and why they matter">
+    <table style="min-width:0">
+      <thead><tr><th>What</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Inbound lead to first touch</td><td>The first win, visible in week 2</td></tr>
+        <tr><td>Reply and positive reply rate per segment</td><td>Tells us where to add volume</td></tr>
+        <tr><td>Meetings booked and held</td><td>Booked is not held, I count both</td></tr>
+        <tr><td>Cost per meeting</td><td>Tool and data spend over meetings</td></tr>
+        <tr><td>Signal vs generic meetings</td><td>Proves the signals earn their place</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:12px">Targets get set with the client in week one, once I know the deal size and the sales cycle.</p>
+  </section>
+
+  <section aria-labelledby="why">
+    <h2 id="why">Why this <em>order</em></h2>
+    <p>It's the order I used at OEB. Start from who already bought, score before you send, pilot small, then roll out. The engine ran six weeks on one event before the group adopted it; 20 salespeople run on it now. Signal deals close at 40% against 12% without one, and it books 13 meetings a month at $27 in tools each.</p>
+    <p>Two of the building blocks are on this site with their code: the <a href="/work/signup-router/">signup router</a> that gates and scores inbound, and the <a href="/work/signal-outreach/">signal outreach tool</a> that writes from the buying signal.</p>
+  </section>
+
+  <footer>
+    <span>Yuval Gross</span>
+    <a href="/">pragma-gtm.com</a>
+    <a href="mailto:contact@pragma-gtm.com">contact@pragma-gtm.com</a>
+    <a href="https://www.linkedin.com/in/yuvalgross">LinkedIn</a>
+  </footer>
+</main>
+</body>
+</html>
