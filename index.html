@@ -4162,6 +4162,26 @@ html.legal-open { overflow: hidden; }
   .consent-btn { transition: none; }
 }
 .hero-paused, .hero-paused *, .hero-paused *::before, .hero-paused *::after { animation-play-state: paused !important; }
+/* Funnel spine: dots centred on the line at every width, closing block visible */
+.funnel-wrap { --fp: 2rem; --fb: 2px; }
+@media (max-width: 768px) { .funnel-wrap { --fp: 0.75rem; --fb: 1.5px; } }
+.funnel-layer::before { left: calc(-1 * (var(--fp) + var(--fb)) - 7px + var(--fb) / 2); }
+.funnel-output::before { left: calc(-1 * (var(--fp) + var(--fb)) - 9px + var(--fb) / 2); }
+/* Alignment fixes: heading gap, word spacing, skill lists, Work samples inset */
+.h2-reveal br { display: none; }
+.reveal-text .word { margin-right: 0; }
+.exp-skill { align-items: flex-start; }
+.exp-skill::before { top: 0.62em; transform: none; }
+.exp-skill-name { text-align: left; line-height: 1.45; }
+@media (max-width: 768px) {
+  .exp-skill { flex-direction: row; gap: 10px; }
+  .work { padding: 3.5rem 1.25rem; }
+}
+@media (max-width: 480px) { .work { padding: 2.75rem 1rem; } }
+@media (max-width: 560px) {
+  .exp-lang-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; justify-items: center; }
+  .exp-lang-item { text-align: center; min-width: 0; }
+}
 </style>
 <script>
 (function(){try{var t=localStorage.getItem('pragma-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -4208,7 +4228,6 @@ html.legal-open { overflow: hidden; }
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#philosophy">Philosophy</a></li>
       <li><a href="#how">The system</a></li>
-      <li><a href="#results">Results</a></li>
       <li><a href="#samples">Samples</a></li>
       <li><a href="#stack">CV</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -4232,7 +4251,6 @@ html.legal-open { overflow: hidden; }
   <a href="#expertise" onclick="closeMenu()">Expertise</a>
   <a href="#philosophy" onclick="closeMenu()">Philosophy</a>
   <a href="#how" onclick="closeMenu()">The system</a>
-  <a href="#results" onclick="closeMenu()">Results</a>
   <a href="#samples" onclick="closeMenu()">Samples</a>
   <a href="#stack" onclick="closeMenu()">CV</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-nav-cta">Contact</a>
@@ -5184,53 +5202,6 @@ html.legal-open { overflow: hidden; }
   </div>
 </section>
 
-<!-- RESULTS -->
-<section class="results" id="results">
-  <div class="container">
-    <div class="section-label">Results</div>
-    <h2>Numbers from the <em>field.</em></h2>
-    <div class="results-grid">
-      <div class="result-card fade-up">
-        <div class="result-num">€390k</div>
-        <div class="result-label">Program revenue</div>
-        <p class="result-context">OEB Global Conference program revenue grew from €295k to €390k, with signal based outbound from ICP definition to closed contracts.</p>
-        <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,38 25,30 50,32 75,18 100,22 125,10 150,14 175,4 200,2" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,38 25,30 50,32 75,18 100,22 125,10 150,14 175,4 200,2 200,40" fill="rgba(217,119,6,0.07)"/></svg>
-      </div>
-      <div class="result-card fade-up">
-        <div class="result-num">42%</div>
-        <div class="result-label">MQL rate increase</div>
-        <p class="result-context">Trigger based workflows built on hiring and funding signals, so outreach lands at the moment, not on the calendar.</p>
-        <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,36 25,28 50,34 75,20 100,26 125,12 150,18 175,6 200,8" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,36 25,28 50,34 75,20 100,26 125,12 150,18 175,6 200,8 200,40" fill="rgba(217,119,6,0.07)"/></svg>
-      </div>
-      <div class="result-card fade-up">
-        <div class="result-num">100%</div>
-        <div class="result-label">Quota attainment</div>
-        <p class="result-context">100% of a €921k annual quota at CoachHub, across complex enterprise deals with several stakeholders.</p>
-        <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,30 40,28 80,24 120,20 160,16 200,2" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,30 40,28 80,24 120,20 160,16 200,2 200,40" fill="rgba(217,119,6,0.07)"/></svg>
-      </div>
-      <div class="result-card fade-up">
-        <div class="result-num">17%</div>
-        <div class="result-label">YoY opportunity growth</div>
-        <p class="result-context">Year over year growth in new EMEA opportunities at CoachHub.</p>
-        <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,36 30,32 60,28 90,22 120,18 160,10 200,4" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,36 30,32 60,28 90,22 120,18 160,10 200,4 200,40" fill="rgba(217,119,6,0.07)"/></svg>
-      </div>
-      <div class="result-card fade-up">
-        <div class="result-num">2.4x</div>
-        <div class="result-label">Revenue per rep</div>
-        <p class="result-context">At CoachHub I narrowed 500 unscored accounts to 15 Tier 1 targets with CRM scoring, and revenue per rep rose 2.4x.</p>
-        <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,38 20,36 50,30 70,28 100,18 130,14 160,8 200,2" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,38 20,36 50,30 70,28 100,18 130,14 160,8 200,2 200,40" fill="rgba(217,119,6,0.07)"/></svg>
-      </div>
-      <div class="result-card fade-up">
-        <div class="result-num">60%</div>
-        <div class="result-label">Less manual sales work</div>
-        <p class="result-context">Enrichment, scoring, and sequencing automated end to end, so reps spend time selling, not researching.</p>
-        <svg class="result-sparkline" viewBox="0 0 200 40" preserveAspectRatio="none"><polyline points="0,38 25,34 60,26 90,20 120,16 150,10 180,5 200,3" fill="none" stroke="rgba(217,119,6,0.35)" stroke-width="1.5"/><polyline points="0,40 0,38 25,34 60,26 90,20 120,16 150,10 180,5 200,3 200,40" fill="rgba(217,119,6,0.07)"/></svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- WORK SAMPLES -->
 <section class="work" id="samples" aria-labelledby="samplesHeading">
   <div class="container">
@@ -5454,7 +5425,6 @@ html.legal-open { overflow: hidden; }
     <li><a href="#expertise">Expertise</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#how">The system</a></li>
-    <li><a href="#results">Results</a></li>
     <li><a href="#samples">Samples</a></li>
     <li><a href="#stack">CV</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
@@ -5656,7 +5626,6 @@ html.legal-open { overflow: hidden; }
       { sel: '.hero',               color: 'rgba(217,119,6,0.07)', size: '60vw', x: '75%', y: '40%' },
       { sel: '#services',           color: 'rgba(217,119,6,0.05)', size: '50vw', x: '20%', y: '60%' },
       { sel: '.philosophy-section', color: 'rgba(194,98,42,0.06)', size: '55vw', x: '80%', y: '30%' },
-      { sel: '.results',            color: 'rgba(251,191,36,0.04)',size: '40vw', x: '50%', y: '50%' },
     ];
     orbs.forEach(({ sel, color, size, x, y }) => {
       const s = document.querySelector(sel);
@@ -5674,7 +5643,7 @@ html.legal-open { overflow: hidden; }
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up, .funnel-layer, .arch-svg, .tool-chip-lg, .phil-card, .problem-item').forEach(el => io.observe(el));
+  document.querySelectorAll('.fade-up, .funnel-layer, .funnel-output, .arch-svg, .tool-chip-lg, .phil-card, .problem-item').forEach(el => io.observe(el));
 
   /* MOBILE MENU */
   const menuBtn = document.querySelector('.mobile-menu-btn');
