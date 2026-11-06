@@ -1,6 +1,6 @@
 # Signup router
 
-Decides which product trial signups get a human this week and what that human does first. Built in October 2026 from an exercise I worked on. Company, product and customer names are removed and every input is synthetic.
+Decides which product trial signups get a human this week and what that human does first.
 
 ## Run it
 
