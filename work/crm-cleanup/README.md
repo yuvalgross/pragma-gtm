@@ -6,7 +6,7 @@ Four agents read a HubSpot export. Three clean it (duplicates, fields, owners). 
 
 ```
 python3 make_synthetic_crm.py                  # writes data/*.csv
-python3 crm_cleanup.py data --out output       # as of 2026-11-06 by default
+python3 crm_cleanup.py data --out output
 python3 -m unittest test_crm_cleanup           # 8 tests on the rules
 ```
 

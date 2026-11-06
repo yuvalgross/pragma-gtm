@@ -3,7 +3,7 @@ Signal outreach builder: turns an enriched contact list into a ready to import
 three step email sequence, written from each contact's freshest buying signal,
 and holds back everyone who should not get it.
 
-    python3 signal_outreach.py data/contacts_synthetic.csv --out output/ --start 2026-11-02
+    python3 signal_outreach.py data/contacts_synthetic.csv --out output/
 
 Pipeline
   1. Clean: lowercase emails, drop exact duplicates (an export joined twice),

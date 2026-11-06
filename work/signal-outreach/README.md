@@ -1,12 +1,12 @@
 # Signal outreach builder
 
-Turns an enriched contact list into a ready to import three step email sequence, written from each contact's freshest buying signal, and holds back everyone who should not get it. I built signal based outreach at OEB in March 2026. This is a public version of the approach, rewritten in October 2026 with its own code and synthetic data. Every contact, company and signal is invented.
+Turns an enriched contact list into a ready to import three step email sequence, written from each contact's freshest buying signal, and holds back everyone who should not get it. I built signal based outreach at OEB. This is a public version of the approach, rewritten with its own code and synthetic data. Every contact, company and signal is invented.
 
 ## Run it
 
 ```
 python3 make_synthetic_contacts.py                                   # writes data/contacts_synthetic.csv
-python3 signal_outreach.py data/contacts_synthetic.csv --out output --start 2026-11-02
+python3 signal_outreach.py data/contacts_synthetic.csv --out output
 python3 -m unittest test_signal_outreach.py                          # 17 tests
 ```
 
