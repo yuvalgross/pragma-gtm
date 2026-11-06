@@ -1,0 +1,215 @@
+{
+  "note": "Dry run. Nothing here has been sent.",
+  "updates": [
+    {
+      "tier": "approve",
+      "endpoint": "POST /crm/v3/objects/companies/batch/update",
+      "body": {
+        "inputs": [
+          {
+            "id": "c102",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c107",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c109",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c111",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c115",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c116",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c118",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "c204",
+            "properties": {
+              "hubspot_owner_id": "o7"
+            }
+          },
+          {
+            "id": "c210",
+            "properties": {
+              "hubspot_owner_id": "o7"
+            }
+          },
+          {
+            "id": "c214",
+            "properties": {
+              "hubspot_owner_id": "o7"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tier": "approve",
+      "endpoint": "POST /crm/v3/objects/deals/batch/update",
+      "body": {
+        "inputs": [
+          {
+            "id": "d02",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "d06",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "d07",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "d09",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          },
+          {
+            "id": "d12",
+            "properties": {
+              "hubspot_owner_id": "o1"
+            }
+          },
+          {
+            "id": "d19",
+            "properties": {
+              "hubspot_owner_id": "o7"
+            }
+          },
+          {
+            "id": "d20",
+            "properties": {
+              "hubspot_owner_id": "o6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tier": "auto",
+      "endpoint": "POST /crm/v3/objects/companies/batch/update",
+      "body": {
+        "inputs": [
+          {
+            "id": "c102",
+            "properties": {
+              "country": "Germany"
+            }
+          },
+          {
+            "id": "c104",
+            "properties": {
+              "country": "Netherlands"
+            }
+          },
+          {
+            "id": "c108",
+            "properties": {
+              "lifecyclestage": "customer"
+            }
+          },
+          {
+            "id": "c109",
+            "properties": {
+              "country": "Germany"
+            }
+          },
+          {
+            "id": "c110",
+            "properties": {
+              "country": "United Kingdom"
+            }
+          },
+          {
+            "id": "c112",
+            "properties": {
+              "country": "Germany"
+            }
+          },
+          {
+            "id": "c113",
+            "properties": {
+              "country": "United Kingdom"
+            }
+          },
+          {
+            "id": "c205",
+            "properties": {
+              "country": "United Kingdom"
+            }
+          },
+          {
+            "id": "c212",
+            "properties": {
+              "country": "Netherlands"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "merges": [
+    {
+      "endpoint": "POST /crm/v3/objects/companies/merge",
+      "body": {
+        "primaryObjectId": "c105",
+        "objectIdToMerge": "c106"
+      }
+    },
+    {
+      "endpoint": "POST /crm/v3/objects/companies/merge",
+      "body": {
+        "primaryObjectId": "c201",
+        "objectIdToMerge": "c202"
+      }
+    },
+    {
+      "endpoint": "POST /crm/v3/objects/contacts/merge",
+      "body": {
+        "primaryObjectId": "p06",
+        "objectIdToMerge": "p07"
+      }
+    },
+    {
+      "endpoint": "POST /crm/v3/objects/contacts/merge",
+      "body": {
+        "primaryObjectId": "p16",
+        "objectIdToMerge": "p17"
+      }
+    }
+  ]
+}

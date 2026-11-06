@@ -1532,6 +1532,8 @@ h2 em {
     flex-direction: column;
   }
 .work-grid .work-facts { grid-template-columns: repeat(2, 1fr); }
+.work-grid .work-card.wide { grid-column: 1 / -1; }
+.work-grid .work-card.wide .work-facts { grid-template-columns: repeat(4, 1fr); }
 .work-grid .work-link { align-self: flex-start; margin-top: auto; }
 @supports (grid-template-rows: subgrid) {
   /* both cards share row tracks, so titles, text, numbers and links line up across the pair */
@@ -1549,6 +1551,7 @@ h2 em {
 @media (max-width: 640px) {
   .work-card { padding: 1.4rem; }
   .work-facts { grid-template-columns: repeat(2, 1fr); }
+  .work-grid .work-card.wide .work-facts { grid-template-columns: repeat(2, 1fr); }
 }
 .cta-section {
     background: var(--paper-warm);
@@ -5207,8 +5210,26 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="section-label">Work samples</div>
     <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
-    <p class="work-intro">Two tools, end to end, with the data, the rules and the limits all on the page.</p>
+    <p class="work-intro">Three tools, end to end, with the data, the rules and the limits all on the page.</p>
     <div class="work-grid">
+    <article class="work-card wide fade-up">
+      <div>
+        <h3>CRM clean up</h3>
+        <p class="work-sub">Fix the records, then find who a human should call.</p>
+      </div>
+      <p>Four agents read a HubSpot export. Three clean it: duplicates, broken fields, records owned by people who left. The fourth reads the customer book and decides who gets an owner call this week and who an AI can look after, with the evidence for each. Nothing is written to the CRM until a person approves it. At OEB I fixed broken stage rules and duplicate records in HubSpot and automated the upkeep; this is a public version with its own code and synthetic data.</p>
+      <ul class="work-facts" aria-label="Result of the sample run">
+        <li><strong>47</strong><span>changes proposed, 9 safe to apply</span></li>
+        <li><strong>&euro;190k</strong><span>pipeline past its close date</span></li>
+        <li><strong>&euro;533k</strong><span>customer ARR with no active owner</span></li>
+        <li><strong>8 of 17</strong><span>customers to a human this week</span></li>
+      </ul>
+      <p class="work-limits">Synthetic CRM only. The Claude checks, the Slack approval and the step that writes to HubSpot are designed, not running.</p>
+      <div class="exp-tags" style="margin-top:0">
+        <span class="exp-tag">Python</span><span class="exp-tag">HubSpot</span><span class="exp-tag">CRM hygiene</span><span class="exp-tag">Agents</span><span class="exp-tag">Customer revenue</span><span class="exp-tag">Tests</span>
+      </div>
+      <a class="work-link" href="/work/crm-cleanup/">See the call list and the source &rarr;</a>
+    </article>
     <article class="work-card fade-up">
       <div>
         <h3>Signup router</h3>

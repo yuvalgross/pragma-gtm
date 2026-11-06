@@ -1,0 +1,25 @@
+contact_id,company_id,email,first_name,last_name,job_title,bounced
+p01,c101,ops.lead@synfleet.example,Ada,Example,Head of Operations,false
+p02,c101,it.lead@synfleet.example,Ben,Example,IT Lead,false
+p03,c102,cto@syngrid.example,Cara,Example,CTO,false
+p04,c103,head.data@synrail.example,Dan,Example,Head of Data,false
+p05,c104,coo@syncold.example,Eli,Example,COO,false
+p06,c105,iot@harborsensors.example,Fay,Example,IoT Manager,false
+p07,c106,IoT@HarborSensors.example,Fay,Example,,false
+p08,c107,product@synmeter.example,Gus,Example,Product Lead,false
+p09,c107,old.champion@synmeter.example,Hal,Example,Engineering Manager,true
+p10,c108,founder@synagri.example,Ida,Example,Founder,false
+p11,c109,fleet@synbike.example,Jon,Example,Fleet Manager,false
+p12,c110,ops@synvend.example,Kai,Example,Operations,false
+p13,c111,cto@synpark.example,Lea,Example,CTO,true
+p14,c112,hello@synpet.example,Max,Example,Founder,false
+p15,c113,admin@synalarm.example,Nia,Example,Admin,false
+p16,c201,procurement@synlogistics.example,Oli,Example,Procurement,false
+p17,c202,Procurement@SynLogistics.example,Oli,Example,Procurement Manager,false
+p18,c203,cto@nordwind.example,Pia,Example,CTO,false
+p19,c205,energy@acme-metering.example,Quinn,Example,Energy Manager,false
+p20,c207,ceo@syntank.example,Ria,Example,CEO,false
+p21,c211,partnerships@synev.example,Sam,Example,Partnerships,false
+p22,c212,it@syncontainer.example,Tom,Example,IT Manager,false
+p23,c213,ops@synfridge.example,Uma,Example,Operations,false
+p24,c119,buyer@syncranes.example,Vic,Example,Buyer,true

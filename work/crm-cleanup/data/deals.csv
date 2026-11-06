@@ -1,0 +1,23 @@
+deal_id,company_id,deal_name,stage,amount_eur,close_date,owner_id
+d01,c101,Fleet renewal 2026,closedwon,950000,2026-01-15,o6
+d02,c102,Grid expansion,closedwon,420000,2025-06-30,o8
+d03,c103,Rail data platform,closedwon,180000,2025-12-20,o6
+d04,c104,Cold chain rollout,closedwon,120000,2025-09-01,o6
+d05,c105,Harbor sensors year 1,closedwon,60000,2025-03-31,o3
+d06,c106,Harbor add on,closedwon,15000,2025-03-31,o4
+d07,c107,Smart meter pilot to rollout,closedwon,75000,2025-12-31,o4
+d08,c108,Agri track,closedwon,40000,2025-04-30,o3
+d09,c109,Bike share,closedwon,28000,2025-02-28,o5
+d10,c110,Vending,closedwon,15000,2025-07-31,o2
+d11,c201,Synthetic Logistics pilot,contractsent,85000,2026-07-31,o1
+d12,c202,Logistics inbound,appointmentscheduled,0,2026-12-15,o5
+d13,c203,Nordwind fleet,qualifiedtobuy,60000,2026-05-30,o7
+d14,c207,Tank level,presentationscheduled,30000,2026-12-20,o1
+d15,c208,Asset tag,decisionmakerboughtin,0,2026-06-15,o3
+d16,c211,EV charge,contractsent,110000,2026-11-28,o1
+d17,c212,Container track,qualifiedtobuy,45000,2026-03-31,o3
+d18,c213,Med fridge,appointmentscheduled,22000,2026-12-31,o1
+d19,c210,Smart lock,appointmentscheduled,0,2026-02-28,o4
+d20,c102,Grid phase 2,qualifiedtobuy,150000,2027-02-28,o8
+d21,c112,Pet tracker,closedwon,6000,2025-05-31,o1
+d22,c113,Alarm box,closedwon,3000,2025-03-15,o2

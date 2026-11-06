@@ -1,0 +1,37 @@
+{
+  "as_of": "2026-11-06",
+  "records_in": {
+    "companies": 33,
+    "deals": 22
+  },
+  "changes": 47,
+  "by_tier": {
+    "approve": 21,
+    "auto": 9,
+    "enrich": 6,
+    "owner_task": 8,
+    "review": 3
+  },
+  "by_agent": {
+    "duplicates": 6,
+    "fields": 24,
+    "owners": 17
+  },
+  "customers_in_book": 17,
+  "book_arr_eur": 1923142,
+  "arr_on_duplicate_records_eur": 15000,
+  "customer_arr_with_no_active_owner_eur": 532852,
+  "stale_open_pipeline_eur": 190000,
+  "human_calls": 8,
+  "arr_with_risk_signal_eur": 1216142,
+  "expansion_potential_eur": 150250,
+  "channels": {
+    "ai, human on reply": 7,
+    "ai, owner approves": 1,
+    "automated": 1,
+    "human": 8
+  },
+  "assumptions": {
+    "expansion_share_of_arr": 0.25
+  }
+}

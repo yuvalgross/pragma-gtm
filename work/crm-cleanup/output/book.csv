@@ -1,0 +1,18 @@
+company_id,name,arr_eur,tier,signal,eur_at_stake,channel,action,evidence
+c101,Synthetic Fleet Systems GmbH,950000,strategic,risk,950000,human,"Owner call this week, then a written save plan","usage down 29% in three months; renews in 70 days, last human contact 127 days ago"
+c103,Synthetic Rail Data Ltd,180000,strategic,risk,180000,human,"Owner call this week, then a written save plan","renews in 44 days, last human contact 158 days ago"
+c107,Synthetic Smart Meter Oy,75000,core,risk,75000,human,Owner call this week,"usage down 35% in three months; renews in 55 days, last human contact 176 days ago; Engineering Manager email bounces"
+c102,Synthetic Grid Energy AG,420000,strategic,expansion,105000,human,Owner call this week to scope the next tier,usage up 47% in three months; 470 of 500 seats used
+c104,Synthetic Cold Chain BV,120000,strategic,expansion,30000,human,Owner call this week to scope the next tier,usage up 48% in three months; 95 of 100 seats used
+c108,Synthetic Agri Track SAS,40000,core,expansion,10000,human,Owner call to scope the upgrade,usage up 65% in three months; 38 of 40 seats used
+c110,Synthetic Vending Ltd,15000,core,expansion,3750,human,Owner call to scope the upgrade,usage up 100% in three months; 18 of 20 seats used
+c109,Synthetic Bike Share GmbH,28000,core,quiet,0,human,Owner check in call,no human contact for 248 days
+c111,Synthetic Parking ApS,9000,long tail,risk,9000,"ai, human on reply","AI check in asking what changed, a human picks up any reply","usage down 44% in three months; renews in 86 days, no human contact on record; CTO email bounces"
+c114,Synthetic Water Sensor SL,1200,long tail,risk,1200,"ai, human on reply","AI check in asking what changed, a human picks up any reply",usage down 50% in three months
+c115,Synthetic Garden Pump BV,600,long tail,risk,600,"ai, human on reply","AI check in asking what changed, a human picks up any reply","renews in 34 days, no human contact on record"
+c116,Synthetic Beehive Monitor,240,long tail,risk,240,"ai, human on reply","AI check in asking what changed, a human picks up any reply","renews in 88 days, no human contact on record; usage up 120% in three months; 1 of 1 seats used"
+c117,Synthetic Kiosk Display,90,long tail,risk,90,"ai, human on reply","AI check in asking what changed, a human picks up any reply",usage down 20% in three months
+c118,Synthetic Hobby Drone,12,long tail,risk,12,"ai, human on reply","AI check in asking what changed, a human picks up any reply","usage down 100% in three months; renews in 24 days, no human contact on record"
+c112,Synthetic Pet Tracker GmbH,6000,long tail,expansion,1500,"ai, human on reply","AI upgrade offer, a human picks up any reply",usage up 133% in three months; 10 of 10 seats used
+c105,Harbor Sensors B.V.,75000,core,steady,0,"ai, owner approves","AI drafted check in, owner approves before it goes","ARR EUR 75,000 after merging the duplicate record (was EUR 60,000)"
+c113,Synthetic Alarm Box Ltd,3000,long tail,steady,0,automated,"Monthly usage summary email, no human",

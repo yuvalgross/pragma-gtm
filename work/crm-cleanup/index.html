@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRM clean up · Yuval Gross</title>
+<meta name="description" content="Four agents clean a HubSpot export, then turn the clean customer book into a list of who a human calls next. Code, data, rules and limits on the page. Synthetic data.">
+<meta property="og:title" content="CRM clean up · Yuval Gross">
+<meta property="og:description" content="Fix the records, then find the money already in them. Four CRM agents with their source and their limits.">
+<meta property="og:url" content="https://pragma-gtm.com/work/crm-cleanup/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/crm-cleanup/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+<style>
+  .figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 6px; }
+  .fig { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+  .fig strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.1; color: var(--accent); }
+  .fig span { font-size: 14.5px; color: var(--muted); }
+  table.narrow { min-width: 640px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>CRM clean up: fix the records, then <em>find the money already in them.</em></h1>
+    <p class="lead">Four agents read a HubSpot export. Three of them clean it: duplicates, broken fields, records owned by people who left. The fourth reads the clean customer book and decides who a human should call this week, who an AI can look after, and why. Nothing is written to the CRM until a person approves it.</p>
+  </header>
+
+  <section aria-labelledby="why">
+    <h2 id="why">Why start <em>inside</em> the CRM</h2>
+    <p>Most GTM engineering starts with outbound: more leads, more sequences. In a company that has run the same CRM for years, the bigger number is usually sitting in the customer base. The CRM is where that revenue lives, and it is also where the mess lives. Three things break when the records are wrong.</p>
+    <p><strong>The forecast.</strong> Open deals whose close date passed months ago still count as pipeline. <strong>The reports.</strong> One customer split across two records shows up at the smaller number, in the wrong segment, with the wrong owner. <strong>The book.</strong> Accounts owned by someone who left get no calls, so nobody notices the usage drop before the renewal.</p>
+    <p>Agents are good at the first pass: they read every record, every week, and never get bored. People stay in charge of anything that cannot be undone. Once the data is clean, the same records answer the question sales leaders actually ask: who should a human call next?</p>
+    <p>At OEB I fixed broken stage rules, wrongly wired fields and duplicate records in HubSpot and automated the upkeep. It saved 3 hours a week and churn went down 8%. This sample is a public version with its own code and synthetic data.</p>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="flow">
+      <div class="step"><b>1. Duplicates</b><span>Matches companies on a cleaned domain, then on a cleaned name with legal suffixes removed. Same domain goes to a batch approval. Same name without a shared domain goes to a person. The record with the deals is always kept.</span></div>
+      <div class="step"><b>2. Fields</b><span>One spelling per country, lifecycle stage that matches the deals, open deals past their close date, deals with no amount, missing industry, champions whose email now bounces.</span></div>
+      <div class="step"><b>3. Owners</b><span>Records owned by people who left, or by nobody. Customers go to account management, prospects to the active rep for the territory. No rule, no guess: it goes to a person.</span></div>
+      <div class="step"><b>4. Book</b><span>Every customer gets a tier by ARR and a signal from usage, seats, renewal date and the last time a human spoke to them. Tier and signal decide human or AI.</span></div>
+    </div>
+    <p style="margin-top:16px">Every change carries a tier. <code>auto</code> is reversible and logs the old value. <code>approve</code> is one batch sign off by the RevOps owner, used for merges (they cannot be undone) and owner changes (they move someone's book). <code>review</code> is one by one. <code>owner_task</code> goes to the deal owner. <code>enrich</code> goes to the enrichment queue. The script writes the change log and the HubSpot API calls; it never sends them.</p>
+  </section>
+
+  <section aria-labelledby="run">
+    <h2 id="run">Run output, 6 November 2026</h2>
+    <p>33 companies, 24 contacts and 22 deals in. The agents proposed 47 changes: 9 auto, 21 for batch approval, 3 for a person to decide, 8 tasks for deal owners and 6 for the enrichment queue.</p>
+    <div class="figs">
+      <div class="fig"><strong>€190,000</strong><span>open pipeline past its close date by more than 30 days</span></div>
+      <div class="fig"><strong>€532,852</strong><span>customer ARR owned by someone who left, or by nobody</span></div>
+      <div class="fig"><strong>€15,000</strong><span>ARR on a duplicate record; the account reports at €60,000 and is €75,000</span></div>
+      <div class="fig"><strong>8 of 17</strong><span>customers get a human this week; 9 are handled by AI or automation</span></div>
+    </div>
+
+    <h2 style="margin-top:34px">Who a human calls next</h2>
+    <p>Ranked by signal, risk first, then by ARR. Three accounts worth €1,205,000 together show a risk signal, and all three renew within 70 days. Four show room to grow.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Call list, scrolls sideways on small screens">
+    <table>
+      <thead><tr><th class="n">#</th><th>Account</th><th class="n">ARR</th><th>Signal</th><th>Evidence</th><th>Action</th></tr></thead>
+      <tbody>
+<tr class="hot"><td class="n">1</td><td class="acct">Synthetic Fleet Systems GmbH<span class="sub">strategic</span></td><td class="n">€950,000</td><td>risk</td><td>usage down 29% in three months; renews in 70 days, last human contact 127 days ago</td><td>Owner call this week, then a written save plan</td></tr>
+<tr class="hot"><td class="n">2</td><td class="acct">Synthetic Rail Data Ltd<span class="sub">strategic</span></td><td class="n">€180,000</td><td>risk</td><td>renews in 44 days, last human contact 158 days ago</td><td>Owner call this week, then a written save plan</td></tr>
+<tr class="hot"><td class="n">3</td><td class="acct">Synthetic Smart Meter Oy<span class="sub">core</span></td><td class="n">€75,000</td><td>risk</td><td>usage down 35% in three months; renews in 55 days, last human contact 176 days ago; Engineering Manager email bounces</td><td>Owner call this week</td></tr>
+<tr><td class="n">4</td><td class="acct">Synthetic Grid Energy AG<span class="sub">strategic</span></td><td class="n">€420,000</td><td>expansion</td><td>usage up 47% in three months; 470 of 500 seats used</td><td>Owner call this week to scope the next tier</td></tr>
+<tr><td class="n">5</td><td class="acct">Synthetic Cold Chain BV<span class="sub">strategic</span></td><td class="n">€120,000</td><td>expansion</td><td>usage up 48% in three months; 95 of 100 seats used</td><td>Owner call this week to scope the next tier</td></tr>
+<tr><td class="n">6</td><td class="acct">Synthetic Agri Track SAS<span class="sub">core</span></td><td class="n">€40,000</td><td>expansion</td><td>usage up 65% in three months; 38 of 40 seats used</td><td>Owner call to scope the upgrade</td></tr>
+<tr><td class="n">7</td><td class="acct">Synthetic Vending Ltd<span class="sub">core</span></td><td class="n">€15,000</td><td>expansion</td><td>usage up 100% in three months; 18 of 20 seats used</td><td>Owner call to scope the upgrade</td></tr>
+<tr><td class="n">8</td><td class="acct">Synthetic Bike Share GmbH<span class="sub">core</span></td><td class="n">€28,000</td><td>quiet</td><td>no human contact for 248 days</td><td>Owner check in call</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 style="margin-top:34px">What the AI looks after</h2>
+    <p>The long tail gets served instead of ignored. Small accounts with a signal get an AI written email that asks one question, and any reply goes to a human. Steady ones get a monthly usage summary.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="AI handled accounts, scrolls sideways on small screens">
+    <table class="narrow">
+      <thead><tr><th>Account</th><th class="n">ARR</th><th>Signal</th><th>Evidence</th><th>Action</th></tr></thead>
+      <tbody>
+<tr><td class="acct">Synthetic Parking ApS<span class="sub">long tail</span></td><td class="n">€9,000</td><td>risk</td><td>usage down 44% in three months; renews in 86 days, no human contact on record; CTO email bounces</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Water Sensor SL<span class="sub">long tail</span></td><td class="n">€1,200</td><td>risk</td><td>usage down 50% in three months</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Garden Pump BV<span class="sub">long tail</span></td><td class="n">€600</td><td>risk</td><td>renews in 34 days, no human contact on record</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Beehive Monitor<span class="sub">long tail</span></td><td class="n">€240</td><td>risk</td><td>renews in 88 days, no human contact on record; usage up 120% in three months; 1 of 1 seats used</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Kiosk Display<span class="sub">long tail</span></td><td class="n">€90</td><td>risk</td><td>usage down 20% in three months</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Hobby Drone<span class="sub">long tail</span></td><td class="n">€12</td><td>risk</td><td>usage down 100% in three months; renews in 24 days, no human contact on record</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Pet Tracker GmbH<span class="sub">long tail</span></td><td class="n">€6,000</td><td>expansion</td><td>usage up 133% in three months; 10 of 10 seats used</td><td>AI upgrade offer, a human picks up any reply</td></tr>
+<tr><td class="acct">Harbor Sensors B.V.<span class="sub">core</span></td><td class="n">€75,000</td><td>steady</td><td>ARR €75,000 after merging the duplicate record (was €60,000)</td><td>AI drafted check in, owner approves before it goes</td></tr>
+<tr><td class="acct">Synthetic Alarm Box Ltd<span class="sub">long tail</span></td><td class="n">€3,000</td><td>steady</td><td>no signal</td><td>Monthly usage summary email, no human</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 style="margin-top:34px">What it held back</h2>
+    <p>Three changes need a person. Two company pairs share a name but not a domain: one has no domain at all, and the other sits on two different domains, which can mean two legal entities. A third company says customer but has no won deal and no ARR; that is either a churned account or one that never closed, and only someone who knows the history can say which.</p>
+    <p class="note">Synthetic input. Every domain ends in <code>.example</code>. Company names, ARR, usage and dates are invented to exercise the rules and say nothing about real companies. Owner names are placeholders.</p>
+  </section>
+
+  <section aria-labelledby="split">
+    <h2 id="split">What gets AI and what <em>gets a human</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Human or AI rules">
+    <table class="narrow">
+      <thead><tr><th>Tier</th><th>ARR</th><th>With a risk or growth signal</th><th>With no signal</th></tr></thead>
+      <tbody>
+        <tr><td>Strategic</td><td>€100,000 and up</td><td>Owner call this week</td><td>Quarterly review, AI prepares the brief</td></tr>
+        <tr><td>Core</td><td>€10,000 to €100,000</td><td>Owner call this week</td><td>AI drafts a check in, the owner approves it; a human calls if nobody has spoken to them in 180 days</td></tr>
+        <tr><td>Long tail</td><td>under €10,000</td><td>AI email with one question, a human picks up any reply</td><td>Monthly usage summary, no human</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:14px">Risk means usage down 20% or more over three months, a renewal inside 90 days with no human contact for 60 days, or a contact whose email now bounces. Growth means usage up 30% or more, or 90% of seats in use while usage holds. The line between human and AI is money at stake, not how loud the customer is.</p>
+  </section>
+
+  <section aria-labelledby="money">
+    <h2 id="money">Where this moves <em>revenue</em></h2>
+    <dl>
+      <dt>Forecast</dt><dd>Stale deals leave the pipeline or get a real date. The forecast drops on paper and becomes something leadership can plan on.</dd>
+      <dt>Renewals</dt><dd>Risk shows up 60 to 90 days before the renewal, while there is still time for a call and a save plan, not on the day the customer gives notice.</dd>
+      <dt>Expansion</dt><dd>Accounts near their seat limit with rising usage get an owner call before they hit the ceiling. Across the book the run finds €150,250 of upsell, assuming an upsell adds a quarter of current ARR.</dd>
+      <dt>Long tail</dt><dd>Accounts nobody had time for get a regular touch at almost no cost, and the ones that answer reach a human.</dd>
+      <dt>Rep time</dt><dd>Reps stop cleaning data and looking things up. Each call arrives with the evidence written out, so the time goes to the conversation.</dd>
+    </dl>
+    <p style="margin-top:14px">How I would measure it: duplicates per 1,000 records, share of customer ARR with an active owner, share of strategic and core ARR with a human conversation in the last 90 days, and, the one that matters, renewal and expansion revenue from accounts that came off this list, compared with accounts of the same size that did not.</p>
+  </section>
+
+  <section aria-labelledby="rollout">
+    <h2 id="rollout">How I would roll it out in a <em>real</em> CRM</h2>
+    <dl>
+      <dt>Week 1</dt><dd>Read only. Run every agent, share the change log and the money figures with RevOps and sales leads, and agree the tiers and thresholds.</dd>
+      <dt>Week 2</dt><dd>Switch on the <code>auto</code> tier. Keep a copy of every old value so any change can be put back.</dd>
+      <dt>Week 3</dt><dd>First batch approval for merges and owner changes, reviewed in a 30 minute call. Name only matches start going through the Claude check, still with a person deciding.</dd>
+      <dt>Then</dt><dd>The book agent runs every Monday and posts the call list to each owner in Slack, with the evidence. The long tail emails start once the owners have read a week of drafts.</dd>
+      <dt>Salesforce</dt><dd>The same four agents work on Accounts, Contacts and Opportunities. Only the last step, the API calls, changes.</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="change">
+    <h2 id="change">What I would change <em>first</em></h2>
+    <p>One small account renews in 88 days with no contact on record, so it lands as a risk, but its usage is up 120% and its only seat is full. The email it gets asks what changed, when it should offer the next plan. Risk should not win automatically when growth is this clear. A second account sits on the 20% usage drop line exactly, which says the line needs a band, not a single number.</p>
+    <p>After a merge, the ARR field needs a check by hand: the two records held €60,000 and €15,000, and the tool counts €75,000, but which value HubSpot keeps depends on the property. And the 25% upsell figure is my assumption, not data; the first real run should replace it with the company's own expansion history.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>AI did</dt><dd>Claude Code wrote the scripts and the tests from my written rules for matching, tiers, thresholds and owner routing.</dd>
+      <dt>I did</dt><dd>Set the tiers and thresholds, decided what is auto and what needs approval, planted the mess in the synthetic data, and read every proposed change and every customer row against the input.</dd>
+      <dt>Not built</dt><dd>The Claude step that judges name only duplicates and the one that writes the long tail emails (both prompts are in the file), the enrichment for missing fields and bounced champions, the Slack approval and the step that sends the API calls. All designed, none running.</dd>
+      <dt>Tests</dt><dd>8 tests guard the rules that must never move: merges and owner changes are never auto, name only matches always go to a person, the record with the deals is always kept, no ARR is lost in a merge, strategic accounts always get a human.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_crm.py</code> then <code>python3 crm_cleanup.py data --out output</code>. Tests: <code>python3 -m unittest test_crm_cleanup</code>. Standard library only.</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="files">
+    <h2 id="files">Files</h2>
+    <div class="files">
+      <div><a href="crm_cleanup.py">crm_cleanup.py</a><small>The four agents, the tiers and the outputs.</small></div>
+      <div><a href="make_synthetic_crm.py">make_synthetic_crm.py</a><small>Builds the synthetic export with the mess planted.</small></div>
+      <div><a href="test_crm_cleanup.py">test_crm_cleanup.py</a><small>8 tests on the rules.</small></div>
+      <div><a href="data/companies.csv">companies.csv</a><small>33 companies. Also <a href="data/contacts.csv">contacts</a>, <a href="data/deals.csv">deals</a>, <a href="data/owners.csv">owners</a>.</small></div>
+      <div><a href="output/changes.csv">changes.csv</a><small>All 47 proposed changes with tier and reason.</small></div>
+      <div><a href="output/book.csv">book.csv</a><small>All 17 customers with tier, signal and action.</small></div>
+      <div><a href="output/hubspot_payloads.json">hubspot_payloads.json</a><small>The API calls a person would approve. Never sent.</small></div>
+      <div><a href="output/summary.json">summary.json</a><small>Counts and money figures.</small></div>
+      <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
+    </div>
+    <details>
+      <summary>Read crm_cleanup.py here</summary>
+      <pre><code>"""
+CRM clean up: four agents read a HubSpot export, fix what is safe to fix,
+queue what needs a person, and then turn the clean book of customers into a
+list of who a human should call next.
+
+    python3 crm_cleanup.py data --out output --as-of 2026-11-06
+
+Agents, in the order they run
+  1. Duplicates   companies and contacts that are the same thing twice
+  2. Fields       country, lifecycle stage, stale deals, missing data
+  3. Owners       records owned by people who left, or by nobody
+  4. Book         existing customers: risk, expansion, and who gets a human
+
+Every proposed change gets a tier. Nothing is written to the CRM by this
+script; it writes the change log and the API payloads, and a person approves.
+
+  auto        reversible, rule based, old value logged (country format, lifecycle
+              stage that contradicts a won deal)
+  approve     one batch approval by the RevOps owner per run (merges, which
+              cannot be undone, and owner changes, which move people's books)
+  review      one by one, a person decides (same name but no shared domain)
+  owner_task  goes to the record owner as a task (stale or empty deals)
+  enrich      goes to the enrichment queue (missing industry, bounced champion)
+
+Rules are set by hand at the top of this file. Standard library only.
+"""
+import argparse
+import csv
+import json
+import os
+import re
+from collections import defaultdict
+from datetime import date
+
+# ---- rules set by hand ------------------------------------------------------
+
+LEGAL_SUFFIXES = {"gmbh", "ag", "ltd", "bv", "oy", "sas", "sarl", "ab", "as", "aps", "sl", "inc", "llc", "plc", "se"}
+
+COUNTRIES = {
+    "de": "Germany", "deutschland": "Germany", "germany": "Germany",
+    "uk": "United Kingdom", "gb": "United Kingdom", "great britain": "United Kingdom",
+    "united kingdom": "United Kingdom",
+    "nl": "Netherlands", "holland": "Netherlands", "netherlands": "Netherlands",
+}
+
+TERRITORY = {
+    "Germany": "DACH", "Austria": "DACH", "Switzerland": "DACH",
+    "United Kingdom": "UKI", "Ireland": "UKI",
+    "Netherlands": "Benelux and France", "Belgium": "Benelux and France", "France": "Benelux and France",
+    "Sweden": "Nordics", "Norway": "Nordics", "Denmark": "Nordics", "Finland": "Nordics",
+}
+
+LIFECYCLE_RANK = {"customer": 3, "opportunity": 2, "lead": 1}
+OPEN_STAGES = {"appointmentscheduled", "qualifiedtobuy", "presentationscheduled",
+               "decisionmakerboughtin", "contractsent"}
+STALE_AFTER_DAYS = 30          # open deal whose close date passed more than this
+
+# Book of business
+TIER_STRATEGIC = 100000        # EUR ARR and up: a named owner, always a human
+TIER_CORE = 10000              # EUR ARR and up: a human when there is a signal
+RISK_USAGE_DROP = -0.20        # usage month 3 vs month 1
+RISK_RENEWAL_DAYS = 90         # renewal this close ...
+RISK_NO_TOUCH_DAYS = 60        # ... and nobody spoke to them for this long
+EXPANSION_USAGE_RISE = 0.30
+EXPANSION_SEAT_UTIL = 0.90
+QUIET_DAYS = 180               # core and strategic: no human contact for this long
+EXPANSION_SHARE = 0.25         # assumption: an upsell adds a quarter of current ARR
+
+# The LLM steps. Designed, not running in this sample: the rules below stand in
+# and anything they cannot decide goes to a person.
+DUPLICATE_JUDGE_PROMPT = """You are checking two CRM company records that share a
+name but not a domain. Using only the fields given and the public website of each
+domain, answer SAME, DIFFERENT or UNSURE, then one sentence of evidence. SAME only
+if both domains lead to the same legal entity. Never guess; UNSURE goes to a person."""
+
+LONG_TAIL_CHECKIN_PROMPT = """Write a three sentence email from the account team to a
+small customer. Use only these facts: product, usage trend, seats used, renewal date.
+Ask one question about what they are trying to do next. No discount, no pricing, no
+claims about features. If usage is falling, ask what changed. Plain text."""
+
+# ---- helpers ----------------------------------------------------------------
+
+
+def norm_domain(d):
+    d = (d or "").strip().lower()
+    d = re.sub(r"^https?://", "", d)
+    d = d.split("/")[0]
+    if d.startswith("www."):
+        d = d[4:]
+    return d
+
+
+def norm_name(n):
+    words = re.sub(r"[^a-z0-9 ]", "", (n or "").lower().replace(".", "")).split()
+    return " ".join(w for w in words if w not in LEGAL_SUFFIXES)
+
+
+def days_between(a, b):
+    return (b - a).days
+
+
+def parse_date(s):
+    return date.fromisoformat(s) if s else None
+
+
+def eur(x):
+    return f"EUR {x:,.0f}"
+
+
+def load(folder):
+    def rows(name):
+        with open(os.path.join(folder, name), newline="") as f:
+            return list(csv.DictReader(f))
+    owners = {o["owner_id"]: o for o in rows("owners.csv")}
+    companies = rows("companies.csv")
+    for c in companies:
+        for k in ("arr_eur", "usage_m1", "usage_m2", "usage_m3", "seats_used", "seats_limit"):
+            c[k] = int(c[k] or 0)
+    contacts = rows("contacts.csv")
+    deals = rows("deals.csv")
+    for d in deals:
+        d["amount_eur"] = int(d["amount_eur"] or 0)
+    return owners, companies, contacts, deals
+
+
+class Log:
+    def __init__(self):
+        self.rows = []
+
+    def add(self, agent, tier, obj, rid, name, field, old, new, reason):
+        self.rows.append({
+            "change_id": f"ch{len(self.rows) + 1:03d}", "agent": agent, "tier": tier, "object": obj,
+            "record_id": rid, "record_name": name, "field": field, "old": old, "new": new, "reason": reason,
+        })
+
+# ---- agent 1: duplicates ----------------------------------------------------
+
+
+def pick_primary(group, deal_count):
+    return sorted(group, key=lambda c: (-deal_count[c["company_id"]],
+                                        -LIFECYCLE_RANK.get(c["lifecycle_stage"], 0),
+                                        not norm_domain(c["domain"]), c["created"]))[0]
+
+
+def agent_duplicates(companies, contacts, deals, log):
+    deal_count = defaultdict(int)
+    for d in deals:
+        deal_count[d["company_id"]] += 1
+    merged_into = {}            # loser company_id -&gt; primary company_id (approve tier only)
+    seen_pairs = set()
+
+    by_domain = defaultdict(list)
+    for c in companies:
+        if norm_domain(c["domain"]):
+            by_domain[norm_domain(c["domain"])].append(c)
+    for dom, group in by_domain.items():
+        if len(group) &lt; 2:
+            continue
+        primary = pick_primary(group, deal_count)
+        for c in group:
+            if c is primary:
+                continue
+            reason = f"same domain {dom}"
+            if c["arr_eur"] and primary["arr_eur"]:
+                reason += (f"; ARR on both records ({eur(primary['arr_eur'])} + {eur(c['arr_eur'])}), "
+                           "reports show the account at the smaller figure; check the ARR field after the merge")
+            log.add("duplicates", "approve", "company", c["company_id"], c["name"], "merge",
+                    c["company_id"], primary["company_id"], reason)
+            merged_into[c["company_id"]] = primary["company_id"]
+            seen_pairs.add(frozenset((c["company_id"], primary["company_id"])))
+
+    by_name = defaultdict(list)
+    for c in companies:
+        by_name[norm_name(c["name"])].append(c)
+    for name, group in by_name.items():
+        if len(group) &lt; 2:
+            continue
+        primary = pick_primary(group, deal_count)
+        for c in group:
+            if c is primary or frozenset((c["company_id"], primary["company_id"])) in seen_pairs:
+                continue
+            if not norm_domain(c["domain"]) or not norm_domain(primary["domain"]):
+                reason = "same name, one record has no domain"
+            else:
+                reason = (f"same name on two domains ({norm_domain(primary['domain'])}, "
+                          f"{norm_domain(c['domain'])}); could be two legal entities")
+            log.add("duplicates", "review", "company", c["company_id"], c["name"], "merge",
+                    c["company_id"], primary["company_id"], reason)
+
+    by_email = defaultdict(list)
+    for p in contacts:
+        by_email[p["email"].strip().lower()].append(p)
+    for email, group in by_email.items():
+        if len(group) &lt; 2:
+            continue
+        group.sort(key=lambda p: (not p["job_title"], p["contact_id"]))
+        primary = group[0]
+        for p in group[1:]:
+            log.add("duplicates", "approve", "contact", p["contact_id"], email, "merge",
+                    p["contact_id"], primary["contact_id"], "same email in a different case")
+    return merged_into
+
+# ---- agent 2: fields --------------------------------------------------------
+
+
+def agent_fields(companies, contacts, deals, merged_into, as_of, log):
+    won = {d["company_id"] for d in deals if d["stage"] == "closedwon"}
+    for c in companies:
+        if c["company_id"] in merged_into:
+            continue
+        key = c["country"].strip().lower()
+        if key in COUNTRIES and COUNTRIES[key] != c["country"]:
+            log.add("fields", "auto", "company", c["company_id"], c["name"], "country",
+                    c["country"], COUNTRIES[key], "one spelling per country so territory rules and reports work")
+        clean = norm_domain(c["domain"])
+        if clean and clean != c["domain"]:
+            log.add("fields", "auto", "company", c["company_id"], c["name"], "domain",
+                    c["domain"], clean, "bare domain, no protocol or path")
+        if c["company_id"] in won and c["lifecycle_stage"] != "customer":
+            log.add("fields", "auto", "company", c["company_id"], c["name"], "lifecyclestage",
+                    c["lifecycle_stage"], "customer", "has a closed won deal")
+        if c["lifecycle_stage"] == "customer" and c["company_id"] not in won and not c["arr_eur"]:
+            log.add("fields", "review", "company", c["company_id"], c["name"], "lifecyclestage",
+                    "customer", "?", "says customer, no won deal and no ARR: churned, or never won?")
+        if not c["industry"]:
+            log.add("fields", "enrich", "company", c["company_id"], c["name"], "industry",
+                    "", "", "missing industry, needed for segment reports and routing")
+    company_name = {c["company_id"]: c["name"] for c in companies}
+    for p in contacts:
+        if p["bounced"] == "true" and p["company_id"] not in merged_into:
+            log.add("fields", "enrich", "contact", p["contact_id"], p["email"], "replacement",
+                    p["job_title"], "", f"email bounces at {company_name.get(p['company_id'], '?')}: "
+                    "the person likely left; find who replaced them")
+    for d in deals:
+        if d["stage"] not in OPEN_STAGES:
+            continue
+        close = parse_date(d["close_date"])
+        late = days_between(close, as_of) if close else 0
+        if late &gt; STALE_AFTER_DAYS:
+            money = f" ({eur(d['amount_eur'])} in the forecast)" if d["amount_eur"] else ""
+            log.add("fields", "owner_task", "deal", d["deal_id"], d["deal_name"], "close_date",
+                    d["close_date"], "", f"open deal, close date passed {late} days ago{money}: "
+                    "update the date or close it lost")
+        if not d["amount_eur"]:
+            log.add("fields", "owner_task", "deal", d["deal_id"], d["deal_name"], "amount",
+                    "0", "", "open deal with no amount, invisible in the forecast")
+
+# ---- agent 3: owners --------------------------------------------------------
+
+
+def agent_owners(companies, deals, owners, merged_into, log):
+    active = {k: o for k, o in owners.items() if o["active"] == "true"}
+    am = sorted(k for k, o in active.items() if o["role"] == "AM")[0]
+    ae_by_territory = {}
+    for k in sorted(active):
+        if active[k]["role"] == "AE":
+            ae_by_territory.setdefault(active[k]["territory"], k)
+
+    def new_owner(country, is_customer):
+        if is_customer:
+            return am, "customers go to account management"
+        country = COUNTRIES.get(country.strip().lower(), country)
+        t = TERRITORY.get(country)
+        if t and t in ae_by_territory:
+            return ae_by_territory[t], f"territory {t}"
+        return None, f"no active owner for {country}"
+
+    company = {c["company_id"]: c for c in companies}
+    for c in companies:
+        if c["company_id"] in merged_into:
+            continue
+        cur = c["owner_id"]
+        if cur and cur in active:
+            continue
+        why = "owner has left" if cur else "no owner"
+        to, rule = new_owner(c["country"], c["lifecycle_stage"] == "customer" or c["arr_eur"] &gt; 0)
+        tier = "approve" if to else "review"
+        log.add("owners", tier, "company", c["company_id"], c["name"], "hubspot_owner_id",
+                cur, to or "?", f"{why}; {rule}; {eur(c['arr_eur'])} ARR" if c["arr_eur"] else f"{why}; {rule}")
+    for d in deals:
+        if d["owner_id"] in active:
+            continue
+        cid = merged_into.get(d["company_id"], d["company_id"])
+        c = company[cid]
+        to, rule = new_owner(c["country"], c["lifecycle_stage"] == "customer" or c["arr_eur"] &gt; 0)
+        log.add("owners", "approve" if to else "review", "deal", d["deal_id"], d["deal_name"],
+                "hubspot_owner_id", d["owner_id"], to or "?", f"owner has left; {rule}")
+
+# ---- agent 4: book of business ----------------------------------------------
+
+
+def agent_book(companies, contacts, merged_into, as_of):
+    bounced = defaultdict(list)
+    for p in contacts:
+        if p["bounced"] == "true":
+            bounced[p["company_id"]].append(p["job_title"] or "contact")
+    arr = defaultdict(int)
+    for c in companies:
+        arr[merged_into.get(c["company_id"], c["company_id"])] += c["arr_eur"]
+    book = []
+    for c in companies:
+        cid = c["company_id"]
+        if cid in merged_into or not arr[cid]:
+            continue
+        a = arr[cid]
+        tier = "strategic" if a &gt;= TIER_STRATEGIC else "core" if a &gt;= TIER_CORE else "long tail"
+        change = (c["usage_m3"] - c["usage_m1"]) / c["usage_m1"] if c["usage_m1"] else 0.0
+        util = c["seats_used"] / c["seats_limit"] if c["seats_limit"] else 0.0
+        renewal = parse_date(c["renewal_date"])
+        to_renewal = days_between(as_of, renewal) if renewal else None
+        touch = parse_date(c["last_human_touch"])
+        since_touch = days_between(touch, as_of) if touch else None
+
+        risk, expand, why = [], [], []
+        if change &lt;= RISK_USAGE_DROP:
+            risk.append(f"usage down {abs(change):.0%} in three months")
+        if to_renewal is not None and to_renewal &lt;= RISK_RENEWAL_DAYS and (since_touch is None or since_touch &gt; RISK_NO_TOUCH_DAYS):
+            risk.append(f"renews in {to_renewal} days, " + ("no human contact on record" if since_touch is None
+                                                            else f"last human contact {since_touch} days ago"))
+        if bounced[cid]:
+            risk.append(f"{', '.join(bounced[cid])} email bounces")
+        if change &gt;= EXPANSION_USAGE_RISE:
+            expand.append(f"usage up {change:.0%} in three months")
+        if util &gt;= EXPANSION_SEAT_UTIL and change &gt; RISK_USAGE_DROP:
+            expand.append(f"{c['seats_used']} of {c['seats_limit']} seats used")
+        quiet = tier != "long tail" and (since_touch is None or since_touch &gt; QUIET_DAYS)
+        if a != c["arr_eur"]:
+            why.append(f"ARR {eur(a)} after merging the duplicate record (was {eur(c['arr_eur'])})")
+
+        if risk:
+            signal, stake = "risk", a
+        elif expand:
+            signal, stake = "expansion", round(a * EXPANSION_SHARE)
+        elif quiet:
+            signal, stake = "quiet", 0
+            why.append("no human contact on record" if since_touch is None else f"no human contact for {since_touch} days")
+        else:
+            signal, stake = "steady", 0
+
+        if tier == "strategic":
+            channel = "human"
+            action = {"risk": "Owner call this week, then a written save plan",
+                      "expansion": "Owner call this week to scope the next tier",
+                      "quiet": "Owner call, nobody has spoken to them in months",
+                      "steady": "Quarterly review, AI prepares the brief"}[signal]
+        elif tier == "core":
+            channel = "human" if signal in ("risk", "expansion", "quiet") else "ai, owner approves"
+            action = {"risk": "Owner call this week",
+                      "expansion": "Owner call to scope the upgrade",
+                      "quiet": "Owner check in call",
+                      "steady": "AI drafted check in, owner approves before it goes"}[signal]
+        else:
+            channel = "ai, human on reply" if signal in ("risk", "expansion") else "automated"
+            action = {"risk": "AI check in asking what changed, a human picks up any reply",
+                      "expansion": "AI upgrade offer, a human picks up any reply",
+                      "steady": "Monthly usage summary email, no human"}.get(signal, "Monthly usage summary email, no human")
+        book.append({
+            "company_id": cid, "name": c["name"], "arr_eur": a, "tier": tier, "signal": signal,
+            "eur_at_stake": stake, "channel": channel, "action": action,
+            "evidence": "; ".join(risk + expand + why),
+        })
+    order = {"risk": 0, "expansion": 1, "quiet": 2, "steady": 3}
+    book.sort(key=lambda r: (r["channel"] != "human", order[r["signal"]], -r["arr_eur"]))
+    return book
+
+# ---- outputs ----------------------------------------------------------------
+
+
+def payloads(log):
+    """The HubSpot CRM v3 calls a person approves. Built, never sent from here."""
+    plural = {"company": "companies", "contact": "contacts", "deal": "deals"}
+    batches = defaultdict(lambda: defaultdict(dict))
+    merges = []
+    for r in log.rows:
+        if r["field"] == "merge" and r["tier"] == "approve":
+            merges.append({"endpoint": f"POST /crm/v3/objects/{plural[r['object']]}/merge",
+                           "body": {"primaryObjectId": r["new"], "objectIdToMerge": r["old"]}})
+        elif r["tier"] in ("auto", "approve") and r["field"] != "merge":
+            batches[(r["tier"], r["object"])][r["record_id"]][r["field"]] = r["new"]
+    updates = []
+    for (tier, obj), recs in sorted(batches.items()):
+        updates.append({"tier": tier, "endpoint": f"POST /crm/v3/objects/{plural[obj]}/batch/update",
+                        "body": {"inputs": [{"id": k, "properties": v} for k, v in recs.items()]}})
+    return {"note": "Dry run. Nothing here has been sent.", "updates": updates, "merges": merges}
+
+
+def write_outputs(log, book, deals, companies, owners, out, as_of):
+    os.makedirs(out, exist_ok=True)
+    with open(os.path.join(out, "changes.csv"), "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(log.rows[0].keys()))
+        w.writeheader()
+        w.writerows(log.rows)
+    with open(os.path.join(out, "book.csv"), "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(book[0].keys()))
+        w.writeheader()
+        w.writerows(book)
+    with open(os.path.join(out, "hubspot_payloads.json"), "w") as f:
+        json.dump(payloads(log), f, indent=2)
+
+    tiers = defaultdict(int)
+    for r in log.rows:
+        tiers[r["tier"]] += 1
+    active = {k for k, o in owners.items() if o["active"] == "true"}
+    stale = [r for r in log.rows if r["object"] == "deal" and r["field"] == "close_date"]
+    stale_eur = sum(d["amount_eur"] for d in deals if d["deal_id"] in {r["record_id"] for r in stale})
+    hidden = sum(c["arr_eur"] for c in companies
+                 if any(r["record_id"] == c["company_id"] and r["field"] == "merge" and r["tier"] == "approve" for r in log.rows))
+    unowned = sum(r["arr_eur"] for r in book
+                  if next(c for c in companies if c["company_id"] == r["company_id"])["owner_id"] not in active)
+    calls = [r for r in book if r["channel"] == "human" and r["signal"] != "steady"]
+    summary = {
+        "as_of": as_of.isoformat(),
+        "records_in": {"companies": len(companies), "deals": len(deals)},
+        "changes": len(log.rows),
+        "by_tier": dict(sorted(tiers.items())),
+        "by_agent": {a: sum(1 for r in log.rows if r["agent"] == a) for a in ("duplicates", "fields", "owners")},
+        "customers_in_book": len(book),
+        "book_arr_eur": sum(r["arr_eur"] for r in book),
+        "arr_on_duplicate_records_eur": hidden,
+        "customer_arr_with_no_active_owner_eur": unowned,
+        "stale_open_pipeline_eur": stale_eur,
+        "human_calls": len(calls),
+        "arr_with_risk_signal_eur": sum(r["eur_at_stake"] for r in book if r["signal"] == "risk"),
+        "expansion_potential_eur": sum(r["eur_at_stake"] for r in book if r["signal"] == "expansion"),
+        "channels": {ch: sum(1 for r in book if r["channel"] == ch) for ch in sorted({r["channel"] for r in book})},
+        "assumptions": {"expansion_share_of_arr": EXPANSION_SHARE},
+    }
+    with open(os.path.join(out, "summary.json"), "w") as f:
+        json.dump(summary, f, indent=2)
+
+    lines = [f"# Who a human calls next, as of {as_of.isoformat()}", "",
+             "| # | Account | ARR | Signal | Evidence | Action |", "| --- | --- | --- | --- | --- | --- |"]
+    for i, r in enumerate(calls, start=1):
+        lines.append(f"| {i} | {r['name']} | {eur(r['arr_eur'])} | {r['signal']} | {r['evidence']} | {r['action']} |")
+    lines += ["", f"{len(log.rows)} changes proposed: " + ", ".join(f"{v} {k}" for k, v in sorted(tiers.items())) + "."]
+    with open(os.path.join(out, "call_list.md"), "w") as f:
+        f.write("\n".join(lines) + "\n")
+    print("\n".join(lines))
+    print(json.dumps(summary, indent=2))
+
+
+def run(folder, as_of):
+    owners, companies, contacts, deals = load(folder)
+    log = Log()
+    merged_into = agent_duplicates(companies, contacts, deals, log)
+    agent_fields(companies, contacts, deals, merged_into, as_of, log)
+    agent_owners(companies, deals, owners, merged_into, log)
+    book = agent_book(companies, contacts, merged_into, as_of)
+    return log, book, owners, companies, deals
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("data", help="folder with owners, companies, contacts and deals csv")
+    ap.add_argument("--out", default="output")
+    ap.add_argument("--as-of", default="2026-11-06")
+    a = ap.parse_args()
+    as_of = date.fromisoformat(a.as_of)
+    log, book, owners, companies, deals = run(a.data, as_of)
+    write_outputs(log, book, deals, companies, owners, a.out, as_of)
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+    </details>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>

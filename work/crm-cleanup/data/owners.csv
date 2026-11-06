@@ -1,0 +1,9 @@
+owner_id,name,role,territory,active
+o1,Owner One,AE,DACH,true
+o2,Owner Two,AE,UKI,true
+o3,Owner Three,AE,Benelux and France,true
+o4,Owner Four,AE,Nordics,false
+o5,Owner Five,AE,DACH,false
+o6,Owner Six,AM,All,true
+o7,Owner Seven,AE,Nordics,true
+o8,Owner Eight,AM,All,false

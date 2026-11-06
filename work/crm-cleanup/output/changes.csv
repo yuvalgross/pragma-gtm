@@ -1,0 +1,48 @@
+change_id,agent,tier,object,record_id,record_name,field,old,new,reason
+ch001,duplicates,approve,company,c106,Harbor Sensors,merge,c106,c105,"same domain harborsensors.example; ARR on both records (EUR 60,000 + EUR 15,000), reports show the account at the smaller figure; check the ARR field after the merge"
+ch002,duplicates,approve,company,c202,Synthetic Logistics,merge,c202,c201,same domain synlogistics.example
+ch003,duplicates,review,company,c204,Nordwind Fleet,merge,c204,c203,"same name, one record has no domain"
+ch004,duplicates,review,company,c206,ACME Metering,merge,c206,c205,"same name on two domains (acme-metering.example, acmemetering.example); could be two legal entities"
+ch005,duplicates,approve,contact,p07,iot@harborsensors.example,merge,p07,p06,same email in a different case
+ch006,duplicates,approve,contact,p17,procurement@synlogistics.example,merge,p17,p16,same email in a different case
+ch007,fields,auto,company,c102,Synthetic Grid Energy AG,country,DE,Germany,one spelling per country so territory rules and reports work
+ch008,fields,auto,company,c104,Synthetic Cold Chain BV,country,NL,Netherlands,one spelling per country so territory rules and reports work
+ch009,fields,auto,company,c108,Synthetic Agri Track SAS,lifecyclestage,opportunity,customer,has a closed won deal
+ch010,fields,auto,company,c109,Synthetic Bike Share GmbH,country,Deutschland,Germany,one spelling per country so territory rules and reports work
+ch011,fields,auto,company,c110,Synthetic Vending Ltd,country,UK,United Kingdom,one spelling per country so territory rules and reports work
+ch012,fields,auto,company,c112,Synthetic Pet Tracker GmbH,country,germany,Germany,one spelling per country so territory rules and reports work
+ch013,fields,auto,company,c113,Synthetic Alarm Box Ltd,country,Great Britain,United Kingdom,one spelling per country so territory rules and reports work
+ch014,fields,review,company,c119,Synthetic Port Cranes AB,lifecyclestage,customer,?,"says customer, no won deal and no ARR: churned, or never won?"
+ch015,fields,enrich,company,c204,Nordwind Fleet,industry,,,"missing industry, needed for segment reports and routing"
+ch016,fields,auto,company,c205,Acme Metering Ltd,country,UK,United Kingdom,one spelling per country so territory rules and reports work
+ch017,fields,enrich,company,c208,Synthetic Asset Tag SARL,industry,,,"missing industry, needed for segment reports and routing"
+ch018,fields,enrich,company,c210,Synthetic Smart Lock AS,industry,,,"missing industry, needed for segment reports and routing"
+ch019,fields,auto,company,c212,Synthetic Container Track BV,country,NL,Netherlands,one spelling per country so territory rules and reports work
+ch020,fields,enrich,contact,p09,old.champion@synmeter.example,replacement,Engineering Manager,,email bounces at Synthetic Smart Meter Oy: the person likely left; find who replaced them
+ch021,fields,enrich,contact,p13,cto@synpark.example,replacement,CTO,,email bounces at Synthetic Parking ApS: the person likely left; find who replaced them
+ch022,fields,enrich,contact,p24,buyer@syncranes.example,replacement,Buyer,,email bounces at Synthetic Port Cranes AB: the person likely left; find who replaced them
+ch023,fields,owner_task,deal,d11,Synthetic Logistics pilot,close_date,2026-07-31,,"open deal, close date passed 98 days ago (EUR 85,000 in the forecast): update the date or close it lost"
+ch024,fields,owner_task,deal,d12,Logistics inbound,amount,0,,"open deal with no amount, invisible in the forecast"
+ch025,fields,owner_task,deal,d13,Nordwind fleet,close_date,2026-05-30,,"open deal, close date passed 160 days ago (EUR 60,000 in the forecast): update the date or close it lost"
+ch026,fields,owner_task,deal,d15,Asset tag,close_date,2026-06-15,,"open deal, close date passed 144 days ago: update the date or close it lost"
+ch027,fields,owner_task,deal,d15,Asset tag,amount,0,,"open deal with no amount, invisible in the forecast"
+ch028,fields,owner_task,deal,d17,Container track,close_date,2026-03-31,,"open deal, close date passed 220 days ago (EUR 45,000 in the forecast): update the date or close it lost"
+ch029,fields,owner_task,deal,d19,Smart lock,close_date,2026-02-28,,"open deal, close date passed 251 days ago: update the date or close it lost"
+ch030,fields,owner_task,deal,d19,Smart lock,amount,0,,"open deal with no amount, invisible in the forecast"
+ch031,owners,approve,company,c102,Synthetic Grid Energy AG,hubspot_owner_id,o8,o6,"owner has left; customers go to account management; EUR 420,000 ARR"
+ch032,owners,approve,company,c107,Synthetic Smart Meter Oy,hubspot_owner_id,o4,o6,"owner has left; customers go to account management; EUR 75,000 ARR"
+ch033,owners,approve,company,c109,Synthetic Bike Share GmbH,hubspot_owner_id,,o6,"no owner; customers go to account management; EUR 28,000 ARR"
+ch034,owners,approve,company,c111,Synthetic Parking ApS,hubspot_owner_id,o4,o6,"owner has left; customers go to account management; EUR 9,000 ARR"
+ch035,owners,approve,company,c115,Synthetic Garden Pump BV,hubspot_owner_id,o5,o6,owner has left; customers go to account management; EUR 600 ARR
+ch036,owners,approve,company,c116,Synthetic Beehive Monitor,hubspot_owner_id,o5,o6,owner has left; customers go to account management; EUR 240 ARR
+ch037,owners,approve,company,c118,Synthetic Hobby Drone,hubspot_owner_id,,o6,no owner; customers go to account management; EUR 12 ARR
+ch038,owners,approve,company,c204,Nordwind Fleet,hubspot_owner_id,o4,o7,owner has left; territory Nordics
+ch039,owners,approve,company,c210,Synthetic Smart Lock AS,hubspot_owner_id,o4,o7,owner has left; territory Nordics
+ch040,owners,approve,company,c214,Synthetic Scooter Oy,hubspot_owner_id,o4,o7,owner has left; territory Nordics
+ch041,owners,approve,deal,d02,Grid expansion,hubspot_owner_id,o8,o6,owner has left; customers go to account management
+ch042,owners,approve,deal,d06,Harbor add on,hubspot_owner_id,o4,o6,owner has left; customers go to account management
+ch043,owners,approve,deal,d07,Smart meter pilot to rollout,hubspot_owner_id,o4,o6,owner has left; customers go to account management
+ch044,owners,approve,deal,d09,Bike share,hubspot_owner_id,o5,o6,owner has left; customers go to account management
+ch045,owners,approve,deal,d12,Logistics inbound,hubspot_owner_id,o5,o1,owner has left; territory DACH
+ch046,owners,approve,deal,d19,Smart lock,hubspot_owner_id,o4,o7,owner has left; territory Nordics
+ch047,owners,approve,deal,d20,Grid phase 2,hubspot_owner_id,o8,o6,owner has left; customers go to account management
