@@ -396,6 +396,16 @@ def write_outputs(log, book, deals, companies, owners, out, as_of):
         w.writerows(book)
     with open(os.path.join(out, "hubspot_payloads.json"), "w") as f:
         json.dump(payloads(log), f, indent=2)
+    # The enrich tier, keyed the way a Clay Audiences import matches records:
+    # domain for companies, email for people. Only these rows spend credits.
+    domain = {c["company_id"]: norm_domain(c["domain"]) for c in companies}
+    with open(os.path.join(out, "clay_enrich_queue.csv"), "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["record_id", "object", "match_key", "need", "reason"])
+        for r in log.rows:
+            if r["tier"] == "enrich":
+                key = domain.get(r["record_id"], "") if r["object"] == "company" else r["record_name"]
+                w.writerow([r["record_id"], r["object"], key, r["field"], r["reason"]])
 
     tiers = defaultdict(int)
     for r in log.rows:

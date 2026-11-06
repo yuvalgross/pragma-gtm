@@ -1,0 +1,7 @@
+record_id,object,match_key,need,reason
+c204,company,,industry,"missing industry, needed for segment reports and routing"
+c208,company,synasset.example,industry,"missing industry, needed for segment reports and routing"
+c210,company,synlock.example,industry,"missing industry, needed for segment reports and routing"
+p09,contact,old.champion@synmeter.example,replacement,email bounces at Synthetic Smart Meter Oy: the person likely left; find who replaced them
+p13,contact,cto@synpark.example,replacement,email bounces at Synthetic Parking ApS: the person likely left; find who replaced them
+p24,contact,buyer@syncranes.example,replacement,email bounces at Synthetic Port Cranes AB: the person likely left; find who replaced them

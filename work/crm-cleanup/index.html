@@ -120,7 +120,20 @@
       <div class="step"><b>3. Owners</b><span>Records owned by people who left, or by nobody. Customers go to account management, prospects to the active rep for the territory. No rule, no guess: it goes to a person.</span></div>
       <div class="step"><b>4. Book</b><span>Every customer gets a tier by ARR and a signal from usage, seats, renewal date and the last time a human spoke to them. Tier and signal decide human or AI.</span></div>
     </div>
-    <p style="margin-top:16px">Every change carries a tier. <code>auto</code> is reversible and logs the old value. <code>approve</code> is one batch sign off by the RevOps owner, used for merges (they cannot be undone) and owner changes (they move someone's book). <code>review</code> is one by one. <code>owner_task</code> goes to the deal owner. <code>enrich</code> goes to the enrichment queue. The script writes the change log and the HubSpot API calls; it never sends them.</p>
+    <p style="margin-top:16px">Every change carries a tier. <code>auto</code> is reversible and logs the old value. <code>approve</code> is one batch sign off by the RevOps owner, used for merges (they cannot be undone) and owner changes (they move someone's book). <code>review</code> is one by one. <code>owner_task</code> goes to the deal owner. <code>enrich</code> goes to the Clay enrichment queue. The script writes the change log and the HubSpot API calls; it never sends them.</p>
+  </section>
+
+  <section aria-labelledby="clay">
+    <h2 id="clay">Where Clay comes in: <em>Audiences and the CLI</em></h2>
+    <p>The agents clean the CRM. Clay keeps it clean afterwards, and the agents drive it from the terminal instead of the browser.</p>
+    <div class="flow">
+      <div class="step"><b>Audiences</b><span>One live profile per company and contact, built from the HubSpot import of companies, contacts and deals. It refreshes every 15 minutes on Enterprise and daily on Growth, so the book agent reads current data instead of last month's export.</span></div>
+      <div class="step"><b>Segments</b><span>The tiers on this page become saved segments: strategic accounts with a risk signal, core accounts near their seat limit, long tail renewing in 90 days. Filters can mix CRM fields, enrichment and signals.</span></div>
+      <div class="step"><b>Signals</b><span>A job change signal replaces the bounced email check: it catches the champion who left before the email bounces. Auto enrich fills a missing industry as soon as a new record enters a segment.</span></div>
+      <div class="step"><b>CLI and MCP</b><span>The Clay plugin is a CLI for scripted runs plus <code>clay mcp</code>, a local MCP server, so an agent in Claude Code calls Clay as one of its tools. It signs in with <code>clay login</code> or a <code>CLAY_API_KEY</code>.</span></div>
+    </div>
+    <p style="margin-top:16px"><strong>Two limits shape the design.</strong> Audiences imports from HubSpot but does not write back to it; that needs a Clay table with HubSpot actions, or the approved API calls this script already writes. And duplicates inside one CRM carry over into Audiences as they are, so the duplicate agent has to run first. That is the order here: clean in HubSpot, then let Clay watch and enrich.</p>
+    <p><strong>Credits.</strong> The agents decide what gets enriched, not a whole CRM sync. This run queues 6 records for Clay: 3 companies missing an industry and 3 contacts whose email bounces. They sit in <a href="output/clay_enrich_queue.csv">clay_enrich_queue.csv</a>, keyed by domain or email, the fields Audiences matches on. One company has no domain yet, so it waits for the duplicate review before it can be matched. In Clay itself: filter to the segment before enriching, test on 10 rows, set a credit budget.</p>
   </section>
 
   <section aria-labelledby="run">
@@ -208,7 +221,8 @@
       <dt>Week 1</dt><dd>Read only. Run every agent, share the change log and the money figures with RevOps and sales leads, and agree the tiers and thresholds.</dd>
       <dt>Week 2</dt><dd>Switch on the <code>auto</code> tier. Keep a copy of every old value so any change can be put back.</dd>
       <dt>Week 3</dt><dd>First batch approval for merges and owner changes, reviewed in a 30 minute call. Name only matches start going through the Claude check, still with a person deciding.</dd>
-      <dt>Then</dt><dd>The book agent runs every Monday and posts the call list to each owner in Slack, with the evidence. The long tail emails start once the owners have read a week of drafts.</dd>
+      <dt>Week 4</dt><dd>Connect HubSpot to Clay Audiences, build the tier segments, switch on the job change signal and auto enrich for new records. The enrich queue goes through the CLI, so the agent decides what spends credits.</dd>
+      <dt>Then</dt><dd>The book agent reads the segments every Monday and posts the call list to each owner in Slack, with the evidence. The long tail emails start once the owners have read a week of drafts.</dd>
       <dt>Salesforce</dt><dd>The same four agents work on Accounts, Contacts and Opportunities. Only the last step, the API calls, changes.</dd>
     </dl>
   </section>
@@ -224,7 +238,7 @@
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote the scripts and the tests from my written rules for matching, tiers, thresholds and owner routing.</dd>
       <dt>I did</dt><dd>Set the tiers and thresholds, decided what is auto and what needs approval, planted the mess in the synthetic data, and read every proposed change and every customer row against the input.</dd>
-      <dt>Not built</dt><dd>The Claude step that judges name only duplicates and the one that writes the long tail emails (both prompts are in the file), the enrichment for missing fields and bounced champions, the Slack approval and the step that sends the API calls. All designed, none running.</dd>
+      <dt>Not built</dt><dd>The Claude step that judges name only duplicates and the one that writes the long tail emails (both prompts are in the file), the Clay Audiences segments, signals and CLI enrichment (the queue file is built, nothing is sent to Clay), the Slack approval and the step that sends the API calls. All designed, none running.</dd>
       <dt>Tests</dt><dd>8 tests guard the rules that must never move: merges and owner changes are never auto, name only matches always go to a person, the record with the deals is always kept, no ARR is lost in a merge, strategic accounts always get a human.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_crm.py</code> then <code>python3 crm_cleanup.py data --out output</code>. Tests: <code>python3 -m unittest test_crm_cleanup</code>. Standard library only.</dd>
     </dl>
@@ -239,6 +253,7 @@
       <div><a href="data/companies.csv">companies.csv</a><small>33 companies. Also <a href="data/contacts.csv">contacts</a>, <a href="data/deals.csv">deals</a>, <a href="data/owners.csv">owners</a>.</small></div>
       <div><a href="output/changes.csv">changes.csv</a><small>All 47 proposed changes with tier and reason.</small></div>
       <div><a href="output/book.csv">book.csv</a><small>All 17 customers with tier, signal and action.</small></div>
+      <div><a href="output/clay_enrich_queue.csv">clay_enrich_queue.csv</a><small>The 6 records queued for Clay, keyed by domain or email.</small></div>
       <div><a href="output/hubspot_payloads.json">hubspot_payloads.json</a><small>The API calls a person would approve. Never sent.</small></div>
       <div><a href="output/summary.json">summary.json</a><small>Counts and money figures.</small></div>
       <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
@@ -643,6 +658,16 @@ def write_outputs(log, book, deals, companies, owners, out, as_of):
         w.writerows(book)
     with open(os.path.join(out, "hubspot_payloads.json"), "w") as f:
         json.dump(payloads(log), f, indent=2)
+    # The enrich tier, keyed the way a Clay Audiences import matches records:
+    # domain for companies, email for people. Only these rows spend credits.
+    domain = {c["company_id"]: norm_domain(c["domain"]) for c in companies}
+    with open(os.path.join(out, "clay_enrich_queue.csv"), "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["record_id", "object", "match_key", "need", "reason"])
+        for r in log.rows:
+            if r["tier"] == "enrich":
+                key = domain.get(r["record_id"], "") if r["object"] == "company" else r["record_name"]
+                w.writerow([r["record_id"], r["object"], key, r["field"], r["reason"]])
 
     tiers = defaultdict(int)
     for r in log.rows:
