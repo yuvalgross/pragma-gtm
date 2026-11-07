@@ -123,19 +123,6 @@
     <p style="margin-top:16px">Every change carries a tier. <code>auto</code> is reversible and logs the old value. <code>approve</code> is one batch sign off by the RevOps owner, used for merges (they cannot be undone) and owner changes (they move someone's book). <code>review</code> is one by one. <code>owner_task</code> goes to the deal owner. <code>enrich</code> goes to the Clay enrichment queue. The script writes the change log and the HubSpot API calls; it never sends them.</p>
   </section>
 
-  <section aria-labelledby="clay">
-    <h2 id="clay">Where Clay comes in: <em>Audiences and the CLI</em></h2>
-    <p>The agents clean the CRM. Clay keeps it clean afterwards, and the agents drive it from the terminal instead of the browser.</p>
-    <div class="flow">
-      <div class="step"><b>Audiences</b><span>One live profile per company and contact, built from the HubSpot import of companies, contacts and deals. It refreshes every 15 minutes on Enterprise and daily on Growth, so the book agent reads current data instead of last month's export.</span></div>
-      <div class="step"><b>Segments</b><span>The tiers on this page become saved segments: strategic accounts with a risk signal, core accounts near their seat limit, long tail renewing in 90 days. Filters can mix CRM fields, enrichment and signals.</span></div>
-      <div class="step"><b>Signals</b><span>A job change signal replaces the bounced email check: it catches the champion who left before the email bounces. Auto enrich fills a missing industry as soon as a new record enters a segment.</span></div>
-      <div class="step"><b>CLI and MCP</b><span>The Clay plugin is a CLI for scripted runs plus <code>clay mcp</code>, a local MCP server, so an agent in Claude Code calls Clay as one of its tools. It signs in with <code>clay login</code> or a <code>CLAY_API_KEY</code>.</span></div>
-    </div>
-    <p style="margin-top:16px"><strong>Two limits shape the design.</strong> Audiences imports from HubSpot but does not write back to it; that needs a Clay table with HubSpot actions, or the approved API calls this script already writes. And duplicates inside one CRM carry over into Audiences as they are, so the duplicate agent has to run first. That is the order here: clean in HubSpot, then let Clay watch and enrich.</p>
-    <p><strong>Credits.</strong> The agents decide what gets enriched, not a whole CRM sync. This run queues 6 records for Clay: 3 companies missing an industry and 3 contacts whose email bounces. They sit in <a href="output/clay_enrich_queue.csv">clay_enrich_queue.csv</a>, keyed by domain or email, the fields Audiences matches on. One company has no domain yet, so it waits for the duplicate review before it can be matched. In Clay itself: filter to the segment before enriching, test on 10 rows, set a credit budget.</p>
-  </section>
-
   <section aria-labelledby="run">
     <h2 id="run">Run output</h2>
     <p>33 companies, 24 contacts and 22 deals in. The agents proposed 47 changes: 9 auto, 21 for batch approval, 3 for a person to decide, 8 tasks for deal owners and 6 for the enrichment queue.</p>
@@ -242,6 +229,19 @@
       <dt>Tests</dt><dd>8 tests guard the rules that must never move: merges and owner changes are never auto, name only matches always go to a person, the record with the deals is always kept, no ARR is lost in a merge, strategic accounts always get a human.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_crm.py</code> then <code>python3 crm_cleanup.py data --out output</code>. Tests: <code>python3 -m unittest test_crm_cleanup</code>. Standard library only.</dd>
     </dl>
+  </section>
+
+  <section aria-labelledby="clay">
+    <h2 id="clay">Where Clay comes in: <em>Audiences and the CLI</em></h2>
+    <p>The agents clean the CRM. Clay keeps it clean afterwards, and the agents drive it from the terminal instead of the browser.</p>
+    <div class="flow">
+      <div class="step"><b>Audiences</b><span>One live profile per company and contact, built from the HubSpot import of companies, contacts and deals. It refreshes every 15 minutes on Enterprise and daily on Growth, so the book agent reads current data instead of last month's export.</span></div>
+      <div class="step"><b>Segments</b><span>The tiers on this page become saved segments: strategic accounts with a risk signal, core accounts near their seat limit, long tail renewing in 90 days. Filters can mix CRM fields, enrichment and signals.</span></div>
+      <div class="step"><b>Signals</b><span>A job change signal replaces the bounced email check: it catches the champion who left before the email bounces. Auto enrich fills a missing industry as soon as a new record enters a segment.</span></div>
+      <div class="step"><b>CLI and MCP</b><span>The Clay plugin is a CLI for scripted runs plus <code>clay mcp</code>, a local MCP server, so an agent in Claude Code calls Clay as one of its tools. It signs in with <code>clay login</code> or a <code>CLAY_API_KEY</code>.</span></div>
+    </div>
+    <p style="margin-top:16px"><strong>Two limits shape the design.</strong> Audiences imports from HubSpot but does not write back to it; that needs a Clay table with HubSpot actions, or the approved API calls this script already writes. And duplicates inside one CRM carry over into Audiences as they are, so the duplicate agent has to run first. That is the order here: clean in HubSpot, then let Clay watch and enrich.</p>
+    <p><strong>Credits.</strong> The agents decide what gets enriched, not a whole CRM sync. This run queues 6 records for Clay: 3 companies missing an industry and 3 contacts whose email bounces. They sit in <a href="output/clay_enrich_queue.csv">clay_enrich_queue.csv</a>, keyed by domain or email, the fields Audiences matches on. One company has no domain yet, so it waits for the duplicate review before it can be matched. In Clay itself: filter to the segment before enriching, test on 10 rows, set a credit budget.</p>
   </section>
 
   <section aria-labelledby="files">
