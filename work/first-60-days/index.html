@@ -173,24 +173,6 @@
     </div>
   </section>
 
-  <section aria-labelledby="clay">
-    <h2 id="clay">The <em>Clay</em> part</h2>
-    <p>Clay Audiences holds the client's own people, companies and deals as one record each. The Clay CLI reads and segments them from a terminal, so Claude Code can do in seconds what I would otherwise click through. It needs Editor access to the client's Clay workspace, so that is a week one ask. Setup is three lines in Claude Code:</p>
-<pre class="cli">/plugin marketplace add clay-run/agent-plugins
-/plugin install clay@clay-plugins
-/clay:setup</pre>
-    <p>Then, from Clay's documentation. Reads and counts cost no credits.</p>
-<pre class="cli"># Day 1 to 10: closed won deals, biggest first
-clay audiences records search-ids --query 'select from opportunities where is_won = true order by amount desc' --limit 10
-
-# Day 10 to 20: how many contacts have an email at all
-clay audiences records search-count --query 'count from people where email is_not_null'
-
-# Day 15 to 30: accounts already in a segment, before sourcing more
-clay audiences records search-count --audience-id TARGET_ACCOUNTS_ID</pre>
-    <p>I have not run these against a client workspace. Deals reach Clay through a CRM sync and are read only, so the first-ten-days query needs the CRM connected first.</p>
-  </section>
-
   <section aria-labelledby="measure">
     <h2 id="measure">How I'd measure it</h2>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Metrics and why they matter">
@@ -212,6 +194,24 @@ clay audiences records search-count --audience-id TARGET_ACCOUNTS_ID</pre>
     <h2 id="why">Why this <em>order</em></h2>
     <p>It's the order I used at OEB. Start from who already bought, score before you send, pilot small, then roll out. The engine ran six weeks on one event before the group adopted it; 20 salespeople run on it now. Signal deals close at 40% against 12% without one, and it books 13 meetings a month at $27 in tools each.</p>
     <p>Two of the building blocks are on this site with their code: the <a href="/work/signup-router/">signup router</a> that gates and scores inbound, and the <a href="/work/signal-outreach/">signal outreach tool</a> that writes from the buying signal.</p>
+  </section>
+
+  <section aria-labelledby="clay">
+    <h2 id="clay">The <em>Clay</em> part</h2>
+    <p>Clay Audiences holds the client's own people, companies and deals as one record each. The Clay CLI reads and segments them from a terminal, so Claude Code can do in seconds what I would otherwise click through. It needs Editor access to the client's Clay workspace, so that is a week one ask. Setup is three lines in Claude Code:</p>
+<pre class="cli">/plugin marketplace add clay-run/agent-plugins
+/plugin install clay@clay-plugins
+/clay:setup</pre>
+    <p>Then, from Clay's documentation. Reads and counts cost no credits.</p>
+<pre class="cli"># Day 1 to 10: closed won deals, biggest first
+clay audiences records search-ids --query 'select from opportunities where is_won = true order by amount desc' --limit 10
+
+# Day 10 to 20: how many contacts have an email at all
+clay audiences records search-count --query 'count from people where email is_not_null'
+
+# Day 15 to 30: accounts already in a segment, before sourcing more
+clay audiences records search-count --audience-id TARGET_ACCOUNTS_ID</pre>
+    <p>I have not run these against a client workspace. Deals reach Clay through a CRM sync and are read only, so the first-ten-days query needs the CRM connected first.</p>
   </section>
 
   <footer>

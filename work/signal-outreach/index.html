@@ -183,6 +183,23 @@ Yuval</pre></div></div>
     <p class="note">Synthetic input, generated from a fixed seed so every run gives the same rows. Every domain ends in <code>.example</code> except the personal email row that tests the gate. The gate rates are inputs set to look like a mixed export, not measurements. The offer in the emails, lead routing, is a placeholder product so the copy reads like a real sequence.</p>
   </section>
 
+  <section aria-labelledby="change">
+    <h2 id="change">What I changed after the first version, and <em>what is next</em></h2>
+    <p>The first version gave a point for every extra signal, so a 30 day old CRM change could lift a contact above someone with one fresh signal, and the email was not even written from it. Extra signals now count only while they are fresh, and ties go to the fresher signal. Reading all 38 openers also caught a line that said "a CRM move" when the signal was a new scheduling tool or chat widget. It now says "a change in the sales stack", and a test stops that line from naming the CRM again. I also added duplicate and bad data handling, persona specific follow ups, and the funnel counts.</p>
+    <p>Next: persona matching is still keyword based. "Head of Growth" lands in marketing, which is right at some companies and wrong at others. The step 2 and step 3 lines are where a model written sentence would add most, kept behind the same copy check and review queue and never sent unread.</p>
+    <p>How I would judge it: positive reply rate and meetings booked per 100 contacts, split by signal type, against a small held out group. After two weeks, a signal type that does not beat the held out group loses its weight.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>AI did</dt><dd>Claude Code wrote the scripts, the tests and a first draft of the email lines.</dd>
+      <dt>I did</dt><dd>Set the gate rules, signal weights, freshness window and copy limits, and read every email in <code>ready.csv</code> against its input row.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the Audiences and CLI reads below, the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All of it is designed, none of it is running.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_contacts.py</code>, then <code>python3 signal_outreach.py data/contacts_synthetic.csv --out output</code>, then <code>python3 -m unittest test_signal_outreach.py</code>. Standard library only.</dd>
+    </dl>
+  </section>
+
   <section aria-labelledby="clay">
     <h2 id="clay">Where Clay <em>Audiences</em> and the CLI fit</h2>
     <p>This run uses generated columns where Clay would supply them. In a real workspace the contacts, customers and open deals sit in Clay Audiences, and the Clay CLI lets the script and Claude Code read them. Four parts of the tool map onto it. The commands come from Clay's documentation and have not been run against a workspace.</p>
@@ -202,23 +219,6 @@ clay audiences records search-ids --audience-id OPEN_DEAL_SEGMENT_ID --limit 100
 clay audiences records search-count --query 'count from people where email is_not_null'
 
 # Signal events for a segment: clay audiences signals get (scope flags in --help)</pre>
-  </section>
-
-  <section aria-labelledby="change">
-    <h2 id="change">What I changed after the first version, and <em>what is next</em></h2>
-    <p>The first version gave a point for every extra signal, so a 30 day old CRM change could lift a contact above someone with one fresh signal, and the email was not even written from it. Extra signals now count only while they are fresh, and ties go to the fresher signal. Reading all 38 openers also caught a line that said "a CRM move" when the signal was a new scheduling tool or chat widget. It now says "a change in the sales stack", and a test stops that line from naming the CRM again. I also added duplicate and bad data handling, persona specific follow ups, and the funnel counts.</p>
-    <p>Next: persona matching is still keyword based. "Head of Growth" lands in marketing, which is right at some companies and wrong at others. The step 2 and step 3 lines are where a model written sentence would add most, kept behind the same copy check and review queue and never sent unread.</p>
-    <p>How I would judge it: positive reply rate and meetings booked per 100 contacts, split by signal type, against a small held out group. After two weeks, a signal type that does not beat the held out group loses its weight.</p>
-  </section>
-
-  <section aria-labelledby="built">
-    <h2 id="built">How it was built</h2>
-    <dl>
-      <dt>AI did</dt><dd>Claude Code wrote the scripts, the tests and a first draft of the email lines.</dd>
-      <dt>I did</dt><dd>Set the gate rules, signal weights, freshness window and copy limits, and read every email in <code>ready.csv</code> against its input row.</dd>
-      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the Audiences and CLI reads above, the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All of it is designed, none of it is running.</dd>
-      <dt>Run it</dt><dd><code>python3 make_synthetic_contacts.py</code>, then <code>python3 signal_outreach.py data/contacts_synthetic.csv --out output</code>, then <code>python3 -m unittest test_signal_outreach.py</code>. Standard library only.</dd>
-    </dl>
   </section>
 
   <section aria-labelledby="files">
