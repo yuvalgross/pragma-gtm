@@ -84,6 +84,8 @@
   pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
   code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
   footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
   @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
 </style>
 </head>
@@ -100,10 +102,10 @@
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
     <div class="flow">
-      <div class="step"><b>Input</b><span>Weekly signup export with usage volume per week, products used and integration path, plus the columns Clay would add: company, size, funding and pain signals.</span></div>
+      <div class="step"><b>Input</b><span>Weekly signup export with usage volume per week, products used and integration path, plus the columns Clay would add: company, size, funding and pain signals. In Clay the week is a saved segment in Audiences, read with the Clay CLI.</span></div>
       <div class="step"><b>Gate</b><span>Existing customers, partners and personal email domains are dropped before any scoring and logged with the reason.</span></div>
       <div class="step"><b>Score</b><span>Usage 35, company 25, integration 25, pain 15. Accounts that arrive through a marketplace or a reseller score a quarter on integration, because a partner already sells to them.</span></div>
-      <div class="step"><b>Route</b><span>Above 70 and rising: custom benchmark and an enterprise conversation. 45 to 70: mid tier offer and a shared Slack channel. Below 45: nurture. Partner accounts go to the partner owner.</span></div>
+      <div class="step"><b>Route</b><span>Above 70 and rising (three weekly steps up, week four at least 1.3 times week one): custom benchmark and an enterprise conversation. 45 to 70: mid tier offer and a shared Slack channel. Below 45: nurture. Partner accounts go to the partner owner.</span></div>
     </div>
   </section>
 
@@ -118,7 +120,7 @@
 <tr class="hot"><td class="n">2</td><td class="acct">Synthetic Company G<span class="sub">Zurich, 450 staff, direct api</span></td><td class="n">35</td><td class="n">25</td><td class="n">25</td><td class="n">15</td><td class="n total">100</td><td>Custom benchmark, open the enterprise conversation</td></tr>
 <tr class="hot"><td class="n">3</td><td class="acct">Synthetic Company J<span class="sub">Hamburg, 140 staff, open framework</span></td><td class="n">32</td><td class="n">25</td><td class="n">25</td><td class="n">10</td><td class="n total">92</td><td>Custom benchmark, open the enterprise conversation</td></tr>
 <tr class="hot"><td class="n">4</td><td class="acct">Synthetic Company C<span class="sub">Austin, 60 staff, self hosted</span></td><td class="n">32</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">80</td><td>Custom benchmark, open the enterprise conversation</td></tr>
-<tr><td class="n">5</td><td class="acct">Synthetic Company B<span class="sub">Amsterdam, 300 staff, open framework</span></td><td class="n">16</td><td class="n">25</td><td class="n">25</td><td class="n">5</td><td class="n total">71</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">5</td><td class="acct">Synthetic Company B<span class="sub">Amsterdam, 300 staff, open framework, volume flat</span></td><td class="n">16</td><td class="n">25</td><td class="n">25</td><td class="n">5</td><td class="n total">71</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
 <tr><td class="n">6</td><td class="acct">Synthetic Company K<span class="sub">Chicago, 35 staff, partner marketplace</span></td><td class="n">35</td><td class="n">25</td><td class="n">6</td><td class="n">5</td><td class="n total">71</td><td>Nurture, flag to the marketplace partner owner</td></tr>
 <tr><td class="n">7</td><td class="acct">Synthetic Company N<span class="sub">Madrid, 220 staff, direct api</span></td><td class="n">16</td><td class="n">18</td><td class="n">25</td><td class="n">10</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
 <tr><td class="n">8</td><td class="acct">Synthetic Company O<span class="sub">Stuttgart, 900 staff, direct api</span></td><td class="n">32</td><td class="n">4</td><td class="n">25</td><td class="n">8</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
@@ -137,6 +139,25 @@
     <p class="note">Synthetic input. Every domain ends in <code>.example</code> except the personal email row that tests the gate. Company names, volumes and signals are invented to exercise the rules and say nothing about real companies. The column names are my assumption of what a product database and a Clay table would hold.</p>
   </section>
 
+  <section aria-labelledby="clay">
+    <h2 id="clay">Where Clay <em>Audiences</em> and the CLI fit</h2>
+    <p>In this run the Clay columns are typed in. In a real workspace the week's signups sit in Clay Audiences, which holds a company's own people, companies and deals, and the Clay CLI reads them from a terminal or from Claude Code. Reading and counting cost no credits; only enrichment does. The commands below come from Clay's documentation. I have not run them against a workspace.</p>
+<pre class="cli"># 1. Count the week's signups (a saved segment, free)
+clay audiences records search-count --audience-id SIGNUPS_WEEK_ID
+
+# 2. Pull the rows the router scores
+clay audiences records search-ids --audience-id SIGNUPS_WEEK_ID --limit 100
+clay audiences records get --entity-type people --ids 101,102,103
+
+# 3. Two fields to hold the result on each company
+clay audiences fields create --entity-type companies --name "Router score" --data-type number
+clay audiences fields create --entity-type companies --name "Next action" --data-type text
+
+# 4. One live segment per next action
+clay audiences create --entity-type companies --name "Custom benchmark" --filter ./custom_benchmark.json</pre>
+    <p>Three limits from the same docs shape the design. The CLI reads records but cannot write values into them, so the scores go back through Clay's <code>upsert-audiences-record</code> workflow action. A segment is a saved filter, so <em>Custom benchmark</em> stays current as scores change, but segments cover people and companies only; deals arrive through a CRM sync and are read only. And most commands allow 60 calls a minute, so the router asks for the week, not the whole workspace.</p>
+  </section>
+
   <section aria-labelledby="change">
     <h2 id="change">What I would change <em>first</em></h2>
     <p>Two results from this run need a conversation before the weights are trusted. A 900 person company scores 69 and gets a mid tier offer, because integration and usage outrun a weak company fit. That is the first weight I would revisit. And two accounts hit 100, so the scale saturates at the top. A tie break on last week's volume is the simplest fix.</p>
@@ -148,7 +169,7 @@
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote both scripts from my written description of the gate, weights and thresholds.</dd>
       <dt>I did</dt><dd>Set the weights and thresholds, wrote the exclusion rules, read every scored row against the input, and capped pain signals at 15 so no account clears the mid tier line on a keyword match alone.</dd>
-      <dt>Not built</dt><dd>The Clay enrichment (those columns are typed in for this run) and the n8n step that writes the top rows into HubSpot as tasks, with the evidence in the task body. Both are designed, neither is running.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment (those columns are typed in for this run), the Audiences and CLI steps above, and the n8n step that writes the top rows into HubSpot as tasks, with the evidence in the task body. All designed, none running.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_signups.py</code> then <code>python3 signup_router.py data/signups_week_43_synthetic.csv --out output</code>. Standard library only.</dd>
     </dl>
   </section>
