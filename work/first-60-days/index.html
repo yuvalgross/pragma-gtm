@@ -82,6 +82,8 @@
   .files small { display: block; color: var(--muted); font-size: 14px; }
   details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
   summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
   pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
   code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
   footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
@@ -163,12 +165,30 @@
   <section aria-labelledby="phases">
     <h2 id="phases">Phase by phase</h2>
     <div class="plan">
-      <div class="phase"><div class="days">1 to 10</div><div><h3>Learn the buyer</h3><p>Sit down with whoever owns sales, go through the best customers and the last few months of inbound, enrich it all in Clay and find what the buyers have in common. Buy and warm the sending domains on day one; that takes two to three weeks and can't be rushed. Audit the CRM before I automate anything on top of it. At OEB that audit found broken stage criteria, miswired fields and duplicates; fixing them saved 3 hours a week and cut churn 8%.</p><p class="get"><b>You get:</b> a one page ICP to sign off.</p></div></div>
+      <div class="phase"><div class="days">1 to 10</div><div><h3>Learn the buyer</h3><p>Sit down with whoever owns sales, go through the best customers and the last few months of inbound, load it all into Clay Audiences and find what the buyers have in common. Buy and warm the sending domains on day one; that takes two to three weeks and can't be rushed. Audit the CRM before I automate anything on top of it. At OEB that audit found broken stage criteria, miswired fields and duplicates; fixing them saved 3 hours a week and cut churn 8%.</p><p class="get"><b>You get:</b> a one page ICP to sign off.</p></div></div>
       <div class="phase"><div class="days">10 to 20</div><div><h3>Fix inbound</h3><p>New leads get enriched, scored and routed in minutes. The AE gets a short note before each call: who they are, what probably hurts, a line to open with. Hot ones ping Slack.</p><p class="get"><b>You get:</b> faster follow up on leads you already pay for, and a baseline.</p></div></div>
-      <div class="phase"><div class="days">15 to 30</div><div><h3>Build the list</h3><p>Two or three segments from the ICP, each with one signal that says "now": a hire, a round, a new leader, a tool change. Map the buying committee, score on fit plus signal, only touch what clears the bar. Gate first, score second. The gate removes who we should never contact; the score ranks the rest. I learned that the hard way: my first OEB model skipped the gate and let too much through.</p><p class="get"><b>You get:</b> sized segments with a reason behind each.</p></div></div>
+      <div class="phase"><div class="days">15 to 30</div><div><h3>Build the list</h3><p>Two or three segments from the ICP, each saved as a Clay Audience with customers and open deals excluded, so we never pay to source the same account twice. Each segment has one signal that says "now": a hire, a round, a new leader, a tool change. Map the buying committee, score on fit plus signal, only touch what clears the bar. Gate first, score second. The gate removes who we should never contact; the score ranks the rest. I learned that the hard way: my first OEB model skipped the gate and let too much through.</p><p class="get"><b>You get:</b> sized segments with a reason behind each.</p></div></div>
       <div class="phase"><div class="days">30 to 45</div><div><h3>Run the pilot</h3><p>Before any volume, a 100 contact test per segment to check the scoring and the copy. Then one sequence per segment, email and LinkedIn, 300 to 500 contacts each so the numbers mean something. Claude drafts the opener from the signal, a person checks it before it goes out. Every meeting is tagged by segment and signal.</p><p class="get"><b>You get:</b> a weekly report: replies, meetings, cost per meeting.</p></div></div>
       <div class="phase"><div class="days">45 to 60</div><div><h3>Decide</h3><p>Keep what books meetings at a sane cost, drop the rest, try one new angle. Score existing customers for upsell. Write it up with a short video per workflow so your team can run it without me.</p><p class="get"><b>You get:</b> a day 60 review and the plan for the next 30.</p></div></div>
     </div>
+  </section>
+
+  <section aria-labelledby="clay">
+    <h2 id="clay">The <em>Clay</em> part</h2>
+    <p>Clay Audiences holds the client's own people, companies and deals as one record each. The Clay CLI reads and segments them from a terminal, so Claude Code can do in seconds what I would otherwise click through. It needs Editor access to the client's Clay workspace, so that is a week one ask. Setup is three lines in Claude Code:</p>
+<pre class="cli">/plugin marketplace add clay-run/agent-plugins
+/plugin install clay@clay-plugins
+/clay:setup</pre>
+    <p>Then, from Clay's documentation. Reads and counts cost no credits.</p>
+<pre class="cli"># Day 1 to 10: closed won deals, biggest first
+clay audiences records search-ids --query 'select from opportunities where is_won = true order by amount desc' --limit 10
+
+# Day 10 to 20: how many contacts have an email at all
+clay audiences records search-count --query 'count from people where email is_not_null'
+
+# Day 15 to 30: accounts already in a segment, before sourcing more
+clay audiences records search-count --audience-id TARGET_ACCOUNTS_ID</pre>
+    <p>I have not run these against a client workspace. Deals reach Clay through a CRM sync and are read only, so the first-ten-days query needs the CRM connected first.</p>
   </section>
 
   <section aria-labelledby="measure">

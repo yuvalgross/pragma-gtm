@@ -90,6 +90,8 @@
   pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
   code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
   footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
   @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
 </style>
 </head>
@@ -181,6 +183,27 @@ Yuval</pre></div></div>
     <p class="note">Synthetic input, generated from a fixed seed so every run gives the same rows. Every domain ends in <code>.example</code> except the personal email row that tests the gate. The gate rates are inputs set to look like a mixed export, not measurements. The offer in the emails, lead routing, is a placeholder product so the copy reads like a real sequence.</p>
   </section>
 
+  <section aria-labelledby="clay">
+    <h2 id="clay">Where Clay <em>Audiences</em> and the CLI fit</h2>
+    <p>This run uses generated columns where Clay would supply them. In a real workspace the contacts, customers and open deals sit in Clay Audiences, and the Clay CLI lets the script and Claude Code read them. Four parts of the tool map onto it. The commands come from Clay's documentation and have not been run against a workspace.</p>
+    <div class="flow">
+      <div class="step"><b>Gate</b><span>Customers, opt outs and open deals are first party data. A people segment can filter on deal conditions, so each hold reason becomes one live segment. The script asks for the ids in each and holds them with the segment name as the reason.</span></div>
+      <div class="step"><b>Signal</b><span>Audiences stores signal events such as job changes, funding rounds and hiring activity, readable up to a year back. That is the window the 21 and 45 day freshness rule needs.</span></div>
+      <div class="step"><b>Coverage</b><span>24 contacts had no signal in 45 days, which measures enrichment coverage as much as buyer intent. A free count shows the real fill rate before any credits go on enrichment.</span></div>
+      <div class="step"><b>Send</b><span>The CLI can build and edit a Clay sequence and read its analytics, but starting one stays a click in the Clay app. That is the human check this tool wants anyway.</span></div>
+    </div>
+<pre class="cli"># One live segment per hold reason
+clay audiences create --entity-type people --name "Do not contact: open deal" --filter ./open_deal.json
+
+# Which of today's candidates fall in it
+clay audiences records search-ids --audience-id OPEN_DEAL_SEGMENT_ID --limit 1000
+
+# Fill rate, before paying to enrich anything
+clay audiences records search-count --query 'count from people where email is_not_null'
+
+# Signal events for a segment: clay audiences signals get (scope flags in --help)</pre>
+  </section>
+
   <section aria-labelledby="change">
     <h2 id="change">What I changed after the first version, and <em>what is next</em></h2>
     <p>The first version gave a point for every extra signal, so a 30 day old CRM change could lift a contact above someone with one fresh signal, and the email was not even written from it. Extra signals now count only while they are fresh, and ties go to the fresher signal. Reading all 38 openers also caught a line that said "a CRM move" when the signal was a new scheduling tool or chat widget. It now says "a change in the sales stack", and a test stops that line from naming the CRM again. I also added duplicate and bad data handling, persona specific follow ups, and the funnel counts.</p>
@@ -193,7 +216,7 @@ Yuval</pre></div></div>
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote the scripts, the tests and a first draft of the email lines.</dd>
       <dt>I did</dt><dd>Set the gate rules, signal weights, freshness window and copy limits, and read every email in <code>ready.csv</code> against its input row.</dd>
-      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All three are designed, none is running.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the Audiences and CLI reads above, the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All of it is designed, none of it is running.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_contacts.py</code>, then <code>python3 signal_outreach.py data/contacts_synthetic.csv --out output</code>, then <code>python3 -m unittest test_signal_outreach.py</code>. Standard library only.</dd>
     </dl>
   </section>
