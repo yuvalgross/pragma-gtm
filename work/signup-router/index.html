@@ -109,6 +109,24 @@
     </div>
   </section>
 
+<section aria-labelledby="person">
+    <h2 id="person">Who gets a person, <em>and who doesn't</em></h2>
+    <p>The question every inbound flow has to answer first. Here the rules are set by hand and run in order, top to bottom. No AI makes the call, and every row carries the evidence behind its score, so a person can check it.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Routing rules, scrolls sideways on small screens">
+    <table style="min-width:640px">
+      <thead><tr><th>What comes in</th><th>Rule</th><th>Who acts</th><th class="n">This run</th></tr></thead>
+      <tbody>
+<tr><td>Existing customer, partner, personal email or no domain</td><td>Dropped at the gate, before any scoring. The reason is logged.</td><td>Nobody in sales</td><td class="n">3</td></tr>
+<tr><td>Signup through a marketplace or a reseller</td><td>Any score. A partner already sells to this account.</td><td>The partner or channel owner</td><td class="n">5</td></tr>
+<tr class="hot"><td>Score above 70 and usage rising</td><td>Three weekly steps up, and week four at least 1.3 times week one.</td><td>An AE: custom benchmark and an enterprise conversation</td><td class="n">4</td></tr>
+<tr><td>Score 45 to 70, or above 70 without the rising trend</td><td>Fit is there, urgency isn't proven yet.</td><td>A person: mid tier offer and a shared Slack channel</td><td class="n">5</td></tr>
+<tr><td>Score below 45</td><td>Not worth a person's time this week.</td><td>No person: nurture</td><td class="n">3</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">The gate is a rule, never a weight, so no change to the scoring can send an existing customer a sales task. In this run nurture is a label on the row; the automated nurture track that would follow it is designed, not running.</p>
+  </section>
+
   <section aria-labelledby="run">
     <h2 id="run">Run output</h2>
     <p>20 rows in. The gate dropped 3: a customer, a partner and a personal email address. 17 were scored. Four get a custom benchmark and an enterprise conversation, five get a mid tier offer, and eight go to nurture, five of those flagged to a partner owner instead of sales.</p>

@@ -159,6 +159,90 @@
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'DM Sans';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* CRM foundation proof block (system section) */
+.crm-proof {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--paper);
+    display: grid;
+    gap: 1.25rem;
+  }
+.crm-proof h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0;
+    color: var(--ink);
+  }
+.crm-proof h3 em { color: var(--accent-dark); }
+.crm-proof > p {
+    margin: 0;
+    max-width: 68ch;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+.crm-proof-facts strong { font-size: 1.9rem; }
+@media (max-width: 768px) {
+    .crm-proof { padding: 1.5rem; }
+  }
+
+.work-rule-wrap { display: grid; gap: 0.9rem; align-content: start; }
+.work-rule { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft); max-width: 62ch; }
+.work-rule strong { color: var(--ink); font-weight: 500; }
+
+/* Layer map: three motions x four jobs (system section) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.layer-map{margin:2.5rem 0 0;display:grid;gap:1rem}
+.lm-grid{display:grid;grid-template-columns:150px repeat(4,minmax(0,1fr));gap:10px;position:relative}
+.lm-corner{display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding:0 0 .9rem}
+.lm-corner span:last-child{text-transform:none;letter-spacing:0;font-size:.8rem}
+.lm-job{position:relative;display:flex;flex-direction:column;gap:.2rem;padding:1rem 1.1rem 1.1rem;border-radius:12px;background:var(--ink);color:var(--paper)}
+.lm-job:not(:nth-child(5))::after{content:"";position:absolute;right:-9px;top:50%;width:8px;height:8px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:translate(0,-50%) rotate(45deg);z-index:2}
+.lm-num{font-family:var(--font-display);font-size:1.6rem;line-height:1;color:var(--accent)}
+.lm-job-title{font-family:var(--font-display);font-size:1.35rem;line-height:1.15}
+.lm-job-desc{font-size:.8rem;opacity:.72;line-height:1.35}
+.lm-lane{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.25rem;color:var(--ink);padding:.4rem 0}
+.lm-dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--lane)}
+.lm-cell{position:relative;padding:.85rem 1rem .85rem 1.1rem;border-radius:10px;background:var(--paper);border:1px solid var(--border);font-size:.86rem;line-height:1.45;color:var(--ink-soft);overflow:hidden}
+.lm-cell::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lane)}
+.lm-lane.lm-ob,.lm-cell.lm-ob{--lane:var(--accent)}
+.lm-lane.lm-in,.lm-cell.lm-in{--lane:var(--teal)}
+.lm-lane.lm-crm,.lm-cell.lm-crm{--lane:var(--gold, var(--accent-dark))}
+.lm-rail{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;margin-left:160px;padding:.85rem 1.2rem;border-radius:10px;border:1px dashed var(--border-gold);font-size:.84rem;color:var(--ink-soft)}
+.lm-rail span:not(.lm-rail-label){display:inline-flex;align-items:center;gap:.5rem}
+.lm-rail span:not(.lm-rail-label)::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.lm-rail-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dark);font-weight:500}
+.layer-map .lm-out{margin-left:160px;padding:1.1rem 1.3rem;border-radius:12px;background:var(--ink);color:var(--paper);font-size:.92rem;line-height:1.55}
+.layer-map .lm-out strong{font-family:var(--font-display);font-weight:500;font-size:1.25rem;display:block;margin-bottom:.15rem}
+:root[data-theme="dark"] .lm-job,:root[data-theme="dark"] .layer-map .lm-out{background:var(--paper-deep);color:var(--ink);border:1px solid var(--border)}
+@media (max-width: 900px){
+  .lm-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lm-corner{display:none}
+  .lm-lane{grid-column:1/-1;margin-top:.6rem}
+  .lm-rail,.layer-map .lm-out{margin-left:0}
+}
+@media (max-width: 640px){
+  .lm-grid{grid-template-columns:1fr;gap:8px}
+  .lm-job{flex-direction:row;align-items:baseline;gap:.6rem;padding:.75rem 1rem}
+  .lm-job::after{display:none}
+  .lm-job-title{white-space:nowrap}
+  .lm-job-desc{margin-left:auto;text-align:right;font-size:.74rem}
+  .lm-cell::after{content:attr(data-job);display:block;order:-1;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-top:.3rem}
+  .lm-cell{display:flex;flex-direction:column-reverse}
+}
+/* CRM proof, two columns */
+.crm-proof{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:2.5rem;align-items:start}
+.crm-proof-head{grid-column:1/-1}
+.crm-proof-facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.crm-proof-facts li{padding:1rem 1.1rem;border-radius:12px;background:var(--paper-warm);border:1px solid var(--border-soft)}
+.crm-proof-facts strong{display:block;font-family:var(--font-display);font-weight:400;font-size:2.2rem;line-height:1;color:var(--accent-dark)}
+.crm-proof-facts span{display:block;margin-top:.35rem;font-size:.8rem;line-height:1.4;color:var(--ink-muted)}
+@media (max-width: 900px){.crm-proof{grid-template-columns:1fr;row-gap:1.25rem}}
+@media (max-width: 640px){.crm-proof-facts strong{font-size:1.7rem;white-space:nowrap}.crm-proof-facts li{padding:.9rem .85rem}}
 </style>
 
 <!-- Netlify CMS -->
@@ -5370,126 +5454,50 @@ html.legal-open { overflow: hidden; }
 <section class="how" id="how" aria-labelledby="system-heading">
   <div class="container">
     <div class="section-label">The system</div>
-    <h2 id="system-heading">From raw signal to <em>closed deal.</em></h2>
-    <p class="section-intro">Every layer of the funnel is engineered, connected, and automated. This is GTM Engineering: three core layers working together to power defensible, scalable revenue growth.</p>
+    <h2 id="system-heading">One layer, <em>four jobs.</em></h2>
+    <p class="section-intro">GTM engineering is more than outbound. It is one layer under the whole revenue team: get the data in, structure it in the CRM, add context, and deliver it to the right person. New logos, inbound and the customer book all run on the same layer.</p>
 
-    <div class="funnel-wrap">
-
-      <!-- GTM ENGINEERING LAYER HEADER -->
-      <div class="gm-layer-header">
-        <div class="gm-pillar">
-          <div class="gm-pillar-title">Data Infrastructure</div>
-          <p class="gm-pillar-desc">Clean CRM, data models, integrations</p>
-        </div>
-        <div class="gm-pillar">
-          <div class="gm-pillar-title">Agentic Automation</div>
-          <p class="gm-pillar-desc">Workflows, AI scoring, routing</p>
-        </div>
-        <div class="gm-pillar">
-          <div class="gm-pillar-title">Performance & Reporting</div>
-          <p class="gm-pillar-desc">Automated insights, KPI tracking</p>
-        </div>
+    <figure class="layer-map" aria-labelledby="layerMapCap">
+      <figcaption id="layerMapCap" class="sr-only">Three motions, outbound, inbound and the CRM, each run through the same four jobs: get it in, structure it, add context, deliver it.</figcaption>
+      <div class="lm-grid">
+        <div class="lm-corner" aria-hidden="true"><span>Three motions</span><span>run through four jobs</span></div>
+        <div class="lm-job"><span class="lm-num">01</span><span class="lm-job-title">Get it in</span><span class="lm-job-desc">Signals and inbound in one place</span></div>
+        <div class="lm-job"><span class="lm-num">02</span><span class="lm-job-title">Structure it</span><span class="lm-job-desc">The CRM as system of record</span></div>
+        <div class="lm-job"><span class="lm-num">03</span><span class="lm-job-title">Add context</span><span class="lm-job-desc">Enrich, score, draft</span></div>
+        <div class="lm-job"><span class="lm-num">04</span><span class="lm-job-title">Deliver it</span><span class="lm-job-desc">One owner, one next step</span></div>
+        <div class="lm-lane lm-ob"><span class="lm-dot" aria-hidden="true"></span>Outbound</div>
+        <div class="lm-cell lm-ob" data-job="Get it in">Hiring, funding and leadership signals</div>
+        <div class="lm-cell lm-ob" data-job="Structure it">Each signal logged on the account, deduped</div>
+        <div class="lm-cell lm-ob" data-job="Add context">Clay waterfall, ICP score, Claude drafts the opener</div>
+        <div class="lm-cell lm-ob" data-job="Deliver it">Rep approves in Slack, then the sequence runs</div>
+        <div class="lm-lane lm-in"><span class="lm-dot" aria-hidden="true"></span>Inbound</div>
+        <div class="lm-cell lm-in" data-job="Get it in">Forms and trial signups, source tracked</div>
+        <div class="lm-cell lm-in" data-job="Structure it">Matched to the existing account, no duplicate</div>
+        <div class="lm-cell lm-in" data-job="Add context">Enriched and scored by fit</div>
+        <div class="lm-cell lm-in" data-job="Deliver it">Routed: AE, partner owner or nurture</div>
+        <div class="lm-lane lm-crm"><span class="lm-dot" aria-hidden="true"></span>The CRM</div>
+        <div class="lm-cell lm-crm" data-job="Get it in">Every write from the other two lanes</div>
+        <div class="lm-cell lm-crm" data-job="Structure it">Duplicate check and failure alert on each write</div>
+        <div class="lm-cell lm-crm" data-job="Add context">Dashboards on what the layer produces</div>
+        <div class="lm-cell lm-crm" data-job="Deliver it">Weekly forecast leadership uses</div>
       </div>
+      <div class="lm-rail"><span class="lm-rail-label">On every step</span><span>Duplicate check before any write</span><span>Alert when a step fails</span><span>A person approves before anything sends</span></div>
+      <div class="lm-out"><strong>One layer, three motions, one set of rules.</strong> Reps spend their time on conversations, not on copying data between tools.</div>
+    </figure>
 
-      <!-- LAYER 1 -->
-      <div class="funnel-layer">
-        <div class="funnel-layer-left">
-          <div class="funnel-layer-num">01</div>
-          <div class="funnel-layer-title">Signal Ingestion</div>
-          <p class="funnel-layer-desc">I monitor the market 24/7 across six signal categories. Each fires a trigger before competitors have even opened their CRM.</p>
-          <div class="funnel-signals">
-            <span class="fsig">Hiring spikes</span>
-            <span class="fsig">Funding rounds</span>
-            <span class="fsig">Tech stack changes</span>
-            <span class="fsig">Job changes</span>
-            <span class="fsig">Intent surges</span>
-            <span class="fsig">Website visits</span>
-          </div>
-        </div>
-        <div class="funnel-arrow">↓</div>
+    <!-- CRM FOUNDATION PROOF -->
+    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
+      <div class="crm-proof-head">
+        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, at OEB</div>
+        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
       </div>
-
-      <!-- LAYER 2 -->
-      <div class="funnel-layer layer-alt">
-        <div class="funnel-layer-left">
-          <div class="funnel-layer-num">02</div>
-          <div class="funnel-layer-title">Enrichment & ICP Scoring</div>
-          <p class="funnel-layer-desc">Raw signals are enriched with firmographic, technographic, and contact data. AI assisted scoring ensures every account is ranked against your real closed won ICP.</p>
-          <div class="funnel-signals">
-            <span class="fsig">Waterfall enrichment</span>
-            <span class="fsig">AI assisted scoring</span>
-            <span class="fsig">Account ranking</span>
-            <span class="fsig">Contact finding</span>
-          </div>
-        </div>
-        <div class="funnel-arrow">↓</div>
-      </div>
-
-      <!-- LAYER 3 -->
-      <div class="funnel-layer">
-        <div class="funnel-layer-left">
-          <div class="funnel-layer-num">03</div>
-          <div class="funnel-layer-title">Workflow Automation & Routing</div>
-          <p class="funnel-layer-desc">The connective layer where GTM Engineering lives. Signals trigger agentic workflows, leads route automatically based on fit and availability, with no human touchpoints until it matters.</p>
-          <div class="funnel-signals">
-            <span class="fsig">Trigger logic</span>
-            <span class="fsig">Agentic routing</span>
-            <span class="fsig">CRM sync</span>
-            <span class="fsig">Webhook flows</span>
-            <span class="fsig">API integrations</span>
-          </div>
-        </div>
-        <div class="funnel-arrow">↓</div>
-      </div>
-
-      <!-- LAYER 4 -->
-      <div class="funnel-layer layer-alt">
-        <div class="funnel-layer-left">
-          <div class="funnel-layer-num">04</div>
-          <div class="funnel-layer-title">AI Driven Outreach & Engagement</div>
-          <p class="funnel-layer-desc">Every message is grounded in the specific signal that triggered it. AI generates personalised copy at scale with human review before send. This is agentic at its best.</p>
-          <div class="funnel-signals">
-            <span class="fsig">Signal led copy</span>
-            <span class="fsig">Multichannel delivery</span>
-            <span class="fsig">Email + LinkedIn sequences</span>
-            <span class="fsig">Human review gates</span>
-          </div>
-        </div>
-        <div class="funnel-arrow">↓</div>
-      </div>
-
-      <!-- LAYER 5 -->
-      <div class="funnel-layer">
-        <div class="funnel-layer-left">
-          <div class="funnel-layer-num">05</div>
-          <div class="funnel-layer-title">CRM & Performance Reporting</div>
-          <p class="funnel-layer-desc">Replies route into HubSpot with full context attached. Automated reporting surfaces lead quality, SDR efficiency, and pipeline health in real time. Your team always knows what's working.</p>
-          <div class="funnel-signals">
-            <span class="fsig">Auto routing + context</span>
-            <span class="fsig">Pipeline hygiene</span>
-            <span class="fsig">KPI dashboards</span>
-            <span class="fsig">Performance insights</span>
-          </div>
-        </div>
-        <div class="funnel-arrow">↓</div>
-      </div>
-
-      <!-- LAYER 6 — OUTPUT -->
-      <div class="funnel-output">
-        <div class="funnel-output-inner">
-          <div class="funnel-output-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <circle cx="14" cy="14" r="13" stroke="#c47a3a" stroke-width="1.5"/>
-              <path d="M8 14.5l4 4 8-8" stroke="#c47a3a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <div class="funnel-output-title">Qualified pipeline. Booked demos. Closed revenue.</div>
-            <div class="funnel-output-sub">The system runs continuously. Every signal processed. Every qualified prospect reached at the right moment. Your team closes instead of prospecting.</div>
-          </div>
-        </div>
-      </div>
-
+      <p>I extended an existing HubSpot setup and found what was breaking it: broken stage criteria, fields wired to the wrong places, missing connections and duplicate records. Reps were copy pasting scattered, often wrong data by hand. I fixed the stages and fields, removed the duplicates and automated the upkeep. Since then nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The dashboards on the signal engine and the weekly forecast leadership uses run on that clean data.</p>
+      <ul class="crm-proof-facts" aria-label="CRM foundation results">
+        <li><strong>3 hours</strong><span>a week saved for the team</span></li>
+        <li><strong>8%</strong><span>lower churn</span></li>
+        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
+        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -5531,7 +5539,8 @@ html.legal-open { overflow: hidden; }
         <li><strong>17</strong><span>scored</span></li>
         <li><strong>4</strong><span>sent for a custom benchmark</span></li>
       </ul>
-      <p class="work-limits">Synthetic signups only. Reading the week from Clay Audiences with the Clay CLI, the Clay enrichment and the n8n step that writes tasks into HubSpot are designed, not running.</p>
+      <div class="work-rule-wrap"><p class="work-rule"><strong>Who gets a person:</strong> customers, partners and personal emails are dropped first. Over 70 and rising goes to an AE for an enterprise conversation, 45 to 70 gets a mid tier offer from a person, below 45 goes to nurture with no person, and marketplace or reseller signups go to the partner owner.</p>
+        <p class="work-limits">Synthetic signups only. Reading the week from Clay Audiences with the Clay CLI, the Clay enrichment and the n8n step that writes tasks into HubSpot are designed, not running.</p></div>
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing logic</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Clay CLI</span><span class="exp-tag">Synthetic data</span>
       </div>
