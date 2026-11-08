@@ -214,8 +214,6 @@
 .lad-art{display:block;width:100%;height:auto;margin:.2rem 0;--hs:1.22}
 .lad-title{margin:0;font-family:var(--font-display);font-weight:400;font-size:1.9rem;line-height:1.1;color:var(--ink)}
 .lad-sub{margin:0;font-size:.95rem;font-weight:500;line-height:1.4;color:var(--ink)}
-.lad-desc{margin:0;font-size:.9rem;line-height:1.5;color:var(--ink-muted)}
-.lad-status{margin:0;font-size:.78rem;line-height:1.4;color:var(--ink-muted)}
 .lad-link{margin-top:auto;padding-top:.4rem;font-size:.9rem;font-weight:500;color:var(--accent-dark);text-decoration:none}
 .lad-link:hover{text-decoration:underline}
 .lad-art .sx-disc{fill:var(--paper-warm)}
@@ -225,10 +223,13 @@
 .ld-rules{fill:none;stroke:var(--border);stroke-width:1.2;stroke-dasharray:3 5}
 .lad-art text.ld-rt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;fill:var(--accent-dark);paint-order:stroke;stroke:var(--paper);stroke-width:7px;stroke-linejoin:round}
 @media (max-width:860px){.lad{grid-template-columns:1fr;margin-top:2rem}.lad-1,.lad-2{margin-top:0}.lad-art{max-width:420px}}
-.sys-board{position:relative}
+.sys-board{position:relative;max-width:900px;margin:0 auto;width:100%}
 .sys-art{display:block;max-width:100%}
 .sys-art-d{width:100%;height:auto}
-.sys-art-m{display:none}
+.sys-mini{display:none;width:60px;height:60px;--hs:1.15}
+.sys-mini .sx-disc{fill:var(--paper-warm)}
+.lad-badge{padding:.15rem .6rem;border:1px solid var(--border);border-radius:999px;font-size:.72rem;line-height:1.4;color:var(--ink-muted);white-space:nowrap}
+.lad-bars{margin-left:auto}
 .sys-steps{list-style:none;margin:.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .sys-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 .5rem}
 .sys-title{margin:0 0 .4rem;font-family:var(--font-display);font-weight:400;font-size:1.75rem;line-height:1.1;color:var(--ink)}
@@ -243,7 +244,7 @@
 .sx-em.sx-crm .sx-emc{animation-delay:.7s}
 .sx-dot.sx-rec{fill:var(--ink);animation:sxRec 8s linear infinite}
 .sx-disc{fill:var(--paper);stroke:var(--border);stroke-width:1.5;animation:sxDisc 8s linear infinite;animation-delay:var(--d)}
-.sys-art-d .sx-disc{fill:url(#sxgD)}.sys-art-m .sx-disc{fill:url(#sxgM)}
+.sys-art-d .sx-disc{fill:url(#sxgD)}
 .sx-inner{fill:none;stroke:var(--border);stroke-width:1.2;stroke-dasharray:1.5 5;stroke-linecap:round;transform-box:fill-box;transform-origin:center;animation:sxSpin 40s linear infinite}
 .sx-prog{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:sxProg 8s linear infinite}
 .sx-halo{fill:none;stroke:var(--accent);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:sxHalo 8s linear infinite;animation-delay:var(--d)}
@@ -267,11 +268,12 @@
 .sys-out{margin:0;font-size:1.05rem;line-height:1.55;color:var(--ink);max-width:60ch}
 @media (max-width:760px){
   .sys-art-d{display:none}
-  .sys-art-m{display:block;position:absolute;left:0;top:0;width:72px;height:580px}
-  .sys-steps{grid-template-columns:1fr;margin:0;padding:90px 0 10px}
-  .sys-step{height:120px;box-sizing:border-box;align-items:flex-start;text-align:left;padding:12px 0 0 88px}
-  .sys-title{margin:0 0 .3rem}
+  .sys-mini{display:block}
+  .sys-steps{grid-template-columns:1fr 1fr;gap:1.6rem 1rem;margin:0}
+  .sys-step{align-items:flex-start;text-align:left;padding:0}
+  .sys-title{margin:.6rem 0 .25rem;font-size:1.6rem}
   .sys-step p{max-width:none}
+}
 }
 @media (prefers-reduced-motion:reduce){
   .ld-dot,.sx-prog,.sx-inner{display:none}.sx-wire{animation:none}.lad-art .sx-disc{animation:none}
@@ -5440,33 +5442,42 @@ html.legal-open { overflow: hidden; }
 
     <ol class="lad" aria-label="Three sizes of scope">
       <li class="lad-card lad-1">
-        <div class="lad-head"><span class="lad-tag">01</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="lad-head"><span class="lad-tag">01</span><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
         <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l1i0" d="M16 26 L116 76"/><path id="l1i1" d="M16 51 L116 76"/><path id="l1i2" d="M16 76 L116 76"/><path id="l1i3" d="M16 101 L116 76"/><path id="l1i4" d="M16 126 L116 76"/><path id="l1o" d="M172 76 L254 76"/></defs><path class="sx-wire" d="M16 26 L116 76"/><path class="sx-wire" d="M16 51 L116 76"/><path class="sx-wire" d="M16 76 L116 76"/><path class="sx-wire" d="M16 101 L116 76"/><path class="sx-wire" d="M16 126 L116 76"/><path class="sx-wire" d="M172 76 L254 76"/><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.28s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.28s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.56s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.56s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i3"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="1.12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i4"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="1.12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><g class="sx-st" transform="translate(146 76)" style="--d:1.50s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.9)" style="stroke-width:2.33"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st" transform="translate(284 76)" style="--d:3.90s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.8)" style="stroke-width:2.62"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.620;1"><mpath href="#l1o"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.360;0.600;0.640;1"/></circle><text class="ld-t" x="4" y="146" text-anchor="start">20 signups</text><text class="ld-t" x="146" y="146" text-anchor="middle">scored 0 to 100</text><text class="ld-t" x="284" y="146" text-anchor="middle">4 to a person</text></svg>
         <h3 class="lad-title">Workflow</h3>
         <p class="lad-sub">One automation, one job.</p>
-        <p class="lad-desc">Twenty signups in, four worth a person’s time. One rule set, one owner for each result.</p>
-        <p class="lad-status">Built on synthetic data.</p>
         <a class="lad-link" href="/work/signup-router/">Example: Signup router &rarr;</a>
       </li>
       <li class="lad-card lad-2">
-        <div class="lad-head"><span class="lad-tag">02</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="lad-head"><span class="lad-tag">02</span><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
         <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l2p" d="M30 62 L290 62"/></defs><path class="sx-wire" d="M51 62 L74 62"/><path class="sx-wire" d="M116 62 L139 62"/><path class="sx-wire" d="M181 62 L204 62"/><path class="sx-wire" d="M246 62 L269 62"/><path class="sx-wire ld-loop" d="M290 112 C290 148 30 148 30 112"/><path class="sx-arrow" d="M25 119 L30 111 L35 119"/><g class="sx-st" transform="translate(30 62)" style="--d:0.10s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(95 62)" style="--d:1.33s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><g class="sx-st" transform="translate(160 62)" style="--d:2.55s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><rect x="-15" y="-10" width="30" height="20" rx="3"/><path d="M-15 -7l15 11 15-11"/></g></g><g class="sx-st" transform="translate(225 62)" style="--d:3.77s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-14 1l9 9 19-19"/></g></g><g class="sx-st" transform="translate(290 62)" style="--d:5.00s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-16 0H14M3 -11L14 0 3 11"/></g></g><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.743;1"><mpath href="#l2p"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.739;0.779;1"/></circle><text class="ld-t" x="30" y="100" text-anchor="middle">Clean</text><text class="ld-t" x="95" y="100" text-anchor="middle">Signal</text><text class="ld-t" x="160" y="100" text-anchor="middle">Write</text><text class="ld-t" x="225" y="100" text-anchor="middle">Check</text><text class="ld-t" x="290" y="100" text-anchor="middle">Send</text></svg>
         <h3 class="lad-title">Engine</h3>
         <p class="lad-sub">Several workflows, one revenue motion.</p>
-        <p class="lad-desc">Clean the list, find the signal, write the email, check it, send it. Each step hands its result to the next.</p>
-        <p class="lad-status">Built on synthetic data.</p>
         <a class="lad-link" href="/work/signal-outreach/">Example: Signal outreach &rarr;</a>
       </li>
       <li class="lad-card lad-3">
-        <div class="lad-head"><span class="lad-tag">03</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="lad-head"><span class="lad-tag">03</span><span class="lad-badge">Design, CRM live</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
         <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l3i0" d="M26 36 L64 36 C110 36 118 76 146 76"/><path id="l3i1" d="M26 76 L64 76 C110 76 118 76 146 76"/><path id="l3i2" d="M26 116 L64 116 C110 116 118 76 146 76"/><path id="l3o" d="M206 76 L258 76"/></defs><rect class="ld-rules" x="4" y="12" width="312" height="134" rx="16"/><path class="sx-wire" d="M26 36 L64 36 C110 36 118 76 146 76"/><path class="sx-wire" d="M26 76 L64 76 C110 76 118 76 146 76"/><path class="sx-wire" d="M26 116 L64 116 C110 116 118 76 146 76"/><path class="sx-wire" d="M206 76 L258 76"/><g class="sx-em sx-ob" transform="translate(20 36)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 36)" style="--d:0.65s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><circle r="4" class="ld-dot ld-ob"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><g class="sx-em sx-in" transform="translate(20 76)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 76)" style="--d:0.77s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g><circle r="4" class="ld-dot ld-in"><animateMotion dur="7.0s" begin="0.1s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.1s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><g class="sx-em sx-crm" transform="translate(20 116)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 116)" style="--d:0.89s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-13 -9h26M-13 0h26M-13 9h16"/></g></g><circle r="4" class="ld-dot ld-crm"><animateMotion dur="7.0s" begin="0.2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><g class="sx-st" transform="translate(176 76)" style="--d:2.10s"><circle r="30" class="sx-halo"/><circle r="30" class="sx-disc"/><g class="sx-ic" transform="scale(1.0)" style="stroke-width:2.10"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(284 76)" style="--d:4.60s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.8)" style="stroke-width:2.62"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.660;1"><mpath href="#l3o"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.400;0.640;0.680;1"/></circle><text class="ld-t ld-rt" x="160" y="16" text-anchor="middle">same checks on every step</text></svg>
         <h3 class="lad-title">System</h3>
         <p class="lad-sub">The operating system.</p>
-        <p class="lad-desc">Outbound, inbound and the CRM on one data layer, with the same checks on every step.</p>
-        <p class="lad-status">Design. The CRM foundation behind it is live.</p>
         <a class="lad-link" href="#crmProofTitle">See the CRM foundation &darr;</a>
       </li>
     </ol>
+
+    <!-- CRM FOUNDATION PROOF -->
+    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
+      <div class="crm-proof-head">
+        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, live</div>
+        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
+      </div>
+      <p>I extended an existing HubSpot setup and found what was breaking it: broken stage criteria, fields wired to the wrong places, missing connections and duplicate records. Reps were copy pasting scattered, often wrong data by hand. I fixed the stages and fields, removed the duplicates and automated the upkeep. Since then nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The dashboards on the signal engine and the weekly forecast leadership uses run on that clean data.</p>
+      <ul class="crm-proof-facts" aria-label="CRM foundation results">
+        <li><strong>3 hours</strong><span>a week saved</span></li>
+        <li><strong>8%</strong><span>lower churn</span></li>
+        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
+        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
+      </ul>
+    </div>
 
     <div class="sys-flow" role="group" aria-labelledby="sysFlowCap">
       <p class="sys-sub">The path every size follows<span class="sys-key"><span class="sys-ob">Outbound</span><span class="sys-in">Inbound</span><span class="sys-crm">CRM</span></span></p>
@@ -5498,55 +5509,16 @@ html.legal-open { overflow: hidden; }
 <circle r="5" class="sx-dot sx-crm"><animateMotion dur="8.0s" begin="0.7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp2"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
 <circle r="5" class="sx-dot sx-rec"><animateMotion dur="8.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.362;0.812;1"><mpath href="#sxr"/></animateMotion><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.362;0.392;0.792;0.833;1"/><animate attributeName="r" dur="8.0s" repeatCount="indefinite" values="5;5;8;8" keyTimes="0;0.562;0.613;1"/></circle>
 </svg>
-        <svg class="sys-art sys-art-m" viewBox="0 0 72 580" width="72" height="580" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-<defs><radialGradient id="sxgM" cx=".35" cy=".3" r=".9"><stop offset="0" style="stop-color:var(--paper)"/><stop offset="1" style="stop-color:var(--paper-warm)"/></radialGradient>
-<path id="sxm0" d="M14 35 C 14 70, 36 64, 36 92 L 36 240"/>
-<path id="sxm1" d="M36 35 C 36 70, 36 64, 36 92 L 36 240"/>
-<path id="sxm2" d="M58 35 C 58 70, 36 64, 36 92 L 36 240"/>
-<path id="sxmr" d="M36 240 L 36 480"/></defs>
-<path class="sx-wire" d="M14 35 C 14 70, 36 64, 36 92"/>
-<path class="sx-wire" d="M36 35 C 36 70, 36 64, 36 92"/>
-<path class="sx-wire" d="M58 35 C 58 70, 36 64, 36 92"/>
-<path class="sx-wire" d="M36 146 L 36 454"/>
-<path class="sx-prog" pathLength="100" d="M36 266 L 36 454"/>
-<path class="sx-wire sx-out" d="M36 506 L 36 566"/>
-<path class="sx-arrow" d="M30 558 L 36 568 L 42 558"/>
-<g class="sx-em sx-ob" transform="translate(14 26)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g>
-<g class="sx-em sx-in" transform="translate(36 26)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g>
-<g class="sx-em sx-crm" transform="translate(58 26)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g>
-<g class="sx-st sx-st1" transform="translate(36 120) scale(0.6190)" style="--d:1.00s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g>
-<g class="sx-st sx-st2" transform="translate(36 240) scale(0.6190)" style="--d:2.70s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g>
-<g class="sx-st sx-st3" transform="translate(36 360) scale(0.6190)" style="--d:4.50s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g>
-<g class="sx-st sx-st4" transform="translate(36 480) scale(0.6190)" style="--d:6.30s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g>
-<circle r="3.6" class="sx-dot sx-ob"><animateMotion dur="8.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.373;1"><mpath href="#sxm0"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.342;0.373;1"/></circle>
-<circle r="3.6" class="sx-dot sx-in"><animateMotion dur="8.0s" begin="0.35s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxm1"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.35s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/></circle>
-<circle r="3.6" class="sx-dot sx-crm"><animateMotion dur="8.0s" begin="0.7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.373;1"><mpath href="#sxm2"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.342;0.373;1"/></circle>
-<circle r="3.6" class="sx-dot sx-rec"><animateMotion dur="8.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.362;0.812;1"><mpath href="#sxmr"/></animateMotion><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.362;0.392;0.792;0.833;1"/><animate attributeName="r" dur="8.0s" repeatCount="indefinite" values="3.6;3.6;5.6;5.6" keyTimes="0;0.562;0.613;1"/></circle>
-</svg>
         <ol class="sys-steps">
-          <li class="sys-step"><h3 class="sys-title">Capture</h3><p>Signals and signups, one place.</p></li>
-          <li class="sys-step"><h3 class="sys-title">Structure</h3><p>One clean record.</p></li>
-          <li class="sys-step"><h3 class="sys-title">Enrich</h3><p>Fit score and context.</p></li>
-          <li class="sys-step"><h3 class="sys-title">Deliver</h3><p>One owner, one next step.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:0.78s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g></svg><h3 class="sys-title">Capture</h3><p>Signals and signups, one place.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:2.7s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g></svg><h3 class="sys-title">Structure</h3><p>One clean record.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:4.5s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g></svg><h3 class="sys-title">Enrich</h3><p>Fit score and context.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:6.3s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g></svg><h3 class="sys-title">Deliver</h3><p>One owner, one next step.</p></li>
         </ol>
       </div>
       <p class="sys-out">Reps spend their time on conversations, not on copying data between tools.</p>
     </div>
 
-    <!-- CRM FOUNDATION PROOF -->
-    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
-      <div class="crm-proof-head">
-        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, live</div>
-        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
-      </div>
-      <p>I extended an existing HubSpot setup and found what was breaking it: broken stage criteria, fields wired to the wrong places, missing connections and duplicate records. Reps were copy pasting scattered, often wrong data by hand. I fixed the stages and fields, removed the duplicates and automated the upkeep. Since then nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The dashboards on the signal engine and the weekly forecast leadership uses run on that clean data.</p>
-      <ul class="crm-proof-facts" aria-label="CRM foundation results">
-        <li><strong>3 hours</strong><span>a week saved for the team</span></li>
-        <li><strong>8%</strong><span>lower churn</span></li>
-        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
-        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
-      </ul>
-    </div>
   </div>
 </section>
 
