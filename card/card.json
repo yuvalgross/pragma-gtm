@@ -1,6 +1,6 @@
 {
   "name": "Yuval Gross",
-  "role": "GTM Engineer · CloserStill Group (OEB Global)",
+  "role": "GTM Engineer",
   "location": "Berlin",
   "avatar": "",
   "line": "Sold enterprise SaaS for years, then automated it. I build the signal engine, the CRM rules and the outreach that sales teams actually use.",
@@ -15,7 +15,7 @@
     { "label": "Code", "items": ["Python", "JavaScript", "APIs & webhooks"] }
   ],
   "nums": [
-    { "b": "€295k → €390k", "t": "OEB program revenue after the signal engine" },
+    { "b": "€295k → €390k", "t": "program revenue after the signal engine" },
     { "b": "+42%", "t": "MQL rate from signal based outbound" },
     { "b": "40% vs 12%", "t": "close rate, signal vs generic cohorts" },
     { "b": "17 → 5", "t": "tools consolidated, 95% team adoption" },
