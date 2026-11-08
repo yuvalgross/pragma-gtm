@@ -194,45 +194,94 @@
 .work-rule { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--ink-soft); max-width: 62ch; }
 .work-rule strong { color: var(--ink); font-weight: 500; }
 
-/* Layer map: three motions x four jobs (system section) */
+/* The system: one path, four steps, animated like the signal engine */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.layer-map{margin:2.5rem 0 0;display:grid;gap:1rem}
-.lm-grid{display:grid;grid-template-columns:150px repeat(4,minmax(0,1fr));gap:10px;position:relative}
-.lm-corner{display:flex;flex-direction:column;justify-content:flex-end;gap:2px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding:0 0 .9rem}
-.lm-corner span:last-child{text-transform:none;letter-spacing:0;font-size:.8rem}
-.lm-job{position:relative;display:flex;flex-direction:column;gap:.2rem;padding:1rem 1.1rem 1.1rem;border-radius:12px;background:var(--ink);color:var(--paper)}
-.lm-job:not(:nth-child(5))::after{content:"";position:absolute;right:-9px;top:50%;width:8px;height:8px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:translate(0,-50%) rotate(45deg);z-index:2}
-.lm-num{font-family:var(--font-display);font-size:1.6rem;line-height:1;color:var(--accent)}
-.lm-job-title{font-family:var(--font-display);font-size:1.35rem;line-height:1.15}
-.lm-job-desc{font-size:.8rem;opacity:.72;line-height:1.35}
-.lm-lane{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.25rem;color:var(--ink);padding:.4rem 0}
-.lm-dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--lane)}
-.lm-cell{position:relative;padding:.85rem 1rem .85rem 1.1rem;border-radius:10px;background:var(--paper);border:1px solid var(--border);font-size:.86rem;line-height:1.45;color:var(--ink-soft);overflow:hidden}
-.lm-cell::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lane)}
-.lm-lane.lm-ob,.lm-cell.lm-ob{--lane:var(--accent)}
-.lm-lane.lm-in,.lm-cell.lm-in{--lane:var(--teal)}
-.lm-lane.lm-crm,.lm-cell.lm-crm{--lane:var(--gold, var(--accent-dark))}
-.lm-rail{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.4rem;margin-left:160px;padding:.85rem 1.2rem;border-radius:10px;border:1px dashed var(--border-gold);font-size:.84rem;color:var(--ink-soft)}
-.lm-rail span:not(.lm-rail-label){display:inline-flex;align-items:center;gap:.5rem}
-.lm-rail span:not(.lm-rail-label)::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
-.lm-rail-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dark);font-weight:500}
-.layer-map .lm-out{margin-left:160px;padding:1.1rem 1.3rem;border-radius:12px;background:var(--ink);color:var(--paper);font-size:.92rem;line-height:1.55}
-.layer-map .lm-out strong{font-family:var(--font-display);font-weight:500;font-size:1.25rem;display:block;margin-bottom:.15rem}
-:root[data-theme="dark"] .lm-job,:root[data-theme="dark"] .layer-map .lm-out{background:var(--paper-deep);color:var(--ink);border:1px solid var(--border)}
-@media (max-width: 900px){
-  .lm-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .lm-corner{display:none}
-  .lm-lane{grid-column:1/-1;margin-top:.6rem}
-  .lm-rail,.layer-map .lm-out{margin-left:0}
+.sys-flow{position:relative;margin:3rem 0 0;display:grid;gap:1.75rem}
+.sys-sub{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted)}
+.sys-sub::after{content:"";flex:1;min-width:1rem;border-top:1px solid var(--border-soft)}
+.sys-key{order:1;display:inline-flex;flex-wrap:wrap;gap:.2rem 1rem;text-transform:none;letter-spacing:0;font-weight:500;font-size:.82rem}
+.sys-key span{display:inline-flex;align-items:center;gap:.4rem}
+.sys-key span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.sys-key .sys-ob{--c:var(--accent)}.sys-key .sys-in{--c:var(--teal)}.sys-key .sys-crm{--c:var(--gold)}
+.lad{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.lad-card{display:flex;flex-direction:column;gap:.5rem;padding:1.1rem 1.15rem 1.2rem;border-radius:16px;background:var(--paper);border:1px solid var(--border-soft)}
+.lad-1{margin-top:44px}.lad-2{margin-top:22px}
+.lad-3{border-color:var(--accent);box-shadow:0 0 0 4px rgba(217,119,6,.08)}
+.lad-head{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.lad-tag{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark)}
+.lad-bars{display:flex;gap:3px}.lad-bars i{width:18px;height:6px;border-radius:3px;background:var(--border)}
+.lad-1 .lad-bars i:nth-child(1),.lad-2 .lad-bars i:nth-child(-n+2),.lad-3 .lad-bars i{background:var(--accent)}
+.lad-art{display:block;width:100%;height:auto;margin:.2rem 0;--hs:1.22}
+.lad-title{margin:0;font-family:var(--font-display);font-weight:400;font-size:1.9rem;line-height:1.1;color:var(--ink)}
+.lad-sub{margin:0;font-size:.95rem;font-weight:500;line-height:1.4;color:var(--ink)}
+.lad-link{margin-top:auto;padding-top:.4rem;font-size:.9rem;font-weight:500;color:var(--accent-dark);text-decoration:none}
+.lad-link:hover{text-decoration:underline}
+.lad-art .sx-disc{fill:var(--paper-warm)}
+.lad-art .sx-disc,.lad-art .sx-halo,.lad-art .sx-arc,.lad-art .sx-star,.lad-art .sx-badge,.lad-art .sx-check,.lad-art .sx-emc{animation-duration:7s}
+.lad-art text{font-family:inherit;font-size:12px;font-weight:500;fill:var(--ink-muted)}
+.ld-dot.ld-mute{fill:var(--ink-muted)}.ld-dot.ld-acc,.ld-dot.ld-ob{fill:var(--accent)}.ld-dot.ld-in{fill:var(--teal)}.ld-dot.ld-crm{fill:var(--gold)}
+.ld-rules{fill:none;stroke:var(--border);stroke-width:1.2;stroke-dasharray:3 5}
+.lad-art text.ld-rt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;fill:var(--accent-dark);paint-order:stroke;stroke:var(--paper);stroke-width:7px;stroke-linejoin:round}
+@media (max-width:860px){.lad{grid-template-columns:1fr;margin-top:2rem}.lad-1,.lad-2{margin-top:0}.lad-art{max-width:420px}}
+.sys-board{position:relative;max-width:900px;margin:0 auto;width:100%}
+.sys-art{display:block;max-width:100%}
+.sys-art-d{width:100%;height:auto}
+.sys-mini{display:none;width:60px;height:60px;--hs:1.15}
+.sys-mini .sx-disc{fill:var(--paper-warm)}
+.lad-badge{padding:.15rem .6rem;border:1px solid var(--border);border-radius:999px;font-size:.72rem;line-height:1.4;color:var(--ink-muted);white-space:nowrap}
+.lad-bars{margin-left:auto}
+.sys-steps{list-style:none;margin:.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.sys-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 .5rem}
+.sys-title{margin:0 0 .4rem;font-family:var(--font-display);font-weight:400;font-size:1.75rem;line-height:1.1;color:var(--ink)}
+.sys-step p{margin:0;max-width:24ch;font-size:.92rem;line-height:1.5;color:var(--ink-muted)}
+.sx-wire{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:4 5;animation:sxFlow 1.4s linear infinite}
+.sx-arrow{fill:none;stroke:var(--border);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sx-emc{transform-box:fill-box;transform-origin:center;animation:sxEm 8s linear infinite}
+.sx-em.sx-ob .sx-emc,.sx-dot.sx-ob{fill:var(--accent)}
+.sx-em.sx-in .sx-emc,.sx-dot.sx-in{fill:var(--teal)}
+.sx-em.sx-crm .sx-emc,.sx-dot.sx-crm{fill:var(--gold)}
+.sx-em.sx-in .sx-emc{animation-delay:.35s}
+.sx-em.sx-crm .sx-emc{animation-delay:.7s}
+.sx-dot.sx-rec{fill:var(--ink);animation:sxRec 8s linear infinite}
+.sx-disc{fill:var(--paper);stroke:var(--border);stroke-width:1.5;animation:sxDisc 8s linear infinite;animation-delay:var(--d)}
+.sys-art-d .sx-disc{fill:url(#sxgD)}
+.sx-inner{fill:none;stroke:var(--border);stroke-width:1.2;stroke-dasharray:1.5 5;stroke-linecap:round;transform-box:fill-box;transform-origin:center;animation:sxSpin 40s linear infinite}
+.sx-prog{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:sxProg 8s linear infinite}
+.sx-halo{fill:none;stroke:var(--accent);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:sxHalo 8s linear infinite;animation-delay:var(--d)}
+.sx-ic{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.sx-track{stroke:var(--border)}
+.sx-arc{stroke:var(--accent);stroke-width:3;stroke-dasharray:107;stroke-dashoffset:107;animation:sxArc 8s linear infinite;animation-delay:var(--d)}
+.sx-star{stroke-width:1.6;animation:sxStar 8s linear infinite;animation-delay:var(--d)}
+.sx-badge{fill:var(--paper);animation:sxBadge 8s linear infinite;animation-delay:var(--d)}
+.sx-check{stroke:#fff;stroke-width:2.4;stroke-dasharray:20;stroke-dashoffset:20;animation:sxCheck 8s linear infinite;animation-delay:var(--d)}
+@keyframes sxEm{0%{transform:scale(1.28)}6%,100%{transform:scale(1)}}
+@keyframes sxHalo{0%{opacity:.75;transform:scale(1)}16%,100%{opacity:0;transform:scale(var(--hs,1.4))}}
+@keyframes sxDisc{0%{stroke:var(--accent)}20%,100%{stroke:var(--border)}}
+@keyframes sxArc{0%{stroke-dashoffset:107}14%,84%{stroke-dashoffset:22}94%,100%{stroke-dashoffset:107}}
+@keyframes sxStar{0%,8%{fill:transparent}16%,84%{fill:var(--accent);stroke:var(--accent)}94%,100%{fill:transparent}}
+@keyframes sxBadge{0%{fill:var(--paper);stroke:var(--ink)}10%,84%{fill:var(--teal);stroke:var(--teal)}94%,100%{fill:var(--paper);stroke:var(--ink)}}
+@keyframes sxCheck{0%,4%{stroke-dashoffset:20}14%,84%{stroke-dashoffset:0}94%,100%{stroke-dashoffset:20}}
+@keyframes sxFlow{to{stroke-dashoffset:-9}}
+@keyframes sxSpin{to{transform:rotate(360deg)}}
+@keyframes sxProg{0%{stroke-dashoffset:100;opacity:1}36%{stroke-dashoffset:100}81%{stroke-dashoffset:0}91%{opacity:1}97%{opacity:0;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:100}}
+@keyframes sxRec{0%,52%{fill:var(--ink)}60%,100%{fill:var(--accent)}}
+.sys-out{margin:0;font-size:1.05rem;line-height:1.55;color:var(--ink);max-width:60ch}
+@media (max-width:760px){
+  .sys-art-d{display:none}
+  .sys-mini{display:block}
+  .sys-steps{grid-template-columns:1fr 1fr;gap:1.6rem 1rem;margin:0}
+  .sys-step{align-items:flex-start;text-align:left;padding:0}
+  .sys-title{margin:.6rem 0 .25rem;font-size:1.6rem}
+  .sys-step p{max-width:none}
 }
-@media (max-width: 640px){
-  .lm-grid{grid-template-columns:1fr;gap:8px}
-  .lm-job{flex-direction:row;align-items:baseline;gap:.6rem;padding:.75rem 1rem}
-  .lm-job::after{display:none}
-  .lm-job-title{white-space:nowrap}
-  .lm-job-desc{margin-left:auto;text-align:right;font-size:.74rem}
-  .lm-cell::after{content:attr(data-job);display:block;order:-1;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-top:.3rem}
-  .lm-cell{display:flex;flex-direction:column-reverse}
+}
+@media (prefers-reduced-motion:reduce){
+  .ld-dot,.sx-prog,.sx-inner{display:none}.sx-wire{animation:none}.lad-art .sx-disc{animation:none}
+  .sx-dot{display:none}
+  .sx-emc,.sx-disc,.sx-halo,.sx-star,.sx-badge,.sx-check,.sx-arc{animation:none}
+  .sx-halo{display:none}
+  .sx-arc{stroke-dashoffset:22}.sx-star{fill:var(--accent);stroke:var(--accent)}
+  .sx-badge{fill:var(--teal);stroke:var(--teal)}.sx-check{stroke-dashoffset:0}
 }
 /* CRM proof, two columns */
 .crm-proof{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:2.5rem;align-items:start}
@@ -4315,9 +4364,9 @@ html.legal-open { overflow: hidden; }
   </a>
   <div class="nav-right">
     <ul class="nav-links" role="list">
-      <li><a href="#expertise">Expertise</a></li>
       <li><a href="#philosophy">Philosophy</a></li>
       <li><a href="#how">The system</a></li>
+      <li><a href="#expertise">Expertise</a></li>
       <li><a href="#samples">Samples</a></li>
       <li><a href="#stack">CV</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -4338,9 +4387,9 @@ html.legal-open { overflow: hidden; }
 
 <!-- Mobile nav drawer -->
 <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
-  <a href="#expertise" onclick="closeMenu()">Expertise</a>
   <a href="#philosophy" onclick="closeMenu()">Philosophy</a>
   <a href="#how" onclick="closeMenu()">The system</a>
+  <a href="#expertise" onclick="closeMenu()">Expertise</a>
   <a href="#samples" onclick="closeMenu()">Samples</a>
   <a href="#stack" onclick="closeMenu()">CV</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-nav-cta">Contact</a>
@@ -5334,6 +5383,145 @@ html.legal-open { overflow: hidden; }
 </div>
 
 
+<!-- PHILOSOPHY -->
+<section class="philosophy-section" id="philosophy">
+  <div class="container">
+    <div class="section-label">The philosophy</div>
+    <h2>Less stack.<br><em>More revenue.</em></h2>
+    <p class="phil-intro">Most revenue teams don't have a tool problem. They have a process problem: stages nobody agrees on, records nobody trusts, handoffs nobody owns. Another tool makes it worse. I fix the revenue process first, then automate what is left. Eight years in B2B sales taught me where it breaks.</p>
+
+    <div class="philosophy-grid">
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">Fix the process first</div>
+        <p class="phil-desc">Map the funnel, the stage definitions and the handoffs before adding anything. Most of the stack turns out to be covering for a gap in the process.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">17 → 5</span>
+          <span class="phil-stat-label">Tools after the audit</span>
+        </div>
+      </div>
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">One source of truth</div>
+        <p class="phil-desc">One record per account, one owner, one definition of each stage. Forecasts and dashboards are only as good as the data under them.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">−8%</span>
+          <span class="phil-stat-label">Churn after the CRM foundation</span>
+        </div>
+      </div>
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">AI where it earns its place</div>
+        <p class="phil-desc">AI for enrichment, scoring and first drafts, with a person approving anything a customer sees. It stays only where it moves a stage.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">+42%</span>
+          <span class="phil-stat-label">MQL increase</span>
+        </div>
+      </div>
+
+      <div class="phil-card fade-up">
+        <div class="phil-title">Measured by stage</div>
+        <p class="phil-desc">Every signal cohort is tracked against the rest of the pipeline, stage by stage, so the plan follows the data.</p>
+        <div class="phil-stat">
+          <span class="phil-stat-num">40% vs 12%</span>
+          <span class="phil-stat-label">Close rate, signal cohorts vs the rest</span>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+</section>
+
+<!-- GTM FUNNEL -->
+<section class="how" id="how" aria-labelledby="system-heading">
+  <div class="container">
+    <div class="section-label">The system</div>
+    <h2 id="system-heading">Start with a workflow. <em>End with a system.</em></h2>
+    <p class="section-intro">I build revenue automation in three sizes. Every size runs the same four steps, so a workflow can grow into an engine, and an engine into a system.</p>
+
+    <ol class="lad" aria-label="Three sizes of scope">
+      <li class="lad-card lad-1">
+        <div class="lad-head"><span class="lad-tag">01</span><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l1i0" d="M16 26 L116 76"/><path id="l1i1" d="M16 51 L116 76"/><path id="l1i2" d="M16 76 L116 76"/><path id="l1i3" d="M16 101 L116 76"/><path id="l1i4" d="M16 126 L116 76"/><path id="l1o" d="M172 76 L254 76"/></defs><path class="sx-wire" d="M16 26 L116 76"/><path class="sx-wire" d="M16 51 L116 76"/><path class="sx-wire" d="M16 76 L116 76"/><path class="sx-wire" d="M16 101 L116 76"/><path class="sx-wire" d="M16 126 L116 76"/><path class="sx-wire" d="M172 76 L254 76"/><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.28s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.28s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.56s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.56s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i3"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="1.12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i4"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="1.12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><g class="sx-st" transform="translate(146 76)" style="--d:1.50s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.9)" style="stroke-width:2.33"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st" transform="translate(284 76)" style="--d:3.90s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.8)" style="stroke-width:2.62"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.620;1"><mpath href="#l1o"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.360;0.600;0.640;1"/></circle><text class="ld-t" x="4" y="146" text-anchor="start">20 signups</text><text class="ld-t" x="146" y="146" text-anchor="middle">scored 0 to 100</text><text class="ld-t" x="284" y="146" text-anchor="middle">4 to a person</text></svg>
+        <h3 class="lad-title">Workflow</h3>
+        <p class="lad-sub">One automation, one job.</p>
+        <a class="lad-link" href="/work/signup-router/">Example: Signup router &rarr;</a>
+      </li>
+      <li class="lad-card lad-2">
+        <div class="lad-head"><span class="lad-tag">02</span><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l2p" d="M30 62 L290 62"/></defs><path class="sx-wire" d="M51 62 L74 62"/><path class="sx-wire" d="M116 62 L139 62"/><path class="sx-wire" d="M181 62 L204 62"/><path class="sx-wire" d="M246 62 L269 62"/><path class="sx-wire ld-loop" d="M290 112 C290 148 30 148 30 112"/><path class="sx-arrow" d="M25 119 L30 111 L35 119"/><g class="sx-st" transform="translate(30 62)" style="--d:0.10s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(95 62)" style="--d:1.33s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><g class="sx-st" transform="translate(160 62)" style="--d:2.55s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><rect x="-15" y="-10" width="30" height="20" rx="3"/><path d="M-15 -7l15 11 15-11"/></g></g><g class="sx-st" transform="translate(225 62)" style="--d:3.77s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-14 1l9 9 19-19"/></g></g><g class="sx-st" transform="translate(290 62)" style="--d:5.00s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-16 0H14M3 -11L14 0 3 11"/></g></g><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.743;1"><mpath href="#l2p"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.739;0.779;1"/></circle><text class="ld-t" x="30" y="100" text-anchor="middle">Clean</text><text class="ld-t" x="95" y="100" text-anchor="middle">Signal</text><text class="ld-t" x="160" y="100" text-anchor="middle">Write</text><text class="ld-t" x="225" y="100" text-anchor="middle">Check</text><text class="ld-t" x="290" y="100" text-anchor="middle">Send</text></svg>
+        <h3 class="lad-title">Engine</h3>
+        <p class="lad-sub">Several workflows, one revenue motion.</p>
+        <a class="lad-link" href="/work/signal-outreach/">Example: Signal outreach &rarr;</a>
+      </li>
+      <li class="lad-card lad-3">
+        <div class="lad-head"><span class="lad-tag">03</span><span class="lad-badge">Design, CRM live</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l3i0" d="M26 36 L64 36 C110 36 118 76 146 76"/><path id="l3i1" d="M26 76 L64 76 C110 76 118 76 146 76"/><path id="l3i2" d="M26 116 L64 116 C110 116 118 76 146 76"/><path id="l3o" d="M206 76 L258 76"/></defs><rect class="ld-rules" x="4" y="12" width="312" height="134" rx="16"/><path class="sx-wire" d="M26 36 L64 36 C110 36 118 76 146 76"/><path class="sx-wire" d="M26 76 L64 76 C110 76 118 76 146 76"/><path class="sx-wire" d="M26 116 L64 116 C110 116 118 76 146 76"/><path class="sx-wire" d="M206 76 L258 76"/><g class="sx-em sx-ob" transform="translate(20 36)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 36)" style="--d:0.65s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><circle r="4" class="ld-dot ld-ob"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><g class="sx-em sx-in" transform="translate(20 76)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 76)" style="--d:0.77s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g><circle r="4" class="ld-dot ld-in"><animateMotion dur="7.0s" begin="0.1s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.1s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><g class="sx-em sx-crm" transform="translate(20 116)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 116)" style="--d:0.89s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-13 -9h26M-13 0h26M-13 9h16"/></g></g><circle r="4" class="ld-dot ld-crm"><animateMotion dur="7.0s" begin="0.2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><g class="sx-st" transform="translate(176 76)" style="--d:2.10s"><circle r="30" class="sx-halo"/><circle r="30" class="sx-disc"/><g class="sx-ic" transform="scale(1.0)" style="stroke-width:2.10"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(284 76)" style="--d:4.60s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.8)" style="stroke-width:2.62"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.660;1"><mpath href="#l3o"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.400;0.640;0.680;1"/></circle><text class="ld-t ld-rt" x="160" y="16" text-anchor="middle">same checks on every step</text></svg>
+        <h3 class="lad-title">System</h3>
+        <p class="lad-sub">The operating system.</p>
+        <a class="lad-link" href="#crmProofTitle">See the CRM foundation &darr;</a>
+      </li>
+    </ol>
+
+    <!-- CRM FOUNDATION PROOF -->
+    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
+      <div class="crm-proof-head">
+        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, live</div>
+        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
+      </div>
+      <p>I extended an existing HubSpot setup and found what was breaking it: broken stage criteria, fields wired to the wrong places, missing connections and duplicate records. Reps were copy pasting scattered, often wrong data by hand. I fixed the stages and fields, removed the duplicates and automated the upkeep. Since then nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The dashboards on the signal engine and the weekly forecast leadership uses run on that clean data.</p>
+      <ul class="crm-proof-facts" aria-label="CRM foundation results">
+        <li><strong>3 hours</strong><span>a week saved</span></li>
+        <li><strong>8%</strong><span>lower churn</span></li>
+        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
+        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
+      </ul>
+    </div>
+
+    <div class="sys-flow" role="group" aria-labelledby="sysFlowCap">
+      <p class="sys-sub">The path every size follows<span class="sys-key"><span class="sys-ob">Outbound</span><span class="sys-in">Inbound</span><span class="sys-crm">CRM</span></span></p>
+      <p id="sysFlowCap" class="sr-only">Outbound, inbound and the CRM each pass through the same four steps: capture, structure, enrich, deliver.</p>
+      <div class="sys-board">
+        <svg class="sys-art sys-art-d" viewBox="0 20 1100 190" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs><radialGradient id="sxgD" cx=".35" cy=".3" r=".9"><stop offset="0" style="stop-color:var(--paper)"/><stop offset="1" style="stop-color:var(--paper-warm)"/></radialGradient>
+<path id="sxp0" d="M38 45 C 82 45, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
+<path id="sxp1" d="M38 115 C 82 115, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
+<path id="sxp2" d="M38 185 C 82 185, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
+<path id="sxr" d="M412.5 115 L 962.5 115"/>
+</defs>
+<path class="sx-wire" d="M38 45 C 82 45, 76 115, 93.5 115"/>
+<path class="sx-wire" d="M38 115 C 82 115, 76 115, 93.5 115"/>
+<path class="sx-wire" d="M38 185 C 82 185, 76 115, 93.5 115"/>
+<path class="sx-wire" d="M179.5 115 L 920.5 115"/>
+<path class="sx-prog" pathLength="100" d="M454.5 115 L 920.5 115"/>
+<path class="sx-wire sx-out" d="M1004.5 115 L 1084 115"/>
+<path class="sx-arrow" d="M1074 108 L 1086 115 L 1074 122"/>
+<g class="sx-em sx-ob" transform="translate(24 45)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<g class="sx-em sx-in" transform="translate(24 115)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<g class="sx-em sx-crm" transform="translate(24 185)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<g class="sx-st sx-st1" transform="translate(137.5 115)" style="--d:0.78s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g>
+<g class="sx-st sx-st2" transform="translate(412.5 115)" style="--d:2.70s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g>
+<g class="sx-st sx-st3" transform="translate(687.5 115)" style="--d:4.50s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g>
+<g class="sx-st sx-st4" transform="translate(962.5 115)" style="--d:6.30s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g>
+<circle r="5" class="sx-dot sx-ob"><animateMotion dur="8.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp0"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.0s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
+<circle r="5" class="sx-dot sx-in"><animateMotion dur="8.0s" begin="0.35s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp1"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.35s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.35s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
+<circle r="5" class="sx-dot sx-crm"><animateMotion dur="8.0s" begin="0.7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp2"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
+<circle r="5" class="sx-dot sx-rec"><animateMotion dur="8.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.362;0.812;1"><mpath href="#sxr"/></animateMotion><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.362;0.392;0.792;0.833;1"/><animate attributeName="r" dur="8.0s" repeatCount="indefinite" values="5;5;8;8" keyTimes="0;0.562;0.613;1"/></circle>
+</svg>
+        <ol class="sys-steps">
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:0.78s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g></svg><h3 class="sys-title">Capture</h3><p>Signals and signups, one place.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:2.7s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g></svg><h3 class="sys-title">Structure</h3><p>One clean record.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:4.5s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g></svg><h3 class="sys-title">Enrich</h3><p>Fit score and context.</p></li>
+          <li class="sys-step"><svg class="sys-mini" viewBox="-50 -50 100 100" aria-hidden="true" focusable="false"><g class="sx-st" style="--d:6.3s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g></svg><h3 class="sys-title">Deliver</h3><p>One owner, one next step.</p></li>
+        </ol>
+      </div>
+      <p class="sys-out">Reps spend their time on conversations, not on copying data between tools.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- EXPERTISE -->
 <section id="expertise">
   <div class="container">
@@ -5415,108 +5603,6 @@ html.legal-open { overflow: hidden; }
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
-<section class="philosophy-section" id="philosophy">
-  <div class="container">
-    <div class="section-label">The philosophy</div>
-    <h2>Less stack.<br><em>More revenue.</em></h2>
-    <p class="phil-intro">Most B2B sales orgs suffer from the same disease: too many tools, too little thinking. The answer isn't another tool. It's focused architecture, AI where it earns its place, and execution driven by real data.</p>
-
-    <div class="philosophy-grid">
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">Stack reduction first</div>
-        <p class="phil-desc">Audit before adding. Most orgs eliminate 40 to 60% of their tools and get better results.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">17 → 5</span>
-          <span class="phil-stat-label">Tools after optimisation</span>
-        </div>
-      </div>
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">AI where it earns its place</div>
-        <p class="phil-desc">AI for enrichment, personalisation, and scoring, validated against real conversion data.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">83%</span>
-          <span class="phil-stat-label">AI enabled teams see revenue growth</span>
-        </div>
-      </div>
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">Measured, not assumed</div>
-        <p class="phil-desc">Every signal cohort is tracked against the rest of the pipeline. What gets measured gets improved.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">40% vs 12%</span>
-          <span class="phil-stat-label">Close rate of signal cohorts</span>
-        </div>
-      </div>
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">Experience over frameworks</div>
-        <p class="phil-desc">8+ years in B2B revenue. Every system stress tested against real objections and deal cycles.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">8+ yrs</span>
-          <span class="phil-stat-label">In B2B revenue before building workflow tools</span>
-        </div>
-      </div>
-
-    </div>
-    </div>
-
-</section>
-
-<!-- GTM FUNNEL -->
-<section class="how" id="how" aria-labelledby="system-heading">
-  <div class="container">
-    <div class="section-label">The system</div>
-    <h2 id="system-heading">One layer, <em>four jobs.</em></h2>
-    <p class="section-intro">GTM engineering is more than outbound. It is one layer under the whole revenue team: get the data in, structure it in the CRM, add context, and deliver it to the right person. New logos, inbound and the customer book all run on the same layer.</p>
-
-    <figure class="layer-map" aria-labelledby="layerMapCap">
-      <figcaption id="layerMapCap" class="sr-only">Three motions, outbound, inbound and the CRM, each run through the same four jobs: get it in, structure it, add context, deliver it.</figcaption>
-      <div class="lm-grid">
-        <div class="lm-corner" aria-hidden="true"><span>Three motions</span><span>run through four jobs</span></div>
-        <div class="lm-job"><span class="lm-num">01</span><span class="lm-job-title">Get it in</span><span class="lm-job-desc">Signals and inbound in one place</span></div>
-        <div class="lm-job"><span class="lm-num">02</span><span class="lm-job-title">Structure it</span><span class="lm-job-desc">The CRM as system of record</span></div>
-        <div class="lm-job"><span class="lm-num">03</span><span class="lm-job-title">Add context</span><span class="lm-job-desc">Enrich, score, draft</span></div>
-        <div class="lm-job"><span class="lm-num">04</span><span class="lm-job-title">Deliver it</span><span class="lm-job-desc">One owner, one next step</span></div>
-        <div class="lm-lane lm-ob"><span class="lm-dot" aria-hidden="true"></span>Outbound</div>
-        <div class="lm-cell lm-ob" data-job="Get it in">Hiring, funding and leadership signals</div>
-        <div class="lm-cell lm-ob" data-job="Structure it">Each signal logged on the account, deduped</div>
-        <div class="lm-cell lm-ob" data-job="Add context">Clay waterfall, ICP score, Claude drafts the opener</div>
-        <div class="lm-cell lm-ob" data-job="Deliver it">Rep approves in Slack, then the sequence runs</div>
-        <div class="lm-lane lm-in"><span class="lm-dot" aria-hidden="true"></span>Inbound</div>
-        <div class="lm-cell lm-in" data-job="Get it in">Forms and trial signups, source tracked</div>
-        <div class="lm-cell lm-in" data-job="Structure it">Matched to the existing account, no duplicate</div>
-        <div class="lm-cell lm-in" data-job="Add context">Enriched and scored by fit</div>
-        <div class="lm-cell lm-in" data-job="Deliver it">Routed: AE, partner owner or nurture</div>
-        <div class="lm-lane lm-crm"><span class="lm-dot" aria-hidden="true"></span>The CRM</div>
-        <div class="lm-cell lm-crm" data-job="Get it in">Every write from the other two lanes</div>
-        <div class="lm-cell lm-crm" data-job="Structure it">Duplicate check and failure alert on each write</div>
-        <div class="lm-cell lm-crm" data-job="Add context">Dashboards on what the layer produces</div>
-        <div class="lm-cell lm-crm" data-job="Deliver it">Weekly forecast leadership uses</div>
-      </div>
-      <div class="lm-rail"><span class="lm-rail-label">On every step</span><span>Duplicate check before any write</span><span>Alert when a step fails</span><span>A person approves before anything sends</span></div>
-      <div class="lm-out"><strong>One layer, three motions, one set of rules.</strong> Reps spend their time on conversations, not on copying data between tools.</div>
-    </figure>
-
-    <!-- CRM FOUNDATION PROOF -->
-    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
-      <div class="crm-proof-head">
-        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, at OEB</div>
-        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
-      </div>
-      <p>I extended an existing HubSpot setup and found what was breaking it: broken stage criteria, fields wired to the wrong places, missing connections and duplicate records. Reps were copy pasting scattered, often wrong data by hand. I fixed the stages and fields, removed the duplicates and automated the upkeep. Since then nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The dashboards on the signal engine and the weekly forecast leadership uses run on that clean data.</p>
-      <ul class="crm-proof-facts" aria-label="CRM foundation results">
-        <li><strong>3 hours</strong><span>a week saved for the team</span></li>
-        <li><strong>8%</strong><span>lower churn</span></li>
-        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
-        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- WORK SAMPLES -->
 <section class="work" id="samples" aria-labelledby="samplesHeading">
   <div class="container">
@@ -5529,7 +5615,7 @@ html.legal-open { overflow: hidden; }
         <h3>CRM clean up</h3>
         <p class="work-sub">Fix the records, then find who a human should call.</p>
       </div>
-      <p>Four agents read a HubSpot export. Three clean it: duplicates, broken fields, records owned by people who left. The fourth reads the customer book and decides who gets an owner call this week and who an AI can look after, with the evidence for each. Nothing is written to the CRM until a person approves it. At OEB I fixed broken stage rules and duplicate records in HubSpot and automated the upkeep; this is a public version with its own code and synthetic data.</p>
+      <p>Four agents read a HubSpot export. Three clean it: duplicates, broken fields, records owned by people who left. The fourth reads the customer book and decides who gets an owner call this week and who an AI can look after, with the evidence for each. Nothing is written to the CRM until a person approves it. In a live sales team I fixed broken stage rules and duplicate records in HubSpot and automated the upkeep; this is a public version with its own code and synthetic data.</p>
       <ul class="work-facts" aria-label="Result of the sample run">
         <li><strong>47</strong><span>changes proposed, 9 safe to apply</span></li>
         <li><strong>&euro;190k</strong><span>pipeline past its close date</span></li>
@@ -5566,7 +5652,7 @@ html.legal-open { overflow: hidden; }
         <h3>Signal outreach</h3>
         <p class="work-sub">Write from a real signal, or send nothing.</p>
       </div>
-      <p>Generic cold email is the one thing this tool will not send. It cleans a contact list, keeps out anyone who should not be emailed, finds each person's freshest buying signal and writes three emails around it, then checks the copy and sends at 08:30 their time. 17 tests guard the rules. I built signal based outreach at OEB; this is a public version, rewritten with its own code and synthetic data.</p>
+      <p>Generic cold email is the one thing this tool will not send. It cleans a contact list, keeps out anyone who should not be emailed, finds each person's freshest buying signal and writes three emails around it, then checks the copy and sends at 08:30 their time. 17 tests guard the rules. I built signal based outreach for a live sales team; this is a public version, rewritten with its own code and synthetic data.</p>
       <ul class="work-facts" aria-label="Result of the sample run">
         <li><strong>119</strong><span>contacts in</span></li>
         <li><strong>78</strong><span>held, cleaned out or sent to nurture</span></li>
@@ -5756,9 +5842,9 @@ html.legal-open { overflow: hidden; }
     <span class="footer-logo-text">Pragma<em>GTM</em></span>
   </a>
   <ul class="footer-links">
-    <li><a href="#expertise">Expertise</a></li>
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#how">The system</a></li>
+    <li><a href="#expertise">Expertise</a></li>
     <li><a href="#samples">Samples</a></li>
     <li><a href="#stack">CV</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
