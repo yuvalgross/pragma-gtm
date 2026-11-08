@@ -197,22 +197,40 @@
 /* The system: one path, four steps, animated like the signal engine */
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .sys-flow{position:relative;margin:2.75rem 0 0;display:grid;gap:1.75rem}
-.sys-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
-.sys-step{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 1rem}
-.sys-node{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ink);background:var(--paper);border:1.5px solid var(--border);animation:sysPulse 7s linear infinite}
-.sys-step:nth-child(1) .sys-node{animation-delay:.7s}
-.sys-step:nth-child(2) .sys-node{animation-delay:2.5s}
-.sys-step:nth-child(3) .sys-node{animation-delay:4.2s}
-.sys-step:nth-child(4) .sys-node{animation-delay:6s}
-.sys-title{margin:1rem 0 .4rem;font-family:var(--font-display);font-weight:400;font-size:1.75rem;line-height:1.1;color:var(--ink)}
+.sys-board{position:relative}
+.sys-art{display:block;max-width:100%}
+.sys-art-d{width:100%;height:auto}
+.sys-art-m{display:none}
+.sys-steps{list-style:none;margin:.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.sys-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 .5rem}
+.sys-num{font-size:.72rem;font-weight:600;letter-spacing:.14em;color:var(--accent-dark)}
+.sys-title{margin:.3rem 0 .4rem;font-family:var(--font-display);font-weight:400;font-size:1.75rem;line-height:1.1;color:var(--ink)}
 .sys-step p{margin:0;max-width:24ch;font-size:.92rem;line-height:1.5;color:var(--ink-muted)}
-.sys-rail{position:absolute;left:0;right:0;top:22px;height:0;border-top:1.5px dashed var(--border);pointer-events:none}
-.sys-dot{position:absolute;top:-5px;left:0;width:9px;height:9px;margin-left:-4px;border-radius:50%;background:var(--c);opacity:0;animation:sysTravel 7s linear infinite}
-.sys-dot.sys-ob{--c:var(--accent);top:-12px}
-.sys-dot.sys-in{--c:var(--teal);animation-delay:.35s}
-.sys-dot.sys-crm{--c:var(--gold);top:2px;animation-delay:.7s}
-@keyframes sysTravel{0%{left:0;opacity:0}5%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
-@keyframes sysPulse{0%,9%{background:var(--accent);border-color:var(--accent);color:var(--paper);box-shadow:0 0 0 7px rgba(217,119,6,.16)}18%,100%{background:var(--paper);border-color:var(--border);color:var(--ink);box-shadow:0 0 0 0 rgba(217,119,6,0)}}
+.sx-wire{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:4 5}
+.sx-arrow{fill:none;stroke:var(--border);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sx-emc{transform-box:fill-box;transform-origin:center;animation:sxEm 8s linear infinite}
+.sx-em.sx-ob .sx-emc,.sx-dot.sx-ob{fill:var(--accent)}
+.sx-em.sx-in .sx-emc,.sx-dot.sx-in{fill:var(--teal)}
+.sx-em.sx-crm .sx-emc,.sx-dot.sx-crm{fill:var(--gold)}
+.sx-em.sx-in .sx-emc{animation-delay:.35s}
+.sx-em.sx-crm .sx-emc{animation-delay:.7s}
+.sx-dot.sx-rec{fill:var(--ink);animation:sxRec 8s linear infinite}
+.sx-disc{fill:var(--paper);stroke:var(--border);stroke-width:1.5;animation:sxDisc 8s linear infinite;animation-delay:var(--d)}
+.sx-halo{fill:none;stroke:var(--accent);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:sxHalo 8s linear infinite;animation-delay:var(--d)}
+.sx-ic{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.sx-track{stroke:var(--border)}
+.sx-arc{stroke:var(--accent);stroke-width:3;stroke-dasharray:107;stroke-dashoffset:107;animation:sxArc 8s linear infinite;animation-delay:var(--d)}
+.sx-star{stroke-width:1.6;animation:sxStar 8s linear infinite;animation-delay:var(--d)}
+.sx-badge{fill:var(--paper);animation:sxBadge 8s linear infinite;animation-delay:var(--d)}
+.sx-check{stroke:#fff;stroke-width:2.4;stroke-dasharray:20;stroke-dashoffset:20;animation:sxCheck 8s linear infinite;animation-delay:var(--d)}
+@keyframes sxEm{0%{transform:scale(1.28)}6%,100%{transform:scale(1)}}
+@keyframes sxHalo{0%{opacity:.75;transform:scale(1)}16%,100%{opacity:0;transform:scale(1.4)}}
+@keyframes sxDisc{0%{stroke:var(--accent);fill:var(--paper-warm)}20%,100%{stroke:var(--border);fill:var(--paper)}}
+@keyframes sxArc{0%{stroke-dashoffset:107}14%,84%{stroke-dashoffset:22}94%,100%{stroke-dashoffset:107}}
+@keyframes sxStar{0%,8%{fill:transparent}16%,84%{fill:var(--accent);stroke:var(--accent)}94%,100%{fill:transparent}}
+@keyframes sxBadge{0%{fill:var(--paper);stroke:var(--ink)}10%,84%{fill:var(--teal);stroke:var(--teal)}94%,100%{fill:var(--paper);stroke:var(--ink)}}
+@keyframes sxCheck{0%,4%{stroke-dashoffset:20}14%,84%{stroke-dashoffset:0}94%,100%{stroke-dashoffset:20}}
+@keyframes sxRec{0%,52%{fill:var(--ink)}60%,100%{fill:var(--accent)}}
 .sys-motions{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .sys-motions li{display:grid;grid-template-columns:auto 1fr;column-gap:.7rem;align-items:baseline;padding:.9rem 1.1rem;border-radius:12px;background:var(--paper);border:1px solid var(--border-soft)}
 .sys-motions li::before{content:"";grid-row:1/3;align-self:center;width:10px;height:10px;border-radius:50%;background:var(--c)}
@@ -226,15 +244,21 @@
 .sys-out{margin:0;font-size:1.05rem;line-height:1.55;color:var(--ink);max-width:60ch}
 @media (max-width:860px){.sys-motions{grid-template-columns:1fr}}
 @media (max-width:760px){
-  .sys-steps{grid-template-columns:1fr;gap:1.25rem}
-  .sys-steps::before{content:"";position:absolute;left:21px;top:22px;bottom:22px;border-left:1.5px dashed var(--border)}
-  .sys-step{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:1rem;align-items:start;text-align:left;padding:0}
-  .sys-node{grid-row:1/3}
-  .sys-title{margin:.15rem 0 .2rem;font-size:1.75rem}
+  .sys-art-d{display:none}
+  .sys-art-m{display:block;position:absolute;left:0;top:0;width:72px;height:690px}
+  .sys-steps{grid-template-columns:1fr;margin:0;padding:90px 0 0}
+  .sys-step{height:150px;box-sizing:border-box;align-items:flex-start;text-align:left;padding:12px 0 0 88px}
+  .sys-num{display:none}
+  .sys-title{margin:0 0 .3rem}
   .sys-step p{max-width:none}
-  .sys-rail{display:none}
 }
-@media (prefers-reduced-motion:reduce){.sys-dot{display:none}.sys-node{animation:none}}
+@media (prefers-reduced-motion:reduce){
+  .sx-dot{display:none}
+  .sx-emc,.sx-disc,.sx-halo,.sx-star,.sx-badge,.sx-check,.sx-arc{animation:none}
+  .sx-halo{display:none}
+  .sx-arc{stroke-dashoffset:22}.sx-star{fill:var(--accent);stroke:var(--accent)}
+  .sx-badge{fill:var(--teal);stroke:var(--teal)}.sx-check{stroke-dashoffset:0}
+}
 /* CRM proof, two columns */
 .crm-proof{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);column-gap:2.5rem;align-items:start}
 .crm-proof-head{grid-column:1/-1}
@@ -5394,13 +5418,63 @@ html.legal-open { overflow: hidden; }
 
     <div class="sys-flow" role="group" aria-labelledby="sysFlowCap">
       <p id="sysFlowCap" class="sr-only">Outbound, inbound and the CRM each pass through the same four steps: capture, structure, enrich, deliver.</p>
-      <ol class="sys-steps">
-        <li class="sys-step"><span class="sys-node" aria-hidden="true">01</span><h3 class="sys-title">Capture</h3><p>Signals and signups land in one place.</p></li>
-        <li class="sys-step"><span class="sys-node" aria-hidden="true">02</span><h3 class="sys-title">Structure</h3><p>One clean CRM record. No duplicates.</p></li>
-        <li class="sys-step"><span class="sys-node" aria-hidden="true">03</span><h3 class="sys-title">Enrich</h3><p>Fit scored, context added, opener drafted.</p></li>
-        <li class="sys-step"><span class="sys-node" aria-hidden="true">04</span><h3 class="sys-title">Deliver</h3><p>One owner, one next step.</p></li>
-      </ol>
-      <div class="sys-rail" aria-hidden="true"><span class="sys-dot sys-ob"></span><span class="sys-dot sys-in"></span><span class="sys-dot sys-crm"></span></div>
+      <div class="sys-board">
+        <svg class="sys-art sys-art-d" viewBox="0 20 1100 190" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path id="sxp0" d="M38 45 C 82 45, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
+<path id="sxp1" d="M38 115 C 82 115, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
+<path id="sxp2" d="M38 185 C 82 185, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
+<path id="sxr" d="M412.5 115 L 962.5 115"/>
+</defs>
+<path class="sx-wire" d="M38 45 C 82 45, 76 115, 93.5 115"/>
+<path class="sx-wire" d="M38 115 C 82 115, 76 115, 93.5 115"/>
+<path class="sx-wire" d="M38 185 C 82 185, 76 115, 93.5 115"/>
+<path class="sx-wire" d="M179.5 115 L 920.5 115"/>
+<path class="sx-wire sx-out" d="M1004.5 115 L 1084 115"/>
+<path class="sx-arrow" d="M1074 108 L 1086 115 L 1074 122"/>
+<g class="sx-em sx-ob" transform="translate(24 45)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<g class="sx-em sx-in" transform="translate(24 115)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<g class="sx-em sx-crm" transform="translate(24 185)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<g class="sx-st sx-st1" transform="translate(137.5 115)" style="--d:0.78s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g>
+<g class="sx-st sx-st2" transform="translate(412.5 115)" style="--d:2.70s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g>
+<g class="sx-st sx-st3" transform="translate(687.5 115)" style="--d:4.50s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g>
+<g class="sx-st sx-st4" transform="translate(962.5 115)" style="--d:6.30s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g>
+<circle r="5" class="sx-dot sx-ob"><animateMotion dur="8.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp0"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.0s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
+<circle r="5" class="sx-dot sx-in"><animateMotion dur="8.0s" begin="0.35s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp1"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.35s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.35s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
+<circle r="5" class="sx-dot sx-crm"><animateMotion dur="8.0s" begin="0.7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxp2"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/><animate attributeName="r" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="5;5;1;1" keyTimes="0;0.312;0.362;1"/></circle>
+<circle r="5" class="sx-dot sx-rec"><animateMotion dur="8.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.362;0.812;1"><mpath href="#sxr"/></animateMotion><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.362;0.392;0.792;0.833;1"/><animate attributeName="r" dur="8.0s" repeatCount="indefinite" values="5;5;8;8" keyTimes="0;0.562;0.613;1"/></circle>
+</svg>
+        <svg class="sys-art sys-art-m" viewBox="0 0 72 690" width="72" height="690" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<path id="sxm0" d="M14 35 C 14 70, 36 64, 36 92 L 36 270"/>
+<path id="sxm1" d="M36 35 C 36 70, 36 64, 36 92 L 36 270"/>
+<path id="sxm2" d="M58 35 C 58 70, 36 64, 36 92 L 36 270"/>
+<path id="sxmr" d="M36 270 L 36 570"/></defs>
+<path class="sx-wire" d="M14 35 C 14 70, 36 64, 36 92"/>
+<path class="sx-wire" d="M36 35 C 36 70, 36 64, 36 92"/>
+<path class="sx-wire" d="M58 35 C 58 70, 36 64, 36 92"/>
+<path class="sx-wire" d="M36 146 L 36 544"/>
+<path class="sx-wire sx-out" d="M36 596 L 36 676"/>
+<path class="sx-arrow" d="M30 668 L 36 678 L 42 668"/>
+<g class="sx-em sx-ob" transform="translate(14 26)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g>
+<g class="sx-em sx-in" transform="translate(36 26)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g>
+<g class="sx-em sx-crm" transform="translate(58 26)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g>
+<g class="sx-st sx-st1" transform="translate(36 120) scale(0.6190)" style="--d:0.85s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g>
+<g class="sx-st sx-st2" transform="translate(36 270) scale(0.6190)" style="--d:2.70s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g>
+<g class="sx-st sx-st3" transform="translate(36 420) scale(0.6190)" style="--d:4.50s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g>
+<g class="sx-st sx-st4" transform="translate(36 570) scale(0.6190)" style="--d:6.30s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><g class="sx-ic"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g>
+<circle r="3.6" class="sx-dot sx-ob"><animateMotion dur="8.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.372;1"><mpath href="#sxm0"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.340;0.372;1"/></circle>
+<circle r="3.6" class="sx-dot sx-in"><animateMotion dur="8.0s" begin="0.35s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.362;1"><mpath href="#sxm1"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.35s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.331;0.362;1"/></circle>
+<circle r="3.6" class="sx-dot sx-crm"><animateMotion dur="8.0s" begin="0.7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.372;1"><mpath href="#sxm2"/></animateMotion><animate attributeName="opacity" dur="8.0s" begin="0.7s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.03;0.340;0.372;1"/></circle>
+<circle r="3.6" class="sx-dot sx-rec"><animateMotion dur="8.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.362;0.812;1"><mpath href="#sxmr"/></animateMotion><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.362;0.392;0.792;0.833;1"/><animate attributeName="r" dur="8.0s" repeatCount="indefinite" values="3.6;3.6;5.6;5.6" keyTimes="0;0.562;0.613;1"/></circle>
+</svg>
+        <ol class="sys-steps">
+          <li class="sys-step"><span class="sys-num" aria-hidden="true">01</span><h3 class="sys-title">Capture</h3><p>Signals and signups land in one place.</p></li>
+          <li class="sys-step"><span class="sys-num" aria-hidden="true">02</span><h3 class="sys-title">Structure</h3><p>One clean CRM record. No duplicates.</p></li>
+          <li class="sys-step"><span class="sys-num" aria-hidden="true">03</span><h3 class="sys-title">Enrich</h3><p>Fit scored, context added, opener drafted.</p></li>
+          <li class="sys-step"><span class="sys-num" aria-hidden="true">04</span><h3 class="sys-title">Deliver</h3><p>One owner, one next step.</p></li>
+        </ol>
+      </div>
       <ul class="sys-motions">
         <li class="sys-ob"><strong>Outbound</strong><span>Hiring, funding and leadership signals</span></li>
         <li class="sys-in"><strong>Inbound</strong><span>Forms and trial signups</span></li>
