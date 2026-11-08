@@ -1119,6 +1119,7 @@ h1 em {
 .hero-illustration .hi-outcome[data-out="1"] { animation-delay: 1.70s; }
 .hero-illustration .hi-outcome[data-out="2"] { animation-delay: 1.85s; }
 .hero-illustration .hi-outcome[data-out="3"] { animation-delay: 2.00s; }
+.hero-illustration .hi-outcome[data-out="4"] { animation-delay: 2.15s; }
 @keyframes hiReveal {
   from { opacity: 0; transform: translateY(4px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -4535,7 +4536,7 @@ html.legal-open { overflow: hidden; }
   <div class="hero-illustration" aria-hidden="true">
     <svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hi-title hi-desc">
       <title id="hi-title">From signal to revenue</title>
-      <desc id="hi-desc">An architectural sketch showing market signals flowing through a GTM engineering layer into business outcomes.</desc>
+      <desc id="hi-desc">An architectural sketch showing market signals flowing through a GTM engineering layer into business outcomes: MQL uplift, program revenue, signal close rate and a smaller tool stack.</desc>
       <defs>
         <marker id="hi-ar-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M2 1 L8 5 L2 9" fill="none" stroke="#d97706" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -4639,24 +4640,31 @@ html.legal-open { overflow: hidden; }
 
       <!-- Outcome cards -->
       <g class="hi-outcome" data-out="1">
-        <rect class="hi-outcome-card" x="520" y="80" width="120" height="48" rx="4"/>
-        <text class="hi-outcome-num" x="580" y="103">42%</text>
-        <text class="hi-outcome-label" x="580" y="118">MQL UPLIFT</text>
+        <rect class="hi-outcome-card" x="520" y="66" width="120" height="48" rx="4"/>
+        <text class="hi-outcome-num" x="580" y="89">42%</text>
+        <text class="hi-outcome-label" x="580" y="104">MQL UPLIFT</text>
       </g>
       <g class="hi-outcome hi-outcome-accent" data-out="2">
-        <rect class="hi-outcome-card-accent" x="520" y="160" width="120" height="48" rx="4"/>
-        <text class="hi-outcome-num-accent" x="580" y="183">€390k</text>
-        <text class="hi-outcome-label-accent" x="580" y="198">PROGRAM REV.</text>
+        <rect class="hi-outcome-card-accent" x="520" y="130" width="120" height="48" rx="4"/>
+        <text class="hi-outcome-num-accent" x="580" y="153">€390k</text>
+        <text class="hi-outcome-label-accent" x="580" y="168">PROGRAM REV.</text>
       </g>
       <g class="hi-outcome" data-out="3">
-        <rect class="hi-outcome-card" x="520" y="240" width="120" height="48" rx="4"/>
-        <text class="hi-outcome-num" x="580" y="263">40% vs 12%</text>
-        <text class="hi-outcome-label" x="580" y="278">SIGNAL CLOSE RATE</text>
+        <rect class="hi-outcome-card" x="520" y="194" width="120" height="48" rx="4"/>
+        <text class="hi-outcome-num" x="580" y="217">40% vs 12%</text>
+        <text class="hi-outcome-label" x="580" y="232">SIGNAL CLOSE RATE</text>
+      </g>
+      <g class="hi-outcome" data-out="4">
+        <rect class="hi-outcome-card" x="520" y="258" width="120" height="48" rx="4"/>
+        <text class="hi-outcome-num" x="580" y="281">17 to 5</text>
+        <text class="hi-outcome-label" x="580" y="296">TOOLS, SPEND −67%</text>
       </g>
 
       <!-- Outcome connectors -->
-      <path class="hi-outcome-wire" d="M505 179 Q510 130 519 110"/>
-      <path class="hi-outcome-wire" d="M505 189 Q510 230 519 250"/>
+      <path class="hi-outcome-wire" d="M505 184 Q512 130 519 90"/>
+      <path class="hi-outcome-wire" d="M505 184 Q512 168 519 154"/>
+      <path class="hi-outcome-wire" d="M505 184 Q512 200 519 218"/>
+      <path class="hi-outcome-wire" d="M505 184 Q512 240 519 282"/>
 
       <!-- Full flow paths for animated balls (hidden, used by animateMotion) -->
       <defs>
