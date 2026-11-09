@@ -222,6 +222,19 @@
 .ld-rules{fill:none;stroke:var(--border);stroke-width:1.2;stroke-dasharray:3 5}
 .lad-art text.ld-rt{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;fill:var(--accent-dark);paint-order:stroke;stroke:var(--paper);stroke-width:7px;stroke-linejoin:round}
 @media (max-width:860px){.lad{grid-template-columns:1fr;margin-top:2rem}.lad-art{max-width:420px}}
+/* path: state is driven by one script clock (see script at end of body) */
+.sys-art .sx-halo{animation:none;opacity:0}
+.sys-art .sx-st.hit .sx-halo{animation:sxPing 1.2s ease-out 1 forwards}
+.sys-art .sx-emc,.sys-art .sx-prog,.sys-art .sx-dot.sx-rec{animation:none}
+.sys-art .sx-arc{animation:none;transition:stroke-dashoffset .9s ease-out}
+.sys-art .sx-st.on .sx-arc{stroke-dashoffset:22}
+.sys-art .sx-star{animation:none;transition:fill .5s,stroke .5s}
+.sys-art .sx-st.on .sx-star{fill:var(--accent);stroke:var(--accent)}
+.sys-art .sx-badge{animation:none;transition:fill .4s,stroke .4s}
+.sys-art .sx-st.on .sx-badge{fill:var(--teal);stroke:var(--teal)}
+.sys-art .sx-check{animation:none;transition:stroke-dashoffset .5s ease-out .15s}
+.sys-art .sx-st.on .sx-check{stroke-dashoffset:0}
+@keyframes sxPing{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(1.4)}}
 .is-offscreen,.is-offscreen *,.is-offscreen *::before,.is-offscreen *::after{animation-play-state:paused !important}
 .sys-board{position:relative;max-width:900px;margin:0 auto;width:100%}
 .sys-art{display:block;max-width:100%}
@@ -274,6 +287,7 @@
 @media (prefers-reduced-motion:reduce){
   .ld-dot,.sx-prog,.sx-inner{display:none}
   .sx-dot{display:none}
+  .sys-art .sx-arc{stroke-dashoffset:22}.sys-art .sx-star{fill:var(--accent);stroke:var(--accent)}.sys-art .sx-badge{fill:var(--teal);stroke:var(--teal)}.sys-art .sx-check{stroke-dashoffset:0}
   .sx-emc,.sx-disc,.sx-halo,.sx-star,.sx-badge,.sx-check,.sx-arc{animation:none}
   .sx-halo{display:none}
   .sx-arc{stroke-dashoffset:22}.sx-star{fill:var(--accent);stroke:var(--accent)}
@@ -2542,6 +2556,8 @@ to {
 .arch-svg {
     width: 100%; height: auto; display: block; opacity: 0; transform: translateY(16px); transition: opacity 0.8s ease, transform 0.8s ease; cursor: default;
   }
+.arch-tooltip rect{fill:var(--paper);stroke:var(--border);stroke-width:1}
+.arch-tooltip text{fill:var(--ink)}
 .arch-svg.visible {
     opacity: 1; transform: translateY(0);
   }
@@ -4985,123 +5001,123 @@ html.legal-open { overflow: hidden; }
         <span class="logo-item-name">RB2B</span>
       </a>
       <a class="logo-item" href="https://intentsify.com/" target="_blank" rel="noopener noreferrer" data-tool="Intentsify" data-tip="B2B intent data." aria-label="Intentsify: B2B intent data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0369a1"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">In</text></svg>
+        <img decoding="async" src="/logos/intentsify.png" alt="Intentsify logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Intentsify</span>
       </a>
       <a class="logo-item" href="https://www.leadfeeder.com/" target="_blank" rel="noopener noreferrer" data-tool="Leadfeeder" data-tip="Identifies companies visiting a website." aria-label="Leadfeeder: Identifies companies visiting a website. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Le</text></svg>
+        <img decoding="async" src="/logos/leadfeeder.png" alt="Leadfeeder logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Leadfeeder</span>
       </a>
       <a class="logo-item" href="https://www.modash.io/" target="_blank" rel="noopener noreferrer" data-tool="Modash" data-tip="Creator and influencer data." aria-label="Modash: Creator and influencer data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Mo</text></svg>
+        <img decoding="async" src="/logos/modash.png" alt="Modash logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Modash</span>
       </a>
       <a class="logo-item" href="https://www.foreplay.co/" target="_blank" rel="noopener noreferrer" data-tool="Foreplay Technologies" data-tip="Ad library and creative research." aria-label="Foreplay Technologies: Ad library and creative research. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">FT</text></svg>
+        <img decoding="async" src="/logos/foreplay.png" alt="Foreplay Technologies logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Foreplay Technologies</span>
       </a>
       <a class="logo-item" href="https://attio.com/" target="_blank" rel="noopener noreferrer" data-tool="Attio" data-tip="CRM." aria-label="Attio: CRM. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">At</text></svg>
+        <img decoding="async" src="/logos/attio.png" alt="Attio logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Attio</span>
       </a>
       <a class="logo-item" href="https://www.lusha.com/" target="_blank" rel="noopener noreferrer" data-tool="Lusha" data-tip="Contact data: emails and phone numbers." aria-label="Lusha: Contact data: emails and phone numbers. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Lu</text></svg>
+        <img decoding="async" src="/logos/lusha.png" alt="Lusha logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Lusha</span>
       </a>
       <a class="logo-item" href="https://bombora.com/" target="_blank" rel="noopener noreferrer" data-tool="Bombora" data-tip="B2B intent data." aria-label="Bombora: B2B intent data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Bo</text></svg>
+        <img decoding="async" src="/logos/bombora.png" alt="Bombora logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Bombora</span>
       </a>
       <a class="logo-item" href="https://www.airtable.com/" target="_blank" rel="noopener noreferrer" data-tool="Airtable" data-tip="Database and workflow tool." aria-label="Airtable: Database and workflow tool. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ai</text></svg>
+        <img decoding="async" src="/logos/airtable.png" alt="Airtable logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Airtable</span>
       </a>
       <a class="logo-item" href="https://www.warmly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Warmly" data-tip="Website visitor signals and outreach." aria-label="Warmly: Website visitor signals and outreach. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Wa</text></svg>
+        <img decoding="async" src="/logos/warmly.png" alt="Warmly logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Warmly</span>
       </a>
       <a class="logo-item" href="https://intellizence.com/" target="_blank" rel="noopener noreferrer" data-tool="Intellizence" data-tip="Company news and event signals." aria-label="Intellizence: Company news and event signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#9f1239"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">In</text></svg>
+        <img decoding="async" src="/logos/intellizence.png" alt="Intellizence logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Intellizence</span>
       </a>
       <a class="logo-item" href="https://www.outreach.io/" target="_blank" rel="noopener noreferrer" data-tool="Outreach" data-tip="Sales engagement platform." aria-label="Outreach: Sales engagement platform. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ou</text></svg>
+        <img decoding="async" src="/logos/outreach.png" alt="Outreach logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Outreach</span>
       </a>
       <a class="logo-item" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" data-tool="Google Maps" data-tip="Local business data." aria-label="Google Maps: Local business data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">GM</text></svg>
+        <img decoding="async" src="/logos/google-maps.svg" alt="Google Maps logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Google Maps</span>
       </a>
       <a class="logo-item" href="https://www.delivr.ai/" target="_blank" rel="noopener noreferrer" data-tool="Delivr.ai" data-tip="Visitor identification and intent signals." aria-label="Delivr.ai: Visitor identification and intent signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">De</text></svg>
+        <img decoding="async" src="/logos/delivr-ai.png" alt="Delivr.ai logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Delivr.ai</span>
       </a>
       <a class="logo-item" href="https://dynamics.microsoft.com/" target="_blank" rel="noopener noreferrer" data-tool="Dynamics 365 CRM" data-tip="Microsoft CRM." aria-label="Dynamics 365 CRM: Microsoft CRM. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">D3</text></svg>
+        <img decoding="async" src="/logos/dynamics-365.png" alt="Dynamics 365 CRM logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Dynamics 365 CRM</span>
       </a>
       <a class="logo-item" href="https://www.trustradius.com/" target="_blank" rel="noopener noreferrer" data-tool="TrustRadius" data-tip="Software reviews and buyer intent." aria-label="TrustRadius: Software reviews and buyer intent. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Tr</text></svg>
+        <img decoding="async" src="/logos/trustradius.png" alt="TrustRadius logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">TrustRadius</span>
       </a>
       <a class="logo-item" href="https://www.definitivehc.com/" target="_blank" rel="noopener noreferrer" data-tool="Definitive Healthcare" data-tip="Healthcare company and provider data." aria-label="Definitive Healthcare: Healthcare company and provider data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1f3a5f"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">DH</text></svg>
+        <img decoding="async" src="/logos/definitive-healthcare.png" alt="Definitive Healthcare logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Definitive Healthcare</span>
       </a>
       <a class="logo-item" href="https://www.typeform.com/" target="_blank" rel="noopener noreferrer" data-tool="Typeform" data-tip="Forms and surveys." aria-label="Typeform: Forms and surveys. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ty</text></svg>
+        <img decoding="async" src="/logos/typeform.png" alt="Typeform logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Typeform</span>
       </a>
       <a class="logo-item" href="https://www.pursuit.us/" target="_blank" rel="noopener noreferrer" data-tool="Pursuit Markets" data-tip="Early government buying signals." aria-label="Pursuit Markets: Early government buying signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">PM</text></svg>
+        <img decoding="async" src="/logos/pursuit-markets.png" alt="Pursuit Markets logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Pursuit Markets</span>
       </a>
       <a class="logo-item" href="https://theirstack.com/" target="_blank" rel="noopener noreferrer" data-tool="TheirStack" data-tip="Hiring and technology signals." aria-label="TheirStack: Hiring and technology signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Th</text></svg>
+        <img decoding="async" src="/logos/theirstack.png" alt="TheirStack logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">TheirStack</span>
       </a>
       <a class="logo-item" href="https://pubrio.com/" target="_blank" rel="noopener noreferrer" data-tool="Pubrio" data-tip="B2B company and people data." aria-label="Pubrio: B2B company and people data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Pu</text></svg>
+        <img decoding="async" src="/logos/pubrio.png" alt="Pubrio logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Pubrio</span>
       </a>
       <a class="logo-item" href="https://www.crossbeam.com/" target="_blank" rel="noopener noreferrer" data-tool="Crossbeam" data-tip="Partner account overlap." aria-label="Crossbeam: Partner account overlap. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0369a1"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Cr</text></svg>
+        <img decoding="async" src="/logos/crossbeam.png" alt="Crossbeam logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Crossbeam</span>
       </a>
       <a class="logo-item" href="https://apify.com/" target="_blank" rel="noopener noreferrer" data-tool="Apify" data-tip="Web scraping and data extraction." aria-label="Apify: Web scraping and data extraction. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ap</text></svg>
+        <img decoding="async" src="/logos/apify.png" alt="Apify logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Apify</span>
       </a>
       <a class="logo-item" href="https://govspend.com/" target="_blank" rel="noopener noreferrer" data-tool="GovSpend" data-tip="Government spending data." aria-label="GovSpend: Government spending data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Go</text></svg>
+        <img decoding="async" src="/logos/govspend.png" alt="GovSpend logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">GovSpend</span>
       </a>
       <a class="logo-item" href="https://adbeat.com/" target="_blank" rel="noopener noreferrer" data-tool="Adbeat" data-tip="Display ad intelligence." aria-label="Adbeat: Display ad intelligence. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ad</text></svg>
+        <img decoding="async" src="/logos/adbeat.png" alt="Adbeat logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Adbeat</span>
       </a>
       <a class="logo-item" href="https://mixpanel.com/" target="_blank" rel="noopener noreferrer" data-tool="Mixpanel" data-tip="Product analytics." aria-label="Mixpanel: Product analytics. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Mi</text></svg>
+        <img decoding="async" src="/logos/mixpanel.png" alt="Mixpanel logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Mixpanel</span>
       </a>
       <a class="logo-item" href="https://phantombuster.com/" target="_blank" rel="noopener noreferrer" data-tool="PhantomBuster" data-tip="LinkedIn and web automation." aria-label="PhantomBuster: LinkedIn and web automation. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1f3a5f"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ph</text></svg>
+        <img decoding="async" src="/logos/phantombuster.png" alt="PhantomBuster logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">PhantomBuster</span>
       </a>
       <a class="logo-item" href="https://theorg.com/" target="_blank" rel="noopener noreferrer" data-tool="The Org" data-tip="Org charts and reporting lines." aria-label="The Org: Org charts and reporting lines. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#92400e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">TO</text></svg>
+        <img decoding="async" src="/logos/the-org.png" alt="The Org logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">The Org</span>
       </a>
       <a class="logo-item" data-tool="RSS Feeds" data-tip="News and blog feeds as a signal source." aria-label="RSS Feeds: News and blog feeds as a signal source.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">RF</text></svg>
+        <img decoding="async" src="/logos/rss.svg" alt="RSS Feeds logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">RSS Feeds</span>
       </a>
       <a class="logo-item" href="https://storeleads.app/" target="_blank" rel="noopener noreferrer" data-tool="Store Leads" data-tip="Ecommerce store data." aria-label="Store Leads: Ecommerce store data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">SL</text></svg>
+        <img decoding="async" src="/logos/store-leads.png" alt="Store Leads logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Store Leads</span>
       </a>
       <a class="logo-item" href="https://www.g2.com/" target="_blank" rel="noopener noreferrer" data-tool="G2" data-tip="Software reviews and buyer intent." aria-label="G2: Software reviews and buyer intent. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">G2</text></svg>
+        <img decoding="async" src="/logos/g2.png" alt="G2 logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">G2</span>
       </a>
       <a class="logo-item" href="https://www.buyercaddy.com/" target="_blank" rel="noopener noreferrer" data-tool="BuyerCaddy" data-tip="B2B buying signals." aria-label="BuyerCaddy: B2B buying signals. Opens in a new tab.">
@@ -5109,23 +5125,23 @@ html.legal-open { overflow: hidden; }
         <span class="logo-item-name">BuyerCaddy</span>
       </a>
       <a class="logo-item" href="https://www.trigify.io/" target="_blank" rel="noopener noreferrer" data-tool="Trigify" data-tip="Social and LinkedIn signals." aria-label="Trigify: Social and LinkedIn signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#92400e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Tr</text></svg>
+        <img decoding="async" src="/logos/trigify.png" alt="Trigify logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Trigify</span>
       </a>
       <a class="logo-item" href="https://www.upfluence.com/" target="_blank" rel="noopener noreferrer" data-tool="Upfluence" data-tip="Influencer data." aria-label="Upfluence: Influencer data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Up</text></svg>
+        <img decoding="async" src="/logos/upfluence.png" alt="Upfluence logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Upfluence</span>
       </a>
       <a class="logo-item" href="https://pitchbook.com/" target="_blank" rel="noopener noreferrer" data-tool="PitchBook" data-tip="Funding and investor data." aria-label="PitchBook: Funding and investor data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Pi</text></svg>
+        <img decoding="async" src="/logos/pitchbook.png" alt="PitchBook logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">PitchBook</span>
       </a>
       <a class="logo-item" href="https://hginsights.com/" target="_blank" rel="noopener noreferrer" data-tool="HG Insights" data-tip="Technology usage data." aria-label="HG Insights: Technology usage data. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">HI</text></svg>
+        <img decoding="async" src="/logos/hg-insights.png" alt="HG Insights logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HG Insights</span>
       </a>
       <a class="logo-item" href="https://www.close.com/" target="_blank" rel="noopener noreferrer" data-tool="Close" data-tip="CRM." aria-label="Close: CRM. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#9f1239"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Cl</text></svg>
+        <img decoding="async" src="/logos/close.png" alt="Close logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Close</span>
       </a>
       <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-hidden="true" tabindex="-1">
@@ -5229,123 +5245,123 @@ html.legal-open { overflow: hidden; }
         <span class="logo-item-name">RB2B</span>
       </a>
       <a class="logo-item" href="https://intentsify.com/" target="_blank" rel="noopener noreferrer" data-tool="Intentsify" data-tip="B2B intent data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0369a1"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">In</text></svg>
+        <img decoding="async" src="/logos/intentsify.png" alt="Intentsify logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Intentsify</span>
       </a>
       <a class="logo-item" href="https://www.leadfeeder.com/" target="_blank" rel="noopener noreferrer" data-tool="Leadfeeder" data-tip="Identifies companies visiting a website." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Le</text></svg>
+        <img decoding="async" src="/logos/leadfeeder.png" alt="Leadfeeder logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Leadfeeder</span>
       </a>
       <a class="logo-item" href="https://www.modash.io/" target="_blank" rel="noopener noreferrer" data-tool="Modash" data-tip="Creator and influencer data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Mo</text></svg>
+        <img decoding="async" src="/logos/modash.png" alt="Modash logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Modash</span>
       </a>
       <a class="logo-item" href="https://www.foreplay.co/" target="_blank" rel="noopener noreferrer" data-tool="Foreplay Technologies" data-tip="Ad library and creative research." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">FT</text></svg>
+        <img decoding="async" src="/logos/foreplay.png" alt="Foreplay Technologies logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Foreplay Technologies</span>
       </a>
       <a class="logo-item" href="https://attio.com/" target="_blank" rel="noopener noreferrer" data-tool="Attio" data-tip="CRM." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">At</text></svg>
+        <img decoding="async" src="/logos/attio.png" alt="Attio logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Attio</span>
       </a>
       <a class="logo-item" href="https://www.lusha.com/" target="_blank" rel="noopener noreferrer" data-tool="Lusha" data-tip="Contact data: emails and phone numbers." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Lu</text></svg>
+        <img decoding="async" src="/logos/lusha.png" alt="Lusha logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Lusha</span>
       </a>
       <a class="logo-item" href="https://bombora.com/" target="_blank" rel="noopener noreferrer" data-tool="Bombora" data-tip="B2B intent data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Bo</text></svg>
+        <img decoding="async" src="/logos/bombora.png" alt="Bombora logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Bombora</span>
       </a>
       <a class="logo-item" href="https://www.airtable.com/" target="_blank" rel="noopener noreferrer" data-tool="Airtable" data-tip="Database and workflow tool." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ai</text></svg>
+        <img decoding="async" src="/logos/airtable.png" alt="Airtable logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Airtable</span>
       </a>
       <a class="logo-item" href="https://www.warmly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Warmly" data-tip="Website visitor signals and outreach." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Wa</text></svg>
+        <img decoding="async" src="/logos/warmly.png" alt="Warmly logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Warmly</span>
       </a>
       <a class="logo-item" href="https://intellizence.com/" target="_blank" rel="noopener noreferrer" data-tool="Intellizence" data-tip="Company news and event signals." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#9f1239"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">In</text></svg>
+        <img decoding="async" src="/logos/intellizence.png" alt="Intellizence logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Intellizence</span>
       </a>
       <a class="logo-item" href="https://www.outreach.io/" target="_blank" rel="noopener noreferrer" data-tool="Outreach" data-tip="Sales engagement platform." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ou</text></svg>
+        <img decoding="async" src="/logos/outreach.png" alt="Outreach logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Outreach</span>
       </a>
       <a class="logo-item" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" data-tool="Google Maps" data-tip="Local business data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">GM</text></svg>
+        <img decoding="async" src="/logos/google-maps.svg" alt="Google Maps logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Google Maps</span>
       </a>
       <a class="logo-item" href="https://www.delivr.ai/" target="_blank" rel="noopener noreferrer" data-tool="Delivr.ai" data-tip="Visitor identification and intent signals." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">De</text></svg>
+        <img decoding="async" src="/logos/delivr-ai.png" alt="Delivr.ai logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Delivr.ai</span>
       </a>
       <a class="logo-item" href="https://dynamics.microsoft.com/" target="_blank" rel="noopener noreferrer" data-tool="Dynamics 365 CRM" data-tip="Microsoft CRM." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">D3</text></svg>
+        <img decoding="async" src="/logos/dynamics-365.png" alt="Dynamics 365 CRM logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Dynamics 365 CRM</span>
       </a>
       <a class="logo-item" href="https://www.trustradius.com/" target="_blank" rel="noopener noreferrer" data-tool="TrustRadius" data-tip="Software reviews and buyer intent." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Tr</text></svg>
+        <img decoding="async" src="/logos/trustradius.png" alt="TrustRadius logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">TrustRadius</span>
       </a>
       <a class="logo-item" href="https://www.definitivehc.com/" target="_blank" rel="noopener noreferrer" data-tool="Definitive Healthcare" data-tip="Healthcare company and provider data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1f3a5f"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">DH</text></svg>
+        <img decoding="async" src="/logos/definitive-healthcare.png" alt="Definitive Healthcare logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Definitive Healthcare</span>
       </a>
       <a class="logo-item" href="https://www.typeform.com/" target="_blank" rel="noopener noreferrer" data-tool="Typeform" data-tip="Forms and surveys." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ty</text></svg>
+        <img decoding="async" src="/logos/typeform.png" alt="Typeform logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Typeform</span>
       </a>
       <a class="logo-item" href="https://www.pursuit.us/" target="_blank" rel="noopener noreferrer" data-tool="Pursuit Markets" data-tip="Early government buying signals." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">PM</text></svg>
+        <img decoding="async" src="/logos/pursuit-markets.png" alt="Pursuit Markets logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Pursuit Markets</span>
       </a>
       <a class="logo-item" href="https://theirstack.com/" target="_blank" rel="noopener noreferrer" data-tool="TheirStack" data-tip="Hiring and technology signals." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7c2d12"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Th</text></svg>
+        <img decoding="async" src="/logos/theirstack.png" alt="TheirStack logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">TheirStack</span>
       </a>
       <a class="logo-item" href="https://pubrio.com/" target="_blank" rel="noopener noreferrer" data-tool="Pubrio" data-tip="B2B company and people data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Pu</text></svg>
+        <img decoding="async" src="/logos/pubrio.png" alt="Pubrio logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Pubrio</span>
       </a>
       <a class="logo-item" href="https://www.crossbeam.com/" target="_blank" rel="noopener noreferrer" data-tool="Crossbeam" data-tip="Partner account overlap." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0369a1"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Cr</text></svg>
+        <img decoding="async" src="/logos/crossbeam.png" alt="Crossbeam logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Crossbeam</span>
       </a>
       <a class="logo-item" href="https://apify.com/" target="_blank" rel="noopener noreferrer" data-tool="Apify" data-tip="Web scraping and data extraction." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ap</text></svg>
+        <img decoding="async" src="/logos/apify.png" alt="Apify logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Apify</span>
       </a>
       <a class="logo-item" href="https://govspend.com/" target="_blank" rel="noopener noreferrer" data-tool="GovSpend" data-tip="Government spending data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Go</text></svg>
+        <img decoding="async" src="/logos/govspend.png" alt="GovSpend logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">GovSpend</span>
       </a>
       <a class="logo-item" href="https://adbeat.com/" target="_blank" rel="noopener noreferrer" data-tool="Adbeat" data-tip="Display ad intelligence." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ad</text></svg>
+        <img decoding="async" src="/logos/adbeat.png" alt="Adbeat logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Adbeat</span>
       </a>
       <a class="logo-item" href="https://mixpanel.com/" target="_blank" rel="noopener noreferrer" data-tool="Mixpanel" data-tip="Product analytics." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Mi</text></svg>
+        <img decoding="async" src="/logos/mixpanel.png" alt="Mixpanel logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Mixpanel</span>
       </a>
       <a class="logo-item" href="https://phantombuster.com/" target="_blank" rel="noopener noreferrer" data-tool="PhantomBuster" data-tip="LinkedIn and web automation." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1f3a5f"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Ph</text></svg>
+        <img decoding="async" src="/logos/phantombuster.png" alt="PhantomBuster logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">PhantomBuster</span>
       </a>
       <a class="logo-item" href="https://theorg.com/" target="_blank" rel="noopener noreferrer" data-tool="The Org" data-tip="Org charts and reporting lines." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#92400e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">TO</text></svg>
+        <img decoding="async" src="/logos/the-org.png" alt="The Org logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">The Org</span>
       </a>
       <a class="logo-item" data-tool="RSS Feeds" data-tip="News and blog feeds as a signal source." aria-hidden="true">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">RF</text></svg>
+        <img decoding="async" src="/logos/rss.svg" alt="RSS Feeds logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">RSS Feeds</span>
       </a>
       <a class="logo-item" href="https://storeleads.app/" target="_blank" rel="noopener noreferrer" data-tool="Store Leads" data-tip="Ecommerce store data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b3fb0"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">SL</text></svg>
+        <img decoding="async" src="/logos/store-leads.png" alt="Store Leads logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Store Leads</span>
       </a>
       <a class="logo-item" href="https://www.g2.com/" target="_blank" rel="noopener noreferrer" data-tool="G2" data-tip="Software reviews and buyer intent." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#b45309"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">G2</text></svg>
+        <img decoding="async" src="/logos/g2.png" alt="G2 logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">G2</span>
       </a>
       <a class="logo-item" href="https://www.buyercaddy.com/" target="_blank" rel="noopener noreferrer" data-tool="BuyerCaddy" data-tip="B2B buying signals." aria-hidden="true" tabindex="-1">
@@ -5353,23 +5369,23 @@ html.legal-open { overflow: hidden; }
         <span class="logo-item-name">BuyerCaddy</span>
       </a>
       <a class="logo-item" href="https://www.trigify.io/" target="_blank" rel="noopener noreferrer" data-tool="Trigify" data-tip="Social and LinkedIn signals." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#92400e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Tr</text></svg>
+        <img decoding="async" src="/logos/trigify.png" alt="Trigify logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Trigify</span>
       </a>
       <a class="logo-item" href="https://www.upfluence.com/" target="_blank" rel="noopener noreferrer" data-tool="Upfluence" data-tip="Influencer data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Up</text></svg>
+        <img decoding="async" src="/logos/upfluence.png" alt="Upfluence logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Upfluence</span>
       </a>
       <a class="logo-item" href="https://pitchbook.com/" target="_blank" rel="noopener noreferrer" data-tool="PitchBook" data-tip="Funding and investor data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#3f6212"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Pi</text></svg>
+        <img decoding="async" src="/logos/pitchbook.png" alt="PitchBook logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">PitchBook</span>
       </a>
       <a class="logo-item" href="https://hginsights.com/" target="_blank" rel="noopener noreferrer" data-tool="HG Insights" data-tip="Technology usage data." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#475569"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">HI</text></svg>
+        <img decoding="async" src="/logos/hg-insights.png" alt="HG Insights logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">HG Insights</span>
       </a>
       <a class="logo-item" href="https://www.close.com/" target="_blank" rel="noopener noreferrer" data-tool="Close" data-tip="CRM." aria-hidden="true" tabindex="-1">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#9f1239"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Cl</text></svg>
+        <img decoding="async" src="/logos/close.png" alt="Close logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Close</span>
       </a>
     </div>
@@ -5484,7 +5500,7 @@ html.legal-open { overflow: hidden; }
 <path class="sx-lane" id="sxp0" d="M50 45 C 84 45, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
 <path class="sx-lane" id="sxp1" d="M50 115 C 84 115, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
 <path class="sx-lane" id="sxp2" d="M50 185 C 84 185, 76 115, 93.5 115 L 368.5 115 L 412.5 115"/>
-<path id="sxr" d="M412.5 115 L 962.5 115"/>
+<path class="sx-recpath" id="sxr" d="M412.5 115 L 962.5 115"/>
 </defs>
 <path class="sx-wire" d="M50 45 C 84 45, 76 115, 93.5 115"/>
 <path class="sx-wire" d="M50 115 C 84 115, 76 115, 93.5 115"/>
@@ -5493,7 +5509,7 @@ html.legal-open { overflow: hidden; }
 <path class="sx-prog" pathLength="100" d="M454.5 115 L 920.5 115"/>
 <path class="sx-wire sx-out" d="M1004.5 115 L 1084 115"/>
 <path class="sx-arrow" d="M1074 108 L 1086 115 L 1074 122"/>
-<circle r="5" class="sx-dot sx-ob" opacity="0"/><circle r="5" class="sx-dot sx-in" opacity="0"/><circle r="5" class="sx-dot sx-crm" opacity="0"/><circle r="5" class="sx-dot sx-rec"><animateMotion dur="8.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.420;0.820;1"><mpath href="#sxr"/></animateMotion><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.420;0.450;0.800;0.840;1"/><animate attributeName="r" dur="8.0s" repeatCount="indefinite" values="5;5;8;8" keyTimes="0;0.600;0.640;1"/></circle><g class="sx-em sx-ob" transform="translate(36 45)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
+<circle r="5" class="sx-dot sx-ob" opacity="0"/><circle r="5" class="sx-dot sx-in" opacity="0"/><circle r="5" class="sx-dot sx-crm" opacity="0"/><circle r="5" class="sx-dot sx-rec" opacity="0"/><g class="sx-em sx-ob" transform="translate(36 45)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
 <g class="sx-em sx-in" transform="translate(36 115)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
 <g class="sx-em sx-crm" transform="translate(36 185)"><circle r="14" class="sx-emc"/><circle r="4.5" fill="#fff"/></g>
 <text class="sx-lab" x="36" y="77" text-anchor="middle">Outbound</text><text class="sx-lab" x="36" y="147" text-anchor="middle">Inbound</text><text class="sx-lab" x="36" y="217" text-anchor="middle">CRM</text><g class="sx-st sx-st1" transform="translate(137.5 115)" style="--d:1.20s"><circle r="42" class="sx-halo"/><circle r="42" class="sx-disc"/><circle r="34" class="sx-inner"/><g class="sx-ic"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g>
@@ -5505,7 +5521,7 @@ html.legal-open { overflow: hidden; }
 
 
 </svg>
-        <svg class="sys-art sys-art-m" viewBox="0 0 300 120" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path class="sx-lane" id="sxq0" d="M21 22 C 40 22, 36 60, 56 60 L 116 60 L 140 60"/><path class="sx-lane" id="sxq1" d="M21 60 C 40 60, 36 60, 56 60 L 116 60 L 140 60"/><path class="sx-lane" id="sxq2" d="M21 98 C 40 98, 36 60, 56 60 L 116 60 L 140 60"/><path id="sxqr" d="M140 60 L 260 60"/></defs><path class="sx-wire" d="M21 22 C 40 22, 36 60, 56 60"/><path class="sx-wire" d="M21 60 C 40 60, 36 60, 56 60"/><path class="sx-wire" d="M21 98 C 40 98, 36 60, 56 60"/><path class="sx-wire" d="M102 60 L 238 60"/><path class="sx-prog" pathLength="100" d="M162 60 L 238 60"/><path class="sx-wire sx-out" d="M282 60 L 288 60"/><path class="sx-arrow" d="M283 55 L289 60 L283 65"/><circle r="4" class="sx-dot sx-ob" opacity="0"/><circle r="4" class="sx-dot sx-in" opacity="0"/><circle r="4" class="sx-dot sx-crm" opacity="0"/><circle r="4" class="sx-dot sx-rec"><animateMotion dur="10s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.420;0.820;1"><mpath href="#sxqr"/></animateMotion><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.420;0.450;0.800;0.840;1"/><animate attributeName="r" dur="10s" repeatCount="indefinite" values="4;4;6;6" keyTimes="0;0.600;0.640;1"/></circle><g class="sx-em sx-ob" transform="translate(12 22)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-em sx-in" transform="translate(12 60)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-em sx-crm" transform="translate(12 98)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(80 60)" style="--d:1.20s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g><g class="sx-st" transform="translate(140 60)" style="--d:3.30s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(200 60)" style="--d:6.00s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st" transform="translate(260 60)" style="--d:8.00s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><text class="sx-lab" x="80" y="108" text-anchor="middle">Capture</text><text class="sx-lab" x="140" y="108" text-anchor="middle">Structure</text><text class="sx-lab" x="200" y="108" text-anchor="middle">Enrich</text><text class="sx-lab" x="260" y="108" text-anchor="middle">Deliver</text></svg>
+        <svg class="sys-art sys-art-m" viewBox="0 0 300 120" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path class="sx-lane" id="sxq0" d="M21 22 C 40 22, 36 60, 56 60 L 116 60 L 140 60"/><path class="sx-lane" id="sxq1" d="M21 60 C 40 60, 36 60, 56 60 L 116 60 L 140 60"/><path class="sx-lane" id="sxq2" d="M21 98 C 40 98, 36 60, 56 60 L 116 60 L 140 60"/><path class="sx-recpath" id="sxqr" d="M140 60 L 260 60"/></defs><path class="sx-wire" d="M21 22 C 40 22, 36 60, 56 60"/><path class="sx-wire" d="M21 60 C 40 60, 36 60, 56 60"/><path class="sx-wire" d="M21 98 C 40 98, 36 60, 56 60"/><path class="sx-wire" d="M102 60 L 238 60"/><path class="sx-prog" pathLength="100" d="M162 60 L 238 60"/><path class="sx-wire sx-out" d="M282 60 L 288 60"/><path class="sx-arrow" d="M283 55 L289 60 L283 65"/><circle r="4" class="sx-dot sx-ob" opacity="0"/><circle r="4" class="sx-dot sx-in" opacity="0"/><circle r="4" class="sx-dot sx-crm" opacity="0"/><circle r="4" class="sx-dot sx-rec" opacity="0"/><g class="sx-em sx-ob" transform="translate(12 22)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-em sx-in" transform="translate(12 60)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-em sx-crm" transform="translate(12 98)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(80 60)" style="--d:1.20s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g><g class="sx-st" transform="translate(140 60)" style="--d:3.30s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(200 60)" style="--d:6.00s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st" transform="translate(260 60)" style="--d:8.00s"><circle r="22" class="sx-halo"/><circle r="22" class="sx-disc"/><g class="sx-ic" transform="scale(0.66)" style="stroke-width:3.18"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><text class="sx-lab" x="80" y="108" text-anchor="middle">Capture</text><text class="sx-lab" x="140" y="108" text-anchor="middle">Structure</text><text class="sx-lab" x="200" y="108" text-anchor="middle">Enrich</text><text class="sx-lab" x="260" y="108" text-anchor="middle">Deliver</text></svg>
         <ol class="sys-steps">
           <li class="sys-step"><h3 class="sys-title">Capture</h3><p>Signals and signups, one place.</p></li>
           <li class="sys-step"><h3 class="sys-title">Structure</h3><p>One clean record.</p></li>
@@ -6531,33 +6547,63 @@ html.legal-open { overflow: hidden; }
 })();
 </script>
 <script>
-/* The path: each loop the three lanes arrive in a new order (or together), at a calm pace */
+/* The path: one clock drives the dots, the record, the progress line and every station */
 (function(){
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var LOOP=10000, raf=0, last=-1, prev=-1, plan=[2.6,2.6,2.6];
-  var views=[].map.call(document.querySelectorAll('.sys-art-d,.sys-art-m'),function(svg){
-    var lanes=svg.querySelectorAll('.sx-lane'), dots=['ob','in','crm'].map(function(c,i){return {el:svg.querySelector('.sx-dot.sx-'+c),p:lanes[i]}});
-    dots.forEach(function(d){if(d.p)d.len=d.p.getTotalLength()});
-    return {svg:svg,clk:svg.querySelector('.sx-prog'),dots:dots,vis:false}}).filter(function(v){return v.clk&&v.dots.every(function(d){return d.el&&d.p})});
-  if(!views.length) return;
-  function now(c){var a=c.getAnimations&&c.getAnimations()[0];return a&&a.currentTime!=null?a.currentTime:performance.now()}
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)) return;
+  var LOOP=10, prev=-1, raf=0, cur=null, t0=0, pl=null, ev=[], fired=0;
+  function ease(p){return p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2}
+  function unease(e){return e<.5?Math.sqrt(e/2):1-Math.sqrt((1-e)/2)}
+  function sm(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)}
   function newPlan(){
     var m; do{m=Math.floor(Math.random()*4)}while(m===prev); prev=m;
     if(m===3){var u=3.2+Math.random()*.4;return [u,u,u]}
     var a=3.4+Math.random()*.2,b=a+.3+Math.random()*.2,o=[0,1,2].filter(function(k){return k!==m}),sw=Math.random()<.5,r=[0,0,0];
     r[m]=3.0; r[o[0]]=sw?a:b; r[o[1]]=sw?b:a; return r}
-  function frame(){
-    var live=views.filter(function(v){return v.vis&&v.svg.getClientRects().length});
-    if(!live.length){raf=0;return}
-    var t=now(live[0].clk),loop=Math.floor(t/LOOP),ph=(t%LOOP)/1000;
-    if(loop!==last){last=loop;plan=newPlan()}
-    live.forEach(function(v){v.dots.forEach(function(d,i){
-      var pr=ph/plan[i];
-      if(pr>=1){d.el.setAttribute('opacity',0);return}
-      var e=pr<.5?2*pr*pr:1-Math.pow(-2*pr+2,2)/2,pt=d.p.getPointAtLength(d.len*e);
-      d.el.setAttribute('cx',pt.x);d.el.setAttribute('cy',pt.y);d.el.setAttribute('opacity',Math.min(1,ph/.7))})});
+  var views=[].map.call(document.querySelectorAll('.sys-art-d,.sys-art-m'),function(svg){
+    var lanes=[].slice.call(svg.querySelectorAll('.sx-lane')),rp=svg.querySelector('.sx-recpath'),rec=svg.querySelector('.sx-dot.sx-rec'),
+        sts=[].slice.call(svg.querySelectorAll('.sx-st')),prog=svg.querySelector('.sx-prog'),
+        dots=['ob','in','crm'].map(function(c){return svg.querySelector('.sx-dot.sx-'+c)});
+    if(!(lanes.length===3&&rp&&rec&&sts.length===4&&prog&&dots.every(Boolean))) return null;
+    var m=/translate\(([\d.]+)\s+([\d.]+)\)/.exec(sts[0].getAttribute('transform')); if(!m) return null;
+    var edge=+m[1]-(+sts[0].querySelector('.sx-disc').getAttribute('r'));
+    var info=lanes.map(function(p){var L=p.getTotalLength(),f=1;for(var i=0;i<=300;i++){if(p.getPointAtLength(L*i/300).x>=edge){f=i/300;break}}return {p:p,L:L,te:unease(f)}});
+    return {svg:svg,info:info,dots:dots,rec:rec,rp:rp,RL:rp.getTotalLength(),sts:sts,prog:prog,base:+rec.getAttribute('r'),vis:false};
+  }).filter(Boolean);
+  if(!views.length) return;
+  function active(){return views.filter(function(v){return v.vis&&v.svg.getClientRects().length})[0]}
+  function start(v,now){
+    t0=now; pl=newPlan(); fired=0;
+    v.sts.forEach(function(s){s.classList.remove('hit','on')});
+    v.prog.style.strokeDashoffset=100; v.prog.style.opacity=1; v.rec.setAttribute('opacity',0);
+    var first=Math.min.apply(null,v.info.map(function(d,i){return d.te*pl[i]})), last=Math.max.apply(null,pl);
+    v.rec0=last+.35; v.recT=3.6;
+    function hit(i){return function(){v.sts[i].classList.add('hit')}}
+    function on(i){return function(){v.sts[i].classList.add('on')}}
+    ev=[{t:first,f:hit(0)},{t:last,f:hit(1)},{t:v.rec0+v.recT/2,f:function(){hit(2)();on(2)()}},{t:v.rec0+v.recT,f:function(){hit(3)();on(3)()}},{t:9.3,f:function(){v.sts.forEach(function(s){s.classList.remove('on')})}}];
+  }
+  function frame(now){
+    var v=active(); if(!v){raf=0;cur=null;return}
+    if(v!==cur){cur=v;start(v,now)}
+    var ph=(now-t0)/1000; if(ph>=LOOP){start(v,now);ph=0}
+    while(fired<ev.length&&ph>=ev[fired].t){ev[fired].f();fired++}
+    v.info.forEach(function(d,i){
+      var el=v.dots[i],pr=ph/pl[i];
+      if(pr>=1){el.setAttribute('opacity',0);return}
+      var pt=d.p.getPointAtLength(d.L*ease(pr));
+      el.setAttribute('cx',pt.x);el.setAttribute('cy',pt.y);el.setAttribute('opacity',Math.min(1,ph/.7))});
+    var p=Math.max(0,Math.min(1,(ph-v.rec0)/v.recT));
+    if(ph<v.rec0){v.rec.setAttribute('opacity',0)}
+    else{
+      var pt=v.rp.getPointAtLength(v.RL*p);
+      v.rec.setAttribute('cx',pt.x);v.rec.setAttribute('cy',pt.y);
+      v.rec.setAttribute('r',v.base*(1+.6*sm((p-.4)/.2)));
+      v.rec.style.fill=p>=.5?'var(--accent)':'var(--ink)';
+      v.rec.setAttribute('opacity',p<1?1:Math.max(0,1-(ph-v.rec0-v.recT)/.4));
+    }
+    v.prog.style.strokeDashoffset=100*(1-p);
+    v.prog.style.opacity=ph>9.3?Math.max(0,1-(ph-9.3)/.6):1;
     raf=requestAnimationFrame(frame)}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){views.forEach(function(v){if(v.svg===e.target)v.vis=e.isIntersecting})});if(!raf)raf=requestAnimationFrame(frame)});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){views.forEach(function(v){if(v.svg===e.target)v.vis=e.isIntersecting})});cur=null;if(!raf)raf=requestAnimationFrame(frame)});
   views.forEach(function(v){io.observe(v.svg)});
 })();
 </script>
