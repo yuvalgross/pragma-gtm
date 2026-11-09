@@ -2579,7 +2579,7 @@ to {
     filter: brightness(1.2) !important;
   }
 .arch-line {
-    animation: dashMove 2s linear infinite;
+    animation: none;
   }
 @keyframes dashMove {
     to {
@@ -2589,15 +2589,6 @@ to {
   }
 .data-packet {
     opacity: 0;
-  }
-.p1 {
-    animation: packetMove1 5s ease-in-out infinite 0.5s;
-  }
-.p2 {
-    animation: packetMove2 5s ease-in-out infinite 2.2s;
-  }
-.p3 {
-    animation: packetMove3 5s ease-in-out infinite 4s;
   }
 @keyframes packetMove1 {
     0% {
@@ -2652,9 +2643,6 @@ to {
     opacity:0
   }
 
-  }
-.pulse-ring {
-    animation: pulseRing 3s ease-out infinite;
   }
 @keyframes pulseRing {
     0% {
@@ -4851,9 +4839,6 @@ html.legal-open { overflow: hidden; }
         <path class="arch-line" d="M398 133 L418 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
         <path class="arch-line" d="M630 133 L650 133" stroke="#d97706" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
         <path class="arch-line" d="M840 133 L860 133" stroke="#c2622a" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow2)"/>
-        <circle class="data-packet p1" cy="133" r="7" fill="#d97706" opacity="0"/>
-        <circle class="data-packet p2" cy="133" r="7" fill="#d97706" opacity="0"/>
-        <circle class="data-packet p3" cy="133" r="6.5" fill="#c2622a" opacity="0"/>
 
         <g class="arch-node" data-label="Hiring and funding signals pulled into Clay the moment they fire">
           <rect x="2" y="70" width="182" height="126" rx="12" fill="#f9f6ee" stroke="#d97706" stroke-width="1.8"/>
@@ -4880,7 +4865,6 @@ html.legal-open { overflow: hidden; }
           <text x="524" y="126" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" fill="#f9f6ee">Route the right account</text>
           <text x="524" y="152" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="400" fill="rgba(249,246,238,0.72)">Triggers, routing, CRM sync</text>
           <text x="524" y="178" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#fbbf24" letter-spacing="0.02em">n8n · Make · Claude Code</text>
-          <circle class="pulse-ring" cx="524" cy="133" r="70" fill="none" stroke="#d97706" stroke-width="1" opacity="0"/>
         </g>
 
         <g class="arch-node" data-label="Copy grounded in the signal, approved in Slack before it sends">
@@ -5507,7 +5491,7 @@ html.legal-open { overflow: hidden; }
     <ol class="lad" aria-label="Three sizes of scope">
       <li class="lad-card lad-1">
         <div class="lad-head"><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
-        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l1i0" d="M16 26 L108 76"/><path id="l1i1" d="M16 51 L108 76"/><path id="l1i2" d="M16 76 L108 76"/><path id="l1i3" d="M16 101 L108 76"/><path id="l1i4" d="M16 126 L108 76"/></defs><path class="sx-wire" d="M16 26 L108 76"/><path class="sx-wire" d="M16 51 L108 76"/><path class="sx-wire" d="M16 76 L108 76"/><path class="sx-wire" d="M16 101 L108 76"/><path class="sx-wire" d="M16 126 L108 76"/><path class="sx-wire" data-o="0" d="M132 76 C178 76 162 28 204 28"/><path class="sx-wire" data-o="1" d="M132 76 C178 76 162 76 204 76"/><path class="sx-wire" data-o="2" d="M132 76 C178 76 162 124 204 124"/><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.28s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.28s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.56s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.56s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i3"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="1.12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i4"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="1.12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle id="wfDot" class="ld-dot ld-acc" r="5" opacity="0"/><g class="sx-st" transform="translate(108 76)" style="--d:2.60s"><circle r="24" class="sx-halo"/><circle r="24" class="sx-disc"/><g class="sx-ic" transform="scale(0.85)" style="stroke-width:2.47"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st out" transform="translate(222 28)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><g class="sx-st out" transform="translate(222 76)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-14" y="-8" width="28" height="22" rx="5"/><path d="M0 -8V-16M-5 3v.01M5 3v.01M-6 9h12"/></g></g><g class="sx-st out" transform="translate(222 124)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-12" y="-16" width="24" height="32" rx="3"/><path d="M-6 -7h12M-6 0h12M-6 7h7"/></g></g><text class="ld-t ld-s" x="248" y="32">A person</text><text class="ld-t ld-s" x="248" y="80">AI SDR</text><text class="ld-t ld-s" x="248" y="123">Typeform</text><text class="ld-t ld-s2" x="248" y="135">asks more info</text><text class="ld-t" x="4" y="146" text-anchor="start">20 signups</text><text class="ld-t" x="108" y="146" text-anchor="middle">0 to 100</text></svg>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l1i0" d="M16 26 L108 76"/><path id="l1i1" d="M16 51 L108 76"/><path id="l1i2" d="M16 76 L108 76"/><path id="l1i3" d="M16 101 L108 76"/><path id="l1i4" d="M16 126 L108 76"/></defs><path class="sx-wire" d="M16 26 L108 76"/><path class="sx-wire" d="M16 51 L108 76"/><path class="sx-wire" d="M16 76 L108 76"/><path class="sx-wire" d="M16 101 L108 76"/><path class="sx-wire" d="M16 126 L108 76"/><path class="sx-wire" data-o="0" d="M132 76 C178 76 162 28 204 28 L222 28"/><path class="sx-wire" data-o="1" d="M132 76 C178 76 162 76 204 76 L222 76"/><path class="sx-wire" data-o="2" d="M132 76 C178 76 162 124 204 124 L222 124"/><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.28s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.28s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.56s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.56s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i3"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="1.12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i4"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="1.12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle id="wfDot" class="ld-dot ld-acc" r="5" opacity="0"/><g class="sx-st" transform="translate(108 76)" style="--d:2.60s"><circle r="24" class="sx-halo"/><circle r="24" class="sx-disc"/><g class="sx-ic" transform="scale(0.85)" style="stroke-width:2.47"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st out" transform="translate(222 28)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><g class="sx-st out" transform="translate(222 76)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-14" y="-8" width="28" height="22" rx="5"/><path d="M0 -8V-16M-5 3v.01M5 3v.01M-6 9h12"/></g></g><g class="sx-st out" transform="translate(222 124)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-12" y="-16" width="24" height="32" rx="3"/><path d="M-6 -7h12M-6 0h12M-6 7h7"/></g></g><text class="ld-t ld-s" x="248" y="32">A person</text><text class="ld-t ld-s" x="248" y="80">AI SDR</text><text class="ld-t ld-s" x="248" y="123">Typeform</text><text class="ld-t ld-s2" x="248" y="135">asks more info</text><text class="ld-t" x="4" y="146" text-anchor="start">20 signups</text><text class="ld-t" x="108" y="146" text-anchor="middle">0 to 100</text></svg>
         <h3 class="lad-title">Workflow</h3>
         <p class="lad-sub">One automation, one job.</p>
         <a class="lad-link" href="/work/signup-router/">Example: Signup router &rarr;</a>
@@ -6195,27 +6179,7 @@ html.legal-open { overflow: hidden; }
     if (navEl) navEl.style.padding = y > 60 ? '0.6rem 2.5rem' : '1rem 2.5rem';
   }, { passive: true });
 
-  /* ARCH DIAGRAM */
-  (function() {
-    const svg = document.querySelector('.arch-svg');
-    if (!svg) return;
-    const paths = [{ x: 20, x2: 524 }, { x: 230, x2: 524 }, { x: 640, x2: 1050 }];
-    svg.querySelectorAll('.data-packet').forEach((pkt, i) => {
-      const p = paths[i] || paths[0]; let prog = 0, run = false;
-      const spd = 0.6 + i * 0.15;
-      function anim() {
-        if (!run) return; prog += spd;
-        pkt.setAttribute('cx', p.x + (p.x2 - p.x) * Math.min(prog / 100, 1));
-        if (prog < 110) requestAnimationFrame(anim); else pkt.setAttribute('opacity', '0');
-      }
-      setTimeout(() => {
-        setInterval(() => {
-          prog = 0; run = true; pkt.setAttribute('opacity', '0.9'); anim();
-          setTimeout(() => { run = false; pkt.setAttribute('opacity', '0'); }, 3000);
-        }, 4500 + i * 1500);
-      }, i * 1500);
-    });
-  })();
+
 
   /* ═══════════════════════════════════════════════
      AGENTIC ENGINE — Trigger animations on scroll into view
@@ -6632,19 +6596,22 @@ html.legal-open { overflow: hidden; }
   if(!svg||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const dot=svg.querySelector('#wfDot'),wires=[...svg.querySelectorAll('.sx-wire[data-o]')],sts=[...svg.querySelectorAll('.sx-st.out')];
   if(!dot||wires.length!==3)return;
-  const L=7,S=.47,E=.70,lens=wires.map(w=>w.getTotalLength());
+  const L=7,S=.47,E=.72,lens=wires.map(w=>w.getTotalLength()),edge=lens.map(l=>(l-18)/l);
   let loop=-1,pick=-1,vis=false,raf=0;
   const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
   function tick(){
     const t=svg.getCurrentTime(),li=Math.floor(t/L),ph=(t%L)/L;
     if(li!==loop){loop=li;let n;do{n=Math.floor(Math.random()*3)}while(n===pick);pick=n;sts.forEach(s=>s.classList.remove('hit'))}
-    if(ph>=S&&ph<=E){
+    if(ph>=S&&ph<E){
       const p=ease((ph-S)/(E-S)),pt=wires[pick].getPointAtLength(lens[pick]*p);
       dot.setAttribute('cx',pt.x);dot.setAttribute('cy',pt.y);
-      dot.setAttribute('opacity',Math.min(1,(ph-S)/.03,(E-ph)/.03));
-    }else dot.setAttribute('opacity',0);
+      dot.setAttribute('opacity',Math.min(1,(ph-S)/.03));
+      if(p>=edge[pick])sts[pick].classList.add('hit');
+    }else{
+      dot.setAttribute('opacity',0);
+      if(ph>=E&&ph<.93)sts[pick].classList.add('hit');
+    }
     if(ph>=.93)sts[pick].classList.remove('hit');
-    else if(ph>=E)sts[pick].classList.add('hit');
     raf=vis?requestAnimationFrame(tick):0;
   }
   new IntersectionObserver(([e])=>{vis=e.isIntersecting;if(vis&&!raf)raf=requestAnimationFrame(tick)},{rootMargin:'120px'}).observe(svg);
