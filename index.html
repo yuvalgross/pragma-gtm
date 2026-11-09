@@ -2556,9 +2556,6 @@ to {
 .arch-svg {
     width: 100%; height: auto; display: block; opacity: 0; transform: translateY(16px); transition: opacity 0.8s ease, transform 0.8s ease; cursor: default;
   }
-.arch-tooltip rect{fill:var(--paper);stroke:var(--border);stroke-width:1}
-.arch-tooltip path{fill:var(--paper);stroke:var(--border);stroke-width:1}
-.arch-tooltip text{fill:var(--ink)}
 .arch-svg.visible {
     opacity: 1; transform: translateY(0);
   }
@@ -4834,7 +4831,7 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="arch-label">The GTM architecture at a glance: signal to closed deal</div>
     <div class="arch-interactive">
-      <svg class="arch-svg" viewBox="0 0 1130 218" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GTM architecture flow: 5 layers from signal to closed revenue">
+      <svg class="arch-svg" viewBox="0 44 1130 174" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="GTM architecture flow: 5 layers from signal to closed revenue">
         <defs>
           <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#d97706"/></marker>
           <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#c2622a"/></marker>
@@ -4896,11 +4893,6 @@ html.legal-open { overflow: hidden; }
         <path d="M1048 133 L1070 133" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow2)"/>
         <text x="1102" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500" fill="#0f766e">Closed</text>
         <text x="1102" y="146" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-style="italic" fill="#0f766e">revenue.</text>
-        <g class="arch-tooltip" id="archTooltip" opacity="0" pointer-events="none">
-          <rect id="archTtBox" x="0" y="8" width="200" height="32" rx="8"/>
-          <path id="archTtCaret" d="M0 0 L8 0 L4 6 Z"/>
-          <text id="archTooltipText" x="0" y="29" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="14" font-weight="400"></text>
-        </g>
       </svg>
     </div>
     <div class="sys-flow arch-path" role="group" aria-labelledby="sysFlowCap">
@@ -6212,25 +6204,6 @@ html.legal-open { overflow: hidden; }
           setTimeout(() => { run = false; pkt.setAttribute('opacity', '0'); }, 3000);
         }, 4500 + i * 1500);
       }, i * 1500);
-    });
-    const tt = svg.querySelector('#archTooltip'), ttx = svg.querySelector('#archTooltipText'),
-          ttb = svg.querySelector('#archTtBox'), ttc = svg.querySelector('#archTtCaret');
-    function placeTip(n, lbl) {
-      ttx.textContent = lbl;
-      const bb = n.getBBox(), cx = bb.x + bb.width / 2;
-      const w = Math.ceil(ttx.getComputedTextLength()) + 28, h = 32, vb = 1130;
-      const x = Math.max(4, Math.min(vb - w - 4, cx - w / 2));
-      const y = Math.max(2, bb.y - 52);
-      ttb.setAttribute('x', x); ttb.setAttribute('y', y); ttb.setAttribute('width', w);
-      ttx.setAttribute('x', x + w / 2); ttx.setAttribute('y', y + 21);
-      const ccx = Math.max(x + 14, Math.min(x + w - 14, cx));
-      ttc.setAttribute('d', 'M' + (ccx - 6) + ' ' + (y + h) + ' L' + (ccx + 6) + ' ' + (y + h) + ' L' + ccx + ' ' + (y + h + 7) + ' Z');
-      tt.setAttribute('opacity', '1');
-    }
-    svg.querySelectorAll('.arch-node').forEach(n => {
-      const lbl = n.getAttribute('data-label');
-      n.addEventListener('mouseenter', () => { if (tt && ttx && lbl) placeTip(n, lbl); });
-      n.addEventListener('mouseleave', () => { if (tt) tt.setAttribute('opacity', '0'); });
     });
   })();
 
