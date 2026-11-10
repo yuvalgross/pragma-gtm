@@ -6525,10 +6525,10 @@ html.legal-open { overflow: hidden; }
   function unease(e){return e<.5?Math.sqrt(e/2):1-Math.sqrt((1-e)/2)}
   function sm(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)}
   function newPlan(){
-    var m; do{m=Math.floor(Math.random()*4)}while(m===prev); prev=m;
-    if(m===3){var u=3.2+Math.random()*.4;return [u,u,u]}
-    var a=3.4+Math.random()*.2,b=a+.3+Math.random()*.2,o=[0,1,2].filter(function(k){return k!==m}),sw=Math.random()<.5,r=[0,0,0];
-    r[m]=3.0; r[o[0]]=sw?a:b; r[o[1]]=sw?b:a; return r}
+    var d=[0,0,0].map(function(){return Math.random()*1.4}),mn=Math.min.apply(null,d),off=Math.random()*.4;
+    d=d.map(function(x){return x-mn+off});
+    var T=d.map(function(x){return Math.min(2.6+Math.random()*1.2,4.9-x)});
+    return {d:d,T:T}}
   var views=[].map.call(document.querySelectorAll('.sys-art-d,.sys-art-m'),function(svg){
     var lanes=[].slice.call(svg.querySelectorAll('.sx-lane')),rp=svg.querySelector('.sx-recpath'),rec=svg.querySelector('.sx-dot.sx-rec'),
         sts=[].slice.call(svg.querySelectorAll('.sx-st')),prog=svg.querySelector('.sx-prog'),
@@ -6545,7 +6545,7 @@ html.legal-open { overflow: hidden; }
     t0=now; pl=newPlan(); fired=0;
     v.sts.forEach(function(s){s.classList.remove('hit','on')});
     v.prog.style.strokeDashoffset=100; v.prog.style.opacity=1; v.rec.setAttribute('opacity',0);
-    var first=Math.min.apply(null,v.info.map(function(d,i){return d.te*pl[i]})), last=Math.max.apply(null,pl);
+    var first=Math.min.apply(null,v.info.map(function(d,i){return pl.d[i]+d.te*pl.T[i]})), last=Math.max.apply(null,pl.d.map(function(x,i){return x+pl.T[i]}));
     v.rec0=last+.35; v.recT=3.6;
     function hit(i){return function(){v.sts[i].classList.add('hit')}}
     function on(i){return function(){v.sts[i].classList.add('on')}}
@@ -6557,10 +6557,10 @@ html.legal-open { overflow: hidden; }
     var ph=(now-t0)/1000; if(ph>=LOOP){start(v,now);ph=0}
     while(fired<ev.length&&ph>=ev[fired].t){ev[fired].f();fired++}
     v.info.forEach(function(d,i){
-      var el=v.dots[i],pr=ph/pl[i];
-      if(pr>=1){el.setAttribute('opacity',0);return}
+      var el=v.dots[i],pr=(ph-pl.d[i])/pl.T[i];
+      if(pr<=0||pr>=1){el.setAttribute('opacity',0);return}
       var pt=d.p.getPointAtLength(d.L*ease(pr));
-      el.setAttribute('cx',pt.x);el.setAttribute('cy',pt.y);el.setAttribute('opacity',Math.min(1,ph/.7))});
+      el.setAttribute('cx',pt.x);el.setAttribute('cy',pt.y);el.setAttribute('opacity',Math.min(1,(ph-pl.d[i])/.7))});
     var p=Math.max(0,Math.min(1,(ph-v.rec0)/v.recT));
     if(ph<v.rec0){v.rec.setAttribute('opacity',0)}
     else{
