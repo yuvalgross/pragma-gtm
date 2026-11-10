@@ -420,9 +420,6 @@
 :root[data-theme="dark"] .cv-sidebar {
     background: var(--paper-warm);
   }
-:root[data-theme="dark"] .philosophy-section {
-    background: #0c0b08;
-  }
 :root[data-theme="dark"] .phil-card {
     background: rgba(240,236,224,0.04); border-color: rgba(240,236,224,0.09);
   }
@@ -2653,6 +2650,18 @@ to {
   }
 
   }
+/* Philosophy: natural sand band in light mode, lifted charcoal in dark */
+:root:not([data-theme="dark"]) .philosophy-section{background:var(--paper-deep)}
+:root:not([data-theme="dark"]) .philosophy-section h2{color:var(--ink)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-intro{color:var(--ink-soft)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-intro strong,:root:not([data-theme="dark"]) .philosophy-section .phil-stat-num{color:var(--accent-dark)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-card{background:rgba(255,255,255,.5);border-color:var(--border)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-card:hover{border-color:var(--border-gold)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-title{color:var(--ink)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-desc{color:var(--ink-soft)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-stat{border-top-color:var(--border)}
+:root:not([data-theme="dark"]) .philosophy-section .phil-stat-label{color:var(--ink-muted)}
+:root[data-theme="dark"] .philosophy-section{background:#1c1912}
 .philosophy-section {
     background: var(--philosophy-bg);
     padding: 4rem var(--sp-section-h);
