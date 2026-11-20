@@ -1,157 +1,28 @@
-# Yuval Gross — GTM Engineer Portfolio
+# pragma-gtm.com
 
-Portfolio website for Yuval Gross, GTM Engineer & RevOps Architect based in Berlin.
+Portfolio site of Yuval Gross, GTM Engineer in Berlin, plus the code for six work samples.
 
-## 🚀 Live Site
+**Live:** [pragma-gtm.com](https://pragma-gtm.com)
 
-- **Vercel:** https://pragma-gtm.vercel.app/
-- **Custom Domain:** https://pragma-gtm.com/
+## Work samples
 
-## 📋 What's Inside
+Each sample is a small tool with its data, rules, limits and code. All of them run on synthetic data, with plain Python and no outside services.
 
-- **index.html** — Complete responsive portfolio with animations
-- **og-image.png** — Open Graph image for social sharing (1200x630px)
-- **robots.txt** — Search engine crawler instructions
-- **sitemap.xml** — XML sitemap for SEO
-- **Yuval_Gross_CV.pdf** — Downloadable CV (GTM_-_Yuval_Gross.pdf is a copy for old links)
-- **vercel.json** — Vercel deployment configuration
-- **.gitignore** — Git ignore patterns
+| Sample | Folder | What it does |
+| --- | --- | --- |
+| [CRM clean up](https://pragma-gtm.com/work/crm-cleanup/) | [`work/crm-cleanup`](work/crm-cleanup) | Agents fix duplicates, broken fields and orphaned owners in a HubSpot export, then pick which customers get a human this week |
+| [Signup router](https://pragma-gtm.com/work/signup-router/) | [`work/signup-router`](work/signup-router) | Gates, scores and routes a week of product trial signups |
+| [Signal outreach](https://pragma-gtm.com/work/signal-outreach/) | [`work/signal-outreach`](work/signal-outreach) | Writes a three step sequence from each contact's freshest buying signal and holds back the rest, with the reason |
+| [Account prioritisation](https://pragma-gtm.com/work/account-prioritisation/) | [`work/account-prioritisation`](work/account-prioritisation) | Routes 500 accounts across SDRs by territory and capacity |
+| [Lost deal reactivation](https://pragma-gtm.com/work/lost-deal-reactivation/) | [`work/lost-deal-reactivation`](work/lost-deal-reactivation) | Sorts lost accounts into groups and builds a Monday call list with the reason to talk |
+| [Job search engine](https://pragma-gtm.com/work/job-search-engine/) | [`work/job-search-engine`](work/job-search-engine) | A daily job scan with gates, a readable fit line, a board and a CV check, for any job title |
 
-## ✨ Features
+Every folder has its own README with the commands to run it.
 
-### Design
-- 🌓 Dark/Light mode toggle
-- 📱 Fully responsive (mobile, tablet, desktop)
-- ⚡ Fast performance (all SVG, no heavy assets)
-- 🎨 Premium branding (amber + cream palette)
+## The site
 
-### Animations
-- ✨ Particle field animation (60fps, optimized)
-- 🎯 Interactive elements (hover effects, transitions)
-- 🔄 Smooth scrolling animations
-- 🎬 Typewriter effect for roles
-- 📊 Number counter animations
+A single static `index.html` on Vercel, with self hosted fonts and no build step. `vercel.json` holds the headers and redirects.
 
-### Content
-- 👤 Professional profile section
-- 💼 Experience timeline (3 roles)
-- 🎯 5 GTM signal sources
-- 🛠️ Tools & platforms (23 tools)
-- 📈 Key metrics & results
-- 📞 Contact & download CV
+## Contact
 
-### SEO
-- 📝 Optimized meta tags
-- 🔍 JSON-LD structured data
-- 🖼️ Open Graph + Twitter cards
-- 📍 Geolocation targeting (Berlin)
-- 🗺️ Sitemap + robots.txt
-
-### Security
-- 🔒 HSTS preload
-- 🛡️ Content Security Policy
-- 🚫 X-Frame-Options: DENY
-- 🔐 Secure headers configured
-
-## 🛠️ Tech Stack
-
-- **Frontend:** Pure HTML5 + CSS3 + Vanilla JavaScript
-- **Animations:** Canvas API (particle field)
-- **Fonts:** Google Fonts (Cormorant Garamond, DM Sans)
-- **Hosting:** Vercel (static site deployment)
-- **CDN:** Vercel's global edge network
-
-## 📊 Performance
-
-- **Page Load:** ~1.2 seconds
-- **First Contentful Paint:** ~0.8 seconds
-- **Lighthouse Score:** 95+
-- **Core Web Vitals:** All green
-- **File Size:** 182 KB (single HTML file)
-- **Animation:** 60fps, optimized with IntersectionObserver
-
-## 🚀 Deployment to Vercel
-
-### Step 1: Push to GitHub
-```bash
-git init
-git add .
-git commit -m "Initial commit: GTM portfolio"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/pragma-gtm.git
-git push -u origin main
-```
-
-### Step 2: Connect to Vercel
-1. Go to [vercel.com](https://vercel.com)
-2. Click "New Project"
-3. Select your GitHub repository
-4. Click "Deploy" (auto-detects static site)
-5. Done! 🎉
-
-### Step 3: Add Custom Domain
-1. In Vercel dashboard → Settings → Domains
-2. Add `pragma-gtm.com`
-3. Follow DNS setup instructions
-4. Update Namecheap DNS to Vercel nameservers
-5. Propagation: 24-48 hours
-
-## 🔧 Development
-
-### Local Testing
-```bash
-# Open in browser
-open index.html
-
-# Or serve locally
-python3 -m http.server 8000
-# Visit http://localhost:8000
-```
-
-### Making Changes
-1. Edit `index.html` locally
-2. Test in browser
-3. Commit: `git commit -am "Update description"`
-4. Push: `git push`
-5. Vercel auto-deploys
-
-## 📁 File Structure
-
-```
-pragma-gtm/
-├── index.html              (182 KB) - Main portfolio page
-├── og-image.png           (58 KB)  - Social sharing image
-├── robots.txt             (67 B)   - Crawler instructions
-├── sitemap.xml            (266 B)  - XML sitemap
-├── GTM_-_Yuval_Gross.pdf  (61 KB)  - CV download
-├── vercel.json            (config) - Vercel deployment
-├── .gitignore             (config) - Git ignore patterns
-└── README.md              (this)   - Documentation
-```
-
-## 🎯 Key Metrics
-
-- **Experience:** 8+ years B2B sales
-- **Revenue Secured:** $390K
-- **MQL Uplift:** 42%
-- **Quota Attainment:** 100%
-- **Certifications:** 5
-- **Languages:** 3 (English C2, German B2, Hebrew C2)
-- **Tools Expertise:** 23+ platforms
-
-## 📧 Contact
-
-- **Email:** contact@pragma-gtm.com
-- **LinkedIn:** [Yuval Gross](https://linkedin.com/in/yuvalgross)
-- **Location:** 📍 Berlin, Germany
-- **Website:** https://pragma-gtm.com
-
-## 📄 License
-
-This portfolio is personal property of Yuval Gross. All rights reserved.
-
----
-
-**Last Updated:** May 23, 2026  
-**Deployed On:** Vercel  
-**Status:** 🟢 Live & Optimized
+[contact@pragma-gtm.com](mailto:contact@pragma-gtm.com) · [LinkedIn](https://www.linkedin.com/in/yuvalgross)
