@@ -1,59 +1,38 @@
 {
   "profile": "GTM Engineer search",
-  "board_copies": 214,
-  "unique_roles": 109,
-  "duplicate_copies_collapsed": 105,
-  "reposts": 8,
-  "in_scope": 59,
-  "main_8_plus": 12,
-  "reference": 4,
-  "could_not_verify": 4,
-  "seen_not_a_fit": 8,
-  "dropped": 24,
-  "closed_on_own_list": 7,
+  "runs": 14,
+  "skipped": 1,
+  "copies_read": 435,
+  "unique_roles": 392,
+  "in_titles": 136,
+  "already_seen": 90,
+  "main_8_plus": 8,
+  "reference": 5,
+  "seen_not_a_fit": 34,
+  "dropped": 85,
+  "could_not_verify": 1,
+  "closed_on_board": 3,
+  "tracked_closed_later": 3,
+  "cvs_drafted": 7,
   "drop_reasons": {
-    "none of the duties you want to do": 2,
-    "Remote US is outside the regions you work in": 2,
-    "junior, intern or student role": 7,
-    "needs a move inside the home country, no remote": 3,
-    "German C1 required": 9,
-    "rejected there before, done story": 1
+    "German C1 required": 21,
+    "junior, intern or student role": 17,
+    "outside the regions you work in": 16,
+    "needs a move inside the home country, no remote": 16,
+    "none of the duties you want to do": 5,
+    "Spanish required": 4,
+    "Dutch required": 3,
+    "rejected there before, done story": 2,
+    "French required": 1
   },
-  "top": [
-    {
-      "company": "Saffron HQ",
-      "title": "RevOps Engineer",
-      "fit_line": "fit 10 (role 9, home city +0.5, pay above floor +0.5)",
-      "verdict": "Strong fit",
-      "ats": "Ashby"
-    },
-    {
-      "company": "Fable Logic",
-      "title": "RevOps Engineer",
-      "fit_line": "fit 9.5 (role 8.5, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
-      "verdict": "Strong fit",
-      "ats": "Workable"
-    },
-    {
-      "company": "Orchard Health",
-      "title": "GTM Engineer",
-      "fit_line": "fit 9.5 (role 8, remote in home country +1.5, pay above floor +0.5, startup minus 0.5)",
-      "verdict": "Strong fit",
-      "ats": "Personio"
-    },
-    {
-      "company": "Delta Logic",
-      "title": "GTM Systems Engineer",
-      "fit_line": "fit 9 (role 8.5, Limassol +1.25, pay above floor +0.5, on site only minus 0.5, startup minus 0.5)",
-      "verdict": "Strong fit",
-      "ats": "Recruitee"
-    },
-    {
-      "company": "Cobalt Cloud",
-      "title": "Growth Engineer",
-      "fit_line": "fit 9 (role 8.5, home city +0.5, pay not stated (ask))",
-      "verdict": "Strong fit",
-      "ats": "JOIN"
-    }
+  "main": [
+    "Opal Health, GTM Systems Engineer: fit 10 (role 9, remote in home country +1.5, pay above floor +0.5)",
+    "Nimbus Cloud, RevOps Engineer: fit 8.5 (role 7.5, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+    "Nimbus Labs, GTM Engineer: fit 8 (role 8, home city +0.5, floor inside the band, on site only minus 0.5)",
+    "Halcyon HQ, Growth Engineer: fit 10 (role 9, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+    "Atlas Pay, GTM Systems Engineer: fit 9 (role 7.5, remote in home country +1.5, pay not stated (ask))",
+    "Tidal Logic, GTM Engineer: fit 9.5 (role 8, EU remote +1.5, pay not stated (ask))",
+    "Garnet Health, GTM Systems Engineer: fit 8.5 (role 7.5, Remote Spain +1.5, pay not stated (ask), startup minus 0.5)",
+    "Ember Grid, RevOps Engineer: fit 8.5 (role 8, home city +0.5, pay not stated (ask))"
   ]
 }

@@ -4,31 +4,30 @@ Builds the synthetic input for the job search engine sample.
     python3 make_synthetic_jobs.py
 
 Writes:
-  data/postings.json       what the job boards show (discovery copies)
-  data/company_lists.json  each company's own job list (the only proof a role is open)
-  data/applications.csv    a past application history with outcomes (for the learning loop)
+  data/postings.json       every posting with the day it opened and closed on the company's own list
+  data/board_copies.json   what the job boards show: copies of those postings, each first seen on a day
+  data/companies.json      each company: ATS, size, funding stage, whether its own list can be read
+  data/applications.csv    applications sent before the simulated fortnight, with their outcome
 
-Every company, person and posting is invented. The feed mixes several job
-families (GTM engineering, RevOps, sales, customer success, data) so the same
-engine can be pointed at a different profile. It also plants what a real feed
-has: the same role on three boards, reposts under a new id, roles that closed
-on the company's list but stay up on a board, companies whose list cannot be
-read, roles that ask a language, and roles that need a move.
+Everything is invented. The shape follows a real search in a European city:
+most roles found on boards are not a fit, a third of local roles ask the local
+language, boards keep closed roles up for weeks, the same role shows on two or
+three boards, and only a role or two a week is worth a tailored CV.
 """
 import csv
 import json
 import os
 import random
-from datetime import date, timedelta
 
 SEED = 21
-TODAY = date(2026, 11, 16)
+DAYS = 14
 rnd = random.Random(SEED)
 
 A = ["Lumen", "Quill", "Harbor", "Juniper", "Nimbus", "Orchard", "Pebble", "Saffron", "Tidal", "Vesper",
-     "Wren", "Atlas", "Bramble", "Cobalt", "Delta", "Ember", "Fable", "Garnet", "Halcyon", "Indigo"]
-B = ["Labs", "AI", "Cloud", "Works", "HQ", "Data", "Systems", "Health", "Pay", "Logic"]
-ATS = ["ashby", "greenhouse", "lever", "personio", "teamtailor", "join", "recruitee", "workable"]
+     "Wren", "Atlas", "Bramble", "Cobalt", "Delta", "Ember", "Fable", "Garnet", "Halcyon", "Indigo",
+     "Kestrel", "Linden", "Marlow", "Nettle", "Opal", "Prism", "Quarry", "Rook", "Sable", "Thistle"]
+B = ["Labs", "AI", "Cloud", "Works", "HQ", "Data", "Systems", "Health", "Pay", "Logic", "Grid", "Stack"]
+ATS = ["ashby"] * 5 + ["greenhouse"] * 3 + ["personio"] * 4 + ["teamtailor"] * 2 + ["join"] * 2 + ["lever", "recruitee", "workable"]
 ATS_URL = {
     "ashby": "https://jobs.ashbyhq.example/{slug}/{id}",
     "greenhouse": "https://job-boards.greenhouse.example/{slug}/jobs/{id}",
@@ -39,34 +38,42 @@ ATS_URL = {
     "recruitee": "https://{slug}.recruitee.example/o/{id}",
     "workable": "https://apply.workable.example/{slug}/j/{id}",
 }
-BOARDS = ["LinkedIn alert", "Indeed", "niche GTM board", "VC portfolio board", "ATS host search", "newsletter"]
+# source, tier, chance a posting shows up there, (min, max) days of lag after it opens
+SOURCES = [
+    ("LinkedIn alert", "A", 0.55, (0, 1)), ("Indeed", "A", 0.25, (0, 12)), ("niche GTM board", "A", 0.35, (0, 4)),
+    ("ATS host search", "A", 0.30, (0, 2)), ("newsletter", "A", 0.15, (2, 7)), ("VC portfolio board", "B", 0.15, (3, 20)),
+    ("startup board", "B", 0.12, (5, 25)), ("remote board", "C", 0.08, (5, 30)),
+]
 
 LOCATIONS = [  # city, country, weight
-    ("Berlin", "Germany", 30), ("Munich", "Germany", 8), ("Hamburg", "Germany", 5),
-    ("Remote EU", "EU", 18), ("Remote Germany", "Germany", 8), ("Madrid", "Spain", 4),
-    ("Remote Spain", "Spain", 5), ("Amsterdam", "Netherlands", 6), ("London", "United Kingdom", 6),
-    ("Limassol", "Cyprus", 2), ("Remote US", "United States", 4), ("Stockholm", "Sweden", 3),
+    ("Berlin", "Germany", 30), ("Munich", "Germany", 9), ("Hamburg", "Germany", 5), ("Cologne", "Germany", 3),
+    ("Remote EU", "EU", 10), ("Remote Germany", "Germany", 7), ("Madrid", "Spain", 3), ("Barcelona", "Spain", 3),
+    ("Remote Spain", "Spain", 3), ("Amsterdam", "Netherlands", 6), ("London", "United Kingdom", 8),
+    ("Limassol", "Cyprus", 1), ("Remote US", "United States", 7), ("Stockholm", "Sweden", 3), ("Paris", "France", 4),
 ]
+LOCAL_LANGUAGE = {"Germany": "German C1", "Spain": "Spanish", "Netherlands": "Dutch", "France": "French", "Sweden": "Swedish"}
 
 FAMILIES = {
     "gtm": {
-        "titles": ["GTM Engineer", "Founding GTM Engineer", "Senior GTM Engineer", "GTM Systems Engineer",
-                   "RevOps Engineer", "Growth Engineer", "Head of GTM Engineering", "GTM Engineering Intern"],
+        "titles": ["GTM Engineer"] * 4 + ["Senior GTM Engineer", "Founding GTM Engineer", "GTM Systems Engineer",
+                   "RevOps Engineer", "Growth Engineer", "Head of GTM Engineering", "GTM Engineering Intern",
+                   "Working Student GTM Engineering"],
         "build": ["build enrichment and scoring workflows", "build outbound and signal pipelines",
                   "automate CRM updates with APIs and webhooks", "ship AI agents for research and routing",
                   "build lead routing from scratch", "integrate tools through APIs"],
         "run": ["own pipeline reporting for leadership", "administer the CRM", "run the forecast process",
-                "prepare QBR decks", "manage territory and quota planning"],
-        "tools": ["Clay", "HubSpot", "Salesforce", "n8n", "Make", "Python", "SQL", "Claude", "Apollo", "Zapier"],
-        "pay": (55, 95),
+                "prepare QBR decks", "manage territory and quota planning", "write outbound copy for SDRs",
+                "maintain dashboards in Looker"],
+        "tools": ["Clay", "HubSpot", "Salesforce", "n8n", "Make", "Python", "SQL", "Claude", "Apollo", "Zapier", "CPQ", "dbt", "Looker"],
+        "pay": (50, 95),
     },
     "revops": {
-        "titles": ["Revenue Operations Manager", "Senior RevOps Manager", "Sales Operations Analyst", "RevOps Specialist"],
+        "titles": ["Revenue Operations Manager", "Senior RevOps Manager", "Sales Operations Analyst", "RevOps Specialist", "Head of Revenue Operations"],
         "build": ["automate CRM updates with APIs and webhooks", "build lead routing from scratch"],
         "run": ["own pipeline reporting for leadership", "administer the CRM", "run the forecast process",
                 "prepare QBR decks", "manage territory and quota planning", "design commission plans"],
-        "tools": ["HubSpot", "Salesforce", "SQL", "Looker", "Excel", "Gong"],
-        "pay": (55, 90),
+        "tools": ["HubSpot", "Salesforce", "SQL", "Looker", "Excel", "Gong", "CPQ"],
+        "pay": (55, 95),
     },
     "ae": {
         "titles": ["Account Executive", "Senior Account Executive", "Enterprise Account Executive", "Founding AE"],
@@ -76,7 +83,7 @@ FAMILIES = {
         "pay": (60, 110),
     },
     "cs": {
-        "titles": ["Customer Success Manager", "Senior Customer Success Manager", "Head of Customer Success", "Onboarding Manager"],
+        "titles": ["Customer Success Manager"] * 3 + ["Senior Customer Success Manager", "Head of Customer Success", "Onboarding Manager"],
         "build": ["run onboarding for new customers", "drive adoption and health scores", "own renewals and expansion",
                   "build success playbooks"],
         "run": ["answer support tickets", "prospect cold accounts", "handle billing questions"],
@@ -91,101 +98,108 @@ FAMILIES = {
         "pay": (55, 85),
     },
 }
-FAMILY_WEIGHTS = [("gtm", 40), ("revops", 16), ("ae", 14), ("cs", 22), ("data", 8)]
+FAMILY_WEIGHTS = [("gtm", 34), ("revops", 22), ("ae", 22), ("cs", 14), ("data", 8)]
 
 
 def wpick(pairs):
-    total = sum(w for *_, w in pairs)
+    total = sum(p[-1] for p in pairs)
     r = rnd.uniform(0, total)
-    for item in pairs:
-        r -= item[-1]
+    for p in pairs:
+        r -= p[-1]
         if r <= 0:
-            return item
+            return p
     return pairs[-1]
 
 
 def main():
     os.makedirs("data", exist_ok=True)
-    companies, names = [], set()
-    while len(companies) < 60:
+    companies, names = {}, set()
+    while len(companies) < 110:
         n = f"{rnd.choice(A)} {rnd.choice(B)}"
         if n in names:
             continue
         names.add(n)
-        size = rnd.choice([12, 25, 40, 80, 120, 180, 260, 450, 900, 2500])
+        size = rnd.choice([15, 30, 45, 70, 110, 160, 240, 380, 600, 1200, 3000])
+        stage = "Seed" if size < 40 else "Series A" if size < 120 else "Series B" if size < 300 else "Series C+" if size < 1000 else "Public or late stage"
         r = rnd.random()
-        list_status = "works" if r < 0.8 else ("unreadable" if r < 0.9 else "none")
-        companies.append({"name": n, "slug": n.lower().replace(" ", ""), "ats": rnd.choice(ATS),
-                          "employees": size, "list_status": list_status})
+        companies[n] = {"slug": n.lower().replace(" ", ""), "ats": rnd.choice(ATS), "employees": size, "stage": stage,
+                        "list": "works" if r < 0.86 else ("unreadable" if r < 0.94 else "none")}
 
-    postings, lists = [], {c["name"]: {"ats": c["ats"], "status": c["list_status"], "open_ids": []} for c in companies}
-    pid = 1000
-    for _ in range(110):
-        c = rnd.choice(companies)
+    postings, copies = [], []
+    pid = 4000
+    # postings that opened before the fortnight (older stock still on boards) and during it
+    for _ in range(620):
+        cname = rnd.choice(list(companies))
+        c = companies[cname]
         fam = wpick(FAMILY_WEIGHTS)[0]
         F = FAMILIES[fam]
         city, country, _ = wpick(LOCATIONS)
         if city.startswith("Remote"):
             workplace, office_days = "remote", 0
         else:
-            workplace = rnd.choice(["hybrid", "hybrid", "on site"])
-            office_days = 5 if workplace == "on site" else rnd.choice([1, 2, 3])
-        duties = rnd.sample(F["build"], k=min(len(F["build"]), rnd.choice([0, 1, 2, 3]))) + \
-            rnd.sample(F["run"], k=min(len(F["run"]), rnd.choice([1, 2, 3])))
-        if fam == "gtm" and rnd.random() < 0.45:
+            workplace = wpick([("hybrid", 6), ("on site", 3)])[0]
+            office_days = 5 if workplace == "on site" else rnd.choice([1, 2, 3, 3, 4])
+        if fam == "gtm" and rnd.random() < 0.3:
             duties = rnd.sample(F["build"], k=3) + rnd.sample(F["run"], k=rnd.choice([0, 1]))
-        langs = []
-        if rnd.random() < 0.22:
-            langs = ["German C1"] if country == "Germany" else (["Spanish"] if country == "Spain" else ["Dutch"] if country == "Netherlands" else [])
+        else:
+            duties = rnd.sample(F["build"], k=min(len(F["build"]), rnd.choice([0, 1, 1, 2]))) + \
+                rnd.sample(F["run"], k=min(len(F["run"]), rnd.choice([1, 2, 3])))
+        langs = [LOCAL_LANGUAGE[country]] if country in LOCAL_LANGUAGE and rnd.random() < 0.35 else []
         lo, hi = F["pay"]
-        pay = None if rnd.random() < 0.45 else (lambda a: [a, a + rnd.choice([10, 15, 20])])(rnd.randrange(lo, hi, 5))
+        pay = None if rnd.random() < 0.55 else (lambda a: [a, a + rnd.choice([10, 15, 20, 25])])(rnd.randrange(lo, hi - 5, 5))
+        opened = rnd.randint(-25, DAYS - 1)
+        closed = opened + rnd.randint(6, 45) if rnd.random() < 0.65 else None
         pid += 1
-        posting = {
-            "id": str(pid), "company": c["name"], "title": rnd.choice(F["titles"]), "family": fam,
+        p = {
+            "id": str(pid), "company": cname, "title": rnd.choice(F["titles"]), "family": fam,
             "location": city, "country": country, "workplace": workplace, "office_days": office_days,
-            "languages_required": langs, "years_required": rnd.choice([2, 3, 3, 4, 5, 6]),
+            "languages_required": langs, "years_required": wpick([(2, 2), (3, 4), (4, 3), (5, 3), (6, 2), (8, 1)])[0],
             "pay_k_eur": pay, "employees": c["employees"], "duties": duties,
-            "tools": rnd.sample(F["tools"], k=min(len(F["tools"]), rnd.choice([2, 3, 4]))),
-            "posted": (TODAY - timedelta(days=rnd.randint(0, 25))).isoformat(),
+            "tools": rnd.sample(F["tools"], k=min(len(F["tools"]), rnd.choice([3, 4, 5]))),
+            "opened_day": opened, "closed_day": closed,
             "url": ATS_URL[c["ats"]].format(slug=c["slug"], id=pid),
         }
-        open_now = rnd.random() < 0.82
-        if open_now and lists[c["name"]]["status"] == "works":
-            lists[c["name"]]["open_ids"].append(posting["id"])
-        # discovery copies: the same posting on one to three boards
-        for b in rnd.sample(BOARDS, k=rnd.choice([1, 1, 2, 3])):
-            postings.append(dict(posting, source=b))
-        # some roles get reposted under a new id; only the new id is on the company list
-        if open_now and rnd.random() < 0.1 and lists[c["name"]]["status"] == "works":
+        postings.append(p)
+        # board copies: each source picks it up with its own chance and lag; boards keep it for weeks
+        for src, tier, chance, (lag_lo, lag_hi) in SOURCES:
+            if rnd.random() < chance:
+                copies.append({"id": p["id"], "source": src, "tier": tier, "seen_day": opened + rnd.randint(lag_lo, lag_hi),
+                               "gone_day": (closed or opened + 60) + rnd.randint(10, 30)})
+        # a repost: same role under a new id, the old one closes on the company list
+        if rnd.random() < 0.06 and opened < DAYS - 3:
             pid += 1
-            new = dict(posting, id=str(pid), url=ATS_URL[c["ats"]].format(slug=c["slug"], id=pid),
-                       posted=TODAY.isoformat(), source="ATS host search")
-            lists[c["name"]]["open_ids"].remove(posting["id"])
-            lists[c["name"]]["open_ids"].append(new["id"])
+            new = dict(p, id=str(pid), opened_day=opened + rnd.randint(3, 10), url=ATS_URL[c["ats"]].format(slug=c["slug"], id=pid))
+            p["closed_day"] = new["opened_day"]
             postings.append(new)
+            copies.append({"id": new["id"], "source": "ATS host search", "tier": "A", "seen_day": new["opened_day"], "gone_day": new["opened_day"] + 60})
 
     with open("data/postings.json", "w") as f:
         json.dump(postings, f, indent=1)
-    with open("data/company_lists.json", "w") as f:
-        json.dump(lists, f, indent=1)
+    with open("data/board_copies.json", "w") as f:
+        json.dump(copies, f, indent=1)
+    with open("data/companies.json", "w") as f:
+        json.dump(companies, f, indent=1)
 
-    # application history for the learning loop
+    # applications before the fortnight: shape, size, note, channel and outcome
     rows = []
-    for i in range(60):
-        shape = rnd.choice(["build", "build", "run"])
-        size = rnd.choice(["under 150", "150 to 500", "over 500"])
-        note = rnd.random() < 0.35
-        p_call = {"build": 0.32, "run": 0.12}[shape] * {"under 150": 1.2, "150 to 500": 1.0, "over 500": 0.6}[size]
-        p_call *= 1.6 if note else 1.0
+    for i in range(72):
+        shape = wpick([("build", 6), ("run", 3), ("sales", 2)])[0]
+        size = wpick([("under 150", 4), ("150 to 500", 3), ("over 500", 3)])[0]
+        note = rnd.random() < 0.3
+        p_call = {"build": 0.30, "run": 0.10, "sales": 0.15}[shape] * {"under 150": 1.2, "150 to 500": 1.0, "over 500": 0.6}[size]
+        p_call *= 1.7 if note else 1.0
         r = rnd.random()
-        outcome = "call" if r < p_call else ("rejected at CV" if r < p_call + 0.4 else "no reply")
-        rows.append({"application": f"P{i + 1:03d}", "role_shape": shape, "company_size": size,
-                     "note_to_named_person": "yes" if note else "no", "outcome": outcome})
+        outcome = "call" if r < p_call else ("rejected at CV" if r < p_call + 0.38 else ("no reply" if r < p_call + 0.7 else "pending"))
+        cname = rnd.choice(list(companies))
+        rows.append({"application": f"P{i + 1:03d}", "company": cname, "role_shape": shape, "company_size": size,
+                     "channel": rnd.choice(["Ashby", "Ashby", "Personio", "Greenhouse", "Teamtailor", "JOIN", "LinkedIn Easy Apply", "Email"]),
+                     "cv_score": rnd.choice([8, 8.5, 8.5, 9, 9, 9]), "note_to_named_person": "yes" if note else "no",
+                     "days_before_start": rnd.randint(1, 50), "outcome": outcome})
     with open("data/applications.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
         w.writerows(rows)
-    print(f"{len(postings)} board copies, {len(companies)} companies, {len(rows)} past applications")
+    print(f"{len(postings)} postings, {len(copies)} board copies, {len(companies)} companies, {len(rows)} past applications")
 
 
 if __name__ == "__main__":

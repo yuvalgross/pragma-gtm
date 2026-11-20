@@ -72,7 +72,8 @@
   "pay_floor_k_eur": 65,
   "excluded_companies": [],
   "rejected_before": [
-    "Cobalt Data"
+    "Cobalt Data",
+    "Quill Pay"
   ],
   "cv_bar_total": 8,
   "show_bar_role": 6.5,
@@ -103,5 +104,6 @@
     "Netherlands",
     "United Kingdom",
     "Sweden"
-  ]
+  ],
+  "cv_bar_interviewing": 8.5
 }

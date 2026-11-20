@@ -1687,6 +1687,9 @@ h2 em {
 .work-grid .work-card.wide { grid-column: 1 / -1; }
 .work-grid .work-card.wide .work-facts { grid-template-columns: repeat(4, 1fr); }
 .work-grid .work-link { align-self: flex-start; margin-top: auto; }
+.work-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: auto; align-items: center; }
+.work-links .work-link { margin-top: 0; }
+.work-link.gh { opacity: .85; }
 @supports (grid-template-rows: subgrid) {
   /* both cards share row tracks, so titles, text, numbers and links line up across the pair */
   .work-grid .work-card {
@@ -5644,7 +5647,10 @@ html.legal-open { overflow: hidden; }
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Clay CLI</span><span class="exp-tag">CRM hygiene</span><span class="exp-tag">Agents</span><span class="exp-tag">Customer revenue</span><span class="exp-tag">Tests</span>
       </div>
-      <a class="work-link" href="/work/crm-cleanup/">See the call list and the source &rarr;</a>
+      <div class="work-links">
+        <a class="work-link" href="/work/crm-cleanup/">See the call list and the source &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/crm-cleanup" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </div>
     </article>
     <article class="work-card fade-up">
       <div>
@@ -5663,7 +5669,10 @@ html.legal-open { overflow: hidden; }
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing logic</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Clay CLI</span><span class="exp-tag">Synthetic data</span>
       </div>
-      <a class="work-link" href="/work/signup-router/">See the scores and the source &rarr;</a>
+      <div class="work-links">
+        <a class="work-link" href="/work/signup-router/">See the scores and the source &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signup-router" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </div>
     </article>
     <article class="work-card fade-up">
       <div>
@@ -5681,7 +5690,10 @@ html.legal-open { overflow: hidden; }
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Signal based outbound</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Clay CLI</span><span class="exp-tag">Copy QA</span><span class="exp-tag">Tests</span><span class="exp-tag">Send scheduling</span>
       </div>
-      <a class="work-link" href="/work/signal-outreach/">Read the emails and the source &rarr;</a>
+      <div class="work-links">
+        <a class="work-link" href="/work/signal-outreach/">Read the emails and the source &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signal-outreach" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </div>
     </article>
     <article class="work-card fade-up">
       <div>
@@ -5699,7 +5711,10 @@ html.legal-open { overflow: hidden; }
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Account scoring</span><span class="exp-tag">Territory routing</span><span class="exp-tag">Salesforce</span><span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">Synthetic data</span>
       </div>
-      <a class="work-link" href="/work/account-prioritisation/">See the lists and the source &rarr;</a>
+      <div class="work-links">
+        <a class="work-link" href="/work/account-prioritisation/">See the lists and the source &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/account-prioritisation" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </div>
     </article>
     <article class="work-card fade-up">
       <div>
@@ -5717,25 +5732,31 @@ html.legal-open { overflow: hidden; }
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Lost deal reactivation</span><span class="exp-tag">Routing</span><span class="exp-tag">Claude skill</span><span class="exp-tag">Checks</span><span class="exp-tag">Synthetic data</span>
       </div>
-      <a class="work-link" href="/work/lost-deal-reactivation/">See the call list and the source &rarr;</a>
+      <div class="work-links">
+        <a class="work-link" href="/work/lost-deal-reactivation/">See the call list and the source &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/lost-deal-reactivation" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </div>
     </article>
     <article class="work-card fade-up">
       <div>
         <h3>Job search engine</h3>
-        <p class="work-sub">Find roles, prove they are open, score them honestly, for any job title.</p>
+        <p class="work-sub">A daily scan and the board it feeds, for any job title.</p>
       </div>
-      <p>The system my own search runs on, rebuilt on invented data. It collapses board copies, checks every role against the company's own job list, drops what can never work with the reason, and scores the rest with a fit line anyone can read. Roles at 8 or more get a CV brief and a check that runs the tailoring rules on the CV. The rules sit in a profile file, so a Customer Success search runs on the same engine.</p>
+      <p>The system my own search runs on, rebuilt on invented data and replayed over two weeks. Every morning it reads the job boards, proves each role on the company's own list, drops what can never work with the reason, and scores the rest with a fit line anyone can read. The board tracks applications, CVs, live processes ranked by preference and the decisions the outcomes point to. The rules sit in a profile file, so a Customer Success search runs on the same engine.</p>
       <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>214 to 109</strong><span>board copies collapsed into unique roles</span></li>
-        <li><strong>7</strong><span>roles on a board but closed on the company's list</span></li>
-        <li><strong>12 of 59</strong><span>GTM roles at fit 8 or more</span></li>
+        <li><strong>435</strong><span>board copies read in 14 daily runs</span></li>
+        <li><strong>85</strong><span>roles dropped by a gate, each with the reason</span></li>
+        <li><strong>8 of 136</strong><span>new roles worth a tailored CV</span></li>
         <li><strong>3 to 8</strong><span>CV check score, draft to fixed, of 8</span></li>
       </ul>
       <p class="work-limits">Synthetic feed, companies and history only. Reading live boards, ATS feeds and LinkedIn, and writing the CV and the note, run in the live version and are described, not included.</p>
       <div class="exp-tags" style="margin-top:0">
         <span class="exp-tag">Python</span><span class="exp-tag">Job search</span><span class="exp-tag">ATS</span><span class="exp-tag">Scoring</span><span class="exp-tag">CV checks</span><span class="exp-tag">Synthetic data</span>
       </div>
-      <a class="work-link" href="/work/job-search-engine/">See the rules and the boards &rarr;</a>
+      <div class="work-links">
+        <a class="work-link" href="/work/job-search-engine/">See the board and the rules &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/job-search-engine" target="_blank" rel="noopener">Code on GitHub &rarr;</a>
+      </div>
     </article>
     </div>
   </div>

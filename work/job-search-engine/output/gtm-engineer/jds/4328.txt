@@ -1,0 +1,10 @@
+GTM Systems Engineer
+Atlas Pay, Remote Germany (remote)
+
+What you will do:
+- build outbound and signal pipelines
+- build enrichment and scoring workflows
+- administer the CRM
+
+Tools: Make, Claude, Zapier, Python, Clay
+Experience: 6+ years
