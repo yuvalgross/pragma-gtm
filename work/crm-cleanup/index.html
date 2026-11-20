@@ -139,6 +139,7 @@
   }
 </style>
 <style>.ws-own{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.ws-own>div{background:var(--panel);border:1px solid var(--line);padding:10px 14px;font-size:14.5px;color:var(--muted)}.ws-own b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:2px}@media(max-width:760px){.ws-own{grid-template-columns:1fr}}</style>
+<style>.ws-tags{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 4px}.ws-tags span{font-size:13px;color:var(--accent);background:var(--accent-soft);border:1px solid var(--line);padding:3px 10px;border-radius:999px}</style>
 </head>
 <body>
 <main>
@@ -148,6 +149,7 @@
     <p class="eyebrow">Work sample</p>
     <h1>CRM clean up: fix the records, then <em>find the money already in them.</em></h1>
     <p class="lead">Four agents read a HubSpot export. Three of them clean it: duplicates, broken fields, records owned by people who left. The fourth reads the clean customer book and decides who a human should call this week, who an AI can look after, and why. Nothing is written to the CRM until a person approves it.</p>
+    <div class="ws-tags"><span>HubSpot</span><span>Agents</span><span>Deduplication</span><span>Data hygiene</span><span>Owner routing</span><span>Churn risk</span><span>Clay Audiences</span><span>Claude</span><span>Python</span><span>Tests</span></div><!--/ws-tags-->
     <div class="ws-kpis kpis-band"><div class="kpi"><strong>47</strong><span>changes proposed, none written without approval</span></div><div class="kpi"><strong>€539k</strong><span>customer ARR with no active owner</span></div><div class="kpi"><strong>€190k</strong><span>open pipeline past its close date</span></div><div class="kpi"><strong>8 of 17</strong><span>customers go to a human this week</span></div></div><!--/ws-kpis-->
 
     <div class="ws-own"><div><b>Designed and built</b><span>Duplicate, field and owner agents, the customer call list, 8 tests. Rules are mine; Claude Code wrote the code from them.</span></div><div><b>Designed, not running</b><span>Claude judging steps, Clay enrichment, Slack approval, API writes.</span></div></div><!--/ws-own-->
