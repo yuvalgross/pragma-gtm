@@ -1,0 +1,5 @@
+CV check against: RevOps Engineer
+Keywords: 7 of 7 covered
+Rubric: ATS 2, proof 2, wording 2, writing 2, focus (set by a person)
+Automatic part: 8 of 8. Bar: 9 of 10 overall, never deliver under 8.
+Fix list: none, writing check passed

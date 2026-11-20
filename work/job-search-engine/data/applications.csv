@@ -1,0 +1,61 @@
+application,role_shape,company_size,note_to_named_person,outcome
+P001,build,150 to 500,yes,rejected at CV
+P002,run,150 to 500,yes,no reply
+P003,build,over 500,yes,rejected at CV
+P004,build,under 150,no,call
+P005,build,150 to 500,no,rejected at CV
+P006,build,over 500,yes,no reply
+P007,build,under 150,yes,rejected at CV
+P008,run,over 500,yes,no reply
+P009,run,150 to 500,yes,no reply
+P010,build,over 500,yes,no reply
+P011,build,over 500,no,call
+P012,build,150 to 500,no,rejected at CV
+P013,build,over 500,yes,no reply
+P014,run,150 to 500,yes,call
+P015,build,150 to 500,yes,call
+P016,build,over 500,no,call
+P017,run,under 150,no,rejected at CV
+P018,build,under 150,yes,call
+P019,build,over 500,yes,call
+P020,build,over 500,no,rejected at CV
+P021,build,over 500,no,no reply
+P022,build,over 500,no,no reply
+P023,run,150 to 500,no,rejected at CV
+P024,build,under 150,yes,rejected at CV
+P025,build,over 500,yes,call
+P026,build,150 to 500,no,call
+P027,run,over 500,no,rejected at CV
+P028,run,150 to 500,yes,no reply
+P029,run,over 500,yes,no reply
+P030,build,over 500,no,rejected at CV
+P031,build,150 to 500,no,rejected at CV
+P032,run,over 500,no,no reply
+P033,run,over 500,no,no reply
+P034,build,under 150,yes,call
+P035,build,over 500,no,rejected at CV
+P036,run,150 to 500,yes,rejected at CV
+P037,run,over 500,no,rejected at CV
+P038,run,under 150,no,rejected at CV
+P039,build,under 150,yes,call
+P040,build,over 500,yes,rejected at CV
+P041,run,over 500,no,rejected at CV
+P042,build,150 to 500,no,call
+P043,build,150 to 500,yes,call
+P044,build,under 150,no,no reply
+P045,build,under 150,no,rejected at CV
+P046,build,under 150,no,no reply
+P047,build,150 to 500,yes,call
+P048,run,under 150,no,rejected at CV
+P049,run,150 to 500,no,no reply
+P050,run,over 500,yes,no reply
+P051,run,150 to 500,yes,call
+P052,build,over 500,no,no reply
+P053,run,under 150,yes,no reply
+P054,build,under 150,no,call
+P055,run,over 500,no,no reply
+P056,build,over 500,no,call
+P057,build,under 150,yes,call
+P058,run,under 150,yes,call
+P059,run,150 to 500,yes,rejected at CV
+P060,build,150 to 500,no,no reply

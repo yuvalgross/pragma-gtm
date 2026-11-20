@@ -1,0 +1,19 @@
+Sample Candidate
+Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
+GTM Engineer | Clay, HubSpot and Automation
+Passionate builder who helped sales teams grow. I build lead routing from scratch and integrate tools through APIs.
+
+SKILLS
+Clay, HubSpot, n8n, Python, Claude, Zapier
+
+WORK EXPERIENCE
+GTM Engineer | Example Events Ltd | Jan 2024 to Present
+- Routing: Built lead routing that sends every inbound lead to the right rep within 5 minutes, using HubSpot workflows and Clay enrichment.
+- Outbound: Built a signal pipeline in Clay that lifted meetings booked by about 30% in two quarters.
+- Integrations: Connected the CRM, the event platform and Slack through APIs - no manual exports left.
+- Reporting: Responsible for weekly pipeline reporting to leadership.
+Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
+- Quota: Closed 40 new business deals and finished at 104% of quota.
+
+EDUCATION
+BA Business, Example University

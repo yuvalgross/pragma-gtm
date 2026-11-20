@@ -1,0 +1,19 @@
+Sample Candidate
+Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
+RevOps Engineer | Lead Routing, Outbound Signals and API Integrations
+GTM Engineer who builds the routing, outbound and integration layer a sales team runs on, with 4 years building in Clay, Python and Salesforce.
+
+SKILLS
+Clay, Python, Apollo, Salesforce, HubSpot, n8n, APIs, webhooks, lead routing, outbound signals
+
+WORK EXPERIENCE
+GTM Engineer | Example Events Ltd | Jan 2024 to Present
+- Routing: Built lead routing in Salesforce and Clay that assigns every inbound lead to the right rep within 5 minutes.
+- Outbound: Created a signal pipeline in Clay and Apollo that lifted meetings booked 30% in two quarters.
+- Integrations: Connected the CRM, event platform and Slack through APIs in Python, removing 6 weekly exports.
+- Reporting: Shipped a weekly pipeline view for 12 sellers, with a failure alert on every sync.
+Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
+- Quota: Closed 40 new business deals and finished at 104% of quota.
+
+EDUCATION
+BA Business, Example University

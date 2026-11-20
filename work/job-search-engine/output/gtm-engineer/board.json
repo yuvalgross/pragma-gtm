@@ -1,0 +1,1247 @@
+{
+ "profile": "GTM Engineer search",
+ "main": [
+  {
+   "id": "1074",
+   "company": "Saffron HQ",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/saffronhq/1074",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "role_fit": 9.0,
+   "total": 10.0,
+   "fit_line": "fit 10 (role 9, home city +0.5, pay above floor +0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "RevOps Engineer",
+    "top_requirements": [
+     "build lead routing from scratch",
+     "integrate tools through APIs",
+     "build outbound and signal pipelines"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "Python",
+     "Apollo",
+     "Salesforce",
+     "outbound",
+     "lead routing",
+     "APIs"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "Ashby",
+    "ats_advice": "AI assisted screening checks each requirement: mirror the JD's skill and tool terms in skills and in bullets.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1064",
+   "company": "Fable Logic",
+   "title": "RevOps Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/fablelogic/j/1064",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 8.5,
+   "total": 9.5,
+   "fit_line": "fit 9.5 (role 8.5, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "RevOps Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "build enrichment and scoring workflows",
+     "automate CRM updates with APIs and webhooks"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "Make",
+     "enrichment",
+     "scoring",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Workable",
+    "ats_advice": "Parsed profile and screening questions: standard headings, exact terms.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1012",
+   "company": "Orchard Health",
+   "title": "GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://orchardhealth.jobs.personio.example/job/1012",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 8.0,
+   "total": 9.5,
+   "fit_line": "fit 9.5 (role 8, remote in home country +1.5, pay above floor +0.5, startup minus 0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "GTM Engineer",
+    "top_requirements": [
+     "automate CRM updates with APIs and webhooks",
+     "integrate tools through APIs",
+     "build lead routing from scratch"
+    ],
+    "keywords_on_record": [
+     "n8n",
+     "Salesforce",
+     "lead routing",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "years asked above the record"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, match the ad's language.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1025",
+   "company": "Delta Logic",
+   "title": "GTM Systems Engineer",
+   "location": "Limassol",
+   "workplace": "on site",
+   "url": "https://deltalogic.recruitee.example/o/1025",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "role_fit": 8.5,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 8.5, Limassol +1.25, pay above floor +0.5, on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "GTM Systems Engineer",
+    "top_requirements": [
+     "build lead routing from scratch",
+     "build enrichment and scoring workflows",
+     "integrate tools through APIs"
+    ],
+    "keywords_on_record": [
+     "n8n",
+     "Make",
+     "Python",
+     "Claude",
+     "enrichment",
+     "scoring",
+     "lead routing",
+     "APIs"
+    ],
+    "gaps_to_name_not_cover": [
+     "years asked above the record"
+    ],
+    "location_line": "Berlin, Germany (open to relocation)",
+    "ats": "Recruitee",
+    "ats_advice": "Reliable parser plus screening questions: answer knockout questions carefully.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1046",
+   "company": "Cobalt Cloud",
+   "title": "Growth Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/cobaltcloud/1046",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 8.5,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 8.5, home city +0.5, pay not stated (ask))",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "Growth Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "build outbound and signal pipelines",
+     "automate CRM updates with APIs and webhooks"
+    ],
+    "keywords_on_record": [
+     "Zapier",
+     "Salesforce",
+     "outbound",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "JOIN",
+    "ats_advice": "Small companies, fast human read: the top third has to answer the JD.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1008",
+   "company": "Bramble HQ",
+   "title": "RevOps Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/bramblehq/1008",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "verified",
+   "role_fit": 7.5,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 7.5, EU remote +1.5, pay not stated (ask))",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "RevOps Engineer",
+    "top_requirements": [
+     "build enrichment and scoring workflows",
+     "build lead routing from scratch",
+     "administer the CRM"
+    ],
+    "keywords_on_record": [
+     "n8n",
+     "Salesforce",
+     "enrichment",
+     "scoring",
+     "lead routing",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "years asked above the record"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Ashby",
+    "ats_advice": "AI assisted screening checks each requirement: mirror the JD's skill and tool terms in skills and in bullets.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1036",
+   "company": "Nimbus AI",
+   "title": "Growth Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/nimbusai/1036",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "LinkedIn alert",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 8.0,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 8, home city +0.5, pay above floor +0.5, startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Growth Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "build enrichment and scoring workflows",
+     "automate CRM updates with APIs and webhooks"
+    ],
+    "keywords_on_record": [
+     "Claude",
+     "Salesforce",
+     "enrichment",
+     "scoring",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "Lever",
+    "ats_advice": "No stemming, one profile per company: exact terms, keep facts identical across applications.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1044",
+   "company": "Saffron Systems",
+   "title": "GTM Systems Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://saffronsystems.teamtailor.example/jobs/1044",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.5,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 7.5, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "GTM Systems Engineer",
+    "top_requirements": [
+     "build lead routing from scratch",
+     "build outbound and signal pipelines",
+     "integrate tools through APIs"
+    ],
+    "keywords_on_record": [
+     "HubSpot",
+     "Make",
+     "Apollo",
+     "Zapier",
+     "outbound",
+     "lead routing",
+     "APIs"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Teamtailor",
+    "ats_advice": "An AI summary is written against the JD: name every required skill near the top.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1052",
+   "company": "Indigo HQ",
+   "title": "Growth Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://indigohq.jobs.personio.example/job/1052",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "LinkedIn alert"
+   ],
+   "verify": "verified",
+   "role_fit": 8.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 8.5, home city +0.5, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Growth Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "ship AI agents for research and routing",
+     "build lead routing from scratch"
+    ],
+    "keywords_on_record": [
+     "Claude",
+     "Apollo",
+     "lead routing",
+     "APIs",
+     "AI agents"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, match the ad's language.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1053",
+   "company": "Orchard Systems",
+   "title": "Founding GTM Engineer",
+   "location": "Stockholm",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/orchardsystems/j/1053",
+   "sources": [
+    "Indeed",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 7.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7.5, Stockholm needs a move +0, pay above floor +0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Founding GTM Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "build lead routing from scratch",
+     "automate CRM updates with APIs and webhooks"
+    ],
+    "keywords_on_record": [
+     "HubSpot",
+     "Apollo",
+     "lead routing",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "years asked above the record"
+    ],
+    "location_line": "Berlin, Germany (open to relocation)",
+    "ats": "Workable",
+    "ats_advice": "Parsed profile and screening questions: standard headings, exact terms.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1071",
+   "company": "Juniper Pay",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://juniperpay.recruitee.example/o/1071",
+   "sources": [
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7.5, home city +0.5, pay not stated (ask))",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "RevOps Engineer",
+    "top_requirements": [
+     "ship AI agents for research and routing",
+     "automate CRM updates with APIs and webhooks",
+     "administer the CRM"
+    ],
+    "keywords_on_record": [
+     "HubSpot",
+     "Claude",
+     "Apollo",
+     "Salesforce",
+     "APIs",
+     "webhooks",
+     "AI agents",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "Recruitee",
+    "ats_advice": "Reliable parser plus screening questions: answer knockout questions carefully.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  },
+  {
+   "id": "1073",
+   "company": "Pebble Health",
+   "title": "GTM Systems Engineer",
+   "location": "Madrid",
+   "workplace": "hybrid",
+   "url": "https://pebblehealth.jobs.personio.example/job/1073",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7.5, Madrid needs a move +0, pay above floor +0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "GTM Systems Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "prepare QBR decks"
+    ],
+    "keywords_on_record": [
+     "Python",
+     "Apollo",
+     "APIs"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany (open to relocation)",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, match the ad's language.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  }
+ ],
+ "reference": [
+  {
+   "id": "1014",
+   "company": "Cobalt Health",
+   "title": "RevOps Engineer",
+   "location": "Madrid",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/cobalthealth/1014",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "role_fit": 8.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 8, Madrid needs a move +0, floor inside the band, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference"
+  },
+  {
+   "id": "1031",
+   "company": "Garnet Health",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/garnethealth/1031",
+   "sources": [
+    "Indeed",
+    "newsletter",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7, home city +0.5, pay above floor +0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference"
+  },
+  {
+   "id": "1047",
+   "company": "Pebble Pay",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/pebblepay/1047",
+   "sources": [
+    "ATS host search",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, home city +0.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference"
+  },
+  {
+   "id": "1081",
+   "company": "Saffron AI",
+   "title": "Founding GTM Engineer",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/saffronai/jobs/1081",
+   "sources": [
+    "Indeed",
+    "LinkedIn alert",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, London needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference"
+  }
+ ],
+ "could_not_verify": [
+  {
+   "id": "1001",
+   "company": "Lumen Labs",
+   "title": "GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://lumenlabs.recruitee.example/o/1001",
+   "sources": [
+    "niche GTM board"
+   ],
+   "verify": "board only",
+   "role_fit": 7.0,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 7, remote in home country +1.5, pay not stated (ask))",
+   "why": "board only; fit 8.5 (role 7, remote in home country +1.5, pay not stated (ask))"
+  },
+  {
+   "id": "1022",
+   "company": "Orchard Cloud",
+   "title": "Senior GTM Engineer",
+   "location": "Madrid",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/orchardcloud/1022",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "LinkedIn alert"
+   ],
+   "verify": "could not verify",
+   "role_fit": 9.0,
+   "total": 9.5,
+   "fit_line": "fit 9.5 (role 9, Madrid needs a move +0, pay above floor +0.5)",
+   "why": "could not verify; fit 9.5 (role 9, Madrid needs a move +0, pay above floor +0.5)"
+  },
+  {
+   "id": "1029",
+   "company": "Pebble Data",
+   "title": "Head of GTM Engineering",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://pebbledata.recruitee.example/o/1029",
+   "sources": [
+    "Indeed",
+    "VC portfolio board",
+    "newsletter"
+   ],
+   "verify": "could not verify",
+   "role_fit": 6.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 6.5, EU remote +1.5, pay above floor +0.5, startup minus 0.5); title above the record, name the leadership gap",
+   "why": "could not verify; fit 8 (role 6.5, EU remote +1.5, pay above floor +0.5, startup minus 0.5); title above the record, name the leadership gap"
+  },
+  {
+   "id": "1032",
+   "company": "Ember Data",
+   "title": "Head of GTM Engineering",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://apply.workable.example/emberdata/j/1032",
+   "sources": [
+    "Indeed"
+   ],
+   "verify": "could not verify",
+   "role_fit": 7.5,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7.5, Amsterdam +0, pay above floor +0.5, on site only minus 0.5); title above the record, name the leadership gap",
+   "why": "could not verify; fit 7.5 (role 7.5, Amsterdam +0, pay above floor +0.5, on site only minus 0.5); title above the record, name the leadership gap"
+  }
+ ],
+ "seen_not_a_fit": [
+  {
+   "id": "1003",
+   "company": "Harbor Cloud",
+   "title": "Revenue Operations Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/harborcloud/1003",
+   "sources": [
+    "Indeed",
+    "LinkedIn alert"
+   ],
+   "verify": "board only",
+   "role_fit": 4.0,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 4, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "why": "role 4: tools and title"
+  },
+  {
+   "id": "1007",
+   "company": "Delta Logic",
+   "title": "Sales Operations Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://deltalogic.recruitee.example/o/1007",
+   "sources": [
+    "Indeed",
+    "newsletter",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 3.5,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 3.5, EU remote +1.5, pay above floor +0.5, startup minus 0.5)",
+   "why": "role 3.5: run shape"
+  },
+  {
+   "id": "1020",
+   "company": "Pebble Data",
+   "title": "RevOps Specialist",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://pebbledata.recruitee.example/o/1020",
+   "sources": [
+    "Indeed",
+    "newsletter"
+   ],
+   "verify": "could not verify",
+   "role_fit": 2.0,
+   "total": 2.5,
+   "fit_line": "fit 2.5 (role 2, home city +0.5, pay above floor +0.5, startup minus 0.5)",
+   "why": "role 2: tools and title"
+  },
+  {
+   "id": "1027",
+   "company": "Orchard Systems",
+   "title": "Senior RevOps Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/orchardsystems/j/1027",
+   "sources": [
+    "VC portfolio board",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 2.0,
+   "total": 3.5,
+   "fit_line": "fit 3.5 (role 2, EU remote +1.5, pay not stated (ask))",
+   "why": "role 2: run shape"
+  },
+  {
+   "id": "1061",
+   "company": "Lumen Labs",
+   "title": "Head of GTM Engineering",
+   "location": "Stockholm",
+   "workplace": "hybrid",
+   "url": "https://lumenlabs.recruitee.example/o/1061",
+   "sources": [
+    "LinkedIn alert",
+    "newsletter"
+   ],
+   "verify": "board only",
+   "role_fit": 5.5,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 5.5, Stockholm needs a move +0, pay not stated (ask)); title above the record, name the leadership gap",
+   "why": "role 5.5: run shape"
+  },
+  {
+   "id": "1096",
+   "company": "Vesper Cloud",
+   "title": "Revenue Operations Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/vespercloud/1096",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "role_fit": 2.0,
+   "total": 2.0,
+   "fit_line": "fit 2 (role 2, home city +0.5, floor inside the band, run shape at a big team minus 0.5)",
+   "why": "role 2: run shape"
+  },
+  {
+   "id": "1108",
+   "company": "Juniper Pay",
+   "title": "RevOps Specialist",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://juniperpay.recruitee.example/o/1108",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "verified",
+   "role_fit": 3.5,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 3.5, remote in home country +1.5, pay above floor +0.5)",
+   "why": "role 3.5: tools and title"
+  },
+  {
+   "id": "1110",
+   "company": "Ember Pay",
+   "title": "Revenue Operations Manager",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://emberpay.jobs.personio.example/job/1110",
+   "sources": [
+    "Indeed",
+    "VC portfolio board",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 3.0,
+   "total": 3.5,
+   "fit_line": "fit 3.5 (role 3, home city +0.5, pay above floor +0.5, on site only minus 0.5)",
+   "why": "role 3: tools and title"
+  }
+ ],
+ "dropped": [
+  {
+   "id": "1004",
+   "company": "Tidal Systems",
+   "title": "GTM Systems Engineer",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/tidalsystems/jobs/1004",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "none of the duties you want to do"
+  },
+  {
+   "id": "1015",
+   "company": "Fable Pay",
+   "title": "RevOps Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/fablepay/jobs/1015",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "board only",
+   "why": "Remote US is outside the regions you work in"
+  },
+  {
+   "id": "1016",
+   "company": "Cobalt Cloud",
+   "title": "GTM Engineering Intern",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://join.example/companies/cobaltcloud/1016",
+   "sources": [
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1019",
+   "company": "Bramble Cloud",
+   "title": "GTM Engineer",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://bramblecloud.recruitee.example/o/1019",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "needs a move inside the home country, no remote"
+  },
+  {
+   "id": "1030",
+   "company": "Harbor Data",
+   "title": "Head of GTM Engineering",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/harbordata/j/1030",
+   "sources": [
+    "Indeed",
+    "niche GTM board"
+   ],
+   "verify": "board only",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1033",
+   "company": "Quill HQ",
+   "title": "RevOps Specialist",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/quillhq/j/1033",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "board only",
+   "why": "Remote US is outside the regions you work in"
+  },
+  {
+   "id": "1039",
+   "company": "Indigo Cloud",
+   "title": "GTM Systems Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://indigocloud.recruitee.example/o/1039",
+   "sources": [
+    "VC portfolio board",
+    "newsletter",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "none of the duties you want to do"
+  },
+  {
+   "id": "1043",
+   "company": "Ember Pay",
+   "title": "Head of GTM Engineering",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://emberpay.jobs.personio.example/job/1043",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1045",
+   "company": "Vesper Pay",
+   "title": "RevOps Specialist",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://vesperpay.jobs.personio.example/job/1045",
+   "sources": [
+    "ATS host search"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1048",
+   "company": "Saffron Systems",
+   "title": "GTM Engineering Intern",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://saffronsystems.teamtailor.example/jobs/1048",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "verified",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1051",
+   "company": "Garnet Health",
+   "title": "Revenue Operations Manager",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/garnethealth/1051",
+   "sources": [
+    "ATS host search",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "needs a move inside the home country, no remote"
+  },
+  {
+   "id": "1062",
+   "company": "Cobalt Systems",
+   "title": "Sales Operations Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/cobaltsystems/1062",
+   "sources": [
+    "ATS host search",
+    "VC portfolio board",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1068",
+   "company": "Quill Systems",
+   "title": "GTM Engineering Intern",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://quillsystems.recruitee.example/o/1068",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1069",
+   "company": "Ember Systems",
+   "title": "Senior RevOps Manager",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/embersystems/jobs/1069",
+   "sources": [
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1075",
+   "company": "Vesper Cloud",
+   "title": "GTM Systems Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/vespercloud/1075",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1078",
+   "company": "Orchard Data",
+   "title": "GTM Engineering Intern",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://orcharddata.recruitee.example/o/1078",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "verified",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1083",
+   "company": "Lumen Cloud",
+   "title": "Revenue Operations Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/lumencloud/1083",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1086",
+   "company": "Cobalt Health",
+   "title": "Founding GTM Engineer",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/cobalthealth/1086",
+   "sources": [
+    "Indeed",
+    "VC portfolio board"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  },
+  {
+   "id": "1091",
+   "company": "Pebble Pay",
+   "title": "Senior GTM Engineer",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/pebblepay/1091",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "needs a move inside the home country, no remote"
+  },
+  {
+   "id": "1100",
+   "company": "Pebble Data",
+   "title": "GTM Engineering Intern",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://pebbledata.recruitee.example/o/1100",
+   "sources": [
+    "niche GTM board"
+   ],
+   "verify": "could not verify",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1104",
+   "company": "Fable HQ",
+   "title": "GTM Engineering Intern",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://fablehq.jobs.personio.example/job/1104",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1106",
+   "company": "Fable Logic",
+   "title": "GTM Engineering Intern",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/fablelogic/j/1106",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "junior, intern or student role"
+  },
+  {
+   "id": "1116",
+   "company": "Cobalt Data",
+   "title": "RevOps Specialist",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://cobaltdata.jobs.personio.example/job/1116",
+   "sources": [
+    "Indeed",
+    "VC portfolio board",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "rejected there before, done story"
+  },
+  {
+   "id": "1117",
+   "company": "Nimbus Pay",
+   "title": "Senior GTM Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://nimbuspay.teamtailor.example/jobs/1117",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "German C1 required"
+  }
+ ],
+ "closed_on_own_list": [
+  {
+   "id": "1017",
+   "company": "Juniper Pay",
+   "title": "Senior GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://juniperpay.recruitee.example/o/1017",
+   "sources": [
+    "niche GTM board"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1055",
+   "company": "Indigo HQ",
+   "title": "Sales Operations Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://indigohq.jobs.personio.example/job/1055",
+   "sources": [
+    "ATS host search"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1056",
+   "company": "Indigo Logic",
+   "title": "Sales Operations Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/indigologic/j/1056",
+   "sources": [
+    "Indeed"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1057",
+   "company": "Delta AI",
+   "title": "Founding GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/deltaai/1057",
+   "sources": [
+    "ATS host search",
+    "VC portfolio board",
+    "niche GTM board"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1076",
+   "company": "Vesper Labs",
+   "title": "RevOps Engineer",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://vesperlabs.recruitee.example/o/1076",
+   "sources": [
+    "ATS host search"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1090",
+   "company": "Ember Cloud",
+   "title": "GTM Engineer",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/embercloud/j/1090",
+   "sources": [
+    "VC portfolio board",
+    "newsletter",
+    "niche GTM board"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1094",
+   "company": "Saffron AI",
+   "title": "Founding GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/saffronai/jobs/1094",
+   "sources": [
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  }
+ ],
+ "learning_loop": [
+  {
+   "split": "role_shape",
+   "value": "build",
+   "applications": 37,
+   "calls": 16,
+   "call_rate": 0.43,
+   "rejected_at_cv": 12
+  },
+  {
+   "split": "role_shape",
+   "value": "run",
+   "applications": 23,
+   "calls": 3,
+   "call_rate": 0.13,
+   "rejected_at_cv": 9
+  },
+  {
+   "split": "company_size",
+   "value": "150 to 500",
+   "applications": 19,
+   "calls": 7,
+   "call_rate": 0.37,
+   "rejected_at_cv": 7
+  },
+  {
+   "split": "company_size",
+   "value": "over 500",
+   "applications": 25,
+   "calls": 5,
+   "call_rate": 0.2,
+   "rejected_at_cv": 8
+  },
+  {
+   "split": "company_size",
+   "value": "under 150",
+   "applications": 16,
+   "calls": 7,
+   "call_rate": 0.44,
+   "rejected_at_cv": 6
+  },
+  {
+   "split": "note_to_named_person",
+   "value": "no",
+   "applications": 31,
+   "calls": 7,
+   "call_rate": 0.23,
+   "rejected_at_cv": 14
+  },
+  {
+   "split": "note_to_named_person",
+   "value": "yes",
+   "applications": 29,
+   "calls": 12,
+   "call_rate": 0.41,
+   "rejected_at_cv": 7
+  }
+ ]
+}

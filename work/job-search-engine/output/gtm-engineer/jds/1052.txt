@@ -1,0 +1,11 @@
+Growth Engineer
+Indigo HQ, Berlin (on site)
+
+What you will do:
+- integrate tools through APIs
+- ship AI agents for research and routing
+- build lead routing from scratch
+- own pipeline reporting for leadership
+
+Tools: Apollo, Claude
+Experience: 3+ years

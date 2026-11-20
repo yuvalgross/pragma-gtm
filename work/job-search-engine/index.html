@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job search engine · Yuval Gross</title>
+<meta name="description" content="A rules driven job search engine: dedupe board copies, prove roles on the company's own list, gate, score with a readable fit line, check the CV. Runs for any job title. Synthetic data and the source.">
+<meta property="og:title" content="Job search engine · Yuval Gross">
+<meta property="og:description" content="Find roles, prove they are open and score them honestly, for any job title.">
+<meta property="og:url" content="https://pragma-gtm.com/work/job-search-engine/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/job-search-engine/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+<style>
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:6px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); padding:14px 16px; }
+  .kpi strong { display:block; font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.1; color:var(--accent); }
+  .kpi span { font-size:14.5px; color:var(--muted); }
+  ul.plain { margin:0 0 14px; padding-left:20px; max-width:66ch; } ul.plain li { margin-bottom:8px; }
+  ol.plain { margin:0 0 14px; padding-left:22px; max-width:66ch; } ol.plain li { margin-bottom:8px; }
+  .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
+  .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Job search engine: one set of rules to find roles, prove they are open and score them, <em>for any job title.</em></h1>
+    <p class="lead">The system I run my own search on, rebuilt on invented data. It reads every job board, collapses the copies, checks each role against the company's own job list, drops what can never work, and scores the rest with a fit line anyone can read. The rules sit in a profile file, so a GTM Engineer search and a Customer Success search run on the same engine.</p>
+  </header>
+
+  <section aria-labelledby="answer">
+    <h2 id="answer">What one run does</h2>
+    <p>The same feed of 214 board copies, run for two profiles. Most of the work is saying no early and saying why.</p>
+    <div class="kpis">
+      <div class="kpi"><strong>214 to 109</strong><span>board copies collapsed into unique roles</span></div>
+      <div class="kpi"><strong>7</strong><span>roles still on a board but gone from the company's list</span></div>
+      <div class="kpi"><strong>24</strong><span>dropped by a gate before scoring, each with the reason</span></div>
+      <div class="kpi"><strong>12 of 59</strong><span>GTM roles at fit 8 or more, each with a CV brief</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="flow">
+      <div class="step"><b>Discover</b><span>Every board copy: LinkedIn alerts, Indeed, niche boards, VC boards, ATS host searches, newsletters.</span></div>
+      <div class="step"><b>Dedupe</b><span>One row per company, title and place. A repost under a new id collapses into the newest one.</span></div>
+      <div class="step"><b>Prove</b><span>Only the company's own job list decides. Gone from the list means closed, whatever the boards still show.</span></div>
+      <div class="step"><b>Gate</b><span>Drop what can never work, with the reason: language, region, a move, a done story, no duties you want.</span></div>
+      <div class="step"><b>Score</b><span>Role fit from title, duties and tools, then location and the factors, written out as a fit line.</span></div>
+    </div>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="GTM Engineer profile, one run, scrolls sideways on small screens">
+<table style="min-width:520px">
+<thead><tr><th>Step</th><th class="n">Roles</th></tr></thead>
+<tbody>
+<tr><td>Board copies read</td><td class="n">214</td></tr>
+<tr><td>Unique roles after dedupe (105 copies collapsed, 8 reposts)</td><td class="n">109</td></tr>
+<tr><td>In the profile's titles</td><td class="n">59</td></tr>
+<tr><td>Closed on the company's own list, still on a board</td><td class="n">7</td></tr>
+<tr><td>Dropped by a gate</td><td class="n">24</td></tr>
+<tr><td>Seen, not a fit (role fit under 6.5)</td><td class="n">8</td></tr>
+<tr><td>Could not verify (list unreadable, or board only)</td><td class="n">4</td></tr>
+<tr><td>Below the 8 bar, listed for reference</td><td class="n">4</td></tr>
+<tr class="hot"><td>Fit 8 or more: CV brief and a note to a named person</td><td class="n total">12</td></tr>
+</tbody>
+</table>
+</div>
+  </section>
+
+  <section aria-labelledby="gates">
+    <h2 id="gates">The gates: <em>no score for a role that cannot work</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Gate reasons, GTM Engineer profile, scrolls sideways on small screens">
+<table style="min-width:480px">
+<thead><tr><th>Reason</th><th class="n">Dropped</th></tr></thead>
+<tbody>
+<tr><td>German C1 required, not on the profile</td><td class="n">9</td></tr>
+<tr><td>Junior, intern or student role</td><td class="n">7</td></tr>
+<tr><td>Needs a move inside the home country, no remote option</td><td class="n">3</td></tr>
+<tr><td>Outside the regions the profile works in (US remote)</td><td class="n">2</td></tr>
+<tr><td>None of the duties the profile wants to do (pure run work)</td><td class="n">2</td></tr>
+<tr><td>Rejected there before: a done story</td><td class="n">1</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">A role that closed on the company's list never reaches scoring. A list that cannot be read is never closed on a guess: the role is reported as "could not verify" so a person can check it.</p>
+  </section>
+
+  <section aria-labelledby="fit">
+    <h2 id="fit">The fit line</h2>
+    <p>Every score is written out, so a high number can be questioned and a low one explained. Role fit comes first and never moves; the factors sit next to it.</p>
+    <p class="formula">fit 9.5 (role 8, remote in home country +1.5, pay above floor +0.5, startup minus 0.5)</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Scoring rules, scrolls sideways on small screens">
+<table style="min-width:640px">
+<thead><tr><th>Part</th><th>Rule</th></tr></thead>
+<tbody>
+<tr class="hot"><td>Role fit, 0 to 10</td><td>Title (target or adjacent), share of the duties you want against the ones you avoid, tools on record against tools asked, minus 0.5 when the years asked sit 2 or more above your record, minus 1 for a title above what you have held</td></tr>
+<tr><td>Location</td><td>Points per place from the profile: home city, remote in the home country, EU remote, each relocation country</td></tr>
+<tr><td>Pay</td><td>Band top under your floor minus 1.5, floor inside the band 0, band bottom above the floor plus 0.5, not stated: ask</td></tr>
+<tr><td>Office</td><td>On site only minus 0.5; hybrid and remote no change</td></tr>
+<tr><td>Company</td><td>Startup under 150 people minus 0.5; run shape role at 300+ people minus 0.5</td></tr>
+<tr><td>Show</td><td>Role fit under 6.5 is never a recommendation, whatever the location adds. Total 8 or more gets a CV and a note</td></tr>
+</tbody>
+</table>
+</div>
+  </section>
+
+  <section aria-labelledby="titles">
+    <h2 id="titles">Same engine, <em>another job title</em></h2>
+    <p>A new search is a new profile: target and adjacent titles, the duties you want and the ones you avoid, tools on record, languages, home city, regions, location points, pay floor and years on record. Nothing in the engine changes.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Two profiles on the same feed, scrolls sideways on small screens">
+<table style="min-width:520px">
+<thead><tr><th>Result</th><th class="n">GTM Engineer</th><th class="n">Customer Success</th></tr></thead>
+<tbody>
+<tr><td>Roles in the profile's titles</td><td class="n">59</td><td class="n">20</td></tr>
+<tr><td>Closed on the company's own list</td><td class="n">7</td><td class="n">3</td></tr>
+<tr><td>Dropped by a gate</td><td class="n">24</td><td class="n">7</td></tr>
+<tr><td>Seen, not a fit</td><td class="n">8</td><td class="n">6</td></tr>
+<tr><td>Could not verify</td><td class="n">4</td><td class="n">1</td></tr>
+<tr><td>Listed for reference</td><td class="n">4</td><td class="n">2</td></tr>
+<tr class="hot"><td>Fit 8 or more</td><td class="n total">12</td><td class="n total">1</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">The Customer Success profile lives in another city, speaks German and works only in Germany and EU remote, so roles that pass for one profile drop for the other: Spanish remote and Amsterdam roles are outside its regions.</p>
+  </section>
+
+  <section aria-labelledby="cv">
+    <h2 id="cv">The CV check</h2>
+    <p>Every role at 8 or more gets a brief: the headline (the JD title, for the ATS), the top 3 needs, the keywords on record, the gaps to name rather than cover, the location line and how the ATS reads the file. Then the check runs the tailoring rules on the CV against the posting.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Draft against fixed, scrolls sideways on small screens">
+<table style="min-width:520px">
+<thead><tr><th>Rubric part</th><th class="n">Draft</th><th class="n">Fixed</th></tr></thead>
+<tbody>
+<tr><td>ATS: JD title in the headline, keyword coverage</td><td class="n">1</td><td class="n">2</td></tr>
+<tr><td>Proof: a bullet with a number for each top need</td><td class="n">1</td><td class="n">2</td></tr>
+<tr><td>Wording: at most one phrase lifted from the ad</td><td class="n">1</td><td class="n">2</td></tr>
+<tr><td>Writing: pronouns, hedges, dashes, filler, repeated verbs, one line bullets</td><td class="n">0</td><td class="n">2</td></tr>
+<tr class="hot"><td>Automatic part, of 8 (focus is left to a person)</td><td class="n">3</td><td class="n total">8</td></tr>
+</tbody>
+</table>
+</div>
+    <details>
+      <summary>The draft's fix list</summary>
+      <pre><code>CV check against: RevOps Engineer
+Keywords: 5 of 7 covered; missing: Apollo, Salesforce
+Rubric: ATS 1, proof 1, wording 1, writing 0, focus (set by a person)
+Automatic part: 3 of 8. Bar: 9 of 10 overall, never deliver under 8.
+Fix list:
+  - Headline should start with the JD title &quot;RevOps Engineer&quot; (now: &quot;GTM Engineer | Clay, HubSpot and Automation&quot;)
+  - Put &quot;Python&quot; in both SKILLS and a bullet (skills True, bullet False)
+  - No bullet with a number proves &quot;APIs&quot;
+  - 3 phrases lifted from the JD, keep at most one: [&#x27;build lead routing from&#x27;, &#x27;integrate tools through apis&#x27;, &#x27;lead routing from scratch&#x27;]
+  - line 4: pronoun
+  - line 4: filler &quot;passionate&quot;
+  - line 12: hedge before a number
+  - line 13: dash used as punctuation
+  - line 14: filler &quot;responsible for&quot;
+  - line 11: bullet over one line (137 characters)
+  - line 12: opening verb &quot;built&quot; repeated in GTM Engineer
+  - line 13: no number or scope
+  - line 14: no number or scope
+</code></pre>
+    </details>
+    <details>
+      <summary>The fixed CV (invented candidate)</summary>
+      <pre><code>Sample Candidate
+Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
+RevOps Engineer | Lead Routing, Outbound Signals and API Integrations
+GTM Engineer who builds the routing, outbound and integration layer a sales team runs on, with 4 years building in Clay, Python and Salesforce.
+
+SKILLS
+Clay, Python, Apollo, Salesforce, HubSpot, n8n, APIs, webhooks, lead routing, outbound signals
+
+WORK EXPERIENCE
+GTM Engineer | Example Events Ltd | Jan 2024 to Present
+- Routing: Built lead routing in Salesforce and Clay that assigns every inbound lead to the right rep within 5 minutes.
+- Outbound: Created a signal pipeline in Clay and Apollo that lifted meetings booked 30% in two quarters.
+- Integrations: Connected the CRM, event platform and Slack through APIs in Python, removing 6 weekly exports.
+- Reporting: Shipped a weekly pipeline view for 12 sellers, with a failure alert on every sync.
+Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
+- Quota: Closed 40 new business deals and finished at 104% of quota.
+
+EDUCATION
+BA Business, Example University
+</code></pre>
+    </details>
+  </section>
+
+  <section aria-labelledby="loop">
+    <h2 id="loop">The learning loop</h2>
+    <p>Every application is recorded with its role shape, company size and whether a note went to a named person, then counted against the outcome. The report tells the next scan what to rank up.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Calls by split, 60 invented applications, scrolls sideways on small screens">
+<table style="min-width:520px">
+<thead><tr><th>Split</th><th class="n">Applications</th><th class="n">Calls</th><th class="n">Call rate</th></tr></thead>
+<tbody>
+<tr class="hot"><td>Build shape roles</td><td class="n">37</td><td class="n">16</td><td class="n">43%</td></tr>
+<tr><td>Run shape roles</td><td class="n">23</td><td class="n">3</td><td class="n">13%</td></tr>
+<tr><td>Company under 150 people</td><td class="n">16</td><td class="n">7</td><td class="n">44%</td></tr>
+<tr><td>Company over 500 people</td><td class="n">25</td><td class="n">5</td><td class="n">20%</td></tr>
+<tr class="hot"><td>Note to a named person</td><td class="n">29</td><td class="n">12</td><td class="n">41%</td></tr>
+<tr><td>No note</td><td class="n">31</td><td class="n">7</td><td class="n">23%</td></tr>
+</tbody>
+</table>
+</div>
+    <p class="note">The history is invented with these odds built in, so the point here is the report, not the finding.</p>
+  </section>
+
+  <section aria-labelledby="live">
+    <h2 id="live">What runs live, and what is in this sample</h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Live against sample, scrolls sideways on small screens">
+<table style="min-width:760px">
+<thead><tr><th>Part</th><th>In this sample</th><th>In the live version</th></tr></thead>
+<tbody>
+<tr><td>Sources</td><td>One invented feed</td><td>Boards in tiers (every scan, weekly, monthly) with a yield column; a board moves up when it finds a role that passes, down after 4 empty checks; blocked sources are never worked around</td></tr>
+<tr><td>Proof</td><td>An invented list per company</td><td>The company's ATS feed or careers page read live; aggregator copies are discovery only</td></tr>
+<tr><td>Profile</td><td>Two JSON files</td><td>Standing rules written down as they are decided, each with the date and the reason</td></tr>
+<tr><td>Board</td><td>A static HTML page</td><td>A live board with applications, open roles, CVs sent and their outcome</td></tr>
+<tr><td>CV and note</td><td>A brief and a checker</td><td>The CV built on a template from confirmed facts only, then checked; a note under 100 words to a named person</td></tr>
+<tr><td>Follow ups</td><td>Not modelled</td><td>A draft when a company misses its own feedback date, sent only after a yes</td></tr>
+</tbody>
+</table>
+</div>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>I did</dt><dd>Every rule: the gates, the fit parts and their weights, the show bar, the CV rubric and the learning splits. They come from running my own search and writing a rule down each time a role wasted time or an application failed for a reason the scan could have caught.</dd>
+      <dt>AI did</dt><dd>Claude Code wrote the scripts from those rules. No model scores a role during the run.</dd>
+      <dt>Checks</dt><dd>The run stops if an unverified role, a role under the show bar or a done story reaches the list, if a role under 8 gets a CV brief, or if a role is listed twice.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_jobs.py</code> then <code>python3 scan.py profiles/gtm-engineer.json --out output/gtm-engineer</code>. Standard library only.</dd>
+    </dl>
+    <p class="note">Synthetic input. Every company, posting, candidate and application is invented to exercise the rules. Links end in <code>.example</code>.</p>
+  </section>
+
+  <section aria-labelledby="files">
+    <h2 id="files">Files</h2>
+    <div class="files">
+      <div><a href="scan.py">scan.py</a><small>Dedupe, proof, gates, fit line, board and learning loop.</small></div>
+      <div><a href="check_cv.py">check_cv.py</a><small>The tailoring rules run on a CV against one posting.</small></div>
+      <div><a href="make_synthetic_jobs.py">make_synthetic_jobs.py</a><small>Builds the invented feed, company lists and history.</small></div>
+      <div><a href="profiles/gtm-engineer.json">profiles/gtm-engineer.json</a><small>Rules for a GTM Engineer search.</small></div>
+      <div><a href="profiles/customer-success.json">profiles/customer-success.json</a><small>Rules for a Customer Success search.</small></div>
+      <div><a href="output/gtm-engineer/board.html">output/gtm-engineer/board.html</a><small>The board for the GTM profile.</small></div>
+      <div><a href="output/customer-success/board.html">output/customer-success/board.html</a><small>The board for the Customer Success profile.</small></div>
+      <div><a href="output/gtm-engineer/board.json">output/gtm-engineer/board.json</a><small>Every role with its fit line or reason.</small></div>
+      <div><a href="data/postings.json">data/postings.json</a><small>214 invented board copies.</small></div>
+      <div><a href="data/company_lists.json">data/company_lists.json</a><small>Each company's own list: the proof.</small></div>
+      <div><a href="data/applications.csv">data/applications.csv</a><small>60 invented past applications.</small></div>
+      <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
+    </div>
+    <details>
+      <summary>Read scan.py here</summary>
+      <pre><code>&quot;&quot;&quot;
+Job search engine: find roles, prove they are open, score them honestly,
+and keep a board. The rules live in a profile file, so the same engine runs
+for any job title.
+
+    python3 scan.py profiles/gtm-engineer.json --out output/gtm-engineer
+    python3 scan.py profiles/customer-success.json --out output/customer-success
+
+Steps
+  1. Discover: read every board copy (LinkedIn alerts, Indeed, niche boards...).
+  2. Dedupe: one row per company and title; reposts collapse into the newest id.
+  3. Verify: only the company&#x27;s own job list proves a role is open. A board copy
+     of a role the company took down is closed. A list that cannot be read is
+     &quot;could not verify&quot;, never closed on a guess. A company with no list of its
+     own keeps the role as &quot;board only&quot;.
+  4. Gates (dropped with a reason, never scored): title out of scope, junior or
+     intern, a required language the profile does not have, a move inside the
+     home country with no remote option, a role the profile was rejected from,
+     a role with none of the duties the profile wants to do.
+  5. Role fit (0 to 10): title, share of the duties the profile wants, tools
+     on record against tools asked, years asked above the record.
+  6. Total: role fit plus location points, then factors shown in the fit line:
+     pay against the floor, on site only, startup, run shape at a big team.
+  7. Show: only role fit 6.5+ reaches the main list. Total 8+ gets a tailoring
+     brief and a note to a named person; everything else is listed for
+     reference or as &quot;seen, not a fit&quot;.
+  8. Channel: the ATS is read from the URL and decides how the CV is written.
+  9. Board: board.json and a static board.html, plus the learning loop on past
+     applications.
+
+Standard library only.
+&quot;&quot;&quot;
+import argparse
+import csv
+import html
+import json
+import os
+import re
+from collections import Counter, defaultdict
+from datetime import date
+
+TODAY = date(2026, 11, 16)
+
+ATS_PATTERNS = [  # how to tell the ATS from the URL, and what that means for the CV
+    (&quot;ashbyhq&quot;, &quot;Ashby&quot;, &quot;AI assisted screening checks each requirement: mirror the JD&#x27;s skill and tool terms in skills and in bullets.&quot;),
+    (&quot;greenhouse&quot;, &quot;Greenhouse&quot;, &quot;Parsed into fields and searched by keyword: exact terms and standard headings.&quot;),
+    (&quot;lever&quot;, &quot;Lever&quot;, &quot;No stemming, one profile per company: exact terms, keep facts identical across applications.&quot;),
+    (&quot;personio&quot;, &quot;Personio&quot;, &quot;Plain text conversion: simple layout, extractable text, match the ad&#x27;s language.&quot;),
+    (&quot;teamtailor&quot;, &quot;Teamtailor&quot;, &quot;An AI summary is written against the JD: name every required skill near the top.&quot;),
+    (&quot;join.&quot;, &quot;JOIN&quot;, &quot;Small companies, fast human read: the top third has to answer the JD.&quot;),
+    (&quot;recruitee&quot;, &quot;Recruitee&quot;, &quot;Reliable parser plus screening questions: answer knockout questions carefully.&quot;),
+    (&quot;workable&quot;, &quot;Workable&quot;, &quot;Parsed profile and screening questions: standard headings, exact terms.&quot;),
+]
+OPS_CAP = -1.0
+
+
+def norm_title(t):
+    t = t.lower()
+    t = re.sub(r&quot;\b(senior|sr|founding|lead|head of|junior|\(.*?\))\b&quot;, &quot;&quot;, t)
+    return re.sub(r&quot;\s+&quot;, &quot; &quot;, t).strip()
+
+
+def ats_of(url):
+    for key, name, advice in ATS_PATTERNS:
+        if key in url:
+            return name, advice
+    return &quot;Unknown&quot;, &quot;Check how the application is received before building the CV.&quot;
+
+
+def half(x):
+    return round(x * 2) / 2
+
+
+# ---- steps 1 to 3 -----------------------------------------------------------
+
+def dedupe(postings):
+    groups = defaultdict(list)
+    for p in postings:
+        groups[(p[&quot;company&quot;], norm_title(p[&quot;title&quot;]), p[&quot;location&quot;])].append(p)
+    rows = []
+    for (_, _, _), copies in groups.items():
+        ids = sorted({c[&quot;id&quot;] for c in copies}, key=int)
+        newest = max(copies, key=lambda c: int(c[&quot;id&quot;]))
+        row = dict(newest)
+        row[&quot;sources&quot;] = sorted({c[&quot;source&quot;] for c in copies})
+        row[&quot;all_ids&quot;] = ids
+        row[&quot;repost&quot;] = len(ids) &gt; 1
+        rows.append(row)
+    return rows, sum(len(c) for c in groups.values()) - len(groups)
+
+
+def verify(row, lists):
+    own = lists.get(row[&quot;company&quot;], {&quot;status&quot;: &quot;none&quot;, &quot;open_ids&quot;: []})
+    if own[&quot;status&quot;] == &quot;none&quot;:
+        return &quot;board only&quot;
+    if own[&quot;status&quot;] == &quot;unreadable&quot;:
+        return &quot;could not verify&quot;
+    live = [i for i in row[&quot;all_ids&quot;] if i in own[&quot;open_ids&quot;]]
+    if live:
+        row[&quot;id&quot;] = live[-1]
+        return &quot;verified&quot;
+    return &quot;closed on own list&quot;
+
+# ---- steps 4 to 6 -----------------------------------------------------------
+
+
+def title_scope(title, P):
+    t = title.lower()
+    if any(x.lower() in t for x in P[&quot;target_titles&quot;]):
+        scope = &quot;target&quot;
+    elif any(x.lower() in t for x in P[&quot;adjacent_titles&quot;]):
+        scope = &quot;adjacent&quot;
+    else:
+        return &quot;out&quot;
+    if any(re.search(rf&quot;\b{re.escape(w.lower())}\b&quot;, t) for w in P[&quot;drop_titles&quot;]):
+        return &quot;drop&quot;
+    return scope
+
+
+def duty_share(duties, P):
+    core = sum(1 for d in duties if any(w.lower() in d.lower() for w in P[&quot;core_duties&quot;]))
+    avoid = sum(1 for d in duties if any(w.lower() in d.lower() for w in P[&quot;avoid_duties&quot;]))
+    return core, avoid
+
+
+def gate(row, P):
+    scope = title_scope(row[&quot;title&quot;], P)
+    if scope == &quot;out&quot;:
+        return &quot;title out of scope&quot;, scope
+    if scope == &quot;drop&quot;:
+        return &quot;junior, intern or student role&quot;, scope
+    missing = [l for l in row[&quot;languages_required&quot;] if l not in P[&quot;languages&quot;]]
+    if missing:
+        return f&quot;{&#x27;, &#x27;.join(missing)} required&quot;, scope
+    if row[&quot;country&quot;] not in P[&quot;work_regions&quot;]:
+        return f&quot;{row[&#x27;location&#x27;]} is outside the regions you work in&quot;, scope
+    if row[&quot;company&quot;] in P[&quot;rejected_before&quot;]:
+        return &quot;rejected there before, done story&quot;, scope
+    if row[&quot;company&quot;] in P[&quot;excluded_companies&quot;]:
+        return &quot;excluded company&quot;, scope
+    if (P[&quot;no_moves_inside_home_country&quot;] and row[&quot;country&quot;] == P[&quot;home_country&quot;]
+            and row[&quot;workplace&quot;] != &quot;remote&quot; and row[&quot;location&quot;] != P[&quot;home_city&quot;]):
+        return &quot;needs a move inside the home country, no remote&quot;, scope
+    core, _ = duty_share(row[&quot;duties&quot;], P)
+    if P[&quot;drop_when_no_core_duties&quot;] and core == 0:
+        return &quot;none of the duties you want to do&quot;, scope
+    return None, scope
+
+
+def role_fit(row, P, scope):
+    base = 4.0 if scope == &quot;target&quot; else 2.5
+    core, avoid = duty_share(row[&quot;duties&quot;], P)
+    share = core / max(core + avoid, 1)
+    have = set(row[&quot;tools&quot;]) &amp; set(P[&quot;tools&quot;])
+    missing = len(row[&quot;tools&quot;]) - len(have)
+    fit = base + 3 * share + 2 * len(have) / max(len(row[&quot;tools&quot;]), 1) - min(0.75 * missing, 1.5)
+    if row[&quot;years_required&quot;] &gt;= P[&quot;years_on_record&quot;] + 2:
+        fit -= 0.5
+    above = any(row[&quot;title&quot;].startswith(s) or f&quot; {s} &quot; in f&quot; {row[&#x27;title&#x27;]} &quot; for s in P[&quot;senior_titles_above_record&quot;])
+    if above:
+        fit -= 1
+    return min(half(fit), 10), share, above
+
+
+def location_points(row, P):
+    L = P[&quot;location_points&quot;]
+    if row[&quot;location&quot;] == P[&quot;home_city&quot;]:
+        return L.get(&quot;home city&quot;, 0), &quot;home city&quot;
+    if row[&quot;location&quot;] == f&quot;Remote {P[&#x27;home_country&#x27;]}&quot;:
+        return L.get(&quot;remote home country&quot;, 0), &quot;remote in home country&quot;
+    if row[&quot;location&quot;] == &quot;Remote EU&quot;:
+        return L.get(&quot;remote EU&quot;, 0), &quot;EU remote&quot;
+    if row[&quot;location&quot;] in L:
+        return L[row[&quot;location&quot;]], row[&quot;location&quot;]
+    return L.get(&quot;other&quot;, 0), f&quot;{row[&#x27;location&#x27;]} needs a move&quot;
+
+
+def total_fit(row, P, rf, share):
+    parts = [f&quot;role {rf:g}&quot;]
+    pts, label = location_points(row, P)
+    total = rf + pts
+    parts.append(f&quot;{label} {pts:+g}&quot;.replace(&quot;+-&quot;, &quot;minus &quot;).replace(&quot;+0&quot;, &quot;+0&quot;))
+    if row[&quot;pay_k_eur&quot;]:
+        lo, hi = row[&quot;pay_k_eur&quot;]
+        floor = P[&quot;pay_floor_k_eur&quot;]
+        if hi &lt; floor:
+            total -= 1.5
+            parts.append(&quot;pay below floor minus 1.5&quot;)
+        elif lo &gt;= floor:
+            total += 0.5
+            parts.append(&quot;pay above floor +0.5&quot;)
+        else:
+            parts.append(&quot;floor inside the band&quot;)
+    else:
+        parts.append(&quot;pay not stated (ask)&quot;)
+    if row[&quot;workplace&quot;] == &quot;on site&quot;:
+        total -= 0.5
+        parts.append(&quot;on site only minus 0.5&quot;)
+    if row[&quot;employees&quot;] &lt; 150:
+        total -= 0.5
+        parts.append(&quot;startup minus 0.5&quot;)
+    ops = 0.0
+    if share &lt; 0.5 and row[&quot;employees&quot;] &gt;= 300:
+        ops -= 0.5
+        parts.append(&quot;run shape at a big team minus 0.5&quot;)
+    total += max(ops, OPS_CAP)
+    total = min(half(total), 10)
+    return total, f&quot;fit {total:g} ({&#x27;, &#x27;.join(parts)})&quot;
+
+# ---- step 7: what a CV for this role needs -----------------------------------
+
+
+def brief(row, P):
+    jd_terms = set(row[&quot;tools&quot;]) | {d for d in row[&quot;duties&quot;]}
+    have = [k for k in P[&quot;cv_keywords_on_record&quot;]
+            if any(k.lower() in t.lower() for t in jd_terms)]
+    missing = [t for t in row[&quot;tools&quot;] if t not in P[&quot;cv_keywords_on_record&quot;]]
+    ats, advice = ats_of(row[&quot;url&quot;])
+    if row[&quot;location&quot;] == P[&quot;home_city&quot;]:
+        loc_line = f&quot;{P[&#x27;home_city&#x27;]}, {P[&#x27;home_country&#x27;]}&quot;
+    elif row[&quot;workplace&quot;] == &quot;remote&quot;:
+        loc_line = f&quot;{P[&#x27;home_city&#x27;]}, {P[&#x27;home_country&#x27;]} (open to remote)&quot;
+    else:
+        loc_line = f&quot;{P[&#x27;home_city&#x27;]}, {P[&#x27;home_country&#x27;]} (open to relocation)&quot;
+    return {
+        &quot;headline&quot;: row[&quot;title&quot;],
+        &quot;top_requirements&quot;: row[&quot;duties&quot;][:3],
+        &quot;keywords_on_record&quot;: have,
+        &quot;gaps_to_name_not_cover&quot;: missing + ([&quot;years asked above the record&quot;] if row[&quot;years_required&quot;] &gt;= P[&quot;years_on_record&quot;] + 2 else []),
+        &quot;location_line&quot;: loc_line,
+        &quot;ats&quot;: ats,
+        &quot;ats_advice&quot;: advice,
+        &quot;note_to_person&quot;: &quot;Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask.&quot;,
+    }
+
+# ---- step 9: learning loop ---------------------------------------------------
+
+
+def learning(path):
+    rows = list(csv.DictReader(open(path)))
+    out = []
+    for key in (&quot;role_shape&quot;, &quot;company_size&quot;, &quot;note_to_named_person&quot;):
+        by = defaultdict(Counter)
+        for r in rows:
+            by[r[key]][r[&quot;outcome&quot;]] += 1
+        for val, c in sorted(by.items()):
+            n = sum(c.values())
+            out.append({&quot;split&quot;: key, &quot;value&quot;: val, &quot;applications&quot;: n, &quot;calls&quot;: c[&quot;call&quot;],
+                        &quot;call_rate&quot;: round(c[&quot;call&quot;] / n, 2), &quot;rejected_at_cv&quot;: c[&quot;rejected at CV&quot;]})
+    return out
+
+# ---- board html --------------------------------------------------------------
+
+
+def board_html(P, main, ref, seen, dropped, unverified, closed, loop):
+    def table(rows, cols):
+        head = &quot;&quot;.join(f&quot;&lt;th&gt;{html.escape(c)}&lt;/th&gt;&quot; for c, _ in cols)
+        body = &quot;&quot;.join(&quot;&lt;tr&gt;&quot; + &quot;&quot;.join(f&quot;&lt;td&gt;{html.escape(str(f(r)))}&lt;/td&gt;&quot; for _, f in cols) + &quot;&lt;/tr&gt;&quot; for r in rows)
+        return f&quot;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;{head}&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;{body or &#x27;&lt;tr&gt;&lt;td&gt;none&lt;/td&gt;&lt;/tr&gt;&#x27;}&lt;/tbody&gt;&lt;/table&gt;&quot;
+    link = lambda r: r[&quot;url&quot;]
+    cols_main = [(&quot;Company&quot;, lambda r: r[&quot;company&quot;]), (&quot;Role&quot;, lambda r: r[&quot;title&quot;]), (&quot;Location&quot;, lambda r: f&quot;{r[&#x27;location&#x27;]}, {r[&#x27;workplace&#x27;]}&quot;),
+                 (&quot;Fit line&quot;, lambda r: r[&quot;fit_line&quot;]), (&quot;ATS&quot;, lambda r: ats_of(r[&quot;url&quot;])[0]), (&quot;Found on&quot;, lambda r: &quot;, &quot;.join(r[&quot;sources&quot;])), (&quot;Posting&quot;, link)]
+    cols_seen = [(&quot;Company&quot;, lambda r: r[&quot;company&quot;]), (&quot;Role&quot;, lambda r: r[&quot;title&quot;]), (&quot;Why not&quot;, lambda r: r[&quot;why&quot;])]
+    loop_rows = [(&quot;Split&quot;, lambda r: r[&quot;split&quot;]), (&quot;Value&quot;, lambda r: r[&quot;value&quot;]), (&quot;Applications&quot;, lambda r: r[&quot;applications&quot;]),
+                 (&quot;Calls&quot;, lambda r: r[&quot;calls&quot;]), (&quot;Call rate&quot;, lambda r: r[&quot;call_rate&quot;])]
+    return f&quot;&quot;&quot;&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;&lt;title&gt;{html.escape(P[&#x27;name&#x27;])} board (synthetic)&lt;/title&gt;
+&lt;style&gt;body{{font-family:system-ui,sans-serif;margin:24px;color:#1d1b16;background:#faf7f0}}h1{{font-size:22px}}h2{{font-size:16px;margin-top:28px}}
+table{{border-collapse:collapse;width:100%;font-size:13px;background:#fff}}th,td{{border:1px solid #e3ddd0;padding:6px 8px;text-align:left;vertical-align:top}}
+th{{background:#f1ece0;font-weight:600}}p{{color:#5c574c;font-size:14px}}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;{html.escape(P[&#x27;name&#x27;])}: job board (synthetic data)&lt;/h1&gt;
+&lt;p&gt;Built by scan.py. Every company and posting is invented. Only roles on the company&#x27;s own list count as open.&lt;/p&gt;
+&lt;h2&gt;Strong fit or worth applying (total 8+), {len(main)}&lt;/h2&gt;{table(main, cols_main)}
+&lt;h2&gt;Below the 8 bar, listed for reference, {len(ref)}&lt;/h2&gt;{table(ref, cols_main)}
+&lt;h2&gt;Could not verify (company list unreadable or board only), {len(unverified)}&lt;/h2&gt;{table(unverified, cols_seen)}
+&lt;h2&gt;Seen, not a fit (role fit under {P[&#x27;show_bar_role&#x27;]}), {len(seen)}&lt;/h2&gt;{table(seen, cols_seen)}
+&lt;h2&gt;Checked and dropped, {len(dropped)}&lt;/h2&gt;{table(dropped, cols_seen)}
+&lt;h2&gt;Closed on the company&#x27;s own list, still up on a board, {len(closed)}&lt;/h2&gt;{table(closed, cols_seen)}
+&lt;h2&gt;Learning loop: past applications&lt;/h2&gt;{table(loop, loop_rows)}
+&lt;/body&gt;&lt;/html&gt;&quot;&quot;&quot;
+
+# ---- main -------------------------------------------------------------------
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument(&quot;profile&quot;)
+    ap.add_argument(&quot;--data&quot;, default=&quot;data&quot;)
+    ap.add_argument(&quot;--out&quot;, default=&quot;output&quot;)
+    args = ap.parse_args()
+    P = json.load(open(args.profile))
+    postings = json.load(open(os.path.join(args.data, &quot;postings.json&quot;)))
+    lists = json.load(open(os.path.join(args.data, &quot;company_lists.json&quot;)))
+
+    rows, dup_copies = dedupe(postings)
+    main_list, ref, seen, dropped, unverified, closed = [], [], [], [], [], []
+    for r in rows:
+        if title_scope(r[&quot;title&quot;], P) == &quot;out&quot;:
+            continue  # other job families stay silent
+        status = verify(r, lists)
+        r[&quot;verify&quot;] = status
+        if status == &quot;closed on own list&quot;:
+            closed.append(dict(r, why=&quot;gone from the company&#x27;s list; a board copy is not proof&quot;))
+            continue
+        reason, scope = gate(r, P)
+        if reason:
+            dropped.append(dict(r, why=reason))
+            continue
+        rf, share, above = role_fit(r, P, scope)
+        r[&quot;role_fit&quot;] = rf
+        r[&quot;total&quot;], r[&quot;fit_line&quot;] = total_fit(r, P, rf, share)
+        if above:
+            r[&quot;fit_line&quot;] += &quot;; title above the record, name the leadership gap&quot;
+        if rf &lt; P[&quot;show_bar_role&quot;]:
+            seen.append(dict(r, why=f&quot;role {rf:g}: {&#x27;run shape&#x27; if share &lt; 0.5 else &#x27;tools and title&#x27;}&quot;))
+            continue
+        if status in (&quot;could not verify&quot;, &quot;board only&quot;):
+            unverified.append(dict(r, why=f&quot;{status}; {r[&#x27;fit_line&#x27;]}&quot;))
+            continue
+        (main_list if r[&quot;total&quot;] &gt;= P[&quot;cv_bar_total&quot;] else ref).append(r)
+
+    main_list.sort(key=lambda r: (-r[&quot;total&quot;], -r[&quot;role_fit&quot;]))
+    ref.sort(key=lambda r: (-r[&quot;total&quot;], -r[&quot;role_fit&quot;]))
+    for r in main_list:
+        r[&quot;verdict&quot;] = &quot;Strong fit&quot; if r[&quot;total&quot;] &gt;= 9 else &quot;Worth applying&quot;
+        r[&quot;brief&quot;] = brief(r, P)
+    for r in ref:
+        r[&quot;verdict&quot;] = &quot;Below the 8 bar, listed for reference&quot;
+
+    loop = learning(os.path.join(args.data, &quot;applications.csv&quot;))
+    os.makedirs(os.path.join(args.out, &quot;jds&quot;), exist_ok=True)
+    for r in main_list:
+        jd = [r[&quot;title&quot;], f&quot;{r[&#x27;company&#x27;]}, {r[&#x27;location&#x27;]} ({r[&#x27;workplace&#x27;]})&quot;, &quot;&quot;, &quot;What you will do:&quot;]
+        jd += [f&quot;- {d}&quot; for d in r[&quot;duties&quot;]] + [&quot;&quot;, &quot;Tools: &quot; + &quot;, &quot;.join(r[&quot;tools&quot;]),
+                                                 f&quot;Experience: {r[&#x27;years_required&#x27;]}+ years&quot;]
+        with open(os.path.join(args.out, &quot;jds&quot;, f&quot;{r[&#x27;id&#x27;]}.txt&quot;), &quot;w&quot;) as f:
+            f.write(&quot;\n&quot;.join(jd) + &quot;\n&quot;)
+
+    keep = [&quot;id&quot;, &quot;company&quot;, &quot;title&quot;, &quot;location&quot;, &quot;workplace&quot;, &quot;url&quot;, &quot;sources&quot;, &quot;verify&quot;, &quot;role_fit&quot;, &quot;total&quot;, &quot;fit_line&quot;, &quot;verdict&quot;, &quot;brief&quot;, &quot;why&quot;]
+    slim = lambda rs: [{k: r[k] for k in keep if k in r} for r in rs]
+    board = {&quot;profile&quot;: P[&quot;name&quot;], &quot;main&quot;: slim(main_list), &quot;reference&quot;: slim(ref), &quot;could_not_verify&quot;: slim(unverified),
+             &quot;seen_not_a_fit&quot;: slim(seen), &quot;dropped&quot;: slim(dropped), &quot;closed_on_own_list&quot;: slim(closed), &quot;learning_loop&quot;: loop}
+    with open(os.path.join(args.out, &quot;board.json&quot;), &quot;w&quot;) as f:
+        json.dump(board, f, indent=1)
+    with open(os.path.join(args.out, &quot;board.html&quot;), &quot;w&quot;) as f:
+        f.write(board_html(P, main_list, ref, seen, dropped, unverified, closed, loop))
+
+    in_scope = len(main_list) + len(ref) + len(seen) + len(dropped) + len(unverified) + len(closed)
+    summary = {
+        &quot;profile&quot;: P[&quot;name&quot;], &quot;board_copies&quot;: len(postings), &quot;unique_roles&quot;: len(rows),
+        &quot;duplicate_copies_collapsed&quot;: dup_copies, &quot;reposts&quot;: sum(1 for r in rows if r[&quot;repost&quot;]),
+        &quot;in_scope&quot;: in_scope, &quot;main_8_plus&quot;: len(main_list), &quot;reference&quot;: len(ref), &quot;could_not_verify&quot;: len(unverified),
+        &quot;seen_not_a_fit&quot;: len(seen), &quot;dropped&quot;: len(dropped), &quot;closed_on_own_list&quot;: len(closed),
+        &quot;drop_reasons&quot;: dict(Counter(r[&quot;why&quot;] for r in dropped)),
+        &quot;top&quot;: [{&quot;company&quot;: r[&quot;company&quot;], &quot;title&quot;: r[&quot;title&quot;], &quot;fit_line&quot;: r[&quot;fit_line&quot;], &quot;verdict&quot;: r[&quot;verdict&quot;],
+                 &quot;ats&quot;: r[&quot;brief&quot;][&quot;ats&quot;]} for r in main_list[:5]],
+    }
+    with open(os.path.join(args.out, &quot;summary.json&quot;), &quot;w&quot;) as f:
+        json.dump(summary, f, indent=2)
+
+    # checks: the run stops if any rule broke
+    assert all(r[&quot;verify&quot;] == &quot;verified&quot; for r in main_list + ref), &quot;an unverified role reached the list&quot;
+    assert all(r[&quot;role_fit&quot;] &gt;= P[&quot;show_bar_role&quot;] for r in main_list + ref), &quot;a weak role reached the list&quot;
+    assert all(r[&quot;total&quot;] &gt;= P[&quot;cv_bar_total&quot;] for r in main_list), &quot;a role under the bar got a CV brief&quot;
+    assert not any(r[&quot;company&quot;] in P[&quot;rejected_before&quot;] for r in main_list + ref), &quot;a done story came back&quot;
+    ids = [r[&quot;id&quot;] for r in main_list + ref]
+    assert len(ids) == len(set(ids)), &quot;a role is listed twice&quot;
+    print(json.dumps(summary, indent=2))
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+    </details>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>

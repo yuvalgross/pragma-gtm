@@ -1,0 +1,18 @@
+CV check against: RevOps Engineer
+Keywords: 5 of 7 covered; missing: Apollo, Salesforce
+Rubric: ATS 1, proof 1, wording 1, writing 0, focus (set by a person)
+Automatic part: 3 of 8. Bar: 9 of 10 overall, never deliver under 8.
+Fix list:
+  - Headline should start with the JD title "RevOps Engineer" (now: "GTM Engineer | Clay, HubSpot and Automation")
+  - Put "Python" in both SKILLS and a bullet (skills True, bullet False)
+  - No bullet with a number proves "APIs"
+  - 3 phrases lifted from the JD, keep at most one: ['build lead routing from', 'integrate tools through apis', 'lead routing from scratch']
+  - line 4: pronoun
+  - line 4: filler "passionate"
+  - line 12: hedge before a number
+  - line 13: dash used as punctuation
+  - line 14: filler "responsible for"
+  - line 11: bullet over one line (137 characters)
+  - line 12: opening verb "built" repeated in GTM Engineer
+  - line 13: no number or scope
+  - line 14: no number or scope

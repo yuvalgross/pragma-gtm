@@ -1,0 +1,10 @@
+GTM Systems Engineer
+Delta Logic, Limassol (on site)
+
+What you will do:
+- build lead routing from scratch
+- build enrichment and scoring workflows
+- integrate tools through APIs
+
+Tools: Claude, Make, n8n, Python
+Experience: 6+ years

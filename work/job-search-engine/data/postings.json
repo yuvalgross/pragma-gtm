@@ -1,0 +1,6231 @@
+[
+ {
+  "id": "1001",
+  "company": "Lumen Labs",
+  "title": "GTM Engineer",
+  "family": "gtm",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "integrate tools through APIs",
+   "manage territory and quota planning",
+   "own pipeline reporting for leadership",
+   "administer the CRM"
+  ],
+  "tools": [
+   "HubSpot",
+   "Make"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://lumenlabs.recruitee.example/o/1001",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1002",
+  "company": "Pebble Pay",
+  "title": "Onboarding Manager",
+  "family": "cs",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   55,
+   75
+  ],
+  "employees": 12,
+  "duties": [
+   "answer support tickets",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Zendesk",
+   "Gainsight",
+   "Intercom",
+   "HubSpot"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://jobs.ashbyhq.example/pebblepay/1002",
+  "source": "Indeed"
+ },
+ {
+  "id": "1003",
+  "company": "Harbor Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "run the forecast process"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gong",
+   "SQL"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://jobs.ashbyhq.example/harborcloud/1003",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1003",
+  "company": "Harbor Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "run the forecast process"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gong",
+   "SQL"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://jobs.ashbyhq.example/harborcloud/1003",
+  "source": "Indeed"
+ },
+ {
+  "id": "1004",
+  "company": "Tidal Systems",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "administer the CRM"
+  ],
+  "tools": [
+   "SQL",
+   "HubSpot",
+   "Python",
+   "Zapier"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://job-boards.greenhouse.example/tidalsystems/jobs/1004",
+  "source": "newsletter"
+ },
+ {
+  "id": "1005",
+  "company": "Vesper Pay",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 3,
+  "pay_k_eur": [
+   60,
+   75
+  ],
+  "employees": 180,
+  "duties": [
+   "forecast your pipeline",
+   "own a new business quota",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://vesperpay.jobs.personio.example/job/1005",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1005",
+  "company": "Vesper Pay",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 3,
+  "pay_k_eur": [
+   60,
+   75
+  ],
+  "employees": 180,
+  "duties": [
+   "forecast your pipeline",
+   "own a new business quota",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://vesperpay.jobs.personio.example/job/1005",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1006",
+  "company": "Pebble Data",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   100,
+   115
+  ],
+  "employees": 40,
+  "duties": [
+   "own a new business quota",
+   "run discovery and demos",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "Outreach",
+   "HubSpot"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://pebbledata.recruitee.example/o/1006",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1006",
+  "company": "Pebble Data",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   100,
+   115
+  ],
+  "employees": 40,
+  "duties": [
+   "own a new business quota",
+   "run discovery and demos",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "Outreach",
+   "HubSpot"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://pebbledata.recruitee.example/o/1006",
+  "source": "Indeed"
+ },
+ {
+  "id": "1007",
+  "company": "Delta Logic",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   65,
+   85
+  ],
+  "employees": 120,
+  "duties": [
+   "design commission plans",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Salesforce",
+   "Looker"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://deltalogic.recruitee.example/o/1007",
+  "source": "Indeed"
+ },
+ {
+  "id": "1007",
+  "company": "Delta Logic",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   65,
+   85
+  ],
+  "employees": 120,
+  "duties": [
+   "design commission plans",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Salesforce",
+   "Looker"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://deltalogic.recruitee.example/o/1007",
+  "source": "newsletter"
+ },
+ {
+  "id": "1007",
+  "company": "Delta Logic",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   65,
+   85
+  ],
+  "employees": 120,
+  "duties": [
+   "design commission plans",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Salesforce",
+   "Looker"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://deltalogic.recruitee.example/o/1007",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1008",
+  "company": "Bramble HQ",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "n8n",
+   "Salesforce"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://jobs.ashbyhq.example/bramblehq/1008",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1009",
+  "company": "Pebble HQ",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   95,
+   115
+  ],
+  "employees": 25,
+  "duties": [
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://join.example/companies/pebblehq/1009",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1009",
+  "company": "Pebble HQ",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   95,
+   115
+  ],
+  "employees": 25,
+  "duties": [
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://join.example/companies/pebblehq/1009",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1009",
+  "company": "Pebble HQ",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   95,
+   115
+  ],
+  "employees": 25,
+  "duties": [
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://join.example/companies/pebblehq/1009",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1010",
+  "company": "Vesper Labs",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "forecast your pipeline",
+   "run discovery and demos",
+   "own a new business quota"
+  ],
+  "tools": [
+   "Gong",
+   "Outreach",
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://vesperlabs.recruitee.example/o/1010",
+  "source": "Indeed"
+ },
+ {
+  "id": "1010",
+  "company": "Vesper Labs",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "forecast your pipeline",
+   "run discovery and demos",
+   "own a new business quota"
+  ],
+  "tools": [
+   "Gong",
+   "Outreach",
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://vesperlabs.recruitee.example/o/1010",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1010",
+  "company": "Vesper Labs",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "forecast your pipeline",
+   "run discovery and demos",
+   "own a new business quota"
+  ],
+  "tools": [
+   "Gong",
+   "Outreach",
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://vesperlabs.recruitee.example/o/1010",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1011",
+  "company": "Nimbus AI",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows"
+  ],
+  "tools": [
+   "Clay",
+   "Python",
+   "Salesforce",
+   "Claude"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://jobs.lever.example/nimbusai/1011",
+  "source": "newsletter"
+ },
+ {
+  "id": "1011",
+  "company": "Nimbus AI",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows"
+  ],
+  "tools": [
+   "Clay",
+   "Python",
+   "Salesforce",
+   "Claude"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://jobs.lever.example/nimbusai/1011",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1011",
+  "company": "Nimbus AI",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows"
+  ],
+  "tools": [
+   "Clay",
+   "Python",
+   "Salesforce",
+   "Claude"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://jobs.lever.example/nimbusai/1011",
+  "source": "Indeed"
+ },
+ {
+  "id": "1012",
+  "company": "Orchard Health",
+  "title": "GTM Engineer",
+  "family": "gtm",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   70,
+   80
+  ],
+  "employees": 12,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "integrate tools through APIs",
+   "build lead routing from scratch",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Salesforce",
+   "n8n"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://orchardhealth.jobs.personio.example/job/1012",
+  "source": "newsletter"
+ },
+ {
+  "id": "1013",
+  "company": "Cobalt Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "SQL",
+   "Clay",
+   "Make"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/cobalthealth/1013",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1013",
+  "company": "Cobalt Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "SQL",
+   "Clay",
+   "Make"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/cobalthealth/1013",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1013",
+  "company": "Cobalt Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "SQL",
+   "Clay",
+   "Make"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/cobalthealth/1013",
+  "source": "Indeed"
+ },
+ {
+  "id": "1014",
+  "company": "Cobalt Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "SQL",
+   "Clay",
+   "Make"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://join.example/companies/cobalthealth/1014",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1015",
+  "company": "Fable Pay",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 450,
+  "duties": [
+   "integrate tools through APIs",
+   "automate CRM updates with APIs and webhooks",
+   "build outbound and signal pipelines",
+   "run the forecast process",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://job-boards.greenhouse.example/fablepay/jobs/1015",
+  "source": "newsletter"
+ },
+ {
+  "id": "1016",
+  "company": "Cobalt Cloud",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   70,
+   80
+  ],
+  "employees": 2500,
+  "duties": [
+   "build outbound and signal pipelines",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks",
+   "own pipeline reporting for leadership",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Zapier",
+   "Python",
+   "SQL"
+  ],
+  "posted": "2026-11-11",
+  "url": "https://join.example/companies/cobaltcloud/1016",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1017",
+  "company": "Juniper Pay",
+  "title": "Senior GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 450,
+  "duties": [
+   "integrate tools through APIs",
+   "administer the CRM",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Claude",
+   "Salesforce",
+   "Python"
+  ],
+  "posted": "2026-11-05",
+  "url": "https://juniperpay.recruitee.example/o/1017",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1018",
+  "company": "Harbor Logic",
+  "title": "Onboarding Manager",
+  "family": "cs",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "answer support tickets"
+  ],
+  "tools": [
+   "Intercom",
+   "Gainsight",
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-08",
+  "url": "https://join.example/companies/harborlogic/1018",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1019",
+  "company": "Bramble Cloud",
+  "title": "GTM Engineer",
+  "family": "gtm",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   55,
+   65
+  ],
+  "employees": 260,
+  "duties": [
+   "build outbound and signal pipelines",
+   "prepare QBR decks",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Claude",
+   "HubSpot"
+  ],
+  "posted": "2026-10-23",
+  "url": "https://bramblecloud.recruitee.example/o/1019",
+  "source": "newsletter"
+ },
+ {
+  "id": "1020",
+  "company": "Pebble Data",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   85,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "manage territory and quota planning",
+   "own pipeline reporting for leadership",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Gong",
+   "SQL",
+   "Excel"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://pebbledata.recruitee.example/o/1020",
+  "source": "Indeed"
+ },
+ {
+  "id": "1020",
+  "company": "Pebble Data",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   85,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "manage territory and quota planning",
+   "own pipeline reporting for leadership",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Gong",
+   "SQL",
+   "Excel"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://pebbledata.recruitee.example/o/1020",
+  "source": "newsletter"
+ },
+ {
+  "id": "1021",
+  "company": "Atlas Logic",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "own renewals and expansion",
+   "answer support tickets",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Zendesk",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-10-23",
+  "url": "https://jobs.lever.example/atlaslogic/1021",
+  "source": "newsletter"
+ },
+ {
+  "id": "1022",
+  "company": "Orchard Cloud",
+  "title": "Senior GTM Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   90,
+   105
+  ],
+  "employees": 180,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "ship AI agents for research and routing",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Zapier",
+   "Claude",
+   "Clay",
+   "n8n"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/orchardcloud/1022",
+  "source": "Indeed"
+ },
+ {
+  "id": "1022",
+  "company": "Orchard Cloud",
+  "title": "Senior GTM Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   90,
+   105
+  ],
+  "employees": 180,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "ship AI agents for research and routing",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Zapier",
+   "Claude",
+   "Clay",
+   "n8n"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/orchardcloud/1022",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1022",
+  "company": "Orchard Cloud",
+  "title": "Senior GTM Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   90,
+   105
+  ],
+  "employees": 180,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "ship AI agents for research and routing",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Zapier",
+   "Claude",
+   "Clay",
+   "n8n"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/orchardcloud/1022",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1023",
+  "company": "Orchard Systems",
+  "title": "Onboarding Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "run onboarding for new customers",
+   "answer support tickets",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Zendesk"
+  ],
+  "posted": "2026-11-07",
+  "url": "https://apply.workable.example/orchardsystems/j/1023",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1024",
+  "company": "Orchard Systems",
+  "title": "Onboarding Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "run onboarding for new customers",
+   "answer support tickets",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Zendesk"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://apply.workable.example/orchardsystems/j/1024",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1025",
+  "company": "Delta Logic",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   90,
+   105
+  ],
+  "employees": 120,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "integrate tools through APIs"
+  ],
+  "tools": [
+   "Claude",
+   "Make",
+   "n8n",
+   "Python"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://deltalogic.recruitee.example/o/1025",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1025",
+  "company": "Delta Logic",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   90,
+   105
+  ],
+  "employees": 120,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "integrate tools through APIs"
+  ],
+  "tools": [
+   "Claude",
+   "Make",
+   "n8n",
+   "Python"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://deltalogic.recruitee.example/o/1025",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1025",
+  "company": "Delta Logic",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   90,
+   105
+  ],
+  "employees": 120,
+  "duties": [
+   "build lead routing from scratch",
+   "build enrichment and scoring workflows",
+   "integrate tools through APIs"
+  ],
+  "tools": [
+   "Claude",
+   "Make",
+   "n8n",
+   "Python"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://deltalogic.recruitee.example/o/1025",
+  "source": "Indeed"
+ },
+ {
+  "id": "1026",
+  "company": "Indigo HQ",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   55,
+   75
+  ],
+  "employees": 25,
+  "duties": [
+   "run onboarding for new customers",
+   "answer support tickets",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Gainsight",
+   "Salesforce",
+   "Intercom",
+   "Zendesk"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://indigohq.jobs.personio.example/job/1026",
+  "source": "newsletter"
+ },
+ {
+  "id": "1027",
+  "company": "Orchard Systems",
+  "title": "Senior RevOps Manager",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "build lead routing from scratch",
+   "prepare QBR decks",
+   "design commission plans",
+   "run the forecast process"
+  ],
+  "tools": [
+   "SQL",
+   "Looker",
+   "Excel",
+   "HubSpot"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://apply.workable.example/orchardsystems/j/1027",
+  "source": "newsletter"
+ },
+ {
+  "id": "1027",
+  "company": "Orchard Systems",
+  "title": "Senior RevOps Manager",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "build lead routing from scratch",
+   "prepare QBR decks",
+   "design commission plans",
+   "run the forecast process"
+  ],
+  "tools": [
+   "SQL",
+   "Looker",
+   "Excel",
+   "HubSpot"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://apply.workable.example/orchardsystems/j/1027",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1028",
+  "company": "Delta AI",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "own renewals and expansion",
+   "drive adoption and health scores",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Gainsight",
+   "Salesforce"
+  ],
+  "posted": "2026-10-27",
+  "url": "https://jobs.lever.example/deltaai/1028",
+  "source": "Indeed"
+ },
+ {
+  "id": "1029",
+  "company": "Pebble Data",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   65,
+   75
+  ],
+  "employees": 40,
+  "duties": [
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Claude",
+   "Clay",
+   "Salesforce"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://pebbledata.recruitee.example/o/1029",
+  "source": "newsletter"
+ },
+ {
+  "id": "1029",
+  "company": "Pebble Data",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   65,
+   75
+  ],
+  "employees": 40,
+  "duties": [
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Claude",
+   "Clay",
+   "Salesforce"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://pebbledata.recruitee.example/o/1029",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1029",
+  "company": "Pebble Data",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   65,
+   75
+  ],
+  "employees": 40,
+  "duties": [
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Claude",
+   "Clay",
+   "Salesforce"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://pebbledata.recruitee.example/o/1029",
+  "source": "Indeed"
+ },
+ {
+  "id": "1030",
+  "company": "Harbor Data",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   80,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "integrate tools through APIs",
+   "administer the CRM",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot",
+   "SQL"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://apply.workable.example/harbordata/j/1030",
+  "source": "Indeed"
+ },
+ {
+  "id": "1030",
+  "company": "Harbor Data",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   80,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "integrate tools through APIs",
+   "administer the CRM",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot",
+   "SQL"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://apply.workable.example/harbordata/j/1030",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1031",
+  "company": "Garnet Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 25,
+  "duties": [
+   "ship AI agents for research and routing",
+   "automate CRM updates with APIs and webhooks",
+   "build enrichment and scoring workflows",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "SQL",
+   "n8n",
+   "Zapier"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://join.example/companies/garnethealth/1031",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1031",
+  "company": "Garnet Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 25,
+  "duties": [
+   "ship AI agents for research and routing",
+   "automate CRM updates with APIs and webhooks",
+   "build enrichment and scoring workflows",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "SQL",
+   "n8n",
+   "Zapier"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://join.example/companies/garnethealth/1031",
+  "source": "Indeed"
+ },
+ {
+  "id": "1031",
+  "company": "Garnet Health",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 25,
+  "duties": [
+   "ship AI agents for research and routing",
+   "automate CRM updates with APIs and webhooks",
+   "build enrichment and scoring workflows",
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "SQL",
+   "n8n",
+   "Zapier"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://join.example/companies/garnethealth/1031",
+  "source": "newsletter"
+ },
+ {
+  "id": "1032",
+  "company": "Ember Data",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   85,
+   100
+  ],
+  "employees": 2500,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "integrate tools through APIs",
+   "automate CRM updates with APIs and webhooks",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot",
+   "Salesforce",
+   "Apollo"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://apply.workable.example/emberdata/j/1032",
+  "source": "Indeed"
+ },
+ {
+  "id": "1033",
+  "company": "Quill HQ",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   80
+  ],
+  "employees": 40,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "administer the CRM",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "SQL",
+   "Salesforce"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://apply.workable.example/quillhq/j/1033",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1034",
+  "company": "Quill HQ",
+  "title": "Senior Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   60,
+   80
+  ],
+  "employees": 40,
+  "duties": [
+   "forecast your pipeline",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Outreach",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-11-05",
+  "url": "https://apply.workable.example/quillhq/j/1034",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1034",
+  "company": "Quill HQ",
+  "title": "Senior Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   60,
+   80
+  ],
+  "employees": 40,
+  "duties": [
+   "forecast your pipeline",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Outreach",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-11-05",
+  "url": "https://apply.workable.example/quillhq/j/1034",
+  "source": "newsletter"
+ },
+ {
+  "id": "1035",
+  "company": "Vesper Pay",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "own renewals and expansion",
+   "build success playbooks",
+   "drive adoption and health scores",
+   "answer support tickets",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Zendesk"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://vesperpay.jobs.personio.example/job/1035",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1035",
+  "company": "Vesper Pay",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "own renewals and expansion",
+   "build success playbooks",
+   "drive adoption and health scores",
+   "answer support tickets",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Zendesk"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://vesperpay.jobs.personio.example/job/1035",
+  "source": "Indeed"
+ },
+ {
+  "id": "1036",
+  "company": "Nimbus AI",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 25,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Salesforce",
+   "Claude"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/nimbusai/1036",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1036",
+  "company": "Nimbus AI",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 25,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Salesforce",
+   "Claude"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/nimbusai/1036",
+  "source": "Indeed"
+ },
+ {
+  "id": "1036",
+  "company": "Nimbus AI",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 25,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Salesforce",
+   "Claude"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/nimbusai/1036",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1037",
+  "company": "Tidal Logic",
+  "title": "BI Analyst",
+  "family": "data",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "dbt",
+   "Python",
+   "Looker",
+   "SQL"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://tidallogic.recruitee.example/o/1037",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1037",
+  "company": "Tidal Logic",
+  "title": "BI Analyst",
+  "family": "data",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "dbt",
+   "Python",
+   "Looker",
+   "SQL"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://tidallogic.recruitee.example/o/1037",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1037",
+  "company": "Tidal Logic",
+  "title": "BI Analyst",
+  "family": "data",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "dbt",
+   "Python",
+   "Looker",
+   "SQL"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://tidallogic.recruitee.example/o/1037",
+  "source": "Indeed"
+ },
+ {
+  "id": "1038",
+  "company": "Ember Cloud",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   105,
+   115
+  ],
+  "employees": 40,
+  "duties": [
+   "forecast your pipeline",
+   "own a new business quota"
+  ],
+  "tools": [
+   "Gong",
+   "Salesforce"
+  ],
+  "posted": "2026-10-31",
+  "url": "https://apply.workable.example/embercloud/j/1038",
+  "source": "Indeed"
+ },
+ {
+  "id": "1038",
+  "company": "Ember Cloud",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   105,
+   115
+  ],
+  "employees": 40,
+  "duties": [
+   "forecast your pipeline",
+   "own a new business quota"
+  ],
+  "tools": [
+   "Gong",
+   "Salesforce"
+  ],
+  "posted": "2026-10-31",
+  "url": "https://apply.workable.example/embercloud/j/1038",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1038",
+  "company": "Ember Cloud",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   105,
+   115
+  ],
+  "employees": 40,
+  "duties": [
+   "forecast your pipeline",
+   "own a new business quota"
+  ],
+  "tools": [
+   "Gong",
+   "Salesforce"
+  ],
+  "posted": "2026-10-31",
+  "url": "https://apply.workable.example/embercloud/j/1038",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1039",
+  "company": "Indigo Cloud",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   85,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "administer the CRM",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Zapier",
+   "Clay",
+   "Salesforce"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://indigocloud.recruitee.example/o/1039",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1039",
+  "company": "Indigo Cloud",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   85,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "administer the CRM",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Zapier",
+   "Clay",
+   "Salesforce"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://indigocloud.recruitee.example/o/1039",
+  "source": "newsletter"
+ },
+ {
+  "id": "1039",
+  "company": "Indigo Cloud",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   85,
+   100
+  ],
+  "employees": 40,
+  "duties": [
+   "administer the CRM",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Zapier",
+   "Clay",
+   "Salesforce"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://indigocloud.recruitee.example/o/1039",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1040",
+  "company": "Cobalt Data",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "run onboarding for new customers",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Salesforce",
+   "Intercom",
+   "Gainsight"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://cobaltdata.jobs.personio.example/job/1040",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1041",
+  "company": "Fable Systems",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   105,
+   120
+  ],
+  "employees": 260,
+  "duties": [
+   "forecast your pipeline"
+  ],
+  "tools": [
+   "Salesforce",
+   "Outreach",
+   "HubSpot"
+  ],
+  "posted": "2026-11-07",
+  "url": "https://jobs.ashbyhq.example/fablesystems/1041",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1042",
+  "company": "Fable Systems",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   105,
+   120
+  ],
+  "employees": 260,
+  "duties": [
+   "forecast your pipeline"
+  ],
+  "tools": [
+   "Salesforce",
+   "Outreach",
+   "HubSpot"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://jobs.ashbyhq.example/fablesystems/1042",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1043",
+  "company": "Ember Pay",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "ship AI agents for research and routing",
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "SQL",
+   "Salesforce",
+   "n8n",
+   "Clay"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://emberpay.jobs.personio.example/job/1043",
+  "source": "newsletter"
+ },
+ {
+  "id": "1044",
+  "company": "Saffron Systems",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build lead routing from scratch",
+   "build outbound and signal pipelines",
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Apollo",
+   "HubSpot",
+   "Make",
+   "Zapier"
+  ],
+  "posted": "2026-11-03",
+  "url": "https://saffronsystems.teamtailor.example/jobs/1044",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1044",
+  "company": "Saffron Systems",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build lead routing from scratch",
+   "build outbound and signal pipelines",
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Apollo",
+   "HubSpot",
+   "Make",
+   "Zapier"
+  ],
+  "posted": "2026-11-03",
+  "url": "https://saffronsystems.teamtailor.example/jobs/1044",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1044",
+  "company": "Saffron Systems",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build lead routing from scratch",
+   "build outbound and signal pipelines",
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Apollo",
+   "HubSpot",
+   "Make",
+   "Zapier"
+  ],
+  "posted": "2026-11-03",
+  "url": "https://saffronsystems.teamtailor.example/jobs/1044",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1045",
+  "company": "Vesper Pay",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 2,
+  "pay_k_eur": [
+   80,
+   100
+  ],
+  "employees": 180,
+  "duties": [
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Gong",
+   "Excel",
+   "SQL"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://vesperpay.jobs.personio.example/job/1045",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1046",
+  "company": "Cobalt Cloud",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "integrate tools through APIs",
+   "build outbound and signal pipelines",
+   "automate CRM updates with APIs and webhooks",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Salesforce",
+   "Zapier"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://join.example/companies/cobaltcloud/1046",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1046",
+  "company": "Cobalt Cloud",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "integrate tools through APIs",
+   "build outbound and signal pipelines",
+   "automate CRM updates with APIs and webhooks",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Salesforce",
+   "Zapier"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://join.example/companies/cobaltcloud/1046",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1046",
+  "company": "Cobalt Cloud",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "integrate tools through APIs",
+   "build outbound and signal pipelines",
+   "automate CRM updates with APIs and webhooks",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Salesforce",
+   "Zapier"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://join.example/companies/cobaltcloud/1046",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1047",
+  "company": "Pebble Pay",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "ship AI agents for research and routing",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Salesforce",
+   "SQL",
+   "Apollo"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://jobs.ashbyhq.example/pebblepay/1047",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1047",
+  "company": "Pebble Pay",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "ship AI agents for research and routing",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Salesforce",
+   "SQL",
+   "Apollo"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://jobs.ashbyhq.example/pebblepay/1047",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1048",
+  "company": "Saffron Systems",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot",
+   "Zapier",
+   "Apollo"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://saffronsystems.teamtailor.example/jobs/1048",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1049",
+  "company": "Garnet Logic",
+  "title": "BI Analyst",
+  "family": "data",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "maintain reports",
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "Looker",
+   "Python"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://join.example/companies/garnetlogic/1049",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1050",
+  "company": "Lumen Systems",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "drive adoption and health scores",
+   "answer support tickets"
+  ],
+  "tools": [
+   "Zendesk",
+   "Intercom",
+   "Gainsight"
+  ],
+  "posted": "2026-10-23",
+  "url": "https://jobs.ashbyhq.example/lumensystems/1050",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1051",
+  "company": "Garnet Health",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-11-07",
+  "url": "https://join.example/companies/garnethealth/1051",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1051",
+  "company": "Garnet Health",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-11-07",
+  "url": "https://join.example/companies/garnethealth/1051",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1052",
+  "company": "Indigo HQ",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "integrate tools through APIs",
+   "ship AI agents for research and routing",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "Claude"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://indigohq.jobs.personio.example/job/1052",
+  "source": "Indeed"
+ },
+ {
+  "id": "1052",
+  "company": "Indigo HQ",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "integrate tools through APIs",
+   "ship AI agents for research and routing",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "Claude"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://indigohq.jobs.personio.example/job/1052",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1052",
+  "company": "Indigo HQ",
+  "title": "Growth Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "integrate tools through APIs",
+   "ship AI agents for research and routing",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "Claude"
+  ],
+  "posted": "2026-11-02",
+  "url": "https://indigohq.jobs.personio.example/job/1052",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1053",
+  "company": "Orchard Systems",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Stockholm",
+  "country": "Sweden",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   65,
+   85
+  ],
+  "employees": 260,
+  "duties": [
+   "integrate tools through APIs",
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Apollo",
+   "HubSpot"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://apply.workable.example/orchardsystems/j/1053",
+  "source": "Indeed"
+ },
+ {
+  "id": "1053",
+  "company": "Orchard Systems",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Stockholm",
+  "country": "Sweden",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   65,
+   85
+  ],
+  "employees": 260,
+  "duties": [
+   "integrate tools through APIs",
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Apollo",
+   "HubSpot"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://apply.workable.example/orchardsystems/j/1053",
+  "source": "newsletter"
+ },
+ {
+  "id": "1054",
+  "company": "Lumen Labs",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Hamburg",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   55,
+   75
+  ],
+  "employees": 180,
+  "duties": [
+   "build success playbooks",
+   "run onboarding for new customers",
+   "own renewals and expansion",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Zendesk",
+   "HubSpot",
+   "Gainsight"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://lumenlabs.recruitee.example/o/1054",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1055",
+  "company": "Indigo HQ",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   75
+  ],
+  "employees": 25,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Gong",
+   "Excel",
+   "Looker",
+   "HubSpot"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://indigohq.jobs.personio.example/job/1055",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1056",
+  "company": "Indigo Logic",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   80,
+   95
+  ],
+  "employees": 120,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "design commission plans",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "SQL",
+   "Excel",
+   "Looker"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://apply.workable.example/indigologic/j/1056",
+  "source": "Indeed"
+ },
+ {
+  "id": "1057",
+  "company": "Delta AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   65
+  ],
+  "employees": 260,
+  "duties": [
+   "build lead routing from scratch",
+   "ship AI agents for research and routing",
+   "build outbound and signal pipelines",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Clay",
+   "SQL",
+   "Salesforce"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://jobs.lever.example/deltaai/1057",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1057",
+  "company": "Delta AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   65
+  ],
+  "employees": 260,
+  "duties": [
+   "build lead routing from scratch",
+   "ship AI agents for research and routing",
+   "build outbound and signal pipelines",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Clay",
+   "SQL",
+   "Salesforce"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://jobs.lever.example/deltaai/1057",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1057",
+  "company": "Delta AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   55,
+   65
+  ],
+  "employees": 260,
+  "duties": [
+   "build lead routing from scratch",
+   "ship AI agents for research and routing",
+   "build outbound and signal pipelines",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Clay",
+   "SQL",
+   "Salesforce"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://jobs.lever.example/deltaai/1057",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1058",
+  "company": "Bramble HQ",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "forecast your pipeline"
+  ],
+  "tools": [
+   "Gong",
+   "Salesforce",
+   "Outreach"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://jobs.ashbyhq.example/bramblehq/1058",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1059",
+  "company": "Bramble HQ",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "forecast your pipeline"
+  ],
+  "tools": [
+   "Gong",
+   "Salesforce",
+   "Outreach"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://jobs.ashbyhq.example/bramblehq/1059",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1060",
+  "company": "Lumen Systems",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 40,
+  "duties": [
+   "forecast your pipeline",
+   "run discovery and demos",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Outreach",
+   "Salesforce"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://jobs.ashbyhq.example/lumensystems/1060",
+  "source": "newsletter"
+ },
+ {
+  "id": "1061",
+  "company": "Lumen Labs",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Stockholm",
+  "country": "Sweden",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Zapier",
+   "n8n",
+   "Python",
+   "Make"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://lumenlabs.recruitee.example/o/1061",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1061",
+  "company": "Lumen Labs",
+  "title": "Head of GTM Engineering",
+  "family": "gtm",
+  "location": "Stockholm",
+  "country": "Sweden",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "administer the CRM",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Zapier",
+   "n8n",
+   "Python",
+   "Make"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://lumenlabs.recruitee.example/o/1061",
+  "source": "newsletter"
+ },
+ {
+  "id": "1062",
+  "company": "Cobalt Systems",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": [
+   85,
+   95
+  ],
+  "employees": 2500,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "SQL",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://join.example/companies/cobaltsystems/1062",
+  "source": "newsletter"
+ },
+ {
+  "id": "1062",
+  "company": "Cobalt Systems",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": [
+   85,
+   95
+  ],
+  "employees": 2500,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "SQL",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://join.example/companies/cobaltsystems/1062",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1062",
+  "company": "Cobalt Systems",
+  "title": "Sales Operations Analyst",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": [
+   85,
+   95
+  ],
+  "employees": 2500,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "SQL",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://join.example/companies/cobaltsystems/1062",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1063",
+  "company": "Delta Cloud",
+  "title": "Analytics Engineer",
+  "family": "data",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   80,
+   95
+  ],
+  "employees": 900,
+  "duties": [
+   "maintain reports",
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "dbt",
+   "BigQuery"
+  ],
+  "posted": "2026-11-05",
+  "url": "https://deltacloud.recruitee.example/o/1063",
+  "source": "Indeed"
+ },
+ {
+  "id": "1064",
+  "company": "Fable Logic",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Make",
+   "Clay"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://apply.workable.example/fablelogic/j/1064",
+  "source": "newsletter"
+ },
+ {
+  "id": "1065",
+  "company": "Delta Cloud",
+  "title": "Data Analyst",
+  "family": "data",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 900,
+  "duties": [
+   "build dbt models",
+   "build dashboards for sales and marketing",
+   "answer ad hoc data requests",
+   "maintain reports"
+  ],
+  "tools": [
+   "BigQuery",
+   "dbt",
+   "Python"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://deltacloud.recruitee.example/o/1065",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1065",
+  "company": "Delta Cloud",
+  "title": "Data Analyst",
+  "family": "data",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 900,
+  "duties": [
+   "build dbt models",
+   "build dashboards for sales and marketing",
+   "answer ad hoc data requests",
+   "maintain reports"
+  ],
+  "tools": [
+   "BigQuery",
+   "dbt",
+   "Python"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://deltacloud.recruitee.example/o/1065",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1066",
+  "company": "Indigo HQ",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   50,
+   65
+  ],
+  "employees": 25,
+  "duties": [
+   "build success playbooks",
+   "drive adoption and health scores",
+   "run onboarding for new customers",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://indigohq.jobs.personio.example/job/1066",
+  "source": "Indeed"
+ },
+ {
+  "id": "1067",
+  "company": "Vesper Cloud",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 900,
+  "duties": [
+   "answer support tickets"
+  ],
+  "tools": [
+   "Intercom",
+   "Zendesk"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://jobs.lever.example/vespercloud/1067",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1067",
+  "company": "Vesper Cloud",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 900,
+  "duties": [
+   "answer support tickets"
+  ],
+  "tools": [
+   "Intercom",
+   "Zendesk"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://jobs.lever.example/vespercloud/1067",
+  "source": "Indeed"
+ },
+ {
+  "id": "1067",
+  "company": "Vesper Cloud",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 900,
+  "duties": [
+   "answer support tickets"
+  ],
+  "tools": [
+   "Intercom",
+   "Zendesk"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://jobs.lever.example/vespercloud/1067",
+  "source": "newsletter"
+ },
+ {
+  "id": "1068",
+  "company": "Quill Systems",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "run the forecast process",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Zapier",
+   "Apollo"
+  ],
+  "posted": "2026-11-06",
+  "url": "https://quillsystems.recruitee.example/o/1068",
+  "source": "newsletter"
+ },
+ {
+  "id": "1068",
+  "company": "Quill Systems",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "run the forecast process",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Zapier",
+   "Apollo"
+  ],
+  "posted": "2026-11-06",
+  "url": "https://quillsystems.recruitee.example/o/1068",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1068",
+  "company": "Quill Systems",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "administer the CRM",
+   "run the forecast process",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Zapier",
+   "Apollo"
+  ],
+  "posted": "2026-11-06",
+  "url": "https://quillsystems.recruitee.example/o/1068",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1069",
+  "company": "Ember Systems",
+  "title": "Senior RevOps Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": [
+   80,
+   95
+  ],
+  "employees": 120,
+  "duties": [
+   "build lead routing from scratch",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Excel",
+   "Gong",
+   "HubSpot",
+   "Looker"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://job-boards.greenhouse.example/embersystems/jobs/1069",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1069",
+  "company": "Ember Systems",
+  "title": "Senior RevOps Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": [
+   80,
+   95
+  ],
+  "employees": 120,
+  "duties": [
+   "build lead routing from scratch",
+   "manage territory and quota planning",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Excel",
+   "Gong",
+   "HubSpot",
+   "Looker"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://job-boards.greenhouse.example/embersystems/jobs/1069",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1070",
+  "company": "Harbor Cloud",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "run discovery and demos",
+   "own a new business quota",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://jobs.ashbyhq.example/harborcloud/1070",
+  "source": "newsletter"
+ },
+ {
+  "id": "1070",
+  "company": "Harbor Cloud",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "run discovery and demos",
+   "own a new business quota",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://jobs.ashbyhq.example/harborcloud/1070",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1070",
+  "company": "Harbor Cloud",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Limassol",
+  "country": "Cyprus",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "run discovery and demos",
+   "own a new business quota",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-10-24",
+  "url": "https://jobs.ashbyhq.example/harborcloud/1070",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1071",
+  "company": "Juniper Pay",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 450,
+  "duties": [
+   "ship AI agents for research and routing",
+   "automate CRM updates with APIs and webhooks",
+   "administer the CRM",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Claude",
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-06",
+  "url": "https://juniperpay.recruitee.example/o/1071",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1072",
+  "company": "Bramble HQ",
+  "title": "Data Analyst",
+  "family": "data",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "maintain reports",
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "Looker",
+   "Python",
+   "SQL",
+   "BigQuery"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://jobs.ashbyhq.example/bramblehq/1072",
+  "source": "Indeed"
+ },
+ {
+  "id": "1073",
+  "company": "Pebble Health",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 900,
+  "duties": [
+   "integrate tools through APIs",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Python"
+  ],
+  "posted": "2026-11-11",
+  "url": "https://pebblehealth.jobs.personio.example/job/1073",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1073",
+  "company": "Pebble Health",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 900,
+  "duties": [
+   "integrate tools through APIs",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Python"
+  ],
+  "posted": "2026-11-11",
+  "url": "https://pebblehealth.jobs.personio.example/job/1073",
+  "source": "Indeed"
+ },
+ {
+  "id": "1073",
+  "company": "Pebble Health",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 900,
+  "duties": [
+   "integrate tools through APIs",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Apollo",
+   "Python"
+  ],
+  "posted": "2026-11-11",
+  "url": "https://pebblehealth.jobs.personio.example/job/1073",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1074",
+  "company": "Saffron HQ",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   75,
+   85
+  ],
+  "employees": 2500,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "Clay",
+   "Apollo",
+   "Salesforce"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://jobs.ashbyhq.example/saffronhq/1074",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1074",
+  "company": "Saffron HQ",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   75,
+   85
+  ],
+  "employees": 2500,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "Clay",
+   "Apollo",
+   "Salesforce"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://jobs.ashbyhq.example/saffronhq/1074",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1074",
+  "company": "Saffron HQ",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   75,
+   85
+  ],
+  "employees": 2500,
+  "duties": [
+   "build lead routing from scratch",
+   "integrate tools through APIs",
+   "build outbound and signal pipelines"
+  ],
+  "tools": [
+   "Python",
+   "Clay",
+   "Apollo",
+   "Salesforce"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://jobs.ashbyhq.example/saffronhq/1074",
+  "source": "Indeed"
+ },
+ {
+  "id": "1075",
+  "company": "Vesper Cloud",
+  "title": "GTM Systems Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": [
+   60,
+   75
+  ],
+  "employees": 900,
+  "duties": [
+   "ship AI agents for research and routing",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "HubSpot",
+   "Clay",
+   "Make"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://jobs.lever.example/vespercloud/1075",
+  "source": "newsletter"
+ },
+ {
+  "id": "1076",
+  "company": "Vesper Labs",
+  "title": "RevOps Engineer",
+  "family": "gtm",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build enrichment and scoring workflows",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "Apollo",
+   "Zapier"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://vesperlabs.recruitee.example/o/1076",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1077",
+  "company": "Orchard Data",
+  "title": "Senior Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "run discovery and demos",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Gong",
+   "HubSpot"
+  ],
+  "posted": "2026-11-07",
+  "url": "https://orcharddata.recruitee.example/o/1077",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1077",
+  "company": "Orchard Data",
+  "title": "Senior Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "run discovery and demos",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Gong",
+   "HubSpot"
+  ],
+  "posted": "2026-11-07",
+  "url": "https://orcharddata.recruitee.example/o/1077",
+  "source": "newsletter"
+ },
+ {
+  "id": "1078",
+  "company": "Orchard Data",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "ship AI agents for research and routing",
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Python",
+   "Salesforce",
+   "Clay"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://orcharddata.recruitee.example/o/1078",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1079",
+  "company": "Tidal Logic",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "own a new business quota",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-10-29",
+  "url": "https://tidallogic.recruitee.example/o/1079",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1080",
+  "company": "Tidal Logic",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "own a new business quota",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Gong",
+   "Outreach"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://tidallogic.recruitee.example/o/1080",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1081",
+  "company": "Saffron AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "build outbound and signal pipelines",
+   "build enrichment and scoring workflows",
+   "ship AI agents for research and routing",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://job-boards.greenhouse.example/saffronai/jobs/1081",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1081",
+  "company": "Saffron AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "build outbound and signal pipelines",
+   "build enrichment and scoring workflows",
+   "ship AI agents for research and routing",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://job-boards.greenhouse.example/saffronai/jobs/1081",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1081",
+  "company": "Saffron AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 80,
+  "duties": [
+   "build outbound and signal pipelines",
+   "build enrichment and scoring workflows",
+   "ship AI agents for research and routing",
+   "own pipeline reporting for leadership",
+   "prepare QBR decks",
+   "run the forecast process"
+  ],
+  "tools": [
+   "Make",
+   "HubSpot"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://job-boards.greenhouse.example/saffronai/jobs/1081",
+  "source": "Indeed"
+ },
+ {
+  "id": "1082",
+  "company": "Lumen Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Excel",
+   "HubSpot",
+   "Gong",
+   "SQL"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://jobs.ashbyhq.example/lumencloud/1082",
+  "source": "Indeed"
+ },
+ {
+  "id": "1082",
+  "company": "Lumen Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Excel",
+   "HubSpot",
+   "Gong",
+   "SQL"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://jobs.ashbyhq.example/lumencloud/1082",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1082",
+  "company": "Lumen Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Excel",
+   "HubSpot",
+   "Gong",
+   "SQL"
+  ],
+  "posted": "2026-10-28",
+  "url": "https://jobs.ashbyhq.example/lumencloud/1082",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1083",
+  "company": "Lumen Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "build lead routing from scratch",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Excel",
+   "HubSpot",
+   "Gong",
+   "SQL"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://jobs.ashbyhq.example/lumencloud/1083",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1084",
+  "company": "Ember Data",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "own a new business quota",
+   "forecast your pipeline",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://apply.workable.example/emberdata/j/1084",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1084",
+  "company": "Ember Data",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "own a new business quota",
+   "forecast your pipeline",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://apply.workable.example/emberdata/j/1084",
+  "source": "Indeed"
+ },
+ {
+  "id": "1084",
+  "company": "Ember Data",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 2500,
+  "duties": [
+   "own a new business quota",
+   "forecast your pipeline",
+   "prospect into mid market"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://apply.workable.example/emberdata/j/1084",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1085",
+  "company": "Indigo Cloud",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build success playbooks",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Intercom",
+   "Gainsight"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://indigocloud.recruitee.example/o/1085",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1085",
+  "company": "Indigo Cloud",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build success playbooks",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Intercom",
+   "Gainsight"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://indigocloud.recruitee.example/o/1085",
+  "source": "Indeed"
+ },
+ {
+  "id": "1085",
+  "company": "Indigo Cloud",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build success playbooks",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Intercom",
+   "Gainsight"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://indigocloud.recruitee.example/o/1085",
+  "source": "newsletter"
+ },
+ {
+  "id": "1086",
+  "company": "Cobalt Health",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Hamburg",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 80,
+  "duties": [
+   "prepare QBR decks",
+   "administer the CRM",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "SQL",
+   "Python"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://join.example/companies/cobalthealth/1086",
+  "source": "Indeed"
+ },
+ {
+  "id": "1086",
+  "company": "Cobalt Health",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Hamburg",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 4,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 80,
+  "duties": [
+   "prepare QBR decks",
+   "administer the CRM",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "SQL",
+   "Python"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://join.example/companies/cobalthealth/1086",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1087",
+  "company": "Cobalt Health",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 80,
+  "duties": [
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot",
+   "Zendesk",
+   "Gainsight"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/cobalthealth/1087",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1087",
+  "company": "Cobalt Health",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 80,
+  "duties": [
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot",
+   "Zendesk",
+   "Gainsight"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/cobalthealth/1087",
+  "source": "Indeed"
+ },
+ {
+  "id": "1087",
+  "company": "Cobalt Health",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 80,
+  "duties": [
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot",
+   "Zendesk",
+   "Gainsight"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://join.example/companies/cobalthealth/1087",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1088",
+  "company": "Cobalt Health",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   80,
+   90
+  ],
+  "employees": 80,
+  "duties": [
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot",
+   "Zendesk",
+   "Gainsight"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://join.example/companies/cobalthealth/1088",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1089",
+  "company": "Bramble HQ",
+  "title": "Analytics Engineer",
+  "family": "data",
+  "location": "Hamburg",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   80,
+   100
+  ],
+  "employees": 2500,
+  "duties": [
+   "maintain reports",
+   "answer ad hoc data requests"
+  ],
+  "tools": [
+   "SQL",
+   "Python"
+  ],
+  "posted": "2026-10-23",
+  "url": "https://jobs.ashbyhq.example/bramblehq/1089",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1090",
+  "company": "Ember Cloud",
+  "title": "GTM Engineer",
+  "family": "gtm",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "integrate tools through APIs",
+   "build lead routing from scratch",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Python",
+   "n8n",
+   "HubSpot"
+  ],
+  "posted": "2026-11-08",
+  "url": "https://apply.workable.example/embercloud/j/1090",
+  "source": "newsletter"
+ },
+ {
+  "id": "1090",
+  "company": "Ember Cloud",
+  "title": "GTM Engineer",
+  "family": "gtm",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "integrate tools through APIs",
+   "build lead routing from scratch",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Python",
+   "n8n",
+   "HubSpot"
+  ],
+  "posted": "2026-11-08",
+  "url": "https://apply.workable.example/embercloud/j/1090",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1090",
+  "company": "Ember Cloud",
+  "title": "GTM Engineer",
+  "family": "gtm",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "integrate tools through APIs",
+   "build lead routing from scratch",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Python",
+   "n8n",
+   "HubSpot"
+  ],
+  "posted": "2026-11-08",
+  "url": "https://apply.workable.example/embercloud/j/1090",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1091",
+  "company": "Pebble Pay",
+  "title": "Senior GTM Engineer",
+  "family": "gtm",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   75,
+   90
+  ],
+  "employees": 12,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Clay",
+   "Salesforce",
+   "n8n"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://jobs.ashbyhq.example/pebblepay/1091",
+  "source": "newsletter"
+ },
+ {
+  "id": "1092",
+  "company": "Orchard Pay",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 25,
+  "duties": [
+   "own renewals and expansion",
+   "drive adoption and health scores",
+   "build success playbooks",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Gainsight",
+   "Zendesk"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://orchardpay.recruitee.example/o/1092",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1093",
+  "company": "Tidal Systems",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "answer support tickets"
+  ],
+  "tools": [
+   "HubSpot",
+   "Gainsight",
+   "Salesforce",
+   "Zendesk"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://job-boards.greenhouse.example/tidalsystems/jobs/1093",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1094",
+  "company": "Saffron AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   65,
+   75
+  ],
+  "employees": 80,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines",
+   "build lead routing from scratch"
+  ],
+  "tools": [
+   "Claude",
+   "HubSpot",
+   "Salesforce",
+   "n8n"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://job-boards.greenhouse.example/saffronai/jobs/1094",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1094",
+  "company": "Saffron AI",
+  "title": "Founding GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   65,
+   75
+  ],
+  "employees": 80,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "build outbound and signal pipelines",
+   "build lead routing from scratch"
+  ],
+  "tools": [
+   "Claude",
+   "HubSpot",
+   "Salesforce",
+   "n8n"
+  ],
+  "posted": "2026-11-09",
+  "url": "https://job-boards.greenhouse.example/saffronai/jobs/1094",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1095",
+  "company": "Cobalt Data",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   75,
+   95
+  ],
+  "employees": 40,
+  "duties": [
+   "own renewals and expansion",
+   "build success playbooks",
+   "answer support tickets",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Gainsight",
+   "Intercom",
+   "Salesforce"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://cobaltdata.jobs.personio.example/job/1095",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1096",
+  "company": "Vesper Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 900,
+  "duties": [
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Excel",
+   "Gong"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/vespercloud/1096",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1096",
+  "company": "Vesper Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 900,
+  "duties": [
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Excel",
+   "Gong"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/vespercloud/1096",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1096",
+  "company": "Vesper Cloud",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": [
+   55,
+   70
+  ],
+  "employees": 900,
+  "duties": [
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Excel",
+   "Gong"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/vespercloud/1096",
+  "source": "Indeed"
+ },
+ {
+  "id": "1097",
+  "company": "Orchard Data",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   50,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "own renewals and expansion",
+   "drive adoption and health scores",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gainsight",
+   "Zendesk"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://orcharddata.recruitee.example/o/1097",
+  "source": "Indeed"
+ },
+ {
+  "id": "1097",
+  "company": "Orchard Data",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   50,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "own renewals and expansion",
+   "drive adoption and health scores",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gainsight",
+   "Zendesk"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://orcharddata.recruitee.example/o/1097",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1097",
+  "company": "Orchard Data",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   50,
+   70
+  ],
+  "employees": 80,
+  "duties": [
+   "own renewals and expansion",
+   "drive adoption and health scores",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Gainsight",
+   "Zendesk"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://orcharddata.recruitee.example/o/1097",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1098",
+  "company": "Cobalt Cloud",
+  "title": "Senior Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 2500,
+  "duties": [
+   "build success playbooks",
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "handle billing questions",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "Intercom",
+   "Zendesk"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://join.example/companies/cobaltcloud/1098",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1099",
+  "company": "Lumen Works",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "Spanish"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   95,
+   105
+  ],
+  "employees": 180,
+  "duties": [
+   "own a new business quota",
+   "forecast your pipeline",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://join.example/companies/lumenworks/1099",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1099",
+  "company": "Lumen Works",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "Spanish"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   95,
+   105
+  ],
+  "employees": 180,
+  "duties": [
+   "own a new business quota",
+   "forecast your pipeline",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://join.example/companies/lumenworks/1099",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1099",
+  "company": "Lumen Works",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "Spanish"
+  ],
+  "years_required": 6,
+  "pay_k_eur": [
+   95,
+   105
+  ],
+  "employees": 180,
+  "duties": [
+   "own a new business quota",
+   "forecast your pipeline",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot",
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://join.example/companies/lumenworks/1099",
+  "source": "newsletter"
+ },
+ {
+  "id": "1100",
+  "company": "Pebble Data",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 40,
+  "duties": [
+   "build enrichment and scoring workflows",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "Zapier",
+   "Make",
+   "SQL",
+   "Claude"
+  ],
+  "posted": "2026-11-16",
+  "url": "https://pebbledata.recruitee.example/o/1100",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1101",
+  "company": "Harbor Logic",
+  "title": "Onboarding Manager",
+  "family": "cs",
+  "location": "Hamburg",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "run onboarding for new customers",
+   "handle billing questions"
+  ],
+  "tools": [
+   "HubSpot",
+   "Salesforce",
+   "Zendesk"
+  ],
+  "posted": "2026-11-08",
+  "url": "https://join.example/companies/harborlogic/1101",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1102",
+  "company": "Fable HQ",
+  "title": "Data Analyst",
+  "family": "data",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   70,
+   90
+  ],
+  "employees": 120,
+  "duties": [
+   "build dashboards for sales and marketing",
+   "maintain reports"
+  ],
+  "tools": [
+   "Python",
+   "SQL",
+   "Looker"
+  ],
+  "posted": "2026-10-27",
+  "url": "https://fablehq.jobs.personio.example/job/1102",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1103",
+  "company": "Atlas Logic",
+  "title": "Analytics Engineer",
+  "family": "data",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "maintain reports"
+  ],
+  "tools": [
+   "Python",
+   "dbt",
+   "Looker"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://jobs.lever.example/atlaslogic/1103",
+  "source": "Indeed"
+ },
+ {
+  "id": "1103",
+  "company": "Atlas Logic",
+  "title": "Analytics Engineer",
+  "family": "data",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "maintain reports"
+  ],
+  "tools": [
+   "Python",
+   "dbt",
+   "Looker"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://jobs.lever.example/atlaslogic/1103",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1103",
+  "company": "Atlas Logic",
+  "title": "Analytics Engineer",
+  "family": "data",
+  "location": "Munich",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 3,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "maintain reports"
+  ],
+  "tools": [
+   "Python",
+   "dbt",
+   "Looker"
+  ],
+  "posted": "2026-10-30",
+  "url": "https://jobs.lever.example/atlaslogic/1103",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1104",
+  "company": "Fable HQ",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks"
+  ],
+  "tools": [
+   "Claude",
+   "Python",
+   "n8n"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://fablehq.jobs.personio.example/job/1104",
+  "source": "Indeed"
+ },
+ {
+  "id": "1104",
+  "company": "Fable HQ",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks"
+  ],
+  "tools": [
+   "Claude",
+   "Python",
+   "n8n"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://fablehq.jobs.personio.example/job/1104",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1104",
+  "company": "Fable HQ",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 120,
+  "duties": [
+   "integrate tools through APIs",
+   "build enrichment and scoring workflows",
+   "automate CRM updates with APIs and webhooks"
+  ],
+  "tools": [
+   "Claude",
+   "Python",
+   "n8n"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://fablehq.jobs.personio.example/job/1104",
+  "source": "newsletter"
+ },
+ {
+  "id": "1105",
+  "company": "Juniper Pay",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   75,
+   95
+  ],
+  "employees": 450,
+  "duties": [
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://juniperpay.recruitee.example/o/1105",
+  "source": "Indeed"
+ },
+ {
+  "id": "1105",
+  "company": "Juniper Pay",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   75,
+   95
+  ],
+  "employees": 450,
+  "duties": [
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://juniperpay.recruitee.example/o/1105",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1105",
+  "company": "Juniper Pay",
+  "title": "Account Executive",
+  "family": "ae",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   75,
+   95
+  ],
+  "employees": 450,
+  "duties": [
+   "prospect into mid market"
+  ],
+  "tools": [
+   "Salesforce",
+   "HubSpot"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://juniperpay.recruitee.example/o/1105",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1106",
+  "company": "Fable Logic",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Make",
+   "SQL"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://apply.workable.example/fablelogic/j/1106",
+  "source": "newsletter"
+ },
+ {
+  "id": "1106",
+  "company": "Fable Logic",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Make",
+   "SQL"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://apply.workable.example/fablelogic/j/1106",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1106",
+  "company": "Fable Logic",
+  "title": "GTM Engineering Intern",
+  "family": "gtm",
+  "location": "London",
+  "country": "United Kingdom",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 4,
+  "pay_k_eur": null,
+  "employees": 12,
+  "duties": [
+   "integrate tools through APIs",
+   "own pipeline reporting for leadership",
+   "manage territory and quota planning",
+   "administer the CRM"
+  ],
+  "tools": [
+   "Make",
+   "SQL"
+  ],
+  "posted": "2026-10-22",
+  "url": "https://apply.workable.example/fablelogic/j/1106",
+  "source": "Indeed"
+ },
+ {
+  "id": "1107",
+  "company": "Atlas Logic",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   60,
+   75
+  ],
+  "employees": 120,
+  "duties": [
+   "own renewals and expansion",
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "HubSpot",
+   "Zendesk"
+  ],
+  "posted": "2026-11-05",
+  "url": "https://jobs.lever.example/atlaslogic/1107",
+  "source": "Indeed"
+ },
+ {
+  "id": "1107",
+  "company": "Atlas Logic",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote US",
+  "country": "United States",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   60,
+   75
+  ],
+  "employees": 120,
+  "duties": [
+   "own renewals and expansion",
+   "run onboarding for new customers",
+   "drive adoption and health scores",
+   "prospect cold accounts"
+  ],
+  "tools": [
+   "HubSpot",
+   "Zendesk"
+  ],
+  "posted": "2026-11-05",
+  "url": "https://jobs.lever.example/atlaslogic/1107",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1108",
+  "company": "Juniper Pay",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Remote Germany",
+  "country": "Germany",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 5,
+  "pay_k_eur": [
+   85,
+   105
+  ],
+  "employees": 450,
+  "duties": [
+   "build lead routing from scratch",
+   "automate CRM updates with APIs and webhooks",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "HubSpot",
+   "Excel",
+   "SQL",
+   "Salesforce"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://juniperpay.recruitee.example/o/1108",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1109",
+  "company": "Vesper Labs",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "build success playbooks",
+   "own renewals and expansion",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Zendesk",
+   "HubSpot",
+   "Gainsight",
+   "Salesforce"
+  ],
+  "posted": "2026-10-27",
+  "url": "https://vesperlabs.recruitee.example/o/1109",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1109",
+  "company": "Vesper Labs",
+  "title": "Customer Success Manager",
+  "family": "cs",
+  "location": "Remote Spain",
+  "country": "Spain",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": null,
+  "employees": 260,
+  "duties": [
+   "build success playbooks",
+   "own renewals and expansion",
+   "prospect cold accounts",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Zendesk",
+   "HubSpot",
+   "Gainsight",
+   "Salesforce"
+  ],
+  "posted": "2026-10-27",
+  "url": "https://vesperlabs.recruitee.example/o/1109",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1110",
+  "company": "Ember Pay",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 260,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "SQL",
+   "Looker",
+   "Excel",
+   "Gong"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://emberpay.jobs.personio.example/job/1110",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1110",
+  "company": "Ember Pay",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 260,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "SQL",
+   "Looker",
+   "Excel",
+   "Gong"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://emberpay.jobs.personio.example/job/1110",
+  "source": "Indeed"
+ },
+ {
+  "id": "1110",
+  "company": "Ember Pay",
+  "title": "Revenue Operations Manager",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [],
+  "years_required": 3,
+  "pay_k_eur": [
+   70,
+   85
+  ],
+  "employees": 260,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "own pipeline reporting for leadership"
+  ],
+  "tools": [
+   "SQL",
+   "Looker",
+   "Excel",
+   "Gong"
+  ],
+  "posted": "2026-11-15",
+  "url": "https://emberpay.jobs.personio.example/job/1110",
+  "source": "newsletter"
+ },
+ {
+  "id": "1111",
+  "company": "Vesper Cloud",
+  "title": "Senior Account Executive",
+  "family": "ae",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [
+   "Dutch"
+  ],
+  "years_required": 3,
+  "pay_k_eur": [
+   75,
+   90
+  ],
+  "employees": 900,
+  "duties": [
+   "own a new business quota"
+  ],
+  "tools": [
+   "HubSpot",
+   "Outreach"
+  ],
+  "posted": "2026-10-25",
+  "url": "https://jobs.lever.example/vespercloud/1111",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1112",
+  "company": "Lumen Labs",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "Spanish"
+  ],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "prospect into mid market",
+   "own a new business quota",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Outreach",
+   "HubSpot",
+   "Gong"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://lumenlabs.recruitee.example/o/1112",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1112",
+  "company": "Lumen Labs",
+  "title": "Founding AE",
+  "family": "ae",
+  "location": "Madrid",
+  "country": "Spain",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [
+   "Spanish"
+  ],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 180,
+  "duties": [
+   "prospect into mid market",
+   "own a new business quota",
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Outreach",
+   "HubSpot",
+   "Gong"
+  ],
+  "posted": "2026-11-01",
+  "url": "https://lumenlabs.recruitee.example/o/1112",
+  "source": "Indeed"
+ },
+ {
+  "id": "1113",
+  "company": "Indigo Systems",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 450,
+  "duties": [
+   "drive adoption and health scores",
+   "build success playbooks",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://apply.workable.example/indigosystems/j/1113",
+  "source": "Indeed"
+ },
+ {
+  "id": "1113",
+  "company": "Indigo Systems",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Remote EU",
+  "country": "EU",
+  "workplace": "remote",
+  "office_days": 0,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": null,
+  "employees": 450,
+  "duties": [
+   "drive adoption and health scores",
+   "build success playbooks",
+   "handle billing questions"
+  ],
+  "tools": [
+   "Intercom",
+   "HubSpot"
+  ],
+  "posted": "2026-11-04",
+  "url": "https://apply.workable.example/indigosystems/j/1113",
+  "source": "ATS host search"
+ },
+ {
+  "id": "1114",
+  "company": "Tidal Logic",
+  "title": "Head of Customer Success",
+  "family": "cs",
+  "location": "Amsterdam",
+  "country": "Netherlands",
+  "workplace": "hybrid",
+  "office_days": 2,
+  "languages_required": [],
+  "years_required": 6,
+  "pay_k_eur": [
+   80,
+   100
+  ],
+  "employees": 180,
+  "duties": [
+   "run onboarding for new customers",
+   "handle billing questions",
+   "prospect cold accounts",
+   "answer support tickets"
+  ],
+  "tools": [
+   "Zendesk",
+   "Gainsight",
+   "HubSpot",
+   "Salesforce"
+  ],
+  "posted": "2026-10-26",
+  "url": "https://tidallogic.recruitee.example/o/1114",
+  "source": "LinkedIn alert"
+ },
+ {
+  "id": "1115",
+  "company": "Vesper Data",
+  "title": "Enterprise Account Executive",
+  "family": "ae",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": null,
+  "employees": 450,
+  "duties": [
+   "run discovery and demos"
+  ],
+  "tools": [
+   "Outreach",
+   "Gong"
+  ],
+  "posted": "2026-11-10",
+  "url": "https://join.example/companies/vesperdata/1115",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1116",
+  "company": "Cobalt Data",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   85,
+   105
+  ],
+  "employees": 40,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "run the forecast process",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Gong",
+   "SQL",
+   "Looker",
+   "HubSpot"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://cobaltdata.jobs.personio.example/job/1116",
+  "source": "Indeed"
+ },
+ {
+  "id": "1116",
+  "company": "Cobalt Data",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   85,
+   105
+  ],
+  "employees": 40,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "run the forecast process",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Gong",
+   "SQL",
+   "Looker",
+   "HubSpot"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://cobaltdata.jobs.personio.example/job/1116",
+  "source": "VC portfolio board"
+ },
+ {
+  "id": "1116",
+  "company": "Cobalt Data",
+  "title": "RevOps Specialist",
+  "family": "revops",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "hybrid",
+  "office_days": 1,
+  "languages_required": [],
+  "years_required": 2,
+  "pay_k_eur": [
+   85,
+   105
+  ],
+  "employees": 40,
+  "duties": [
+   "automate CRM updates with APIs and webhooks",
+   "build lead routing from scratch",
+   "run the forecast process",
+   "prepare QBR decks"
+  ],
+  "tools": [
+   "Gong",
+   "SQL",
+   "Looker",
+   "HubSpot"
+  ],
+  "posted": "2026-11-12",
+  "url": "https://cobaltdata.jobs.personio.example/job/1116",
+  "source": "niche GTM board"
+ },
+ {
+  "id": "1117",
+  "company": "Nimbus Pay",
+  "title": "Senior GTM Engineer",
+  "family": "gtm",
+  "location": "Berlin",
+  "country": "Germany",
+  "workplace": "on site",
+  "office_days": 5,
+  "languages_required": [
+   "German C1"
+  ],
+  "years_required": 5,
+  "pay_k_eur": [
+   90,
+   110
+  ],
+  "employees": 80,
+  "duties": [
+   "run the forecast process",
+   "manage territory and quota planning"
+  ],
+  "tools": [
+   "n8n",
+   "Apollo",
+   "Zapier",
+   "Clay"
+  ],
+  "posted": "2026-11-14",
+  "url": "https://nimbuspay.teamtailor.example/jobs/1117",
+  "source": "newsletter"
+ }
+]

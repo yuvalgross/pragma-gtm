@@ -1,0 +1,11 @@
+RevOps Engineer
+Fable Logic, Remote EU (remote)
+
+What you will do:
+- integrate tools through APIs
+- build enrichment and scoring workflows
+- automate CRM updates with APIs and webhooks
+- own pipeline reporting for leadership
+
+Tools: Make, Clay
+Experience: 2+ years

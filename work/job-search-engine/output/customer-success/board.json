@@ -1,0 +1,396 @@
+{
+ "profile": "Customer Success search",
+ "main": [
+  {
+   "id": "1093",
+   "company": "Tidal Systems",
+   "title": "Customer Success Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/tidalsystems/jobs/1093",
+   "sources": [
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 7.0,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Customer Success Manager",
+    "top_requirements": [
+     "run onboarding for new customers",
+     "drive adoption and health scores",
+     "answer support tickets"
+    ],
+    "keywords_on_record": [
+     "onboarding",
+     "adoption",
+     "Gainsight",
+     "HubSpot",
+     "Salesforce",
+     "health scores"
+    ],
+    "gaps_to_name_not_cover": [
+     "Zendesk"
+    ],
+    "location_line": "Munich, Germany (open to remote)",
+    "ats": "Greenhouse",
+    "ats_advice": "Parsed into fields and searched by keyword: exact terms and standard headings.",
+    "note_to_person": "Draft a note under 100 words to the hiring manager: the role, one proof with a number, one gap named honestly, a call ask."
+   }
+  }
+ ],
+ "reference": [
+  {
+   "id": "1028",
+   "company": "Delta AI",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.lever.example/deltaai/1028",
+   "sources": [
+    "Indeed"
+   ],
+   "verify": "verified",
+   "role_fit": 7.5,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7.5, Berlin needs a move +0, pay not stated (ask), on site only minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference"
+  },
+  {
+   "id": "1040",
+   "company": "Cobalt Data",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://cobaltdata.jobs.personio.example/job/1040",
+   "sources": [
+    "ATS host search"
+   ],
+   "verify": "verified",
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference"
+  }
+ ],
+ "could_not_verify": [
+  {
+   "id": "1054",
+   "company": "Lumen Labs",
+   "title": "Customer Success Manager",
+   "location": "Hamburg",
+   "workplace": "on site",
+   "url": "https://lumenlabs.recruitee.example/o/1054",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "board only",
+   "role_fit": 6.5,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 6.5, Hamburg needs a move +0, floor inside the band, on site only minus 0.5)",
+   "why": "board only; fit 6 (role 6.5, Hamburg needs a move +0, floor inside the band, on site only minus 0.5)"
+  }
+ ],
+ "seen_not_a_fit": [
+  {
+   "id": "1021",
+   "company": "Atlas Logic",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/atlaslogic/1021",
+   "sources": [
+    "newsletter"
+   ],
+   "verify": "verified",
+   "role_fit": 5.5,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 5.5, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "why": "role 5.5: run shape"
+  },
+  {
+   "id": "1024",
+   "company": "Orchard Systems",
+   "title": "Onboarding Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/orchardsystems/j/1024",
+   "sources": [
+    "ATS host search",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "role_fit": 5.5,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 5.5, Berlin needs a move +0, pay not stated (ask))",
+   "why": "role 5.5: run shape"
+  },
+  {
+   "id": "1035",
+   "company": "Vesper Pay",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://vesperpay.jobs.personio.example/job/1035",
+   "sources": [
+    "ATS host search",
+    "Indeed"
+   ],
+   "verify": "verified",
+   "role_fit": 6.0,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 6, Berlin needs a move +0, pay not stated (ask))",
+   "why": "role 6: tools and title"
+  },
+  {
+   "id": "1050",
+   "company": "Lumen Systems",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/lumensystems/1050",
+   "sources": [
+    "VC portfolio board"
+   ],
+   "verify": "board only",
+   "role_fit": 6.0,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 6, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "why": "role 6: tools and title"
+  },
+  {
+   "id": "1098",
+   "company": "Cobalt Cloud",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://join.example/companies/cobaltcloud/1098",
+   "sources": [
+    "ATS host search"
+   ],
+   "verify": "verified",
+   "role_fit": 6.0,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 6, remote in home country +1.5, pay above floor +0.5)",
+   "why": "role 6: tools and title"
+  },
+  {
+   "id": "1101",
+   "company": "Harbor Logic",
+   "title": "Onboarding Manager",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/harborlogic/1101",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "board only",
+   "role_fit": 6.0,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 6, Hamburg needs a move +0, pay not stated (ask))",
+   "why": "role 6: tools and title"
+  }
+ ],
+ "dropped": [
+  {
+   "id": "1018",
+   "company": "Harbor Logic",
+   "title": "Onboarding Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://join.example/companies/harborlogic/1018",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "verify": "board only",
+   "why": "none of the duties you want to do"
+  },
+  {
+   "id": "1085",
+   "company": "Indigo Cloud",
+   "title": "Customer Success Manager",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://indigocloud.recruitee.example/o/1085",
+   "sources": [
+    "Indeed",
+    "LinkedIn alert",
+    "newsletter"
+   ],
+   "verify": "verified",
+   "why": "Remote US is outside the regions you work in"
+  },
+  {
+   "id": "1088",
+   "company": "Cobalt Health",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://join.example/companies/cobalthealth/1088",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "Remote Spain is outside the regions you work in"
+  },
+  {
+   "id": "1092",
+   "company": "Orchard Pay",
+   "title": "Customer Success Manager",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://orchardpay.recruitee.example/o/1092",
+   "sources": [
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "Remote Spain is outside the regions you work in"
+  },
+  {
+   "id": "1095",
+   "company": "Cobalt Data",
+   "title": "Customer Success Manager",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://cobaltdata.jobs.personio.example/job/1095",
+   "sources": [
+    "ATS host search"
+   ],
+   "verify": "verified",
+   "why": "Amsterdam is outside the regions you work in"
+  },
+  {
+   "id": "1107",
+   "company": "Atlas Logic",
+   "title": "Customer Success Manager",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.lever.example/atlaslogic/1107",
+   "sources": [
+    "Indeed",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "Remote US is outside the regions you work in"
+  },
+  {
+   "id": "1109",
+   "company": "Vesper Labs",
+   "title": "Customer Success Manager",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://vesperlabs.recruitee.example/o/1109",
+   "sources": [
+    "ATS host search",
+    "niche GTM board"
+   ],
+   "verify": "verified",
+   "why": "Remote Spain is outside the regions you work in"
+  }
+ ],
+ "closed_on_own_list": [
+  {
+   "id": "1002",
+   "company": "Pebble Pay",
+   "title": "Onboarding Manager",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/pebblepay/1002",
+   "sources": [
+    "Indeed"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1066",
+   "company": "Indigo HQ",
+   "title": "Senior Customer Success Manager",
+   "location": "Limassol",
+   "workplace": "on site",
+   "url": "https://indigohq.jobs.personio.example/job/1066",
+   "sources": [
+    "Indeed"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  },
+  {
+   "id": "1067",
+   "company": "Vesper Cloud",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://jobs.lever.example/vespercloud/1067",
+   "sources": [
+    "Indeed",
+    "LinkedIn alert",
+    "newsletter"
+   ],
+   "verify": "closed on own list",
+   "why": "gone from the company's list; a board copy is not proof"
+  }
+ ],
+ "learning_loop": [
+  {
+   "split": "role_shape",
+   "value": "build",
+   "applications": 37,
+   "calls": 16,
+   "call_rate": 0.43,
+   "rejected_at_cv": 12
+  },
+  {
+   "split": "role_shape",
+   "value": "run",
+   "applications": 23,
+   "calls": 3,
+   "call_rate": 0.13,
+   "rejected_at_cv": 9
+  },
+  {
+   "split": "company_size",
+   "value": "150 to 500",
+   "applications": 19,
+   "calls": 7,
+   "call_rate": 0.37,
+   "rejected_at_cv": 7
+  },
+  {
+   "split": "company_size",
+   "value": "over 500",
+   "applications": 25,
+   "calls": 5,
+   "call_rate": 0.2,
+   "rejected_at_cv": 8
+  },
+  {
+   "split": "company_size",
+   "value": "under 150",
+   "applications": 16,
+   "calls": 7,
+   "call_rate": 0.44,
+   "rejected_at_cv": 6
+  },
+  {
+   "split": "note_to_named_person",
+   "value": "no",
+   "applications": 31,
+   "calls": 7,
+   "call_rate": 0.23,
+   "rejected_at_cv": 14
+  },
+  {
+   "split": "note_to_named_person",
+   "value": "yes",
+   "applications": 29,
+   "calls": 12,
+   "call_rate": 0.41,
+   "rejected_at_cv": 7
+  }
+ ]
+}

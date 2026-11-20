@@ -1,0 +1,29 @@
+{
+  "profile": "Customer Success search",
+  "board_copies": 214,
+  "unique_roles": 109,
+  "duplicate_copies_collapsed": 105,
+  "reposts": 8,
+  "in_scope": 20,
+  "main_8_plus": 1,
+  "reference": 2,
+  "could_not_verify": 1,
+  "seen_not_a_fit": 6,
+  "dropped": 7,
+  "closed_on_own_list": 3,
+  "drop_reasons": {
+    "none of the duties you want to do": 1,
+    "Remote US is outside the regions you work in": 2,
+    "Remote Spain is outside the regions you work in": 3,
+    "Amsterdam is outside the regions you work in": 1
+  },
+  "top": [
+    {
+      "company": "Tidal Systems",
+      "title": "Customer Success Manager",
+      "fit_line": "fit 8 (role 7, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+      "verdict": "Worth applying",
+      "ats": "Greenhouse"
+    }
+  ]
+}
