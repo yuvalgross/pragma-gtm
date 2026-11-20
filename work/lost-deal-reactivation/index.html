@@ -98,6 +98,51 @@
   .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
   .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
 </style>
+
+
+<style id="ws-layout">
+  main { gap: 34px; }
+  header { display: grid; gap: 0; }
+  .ws-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+  .ws-kpis .kpi, .kpis .kpi { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 14px 16px; }
+  .ws-kpis .kpi strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.05; color: var(--accent); }
+  .ws-kpis .kpi span { font-size: 14px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+  .ws-nav { position: sticky; top: 0; z-index: 20; margin: -14px 0 0; padding: 10px 0; display: flex; gap: 8px; overflow-x: auto;
+    scrollbar-width: none; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .ws-nav::-webkit-scrollbar { display: none; }
+  .ws-nav a { flex: none; font-size: 13.5px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--panel);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .ws-nav a:hover, .ws-nav a.on { color: var(--accent); border-color: var(--accent); }
+  .ws-nav a.folded::after { content: " +"; opacity: .6; }
+  section { scroll-margin-top: 64px; }
+  h2[id] { scroll-margin-top: 64px; }
+  details.fold { background: transparent; border: 0; border-top: 1px solid var(--line); margin: 0; }
+  details.fold > summary { list-style: none; padding: 16px 0 6px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary h2 { margin: 0; font-size: 26px; }
+  details.fold > summary::after { content: "Open"; flex: none; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+  details.fold[open] > summary::after { content: "Close"; }
+  details.fold > .fold-body { padding: 8px 0 4px; }
+  .flow { counter-reset: step; }
+  .flow .step { position: relative; counter-increment: step; padding-top: 14px; }
+  .flow .step b::before { content: counter(step); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--panel); font-size: 12px; letter-spacing: 0; margin-right: 8px; vertical-align: 1px; }
+  .rows-more { margin-top: 8px; font: 500 14px var(--sans); color: var(--accent); background: var(--panel); border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer; border-radius: 999px; }
+  tr.rows-hidden { display: none; }
+  @media (max-width: 760px) {
+    .ws-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lead { font-size: 16.5px; line-height: 1.55; }
+    h1 { font-size: 32px; }
+    .ws-kpis .kpi strong { font-size: 27px; }
+    .flow { grid-template-columns: 1fr; gap: 8px; }
+    .flow .step { padding: 12px 14px; }
+    details.fold > summary h2 { font-size: 23px; }
+  }
+</style>
 </head>
 <body>
 <main>
@@ -108,6 +153,7 @@
     <h1>Lost deal reactivation: which of 760 lost accounts are worth <em>a second call.</em></h1>
     <p class="lead">A weekly play for an SMB software company. It reads a CRM export of every account that did not buy, decides which are worth another try now, who calls them and with what reason, and hands each of five sellers and the appointment setting team a short list every Monday.</p>
   </header>
+  <nav class="ws-nav" aria-label="On this page"><a href="#answer">Result</a><a href="#groups">Groups</a><a href="#reason">Reasons to talk</a><a href="#rules" class="folded">Rules</a><a href="#proto">Top 40</a><a href="#hubspot" class="folded">In HubSpot</a><a href="#impact">Impact</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="answer">
     <h2 id="answer">The answer</h2>
@@ -116,7 +162,7 @@
       <div class="kpi"><strong>235</strong><span>accounts to call first, out of 760</span></div>
       <div class="kpi"><strong>261</strong><span>left out, each with the reason</span></div>
       <div class="kpi"><strong>40</strong><span>calls handed out this week</span></div>
-      <div class="kpi"><strong>6 to 10</strong><span>new customers in the first quarter (assumed rates)</span></div>
+      <div class="kpi"><strong>4 to 9</strong><span>new customers in the first quarter (assumed rates)</span></div>
     </div>
   </section>
 
@@ -152,14 +198,14 @@
   </section>
 
   <section aria-labelledby="rules">
-    <h2 id="rules">Four rules <em>I chose</em></h2>
+    <details class="fold"><summary><h2 id="rules">Four rules <em>I chose</em></h2></summary><div class="fold-body">
     <p>Each is one setting. Change it with <code>--set</code>, run again, and the list shows what moved.</p>
     <ul class="plain">
       <li><strong>Wait 90 days after a loss.</strong> An account that just said no should not get a call the next week. 90 is my judgement; with real history I would set it from how long lost accounts take to come back on their own.</li>
       <li><strong>A 6 month window for competitor contracts.</strong> Renewal is decided before the end date, so the call has to come before it too.</li>
       <li><strong>A newsletter click alone is not a reason to call.</strong> It shows the account reads the emails, not that it is buying.</li>
       <li><strong>A person reviews probable duplicates.</strong> With no website field, the match is on name, country and size. It flags 45 groups, and several are clearly different companies with a common name. That is why nothing merges automatically: a wrong merge could put a customer on a call list.</li>
-    </ul>
+    </ul></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="proto">
@@ -169,7 +215,7 @@
   </section>
 
   <section aria-labelledby="hubspot">
-    <h2 id="hubspot">Running it every week <em>in HubSpot</em></h2>
+    <details class="fold"><summary><h2 id="hubspot">Running it every week <em>in HubSpot</em></h2></summary><div class="fold-body">
     <p>Every Monday the ranking runs on a fresh export and writes its result to each account through a private app. If a run fails or a check breaks, nothing is written and last week's lists stay.</p>
     <ol class="plain">
       <li><strong>Hand out the week.</strong> Sets the owner and creates one call task with reason, angle and fit.</li>
@@ -180,7 +226,7 @@
       <li><strong>Demo booked.</strong> Creates the deal, stamps the source and hands a setter's account to a seller.</li>
       <li><strong>Stop.</strong> A new deal, a new customer or an opt out removes the account from every list.</li>
     </ol>
-    <p><strong>Clean data.</strong> The lost reason is empty on 245 of 760 accounts, so it becomes a required dropdown with a clear no as a value. The website domain becomes required so the CRM catches most new duplicates.</p>
+    <p><strong>Clean data.</strong> The lost reason is empty on 245 of 760 accounts, so it becomes a required dropdown with a clear no as a value. The website domain becomes required so the CRM catches most new duplicates.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="impact">
@@ -199,18 +245,18 @@
   </section>
 
   <section aria-labelledby="built">
-    <h2 id="built">How it was built</h2>
+    <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>I did</dt><dd>The groups, the reasons, the cuts, the four rules above, the routing and the stop rule after week 4. I checked every number on this page against the output.</dd>
       <dt>AI did</dt><dd>Claude Code wrote both scripts from those rules. In production Claude drafts a researched first line for each call, and a seller approves it before it is used.</dd>
       <dt>Not built</dt><dd>The private app that writes back to HubSpot, the workflows and the sequence. Specified, not running.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_lost.py</code> then <code>python3 reactivate.py data/lost_accounts.csv --out output</code>. Standard library only.</dd>
     </dl>
-    <p class="note">Synthetic input. Every account and owner is invented to exercise the rules and says nothing about real companies.</p>
+    <p class="note">Synthetic input. Every account and owner is invented to exercise the rules and says nothing about real companies.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="files">
-    <h2 id="files">Files</h2>
+    <details class="fold"><summary><h2 id="files">Files</h2></summary><div class="fold-body">
     <p><a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/lost-deal-reactivation">The whole folder on GitHub</a>: clone it and run it with plain Python.</p>
     <div class="files">
       <div><a href="reactivate.py">reactivate.py</a><small>Grouping, routing, top 40, impact and the nine checks.</small></div>
@@ -481,7 +527,7 @@ TODAY = date.fromisoformat(S[&quot;today&quot;])
 if __name__ == &quot;__main__&quot;:
     main()
 </code></pre>
-    </details>
+    </details></div></details><!--/fold-->
   </section>
 
   <footer>
@@ -494,6 +540,51 @@ if __name__ == &quot;__main__&quot;:
 <script>
 /* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
 document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
+
+
+<script id="ws-layout-js">
+(function () {
+  var nav = document.querySelector('.ws-nav');
+  function openFor(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var d = el.closest('details.fold');
+    if (d && !d.open) d.open = true;
+  }
+  if (nav) nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    openFor(a.getAttribute('href').slice(1));
+  });
+  if (location.hash) openFor(location.hash.slice(1));
+  window.addEventListener('hashchange', function () { openFor(location.hash.slice(1)); });
+  document.querySelectorAll('.tablewrap table').forEach(function (t) {
+    var rows = t.tBodies[0] ? Array.prototype.slice.call(t.tBodies[0].rows) : [];
+    if (rows.length <= 12) return;
+    rows.slice(10).forEach(function (r) { r.classList.add('rows-hidden'); });
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rows-more';
+    b.textContent = 'Show all ' + rows.length + ' rows';
+    b.addEventListener('click', function () {
+      var hidden = rows[10].classList.contains('rows-hidden');
+      rows.slice(10).forEach(function (r) { r.classList.toggle('rows-hidden', !hidden); });
+      b.textContent = hidden ? 'Show the top 10' : 'Show all ' + rows.length + ' rows';
+    });
+    t.closest('.tablewrap').insertAdjacentElement('afterend', b);
+  });
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}; nav.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        var a = links[en.target.id];
+        if (a) nav.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
+  }
+})();
 </script>
 </body>
 </html>

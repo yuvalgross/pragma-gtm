@@ -93,6 +93,51 @@
   .fig span { font-size: 14.5px; color: var(--muted); }
   table.narrow { min-width: 640px; }
 </style>
+
+
+<style id="ws-layout">
+  main { gap: 34px; }
+  header { display: grid; gap: 0; }
+  .ws-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+  .ws-kpis .kpi, .kpis .kpi { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 14px 16px; }
+  .ws-kpis .kpi strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.05; color: var(--accent); }
+  .ws-kpis .kpi span { font-size: 14px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+  .ws-nav { position: sticky; top: 0; z-index: 20; margin: -14px 0 0; padding: 10px 0; display: flex; gap: 8px; overflow-x: auto;
+    scrollbar-width: none; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .ws-nav::-webkit-scrollbar { display: none; }
+  .ws-nav a { flex: none; font-size: 13.5px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--panel);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .ws-nav a:hover, .ws-nav a.on { color: var(--accent); border-color: var(--accent); }
+  .ws-nav a.folded::after { content: " +"; opacity: .6; }
+  section { scroll-margin-top: 64px; }
+  h2[id] { scroll-margin-top: 64px; }
+  details.fold { background: transparent; border: 0; border-top: 1px solid var(--line); margin: 0; }
+  details.fold > summary { list-style: none; padding: 16px 0 6px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary h2 { margin: 0; font-size: 26px; }
+  details.fold > summary::after { content: "Open"; flex: none; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+  details.fold[open] > summary::after { content: "Close"; }
+  details.fold > .fold-body { padding: 8px 0 4px; }
+  .flow { counter-reset: step; }
+  .flow .step { position: relative; counter-increment: step; padding-top: 14px; }
+  .flow .step b::before { content: counter(step); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--panel); font-size: 12px; letter-spacing: 0; margin-right: 8px; vertical-align: 1px; }
+  .rows-more { margin-top: 8px; font: 500 14px var(--sans); color: var(--accent); background: var(--panel); border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer; border-radius: 999px; }
+  tr.rows-hidden { display: none; }
+  @media (max-width: 760px) {
+    .ws-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lead { font-size: 16.5px; line-height: 1.55; }
+    h1 { font-size: 32px; }
+    .ws-kpis .kpi strong { font-size: 27px; }
+    .flow { grid-template-columns: 1fr; gap: 8px; }
+    .flow .step { padding: 12px 14px; }
+    details.fold > summary h2 { font-size: 23px; }
+  }
+</style>
 </head>
 <body>
 <main>
@@ -102,23 +147,25 @@
     <p class="eyebrow">Work sample</p>
     <h1>CRM clean up: fix the records, then <em>find the money already in them.</em></h1>
     <p class="lead">Four agents read a HubSpot export. Three of them clean it: duplicates, broken fields, records owned by people who left. The fourth reads the clean customer book and decides who a human should call this week, who an AI can look after, and why. Nothing is written to the CRM until a person approves it.</p>
+    <div class="ws-kpis kpis-band"><div class="kpi"><strong>47</strong><span>changes proposed, none written without approval</span></div><div class="kpi"><strong>€539k</strong><span>customer ARR with no active owner</span></div><div class="kpi"><strong>€190k</strong><span>open pipeline past its close date</span></div><div class="kpi"><strong>8 of 17</strong><span>customers go to a human this week</span></div></div><!--/ws-kpis-->
   </header>
+  <nav class="ws-nav" aria-label="On this page"><a href="#why" class="folded">Why the CRM</a><a href="#how">How it works</a><a href="#run">Output</a><a href="#split">AI or human</a><a href="#money">Revenue</a><a href="#rollout" class="folded">Rollout</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#clay" class="folded">Clay</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="why">
-    <h2 id="why">Why start <em>inside</em> the CRM</h2>
+    <details class="fold"><summary><h2 id="why">Why start <em>inside</em> the CRM</h2></summary><div class="fold-body">
     <p>Most GTM engineering starts with outbound: more leads, more sequences. In a company that has run the same CRM for years, the bigger number is usually sitting in the customer base. The CRM is where that revenue lives, and it is also where the mess lives. Three things break when the records are wrong.</p>
     <p><strong>The forecast.</strong> Open deals whose close date passed months ago still count as pipeline. <strong>The reports.</strong> One customer split across two records shows up at the smaller number, in the wrong segment, with the wrong owner. <strong>The book.</strong> Accounts owned by someone who left get no calls, so nobody notices the usage drop before the renewal.</p>
     <p>Agents are good at the first pass: they read every record, every week, and never get bored. People stay in charge of anything that cannot be undone. Once the data is clean, the same records answer the question sales leaders actually ask: who should a human call next?</p>
-    <p>In a live sales team I fixed broken stage rules, wrongly wired fields and duplicate records in HubSpot and automated the upkeep. It saved 3 hours a week and churn went down 8%. This sample is a public version with its own code and synthetic data.</p>
+    <p>In a live sales team I fixed broken stage rules, wrongly wired fields and duplicate records in HubSpot and automated the upkeep. It saved 3 hours a week and churn went down 8%. This sample is a public version with its own code and synthetic data.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
     <div class="flow">
-      <div class="step"><b>1. Duplicates</b><span>Matches companies on a cleaned domain, then on a cleaned name with legal suffixes removed. Same domain goes to a batch approval. Same name without a shared domain goes to a person. The record with the deals is always kept.</span></div>
-      <div class="step"><b>2. Fields</b><span>One spelling per country, lifecycle stage that matches the deals, open deals past their close date, deals with no amount, missing industry, champions whose email now bounces.</span></div>
-      <div class="step"><b>3. Owners</b><span>Records owned by people who left, or by nobody. Customers go to account management, prospects to the active rep for the territory. No rule, no guess: it goes to a person.</span></div>
-      <div class="step"><b>4. Book</b><span>Every customer gets a tier by ARR and a signal from usage, seats, renewal date and the last time a human spoke to them. Tier and signal decide human or AI.</span></div>
+      <div class="step"><b>Duplicates</b><span>Matches companies on a cleaned domain, then on a cleaned name with legal suffixes removed. Same domain goes to a batch approval. Same name without a shared domain goes to a person. The record with the deals is always kept.</span></div>
+      <div class="step"><b>Fields</b><span>One spelling per country, lifecycle stage that matches the deals, open deals past their close date, deals with no amount, missing industry, champions whose email now bounces.</span></div>
+      <div class="step"><b>Owners</b><span>Records owned by people who left, or by nobody. Customers go to account management, prospects to the active rep for the territory. No rule, no guess: it goes to a person.</span></div>
+      <div class="step"><b>Book</b><span>Every customer gets a tier by ARR and a signal from usage, seats, renewal date and the last time a human spoke to them. Tier and signal decide human or AI.</span></div>
     </div>
     <p style="margin-top:16px">Every change carries a tier. <code>auto</code> is reversible and logs the old value. <code>approve</code> is one batch sign off by the RevOps owner, used for merges (they cannot be undone) and owner changes (they move someone's book). <code>review</code> is one by one. <code>owner_task</code> goes to the deal owner. <code>enrich</code> goes to the Clay enrichment queue. The script writes the change log and the HubSpot API calls; it never sends them.</p>
   </section>
@@ -203,7 +250,7 @@
   </section>
 
   <section aria-labelledby="rollout">
-    <h2 id="rollout">How I would roll it out in a <em>real</em> CRM</h2>
+    <details class="fold"><summary><h2 id="rollout">How I would roll it out in a <em>real</em> CRM</h2></summary><div class="fold-body">
     <dl>
       <dt>Week 1</dt><dd>Read only. Run every agent, share the change log and the money figures with RevOps and sales leads, and agree the tiers and thresholds.</dd>
       <dt>Week 2</dt><dd>Switch on the <code>auto</code> tier. Keep a copy of every old value so any change can be put back.</dd>
@@ -211,28 +258,28 @@
       <dt>Week 4</dt><dd>Connect HubSpot to Clay Audiences, build the tier segments, switch on the job change signal and auto enrich for new records. The enrich queue goes through the CLI, so the agent decides what spends credits.</dd>
       <dt>Then</dt><dd>The book agent reads the segments every Monday and posts the call list to each owner in Slack, with the evidence. The long tail emails start once the owners have read a week of drafts.</dd>
       <dt>Salesforce</dt><dd>The same four agents work on Accounts, Contacts and Opportunities. Only the last step, the API calls, changes.</dd>
-    </dl>
+    </dl></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="change">
-    <h2 id="change">What I would change <em>first</em></h2>
+    <details class="fold"><summary><h2 id="change">What I would change <em>first</em></h2></summary><div class="fold-body">
     <p>One small account renews in 88 days with no contact on record, so it lands as a risk, but its usage is up 120% and its only seat is full. The email it gets asks what changed, when it should offer the next plan. Risk should not win automatically when growth is this clear. A second account sits on the 20% usage drop line exactly, which says the line needs a band, not a single number.</p>
-    <p>After a merge, the ARR field needs a check by hand: the two records held €60,000 and €15,000, and the tool counts €75,000, but which value HubSpot keeps depends on the property. And the 25% upsell figure is my assumption, not data; the first real run should replace it with the company's own expansion history.</p>
+    <p>After a merge, the ARR field needs a check by hand: the two records held €60,000 and €15,000, and the tool counts €75,000, but which value HubSpot keeps depends on the property. And the 25% upsell figure is my assumption, not data; the first real run should replace it with the company's own expansion history.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="built">
-    <h2 id="built">How it was built</h2>
+    <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote the scripts and the tests from my written rules for matching, tiers, thresholds and owner routing.</dd>
       <dt>I did</dt><dd>Set the tiers and thresholds, decided what is auto and what needs approval, planted the mess in the synthetic data, and read every proposed change and every customer row against the input.</dd>
       <dt>Not built</dt><dd>The Claude step that judges name only duplicates and the one that writes the long tail emails (both prompts are in the file), the Clay Audiences segments, signals and CLI enrichment (the queue file is built, nothing is sent to Clay), the Slack approval and the step that sends the API calls. All designed, none running.</dd>
       <dt>Tests</dt><dd>8 tests guard the rules that must never move: merges and owner changes are never auto, name only matches always go to a person, the record with the deals is always kept, no ARR is lost in a merge, strategic accounts always get a human.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_crm.py</code> then <code>python3 crm_cleanup.py data --out output</code>. Tests: <code>python3 -m unittest test_crm_cleanup</code>. Standard library only.</dd>
-    </dl>
+    </dl></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="clay">
-    <h2 id="clay">Where Clay comes in: <em>Audiences and the CLI</em></h2>
+    <details class="fold"><summary><h2 id="clay">Where Clay comes in: <em>Audiences and the CLI</em></h2></summary><div class="fold-body">
     <p>The agents clean the CRM. Clay keeps it clean afterwards, and the agents drive it from the terminal instead of the browser.</p>
     <div class="flow">
       <div class="step"><b>Audiences</b><span>One live profile per company and contact, built from the HubSpot import of companies, contacts and deals. It refreshes every 15 minutes on Enterprise and daily on Growth, so the book agent reads current data instead of last month's export.</span></div>
@@ -241,11 +288,11 @@
       <div class="step"><b>CLI and MCP</b><span>The Clay plugin is a CLI for scripted runs plus <code>clay mcp</code>, a local MCP server, so an agent in Claude Code calls Clay as one of its tools. It signs in with <code>clay login</code> or a <code>CLAY_API_KEY</code>.</span></div>
     </div>
     <p style="margin-top:16px"><strong>Two limits shape the design.</strong> Audiences imports from HubSpot but does not write back to it; that needs a Clay table with HubSpot actions, or the approved API calls this script already writes. And duplicates inside one CRM carry over into Audiences as they are, so the duplicate agent has to run first. That is the order here: clean in HubSpot, then let Clay watch and enrich.</p>
-    <p><strong>Credits.</strong> The agents decide what gets enriched, not a whole CRM sync. This run queues 6 records for Clay: 3 companies missing an industry and 3 contacts whose email bounces. They sit in <a href="output/clay_enrich_queue.csv">clay_enrich_queue.csv</a>, keyed by domain or email, the fields Audiences matches on. One company has no domain yet, so it waits for the duplicate review before it can be matched. In Clay itself: filter to the segment before enriching, test on 10 rows, set a credit budget.</p>
+    <p><strong>Credits.</strong> The agents decide what gets enriched, not a whole CRM sync. This run queues 6 records for Clay: 3 companies missing an industry and 3 contacts whose email bounces. They sit in <a href="output/clay_enrich_queue.csv">clay_enrich_queue.csv</a>, keyed by domain or email, the fields Audiences matches on. One company has no domain yet, so it waits for the duplicate review before it can be matched. In Clay itself: filter to the segment before enriching, test on 10 rows, set a credit budget.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="files">
-    <h2 id="files">Files</h2>
+    <details class="fold"><summary><h2 id="files">Files</h2></summary><div class="fold-body">
     <p><a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/crm-cleanup">The whole folder on GitHub</a>: clone it and run it with plain Python.</p>
     <div class="files">
       <div><a href="crm_cleanup.py">crm_cleanup.py</a><small>The four agents, the tiers and the outputs.</small></div>
@@ -736,7 +783,7 @@ def main():
 if __name__ == "__main__":
     main()
 </code></pre>
-    </details>
+    </details></div></details><!--/fold-->
   </section>
 
   <footer>
@@ -749,6 +796,51 @@ if __name__ == "__main__":
 <script>
 /* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
 document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
+
+
+<script id="ws-layout-js">
+(function () {
+  var nav = document.querySelector('.ws-nav');
+  function openFor(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var d = el.closest('details.fold');
+    if (d && !d.open) d.open = true;
+  }
+  if (nav) nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    openFor(a.getAttribute('href').slice(1));
+  });
+  if (location.hash) openFor(location.hash.slice(1));
+  window.addEventListener('hashchange', function () { openFor(location.hash.slice(1)); });
+  document.querySelectorAll('.tablewrap table').forEach(function (t) {
+    var rows = t.tBodies[0] ? Array.prototype.slice.call(t.tBodies[0].rows) : [];
+    if (rows.length <= 12) return;
+    rows.slice(10).forEach(function (r) { r.classList.add('rows-hidden'); });
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rows-more';
+    b.textContent = 'Show all ' + rows.length + ' rows';
+    b.addEventListener('click', function () {
+      var hidden = rows[10].classList.contains('rows-hidden');
+      rows.slice(10).forEach(function (r) { r.classList.toggle('rows-hidden', !hidden); });
+      b.textContent = hidden ? 'Show the top 10' : 'Show all ' + rows.length + ' rows';
+    });
+    t.closest('.tablewrap').insertAdjacentElement('afterend', b);
+  });
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}; nav.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        var a = links[en.target.id];
+        if (a) nav.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
+  }
+})();
 </script>
 </body>
 </html>

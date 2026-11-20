@@ -88,6 +88,51 @@
   @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
   @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
 </style>
+
+
+<style id="ws-layout">
+  main { gap: 34px; }
+  header { display: grid; gap: 0; }
+  .ws-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+  .ws-kpis .kpi, .kpis .kpi { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 14px 16px; }
+  .ws-kpis .kpi strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.05; color: var(--accent); }
+  .ws-kpis .kpi span { font-size: 14px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+  .ws-nav { position: sticky; top: 0; z-index: 20; margin: -14px 0 0; padding: 10px 0; display: flex; gap: 8px; overflow-x: auto;
+    scrollbar-width: none; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .ws-nav::-webkit-scrollbar { display: none; }
+  .ws-nav a { flex: none; font-size: 13.5px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--panel);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .ws-nav a:hover, .ws-nav a.on { color: var(--accent); border-color: var(--accent); }
+  .ws-nav a.folded::after { content: " +"; opacity: .6; }
+  section { scroll-margin-top: 64px; }
+  h2[id] { scroll-margin-top: 64px; }
+  details.fold { background: transparent; border: 0; border-top: 1px solid var(--line); margin: 0; }
+  details.fold > summary { list-style: none; padding: 16px 0 6px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary h2 { margin: 0; font-size: 26px; }
+  details.fold > summary::after { content: "Open"; flex: none; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+  details.fold[open] > summary::after { content: "Close"; }
+  details.fold > .fold-body { padding: 8px 0 4px; }
+  .flow { counter-reset: step; }
+  .flow .step { position: relative; counter-increment: step; padding-top: 14px; }
+  .flow .step b::before { content: counter(step); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--panel); font-size: 12px; letter-spacing: 0; margin-right: 8px; vertical-align: 1px; }
+  .rows-more { margin-top: 8px; font: 500 14px var(--sans); color: var(--accent); background: var(--panel); border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer; border-radius: 999px; }
+  tr.rows-hidden { display: none; }
+  @media (max-width: 760px) {
+    .ws-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lead { font-size: 16.5px; line-height: 1.55; }
+    h1 { font-size: 32px; }
+    .ws-kpis .kpi strong { font-size: 27px; }
+    .flow { grid-template-columns: 1fr; gap: 8px; }
+    .flow .step { padding: 12px 14px; }
+    details.fold > summary h2 { font-size: 23px; }
+  }
+</style>
 </head>
 <body>
 <main>
@@ -97,7 +142,9 @@
     <p class="eyebrow">Work sample</p>
     <h1>Signup router: who gets a human this week, and <em>what that human does first.</em></h1>
     <p class="lead">A small Python tool that takes a week of product trial signups, drops anyone who is already a customer or partner, scores the rest from 0 to 100 on usage, company fit, integration path and pain signals, and assigns one next action per account. Every row carries the evidence behind its score.</p>
+    <div class="ws-kpis kpis-band"><div class="kpi"><strong>318</strong><span>signups in one week</span></div><div class="kpi"><strong>91</strong><span>stopped at the gate, before any score</span></div><div class="kpi"><strong>23</strong><span>get a person this week</span></div><div class="kpi"><strong>4</strong><span>get a custom benchmark</span></div></div><!--/ws-kpis-->
   </header>
+  <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#person">Who gets a person</a><a href="#run">Output</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#clay" class="folded">Clay</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
@@ -171,23 +218,23 @@
   </section>
 
   <section aria-labelledby="change">
-    <h2 id="change">What I would change <em>first</em></h2>
+    <details class="fold"><summary><h2 id="change">What I would change <em>first</em></h2></summary><div class="fold-body">
     <p>Two results from this run need a conversation before the weights are trusted. A 900 person company scores 69 and gets a mid tier offer, because integration and usage outrun a weak company fit. That is the first weight I would revisit. And two accounts hit 100, so the scale saturates at the top. A tie break on last week's volume is the simplest fix. The long tail adds a third: a 4 person team with flat test volume reaches 48 and a mid tier offer, mostly on the integration path. A floor on last week's volume before any person is assigned would stop that.</p>
-    <p>How I would judge the tool: flagged accounts should convert to a paid tier within 90 days at a higher rate than unflagged accounts of the same age. If they do not after two weekly cycles, change the weights or drop it. The weekly check is simpler still: does the account owner agree with the top five.</p>
+    <p>How I would judge the tool: flagged accounts should convert to a paid tier within 90 days at a higher rate than unflagged accounts of the same age. If they do not after two weekly cycles, change the weights or drop it. The weekly check is simpler still: does the account owner agree with the top five.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="built">
-    <h2 id="built">How it was built</h2>
+    <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote both scripts from my written description of the gate, weights and thresholds.</dd>
       <dt>I did</dt><dd>Set the weights and thresholds, wrote the exclusion rules, read every scored row against the input, and capped pain signals at 15 so no account clears the mid tier line on a keyword match alone.</dd>
       <dt>Not built</dt><dd>The Clay enrichment (those columns are typed in for this run), the Audiences and CLI steps below, and the n8n step that writes the top rows into HubSpot as tasks, with the evidence in the task body. All designed, none running.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_signups.py</code> then <code>python3 signup_router.py data/signups_week_43_synthetic.csv --out output</code>. Standard library only.</dd>
-    </dl>
+    </dl></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="clay">
-    <h2 id="clay">Where Clay <em>Audiences</em> and the CLI fit</h2>
+    <details class="fold"><summary><h2 id="clay">Where Clay <em>Audiences</em> and the CLI fit</h2></summary><div class="fold-body">
     <p>In this run the Clay columns are typed in. In a real workspace the week's signups sit in Clay Audiences, which holds a company's own people, companies and deals, and the Clay CLI reads them from a terminal or from Claude Code. Reading and counting cost no credits; only enrichment does. The commands below come from Clay's documentation. I have not run them against a workspace.</p>
 <pre class="cli"># 1. Count the week's signups (a saved segment, free)
 clay audiences records search-count --audience-id SIGNUPS_WEEK_ID
@@ -202,11 +249,11 @@ clay audiences fields create --entity-type companies --name "Next action" --data
 
 # 4. One live segment per next action
 clay audiences create --entity-type companies --name "Custom benchmark" --filter ./custom_benchmark.json</pre>
-    <p>Three limits from the same docs shape the design. The CLI reads records but cannot write values into them, so the scores go back through Clay's <code>upsert-audiences-record</code> workflow action. A segment is a saved filter, so <em>Custom benchmark</em> stays current as scores change, but segments cover people and companies only; deals arrive through a CRM sync and are read only. And most commands allow 60 calls a minute, so the router asks for the week, not the whole workspace.</p>
+    <p>Three limits from the same docs shape the design. The CLI reads records but cannot write values into them, so the scores go back through Clay's <code>upsert-audiences-record</code> workflow action. A segment is a saved filter, so <em>Custom benchmark</em> stays current as scores change, but segments cover people and companies only; deals arrive through a CRM sync and are read only. And most commands allow 60 calls a minute, so the router asks for the week, not the whole workspace.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="files">
-    <h2 id="files">Files</h2>
+    <details class="fold"><summary><h2 id="files">Files</h2></summary><div class="fold-body">
     <p><a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signup-router">The whole folder on GitHub</a>: clone it and run it with plain Python.</p>
     <div class="files">
       <div><a href="signup_router.py">signup_router.py</a><small>Gate, scoring, routing and outputs.</small></div>
@@ -472,7 +519,7 @@ def main():
 if __name__ == "__main__":
     main()
 </code></pre>
-    </details>
+    </details></div></details><!--/fold-->
   </section>
 
   <footer>
@@ -485,6 +532,51 @@ if __name__ == "__main__":
 <script>
 /* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
 document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
+
+
+<script id="ws-layout-js">
+(function () {
+  var nav = document.querySelector('.ws-nav');
+  function openFor(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var d = el.closest('details.fold');
+    if (d && !d.open) d.open = true;
+  }
+  if (nav) nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    openFor(a.getAttribute('href').slice(1));
+  });
+  if (location.hash) openFor(location.hash.slice(1));
+  window.addEventListener('hashchange', function () { openFor(location.hash.slice(1)); });
+  document.querySelectorAll('.tablewrap table').forEach(function (t) {
+    var rows = t.tBodies[0] ? Array.prototype.slice.call(t.tBodies[0].rows) : [];
+    if (rows.length <= 12) return;
+    rows.slice(10).forEach(function (r) { r.classList.add('rows-hidden'); });
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rows-more';
+    b.textContent = 'Show all ' + rows.length + ' rows';
+    b.addEventListener('click', function () {
+      var hidden = rows[10].classList.contains('rows-hidden');
+      rows.slice(10).forEach(function (r) { r.classList.toggle('rows-hidden', !hidden); });
+      b.textContent = hidden ? 'Show the top 10' : 'Show all ' + rows.length + ' rows';
+    });
+    t.closest('.tablewrap').insertAdjacentElement('afterend', b);
+  });
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}; nav.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        var a = links[en.target.id];
+        if (a) nav.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
+  }
+})();
 </script>
 </body>
 </html>

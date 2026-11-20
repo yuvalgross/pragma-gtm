@@ -98,6 +98,51 @@
   .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
   .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
 </style>
+
+
+<style id="ws-layout">
+  main { gap: 34px; }
+  header { display: grid; gap: 0; }
+  .ws-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+  .ws-kpis .kpi, .kpis .kpi { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 14px 16px; }
+  .ws-kpis .kpi strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.05; color: var(--accent); }
+  .ws-kpis .kpi span { font-size: 14px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+  .ws-nav { position: sticky; top: 0; z-index: 20; margin: -14px 0 0; padding: 10px 0; display: flex; gap: 8px; overflow-x: auto;
+    scrollbar-width: none; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .ws-nav::-webkit-scrollbar { display: none; }
+  .ws-nav a { flex: none; font-size: 13.5px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--panel);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .ws-nav a:hover, .ws-nav a.on { color: var(--accent); border-color: var(--accent); }
+  .ws-nav a.folded::after { content: " +"; opacity: .6; }
+  section { scroll-margin-top: 64px; }
+  h2[id] { scroll-margin-top: 64px; }
+  details.fold { background: transparent; border: 0; border-top: 1px solid var(--line); margin: 0; }
+  details.fold > summary { list-style: none; padding: 16px 0 6px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary h2 { margin: 0; font-size: 26px; }
+  details.fold > summary::after { content: "Open"; flex: none; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+  details.fold[open] > summary::after { content: "Close"; }
+  details.fold > .fold-body { padding: 8px 0 4px; }
+  .flow { counter-reset: step; }
+  .flow .step { position: relative; counter-increment: step; padding-top: 14px; }
+  .flow .step b::before { content: counter(step); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--panel); font-size: 12px; letter-spacing: 0; margin-right: 8px; vertical-align: 1px; }
+  .rows-more { margin-top: 8px; font: 500 14px var(--sans); color: var(--accent); background: var(--panel); border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer; border-radius: 999px; }
+  tr.rows-hidden { display: none; }
+  @media (max-width: 760px) {
+    .ws-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lead { font-size: 16.5px; line-height: 1.55; }
+    h1 { font-size: 32px; }
+    .ws-kpis .kpi strong { font-size: 27px; }
+    .flow { grid-template-columns: 1fr; gap: 8px; }
+    .flow .step { padding: 12px 14px; }
+    details.fold > summary h2 { font-size: 23px; }
+  }
+</style>
 </head>
 <body>
 <main>
@@ -108,6 +153,7 @@
     <h1>Account prioritisation: which 80 accounts get a call this week, and <em>what happens when the signals run out.</em></h1>
     <p class="lead">A weekly run for an outbound team of four SDRs selling B2B software. It reads 500 accounts and their buying signals, decides who a rep may call, scores the rest, routes them by territory and capacity, and gives every rep a Monday list with the reason to call, who to call and a first step. Leadership changes the rules in settings, never in the logic.</p>
   </header>
+  <nav class="ws-nav" aria-label="On this page"><a href="#answer">Result</a><a href="#how">How it works</a><a href="#monday">Monday list</a><a href="#data">What the data hid</a><a href="#score" class="folded">Scoring</a><a href="#decide">Decision</a><a href="#prod" class="folded">Production</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="answer">
     <h2 id="answer">The answer: <em>the limit is signals, not reps</em></h2>
@@ -174,7 +220,7 @@
   </section>
 
   <section aria-labelledby="score">
-    <h2 id="score">How an account <em>is scored</em></h2>
+    <details class="fold"><summary><h2 id="score">How an account <em>is scored</em></h2></summary><div class="fold-body">
     <p class="formula">Score = (signal points + fit points) &times; leadership boost</p>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Signal points, scrolls sideways on small screens">
 <table style="min-width:640px">
@@ -193,7 +239,7 @@
       <li><strong>One per kind, plus a bonus for variety.</strong> Ten docs visits count as one. Each extra kind of signal adds 6 points.</li>
       <li><strong>Funding counts double next to a build signal.</strong> Money on its own says nothing about a buying decision. Money within 60 days of an engineering hire or a launch says it is going into the product.</li>
       <li><strong>Fit, up to 29 points.</strong> Company size, current vendor (an in house build or several vendors scores highest) and industry. A missing value scores a small default, not zero, so a gap does not knock an account out.</li>
-    </ul>
+    </ul></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="decide">
@@ -208,7 +254,7 @@
   </section>
 
   <section aria-labelledby="prod">
-    <h2 id="prod">From prototype <em>to production</em></h2>
+    <details class="fold"><summary><h2 id="prod">From prototype <em>to production</em></h2></summary><div class="fold-body">
     <div class="tablewrap" tabindex="0" role="region" aria-label="Prototype against production, scrolls sideways on small screens">
 <table style="min-width:760px">
 <thead><tr><th>Layer</th><th>In this sample</th><th>In production</th></tr></thead>
@@ -222,11 +268,11 @@
 </tbody>
 </table>
 </div>
-    <p style="margin-top:14px">How I would know it works: share of each list with a live signal, meetings per 100 accounts worked and pipeline per SDR hour, split by signal type, against a small group of accounts left unprioritised.</p>
+    <p style="margin-top:14px">How I would know it works: share of each list with a live signal, meetings per 100 accounts worked and pipeline per SDR hour, split by signal type, against a small group of accounts left unprioritised.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="built">
-    <h2 id="built">How it was built</h2>
+    <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>I did</dt><dd>Every decision: which signals count and how much, the gate, the routing rules and the recommendation. I checked every number on this page against the output.</dd>
       <dt>AI did</dt><dd>Claude Code wrote both scripts from those decisions. No model scores anything during the run: every signal text maps to a readable rule.</dd>
@@ -234,11 +280,11 @@
       <dt>Not built</dt><dd>The Clay enrichment, the n8n writes into Salesforce and the Slack message. Designed, not running.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_accounts.py</code> then <code>python3 prioritise.py data/accounts.csv data/signals.csv --out output</code>. Standard library only.</dd>
     </dl>
-    <p class="note">Synthetic input. Every company, domain and signal is invented to exercise the rules and says nothing about real companies. Domains end in <code>.example</code>.</p>
+    <p class="note">Synthetic input. Every company, domain and signal is invented to exercise the rules and says nothing about real companies. Domains end in <code>.example</code>.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="files">
-    <h2 id="files">Files</h2>
+    <details class="fold"><summary><h2 id="files">Files</h2></summary><div class="fold-body">
     <p><a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/account-prioritisation">The whole folder on GitHub</a>: clone it and run it with plain Python.</p>
     <div class="files">
       <div><a href="prioritise.py">prioritise.py</a><small>Clean, gate, score, route, outputs and checks.</small></div>
@@ -627,7 +673,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     main()
 </code></pre>
-    </details>
+    </details></div></details><!--/fold-->
   </section>
 
   <footer>
@@ -640,6 +686,51 @@ if __name__ == &quot;__main__&quot;:
 <script>
 /* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
 document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
+
+
+<script id="ws-layout-js">
+(function () {
+  var nav = document.querySelector('.ws-nav');
+  function openFor(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var d = el.closest('details.fold');
+    if (d && !d.open) d.open = true;
+  }
+  if (nav) nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    openFor(a.getAttribute('href').slice(1));
+  });
+  if (location.hash) openFor(location.hash.slice(1));
+  window.addEventListener('hashchange', function () { openFor(location.hash.slice(1)); });
+  document.querySelectorAll('.tablewrap table').forEach(function (t) {
+    var rows = t.tBodies[0] ? Array.prototype.slice.call(t.tBodies[0].rows) : [];
+    if (rows.length <= 12) return;
+    rows.slice(10).forEach(function (r) { r.classList.add('rows-hidden'); });
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rows-more';
+    b.textContent = 'Show all ' + rows.length + ' rows';
+    b.addEventListener('click', function () {
+      var hidden = rows[10].classList.contains('rows-hidden');
+      rows.slice(10).forEach(function (r) { r.classList.toggle('rows-hidden', !hidden); });
+      b.textContent = hidden ? 'Show the top 10' : 'Show all ' + rows.length + ' rows';
+    });
+    t.closest('.tablewrap').insertAdjacentElement('afterend', b);
+  });
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}; nav.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        var a = links[en.target.id];
+        if (a) nav.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
+  }
+})();
 </script>
 </body>
 </html>

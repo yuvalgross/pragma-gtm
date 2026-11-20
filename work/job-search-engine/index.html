@@ -98,6 +98,51 @@
   .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
   .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
 </style>
+
+
+<style id="ws-layout">
+  main { gap: 34px; }
+  header { display: grid; gap: 0; }
+  .ws-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+  .ws-kpis .kpi, .kpis .kpi { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 14px 16px; }
+  .ws-kpis .kpi strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.05; color: var(--accent); }
+  .ws-kpis .kpi span { font-size: 14px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+  .ws-nav { position: sticky; top: 0; z-index: 20; margin: -14px 0 0; padding: 10px 0; display: flex; gap: 8px; overflow-x: auto;
+    scrollbar-width: none; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .ws-nav::-webkit-scrollbar { display: none; }
+  .ws-nav a { flex: none; font-size: 13.5px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--panel);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .ws-nav a:hover, .ws-nav a.on { color: var(--accent); border-color: var(--accent); }
+  .ws-nav a.folded::after { content: " +"; opacity: .6; }
+  section { scroll-margin-top: 64px; }
+  h2[id] { scroll-margin-top: 64px; }
+  details.fold { background: transparent; border: 0; border-top: 1px solid var(--line); margin: 0; }
+  details.fold > summary { list-style: none; padding: 16px 0 6px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary h2 { margin: 0; font-size: 26px; }
+  details.fold > summary::after { content: "Open"; flex: none; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+  details.fold[open] > summary::after { content: "Close"; }
+  details.fold > .fold-body { padding: 8px 0 4px; }
+  .flow { counter-reset: step; }
+  .flow .step { position: relative; counter-increment: step; padding-top: 14px; }
+  .flow .step b::before { content: counter(step); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--panel); font-size: 12px; letter-spacing: 0; margin-right: 8px; vertical-align: 1px; }
+  .rows-more { margin-top: 8px; font: 500 14px var(--sans); color: var(--accent); background: var(--panel); border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer; border-radius: 999px; }
+  tr.rows-hidden { display: none; }
+  @media (max-width: 760px) {
+    .ws-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lead { font-size: 16.5px; line-height: 1.55; }
+    h1 { font-size: 32px; }
+    .ws-kpis .kpi strong { font-size: 27px; }
+    .flow { grid-template-columns: 1fr; gap: 8px; }
+    .flow .step { padding: 12px 14px; }
+    details.fold > summary h2 { font-size: 23px; }
+  }
+</style>
 </head>
 <body>
 <main>
@@ -108,6 +153,7 @@
     <h1>Job search engine: a daily scan and the board it feeds, <em>for any job title.</em></h1>
     <p class="lead">A job search tool built on invented data and replayed over two weeks. Every morning it reads the job boards, proves each role on the company's own list, drops what can never work and scores the rest with a fit line anyone can read. The board then tracks applications, CVs, live processes ranked by preference and the decisions the outcomes point to. The rules sit in a profile file: shown here for a Customer Success Manager in Berlin and a Data Analyst in Amsterdam, on the same engine.</p>
   </header>
+  <nav class="ws-nav" aria-label="On this page"><a href="#answer">Result</a><a href="#board">The board</a><a href="#how">How it works</a><a href="#gates" class="folded">Gates</a><a href="#fit" class="folded">Fit line</a><a href="#board-rules" class="folded">Board rules</a><a href="#titles">Other titles</a><a href="#cv">CV check</a><a href="#live" class="folded">Production</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="answer">
     <h2 id="answer">Two weeks of the scan</h2>
@@ -154,7 +200,7 @@
   </section>
 
   <section aria-labelledby="gates">
-    <h2 id="gates">The gates: <em>no score for a role that cannot work</em></h2>
+    <details class="fold"><summary><h2 id="gates">The gates: <em>no score for a role that cannot work</em></h2></summary><div class="fold-body">
     <div class="tablewrap" tabindex="0" role="region" aria-label="Gate reasons, Customer Success profile, scrolls sideways on small screens">
 <table style="min-width:480px">
 <thead><tr><th>Reason</th><th class="n">Dropped</th></tr></thead>
@@ -165,11 +211,11 @@
 <tr><td>A local language the profile does not have (Dutch, Spanish)</td><td class="n">5</td></tr>
 </tbody>
 </table>
-</div>
+</div></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="fit">
-    <h2 id="fit">The fit line</h2>
+    <details class="fold"><summary><h2 id="fit">The fit line</h2></summary><div class="fold-body">
     <p>Every score is written out, so a high number can be questioned and a low one explained. Role fit comes first and never moves; the factors sit next to it.</p>
     <p class="formula">fit 8 (role 7, remote in home country +1.5, pay not stated (ask), startup minus 0.5)</p>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Scoring rules, scrolls sideways on small screens">
@@ -183,11 +229,11 @@
 <tr><td>Show</td><td>Role fit under 6.5 is never a recommendation, whatever the location adds. Total 8 or more gets a CV brief and a note; with live interviews running, a CV only from 8.5</td></tr>
 </tbody>
 </table>
-</div>
+</div></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="board-rules">
-    <h2 id="board-rules">What the board adds</h2>
+    <details class="fold"><summary><h2 id="board-rules">What the board adds</h2></summary><div class="fold-body">
     <div class="tablewrap" tabindex="0" role="region" aria-label="Board rules, scrolls sideways on small screens">
 <table style="min-width:640px">
 <thead><tr><th>Tab</th><th>Rule</th></tr></thead>
@@ -200,7 +246,7 @@
 </tbody>
 </table>
 </div>
-    <p style="margin-top:14px">13 calls from 113 applications, about 1 in 9, which is in line with what tailored applications get. Over half had no human reply after 21 days. Only one decision clears the bar: companies under 150 people called back 15% of the time, companies over 500 only 4%, so cold applications to big companies now need a role built around the profile's core duties. A note to a named person (19% against 10%) and roles built around the core duties (14% against 8%) stay open: the gaps are under 10 points.</p>
+    <p style="margin-top:14px">13 calls from 113 applications, about 1 in 9, which is in line with what tailored applications get. Over half had no human reply after 21 days. Only one decision clears the bar: companies under 150 people called back 15% of the time, companies over 500 only 4%, so cold applications to big companies now need a role built around the profile's core duties. A note to a named person (19% against 10%) and roles built around the core duties (14% against 8%) stay open: the gaps are under 10 points.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="titles">
@@ -348,7 +394,7 @@ BA Business, Example University
   </section>
 
   <section aria-labelledby="live">
-    <h2 id="live">What a production version adds</h2>
+    <details class="fold"><summary><h2 id="live">What a production version adds</h2></summary><div class="fold-body">
     <div class="tablewrap" tabindex="0" role="region" aria-label="Sample against production, scrolls sideways on small screens">
 <table style="min-width:760px">
 <thead><tr><th>Part</th><th>In this sample</th><th>In production</th></tr></thead>
@@ -361,22 +407,22 @@ BA Business, Example University
 <tr><td>CV and note</td><td>A brief and a checker</td><td>The CV built on a template from confirmed facts only, then checked; a note under 100 words to a named person</td></tr>
 </tbody>
 </table>
-</div>
+</div></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="built">
-    <h2 id="built">How it was built</h2>
+    <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>I did</dt><dd>Every rule: the gates, the fit parts and their weights, the show bar, the preference weights, the decision threshold and the CV rubric, each one a setting in the profile or a check in the code.</dd>
       <dt>AI did</dt><dd>Claude Code wrote the scripts from those rules. No model scores a role during the run.</dd>
       <dt>Checks</dt><dd>The run stops if an unverified role, a role under the show bar or a done story reaches the list, if a role under 8 gets a CV brief, or if a role is reported twice.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_jobs.py</code>, <code>python3 scan.py profiles/customer-success.json --out output/customer-success</code>, then <code>python3 board.py profiles/customer-success.json output/customer-success</code>. Standard library only.</dd>
     </dl>
-    <p class="note">Synthetic input. Every company, posting, candidate and application is invented to exercise the rules, and the application history has its odds built in, so the decisions show how the board reasons, not a finding. Links end in <code>.example</code>.</p>
+    <p class="note">Synthetic input. Every company, posting, candidate and application is invented to exercise the rules, and the application history has its odds built in, so the decisions show how the board reasons, not a finding. Links end in <code>.example</code>.</p></div></details><!--/fold-->
   </section>
 
   <section aria-labelledby="files">
-    <h2 id="files">Files</h2>
+    <details class="fold"><summary><h2 id="files">Files</h2></summary><div class="fold-body">
     <p><a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/job-search-engine">The whole folder on GitHub</a>: clone it and run it with plain Python.</p>
     <div class="files">
       <div><a href="scan.py">scan.py</a><small>The daily run: dedupe, proof, gates, fit line, recheck.</small></div>
@@ -712,7 +758,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     main()
 </code></pre>
-    </details>
+    </details></div></details><!--/fold-->
   </section>
 
   <footer>
@@ -725,6 +771,51 @@ if __name__ == &quot;__main__&quot;:
 <script>
 /* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
 document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
+
+
+<script id="ws-layout-js">
+(function () {
+  var nav = document.querySelector('.ws-nav');
+  function openFor(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var d = el.closest('details.fold');
+    if (d && !d.open) d.open = true;
+  }
+  if (nav) nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    openFor(a.getAttribute('href').slice(1));
+  });
+  if (location.hash) openFor(location.hash.slice(1));
+  window.addEventListener('hashchange', function () { openFor(location.hash.slice(1)); });
+  document.querySelectorAll('.tablewrap table').forEach(function (t) {
+    var rows = t.tBodies[0] ? Array.prototype.slice.call(t.tBodies[0].rows) : [];
+    if (rows.length <= 12) return;
+    rows.slice(10).forEach(function (r) { r.classList.add('rows-hidden'); });
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rows-more';
+    b.textContent = 'Show all ' + rows.length + ' rows';
+    b.addEventListener('click', function () {
+      var hidden = rows[10].classList.contains('rows-hidden');
+      rows.slice(10).forEach(function (r) { r.classList.toggle('rows-hidden', !hidden); });
+      b.textContent = hidden ? 'Show the top 10' : 'Show all ' + rows.length + ' rows';
+    });
+    t.closest('.tablewrap').insertAdjacentElement('afterend', b);
+  });
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}; nav.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        var a = links[en.target.id];
+        if (a) nav.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
+  }
+})();
 </script>
 </body>
 </html>
