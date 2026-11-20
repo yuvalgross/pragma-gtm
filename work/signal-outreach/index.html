@@ -97,7 +97,7 @@
 </head>
 <body>
 <main>
-  <a class="back" href="/">pragma-gtm.com</a>
+  <a class="back" href="/#samples" data-back>pragma-gtm.com</a>
 
   <header>
     <p class="eyebrow">Work sample</p>
@@ -663,11 +663,15 @@ if __name__ == "__main__":
   </section>
 
   <footer>
-    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#samples" data-back>Back to work samples</a>
     <a href="/#contact">Contact</a>
     <a href="/#privacy">Privacy</a>
     <a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signal-outreach">Code on GitHub</a>
   </footer>
 </main>
+<script>
+/* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
+document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
 </body>
 </html>
