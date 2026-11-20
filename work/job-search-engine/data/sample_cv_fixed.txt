@@ -1,0 +1,19 @@
+Sample Candidate
+Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
+GTM Systems Engineer | Lead Routing, Outbound Signals and Integrations
+GTM Engineer who builds the routing, outbound and integration layer a sales team runs on, in HubSpot, Clay and n8n.
+
+SKILLS
+HubSpot, Clay, n8n, Python, APIs, webhooks, lead routing, outbound signals, Claude
+
+WORK EXPERIENCE
+GTM Engineer | Example Events Ltd | Jan 2024 to Present
+- Routing: Built lead routing in HubSpot and Clay that assigns every inbound lead to the right rep within 5 minutes.
+- Outbound: Created a signal pipeline in Clay that lifted meetings booked 30% in two quarters.
+- Integrations: Connected HubSpot, the event platform and Slack through APIs in n8n, removing 6 weekly exports.
+- Reporting: Shipped a weekly pipeline view for 12 sellers, with a failure alert on every sync.
+Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
+- Quota: Closed 40 new business deals and finished at 104% of quota.
+
+EDUCATION
+BA Business, Example University

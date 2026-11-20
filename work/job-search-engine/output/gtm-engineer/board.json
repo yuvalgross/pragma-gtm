@@ -1,0 +1,4632 @@
+{
+ "profile": "GTM Engineer search",
+ "days": 14,
+ "run_log": [
+  {
+   "day": 0,
+   "copies_read": 83,
+   "unique_roles": 72,
+   "in_titles": 39,
+   "already_seen": 0,
+   "new_main": [
+    "Opal Health, GTM Systems Engineer (fit 10)",
+    "Nimbus Cloud, RevOps Engineer (fit 8.5)",
+    "Nimbus Labs, GTM Engineer (fit 8)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 10,
+   "dropped": 24,
+   "could_not_verify": 0,
+   "closed_on_board": 2,
+   "tracked_closed": [],
+   "cvs_drafted": 2,
+   "kind": "scheduled"
+  },
+  {
+   "day": 1,
+   "copies_read": 25,
+   "unique_roles": 23,
+   "in_titles": 8,
+   "already_seen": 2,
+   "new_main": [],
+   "reference": 1,
+   "seen_not_a_fit": 1,
+   "dropped": 5,
+   "could_not_verify": 0,
+   "closed_on_board": 1,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 2,
+   "copies_read": 21,
+   "unique_roles": 19,
+   "in_titles": 4,
+   "already_seen": 6,
+   "new_main": [],
+   "reference": 1,
+   "seen_not_a_fit": 0,
+   "dropped": 3,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 3,
+   "copies_read": 36,
+   "unique_roles": 33,
+   "in_titles": 14,
+   "already_seen": 4,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 3,
+   "dropped": 10,
+   "could_not_verify": 1,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 4,
+   "copies_read": 26,
+   "unique_roles": 24,
+   "in_titles": 8,
+   "already_seen": 8,
+   "new_main": [],
+   "reference": 1,
+   "seen_not_a_fit": 3,
+   "dropped": 4,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 5,
+   "copies_read": 20,
+   "unique_roles": 19,
+   "in_titles": 10,
+   "already_seen": 3,
+   "new_main": [
+    "Halcyon HQ, Growth Engineer (fit 10)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 1,
+   "dropped": 8,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 5,
+   "kind": "manual rerun",
+   "skipped": "last run started 13h ago, under 20h"
+  },
+  {
+   "day": 6,
+   "copies_read": 26,
+   "unique_roles": 24,
+   "in_titles": 12,
+   "already_seen": 6,
+   "new_main": [
+    "Atlas Pay, GTM Systems Engineer (fit 9)",
+    "Tidal Logic, GTM Engineer (fit 9.5)"
+   ],
+   "reference": 1,
+   "seen_not_a_fit": 1,
+   "dropped": 8,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 2,
+   "kind": "scheduled"
+  },
+  {
+   "day": 7,
+   "copies_read": 37,
+   "unique_roles": 32,
+   "in_titles": 5,
+   "already_seen": 11,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 2,
+   "dropped": 3,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 8,
+   "copies_read": 24,
+   "unique_roles": 20,
+   "in_titles": 4,
+   "already_seen": 3,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 2,
+   "dropped": 2,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [
+    "Nimbus Cloud, RevOps Engineer"
+   ],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 9,
+   "copies_read": 27,
+   "unique_roles": 27,
+   "in_titles": 10,
+   "already_seen": 6,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 4,
+   "dropped": 6,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 10,
+   "copies_read": 17,
+   "unique_roles": 16,
+   "in_titles": 4,
+   "already_seen": 9,
+   "new_main": [],
+   "reference": 1,
+   "seen_not_a_fit": 2,
+   "dropped": 1,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [
+    "Opal Health, GTM Systems Engineer"
+   ],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 11,
+   "copies_read": 32,
+   "unique_roles": 28,
+   "in_titles": 6,
+   "already_seen": 11,
+   "new_main": [
+    "Garnet Health, GTM Systems Engineer (fit 8.5)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 5,
+   "dropped": 0,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 12,
+   "copies_read": 31,
+   "unique_roles": 31,
+   "in_titles": 8,
+   "already_seen": 12,
+   "new_main": [
+    "Ember Grid, RevOps Engineer (fit 8.5)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 7,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 13,
+   "copies_read": 30,
+   "unique_roles": 24,
+   "in_titles": 4,
+   "already_seen": 9,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 4,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [
+    "Tidal Logic, GTM Engineer"
+   ],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  }
+ ],
+ "main": [
+  {
+   "id": "4228",
+   "company": "Opal Health",
+   "title": "GTM Systems Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://opalhealth.jobs.personio.example/job/4228",
+   "sources": [
+    "niche GTM board"
+   ],
+   "role_fit": 9.0,
+   "total": 10,
+   "fit_line": "fit 10 (role 9, remote in home country +1.5, pay above floor +0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "GTM Systems Engineer",
+    "top_requirements": [
+     "build lead routing from scratch",
+     "build outbound and signal pipelines",
+     "integrate tools through APIs"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "HubSpot",
+     "n8n",
+     "outbound",
+     "lead routing",
+     "APIs"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, the ad's language."
+   },
+   "first_seen": 0,
+   "state": "closed",
+   "closed_seen": 10,
+   "employees": 3000,
+   "pay_k_eur": [
+    70,
+    80
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "build outbound and signal pipelines",
+    "integrate tools through APIs"
+   ],
+   "tools": [
+    "HubSpot",
+    "Clay",
+    "n8n"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4267",
+   "company": "Nimbus Cloud",
+   "title": "RevOps Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/nimbuscloud/jobs/4267",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 7.5,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 7.5, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "RevOps Engineer",
+    "top_requirements": [
+     "build enrichment and scoring workflows",
+     "automate CRM updates with APIs and webhooks",
+     "maintain dashboards in Looker"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "Python",
+     "Apollo",
+     "Salesforce",
+     "enrichment",
+     "scoring",
+     "outbound",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "5 years asked"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Greenhouse",
+    "ats_advice": "Parsed into fields and searched by keyword: exact terms and standard headings."
+   },
+   "first_seen": 0,
+   "state": "closed",
+   "closed_seen": 8,
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build enrichment and scoring workflows",
+    "automate CRM updates with APIs and webhooks",
+    "maintain dashboards in Looker",
+    "run the forecast process",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Salesforce",
+    "Apollo",
+    "Clay",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4556",
+   "company": "Nimbus Labs",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://nimbuslabs.recruitee.example/o/4556",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 8.0,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 8, home city +0.5, floor inside the band, on site only minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "GTM Engineer",
+    "top_requirements": [
+     "integrate tools through APIs",
+     "maintain dashboards in Looker",
+     "own pipeline reporting for leadership"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "n8n",
+     "Claude",
+     "Apollo",
+     "outbound",
+     "APIs"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "Recruitee",
+    "ats_advice": "Reliable parser plus screening questions: answer knockout questions carefully."
+   },
+   "first_seen": 0,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": [
+    50,
+    70
+   ],
+   "duties": [
+    "integrate tools through APIs",
+    "maintain dashboards in Looker",
+    "own pipeline reporting for leadership",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Clay",
+    "Apollo",
+    "Claude",
+    "n8n"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4002",
+   "company": "Halcyon HQ",
+   "title": "Growth Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/halcyonhq/4002",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 9.0,
+   "total": 10.0,
+   "fit_line": "fit 10 (role 9, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "Growth Engineer",
+    "top_requirements": [
+     "build outbound and signal pipelines",
+     "maintain dashboards in Looker",
+     "write outbound copy for SDRs"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "Make",
+     "Salesforce",
+     "outbound"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Ashby",
+    "ats_advice": "AI assisted screening checks each requirement: mirror the JD's skill and tool terms in skills and in bullets."
+   },
+   "first_seen": 5,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "maintain dashboards in Looker",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Salesforce",
+    "Make",
+    "Clay"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4328",
+   "company": "Atlas Pay",
+   "title": "GTM Systems Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://atlaspay.jobs.personio.example/job/4328",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.5,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 7.5, remote in home country +1.5, pay not stated (ask))",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "GTM Systems Engineer",
+    "top_requirements": [
+     "build outbound and signal pipelines",
+     "build enrichment and scoring workflows",
+     "administer the CRM"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "Make",
+     "Python",
+     "Claude",
+     "Zapier",
+     "enrichment",
+     "scoring",
+     "outbound",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "6 years asked"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, the ad's language."
+   },
+   "first_seen": 6,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "build enrichment and scoring workflows",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Make",
+    "Claude",
+    "Zapier",
+    "Python",
+    "Clay"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4551",
+   "company": "Tidal Logic",
+   "title": "GTM Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/tidallogic/j/4551",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 8.0,
+   "total": 9.5,
+   "fit_line": "fit 9.5 (role 8, EU remote +1.5, pay not stated (ask))",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "GTM Engineer",
+    "top_requirements": [
+     "ship AI agents for research and routing",
+     "automate CRM updates with APIs and webhooks",
+     "build outbound and signal pipelines"
+    ],
+    "keywords_on_record": [
+     "Python",
+     "Claude",
+     "Zapier",
+     "outbound",
+     "APIs",
+     "webhooks",
+     "AI agents",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "Looker"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Workable",
+    "ats_advice": "Parsed profile and screening questions: standard headings, exact terms."
+   },
+   "first_seen": 6,
+   "state": "closed",
+   "closed_seen": 13,
+   "employees": 160,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "automate CRM updates with APIs and webhooks",
+    "build outbound and signal pipelines"
+   ],
+   "tools": [
+    "Looker",
+    "Zapier",
+    "Python",
+    "Claude"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4587",
+   "company": "Garnet Health",
+   "title": "GTM Systems Engineer",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://garnethealth.jobs.personio.example/job/4587",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 7.5,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 7.5, Remote Spain +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "GTM Systems Engineer",
+    "top_requirements": [
+     "build enrichment and scoring workflows",
+     "automate CRM updates with APIs and webhooks",
+     "build outbound and signal pipelines"
+    ],
+    "keywords_on_record": [
+     "Clay",
+     "Python",
+     "enrichment",
+     "scoring",
+     "outbound",
+     "APIs",
+     "webhooks",
+     "CRM"
+    ],
+    "gaps_to_name_not_cover": [
+     "CPQ"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, the ad's language."
+   },
+   "first_seen": 11,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build enrichment and scoring workflows",
+    "automate CRM updates with APIs and webhooks",
+    "build outbound and signal pipelines",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Python",
+    "Clay",
+    "CPQ"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4366",
+   "company": "Ember Grid",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://embergrid.jobs.personio.example/job/4366",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 8.0,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 8, home city +0.5, pay not stated (ask))",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "RevOps Engineer",
+    "top_requirements": [
+     "ship AI agents for research and routing",
+     "build enrichment and scoring workflows",
+     "prepare QBR decks"
+    ],
+    "keywords_on_record": [
+     "Make",
+     "Python",
+     "Apollo",
+     "Zapier",
+     "Salesforce",
+     "enrichment",
+     "scoring",
+     "AI agents"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Berlin, Germany",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, the ad's language."
+   },
+   "first_seen": 12,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "build enrichment and scoring workflows",
+    "prepare QBR decks",
+    "own pipeline reporting for leadership",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Salesforce",
+    "Zapier",
+    "Apollo",
+    "Make",
+    "Python"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  }
+ ],
+ "reference": [
+  {
+   "id": "4458",
+   "company": "Nimbus Systems",
+   "title": "GTM Engineer",
+   "location": "London",
+   "workplace": "on site",
+   "url": "https://apply.workable.example/nimbussystems/j/4458",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 8.5,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 8.5, London needs a move +0, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 1,
+   "state": "open",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "build enrichment and scoring workflows",
+    "build outbound and signal pipelines"
+   ],
+   "tools": [
+    "n8n",
+    "Zapier",
+    "Clay"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4145",
+   "company": "Ember Pay",
+   "title": "Growth Engineer",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/emberpay/jobs/4145",
+   "sources": [
+    "newsletter"
+   ],
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, Amsterdam +0, pay not stated (ask))",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 2,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "build enrichment and scoring workflows",
+    "integrate tools through APIs",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "dbt",
+    "Zapier",
+    "n8n"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4035",
+   "company": "Delta Data",
+   "title": "Senior GTM Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/deltadata/4035",
+   "sources": [
+    "ATS host search",
+    "niche GTM board"
+   ],
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, home city +0.5, pay above floor +0.5, on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 4,
+   "state": "open",
+   "employees": 15,
+   "pay_k_eur": [
+    80,
+    95
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "build outbound and signal pipelines",
+    "build enrichment and scoring workflows",
+    "run the forecast process"
+   ],
+   "tools": [
+    "SQL",
+    "n8n",
+    "Python"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4416",
+   "company": "Saffron Grid",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/saffrongrid/4416",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 7.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7, home city +0.5, floor inside the band)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 6,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": [
+    50,
+    75
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "HubSpot",
+    "Salesforce",
+    "n8n"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4053",
+   "company": "Linden Data",
+   "title": "RevOps Engineer",
+   "location": "Barcelona",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/lindendata/jobs/4053",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7, Barcelona needs a move +0, pay above floor +0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 10,
+   "state": "open",
+   "employees": 160,
+   "pay_k_eur": [
+    85,
+    95
+   ],
+   "duties": [
+    "integrate tools through APIs",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Apollo",
+    "Zapier",
+    "Looker"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  }
+ ],
+ "seen": [
+  {
+   "id": "4112",
+   "company": "Quarry Pay",
+   "title": "Senior RevOps Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/quarrypay/j/4112",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 3, EU remote +1.5, pay above floor +0.5)",
+   "why": "role 3, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 600,
+   "pay_k_eur": [
+    70,
+    95
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "CPQ",
+    "Excel",
+    "Looker"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4237",
+   "company": "Lumen Cloud",
+   "title": "GTM Engineer",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/lumencloud/4237",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 4.5,
+   "total": 4.0,
+   "fit_line": "fit 4 (role 4.5, Amsterdam +0, pay above floor +0.5, on site only minus 0.5, startup minus 0.5)",
+   "why": "role 4.5, run shape",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": [
+    70,
+    90
+   ],
+   "duties": [
+    "run the forecast process",
+    "own pipeline reporting for leadership",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "CPQ",
+    "Clay",
+    "SQL",
+    "Zapier",
+    "n8n"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4273",
+   "company": "Indigo Health",
+   "title": "Senior RevOps Manager",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/indigohealth/4273",
+   "sources": [
+    "VC portfolio board"
+   ],
+   "role_fit": 2.0,
+   "total": 2.0,
+   "fit_line": "fit 2 (role 2, London needs a move +0, floor inside the band)",
+   "why": "role 2, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "administer the CRM",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Excel",
+    "CPQ",
+    "Gong"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4325",
+   "company": "Indigo Cloud",
+   "title": "GTM Engineer",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://indigocloud.teamtailor.example/jobs/4325",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 6.0,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 6, London needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "why": "role 6, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "own pipeline reporting for leadership",
+    "run the forecast process"
+   ],
+   "tools": [
+    "SQL",
+    "Zapier",
+    "Apollo",
+    "Make"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4352",
+   "company": "Opal Systems",
+   "title": "GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/opalsystems/4352",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 5.5,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 5.5, remote in home country +1.5, pay not stated (ask))",
+   "why": "role 5.5, run shape",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 160,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "write outbound copy for SDRs",
+    "run the forecast process",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Looker",
+    "HubSpot",
+    "Make"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4354",
+   "company": "Rook AI",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://rookai.jobs.personio.example/job/4354",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 6.0,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 6, home city +0.5, pay not stated (ask), on site only minus 0.5)",
+   "why": "role 6, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "integrate tools through APIs",
+    "ship AI agents for research and routing"
+   ],
+   "tools": [
+    "SQL",
+    "Apollo",
+    "dbt"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4368",
+   "company": "Atlas Pay",
+   "title": "RevOps Specialist",
+   "location": "London",
+   "workplace": "on site",
+   "url": "https://atlaspay.jobs.personio.example/job/4368",
+   "sources": [
+    "niche GTM board"
+   ],
+   "role_fit": 2.5,
+   "total": 2.0,
+   "fit_line": "fit 2 (role 2.5, London needs a move +0, floor inside the band, on site only minus 0.5)",
+   "why": "role 2.5, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    55,
+    80
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "run the forecast process",
+    "prepare QBR decks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "SQL",
+    "Excel",
+    "Salesforce",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4374",
+   "company": "Nimbus Labs",
+   "title": "Sales Operations Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://nimbuslabs.recruitee.example/o/4374",
+   "sources": [
+    "newsletter"
+   ],
+   "role_fit": 2.0,
+   "total": 3.0,
+   "fit_line": "fit 3 (role 2, EU remote +1.5, pay not stated (ask), run shape at a big team minus 0.5)",
+   "why": "role 2, run shape",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "run the forecast process",
+    "design commission plans"
+   ],
+   "tools": [
+    "Gong",
+    "SQL",
+    "Excel"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4594",
+   "company": "Juniper Grid",
+   "title": "Revenue Operations Manager",
+   "location": "Limassol",
+   "workplace": "on site",
+   "url": "https://junipergrid.jobs.personio.example/job/4594",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 4.0,
+   "fit_line": "fit 4 (role 3, Limassol +1.25, pay above floor +0.5, on site only minus 0.5, startup minus 0.5)",
+   "why": "role 3, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 70,
+   "pay_k_eur": [
+    80,
+    105
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "own pipeline reporting for leadership",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "SQL",
+    "CPQ",
+    "Looker",
+    "HubSpot"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4601",
+   "company": "Bramble Cloud",
+   "title": "GTM Systems Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://bramblecloud.jobs.personio.example/job/4601",
+   "sources": [
+    "startup board"
+   ],
+   "role_fit": 6.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 6, EU remote +1.5, floor inside the band, startup minus 0.5)",
+   "why": "role 6, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 15,
+   "pay_k_eur": [
+    55,
+    80
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "build outbound and signal pipelines",
+    "build lead routing from scratch",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Python",
+    "dbt",
+    "Apollo",
+    "Zapier",
+    "SQL"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4337",
+   "company": "Sable Systems",
+   "title": "Revenue Operations Manager",
+   "location": "London",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4337",
+   "sources": [
+    "newsletter"
+   ],
+   "role_fit": 3.0,
+   "total": 2.0,
+   "fit_line": "fit 2 (role 3, London needs a move +0, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "why": "role 3, tools and years",
+   "first_seen": 1,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Gong",
+    "Salesforce",
+    "SQL",
+    "CPQ"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4229",
+   "company": "Ember Pay",
+   "title": "Revenue Operations Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/emberpay/jobs/4229",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 4.5,
+   "fit_line": "fit 4.5 (role 3, EU remote +1.5, pay not stated (ask))",
+   "why": "role 3, run shape",
+   "first_seen": 3,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "run the forecast process",
+    "design commission plans",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Looker",
+    "Salesforce",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4268",
+   "company": "Vesper Logic",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/vesperlogic/jobs/4268",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 5.5,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 5.5, home city +0.5, pay not stated (ask))",
+   "why": "role 5.5, tools and years",
+   "first_seen": 3,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "prepare QBR decks",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "SQL",
+    "Apollo",
+    "HubSpot"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4521",
+   "company": "Marlow Labs",
+   "title": "Head of GTM Engineering",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://marlowlabs.jobs.personio.example/job/4521",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 5.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 5, EU remote +1.5, pay above floor +0.5, startup minus 0.5); title above the record, name the leadership gap",
+   "why": "role 5, tools and years",
+   "first_seen": 3,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": [
+    65,
+    80
+   ],
+   "duties": [
+    "build enrichment and scoring workflows",
+    "integrate tools through APIs",
+    "build lead routing from scratch",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Clay",
+    "CPQ",
+    "Zapier",
+    "Looker",
+    "n8n"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4161",
+   "company": "Delta Cloud",
+   "title": "Revenue Operations Manager",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://deltacloud.teamtailor.example/jobs/4161",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 2.5,
+   "fit_line": "fit 2.5 (role 3, Amsterdam +0, pay not stated (ask), on site only minus 0.5)",
+   "why": "role 3, tools and years",
+   "first_seen": 4,
+   "state": "open",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "run the forecast process",
+    "own pipeline reporting for leadership",
+    "administer the CRM"
+   ],
+   "tools": [
+    "SQL",
+    "CPQ",
+    "Gong",
+    "HubSpot"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4428",
+   "company": "Kestrel AI",
+   "title": "RevOps Specialist",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://join.example/companies/kestrelai/4428",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 2.5,
+   "total": 2.5,
+   "fit_line": "fit 2.5 (role 2.5, home city +0.5, pay above floor +0.5, on site only minus 0.5, run shape at a big team minus 0.5)",
+   "why": "role 2.5, run shape",
+   "first_seen": 4,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    75,
+    100
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "own pipeline reporting for leadership",
+    "run the forecast process",
+    "design commission plans"
+   ],
+   "tools": [
+    "Excel",
+    "Salesforce",
+    "Gong",
+    "HubSpot",
+    "CPQ"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4489",
+   "company": "Ember Health",
+   "title": "Sales Operations Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://join.example/companies/emberhealth/4489",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 4.0,
+   "fit_line": "fit 4 (role 3, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "why": "role 3, tools and years",
+   "first_seen": 4,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "Gong",
+    "Excel",
+    "HubSpot",
+    "Looker",
+    "CPQ"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4549",
+   "company": "Halcyon Health",
+   "title": "RevOps Specialist",
+   "location": "Stockholm",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/halcyonhealth/jobs/4549",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 2.5,
+   "total": 2.5,
+   "fit_line": "fit 2.5 (role 2.5, Stockholm needs a move +0, pay above floor +0.5, startup minus 0.5)",
+   "why": "role 2.5, run shape",
+   "first_seen": 5,
+   "state": "open",
+   "employees": 110,
+   "pay_k_eur": [
+    65,
+    90
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "run the forecast process",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Looker",
+    "SQL",
+    "Salesforce",
+    "Excel"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4618",
+   "company": "Sable Systems",
+   "title": "Sales Operations Analyst",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4618",
+   "sources": [
+    "niche GTM board"
+   ],
+   "role_fit": 2.0,
+   "total": 3.0,
+   "fit_line": "fit 3 (role 2, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+   "why": "role 2, tools and years",
+   "first_seen": 6,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Excel",
+    "SQL",
+    "CPQ"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4244",
+   "company": "Delta Cloud",
+   "title": "Head of Revenue Operations",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://deltacloud.teamtailor.example/jobs/4244",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "role_fit": 1.5,
+   "total": 3.5,
+   "fit_line": "fit 3.5 (role 1.5, EU remote +1.5, pay above floor +0.5); title above the record, name the leadership gap",
+   "why": "role 1.5, tools and years",
+   "first_seen": 7,
+   "state": "open",
+   "employees": 600,
+   "pay_k_eur": [
+    70,
+    95
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "administer the CRM",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Salesforce",
+    "CPQ",
+    "Gong"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4391",
+   "company": "Ember Logic",
+   "title": "Head of GTM Engineering",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://emberlogic.recruitee.example/o/4391",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "role_fit": 5.5,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 5.5, London needs a move +0, pay not stated (ask)); title above the record, name the leadership gap",
+   "why": "role 5.5, tools and years",
+   "first_seen": 7,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "integrate tools through APIs",
+    "automate CRM updates with APIs and webhooks",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Looker",
+    "Clay",
+    "dbt",
+    "Claude"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4208",
+   "company": "Lumen Cloud",
+   "title": "Growth Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/lumencloud/4208",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 5.5,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 5.5, home city +0.5, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "why": "role 5.5, tools and years",
+   "first_seen": 8,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Python",
+    "dbt",
+    "SQL"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4310",
+   "company": "Saffron AI",
+   "title": "Revenue Operations Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/saffronai/jobs/4310",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 3.0,
+   "total": 4.0,
+   "fit_line": "fit 4 (role 3, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+   "why": "role 3, tools and years",
+   "first_seen": 8,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "prepare QBR decks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Gong",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4136",
+   "company": "Marlow Logic",
+   "title": "Senior RevOps Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://join.example/companies/marlowlogic/4136",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 4.5,
+   "fit_line": "fit 4.5 (role 3, remote in home country +1.5, floor inside the band)",
+   "why": "role 3, tools and years",
+   "first_seen": 9,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": [
+    60,
+    70
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Looker",
+    "SQL",
+    "Gong"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4178",
+   "company": "Atlas Pay",
+   "title": "GTM Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://atlaspay.jobs.personio.example/job/4178",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 4.0,
+   "total": 5.5,
+   "fit_line": "fit 5.5 (role 4, EU remote +1.5, pay not stated (ask))",
+   "why": "role 4, tools and years",
+   "first_seen": 9,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build enrichment and scoring workflows",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "CPQ",
+    "Looker",
+    "SQL",
+    "Make"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4564",
+   "company": "Nettle Pay",
+   "title": "GTM Systems Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/nettlepay/jobs/4564",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 5.5,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 5.5, EU remote +1.5, pay above floor +0.5)",
+   "why": "role 5.5, run shape",
+   "first_seen": 9,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": [
+    80,
+    100
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning",
+    "prepare QBR decks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Salesforce",
+    "Looker",
+    "n8n",
+    "Apollo",
+    "Clay"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4628",
+   "company": "Quill Grid",
+   "title": "Sales Operations Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://quillgrid.jobs.personio.example/job/4628",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 3.0,
+   "total": 4.5,
+   "fit_line": "fit 4.5 (role 3, EU remote +1.5, pay not stated (ask))",
+   "why": "role 3, tools and years",
+   "first_seen": 9,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "administer the CRM",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Excel",
+    "CPQ",
+    "HubSpot",
+    "Salesforce",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4084",
+   "company": "Rook Cloud",
+   "title": "Revenue Operations Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/rookcloud/jobs/4084",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 4.0,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 4, home city +0.5, pay above floor +0.5)",
+   "why": "role 4, tools and years",
+   "first_seen": 10,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    75,
+    95
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "HubSpot",
+    "Gong",
+    "Excel"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4591",
+   "company": "Orchard Systems",
+   "title": "RevOps Engineer",
+   "location": "Barcelona",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/orchardsystems/4591",
+   "sources": [
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "role_fit": 4.5,
+   "total": 4.5,
+   "fit_line": "fit 4.5 (role 4.5, Barcelona needs a move +0, floor inside the band)",
+   "why": "role 4.5, tools and years",
+   "first_seen": 10,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "maintain dashboards in Looker",
+    "prepare QBR decks",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Python",
+    "CPQ",
+    "dbt",
+    "HubSpot",
+    "SQL"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4086",
+   "company": "Juniper Cloud",
+   "title": "GTM Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://junipercloud.jobs.personio.example/job/4086",
+   "sources": [
+    "ATS host search",
+    "Indeed"
+   ],
+   "role_fit": 5.5,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 5.5, EU remote +1.5, pay above floor +0.5, run shape at a big team minus 0.5)",
+   "why": "role 5.5, run shape",
+   "first_seen": 11,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    65,
+    75
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "manage territory and quota planning",
+    "write outbound copy for SDRs",
+    "administer the CRM"
+   ],
+   "tools": [
+    "CPQ",
+    "Python",
+    "Make",
+    "n8n",
+    "Salesforce"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4142",
+   "company": "Delta Cloud",
+   "title": "Head of GTM Engineering",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://deltacloud.teamtailor.example/jobs/4142",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 5.0,
+   "total": 4.5,
+   "fit_line": "fit 4.5 (role 5, home city +0.5, pay not stated (ask), on site only minus 0.5, run shape at a big team minus 0.5); title above the record, name the leadership gap",
+   "why": "role 5, run shape",
+   "first_seen": 11,
+   "state": "open",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "manage territory and quota planning",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "CPQ",
+    "n8n",
+    "Zapier",
+    "Make",
+    "Claude"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4231",
+   "company": "Rook Cloud",
+   "title": "Sales Operations Analyst",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/rookcloud/jobs/4231",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 3.0,
+   "total": 3.0,
+   "fit_line": "fit 3 (role 3, London needs a move +0, pay above floor +0.5, run shape at a big team minus 0.5)",
+   "why": "role 3, run shape",
+   "first_seen": 11,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    85,
+    100
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "prepare QBR decks",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "SQL",
+    "Excel",
+    "HubSpot",
+    "Looker",
+    "Salesforce"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4365",
+   "company": "Vesper Logic",
+   "title": "Sales Operations Analyst",
+   "location": "Stockholm",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/vesperlogic/jobs/4365",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 2.5,
+   "total": 1.5,
+   "fit_line": "fit 1.5 (role 2.5, Stockholm needs a move +0, pay not stated (ask), on site only minus 0.5, run shape at a big team minus 0.5)",
+   "why": "role 2.5, run shape",
+   "first_seen": 11,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "prepare QBR decks",
+    "design commission plans"
+   ],
+   "tools": [
+    "SQL",
+    "Looker",
+    "HubSpot",
+    "CPQ"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4649",
+   "company": "Sable Logic",
+   "title": "Growth Engineer",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/sablelogic/4649",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 5.0,
+   "total": 5.0,
+   "fit_line": "fit 5 (role 5, London needs a move +0, floor inside the band)",
+   "why": "role 5, tools and years",
+   "first_seen": 11,
+   "state": "open",
+   "employees": 600,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "own pipeline reporting for leadership",
+    "maintain dashboards in Looker",
+    "administer the CRM"
+   ],
+   "tools": [
+    "dbt",
+    "Looker",
+    "HubSpot",
+    "n8n"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  }
+ ],
+ "dropped": [
+  {
+   "id": "4006",
+   "company": "Quill Systems",
+   "title": "GTM Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/quillsystems/4006",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 70,
+   "pay_k_eur": null,
+   "duties": [
+    "integrate tools through APIs",
+    "administer the CRM",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Salesforce",
+    "Python",
+    "dbt",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4008",
+   "company": "Linden Systems",
+   "title": "GTM Engineering Intern",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/lindensystems/jobs/4008",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "run the forecast process",
+    "write outbound copy for SDRs",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Salesforce",
+    "HubSpot",
+    "Make",
+    "Looker",
+    "Clay"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4014",
+   "company": "Opal Pay",
+   "title": "Head of Revenue Operations",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://opalpay.jobs.personio.example/job/4014",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 70,
+   "pay_k_eur": [
+    60,
+    85
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "HubSpot",
+    "SQL",
+    "CPQ"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4020",
+   "company": "Halcyon HQ",
+   "title": "Senior RevOps Manager",
+   "location": "Madrid",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/halcyonhq/4020",
+   "sources": [
+    "VC portfolio board"
+   ],
+   "why": "Spanish required",
+   "employees": 45,
+   "pay_k_eur": [
+    80,
+    100
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "prepare QBR decks",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Gong",
+    "CPQ",
+    "Looker",
+    "Salesforce"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4028",
+   "company": "Ember Cloud",
+   "title": "Revenue Operations Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/embercloud/4028",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "German C1 required",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "run the forecast process"
+   ],
+   "tools": [
+    "Looker",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4109",
+   "company": "Prism Works",
+   "title": "RevOps Specialist",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://prismworks.teamtailor.example/jobs/4109",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 70,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "own pipeline reporting for leadership",
+    "administer the CRM",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Excel",
+    "SQL",
+    "Looker"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4115",
+   "company": "Quill Health",
+   "title": "Sales Operations Analyst",
+   "location": "Paris",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/quillhealth/jobs/4115",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "French required",
+   "employees": 45,
+   "pay_k_eur": [
+    75,
+    100
+   ],
+   "duties": [
+    "design commission plans",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "SQL",
+    "Excel",
+    "Looker"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "French"
+   ]
+  },
+  {
+   "id": "4119",
+   "company": "Opal Works",
+   "title": "Working Student GTM Engineering",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/opalworks/jobs/4119",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "automate CRM updates with APIs and webhooks",
+    "integrate tools through APIs"
+   ],
+   "tools": [
+    "Clay",
+    "n8n",
+    "Claude",
+    "HubSpot",
+    "Python"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4167",
+   "company": "Opal Systems",
+   "title": "GTM Engineering Intern",
+   "location": "Barcelona",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/opalsystems/4167",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 160,
+   "pay_k_eur": [
+    65,
+    90
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "build enrichment and scoring workflows",
+    "run the forecast process",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "CPQ",
+    "dbt",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4183",
+   "company": "Rook Stack",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/rookstack/4183",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 15,
+   "pay_k_eur": [
+    60,
+    85
+   ],
+   "duties": [
+    "integrate tools through APIs",
+    "automate CRM updates with APIs and webhooks",
+    "build enrichment and scoring workflows",
+    "run the forecast process"
+   ],
+   "tools": [
+    "n8n",
+    "Zapier",
+    "HubSpot",
+    "Clay",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4196",
+   "company": "Fable Logic",
+   "title": "RevOps Engineer",
+   "location": "Barcelona",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/fablelogic/4196",
+   "sources": [
+    "remote board"
+   ],
+   "why": "Spanish required",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "SQL",
+    "CPQ",
+    "Clay",
+    "HubSpot"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4287",
+   "company": "Sable Systems",
+   "title": "GTM Engineering Intern",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4287",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "write outbound copy for SDRs",
+    "own pipeline reporting for leadership",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Clay",
+    "Apollo",
+    "Claude",
+    "Make"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4290",
+   "company": "Quill Pay",
+   "title": "GTM Engineer",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://quillpay.jobs.personio.example/job/4290",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "rejected there before, done story",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "run the forecast process",
+    "own pipeline reporting for leadership",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Apollo",
+    "Salesforce",
+    "CPQ",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4307",
+   "company": "Kestrel AI",
+   "title": "RevOps Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://join.example/companies/kestrelai/4307",
+   "sources": [
+    "newsletter",
+    "niche GTM board"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": [
+    75,
+    85
+   ],
+   "duties": [
+    "build outbound and signal pipelines",
+    "build enrichment and scoring workflows",
+    "build lead routing from scratch"
+   ],
+   "tools": [
+    "Make",
+    "dbt",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4375",
+   "company": "Thistle Cloud",
+   "title": "RevOps Specialist",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://thistlecloud.jobs.personio.example/job/4375",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "HubSpot",
+    "Excel",
+    "Salesforce",
+    "CPQ",
+    "Gong"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4392",
+   "company": "Vesper Data",
+   "title": "Senior GTM Engineer",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://vesperdata.jobs.personio.example/job/4392",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "ship AI agents for research and routing"
+   ],
+   "tools": [
+    "Apollo",
+    "CPQ",
+    "Clay",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4396",
+   "company": "Harbor Pay",
+   "title": "GTM Engineering Intern",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://harborpay.teamtailor.example/jobs/4396",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 110,
+   "pay_k_eur": [
+    70,
+    95
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Looker",
+    "Python",
+    "Clay",
+    "Apollo",
+    "Zapier"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4419",
+   "company": "Ember Pay",
+   "title": "Head of GTM Engineering",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/emberpay/jobs/4419",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 240,
+   "pay_k_eur": [
+    85,
+    95
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning",
+    "own pipeline reporting for leadership",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Zapier",
+    "dbt",
+    "SQL",
+    "Make",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4443",
+   "company": "Linden Pay",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://lindenpay.teamtailor.example/jobs/4443",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "manage territory and quota planning",
+    "maintain dashboards in Looker",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Apollo",
+    "Claude",
+    "Clay"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4446",
+   "company": "Juniper Cloud",
+   "title": "Sales Operations Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://junipercloud.jobs.personio.example/job/4446",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "prepare QBR decks",
+    "design commission plans",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Salesforce",
+    "Gong",
+    "HubSpot",
+    "CPQ"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4455",
+   "company": "Opal Pay",
+   "title": "GTM Engineer",
+   "location": "Hamburg",
+   "workplace": "on site",
+   "url": "https://opalpay.jobs.personio.example/job/4455",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 70,
+   "pay_k_eur": [
+    80,
+    95
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "build outbound and signal pipelines"
+   ],
+   "tools": [
+    "HubSpot",
+    "Looker",
+    "dbt",
+    "Python",
+    "Claude"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4542",
+   "company": "Nimbus Cloud",
+   "title": "Head of GTM Engineering",
+   "location": "Madrid",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/nimbuscloud/jobs/4542",
+   "sources": [
+    "remote board"
+   ],
+   "why": "Spanish required",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "maintain dashboards in Looker",
+    "administer the CRM"
+   ],
+   "tools": [
+    "dbt",
+    "Python",
+    "Clay",
+    "Make",
+    "Claude"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4597",
+   "company": "Pebble Labs",
+   "title": "Working Student GTM Engineering",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://pebblelabs.jobs.personio.example/job/4597",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 160,
+   "pay_k_eur": null,
+   "duties": [
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "n8n",
+    "Salesforce",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4642",
+   "company": "Quarry Works",
+   "title": "Sales Operations Analyst",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.lever.example/quarryworks/4642",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "German C1 required",
+   "employees": 380,
+   "pay_k_eur": [
+    75,
+    95
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "run the forecast process",
+    "prepare QBR decks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Excel",
+    "HubSpot",
+    "SQL",
+    "Salesforce",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4169",
+   "company": "Garnet Data",
+   "title": "Revenue Operations Manager",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/garnetdata/jobs/4169",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "administer the CRM",
+    "design commission plans",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "HubSpot",
+    "Excel",
+    "Gong"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4205",
+   "company": "Halcyon Systems",
+   "title": "Founding GTM Engineer",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://halcyonsystems.jobs.personio.example/job/4205",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "ship AI agents for research and routing",
+    "integrate tools through APIs",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Zapier",
+    "SQL",
+    "Clay",
+    "n8n"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4555",
+   "company": "Garnet Data",
+   "title": "Senior GTM Engineer",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/garnetdata/jobs/4555",
+   "sources": [
+    "ATS host search",
+    "newsletter"
+   ],
+   "why": "German C1 required",
+   "employees": 240,
+   "pay_k_eur": [
+    55,
+    80
+   ],
+   "duties": [
+    "integrate tools through APIs",
+    "build enrichment and scoring workflows",
+    "build lead routing from scratch"
+   ],
+   "tools": [
+    "Zapier",
+    "Make",
+    "Salesforce",
+    "n8n"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4572",
+   "company": "Garnet Data",
+   "title": "RevOps Specialist",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/garnetdata/jobs/4572",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 240,
+   "pay_k_eur": [
+    70,
+    90
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "run the forecast process",
+    "design commission plans",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "Gong",
+    "Salesforce",
+    "CPQ",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4624",
+   "company": "Prism Labs",
+   "title": "Sales Operations Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/prismlabs/jobs/4624",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 110,
+   "pay_k_eur": [
+    65,
+    90
+   ],
+   "duties": [
+    "prepare QBR decks",
+    "design commission plans"
+   ],
+   "tools": [
+    "Excel",
+    "CPQ",
+    "HubSpot"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4215",
+   "company": "Thistle Cloud",
+   "title": "GTM Systems Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://thistlecloud.jobs.personio.example/job/4215",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Python",
+    "Make",
+    "Clay",
+    "CPQ",
+    "Zapier"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4258",
+   "company": "Saffron Systems",
+   "title": "Growth Engineer",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://saffronsystems.jobs.personio.example/job/4258",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 45,
+   "pay_k_eur": [
+    75,
+    90
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "integrate tools through APIs",
+    "build enrichment and scoring workflows",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "n8n",
+    "Zapier",
+    "HubSpot",
+    "Python"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4538",
+   "company": "Garnet Cloud",
+   "title": "Working Student GTM Engineering",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/garnetcloud/jobs/4538",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 30,
+   "pay_k_eur": [
+    50,
+    65
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "integrate tools through APIs",
+    "build lead routing from scratch",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Apollo",
+    "dbt",
+    "Zapier",
+    "Python",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4033",
+   "company": "Rook Works",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/rookworks/jobs/4033",
+   "sources": [
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "write outbound copy for SDRs",
+    "prepare QBR decks",
+    "administer the CRM"
+   ],
+   "tools": [
+    "HubSpot",
+    "Claude",
+    "dbt"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4134",
+   "company": "Nettle Stack",
+   "title": "Revenue Operations Manager",
+   "location": "Madrid",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/nettlestack/4134",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "Spanish required",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "administer the CRM",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Excel",
+    "SQL",
+    "Salesforce"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4176",
+   "company": "Nimbus Labs",
+   "title": "Growth Engineer",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://nimbuslabs.recruitee.example/o/4176",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "German C1 required",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Python",
+    "Zapier",
+    "Apollo",
+    "n8n",
+    "HubSpot"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4206",
+   "company": "Ember Pay",
+   "title": "Senior RevOps Manager",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/emberpay/jobs/4206",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "run the forecast process",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "HubSpot",
+    "Looker",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4230",
+   "company": "Rook Cloud",
+   "title": "Senior GTM Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/rookcloud/jobs/4230",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "administer the CRM",
+    "prepare QBR decks",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Zapier",
+    "HubSpot",
+    "Make",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4300",
+   "company": "Lumen Data",
+   "title": "GTM Systems Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/lumendata/4300",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "integrate tools through APIs",
+    "build outbound and signal pipelines"
+   ],
+   "tools": [
+    "Python",
+    "n8n",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4330",
+   "company": "Kestrel AI",
+   "title": "Sales Operations Analyst",
+   "location": "Paris",
+   "workplace": "on site",
+   "url": "https://join.example/companies/kestrelai/4330",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": [
+    75,
+    85
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Salesforce",
+    "Excel",
+    "Gong",
+    "CPQ",
+    "HubSpot"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4387",
+   "company": "Indigo Labs",
+   "title": "Senior GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://indigolabs.jobs.personio.example/job/4387",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 600,
+   "pay_k_eur": [
+    80,
+    100
+   ],
+   "duties": [
+    "run the forecast process",
+    "administer the CRM",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Looker",
+    "Python",
+    "CPQ",
+    "SQL",
+    "dbt"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4405",
+   "company": "Harbor Data",
+   "title": "Growth Engineer",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/harbordata/4405",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": [
+    70,
+    95
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "integrate tools through APIs",
+    "build lead routing from scratch",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Make",
+    "HubSpot",
+    "n8n",
+    "Zapier"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4561",
+   "company": "Thistle Cloud",
+   "title": "Head of GTM Engineering",
+   "location": "Hamburg",
+   "workplace": "on site",
+   "url": "https://thistlecloud.jobs.personio.example/job/4561",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "German C1 required",
+   "employees": 1200,
+   "pay_k_eur": [
+    85,
+    110
+   ],
+   "duties": [
+    "build enrichment and scoring workflows",
+    "ship AI agents for research and routing",
+    "integrate tools through APIs"
+   ],
+   "tools": [
+    "Salesforce",
+    "Claude",
+    "HubSpot",
+    "CPQ",
+    "dbt"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4041",
+   "company": "Orchard Stack",
+   "title": "Working Student GTM Engineering",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/orchardstack/4041",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 380,
+   "pay_k_eur": [
+    65,
+    80
+   ],
+   "duties": [
+    "prepare QBR decks",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "CPQ",
+    "Looker",
+    "HubSpot",
+    "Clay",
+    "n8n"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4292",
+   "company": "Lumen AI",
+   "title": "Working Student GTM Engineering",
+   "location": "Barcelona",
+   "workplace": "hybrid",
+   "url": "https://lumenai.teamtailor.example/jobs/4292",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "ship AI agents for research and routing",
+    "integrate tools through APIs"
+   ],
+   "tools": [
+    "Apollo",
+    "Make",
+    "CPQ",
+    "dbt",
+    "Python"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4298",
+   "company": "Rook Stack",
+   "title": "Head of Revenue Operations",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/rookstack/4298",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "run the forecast process",
+    "administer the CRM",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "HubSpot",
+    "SQL",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4585",
+   "company": "Cobalt HQ",
+   "title": "Revenue Operations Manager",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/cobalthq/4585",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": [
+    60,
+    70
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "administer the CRM",
+    "design commission plans",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "SQL",
+    "CPQ",
+    "Salesforce"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4129",
+   "company": "Thistle Cloud",
+   "title": "Working Student GTM Engineering",
+   "location": "Barcelona",
+   "workplace": "on site",
+   "url": "https://thistlecloud.jobs.personio.example/job/4129",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Zapier",
+    "Make",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4177",
+   "company": "Fable Systems",
+   "title": "GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/fablesystems/4177",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "German C1 required",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "run the forecast process",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Clay",
+    "n8n",
+    "Looker",
+    "Salesforce"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4204",
+   "company": "Fable Data",
+   "title": "GTM Systems Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/fabledata/jobs/4204",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 600,
+   "pay_k_eur": [
+    80,
+    105
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "build outbound and signal pipelines",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "Python",
+    "Zapier",
+    "Claude",
+    "Looker",
+    "dbt"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4221",
+   "company": "Juniper Pay",
+   "title": "Working Student GTM Engineering",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://juniperpay.teamtailor.example/jobs/4221",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "integrate tools through APIs",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Looker",
+    "CPQ",
+    "Make"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4355",
+   "company": "Quill Pay",
+   "title": "RevOps Engineer",
+   "location": "London",
+   "workplace": "on site",
+   "url": "https://quillpay.jobs.personio.example/job/4355",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "rejected there before, done story",
+   "employees": 380,
+   "pay_k_eur": [
+    50,
+    75
+   ],
+   "duties": [
+    "integrate tools through APIs",
+    "build enrichment and scoring workflows",
+    "build outbound and signal pipelines"
+   ],
+   "tools": [
+    "Clay",
+    "Make",
+    "n8n",
+    "dbt"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4477",
+   "company": "Kestrel AI",
+   "title": "GTM Engineering Intern",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/kestrelai/4477",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "integrate tools through APIs",
+    "write outbound copy for SDRs",
+    "administer the CRM",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "Make",
+    "n8n",
+    "Python",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4533",
+   "company": "Nimbus Data",
+   "title": "GTM Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/nimbusdata/4533",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 110,
+   "pay_k_eur": null,
+   "duties": [
+    "integrate tools through APIs",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Make",
+    "CPQ",
+    "HubSpot",
+    "n8n",
+    "Zapier"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4640",
+   "company": "Nettle Systems",
+   "title": "Head of GTM Engineering",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://nettlesystems.jobs.personio.example/job/4640",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "build outbound and signal pipelines",
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Looker",
+    "n8n",
+    "Clay",
+    "Make",
+    "Apollo"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4154",
+   "company": "Garnet Logic",
+   "title": "Founding GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://garnetlogic.jobs.personio.example/job/4154",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 600,
+   "pay_k_eur": [
+    65,
+    85
+   ],
+   "duties": [
+    "integrate tools through APIs",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "CPQ",
+    "Python",
+    "n8n"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4166",
+   "company": "Bramble Health",
+   "title": "GTM Engineering Intern",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/bramblehealth/j/4166",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 30,
+   "pay_k_eur": [
+    50,
+    75
+   ],
+   "duties": [
+    "build outbound and signal pipelines",
+    "prepare QBR decks",
+    "own pipeline reporting for leadership",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "dbt",
+    "Python",
+    "Make",
+    "Clay"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4269",
+   "company": "Bramble Grid",
+   "title": "Growth Engineer",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/bramblegrid/4269",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "Dutch required",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "build outbound and signal pipelines",
+    "integrate tools through APIs"
+   ],
+   "tools": [
+    "Looker",
+    "Clay",
+    "CPQ",
+    "Claude"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4499",
+   "company": "Delta Logic",
+   "title": "GTM Engineering Intern",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/deltalogic/jobs/4499",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build enrichment and scoring workflows",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Python",
+    "Looker",
+    "Make",
+    "Apollo"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4507",
+   "company": "Saffron AI",
+   "title": "GTM Engineering Intern",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/saffronai/jobs/4507",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 45,
+   "pay_k_eur": [
+    65,
+    85
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "manage territory and quota planning",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "HubSpot",
+    "dbt",
+    "SQL"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4511",
+   "company": "Marlow Labs",
+   "title": "RevOps Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://marlowlabs.jobs.personio.example/job/4511",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build enrichment and scoring workflows",
+    "build outbound and signal pipelines",
+    "administer the CRM"
+   ],
+   "tools": [
+    "SQL",
+    "dbt",
+    "Make"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4529",
+   "company": "Sable Systems",
+   "title": "Founding GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4529",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 45,
+   "pay_k_eur": [
+    70,
+    85
+   ],
+   "duties": [
+    "run the forecast process",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "Apollo",
+    "CPQ",
+    "SQL",
+    "Python",
+    "Salesforce"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4602",
+   "company": "Delta AI",
+   "title": "RevOps Specialist",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/deltaai/jobs/4602",
+   "sources": [
+    "ATS host search",
+    "Indeed",
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "Salesforce",
+    "CPQ",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4079",
+   "company": "Kestrel Pay",
+   "title": "Sales Operations Analyst",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/kestrelpay/jobs/4079",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 380,
+   "pay_k_eur": [
+    60,
+    70
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "build lead routing from scratch",
+    "run the forecast process",
+    "own pipeline reporting for leadership",
+    "design commission plans"
+   ],
+   "tools": [
+    "Gong",
+    "HubSpot",
+    "Excel",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4486",
+   "company": "Marlow Logic",
+   "title": "RevOps Specialist",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/marlowlogic/4486",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "Dutch required",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "design commission plans",
+    "administer the CRM"
+   ],
+   "tools": [
+    "HubSpot",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4501",
+   "company": "Bramble Grid",
+   "title": "RevOps Specialist",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/bramblegrid/4501",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning",
+    "run the forecast process",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "SQL",
+    "Salesforce",
+    "Gong",
+    "CPQ"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4247",
+   "company": "Nettle Stack",
+   "title": "GTM Engineer",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/nettlestack/4247",
+   "sources": [
+    "LinkedIn alert",
+    "niche GTM board"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "integrate tools through APIs",
+    "manage territory and quota planning",
+    "run the forecast process",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Python",
+    "CPQ",
+    "Looker"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4600",
+   "company": "Quill Pay",
+   "title": "Working Student GTM Engineering",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://quillpay.jobs.personio.example/job/4600",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 380,
+   "pay_k_eur": [
+    70,
+    80
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "build outbound and signal pipelines",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "Zapier",
+    "dbt",
+    "Make",
+    "Python"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4096",
+   "company": "Garnet HQ",
+   "title": "Head of Revenue Operations",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/garnethq/jobs/4096",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "run the forecast process",
+    "manage territory and quota planning",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Salesforce",
+    "SQL",
+    "CPQ",
+    "Gong",
+    "HubSpot"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4200",
+   "company": "Sable AI",
+   "title": "Founding GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://jobs.lever.example/sableai/4200",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "prepare QBR decks",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Looker",
+    "n8n",
+    "Zapier",
+    "Clay",
+    "Make"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4246",
+   "company": "Nettle Systems",
+   "title": "Head of Revenue Operations",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://nettlesystems.jobs.personio.example/job/4246",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 1200,
+   "pay_k_eur": [
+    55,
+    70
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "manage territory and quota planning",
+    "run the forecast process"
+   ],
+   "tools": [
+    "CPQ",
+    "HubSpot",
+    "Excel"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4456",
+   "company": "Bramble Health",
+   "title": "Senior GTM Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/bramblehealth/j/4456",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build enrichment and scoring workflows",
+    "automate CRM updates with APIs and webhooks",
+    "ship AI agents for research and routing"
+   ],
+   "tools": [
+    "Python",
+    "Apollo",
+    "Zapier"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4478",
+   "company": "Opal Health",
+   "title": "Senior RevOps Manager",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://opalhealth.jobs.personio.example/job/4478",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 3000,
+   "pay_k_eur": [
+    80,
+    105
+   ],
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "administer the CRM",
+    "design commission plans",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "HubSpot",
+    "SQL",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4589",
+   "company": "Pebble Systems",
+   "title": "RevOps Specialist",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/pebblesystems/jobs/4589",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 240,
+   "pay_k_eur": [
+    75,
+    90
+   ],
+   "duties": [
+    "administer the CRM"
+   ],
+   "tools": [
+    "HubSpot",
+    "Salesforce",
+    "Excel",
+    "CPQ",
+    "Gong"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4222",
+   "company": "Rook Data",
+   "title": "Head of Revenue Operations",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/rookdata/4222",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "design commission plans"
+   ],
+   "tools": [
+    "SQL",
+    "CPQ",
+    "HubSpot"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4001",
+   "company": "Sable Logic",
+   "title": "Revenue Operations Manager",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/sablelogic/4001",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "Dutch required",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "administer the CRM",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "SQL",
+    "Gong",
+    "CPQ"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4060",
+   "company": "Nimbus Cloud",
+   "title": "Working Student GTM Engineering",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/nimbuscloud/jobs/4060",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "own pipeline reporting for leadership",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "SQL",
+    "Looker",
+    "Zapier",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4069",
+   "company": "Sable Data",
+   "title": "RevOps Specialist",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://sabledata.teamtailor.example/jobs/4069",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "run the forecast process",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Excel",
+    "HubSpot",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4295",
+   "company": "Juniper Cloud",
+   "title": "Head of Revenue Operations",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://junipercloud.jobs.personio.example/job/4295",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": [
+    85,
+    110
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "administer the CRM",
+    "own pipeline reporting for leadership",
+    "run the forecast process"
+   ],
+   "tools": [
+    "Gong",
+    "Salesforce",
+    "Looker"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4469",
+   "company": "Linden Logic",
+   "title": "Senior GTM Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/lindenlogic/jobs/4469",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "ship AI agents for research and routing",
+    "run the forecast process"
+   ],
+   "tools": [
+    "HubSpot",
+    "SQL",
+    "Salesforce",
+    "CPQ",
+    "n8n"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4593",
+   "company": "Kestrel Stack",
+   "title": "Senior GTM Engineer",
+   "location": "Paris",
+   "workplace": "hybrid",
+   "url": "https://kestrelstack.recruitee.example/o/4593",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 45,
+   "pay_k_eur": [
+    70,
+    85
+   ],
+   "duties": [
+    "ship AI agents for research and routing",
+    "own pipeline reporting for leadership",
+    "administer the CRM",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "dbt",
+    "CPQ",
+    "Make",
+    "SQL",
+    "Claude"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4638",
+   "company": "Sable AI",
+   "title": "RevOps Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/sableai/4638",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "integrate tools through APIs",
+    "build enrichment and scoring workflows",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "dbt",
+    "n8n",
+    "Apollo"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4193",
+   "company": "Halcyon Systems",
+   "title": "RevOps Specialist",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://halcyonsystems.jobs.personio.example/job/4193",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "build lead routing from scratch",
+    "automate CRM updates with APIs and webhooks",
+    "manage territory and quota planning",
+    "prepare QBR decks"
+   ],
+   "tools": [
+    "Looker",
+    "Gong",
+    "HubSpot",
+    "CPQ",
+    "Salesforce"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4381",
+   "company": "Juniper Cloud",
+   "title": "GTM Systems Engineer",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://junipercloud.jobs.personio.example/job/4381",
+   "sources": [
+    "niche GTM board"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "integrate tools through APIs",
+    "ship AI agents for research and routing",
+    "administer the CRM",
+    "maintain dashboards in Looker",
+    "manage territory and quota planning"
+   ],
+   "tools": [
+    "dbt",
+    "SQL",
+    "Clay",
+    "Python"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4528",
+   "company": "Tidal Logic",
+   "title": "Head of GTM Engineering",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/tidallogic/j/4528",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 160,
+   "pay_k_eur": [
+    70,
+    85
+   ],
+   "duties": [
+    "run the forecast process",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Claude",
+    "CPQ",
+    "HubSpot"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4540",
+   "company": "Fable Logic",
+   "title": "Sales Operations Analyst",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://join.example/companies/fablelogic/4540",
+   "sources": [
+    "Indeed",
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 15,
+   "pay_k_eur": [
+    60,
+    70
+   ],
+   "duties": [
+    "build lead routing from scratch",
+    "own pipeline reporting for leadership"
+   ],
+   "tools": [
+    "SQL",
+    "Excel",
+    "CPQ",
+    "Gong"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  }
+ ],
+ "could_not_verify": [
+  {
+   "id": "4130",
+   "company": "Halcyon Cloud",
+   "title": "GTM Engineer",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/halcyoncloud/j/4130",
+   "sources": [
+    "niche GTM board"
+   ],
+   "role_fit": 6.5,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 6.5, London needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "why": "company list unreadable",
+   "first_seen": 3,
+   "state": "open",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "maintain dashboards in Looker",
+    "write outbound copy for SDRs"
+   ],
+   "tools": [
+    "Python",
+    "CPQ",
+    "HubSpot",
+    "Apollo",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  }
+ ],
+ "closed_on_board": [
+  {
+   "id": "4113",
+   "company": "Nettle Data",
+   "title": "GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/nettledata/jobs/4113",
+   "sources": [
+    "remote board"
+   ],
+   "why": "closed on the company's list, still on a board",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "maintain dashboards in Looker",
+    "administer the CRM"
+   ],
+   "tools": [
+    "Salesforce",
+    "Python",
+    "Make",
+    "Zapier"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4265",
+   "company": "Nimbus Systems",
+   "title": "Working Student GTM Engineering",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/nimbussystems/j/4265",
+   "sources": [
+    "Indeed",
+    "newsletter"
+   ],
+   "why": "closed on the company's list, still on a board",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "automate CRM updates with APIs and webhooks",
+    "maintain dashboards in Looker"
+   ],
+   "tools": [
+    "dbt",
+    "Make",
+    "Zapier",
+    "Python",
+    "Looker"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4383",
+   "company": "Ember Logic",
+   "title": "Founding GTM Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://emberlogic.recruitee.example/o/4383",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "closed on the company's list, still on a board",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "ship AI agents for research and routing",
+    "build lead routing from scratch",
+    "build enrichment and scoring workflows"
+   ],
+   "tools": [
+    "Looker",
+    "Salesforce",
+    "CPQ"
+   ],
+   "years_required": 8,
+   "languages_required": [
+    "German C1"
+   ]
+  }
+ ]
+}

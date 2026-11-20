@@ -1,0 +1,26 @@
+{
+  "profile": "Customer Success search",
+  "runs": 14,
+  "skipped": 1,
+  "copies_read": 435,
+  "unique_roles": 392,
+  "in_titles": 22,
+  "already_seen": 10,
+  "main_8_plus": 1,
+  "reference": 2,
+  "seen_not_a_fit": 6,
+  "dropped": 12,
+  "could_not_verify": 0,
+  "closed_on_board": 1,
+  "tracked_closed_later": 0,
+  "cvs_drafted": 1,
+  "drop_reasons": {
+    "none of the duties you want to do": 8,
+    "outside the regions you work in": 2,
+    "Swedish required": 1,
+    "Spanish required": 1
+  },
+  "main": [
+    "Opal Pay, Onboarding Manager: fit 9.5 (role 8, remote in home country +1.5, pay above floor +0.5, startup minus 0.5)"
+  ]
+}

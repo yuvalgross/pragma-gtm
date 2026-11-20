@@ -1,0 +1,772 @@
+{
+ "Orchard Systems": {
+  "slug": "orchardsystems",
+  "ats": "join",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Quarry Works": {
+  "slug": "quarryworks",
+  "ats": "lever",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Orchard Pay": {
+  "slug": "orchardpay",
+  "ats": "ashby",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Lumen Data": {
+  "slug": "lumendata",
+  "ats": "ashby",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Prism Works": {
+  "slug": "prismworks",
+  "ats": "teamtailor",
+  "employees": 70,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Nettle Systems": {
+  "slug": "nettlesystems",
+  "ats": "personio",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Garnet Health": {
+  "slug": "garnethealth",
+  "ats": "personio",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Lumen Cloud": {
+  "slug": "lumencloud",
+  "ats": "ashby",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Delta Cloud": {
+  "slug": "deltacloud",
+  "ats": "teamtailor",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Ember Cloud": {
+  "slug": "embercloud",
+  "ats": "join",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Rook Works": {
+  "slug": "rookworks",
+  "ats": "greenhouse",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Linden Grid": {
+  "slug": "lindengrid",
+  "ats": "ashby",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "none"
+ },
+ "Juniper Pay": {
+  "slug": "juniperpay",
+  "ats": "teamtailor",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Pebble Data": {
+  "slug": "pebbledata",
+  "ats": "teamtailor",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "unreadable"
+ },
+ "Vesper Data": {
+  "slug": "vesperdata",
+  "ats": "personio",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Ember Systems": {
+  "slug": "embersystems",
+  "ats": "ashby",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Orchard Stack": {
+  "slug": "orchardstack",
+  "ats": "ashby",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Garnet Logic": {
+  "slug": "garnetlogic",
+  "ats": "personio",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Juniper Cloud": {
+  "slug": "junipercloud",
+  "ats": "personio",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Quarry Data": {
+  "slug": "quarrydata",
+  "ats": "personio",
+  "employees": 160,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Saffron AI": {
+  "slug": "saffronai",
+  "ats": "greenhouse",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Opal Systems": {
+  "slug": "opalsystems",
+  "ats": "ashby",
+  "employees": 160,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Linden Pay": {
+  "slug": "lindenpay",
+  "ats": "teamtailor",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "none"
+ },
+ "Thistle Cloud": {
+  "slug": "thistlecloud",
+  "ats": "personio",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Ember Pay": {
+  "slug": "emberpay",
+  "ats": "greenhouse",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Harbor Health": {
+  "slug": "harborhealth",
+  "ats": "join",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Quill HQ": {
+  "slug": "quillhq",
+  "ats": "personio",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Quill Systems": {
+  "slug": "quillsystems",
+  "ats": "ashby",
+  "employees": 70,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Rook Data": {
+  "slug": "rookdata",
+  "ats": "ashby",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "unreadable"
+ },
+ "Nettle Stack": {
+  "slug": "nettlestack",
+  "ats": "ashby",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Kestrel Pay": {
+  "slug": "kestrelpay",
+  "ats": "greenhouse",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Sable Data": {
+  "slug": "sabledata",
+  "ats": "teamtailor",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "unreadable"
+ },
+ "Ember Logic": {
+  "slug": "emberlogic",
+  "ats": "recruitee",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Halcyon HQ": {
+  "slug": "halcyonhq",
+  "ats": "ashby",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Bramble Grid": {
+  "slug": "bramblegrid",
+  "ats": "ashby",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "none"
+ },
+ "Tidal Logic": {
+  "slug": "tidallogic",
+  "ats": "workable",
+  "employees": 160,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Cobalt HQ": {
+  "slug": "cobalthq",
+  "ats": "ashby",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Nimbus Cloud": {
+  "slug": "nimbuscloud",
+  "ats": "greenhouse",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Lumen Grid": {
+  "slug": "lumengrid",
+  "ats": "ashby",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Rook AI": {
+  "slug": "rookai",
+  "ats": "personio",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Garnet Data": {
+  "slug": "garnetdata",
+  "ats": "greenhouse",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Indigo Cloud": {
+  "slug": "indigocloud",
+  "ats": "teamtailor",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Pebble Stack": {
+  "slug": "pebblestack",
+  "ats": "lever",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Rook Stack": {
+  "slug": "rookstack",
+  "ats": "ashby",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Bramble Health": {
+  "slug": "bramblehealth",
+  "ats": "workable",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Saffron HQ": {
+  "slug": "saffronhq",
+  "ats": "ashby",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Saffron Systems": {
+  "slug": "saffronsystems",
+  "ats": "personio",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Quarry Pay": {
+  "slug": "quarrypay",
+  "ats": "workable",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Indigo Labs": {
+  "slug": "indigolabs",
+  "ats": "personio",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Fable HQ": {
+  "slug": "fablehq",
+  "ats": "lever",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Opal Pay": {
+  "slug": "opalpay",
+  "ats": "personio",
+  "employees": 70,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Harbor Data": {
+  "slug": "harbordata",
+  "ats": "ashby",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "none"
+ },
+ "Kestrel AI": {
+  "slug": "kestrelai",
+  "ats": "join",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Fable Logic": {
+  "slug": "fablelogic",
+  "ats": "join",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Fable Systems": {
+  "slug": "fablesystems",
+  "ats": "ashby",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Quill Grid": {
+  "slug": "quillgrid",
+  "ats": "personio",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Marlow Logic": {
+  "slug": "marlowlogic",
+  "ats": "join",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Bramble Systems": {
+  "slug": "bramblesystems",
+  "ats": "ashby",
+  "employees": 160,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Quill Health": {
+  "slug": "quillhealth",
+  "ats": "greenhouse",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Opal Health": {
+  "slug": "opalhealth",
+  "ats": "personio",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Saffron Health": {
+  "slug": "saffronhealth",
+  "ats": "teamtailor",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Marlow Labs": {
+  "slug": "marlowlabs",
+  "ats": "personio",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Sable Systems": {
+  "slug": "sablesystems",
+  "ats": "greenhouse",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Harbor Pay": {
+  "slug": "harborpay",
+  "ats": "teamtailor",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Delta AI": {
+  "slug": "deltaai",
+  "ats": "greenhouse",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Linden Data": {
+  "slug": "lindendata",
+  "ats": "greenhouse",
+  "employees": 160,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Tidal AI": {
+  "slug": "tidalai",
+  "ats": "personio",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Rook Cloud": {
+  "slug": "rookcloud",
+  "ats": "greenhouse",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Indigo Stack": {
+  "slug": "indigostack",
+  "ats": "greenhouse",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Delta Logic": {
+  "slug": "deltalogic",
+  "ats": "greenhouse",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Linden Systems": {
+  "slug": "lindensystems",
+  "ats": "greenhouse",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Pebble Labs": {
+  "slug": "pebblelabs",
+  "ats": "personio",
+  "employees": 160,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Lumen AI": {
+  "slug": "lumenai",
+  "ats": "teamtailor",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Indigo Health": {
+  "slug": "indigohealth",
+  "ats": "ashby",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Garnet Cloud": {
+  "slug": "garnetcloud",
+  "ats": "greenhouse",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "none"
+ },
+ "Delta Data": {
+  "slug": "deltadata",
+  "ats": "ashby",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Halcyon Systems": {
+  "slug": "halcyonsystems",
+  "ats": "personio",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Pebble Systems": {
+  "slug": "pebblesystems",
+  "ats": "greenhouse",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "unreadable"
+ },
+ "Saffron Logic": {
+  "slug": "saffronlogic",
+  "ats": "ashby",
+  "employees": 1200,
+  "stage": "Public or late stage",
+  "list": "unreadable"
+ },
+ "Linden Logic": {
+  "slug": "lindenlogic",
+  "ats": "greenhouse",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Nimbus Labs": {
+  "slug": "nimbuslabs",
+  "ats": "recruitee",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Ember Grid": {
+  "slug": "embergrid",
+  "ats": "personio",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Nimbus Data": {
+  "slug": "nimbusdata",
+  "ats": "ashby",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Sable AI": {
+  "slug": "sableai",
+  "ats": "lever",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Juniper Grid": {
+  "slug": "junipergrid",
+  "ats": "personio",
+  "employees": 70,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Quill Cloud": {
+  "slug": "quillcloud",
+  "ats": "personio",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Bramble Cloud": {
+  "slug": "bramblecloud",
+  "ats": "personio",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Garnet HQ": {
+  "slug": "garnethq",
+  "ats": "greenhouse",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Nettle Pay": {
+  "slug": "nettlepay",
+  "ats": "greenhouse",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Pebble Pay": {
+  "slug": "pebblepay",
+  "ats": "recruitee",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Kestrel Grid": {
+  "slug": "kestrelgrid",
+  "ats": "personio",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Ember Health": {
+  "slug": "emberhealth",
+  "ats": "join",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "unreadable"
+ },
+ "Prism Labs": {
+  "slug": "prismlabs",
+  "ats": "greenhouse",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Sable Logic": {
+  "slug": "sablelogic",
+  "ats": "ashby",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Vesper Systems": {
+  "slug": "vespersystems",
+  "ats": "personio",
+  "employees": 70,
+  "stage": "Series A",
+  "list": "none"
+ },
+ "Orchard Logic": {
+  "slug": "orchardlogic",
+  "ats": "teamtailor",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Kestrel Stack": {
+  "slug": "kestrelstack",
+  "ats": "recruitee",
+  "employees": 45,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Pebble Works": {
+  "slug": "pebbleworks",
+  "ats": "join",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Nettle Data": {
+  "slug": "nettledata",
+  "ats": "greenhouse",
+  "employees": 30,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Atlas Pay": {
+  "slug": "atlaspay",
+  "ats": "personio",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Halcyon Cloud": {
+  "slug": "halcyoncloud",
+  "ats": "workable",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "unreadable"
+ },
+ "Opal Labs": {
+  "slug": "opallabs",
+  "ats": "ashby",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Fable Data": {
+  "slug": "fabledata",
+  "ats": "greenhouse",
+  "employees": 600,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Saffron Grid": {
+  "slug": "saffrongrid",
+  "ats": "join",
+  "employees": 240,
+  "stage": "Series B",
+  "list": "works"
+ },
+ "Opal Works": {
+  "slug": "opalworks",
+  "ats": "greenhouse",
+  "employees": 3000,
+  "stage": "Public or late stage",
+  "list": "works"
+ },
+ "Cobalt Systems": {
+  "slug": "cobaltsystems",
+  "ats": "personio",
+  "employees": 70,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Quill Pay": {
+  "slug": "quillpay",
+  "ats": "personio",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ },
+ "Halcyon Health": {
+  "slug": "halcyonhealth",
+  "ats": "greenhouse",
+  "employees": 110,
+  "stage": "Series A",
+  "list": "works"
+ },
+ "Nimbus Systems": {
+  "slug": "nimbussystems",
+  "ats": "workable",
+  "employees": 15,
+  "stage": "Seed",
+  "list": "works"
+ },
+ "Vesper Logic": {
+  "slug": "vesperlogic",
+  "ats": "greenhouse",
+  "employees": 380,
+  "stage": "Series C+",
+  "list": "works"
+ }
+}

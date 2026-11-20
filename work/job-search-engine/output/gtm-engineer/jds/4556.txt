@@ -1,0 +1,11 @@
+GTM Engineer
+Nimbus Labs, Berlin (on site)
+
+What you will do:
+- integrate tools through APIs
+- maintain dashboards in Looker
+- own pipeline reporting for leadership
+- write outbound copy for SDRs
+
+Tools: Clay, Apollo, Claude, n8n
+Experience: 3+ years

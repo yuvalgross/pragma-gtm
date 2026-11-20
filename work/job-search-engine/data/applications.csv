@@ -1,0 +1,73 @@
+application,company,role_shape,company_size,channel,cv_score,note_to_named_person,days_before_start,outcome
+P001,Quill Health,build,150 to 500,Teamtailor,8.5,yes,13,rejected at CV
+P002,Delta Data,build,under 150,Ashby,8,no,33,call
+P003,Nimbus Cloud,run,over 500,Email,9,yes,14,pending
+P004,Nimbus Data,build,over 500,Personio,8.5,no,36,rejected at CV
+P005,Marlow Logic,sales,over 500,Personio,8,yes,46,rejected at CV
+P006,Rook Cloud,build,150 to 500,Teamtailor,8,no,6,no reply
+P007,Delta Data,build,over 500,LinkedIn Easy Apply,8.5,no,27,rejected at CV
+P008,Nettle Pay,run,over 500,Greenhouse,8,yes,24,call
+P009,Cobalt Systems,sales,over 500,Email,8.5,yes,18,rejected at CV
+P010,Linden Systems,build,150 to 500,JOIN,8.5,yes,30,no reply
+P011,Lumen AI,sales,over 500,Ashby,9,no,34,no reply
+P012,Saffron Health,run,150 to 500,Teamtailor,9,no,6,rejected at CV
+P013,Nimbus Cloud,build,under 150,JOIN,8.5,no,16,no reply
+P014,Juniper Pay,build,over 500,JOIN,8,no,29,rejected at CV
+P015,Vesper Data,build,under 150,Ashby,9,no,41,no reply
+P016,Bramble Grid,build,under 150,Personio,8,no,42,call
+P017,Halcyon Cloud,run,under 150,Email,8,yes,10,rejected at CV
+P018,Quill HQ,sales,over 500,Email,8,no,25,rejected at CV
+P019,Prism Labs,run,over 500,LinkedIn Easy Apply,9,no,20,rejected at CV
+P020,Sable AI,build,under 150,Ashby,8,no,11,rejected at CV
+P021,Rook Data,sales,150 to 500,Greenhouse,8.5,no,47,rejected at CV
+P022,Cobalt Systems,sales,under 150,JOIN,8.5,no,48,call
+P023,Quill Pay,build,over 500,Email,9,yes,3,rejected at CV
+P024,Orchard Stack,run,150 to 500,Ashby,9,no,41,no reply
+P025,Sable Data,build,over 500,Ashby,9,no,4,call
+P026,Opal Works,run,over 500,Personio,9,no,7,call
+P027,Fable Data,build,under 150,Ashby,8,no,33,call
+P028,Harbor Pay,build,under 150,Email,9,no,4,call
+P029,Lumen Cloud,run,over 500,LinkedIn Easy Apply,9,no,39,rejected at CV
+P030,Fable Systems,build,150 to 500,Ashby,8,yes,21,rejected at CV
+P031,Bramble Cloud,build,over 500,Greenhouse,9,yes,4,no reply
+P032,Vesper Data,run,under 150,Personio,8,no,6,rejected at CV
+P033,Ember Systems,sales,150 to 500,JOIN,8.5,no,41,pending
+P034,Sable Data,build,under 150,Personio,8,no,49,rejected at CV
+P035,Nettle Systems,run,150 to 500,Email,8,no,49,pending
+P036,Nimbus Data,run,under 150,Personio,9,yes,20,rejected at CV
+P037,Vesper Logic,build,under 150,Personio,8.5,yes,31,call
+P038,Sable AI,run,under 150,JOIN,8.5,no,47,rejected at CV
+P039,Quill Pay,build,150 to 500,Email,9,no,35,no reply
+P040,Pebble Stack,build,150 to 500,Ashby,8.5,no,28,call
+P041,Rook Cloud,sales,under 150,Ashby,9,yes,49,call
+P042,Sable AI,build,over 500,Teamtailor,8.5,no,49,no reply
+P043,Quill Systems,build,over 500,JOIN,9,no,41,no reply
+P044,Linden Data,build,under 150,LinkedIn Easy Apply,9,yes,48,rejected at CV
+P045,Opal Pay,build,over 500,Ashby,8,no,36,call
+P046,Thistle Cloud,build,under 150,Ashby,9,no,7,rejected at CV
+P047,Quill Health,build,150 to 500,Ashby,9,no,39,call
+P048,Opal Pay,run,150 to 500,Ashby,8.5,no,42,call
+P049,Vesper Systems,build,150 to 500,Teamtailor,9,no,14,rejected at CV
+P050,Kestrel Pay,build,over 500,Email,9,yes,34,no reply
+P051,Juniper Cloud,build,over 500,Personio,9,yes,4,rejected at CV
+P052,Tidal Logic,build,150 to 500,Email,9,no,33,rejected at CV
+P053,Nimbus Systems,build,over 500,JOIN,8.5,yes,31,call
+P054,Harbor Health,build,under 150,Greenhouse,9,yes,8,call
+P055,Orchard Systems,build,150 to 500,LinkedIn Easy Apply,8.5,yes,2,no reply
+P056,Pebble Systems,run,150 to 500,Greenhouse,8.5,no,25,rejected at CV
+P057,Saffron Grid,build,150 to 500,Greenhouse,8.5,no,47,no reply
+P058,Linden Data,build,150 to 500,LinkedIn Easy Apply,9,no,18,rejected at CV
+P059,Quarry Data,run,150 to 500,Greenhouse,8,yes,12,pending
+P060,Juniper Pay,run,over 500,Greenhouse,9,no,48,pending
+P061,Nettle Stack,build,under 150,LinkedIn Easy Apply,8.5,yes,25,rejected at CV
+P062,Harbor Data,build,over 500,Greenhouse,9,no,40,rejected at CV
+P063,Marlow Logic,build,under 150,Email,8.5,no,30,call
+P064,Opal Works,run,over 500,Email,9,no,42,rejected at CV
+P065,Fable Systems,build,under 150,Ashby,8.5,no,16,rejected at CV
+P066,Fable Logic,run,over 500,LinkedIn Easy Apply,9,yes,4,rejected at CV
+P067,Nettle Stack,sales,150 to 500,JOIN,9,no,50,rejected at CV
+P068,Rook AI,sales,under 150,Personio,9,no,39,rejected at CV
+P069,Vesper Data,build,over 500,Greenhouse,8.5,no,38,no reply
+P070,Ember Cloud,build,over 500,LinkedIn Easy Apply,8,yes,45,no reply
+P071,Kestrel Stack,build,150 to 500,Email,8.5,yes,10,call
+P072,Orchard Stack,build,150 to 500,Ashby,8.5,no,16,rejected at CV

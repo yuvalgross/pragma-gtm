@@ -1,0 +1,74 @@
+{
+  "name": "Customer Success search",
+  "target_titles": [
+    "Customer Success Manager",
+    "Onboarding Manager"
+  ],
+  "adjacent_titles": [
+    "Account Manager"
+  ],
+  "senior_titles_above_record": [
+    "Head of",
+    "Director",
+    "VP"
+  ],
+  "drop_titles": [
+    "Intern",
+    "Working Student"
+  ],
+  "core_duties": [
+    "onboarding",
+    "adoption",
+    "renewals",
+    "expansion",
+    "playbooks",
+    "health"
+  ],
+  "avoid_duties": [
+    "support tickets",
+    "cold",
+    "billing"
+  ],
+  "drop_when_no_core_duties": true,
+  "tools": [
+    "Gainsight",
+    "HubSpot",
+    "Salesforce",
+    "Intercom"
+  ],
+  "languages": [
+    "English",
+    "German C1"
+  ],
+  "years_on_record": 5,
+  "home_city": "Munich",
+  "home_country": "Germany",
+  "no_moves_inside_home_country": false,
+  "location_points": {
+    "home city": 1.0,
+    "remote EU": 1.0,
+    "remote home country": 1.5,
+    "other": 0
+  },
+  "pay_floor_k_eur": 60,
+  "excluded_companies": [],
+  "rejected_before": [],
+  "cv_bar_total": 8,
+  "show_bar_role": 6.5,
+  "cv_keywords_on_record": [
+    "onboarding",
+    "adoption",
+    "renewals",
+    "expansion",
+    "Gainsight",
+    "HubSpot",
+    "Salesforce",
+    "health scores",
+    "playbooks"
+  ],
+  "work_regions": [
+    "Germany",
+    "EU"
+  ],
+  "cv_bar_interviewing": 8.5
+}
