@@ -1,0 +1,4 @@
+fix,rows
+"region NA read as North America, not as empty",173
+"companies stored twice, merged into the record with history",3
+"single blog visits filed as pricing interest, scored 0",34

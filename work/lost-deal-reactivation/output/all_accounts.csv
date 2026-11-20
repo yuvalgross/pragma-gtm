@@ -1,0 +1,761 @@
+account_id,name,country,employees,owner,saw_demo,lost_reason,lost_date,competitor_contract_end,last_engagement,contact_role,lead_source,group,caller,why
+L0001,Hafenbau GmbH & Co. KG,Italy,60,Former owner 2,no,,2026-03-24,,webinar,owner,referral,Leave out,,not a target market
+L0002,Eichenwerk GmbH & Co. KG,Switzerland,8,Seller A,no,,2025-01-12,,,managing director,referral,Ask the seller,,"marked unqualified, no reason given"
+L0003,Rosenblick AG,Austria,60,Seller C,no,too small,2026-09-30,,,owner,event,Leave out,,clear no on file: too small
+L0004,Rosenhaus GmbH & Co. KG,Germany,40,Seller B,yes,competitor,2025-09-04,2026-09-12,,office manager,referral,"Call first: saw a demo, reason to talk",Seller,competitor contract ends recently
+L0005,Eichenmarkt KG,Germany,15,Seller A,yes,price,2026-09-19,,,owner,outbound,Wait: lost under 90 days ago,,lost recently
+L0006,Gartenblick GmbH & Co. KG,Austria,40,Seller A,no,,2026-05-23,,,owner,partner,"Email first: no demo, no reason yet",,no reason yet
+L0007,Lindenhof GmbH & Co. KG,Germany,40,Seller B,no,,2024-12-16,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0008,Lindenplus AG,Austria,150,Seller E,yes,price,2025-09-19,,,managing director,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0009,Lindenplus AG,Austria,60,Seller D,no,no answer,2024-12-29,,,owner,referral,Ask the seller,,"marked unqualified, no reason given"
+L0010,Klosterpartner KG,Germany,15,Seller A,yes,,2025-05-20,,newsletter click,marketing,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0011,Lindenwerk GmbH,Germany,60,Seller C,yes,no opportunity,2026-01-22,,pricing page,owner,event,Leave out,,clear no on file: no opportunity
+L0012,Eichenbau AG,Germany,60,Seller A,no,timing,2025-06-05,,newsletter click,owner,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0013,Gartenstudio GmbH,Germany,150,Seller D,no,,2026-05-25,,newsletter click,marketing,partner,"Email first: no demo, no reason yet",,no reason yet
+L0014,Alpenplus GmbH,Austria,90,Seller C,yes,,2026-06-08,,newsletter click,office manager,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0015,Alpenmarkt GmbH,Germany,25,Former owner 2,no,competitor,2026-06-11,2027-07-15,,marketing,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0016,Eichenservice GmbH & Co. KG,Germany,15,Seller D,no,price,2025-08-16,,,owner,event,"Email first: no demo, no reason yet",,no reason yet
+L0017,Alpenhaus KG,Austria,40,Seller B,no,no answer,2025-06-30,,,owner,partner,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0018,Alpenmarkt GmbH,Austria,40,Seller B,no,competitor,2025-02-27,2027-08-02,,managing director,event,Wait: competitor contract runs over 6 months,,contract ends later
+L0019,Bergservice GmbH,Germany,150,Former owner 1,no,,2024-12-18,,newsletter click,office manager,referral,"Email first: no demo, no reason yet",,no reason yet
+L0020,Waldbau AG,Germany,40,Seller D,yes,,2026-02-17,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0021,Waldservice KG,Germany,15,Former owner 1,no,competitor,2026-06-25,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0022,Alpenstudio GmbH,Germany,15,Seller D,yes,price,2025-03-20,,,office manager,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0023,Flussservice AG,Switzerland,90,Seller D,no,,2025-04-22,,,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0024,Eichenhof KG,Switzerland,60,Seller B,yes,price,2025-01-18,,webinar,office manager,outbound,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0025,Rosenpartner GmbH,Germany,40,Seller E,no,timing,2025-04-24,,,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0026,Stadtmarkt AG,Switzerland,25,Former owner 2,no,no answer,2025-10-22,,,marketing,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0027,Alpenwerk AG,Switzerland,40,Seller B,yes,timing,2025-12-18,,newsletter click,marketing,partner,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0028,Klosterbau GmbH & Co. KG,Germany,150,Seller E,yes,,2025-08-07,,,marketing,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0029,Rosenplus AG,Switzerland,25,Seller C,yes,,2024-12-31,,newsletter click,managing director,event,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0030,Bergmarkt GmbH & Co. KG,Germany,15,Seller A,yes,no opportunity,2025-03-27,,case study,owner,inbound demo request,Leave out,,clear no on file: no opportunity
+L0031,Waldbau AG,Switzerland,60,Seller E,no,not icp,2026-06-18,,pricing page,managing director,referral,Leave out,,clear no on file: not icp
+L0032,Sonnenhaus GmbH,Austria,40,Seller C,yes,,2025-06-18,,pricing page,owner,event,Leave out,,customer today
+L0033,Klosterwerk AG,Switzerland,15,Seller B,yes,not icp,2025-10-01,,newsletter click,owner,referral,Leave out,,clear no on file: not icp
+L0034,Eichenpartner AG,Austria,15,Former owner 1,no,price,2026-01-13,,newsletter click,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0035,Klosterhof GmbH,Italy,60,Seller C,no,price,2025-06-11,,case study,owner,event,Leave out,,not a target market
+L0036,Gartenhaus GmbH & Co. KG,Switzerland,8,Seller D,no,too small,2024-12-16,,webinar,owner,outbound,Leave out,,clear no on file: too small
+L0037,Eichenpartner GmbH,Switzerland,60,Seller D,yes,competitor,2025-12-26,,,office manager,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0038,Alpenpartner AG,Austria,40,Seller A,yes,no answer,2025-05-15,,,owner,outbound,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0039,Sonnenservice KG,Switzerland,8,Seller B,no,competitor,2024-11-24,,newsletter click,office manager,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0040,Klosterstudio GmbH,Germany,60,Former owner 1,no,competitor,2025-07-22,,newsletter click,managing director,referral,Leave out,,"key account, own seller"
+L0041,Bergblick GmbH,Austria,60,Seller D,yes,no answer,2026-05-30,,newsletter click,marketing,outbound,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0042,Flussmarkt AG,Germany,25,Seller E,yes,no answer,2025-05-07,,newsletter click,marketing,partner,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0043,Lindenblick AG,Germany,25,Seller A,no,,2026-03-18,,,marketing,referral,"Email first: no demo, no reason yet",,no reason yet
+L0044,Berghof AG,Germany,40,Seller C,no,price,2025-05-27,,,owner,partner,"Email first: no demo, no reason yet",,no reason yet
+L0045,Hafenpartner KG,Germany,25,Seller E,yes,no answer,2025-09-22,,case study,office manager,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on no answer; case study this year
+L0046,Waldhaus GmbH,Germany,25,Seller A,yes,,2025-05-26,,,marketing,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0047,Waldmarkt AG,United Kingdom,40,Former owner 2,yes,,2025-11-04,,newsletter click,owner,partner,Leave out,,not a target market
+L0048,Waldblick GmbH & Co. KG,Germany,25,Seller C,no,,2025-04-24,,event stand,marketing,outbound,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0049,Rosenhof AG,Switzerland,15,Seller A,yes,not icp,2025-12-20,,pricing page,owner,outbound,Leave out,,clear no on file: not icp
+L0050,Gartenhaus KG,Germany,90,Seller B,yes,,2026-06-19,,newsletter click,managing director,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0051,Waldstudio KG,United Kingdom,60,Former owner 1,no,too small,2025-05-23,,,owner,referral,Leave out,,not a target market
+L0052,Hafenbau GmbH,Germany,15,Seller D,no,,2026-09-24,,case study,owner,outbound,Wait: lost under 90 days ago,,lost recently
+L0053,Alpenservice KG,Germany,150,Seller B,no,price,2024-12-10,,case study,owner,event,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0054,Lindenplus GmbH & Co. KG,Italy,60,Seller C,no,competitor,2025-07-09,2027-01-25,,office manager,inbound demo request,Leave out,,not a target market
+L0055,Waldbau GmbH,Germany,90,Former owner 2,no,competitor,2025-08-21,2026-11-11,,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends soon
+L0056,Rosenhof GmbH & Co. KG,Italy,90,Former owner 1,yes,price,2026-05-09,,newsletter click,marketing,event,Leave out,,not a target market
+L0057,Lindenhof AG,Germany,90,Seller C,yes,competitor,2025-01-13,,case study,owner,event,"Call first: saw a demo, reason to talk",Seller,"case study this year; owner left, shared out"
+L0058,Bergservice AG,Germany,25,Seller C,yes,no opportunity,2025-04-14,,,owner,inbound demo request,Leave out,,clear no on file: no opportunity
+L0059,Bergstudio GmbH,Italy,40,Seller A,no,timing,2024-11-20,,,office manager,inbound demo request,Leave out,,not a target market
+L0060,Alpenblick AG,Switzerland,90,Seller C,yes,price,2025-03-31,,newsletter click,managing director,outbound,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0061,Sonnenplus GmbH & Co. KG,Switzerland,8,Seller B,no,price,2025-07-04,,,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0062,Rosenhaus GmbH,Germany,150,Seller A,yes,no answer,2026-05-30,,,marketing,event,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0063,Stadtservice KG,Germany,90,Seller C,no,,2026-09-19,,,owner,inbound demo request,Wait: lost under 90 days ago,,lost recently
+L0064,Hafenhaus GmbH & Co. KG,Germany,150,Seller B,yes,price,2025-12-08,,case study,marketing,inbound demo request,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0065,Rosenblick AG,Germany,15,Seller A,no,timing,2024-12-31,,,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0066,Hafenhaus GmbH & Co. KG,Germany,60,Seller E,no,no answer,2026-02-02,,,owner,event,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0067,Sonnenstudio AG,Austria,8,Seller A,no,price,2026-04-18,,webinar,office manager,partner,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0068,Flussblick GmbH & Co. KG,Germany,25,Seller D,no,no answer,2025-04-12,,,managing director,inbound demo request,Leave out,,"key account, own seller"
+L0069,Klosterhof GmbH & Co. KG,United Kingdom,60,Seller E,no,,2026-06-22,,,office manager,outbound,Leave out,,not a target market
+L0070,Bergbau KG,Germany,90,Seller A,no,no opportunity,2025-07-31,,pricing page,marketing,inbound demo request,Leave out,,clear no on file: no opportunity
+L0071,Lindenhaus GmbH & Co. KG,Germany,60,Seller E,yes,no opportunity,2026-08-12,,,office manager,referral,Leave out,,clear no on file: no opportunity
+L0072,Eichenstudio GmbH & Co. KG,Germany,8,Seller E,no,no answer,2026-02-19,,,owner,partner,Leave out,,customer today
+L0073,Lindenmarkt GmbH,Germany,25,Seller C,yes,timing,2025-07-10,,,marketing,referral,"Call first: saw a demo, reason to talk",Seller,"lost on timing; owner left, shared out"
+L0074,Waldmarkt KG,Germany,25,Seller A,no,,2025-06-08,,webinar,owner,partner,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0075,Lindenwerk GmbH,Germany,90,Seller B,yes,price,2025-12-28,,,office manager,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0076,Klosterblick KG,Germany,60,Seller E,yes,competitor,2025-05-09,,newsletter click,owner,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0077,Bergservice GmbH,Switzerland,60,Former owner 1,yes,chain,2026-07-21,,,marketing,outbound,Leave out,,clear no on file: chain
+L0078,Sonnenblick AG,Germany,60,Seller B,yes,,2025-03-22,,pricing page,office manager,outbound,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0079,Eichenstudio KG,United Kingdom,60,Seller E,no,,2026-09-02,,,owner,outbound,Leave out,,not a target market
+L0080,Sonnenblick KG,United Kingdom,8,Seller E,no,competitor,2025-02-17,,newsletter click,managing director,referral,Leave out,,not a target market
+L0081,Gartenservice KG,Switzerland,15,Former owner 1,no,timing,2026-07-22,,case study,owner,partner,Ask the seller,,"marked unqualified, no reason given"
+L0082,Rosenservice GmbH,Austria,90,Seller B,no,too small,2026-04-12,,,office manager,inbound demo request,Leave out,,clear no on file: too small
+L0083,Lindenwerk AG,Switzerland,90,Seller D,no,,2025-01-27,,case study,office manager,event,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0084,Hafenpartner GmbH,Switzerland,150,Seller A,no,,2025-01-15,,event stand,managing director,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0085,Rosenblick GmbH,United Kingdom,150,Seller E,yes,,2024-12-08,,pricing page,office manager,event,Leave out,,not a target market
+L0086,Lindenpartner KG,Germany,60,Seller D,yes,,2025-03-21,,webinar,office manager,outbound,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0087,Hafenblick GmbH & Co. KG,Switzerland,15,Seller C,yes,timing,2025-12-25,,newsletter click,office manager,event,"Call first: saw a demo, reason to talk",Seller,"lost on timing; owner left, shared out"
+L0088,Flussstudio AG,Austria,8,Former owner 2,no,,2026-06-04,,pricing page,owner,partner,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0089,Rosenblick GmbH & Co. KG,Germany,40,Seller B,yes,no answer,2025-04-26,,,office manager,event,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0090,Waldservice GmbH & Co. KG,Germany,15,Seller E,yes,competitor,2025-12-21,2027-04-22,,owner,inbound demo request,Wait: competitor contract runs over 6 months,,contract ends later
+L0091,Alpenservice GmbH,Switzerland,90,Seller B,no,,2025-12-03,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0092,Stadtservice GmbH,Germany,40,Seller B,no,price,2025-12-17,,,owner,event,"Email first: no demo, no reason yet",,no reason yet
+L0093,Stadthof GmbH & Co. KG,Austria,8,Seller A,no,,2025-03-17,,newsletter click,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0094,Hafenstudio KG,Germany,150,Seller C,yes,timing,2025-10-14,,newsletter click,office manager,partner,"Call first: saw a demo, reason to talk",Seller,"lost on timing; owner left, shared out"
+L0095,Alpenplus AG,Austria,8,Seller E,no,,2026-08-17,,,office manager,outbound,Leave out,,"key account, own seller"
+L0096,Gartenmarkt KG,Germany,25,Seller C,no,not icp,2026-09-13,,case study,owner,outbound,Leave out,,"key account, own seller"
+L0097,Eichenbau GmbH,Germany,150,Seller A,no,,2025-10-28,,newsletter click,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0098,Hafenplus KG,Germany,25,Seller B,yes,competitor,2025-09-24,,,managing director,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0099,Bergmarkt GmbH,Austria,8,Seller D,no,too small,2025-05-30,,pricing page,office manager,inbound demo request,Leave out,,clear no on file: too small
+L0100,Flussstudio AG,Switzerland,90,Seller B,no,no answer,2025-03-02,,,managing director,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0101,Eichenhof GmbH,Germany,90,Seller D,no,,2026-05-21,,newsletter click,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0102,Alpenblick KG,Switzerland,150,Seller A,yes,,2026-06-03,,,managing director,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0103,Eichenmarkt AG,Italy,90,Former owner 2,yes,,2025-08-13,,case study,owner,event,Leave out,,not a target market
+L0104,Gartenmarkt GmbH & Co. KG,Germany,25,Seller E,yes,no answer,2025-11-07,,pricing page,owner,referral,"Call first: saw a demo, reason to talk",Seller,lost on no answer; pricing page this year
+L0105,Sonnenbau GmbH,Germany,40,Seller B,yes,timing,2025-11-22,,,managing director,outbound,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0106,Gartenpartner GmbH,Germany,150,Seller B,yes,,2024-12-01,,,office manager,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0107,Flussbau GmbH,Germany,15,Seller D,no,competitor,2025-10-02,2027-06-15,newsletter click,marketing,event,Ask the seller,,"marked unqualified, no reason given"
+L0108,Stadtmarkt GmbH,Germany,8,Seller E,no,not icp,2025-08-19,,,owner,inbound demo request,Leave out,,clear no on file: not icp
+L0109,Waldservice KG,Germany,15,Seller C,yes,timing,2024-12-04,,newsletter click,owner,event,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0110,Flussstudio GmbH,Austria,60,Seller A,yes,price,2025-10-11,,webinar,owner,partner,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0111,Alpenhof KG,Austria,15,Seller C,yes,,2026-06-16,,,office manager,event,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0112,Stadtstudio AG,Italy,8,Seller D,no,chain,2026-09-24,,case study,office manager,partner,Leave out,,not a target market
+L0113,Klosterservice GmbH & Co. KG,Switzerland,60,Seller E,no,no opportunity,2025-09-06,,,marketing,outbound,Leave out,,clear no on file: no opportunity
+L0114,Rosenwerk KG,Germany,90,Seller C,yes,not icp,2025-11-02,,newsletter click,office manager,event,Leave out,,clear no on file: not icp
+L0115,Bergblick AG,Germany,25,Seller E,no,,2026-05-12,,case study,owner,inbound demo request,Ask the seller,,"marked unqualified, no reason given"
+L0116,Stadtblick GmbH & Co. KG,Austria,15,Seller D,yes,,2026-02-02,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0117,Flussstudio AG,Austria,15,Seller C,yes,timing,2025-10-15,,event stand,marketing,outbound,"Call first: saw a demo, reason to talk",Seller,"lost on timing; event stand this year; owner left, shared out"
+L0118,Lindenbau KG,Austria,8,Seller D,no,,2026-03-17,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0119,Lindenhof AG,Germany,25,Seller A,yes,,2025-06-14,,pricing page,managing director,referral,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0120,Waldmarkt GmbH & Co. KG,Austria,25,Seller E,yes,timing,2024-12-27,,newsletter click,marketing,referral,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0121,Lindenservice GmbH,Austria,15,Seller D,yes,competitor,2026-07-16,,,marketing,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0122,Waldmarkt GmbH & Co. KG,Germany,40,Seller B,no,competitor,2025-12-09,,pricing page,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0123,Rosenhaus GmbH,Italy,90,Seller E,no,competitor,2026-07-06,,pricing page,managing director,referral,Leave out,,not a target market
+L0124,Waldservice GmbH,Germany,8,Former owner 1,no,timing,2025-08-26,,,office manager,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0125,Hafenstudio AG,United Kingdom,25,Seller E,no,timing,2026-07-11,,pricing page,office manager,event,Leave out,,not a target market
+L0126,Alpenhaus KG,Germany,60,Seller A,yes,,2025-04-06,,case study,owner,event,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0127,Gartenmarkt KG,Switzerland,40,Seller B,yes,competitor,2026-01-25,,,marketing,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0128,Gartenhof AG,Austria,150,Seller A,no,chain,2026-04-10,,,owner,outbound,Leave out,,clear no on file: chain
+L0129,Alpenpartner GmbH,Germany,15,Seller C,no,,2024-12-15,,pricing page,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0130,Gartenhof GmbH,Germany,40,Seller C,yes,price,2026-01-04,,,office manager,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0131,Sonnenbau GmbH,Italy,8,Seller B,yes,price,2025-03-23,,newsletter click,owner,outbound,Leave out,,not a target market
+L0132,Gartenservice GmbH,Germany,25,Seller C,yes,,2026-06-19,,pricing page,managing director,partner,Leave out,,"key account, own seller"
+L0133,Bergbau KG,Italy,150,Seller D,yes,timing,2026-02-28,,newsletter click,owner,partner,Leave out,,not a target market
+L0134,Lindenmarkt KG,Austria,8,Seller A,yes,no answer,2026-04-28,,newsletter click,owner,event,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0135,Alpenplus AG,Germany,150,Seller A,no,timing,2025-06-01,,,managing director,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0136,Hafenstudio GmbH,Austria,25,Seller A,no,price,2024-11-21,,,marketing,event,"Email first: no demo, no reason yet",,no reason yet
+L0137,Flusshaus AG,Germany,90,Former owner 2,no,not icp,2025-08-13,,pricing page,office manager,outbound,Leave out,,clear no on file: not icp
+L0138,Gartenhof KG,Switzerland,90,Seller E,yes,price,2026-04-20,,,office manager,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0139,Rosenhof GmbH & Co. KG,Italy,25,Seller B,no,no opportunity,2025-11-03,,pricing page,owner,referral,Leave out,,not a target market
+L0140,Lindenblick GmbH & Co. KG,Austria,40,Former owner 2,no,timing,2025-03-11,,webinar,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on timing; webinar this year
+L0141,Klosterstudio AG,Germany,8,Seller C,no,price,2025-05-21,,case study,managing director,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0142,Flussblick AG,Switzerland,150,Seller C,no,price,2025-11-06,,newsletter click,managing director,referral,"Email first: no demo, no reason yet",,no reason yet
+L0143,Eichenmarkt KG,Germany,150,Seller A,yes,no answer,2026-01-09,,,marketing,outbound,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0144,Flussplus GmbH,Italy,25,Seller E,no,,2026-04-21,,,owner,partner,Leave out,,not a target market
+L0145,Waldstudio AG,Germany,60,Seller B,no,too small,2025-12-31,,,owner,referral,Leave out,,clear no on file: too small
+L0146,Bergblick KG,Germany,40,Seller B,yes,no answer,2026-08-03,,,managing director,partner,Wait: lost under 90 days ago,,lost recently
+L0147,Eichenhof GmbH,Austria,15,Former owner 1,no,price,2025-01-15,,,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0148,Berghof KG,Austria,150,Seller D,yes,competitor,2025-12-29,,,marketing,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0149,Rosenstudio AG,Germany,8,Seller C,yes,chain,2026-04-27,,pricing page,managing director,event,Leave out,,clear no on file: chain
+L0150,Rosenhaus GmbH,Germany,25,Seller C,yes,,2026-02-25,,,owner,referral,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0151,Alpenplus KG,Austria,15,Seller B,no,price,2025-04-19,,,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0152,Flussblick KG,Germany,15,Former owner 1,no,,2026-01-16,,,owner,event,Ask the seller,,"marked unqualified, no reason given"
+L0153,Gartenhaus GmbH,Switzerland,15,Seller D,no,too small,2026-01-27,,,owner,outbound,Leave out,,clear no on file: too small
+L0154,Eichenblick KG,Austria,150,Seller A,no,competitor,2025-09-11,,,office manager,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0155,Flusshof GmbH,Germany,150,Seller B,yes,too small,2026-02-15,,newsletter click,managing director,event,Leave out,,clear no on file: too small
+L0156,Klosterservice KG,Germany,90,Seller D,yes,no answer,2025-12-29,,case study,owner,inbound demo request,"Call first: saw a demo, reason to talk",Seller,"lost on no answer; case study this year; owner left, shared out"
+L0157,Sonnenbau GmbH & Co. KG,Germany,8,Seller B,no,chain,2026-01-09,,pricing page,managing director,partner,Leave out,,clear no on file: chain
+L0158,Rosenservice KG,Italy,8,Seller D,no,too small,2025-06-15,,pricing page,owner,event,Leave out,,not a target market
+L0159,Lindenwerk GmbH,Germany,15,Seller D,yes,,2025-05-11,,,owner,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0160,Rosenbau KG,Switzerland,60,Seller E,no,competitor,2025-01-04,,webinar,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0161,Eichenplus AG,Germany,60,Former owner 2,no,,2025-12-13,,webinar,owner,referral,Leave out,,customer today
+L0162,Hafenbau GmbH,Italy,40,Seller A,no,,2025-04-26,,,marketing,partner,Leave out,,not a target market
+L0163,Hafenservice GmbH,Germany,150,Seller A,no,timing,2025-12-22,,,office manager,referral,Ask the seller,,"marked unqualified, no reason given"
+L0164,Gartenhaus GmbH & Co. KG,Germany,25,Former owner 1,yes,timing,2026-07-22,,,marketing,inbound demo request,Wait: lost under 90 days ago,,lost recently
+L0165,Klosterservice KG,Germany,150,Former owner 1,no,no answer,2026-01-25,,newsletter click,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0166,Eichenpartner GmbH,Germany,25,Former owner 2,no,no answer,2026-06-14,,newsletter click,marketing,event,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0167,Stadtpartner GmbH & Co. KG,Germany,40,Former owner 2,no,timing,2025-03-01,,newsletter click,managing director,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0168,Berghof GmbH & Co. KG,Germany,25,Seller A,yes,competitor,2026-03-27,2027-01-18,,owner,partner,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon
+L0169,Hafenwerk KG,Germany,40,Seller E,yes,competitor,2025-04-17,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0170,Stadthaus KG,Germany,40,Seller C,yes,price,2025-12-06,,,office manager,referral,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0171,Stadtbau KG,Germany,60,Seller B,no,no opportunity,2026-09-22,,,owner,partner,Leave out,,clear no on file: no opportunity
+L0172,Eichenwerk GmbH,Germany,60,Seller C,no,no opportunity,2026-06-17,,,office manager,partner,Leave out,,clear no on file: no opportunity
+L0173,Stadtservice AG,Germany,8,Former owner 2,yes,,2026-02-01,,,marketing,event,Leave out,,"key account, own seller"
+L0174,Alpenpartner GmbH,United Kingdom,40,Seller B,no,,2025-06-12,,,owner,inbound demo request,Leave out,,not a target market
+L0175,Klosterbau GmbH & Co. KG,Italy,40,Seller C,no,competitor,2026-01-14,2026-10-21,newsletter click,managing director,referral,Leave out,,not a target market
+L0176,Bergservice GmbH & Co. KG,Austria,90,Seller E,no,,2025-06-26,,,owner,partner,Ask the seller,,"marked unqualified, no reason given"
+L0177,Eichenservice GmbH & Co. KG,Switzerland,90,Seller E,yes,price,2026-02-15,,,marketing,outbound,Leave out,,"key account, own seller"
+L0178,Stadtmarkt GmbH,Germany,150,Seller E,no,competitor,2025-08-23,2026-12-13,,office manager,partner,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends soon
+L0179,Waldstudio GmbH & Co. KG,Germany,150,Seller A,yes,,2025-03-09,,,owner,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0180,Rosenstudio GmbH & Co. KG,Italy,15,Seller D,yes,,2025-05-16,,,marketing,outbound,Leave out,,not a target market
+L0181,Hafenplus GmbH,Switzerland,90,Seller C,no,price,2025-07-19,,pricing page,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0182,Gartenwerk KG,Germany,15,Seller E,yes,no opportunity,2026-05-05,,newsletter click,owner,referral,Leave out,,clear no on file: no opportunity
+L0183,Hafenwerk GmbH,Germany,150,Seller C,no,competitor,2025-10-31,2027-08-30,newsletter click,office manager,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0184,Waldblick AG,Austria,40,Former owner 2,no,price,2026-05-04,,,marketing,event,"Email first: no demo, no reason yet",,no reason yet
+L0185,Waldblick KG,United Kingdom,90,Seller A,no,competitor,2025-06-01,2026-12-30,,marketing,referral,Leave out,,not a target market
+L0186,Waldservice GmbH & Co. KG,Switzerland,25,Former owner 1,yes,timing,2025-08-03,,pricing page,managing director,inbound demo request,Leave out,,"key account, own seller"
+L0187,Lindenbau GmbH,Germany,8,Former owner 2,yes,price,2026-10-01,,event stand,owner,partner,Wait: lost under 90 days ago,,lost recently
+L0188,Flusshaus GmbH & Co. KG,United Kingdom,90,Seller D,no,competitor,2025-11-19,2027-11-28,,office manager,partner,Leave out,,not a target market
+L0189,Rosenbau AG,Switzerland,15,Seller C,yes,competitor,2025-11-30,2027-08-01,pricing page,office manager,inbound demo request,Wait: competitor contract runs over 6 months,,contract ends later
+L0190,Stadtbau AG,Germany,60,Seller E,no,,2026-03-19,,pricing page,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0191,Bergbau GmbH,Switzerland,40,Seller D,yes,no answer,2025-09-01,,,marketing,referral,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0192,Hafenblick GmbH & Co. KG,Germany,15,Former owner 1,yes,no opportunity,2024-12-06,,,managing director,referral,Leave out,,clear no on file: no opportunity
+L0193,Flussbau GmbH,Germany,8,Seller A,no,competitor,2026-01-09,2027-10-16,event stand,owner,event,Wait: competitor contract runs over 6 months,,contract ends later
+L0194,Waldmarkt AG,Switzerland,25,Seller D,yes,no answer,2025-01-13,,pricing page,owner,event,"Call first: saw a demo, reason to talk",Seller,"lost on no answer; pricing page this year; owner left, shared out"
+L0195,Alpenblick KG,Germany,150,Seller D,yes,competitor,2024-11-13,2027-01-10,webinar,office manager,inbound demo request,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon; webinar this year
+L0196,Hafenplus GmbH & Co. KG,Austria,15,Seller C,yes,competitor,2026-08-16,2027-03-07,,marketing,event,Wait: lost under 90 days ago,,lost recently
+L0197,Eichenplus AG,Germany,15,Seller A,yes,too small,2026-08-22,,pricing page,managing director,outbound,Leave out,,clear no on file: too small
+L0198,Waldwerk KG,Germany,90,Seller A,no,no answer,2025-12-25,,webinar,managing director,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; webinar this year
+L0199,Alpenplus GmbH,Germany,8,Seller E,yes,competitor,2026-03-23,2027-04-15,webinar,office manager,event,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon; webinar this year
+L0200,Bergpartner GmbH,Germany,40,Seller C,no,timing,2025-01-13,,pricing page,marketing,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing; pricing page this year
+L0201,Waldhaus GmbH,United Kingdom,90,Seller A,yes,price,2025-12-09,,event stand,office manager,inbound demo request,Leave out,,not a target market
+L0202,Bergpartner KG,Germany,150,Former owner 2,no,,2025-02-21,,,marketing,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0203,Flusswerk GmbH & Co. KG,Italy,150,Seller D,no,competitor,2026-03-05,2027-07-11,,owner,inbound demo request,Leave out,,not a target market
+L0204,Gartenmarkt AG,Italy,25,Seller A,yes,,2025-10-22,,pricing page,marketing,referral,Leave out,,not a target market
+L0205,Lindenservice AG,Austria,15,Seller E,no,not icp,2024-11-15,,,marketing,partner,Leave out,,clear no on file: not icp
+L0206,Lindenhof AG,Switzerland,90,Seller B,no,no opportunity,2025-08-07,,webinar,owner,event,Leave out,,clear no on file: no opportunity
+L0207,Eichenmarkt GmbH & Co. KG,Austria,15,Seller A,no,price,2026-06-11,,pricing page,managing director,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0208,Waldhaus KG,Germany,150,Seller E,no,,2025-09-19,,,owner,outbound,Ask the seller,,"marked unqualified, no reason given"
+L0209,Hafenblick GmbH,Germany,60,Seller C,yes,competitor,2025-05-29,,,owner,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0210,Klostermarkt GmbH,Austria,90,Seller D,no,too small,2025-07-31,,newsletter click,owner,outbound,Leave out,,clear no on file: too small
+L0211,Flussservice AG,Italy,25,Seller D,no,timing,2025-01-26,,event stand,owner,event,Leave out,,not a target market
+L0212,Flusshaus GmbH,Germany,25,Seller E,no,no answer,2026-02-28,,newsletter click,managing director,referral,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0213,Eichenstudio GmbH & Co. KG,Austria,40,Seller B,yes,,2026-03-07,,pricing page,office manager,referral,"Call first: saw a demo, reason to talk",Seller,"pricing page this year; owner left, shared out"
+L0214,Hafenplus AG,Germany,150,Seller C,yes,,2025-08-04,,pricing page,marketing,inbound demo request,"Call first: saw a demo, reason to talk",Seller,"pricing page this year; owner left, shared out"
+L0215,Waldhof KG,Austria,8,Former owner 1,no,price,2024-11-13,,,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0216,Eichenservice KG,Germany,8,Seller D,yes,timing,2026-04-07,,event stand,marketing,partner,"Call first: saw a demo, reason to talk",Seller,"lost on timing; event stand this year; owner left, shared out"
+L0217,Stadtpartner AG,Germany,40,Seller C,no,price,2025-08-10,,newsletter click,managing director,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0218,Sonnenpartner KG,United Kingdom,15,Seller A,no,,2026-04-10,,newsletter click,owner,inbound demo request,Leave out,,not a target market
+L0219,Berghaus KG,Germany,15,Seller D,no,competitor,2025-12-11,,newsletter click,managing director,referral,"Email first: no demo, no reason yet",,no reason yet
+L0220,Klosterplus GmbH,Switzerland,40,Seller A,yes,not icp,2025-01-29,,,owner,event,Leave out,,clear no on file: not icp
+L0221,Eichenplus GmbH,Switzerland,8,Seller A,yes,,2024-12-29,,pricing page,marketing,inbound demo request,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0222,Sonnenhaus GmbH & Co. KG,Switzerland,60,Seller B,no,not icp,2026-05-22,,newsletter click,marketing,outbound,Leave out,,clear no on file: not icp
+L0223,Alpenhof KG,Italy,150,Seller C,yes,no answer,2025-06-15,,webinar,owner,outbound,Leave out,,not a target market
+L0224,Bergblick GmbH,Austria,25,Seller B,yes,,2024-11-20,,,managing director,outbound,Leave out,,"key account, own seller"
+L0225,Hafenhaus AG,Germany,150,Seller A,no,,2025-04-07,,,managing director,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0226,Hafenplus AG,Germany,40,Seller A,no,price,2026-04-19,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0227,Waldpartner GmbH & Co. KG,Switzerland,90,Seller C,yes,,2025-09-20,,,managing director,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0228,Alpenbau GmbH,Germany,25,Seller C,no,,2026-02-17,,newsletter click,marketing,partner,"Email first: no demo, no reason yet",,no reason yet
+L0229,Bergstudio GmbH,Germany,15,Seller A,yes,,2026-02-10,,webinar,office manager,referral,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0230,Hafenservice KG,Switzerland,8,Seller B,yes,timing,2026-01-09,,pricing page,managing director,event,"Call first: saw a demo, reason to talk",Seller,"lost on timing; pricing page this year; owner left, shared out"
+L0231,Hafenhaus KG,Germany,150,Seller C,yes,no opportunity,2025-04-30,,pricing page,owner,outbound,Leave out,,clear no on file: no opportunity
+L0232,Klosterplus KG,Switzerland,25,Seller C,yes,too small,2026-08-01,,pricing page,marketing,inbound demo request,Leave out,,"key account, own seller"
+L0233,Waldplus GmbH & Co. KG,Germany,15,Seller C,no,timing,2026-01-01,,,office manager,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0234,Alpenservice AG,Germany,40,Seller A,yes,timing,2025-08-19,,,marketing,event,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0235,Gartenplus GmbH,Switzerland,40,Seller A,no,,2025-04-03,,,marketing,partner,"Email first: no demo, no reason yet",,no reason yet
+L0236,Hafenhaus KG,United Kingdom,150,Seller D,no,no opportunity,2026-09-27,,newsletter click,office manager,referral,Leave out,,not a target market
+L0237,Bergwerk GmbH & Co. KG,Austria,8,Seller D,no,price,2026-04-13,,case study,marketing,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0238,Stadtbau GmbH & Co. KG,United Kingdom,15,Former owner 1,no,no answer,2025-02-01,,newsletter click,owner,inbound demo request,Leave out,,not a target market
+L0239,Bergblick GmbH,Switzerland,8,Seller C,no,timing,2026-01-29,,case study,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on timing; case study this year
+L0240,Sonnenbau KG,Germany,15,Former owner 1,no,no answer,2026-05-07,,newsletter click,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0241,Klosterwerk GmbH,Italy,15,Former owner 2,yes,too small,2025-05-23,,pricing page,office manager,referral,Leave out,,not a target market
+L0242,Stadtpartner GmbH & Co. KG,United Kingdom,8,Seller E,no,no answer,2025-06-29,,,managing director,event,Leave out,,not a target market
+L0243,Klosterplus AG,Switzerland,15,Seller C,no,timing,2024-11-17,,,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0244,Alpenservice GmbH & Co. KG,Italy,15,Seller E,no,not icp,2025-06-21,,pricing page,owner,inbound demo request,Leave out,,not a target market
+L0245,Rosenblick GmbH,Switzerland,25,Seller A,no,competitor,2025-06-18,,,marketing,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0246,Bergplus KG,Germany,150,Seller D,no,,2026-05-30,,pricing page,marketing,event,Ask the seller,,"marked unqualified, no reason given"
+L0247,Stadtmarkt KG,Germany,40,Seller C,no,chain,2025-01-16,,newsletter click,marketing,inbound demo request,Leave out,,clear no on file: chain
+L0248,Flussblick GmbH,Switzerland,40,Former owner 1,no,,2025-01-11,,webinar,owner,inbound demo request,Leave out,,"key account, own seller"
+L0249,Bergwerk KG,Italy,60,Seller C,yes,no answer,2025-11-29,,,owner,inbound demo request,Leave out,,not a target market
+L0250,Bergservice GmbH,Switzerland,8,Seller E,no,,2026-05-28,,event stand,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0251,Sonnenwerk GmbH,Germany,90,Seller D,no,,2026-06-07,,newsletter click,marketing,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0252,Sonnenstudio GmbH,Germany,150,Former owner 1,no,price,2026-03-09,,webinar,office manager,referral,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0253,Stadtmarkt KG,Austria,25,Seller D,yes,competitor,2026-09-16,2026-09-18,webinar,owner,event,Wait: lost under 90 days ago,,lost recently
+L0254,Alpenstudio GmbH,Germany,25,Seller B,yes,no answer,2026-02-08,,newsletter click,office manager,event,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0255,Waldblick GmbH,Germany,150,Former owner 2,yes,,2026-08-22,,pricing page,managing director,event,Wait: lost under 90 days ago,,lost recently
+L0256,Bergstudio KG,Germany,60,Seller A,yes,no opportunity,2026-06-25,,newsletter click,owner,partner,Leave out,,clear no on file: no opportunity
+L0257,Hafenhof GmbH & Co. KG,Switzerland,90,Seller A,yes,competitor,2026-05-30,2027-01-26,event stand,owner,referral,Leave out,,"key account, own seller"
+L0258,Hafenpartner AG,Germany,15,Seller A,yes,,2025-06-30,,,owner,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0259,Eichenwerk AG,Germany,60,Seller E,yes,timing,2025-02-03,,newsletter click,managing director,outbound,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0260,Flussservice AG,Austria,150,Seller A,no,,2026-02-25,,newsletter click,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0261,Sonnenblick KG,Switzerland,60,Former owner 1,yes,,2026-07-31,,,owner,outbound,Wait: lost under 90 days ago,,lost recently
+L0262,Hafenblick GmbH,Switzerland,60,Seller A,no,not icp,2025-05-06,,,office manager,referral,Leave out,,clear no on file: not icp
+L0263,Eichenpartner GmbH,Germany,150,Seller C,yes,timing,2025-01-18,,pricing page,marketing,referral,"Call first: saw a demo, reason to talk",Seller,"lost on timing; pricing page this year; owner left, shared out"
+L0264,Klosterhof GmbH,Germany,40,Seller E,yes,timing,2026-02-24,,,managing director,outbound,Leave out,,"key account, own seller"
+L0265,Stadthof GmbH,Germany,90,Seller E,yes,price,2026-01-25,,webinar,owner,event,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0266,Eichenblick KG,Germany,90,Seller A,yes,,2025-02-15,,pricing page,marketing,event,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0267,Eichenhof GmbH & Co. KG,Switzerland,60,Former owner 1,yes,price,2026-10-03,,,marketing,partner,Wait: lost under 90 days ago,,lost recently
+L0268,Rosenplus KG,Italy,8,Seller B,yes,,2025-08-29,,webinar,owner,event,Leave out,,not a target market
+L0269,Gartenplus GmbH,Switzerland,40,Seller A,no,,2025-03-18,,,owner,partner,"Email first: no demo, no reason yet",,no reason yet
+L0270,Hafenhof GmbH,Germany,60,Seller A,no,,2025-12-23,,webinar,marketing,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0271,Gartenblick KG,Germany,25,Seller B,no,,2025-12-02,,,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0272,Gartenservice KG,Switzerland,150,Seller C,no,price,2025-07-12,,pricing page,office manager,partner,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0273,Sonnenhaus GmbH,Germany,25,Seller E,yes,,2025-05-30,,webinar,managing director,event,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0274,Sonnenhaus GmbH & Co. KG,Germany,40,Former owner 2,yes,competitor,2025-07-02,2027-10-11,,owner,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0275,Alpenplus GmbH & Co. KG,Germany,90,Seller E,yes,,2025-12-31,,newsletter click,owner,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0276,Hafenblick GmbH & Co. KG,Germany,60,Seller B,yes,competitor,2025-06-14,,,marketing,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0277,Stadtservice KG,Austria,40,Former owner 2,no,,2026-01-07,,,marketing,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0278,Klosterblick GmbH,Germany,150,Seller C,yes,no answer,2026-09-19,,,office manager,outbound,Leave out,,"key account, own seller"
+L0279,Alpenwerk GmbH & Co. KG,Switzerland,8,Seller B,yes,too small,2025-01-11,,,marketing,outbound,Leave out,,clear no on file: too small
+L0280,Bergpartner GmbH & Co. KG,Germany,8,Seller E,no,competitor,2026-04-25,2027-10-21,,managing director,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0281,Alpenplus KG,Germany,60,Former owner 2,no,timing,2025-10-28,,event stand,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing; event stand this year
+L0282,Alpenblick KG,Switzerland,15,Seller E,no,,2025-07-04,,newsletter click,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0283,Berghof GmbH,Austria,150,Seller C,no,competitor,2025-01-03,,newsletter click,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0284,Waldpartner KG,Austria,25,Seller A,yes,price,2025-08-30,,event stand,office manager,partner,"Call first: saw a demo, reason to talk",Seller,event stand this year
+L0285,Lindenstudio GmbH & Co. KG,United Kingdom,8,Seller E,no,,2025-07-26,,,owner,inbound demo request,Leave out,,not a target market
+L0286,Bergstudio AG,Germany,60,Former owner 1,no,no answer,2025-08-26,,event stand,office manager,event,Leave out,,"key account, own seller"
+L0287,Bergservice AG,Switzerland,15,Seller E,yes,too small,2026-02-07,,,marketing,event,Leave out,,clear no on file: too small
+L0288,Gartenplus GmbH & Co. KG,Austria,40,Seller D,no,,2024-12-22,,,owner,referral,"Email first: no demo, no reason yet",,no reason yet
+L0289,Klosterbau AG,Germany,60,Seller E,no,timing,2024-11-27,,newsletter click,managing director,inbound demo request,Leave out,,customer today
+L0290,Flussstudio GmbH & Co. KG,Switzerland,150,Seller A,yes,no opportunity,2026-07-28,,,office manager,outbound,Leave out,,clear no on file: no opportunity
+L0291,Lindenmarkt GmbH & Co. KG,Germany,90,Seller A,yes,,2025-04-20,,,marketing,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0292,Bergmarkt GmbH,Switzerland,150,Seller E,no,no answer,2026-07-26,,newsletter click,office manager,outbound,Wait: lost under 90 days ago,,lost recently
+L0293,Eichenhof GmbH & Co. KG,Austria,40,Seller E,yes,timing,2025-02-17,,,owner,partner,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0294,Sonnenbau GmbH,Austria,15,Former owner 2,no,price,2025-05-16,,pricing page,managing director,partner,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0295,Hafenblick GmbH & Co. KG,Germany,8,Seller C,yes,,2025-02-17,,,owner,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0296,Flussplus KG,Italy,40,Seller D,no,competitor,2025-10-13,,event stand,owner,inbound demo request,Leave out,,not a target market
+L0297,Waldblick AG,Germany,90,Seller C,yes,,2026-07-01,,newsletter click,managing director,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0298,Hafenpartner AG,Switzerland,25,Seller D,no,timing,2026-09-06,,newsletter click,office manager,outbound,Ask the seller,,"marked unqualified, no reason given"
+L0299,Berghof KG,Germany,25,Seller D,yes,,2026-04-28,,,owner,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0300,Gartenhaus KG,Italy,15,Former owner 1,no,,2025-05-15,,,managing director,inbound demo request,Leave out,,not a target market
+L0301,Eichenbau AG,Germany,25,Seller D,no,,2025-05-26,,pricing page,marketing,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0302,Alpenpartner AG,United Kingdom,8,Seller B,no,timing,2024-12-03,,,office manager,event,Leave out,,not a target market
+L0303,Hafenhaus AG,Germany,60,Seller A,no,not icp,2025-07-08,,,office manager,inbound demo request,Leave out,,clear no on file: not icp
+L0304,Sonnenstudio GmbH & Co. KG,Switzerland,8,Seller C,no,price,2026-08-04,,pricing page,office manager,partner,Wait: lost under 90 days ago,,lost recently
+L0305,Waldservice AG,United Kingdom,15,Seller A,no,too small,2025-07-23,,event stand,marketing,partner,Leave out,,not a target market
+L0306,Stadtpartner GmbH & Co. KG,United Kingdom,90,Seller E,no,no opportunity,2026-09-08,,,marketing,outbound,Leave out,,not a target market
+L0307,Rosenservice KG,Switzerland,8,Seller D,no,no opportunity,2026-04-04,,newsletter click,managing director,referral,Leave out,,clear no on file: no opportunity
+L0308,Hafenblick AG,Italy,15,Seller A,no,too small,2026-03-28,,webinar,managing director,partner,Leave out,,not a target market
+L0309,Klostermarkt GmbH,Germany,8,Seller C,yes,timing,2025-01-28,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,lost on timing; pricing page this year
+L0310,Stadthaus AG,Germany,150,Seller D,yes,,2025-09-05,,webinar,owner,event,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0311,Hafenmarkt AG,Switzerland,90,Seller A,yes,timing,2026-01-14,,case study,marketing,referral,"Call first: saw a demo, reason to talk",Seller,lost on timing; case study this year
+L0312,Eichenstudio GmbH & Co. KG,Switzerland,40,Seller C,no,competitor,2025-07-12,,newsletter click,managing director,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0313,Waldmarkt GmbH,Italy,25,Seller A,yes,timing,2024-11-20,,case study,owner,event,Leave out,,not a target market
+L0314,Stadtwerk AG,Austria,60,Seller A,yes,,2025-01-14,,,marketing,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0315,Rosenservice KG,Germany,25,Seller D,yes,,2024-11-13,,newsletter click,marketing,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0316,Sonnenstudio KG,Germany,90,Seller B,yes,price,2025-01-01,,case study,marketing,inbound demo request,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0317,Lindenhaus GmbH & Co. KG,Austria,60,Seller C,no,price,2025-02-21,,pricing page,owner,referral,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0318,Waldhaus GmbH,Germany,8,Seller E,no,,2026-07-08,,,marketing,event,"Email first: no demo, no reason yet",,no reason yet
+L0319,Flussplus AG,Germany,40,Seller E,no,no opportunity,2025-07-19,,,owner,outbound,Leave out,,clear no on file: no opportunity
+L0320,Rosenplus AG,Germany,60,Seller C,yes,price,2026-05-14,,,owner,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0321,Rosenplus GmbH & Co. KG,Germany,25,Seller C,yes,not icp,2026-05-10,,pricing page,marketing,partner,Leave out,,clear no on file: not icp
+L0322,Sonnenpartner GmbH,Italy,8,Seller C,no,,2025-07-02,,case study,office manager,outbound,Leave out,,not a target market
+L0323,Hafenhof KG,Germany,60,Seller B,no,no answer,2025-02-24,,event stand,managing director,inbound demo request,Ask the seller,,"marked unqualified, no reason given"
+L0324,Gartenmarkt AG,Austria,8,Seller E,yes,too small,2026-07-10,,newsletter click,managing director,partner,Leave out,,customer today
+L0325,Stadtpartner KG,Austria,60,Seller A,yes,,2026-07-28,,event stand,managing director,outbound,Wait: lost under 90 days ago,,lost recently
+L0326,Hafenstudio KG,Austria,40,Seller B,no,price,2026-05-13,,case study,office manager,referral,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0327,Klosterstudio GmbH & Co. KG,Switzerland,25,Former owner 2,no,,2025-06-05,,,managing director,referral,"Email first: no demo, no reason yet",,no reason yet
+L0328,Klosterstudio GmbH & Co. KG,Germany,8,Seller D,yes,competitor,2026-04-06,,,office manager,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0329,Rosenhof KG,Germany,8,Seller A,no,no opportunity,2026-01-11,,,managing director,outbound,Leave out,,clear no on file: no opportunity
+L0330,Lindenplus GmbH,Germany,60,Seller D,yes,timing,2025-12-10,,case study,managing director,event,"Call first: saw a demo, reason to talk",Seller,lost on timing; case study this year
+L0331,Eichenmarkt KG,Germany,25,Seller B,no,,2025-12-22,,newsletter click,managing director,referral,"Email first: no demo, no reason yet",,no reason yet
+L0332,Lindenhaus GmbH,Germany,90,Seller A,no,price,2026-07-12,,,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0333,Gartenhaus AG,Germany,60,Seller E,no,not icp,2026-08-28,,event stand,owner,referral,Leave out,,clear no on file: not icp
+L0334,Waldplus AG,Switzerland,60,Former owner 1,no,timing,2024-12-13,,pricing page,marketing,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing; pricing page this year
+L0335,Hafenblick GmbH,Switzerland,15,Seller D,no,competitor,2026-09-19,,newsletter click,office manager,referral,Wait: lost under 90 days ago,,lost recently
+L0336,Bergplus GmbH & Co. KG,Switzerland,60,Seller D,yes,chain,2025-04-12,,pricing page,office manager,inbound demo request,Leave out,,clear no on file: chain
+L0337,Waldwerk AG,Switzerland,150,Seller D,yes,price,2025-07-31,,,office manager,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0338,Hafenmarkt GmbH,Switzerland,40,Seller C,no,competitor,2026-01-19,2026-09-18,newsletter click,managing director,event,Ask the seller,,"marked unqualified, no reason given"
+L0339,Flusswerk AG,Germany,8,Seller B,yes,,2025-05-02,,,owner,outbound,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0340,Rosenhof GmbH,Germany,40,Former owner 1,no,competitor,2025-08-09,2026-12-02,,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends soon
+L0341,Rosenblick GmbH,Germany,8,Seller C,yes,no answer,2025-05-24,,newsletter click,managing director,inbound demo request,"Call first: saw a demo, reason to talk",Seller,"lost on no answer; owner left, shared out"
+L0342,Eichenmarkt KG,Austria,60,Seller A,no,,2025-05-12,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0343,Eichenwerk GmbH & Co. KG,Germany,40,Former owner 2,no,not icp,2026-05-22,,pricing page,office manager,partner,Leave out,,clear no on file: not icp
+L0344,Hafenmarkt GmbH,Germany,40,Former owner 1,no,competitor,2025-03-26,,newsletter click,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0345,Waldstudio AG,Germany,8,Seller B,no,timing,2025-02-28,,case study,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on timing; case study this year
+L0346,Bergpartner GmbH & Co. KG,Germany,40,Former owner 1,no,price,2024-12-27,,pricing page,marketing,event,Ask the seller,,"marked unqualified, no reason given"
+L0347,Klosterpartner GmbH,Germany,8,Former owner 1,no,timing,2025-05-22,,case study,marketing,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on timing; case study this year
+L0348,Flusspartner AG,Switzerland,15,Seller D,yes,timing,2025-10-26,,,owner,referral,"Call first: saw a demo, reason to talk",Seller,"lost on timing; owner left, shared out"
+L0349,Waldstudio GmbH,United Kingdom,25,Seller A,yes,competitor,2025-05-05,,case study,marketing,referral,Leave out,,not a target market
+L0350,Stadtplus GmbH & Co. KG,Germany,8,Former owner 1,no,price,2025-03-31,,newsletter click,marketing,inbound demo request,Ask the seller,,"marked unqualified, no reason given"
+L0351,Stadtplus KG,Italy,90,Seller E,no,price,2026-07-04,,newsletter click,owner,event,Leave out,,not a target market
+L0352,Flussservice AG,Italy,8,Seller E,no,no answer,2025-12-08,,event stand,marketing,inbound demo request,Leave out,,not a target market
+L0353,Klosterhaus GmbH & Co. KG,Germany,150,Seller C,no,price,2025-08-31,,newsletter click,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0354,Eichenblick GmbH & Co. KG,Germany,40,Seller A,yes,too small,2026-08-24,,pricing page,owner,outbound,Leave out,,clear no on file: too small
+L0355,Alpenhaus GmbH,Germany,90,Seller B,no,,2026-05-18,,,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0356,Klosterbau KG,Switzerland,40,Seller D,no,,2025-02-01,,,managing director,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0357,Lindenwerk GmbH & Co. KG,Italy,25,Seller C,no,no opportunity,2026-07-02,,case study,owner,referral,Leave out,,not a target market
+L0358,Gartenpartner GmbH,Germany,15,Seller A,no,chain,2025-06-04,,,managing director,event,Leave out,,clear no on file: chain
+L0359,Flusshof KG,Germany,40,Seller A,no,no answer,2025-06-02,,webinar,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; webinar this year
+L0360,Bergstudio GmbH,Germany,40,Seller A,no,timing,2026-09-15,,newsletter click,marketing,outbound,Wait: lost under 90 days ago,,lost recently
+L0361,Alpenservice AG,Austria,8,Seller D,yes,timing,2026-04-23,,pricing page,owner,event,"Call first: saw a demo, reason to talk",Seller,lost on timing; pricing page this year
+L0362,Waldpartner GmbH & Co. KG,Germany,60,Seller D,no,timing,2026-06-29,,,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0363,Lindenservice AG,Germany,90,Seller B,yes,competitor,2025-09-03,,,marketing,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0364,Eichenhof AG,Germany,60,Seller A,yes,,2025-02-14,,webinar,office manager,event,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0365,Flussservice KG,Austria,25,Seller D,no,too small,2025-08-21,,pricing page,managing director,partner,Leave out,,clear no on file: too small
+L0366,Stadtbau KG,Germany,40,Seller E,no,timing,2026-03-10,,,marketing,partner,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0367,Hafenblick GmbH & Co. KG,Germany,40,Seller C,yes,timing,2026-01-06,,pricing page,marketing,event,"Call first: saw a demo, reason to talk",Seller,"lost on timing; pricing page this year; owner left, shared out"
+L0368,Hafenwerk KG,Germany,8,Seller B,no,,2025-03-16,,,marketing,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0369,Sonnenhof GmbH,Switzerland,60,Seller D,yes,price,2025-03-16,,webinar,managing director,outbound,"Call first: saw a demo, reason to talk",Seller,"webinar this year; owner left, shared out"
+L0370,Stadtpartner GmbH & Co. KG,Switzerland,90,Seller E,no,competitor,2025-05-31,2026-10-09,,owner,partner,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends recently
+L0371,Sonnenservice KG,Italy,8,Seller D,no,,2025-04-05,,webinar,marketing,event,Leave out,,not a target market
+L0372,Sonnenhof GmbH,Switzerland,40,Former owner 1,no,,2026-01-06,,,marketing,partner,"Email first: no demo, no reason yet",,no reason yet
+L0373,Bergservice GmbH,Switzerland,40,Seller B,yes,timing,2026-07-12,,event stand,managing director,inbound demo request,"Call first: saw a demo, reason to talk",Seller,"lost on timing; event stand this year; owner left, shared out"
+L0374,Waldhof KG,Italy,25,Seller B,no,,2025-07-09,,newsletter click,owner,event,Leave out,,not a target market
+L0375,Hafenwerk AG,Germany,25,Seller C,no,price,2025-09-21,,event stand,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0376,Waldbau GmbH,Italy,8,Seller B,no,,2026-05-10,,case study,managing director,partner,Leave out,,not a target market
+L0377,Rosenhof GmbH,Austria,8,Seller A,yes,no answer,2025-03-28,,,owner,partner,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0378,Stadthaus GmbH & Co. KG,Germany,90,Seller D,no,competitor,2026-09-02,2027-11-17,newsletter click,office manager,referral,Wait: lost under 90 days ago,,lost recently
+L0379,Gartenwerk KG,Austria,90,Seller A,no,price,2025-05-05,,,owner,event,"Email first: no demo, no reason yet",,no reason yet
+L0380,Stadtmarkt GmbH,Germany,90,Seller E,no,,2026-01-10,,newsletter click,office manager,event,"Email first: no demo, no reason yet",,no reason yet
+L0381,Sonnenstudio GmbH,Germany,60,Seller A,no,timing,2026-01-31,,newsletter click,managing director,partner,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0382,Eichenmarkt GmbH & Co. KG,Italy,25,Seller A,no,,2026-03-02,,,managing director,partner,Leave out,,not a target market
+L0383,Berghof GmbH,Switzerland,90,Seller D,no,competitor,2025-03-20,2027-09-09,,owner,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0384,Eichenhaus AG,Germany,40,Seller A,no,no opportunity,2026-09-30,,,owner,partner,Leave out,,clear no on file: no opportunity
+L0385,Gartenwerk KG,Germany,25,Former owner 1,no,timing,2026-01-01,,,office manager,partner,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0386,Sonnenbau KG,Germany,8,Seller C,yes,timing,2025-11-27,,,managing director,inbound demo request,"Call first: saw a demo, reason to talk",Seller,"lost on timing; owner left, shared out"
+L0387,Gartenbau KG,Germany,150,Seller E,no,timing,2026-01-15,,,marketing,referral,Ask the seller,,"marked unqualified, no reason given"
+L0388,Rosenbau GmbH & Co. KG,United Kingdom,15,Seller A,no,,2026-07-23,,newsletter click,managing director,referral,Leave out,,not a target market
+L0389,Flussplus AG,Germany,15,Seller E,no,,2024-12-05,,,marketing,referral,"Email first: no demo, no reason yet",,no reason yet
+L0390,Klosterplus GmbH,Germany,60,Seller A,no,timing,2025-01-23,,,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0391,Flussplus KG,Germany,40,Seller E,no,competitor,2025-09-26,2027-10-31,,owner,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0392,Flusshof KG,Germany,15,Seller B,no,not icp,2025-05-03,,,office manager,partner,Leave out,,clear no on file: not icp
+L0393,Gartenmarkt GmbH & Co. KG,Germany,150,Seller D,no,competitor,2025-07-28,2026-10-16,pricing page,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends soon; pricing page this year
+L0394,Waldstudio AG,United Kingdom,90,Seller E,yes,price,2025-10-05,,pricing page,office manager,outbound,Leave out,,not a target market
+L0395,Sonnenpartner KG,United Kingdom,15,Seller D,yes,competitor,2025-06-29,2027-12-07,,office manager,outbound,Leave out,,not a target market
+L0396,Klostermarkt GmbH & Co. KG,United Kingdom,90,Former owner 2,yes,timing,2024-11-17,,case study,managing director,referral,Leave out,,not a target market
+L0397,Bergwerk GmbH & Co. KG,Germany,150,Former owner 1,no,no answer,2025-06-19,,case study,marketing,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; case study this year
+L0398,Alpenhaus AG,Switzerland,40,Seller A,no,no answer,2026-04-06,,case study,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; case study this year
+L0399,Lindenplus KG,Germany,25,Seller A,yes,price,2025-07-02,,newsletter click,office manager,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0400,Klosterblick GmbH,Germany,25,Seller C,no,price,2026-04-16,,newsletter click,owner,inbound demo request,Leave out,,"key account, own seller"
+L0401,Sonnenwerk AG,Germany,15,Seller E,yes,price,2025-01-07,,newsletter click,managing director,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0402,Berghof GmbH & Co. KG,Switzerland,90,Seller E,no,competitor,2025-09-28,2027-07-26,,marketing,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0403,Rosenpartner GmbH & Co. KG,Germany,150,Former owner 2,no,,2025-11-13,,,marketing,referral,"Email first: no demo, no reason yet",,no reason yet
+L0404,Klosterplus GmbH,Austria,25,Seller A,yes,price,2025-12-04,,newsletter click,office manager,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0405,Eichenbau KG,Germany,150,Seller A,yes,no opportunity,2024-12-27,,newsletter click,marketing,event,Leave out,,clear no on file: no opportunity
+L0406,Klosterwerk KG,Germany,150,Seller A,no,,2025-06-29,,pricing page,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0407,Rosenstudio AG,Germany,15,Former owner 1,no,too small,2026-02-22,,pricing page,owner,event,Leave out,,clear no on file: too small
+L0408,Sonnenservice GmbH,Germany,60,Former owner 2,no,competitor,2025-01-08,2026-09-25,,office manager,event,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends recently
+L0409,Eichenbau AG,Germany,15,Seller C,yes,competitor,2025-10-14,,,managing director,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0410,Waldbau KG,Germany,15,Seller C,no,,2025-04-16,,webinar,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0411,Waldblick GmbH & Co. KG,Austria,60,Seller A,no,,2026-09-01,,,managing director,event,Wait: lost under 90 days ago,,lost recently
+L0412,Sonnenplus KG,Germany,90,Seller B,no,price,2025-03-23,,,owner,event,"Email first: no demo, no reason yet",,no reason yet
+L0413,Stadtpartner AG,Germany,8,Seller D,yes,price,2026-06-20,,,marketing,event,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0414,Flusshaus GmbH,Germany,40,Seller A,yes,,2025-07-18,,,owner,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0415,Alpenplus KG,Germany,90,Seller E,yes,competitor,2025-05-11,2027-03-30,pricing page,owner,referral,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon; pricing page this year
+L0416,Flussstudio GmbH & Co. KG,Germany,150,Seller B,yes,,2025-06-16,,,owner,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0417,Klostermarkt GmbH & Co. KG,Germany,15,Seller D,no,,2025-06-21,,,marketing,inbound demo request,Ask the seller,,"marked unqualified, no reason given"
+L0418,Stadthof KG,Austria,15,Seller A,no,no opportunity,2026-05-21,,case study,marketing,referral,Leave out,,clear no on file: no opportunity
+L0419,Eichenhaus KG,Germany,60,Seller B,no,timing,2026-03-08,,,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0420,Stadtpartner GmbH,Germany,60,Seller A,no,,2026-03-10,,case study,marketing,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0421,Waldblick KG,Germany,40,Seller B,no,timing,2025-07-13,,newsletter click,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0422,Gartenmarkt KG,Germany,8,Seller E,yes,timing,2025-03-20,,event stand,marketing,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on timing; event stand this year
+L0423,Rosenblick AG,Germany,90,Seller D,yes,competitor,2025-07-01,,pricing page,owner,inbound demo request,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0424,Eichenbau GmbH,Italy,15,Former owner 2,no,,2026-05-05,,newsletter click,owner,referral,Leave out,,not a target market
+L0425,Klosterwerk KG,Germany,25,Former owner 1,no,no opportunity,2026-02-02,,webinar,managing director,event,Leave out,,clear no on file: no opportunity
+L0426,Gartenhaus KG,Germany,8,Seller A,yes,price,2026-02-22,,,marketing,event,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0427,Waldpartner AG,Germany,40,Seller B,no,not icp,2026-08-01,,newsletter click,marketing,event,Leave out,,clear no on file: not icp
+L0428,Alpenhof AG,Italy,60,Seller E,yes,not icp,2026-01-03,,event stand,managing director,inbound demo request,Leave out,,not a target market
+L0429,Waldpartner AG,Germany,90,Seller E,yes,,2025-10-26,,pricing page,marketing,event,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0430,Hafenblick GmbH,Germany,15,Seller B,yes,no answer,2025-09-25,,newsletter click,office manager,referral,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0431,Hafenbau AG,Switzerland,15,Seller B,yes,no answer,2025-06-21,,,owner,partner,"Call first: saw a demo, reason to talk",Seller,"lost on no answer; owner left, shared out"
+L0432,Gartenhaus AG,Austria,90,Seller B,yes,timing,2025-07-12,,case study,owner,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on timing; case study this year
+L0433,Hafenhaus KG,Germany,40,Seller D,no,timing,2025-12-08,,webinar,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing; webinar this year
+L0434,Klosterplus KG,Austria,25,Seller D,yes,,2025-05-15,,,office manager,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0435,Flusshaus GmbH & Co. KG,Switzerland,60,Seller C,yes,no answer,2025-10-06,,pricing page,owner,referral,"Call first: saw a demo, reason to talk",Seller,lost on no answer; pricing page this year
+L0436,Rosenservice KG,United Kingdom,8,Seller A,yes,too small,2026-06-05,,case study,owner,event,Leave out,,not a target market
+L0437,Hafenhaus GmbH & Co. KG,Germany,90,Seller D,yes,,2025-01-29,,newsletter click,owner,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0438,Rosenbau GmbH & Co. KG,United Kingdom,25,Seller D,no,timing,2025-09-19,,,marketing,partner,Leave out,,not a target market
+L0439,Lindenblick KG,Switzerland,8,Seller C,yes,,2025-12-30,,newsletter click,owner,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0440,Stadtmarkt GmbH,Italy,60,Seller E,no,no opportunity,2026-08-09,,,owner,event,Leave out,,not a target market
+L0441,Rosenbau AG,Switzerland,40,Seller D,no,competitor,2025-04-21,2027-01-03,newsletter click,owner,event,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends soon
+L0442,Alpenhaus AG,Germany,90,Seller E,no,competitor,2026-10-01,2027-10-21,webinar,managing director,referral,Wait: lost under 90 days ago,,lost recently
+L0443,Gartenhof KG,Austria,90,Seller E,yes,competitor,2025-10-07,,pricing page,marketing,outbound,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0444,Stadtblick KG,Austria,40,Seller D,yes,,2024-11-28,,,owner,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0445,Sonnenwerk GmbH,Switzerland,8,Seller D,no,competitor,2024-12-09,2026-11-12,,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends soon
+L0446,Stadtmarkt AG,Switzerland,60,Former owner 2,no,no opportunity,2026-07-22,,pricing page,office manager,referral,Leave out,,clear no on file: no opportunity
+L0447,Flusswerk KG,Italy,150,Seller C,yes,timing,2024-11-16,,,office manager,event,Leave out,,not a target market
+L0448,Flusswerk GmbH & Co. KG,Italy,60,Former owner 2,no,competitor,2026-07-26,2027-06-07,pricing page,marketing,inbound demo request,Leave out,,not a target market
+L0449,Lindenpartner KG,United Kingdom,8,Former owner 1,no,,2024-11-24,,pricing page,marketing,referral,Leave out,,not a target market
+L0450,Lindenservice AG,Switzerland,60,Seller B,no,price,2025-05-26,,,owner,referral,"Email first: no demo, no reason yet",,no reason yet
+L0451,Lindenservice GmbH,Germany,8,Seller B,no,,2025-10-02,,event stand,owner,outbound,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0452,Stadtstudio GmbH,Italy,60,Seller B,yes,,2025-10-30,,,office manager,referral,Leave out,,not a target market
+L0453,Gartenwerk AG,Germany,25,Seller B,no,,2024-11-18,,webinar,marketing,partner,Ask the seller,,"marked unqualified, no reason given"
+L0454,Hafenmarkt KG,Germany,15,Seller A,no,no answer,2026-05-31,,webinar,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; webinar this year
+L0455,Bergwerk AG,Germany,15,Seller B,no,timing,2026-01-19,,,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0456,Sonnenhof AG,Italy,25,Seller D,yes,competitor,2026-09-04,,case study,marketing,partner,Leave out,,not a target market
+L0457,Gartenblick AG,United Kingdom,8,Former owner 1,no,timing,2025-03-16,,,office manager,outbound,Leave out,,not a target market
+L0458,Hafenpartner AG,Germany,15,Seller E,no,not icp,2026-02-06,,pricing page,owner,referral,Leave out,,clear no on file: not icp
+L0459,Sonnenstudio KG,Switzerland,8,Seller E,yes,,2025-04-05,,,marketing,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0460,Gartenstudio GmbH,Germany,8,Former owner 1,yes,timing,2026-08-16,,webinar,owner,referral,Wait: lost under 90 days ago,,lost recently
+L0461,Stadthaus KG,Switzerland,90,Seller B,yes,no opportunity,2026-03-27,,event stand,owner,outbound,Leave out,,"key account, own seller"
+L0462,Eichenservice AG,Germany,8,Seller C,yes,,2025-08-06,,,owner,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0463,Waldmarkt KG,Austria,90,Seller C,yes,competitor,2025-03-07,2026-11-01,,owner,event,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon
+L0464,Klosterwerk GmbH,United Kingdom,150,Seller D,yes,timing,2026-08-03,,,marketing,partner,Leave out,,not a target market
+L0465,Hafenpartner GmbH,Germany,15,Former owner 2,no,competitor,2026-06-02,,case study,owner,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0466,Klosterstudio KG,Germany,25,Former owner 2,no,,2025-06-30,,,office manager,inbound demo request,Ask the seller,,"marked unqualified, no reason given"
+L0467,Klosterstudio AG,Switzerland,150,Former owner 2,no,no opportunity,2025-09-03,,case study,marketing,inbound demo request,Leave out,,clear no on file: no opportunity
+L0468,Klosterhaus KG,Germany,15,Former owner 1,no,not icp,2025-11-21,,,office manager,outbound,Leave out,,clear no on file: not icp
+L0469,Flusspartner GmbH,Switzerland,40,Seller E,yes,price,2025-03-29,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0470,Klosterhof AG,Germany,25,Seller D,yes,no opportunity,2026-09-29,,newsletter click,owner,event,Leave out,,clear no on file: no opportunity
+L0471,Bergpartner AG,Austria,8,Seller E,yes,price,2025-11-21,,case study,managing director,referral,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0472,Sonnenplus KG,Germany,150,Seller A,yes,,2026-01-16,,,office manager,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0473,Hafenblick AG,Germany,25,Seller E,yes,,2025-01-15,,newsletter click,owner,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0474,Sonnenmarkt KG,Switzerland,40,Seller B,no,competitor,2026-05-11,2027-10-26,webinar,marketing,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0475,Alpenbau AG,Germany,60,Seller A,no,not icp,2026-02-13,,pricing page,owner,event,Leave out,,clear no on file: not icp
+L0476,Rosenservice KG,Germany,25,Seller E,no,competitor,2026-05-27,,newsletter click,managing director,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0477,Klosterplus AG,Austria,8,Seller D,yes,,2026-08-02,,pricing page,managing director,inbound demo request,Wait: lost under 90 days ago,,lost recently
+L0478,Stadtwerk AG,Germany,90,Seller E,no,no opportunity,2025-07-15,,pricing page,owner,outbound,Leave out,,clear no on file: no opportunity
+L0479,Eichenhaus GmbH,Switzerland,90,Seller E,yes,no answer,2025-07-26,,,managing director,event,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0480,Hafenblick GmbH & Co. KG,Austria,150,Seller D,yes,price,2025-12-20,,,marketing,outbound,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0481,Lindenhaus AG,Germany,90,Former owner 2,no,,2025-10-07,,newsletter click,marketing,inbound demo request,Leave out,,"key account, own seller"
+L0482,Stadtplus GmbH,Germany,15,Seller C,no,price,2025-02-17,,,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0483,Gartenmarkt GmbH & Co. KG,Austria,15,Former owner 2,no,too small,2025-09-25,,webinar,owner,referral,Leave out,,clear no on file: too small
+L0484,Sonnenmarkt KG,United Kingdom,60,Seller E,yes,,2025-03-07,,,marketing,outbound,Leave out,,not a target market
+L0485,Sonnenpartner GmbH & Co. KG,Germany,15,Seller D,yes,timing,2024-12-19,,,office manager,event,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0486,Gartenhaus KG,Austria,60,Seller E,yes,,2025-12-30,,case study,office manager,inbound demo request,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0487,Stadtservice AG,Italy,60,Seller E,yes,,2025-11-28,,pricing page,owner,outbound,Leave out,,not a target market
+L0488,Rosenmarkt AG,Switzerland,25,Seller E,no,competitor,2025-04-26,2026-10-13,,managing director,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,competitor contract ends recently
+L0489,Gartenblick KG,Switzerland,25,Seller D,no,too small,2025-10-31,,newsletter click,owner,partner,Leave out,,clear no on file: too small
+L0490,Waldbau KG,Germany,150,Seller D,no,timing,2025-10-25,,,owner,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0491,Alpenbau GmbH,Austria,8,Seller A,yes,,2025-04-01,,,owner,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0492,Eichenservice GmbH & Co. KG,Switzerland,60,Seller E,yes,,2026-04-16,,pricing page,office manager,event,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0493,Flusshof KG,Switzerland,90,Seller D,yes,timing,2026-03-31,,,office manager,event,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0494,Waldservice GmbH & Co. KG,Austria,40,Seller D,yes,timing,2026-05-05,,newsletter click,owner,partner,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0495,Eichenmarkt KG,Germany,8,Seller C,no,,2025-09-25,,,managing director,partner,"Email first: no demo, no reason yet",,no reason yet
+L0496,Flusspartner GmbH,Switzerland,150,Seller B,no,price,2026-05-26,,newsletter click,owner,referral,"Email first: no demo, no reason yet",,no reason yet
+L0497,Rosenwerk GmbH,Germany,150,Seller B,no,competitor,2026-08-27,,,managing director,event,Leave out,,customer today
+L0498,Bergstudio KG,Germany,15,Seller A,yes,no opportunity,2026-03-26,,,owner,referral,Leave out,,clear no on file: no opportunity
+L0499,Waldservice GmbH & Co. KG,Switzerland,60,Former owner 2,no,no opportunity,2025-08-10,,pricing page,office manager,outbound,Leave out,,clear no on file: no opportunity
+L0500,Lindenpartner AG,Switzerland,60,Seller C,yes,,2025-11-07,,webinar,office manager,partner,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0501,Stadtblick AG,Austria,15,Seller A,yes,price,2026-03-07,,event stand,marketing,event,"Call first: saw a demo, reason to talk",Seller,"event stand this year; owner left, shared out"
+L0502,Sonnenhof KG,Germany,60,Seller A,yes,too small,2025-10-27,,,managing director,partner,Leave out,,clear no on file: too small
+L0503,Waldstudio KG,Germany,8,Seller C,yes,not icp,2025-09-01,,,owner,partner,Leave out,,clear no on file: not icp
+L0504,Sonnenbau GmbH,Austria,25,Seller B,yes,timing,2025-07-10,,,owner,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0505,Bergwerk KG,Switzerland,15,Seller D,yes,,2025-01-17,,newsletter click,owner,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0506,Sonnenstudio GmbH & Co. KG,United Kingdom,90,Seller D,yes,chain,2025-09-30,,case study,marketing,event,Leave out,,not a target market
+L0507,Klosterblick GmbH,Germany,8,Seller E,no,,2026-05-23,,webinar,owner,partner,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0508,Gartenplus AG,Germany,8,Seller B,no,,2025-05-17,,,office manager,event,"Email first: no demo, no reason yet",,no reason yet
+L0509,Gartenwerk GmbH,United Kingdom,25,Seller C,no,,2025-07-05,,newsletter click,managing director,inbound demo request,Leave out,,not a target market
+L0510,Bergpartner AG,Germany,150,Seller B,yes,no answer,2025-05-17,,webinar,owner,referral,"Call first: saw a demo, reason to talk",Seller,lost on no answer; webinar this year
+L0511,Eichenpartner GmbH & Co. KG,Austria,40,Seller B,yes,competitor,2026-04-18,2027-08-11,pricing page,office manager,outbound,Wait: competitor contract runs over 6 months,,contract ends later
+L0512,Sonnenpartner AG,Switzerland,60,Seller D,no,no opportunity,2026-08-17,,newsletter click,managing director,inbound demo request,Leave out,,clear no on file: no opportunity
+L0513,Lindenwerk GmbH & Co. KG,Germany,25,Seller B,no,,2026-01-14,,,managing director,referral,"Email first: no demo, no reason yet",,no reason yet
+L0514,Lindenbau AG,Austria,15,Seller A,no,,2025-12-12,,,office manager,referral,Ask the seller,,"marked unqualified, no reason given"
+L0515,Klosterblick KG,Italy,150,Seller D,no,competitor,2025-06-06,2027-04-22,,owner,partner,Leave out,,not a target market
+L0516,Eichenservice AG,Germany,60,Seller A,yes,,2026-01-31,,,owner,referral,Leave out,,"key account, own seller"
+L0517,Rosenblick GmbH,Germany,40,Former owner 1,no,,2026-06-04,,case study,marketing,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0518,Alpenhof GmbH & Co. KG,Italy,40,Former owner 2,no,no answer,2026-09-27,,newsletter click,owner,outbound,Leave out,,not a target market
+L0519,Eichenwerk GmbH & Co. KG,Germany,90,Seller E,no,,2025-09-24,,case study,marketing,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0520,Gartenplus GmbH,Germany,150,Seller D,no,chain,2025-11-04,,webinar,managing director,partner,Leave out,,clear no on file: chain
+L0521,Sonnenplus AG,Germany,15,Former owner 1,no,no answer,2024-11-30,,,managing director,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0522,Alpenblick GmbH,Switzerland,40,Seller C,no,timing,2025-11-08,,case study,office manager,partner,"Call first: no demo, reason to talk",Appointment setting,lost on timing; case study this year
+L0523,Eichenmarkt AG,Switzerland,150,Seller D,yes,competitor,2025-03-10,2027-07-02,,office manager,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0524,Alpenhaus GmbH,Germany,8,Seller B,yes,price,2025-02-25,,,marketing,inbound demo request,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0525,Rosenwerk GmbH,Italy,40,Seller B,no,timing,2026-05-01,,,managing director,inbound demo request,Leave out,,not a target market
+L0526,Rosenbau GmbH,United Kingdom,60,Former owner 2,no,not icp,2025-02-22,,webinar,marketing,referral,Leave out,,not a target market
+L0527,Sonnenblick AG,United Kingdom,150,Seller D,yes,competitor,2026-01-27,,event stand,owner,event,Leave out,,not a target market
+L0528,Sonnenplus AG,United Kingdom,40,Seller B,yes,,2026-08-15,,,office manager,partner,Leave out,,not a target market
+L0529,Bergservice GmbH & Co. KG,Austria,25,Seller E,no,timing,2025-05-23,,pricing page,marketing,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing; pricing page this year
+L0530,Hafenhof AG,Germany,60,Seller B,yes,competitor,2025-11-22,,case study,owner,inbound demo request,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0531,Rosenhaus GmbH,United Kingdom,40,Seller C,no,,2025-08-31,,newsletter click,managing director,outbound,Leave out,,not a target market
+L0532,Waldmarkt GmbH,Germany,40,Seller E,no,,2025-07-10,,,marketing,referral,"Email first: no demo, no reason yet",,no reason yet
+L0533,Lindenhof GmbH & Co. KG,Austria,150,Seller B,yes,price,2026-10-04,,webinar,office manager,partner,Leave out,,"key account, own seller"
+L0534,Gartenhaus KG,Italy,40,Seller A,yes,too small,2026-05-25,,event stand,office manager,outbound,Leave out,,not a target market
+L0535,Hafenservice GmbH,Austria,8,Seller C,yes,competitor,2026-02-01,2026-11-12,,office manager,referral,"Call first: saw a demo, reason to talk",Seller,"competitor contract ends soon; owner left, shared out"
+L0536,Hafenwerk GmbH,United Kingdom,90,Seller C,no,,2025-08-26,,,office manager,outbound,Leave out,,not a target market
+L0537,Stadtplus GmbH & Co. KG,Italy,150,Seller C,no,,2026-03-07,,,marketing,event,Leave out,,not a target market
+L0538,Bergpartner KG,Switzerland,150,Seller A,no,no answer,2025-08-12,,,marketing,partner,Leave out,,customer today
+L0539,Waldhaus GmbH & Co. KG,Germany,15,Seller D,no,no opportunity,2026-07-18,,case study,marketing,partner,Leave out,,clear no on file: no opportunity
+L0540,Gartenmarkt AG,Germany,8,Seller E,yes,timing,2025-11-12,,,office manager,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0541,Waldstudio AG,United Kingdom,150,Seller C,yes,not icp,2026-01-28,,pricing page,office manager,partner,Leave out,,not a target market
+L0542,Gartenmarkt GmbH & Co. KG,Austria,60,Former owner 1,no,no opportunity,2025-09-04,,newsletter click,owner,outbound,Leave out,,clear no on file: no opportunity
+L0543,Eichenstudio KG,Germany,60,Seller B,no,competitor,2025-01-06,,case study,managing director,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0544,Rosenblick GmbH,Italy,8,Former owner 1,no,,2026-06-08,,,owner,event,Leave out,,not a target market
+L0545,Klosterservice GmbH,Switzerland,40,Seller E,yes,price,2025-08-04,,webinar,managing director,partner,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0546,Lindenservice AG,Germany,25,Seller C,no,competitor,2026-06-05,,,owner,event,"Email first: no demo, no reason yet",,no reason yet
+L0547,Gartenservice GmbH,Switzerland,150,Former owner 2,no,price,2024-12-19,,,marketing,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0548,Bergplus KG,Germany,150,Seller B,no,timing,2025-04-24,,,managing director,partner,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0549,Waldservice KG,United Kingdom,90,Seller B,yes,,2025-05-22,,pricing page,office manager,partner,Leave out,,not a target market
+L0550,Eichenservice GmbH & Co. KG,Italy,25,Seller A,yes,,2026-01-25,,case study,managing director,referral,Leave out,,not a target market
+L0551,Stadtstudio GmbH,Germany,8,Seller E,yes,competitor,2026-03-01,,webinar,office manager,partner,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0552,Waldbau AG,Germany,25,Seller B,no,,2025-04-27,,case study,managing director,event,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0553,Waldservice AG,Switzerland,15,Seller A,yes,,2024-12-13,,,marketing,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0554,Sonnenplus GmbH & Co. KG,Germany,15,Seller E,no,,2025-09-11,,pricing page,marketing,event,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0555,Klosterhof GmbH,Germany,60,Seller D,no,competitor,2026-09-04,2027-09-09,newsletter click,managing director,event,Wait: lost under 90 days ago,,lost recently
+L0556,Stadtstudio AG,United Kingdom,60,Seller E,yes,competitor,2025-09-28,,webinar,marketing,referral,Leave out,,not a target market
+L0557,Sonnenblick AG,Germany,60,Seller E,yes,timing,2025-01-26,,,marketing,event,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0558,Klosterhaus GmbH,Austria,8,Seller C,yes,too small,2026-07-25,,,owner,referral,Leave out,,clear no on file: too small
+L0559,Sonnenhaus GmbH & Co. KG,Austria,15,Seller B,yes,too small,2026-05-22,,,owner,inbound demo request,Leave out,,clear no on file: too small
+L0560,Waldservice GmbH & Co. KG,Germany,90,Former owner 1,yes,competitor,2026-01-10,2026-11-16,newsletter click,marketing,partner,Leave out,,"key account, own seller"
+L0561,Lindenhaus AG,Italy,15,Seller B,no,too small,2025-04-17,,,office manager,partner,Leave out,,not a target market
+L0562,Klosterplus GmbH,Germany,60,Seller B,yes,,2025-01-25,,,managing director,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0563,Klosterpartner AG,Switzerland,8,Seller E,yes,,2026-02-23,,,office manager,inbound demo request,Leave out,,"key account, own seller"
+L0564,Alpenbau KG,Austria,90,Seller D,no,,2025-02-03,,webinar,marketing,partner,Ask the seller,,"marked unqualified, no reason given"
+L0565,Klosterservice KG,Germany,8,Seller E,yes,price,2025-10-01,,,managing director,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0566,Sonnenmarkt GmbH,Germany,15,Seller C,yes,price,2024-11-16,,,office manager,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0567,Sonnenhaus GmbH,United Kingdom,15,Seller B,yes,,2026-08-02,,event stand,owner,event,Leave out,,not a target market
+L0568,Bergplus GmbH & Co. KG,Germany,150,Seller E,yes,timing,2026-02-18,,newsletter click,office manager,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0569,Stadtmarkt AG,Switzerland,150,Seller B,no,,2025-11-08,,pricing page,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0570,Klosterwerk GmbH,Germany,25,Seller C,no,,2026-04-18,,webinar,office manager,event,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0571,Stadtservice GmbH & Co. KG,Germany,90,Seller D,yes,competitor,2025-04-28,,newsletter click,owner,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0572,Gartenhof KG,Switzerland,8,Seller D,no,,2025-10-08,,newsletter click,marketing,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0573,Waldplus AG,Italy,90,Seller A,yes,chain,2025-01-10,,,owner,outbound,Leave out,,not a target market
+L0574,Stadtmarkt GmbH & Co. KG,Germany,8,Seller D,no,no answer,2026-06-29,,webinar,managing director,event,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; webinar this year
+L0575,Alpenwerk AG,Germany,150,Seller C,yes,no opportunity,2026-09-18,,case study,office manager,inbound demo request,Leave out,,clear no on file: no opportunity
+L0576,Gartenhof AG,Austria,40,Seller D,no,competitor,2025-10-21,2027-09-12,pricing page,marketing,inbound demo request,Leave out,,customer today
+L0577,Waldservice AG,Germany,60,Seller E,yes,,2026-09-28,,webinar,owner,referral,Wait: lost under 90 days ago,,lost recently
+L0578,Lindenstudio KG,Germany,60,Seller A,no,no opportunity,2025-05-23,,newsletter click,owner,outbound,Leave out,,clear no on file: no opportunity
+L0579,Rosenblick GmbH,Germany,40,Seller A,no,competitor,2026-07-09,,case study,marketing,referral,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0580,Bergpartner KG,Austria,8,Seller B,yes,,2026-05-04,,newsletter click,office manager,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0581,Lindenhof GmbH,Germany,40,Seller A,yes,,2026-02-24,,,office manager,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0582,Rosenmarkt GmbH & Co. KG,Switzerland,40,Seller B,yes,no opportunity,2025-10-01,,newsletter click,office manager,inbound demo request,Leave out,,clear no on file: no opportunity
+L0583,Sonnenhaus GmbH & Co. KG,Italy,150,Former owner 1,yes,,2025-09-19,,newsletter click,owner,partner,Leave out,,not a target market
+L0584,Hafenwerk GmbH,Switzerland,60,Seller B,no,,2026-07-25,,webinar,owner,partner,Wait: lost under 90 days ago,,lost recently
+L0585,Eichenwerk GmbH,Germany,8,Seller B,no,price,2025-11-25,,,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0586,Gartenpartner GmbH,Austria,150,Former owner 1,no,no opportunity,2025-06-17,,,owner,partner,Leave out,,clear no on file: no opportunity
+L0587,Gartenwerk GmbH & Co. KG,Switzerland,25,Seller B,no,,2025-04-24,,pricing page,office manager,partner,Leave out,,"key account, own seller"
+L0588,Rosenservice AG,Austria,25,Seller A,yes,,2025-08-11,,case study,owner,outbound,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0589,Flussmarkt GmbH,Germany,15,Seller C,no,no opportunity,2025-11-02,,,marketing,inbound demo request,Leave out,,clear no on file: no opportunity
+L0590,Hafenstudio GmbH,Austria,40,Seller A,no,not icp,2025-02-28,,,owner,event,Leave out,,clear no on file: not icp
+L0591,Gartenwerk GmbH,Austria,60,Seller A,yes,price,2025-09-29,,,office manager,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0592,Waldhaus GmbH,Germany,90,Seller B,no,competitor,2025-11-19,,event stand,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0593,Bergwerk GmbH & Co. KG,Germany,150,Seller B,no,,2026-06-21,,newsletter click,managing director,referral,Leave out,,"key account, own seller"
+L0594,Klosterstudio AG,Switzerland,90,Former owner 1,no,price,2026-04-20,,,managing director,partner,"Email first: no demo, no reason yet",,no reason yet
+L0595,Rosenservice KG,Italy,150,Seller D,no,,2026-01-27,,,marketing,outbound,Leave out,,not a target market
+L0596,Stadthof KG,Switzerland,60,Seller B,no,,2026-06-16,,newsletter click,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0597,Hafenbau GmbH & Co. KG,Austria,25,Seller D,yes,not icp,2026-08-14,,event stand,owner,referral,Leave out,,clear no on file: not icp
+L0598,Stadthof GmbH,Switzerland,40,Seller B,yes,,2024-11-17,,pricing page,owner,referral,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0599,Eichenhaus AG,Switzerland,60,Former owner 2,yes,no opportunity,2024-11-24,,newsletter click,owner,referral,Leave out,,clear no on file: no opportunity
+L0600,Stadtblick GmbH & Co. KG,Germany,25,Seller D,yes,price,2025-05-10,,webinar,marketing,outbound,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0601,Lindenwerk KG,Austria,8,Seller A,yes,,2025-05-27,,,office manager,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0602,Rosenpartner AG,Germany,8,Seller D,no,competitor,2026-01-26,2027-10-12,,marketing,referral,Wait: competitor contract runs over 6 months,,contract ends later
+L0603,Waldbau AG,Germany,8,Seller A,no,timing,2025-10-07,,case study,office manager,inbound demo request,Leave out,,"key account, own seller"
+L0604,Gartenhaus GmbH & Co. KG,Germany,25,Seller C,yes,timing,2025-12-17,,pricing page,owner,inbound demo request,"Call first: saw a demo, reason to talk",Seller,lost on timing; pricing page this year
+L0605,Alpenplus GmbH & Co. KG,Austria,90,Seller D,yes,competitor,2025-09-23,,,owner,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0606,Gartenservice KG,Switzerland,25,Seller E,yes,no opportunity,2026-06-05,,,owner,outbound,Leave out,,clear no on file: no opportunity
+L0607,Flusspartner AG,Germany,60,Seller C,yes,timing,2025-04-06,,webinar,marketing,referral,"Call first: saw a demo, reason to talk",Seller,lost on timing; webinar this year
+L0608,Stadtblick AG,Austria,8,Seller C,no,competitor,2026-09-23,2026-10-28,webinar,marketing,partner,Ask the seller,,"marked unqualified, no reason given"
+L0609,Hafenservice AG,Switzerland,90,Seller A,yes,not icp,2025-05-07,,,office manager,partner,Leave out,,clear no on file: not icp
+L0610,Alpenplus GmbH,Germany,60,Seller C,no,timing,2025-02-11,,newsletter click,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0611,Gartenhof AG,Austria,15,Seller E,yes,competitor,2026-01-18,2026-12-27,,marketing,referral,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon
+L0612,Berghaus AG,Germany,90,Seller B,no,,2025-01-15,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0613,Lindenservice AG,Austria,25,Seller E,yes,,2026-02-07,,case study,owner,referral,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0614,Klosterplus AG,Germany,90,Seller D,no,,2025-02-06,,case study,marketing,partner,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0615,Alpenblick GmbH & Co. KG,Austria,25,Former owner 1,no,,2026-03-01,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0616,Sonnenstudio AG,Germany,25,Seller B,yes,timing,2025-12-14,,,office manager,referral,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0617,Waldstudio GmbH,Germany,8,Seller A,yes,price,2026-03-02,,pricing page,owner,partner,Leave out,,"key account, own seller"
+L0618,Alpenstudio KG,Germany,15,Seller E,yes,timing,2026-03-09,,pricing page,office manager,referral,"Call first: saw a demo, reason to talk",Seller,"lost on timing; pricing page this year; owner left, shared out"
+L0619,Sonnenblick GmbH,Germany,8,Seller E,yes,no opportunity,2025-07-03,,,managing director,event,Leave out,,clear no on file: no opportunity
+L0620,Alpenwerk KG,Germany,60,Seller D,no,no opportunity,2025-12-09,,case study,owner,outbound,Leave out,,clear no on file: no opportunity
+L0621,Alpenblick GmbH,Germany,150,Former owner 1,no,no answer,2025-08-16,,pricing page,owner,partner,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; pricing page this year
+L0622,Lindenbau AG,Germany,25,Seller B,no,,2026-09-13,,,office manager,partner,Wait: lost under 90 days ago,,lost recently
+L0623,Hafenhof AG,Germany,150,Seller B,no,price,2026-02-17,,webinar,marketing,outbound,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0624,Lindenwerk GmbH,Germany,90,Seller E,yes,,2025-02-28,,pricing page,marketing,referral,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0625,Flussstudio GmbH & Co. KG,Switzerland,25,Former owner 1,no,no answer,2025-12-16,,newsletter click,owner,referral,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0626,Bergmarkt GmbH,Germany,90,Seller C,yes,competitor,2025-10-20,2027-04-22,,owner,inbound demo request,Wait: competitor contract runs over 6 months,,contract ends later
+L0627,Flussmarkt GmbH & Co. KG,Switzerland,90,Seller A,yes,,2026-06-30,,,office manager,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0628,Alpenstudio AG,Austria,40,Seller E,no,,2025-03-10,,,office manager,event,"Email first: no demo, no reason yet",,no reason yet
+L0629,Hafenbau GmbH & Co. KG,Germany,8,Seller D,no,competitor,2025-06-12,,newsletter click,managing director,referral,Ask the seller,,"marked unqualified, no reason given"
+L0630,Lindenblick KG,Switzerland,150,Seller B,yes,price,2026-06-09,,case study,managing director,partner,"Call first: saw a demo, reason to talk",Seller,case study this year
+L0631,Stadtmarkt GmbH,Germany,40,Seller A,yes,competitor,2025-08-09,2027-07-16,webinar,owner,event,Wait: competitor contract runs over 6 months,,contract ends later
+L0632,Stadtservice KG,Germany,8,Seller D,no,no opportunity,2025-10-24,,,marketing,event,Leave out,,clear no on file: no opportunity
+L0633,Alpenservice GmbH,Switzerland,8,Seller C,yes,,2025-04-27,,newsletter click,office manager,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0634,Lindenplus GmbH,Austria,150,Seller C,yes,,2026-05-02,,newsletter click,owner,inbound demo request,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0635,Bergstudio GmbH & Co. KG,United Kingdom,15,Seller B,yes,competitor,2026-02-12,2026-11-13,event stand,owner,outbound,Leave out,,not a target market
+L0636,Hafenmarkt GmbH,Switzerland,15,Seller C,no,price,2025-05-08,,webinar,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0637,Waldplus KG,Germany,150,Seller A,no,timing,2025-05-08,,,managing director,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0638,Hafenplus GmbH & Co. KG,Germany,90,Seller E,no,no answer,2025-02-01,,,owner,event,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0639,Flusshaus GmbH & Co. KG,Germany,8,Seller C,yes,no answer,2026-09-12,,,marketing,inbound demo request,Leave out,,customer today
+L0640,Eichenhof KG,Switzerland,90,Seller B,no,competitor,2025-02-22,2027-09-24,newsletter click,managing director,inbound demo request,Wait: competitor contract runs over 6 months,,contract ends later
+L0641,Lindenstudio AG,Germany,60,Seller E,yes,not icp,2024-12-18,,webinar,marketing,event,Leave out,,clear no on file: not icp
+L0642,Flussblick GmbH & Co. KG,Germany,40,Seller A,yes,no answer,2026-08-17,,,managing director,partner,Wait: lost under 90 days ago,,lost recently
+L0643,Flussservice AG,Switzerland,25,Former owner 1,yes,timing,2025-11-27,,,owner,inbound demo request,Leave out,,"key account, own seller"
+L0644,Rosenservice AG,Germany,8,Seller B,yes,price,2024-11-27,,pricing page,managing director,partner,"Call first: saw a demo, reason to talk",Seller,"pricing page this year; owner left, shared out"
+L0645,Flussplus GmbH & Co. KG,Switzerland,15,Seller C,yes,chain,2026-07-05,,case study,owner,partner,Leave out,,clear no on file: chain
+L0646,Gartenhof KG,Germany,60,Former owner 1,no,price,2026-05-24,,,marketing,event,"Email first: no demo, no reason yet",,no reason yet
+L0647,Lindenbau AG,Austria,40,Seller E,no,,2025-05-12,,,managing director,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0648,Eichenmarkt AG,Germany,8,Seller C,yes,,2025-01-24,,webinar,office manager,referral,"Call first: saw a demo, reason to talk",Seller,webinar this year
+L0649,Klosterplus AG,Germany,90,Seller D,no,,2026-05-27,,newsletter click,marketing,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0650,Sonnenmarkt AG,Germany,40,Seller C,yes,,2025-11-02,,,owner,event,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0651,Bergbau GmbH & Co. KG,Germany,40,Seller C,no,chain,2025-06-27,,,owner,event,Leave out,,clear no on file: chain
+L0652,Rosenbau GmbH,Switzerland,8,Seller C,yes,no answer,2026-08-08,,,managing director,partner,Wait: lost under 90 days ago,,lost recently
+L0653,Alpenpartner AG,Germany,90,Former owner 1,yes,no opportunity,2026-06-06,,pricing page,marketing,event,Leave out,,clear no on file: no opportunity
+L0654,Eichenblick AG,Austria,150,Seller C,no,,2025-05-27,,,office manager,event,"Email first: no demo, no reason yet",,no reason yet
+L0655,Gartenhof GmbH & Co. KG,Germany,150,Seller D,yes,price,2025-10-12,,newsletter click,marketing,referral,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0656,Lindenhof GmbH & Co. KG,Switzerland,8,Seller C,no,competitor,2025-12-20,2026-09-12,newsletter click,owner,outbound,Leave out,,"key account, own seller"
+L0657,Sonnenplus GmbH,Austria,150,Seller B,yes,,2025-04-09,,,office manager,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0658,Sonnenmarkt GmbH & Co. KG,Germany,8,Seller A,yes,price,2025-03-29,,pricing page,owner,outbound,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0659,Eichenhaus AG,Germany,150,Seller D,yes,no opportunity,2026-05-28,,webinar,office manager,inbound demo request,Leave out,,clear no on file: no opportunity
+L0660,Bergstudio KG,Germany,15,Seller A,no,no answer,2025-01-05,,event stand,office manager,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; event stand this year
+L0661,Flusswerk GmbH,Germany,60,Seller B,no,,2026-03-18,,newsletter click,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0662,Rosenhof GmbH,Austria,90,Seller C,no,timing,2025-08-15,,newsletter click,office manager,referral,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0663,Waldhaus KG,Germany,40,Seller A,yes,,2026-01-08,,,office manager,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0664,Hafenstudio KG,Germany,8,Seller A,no,,2026-02-21,,,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0665,Rosenblick GmbH,Germany,90,Seller A,no,,2025-11-19,,,office manager,event,Ask the seller,,"marked unqualified, no reason given"
+L0666,Stadtwerk KG,Austria,60,Seller D,no,not icp,2025-07-11,,event stand,managing director,referral,Leave out,,"key account, own seller"
+L0667,Gartenplus GmbH,Austria,40,Former owner 2,no,competitor,2026-04-04,2027-10-12,webinar,marketing,outbound,Wait: competitor contract runs over 6 months,,contract ends later
+L0668,Klosterbau KG,Austria,40,Seller E,yes,,2025-12-10,,pricing page,owner,outbound,"Call first: saw a demo, reason to talk",Seller,"pricing page this year; owner left, shared out"
+L0669,Waldwerk GmbH,Germany,150,Seller B,yes,,2025-07-20,,,owner,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0670,Flusswerk AG,Italy,60,Seller C,yes,no answer,2025-07-07,,pricing page,marketing,event,Leave out,,not a target market
+L0671,Lindenbau GmbH & Co. KG,Austria,15,Seller A,yes,price,2025-05-19,,,owner,referral,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0672,Berghof GmbH,Austria,15,Seller B,yes,price,2026-04-13,,newsletter click,office manager,partner,"Call next: saw a demo, no reason yet",Seller,"no reason yet; owner left, shared out"
+L0673,Lindenhaus AG,Germany,25,Seller B,yes,chain,2025-11-06,,,managing director,partner,Leave out,,clear no on file: chain
+L0674,Waldmarkt GmbH & Co. KG,Germany,40,Seller C,no,,2025-01-14,,newsletter click,marketing,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0675,Klosterwerk AG,Germany,25,Former owner 2,no,no opportunity,2025-09-25,,,owner,referral,Leave out,,clear no on file: no opportunity
+L0676,Alpenblick AG,Germany,40,Seller D,no,,2026-05-02,,case study,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,case study this year
+L0677,Bergblick KG,Germany,25,Former owner 2,yes,,2026-04-09,,webinar,owner,referral,Leave out,,"key account, own seller"
+L0678,Lindenstudio KG,Germany,150,Seller D,no,price,2026-09-07,,,marketing,event,Wait: lost under 90 days ago,,lost recently
+L0679,Gartenservice GmbH,Germany,15,Seller A,no,no answer,2024-12-15,,pricing page,marketing,event,"Call first: no demo, reason to talk",Appointment setting,lost on no answer; pricing page this year
+L0680,Rosenmarkt AG,Germany,40,Seller D,yes,no opportunity,2026-04-10,,case study,marketing,referral,Leave out,,clear no on file: no opportunity
+L0681,Eichenservice GmbH,United Kingdom,90,Seller B,yes,timing,2025-08-28,,pricing page,marketing,referral,Leave out,,not a target market
+L0682,Lindenwerk AG,Germany,90,Seller E,yes,no opportunity,2026-05-16,,,owner,partner,Leave out,,clear no on file: no opportunity
+L0683,Stadtstudio GmbH & Co. KG,Germany,8,Seller B,yes,,2025-08-09,,,owner,event,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0684,Waldblick AG,Germany,8,Seller D,yes,timing,2026-02-24,,,managing director,outbound,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0685,Flusswerk KG,Germany,8,Former owner 1,no,,2025-11-13,,pricing page,office manager,event,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0686,Flusshaus GmbH & Co. KG,United Kingdom,8,Former owner 2,yes,price,2024-11-20,,,marketing,referral,Leave out,,not a target market
+L0687,Alpenstudio KG,Germany,90,Former owner 1,yes,competitor,2026-07-23,2027-05-02,,owner,partner,Wait: lost under 90 days ago,,lost recently
+L0688,Flusshof GmbH,United Kingdom,25,Former owner 2,yes,price,2024-12-24,,pricing page,owner,outbound,Leave out,,not a target market
+L0689,Klosterpartner AG,Germany,40,Seller E,yes,competitor,2025-07-17,2027-05-24,,marketing,outbound,Wait: competitor contract runs over 6 months,,contract ends later
+L0690,Gartenwerk GmbH,Germany,15,Seller B,no,timing,2025-04-24,,,office manager,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0691,Stadthaus GmbH & Co. KG,Germany,150,Seller E,no,no opportunity,2024-12-29,,,owner,event,Leave out,,clear no on file: no opportunity
+L0692,Rosenbau KG,Austria,150,Seller B,no,,2026-06-11,,,managing director,partner,Ask the seller,,"marked unqualified, no reason given"
+L0693,Bergservice GmbH & Co. KG,Germany,15,Seller D,yes,price,2025-07-26,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0694,Stadtmarkt GmbH & Co. KG,Austria,8,Seller D,no,,2025-09-17,,,owner,event,"Email first: no demo, no reason yet",,no reason yet
+L0695,Rosenservice KG,United Kingdom,40,Seller C,no,no answer,2025-02-25,,newsletter click,owner,referral,Leave out,,not a target market
+L0696,Waldblick AG,Germany,60,Seller B,no,too small,2025-10-23,,,managing director,event,Leave out,,clear no on file: too small
+L0697,Rosenplus AG,Germany,15,Seller C,yes,too small,2026-03-18,,newsletter click,owner,outbound,Leave out,,"key account, own seller"
+L0698,Bergservice AG,Austria,25,Seller A,yes,competitor,2026-03-26,,,owner,referral,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0699,Klosterservice GmbH,Germany,40,Former owner 2,no,,2025-08-05,,,owner,outbound,"Email first: no demo, no reason yet",,no reason yet
+L0700,Hafenwerk AG,Germany,90,Seller B,yes,,2025-07-13,,,owner,outbound,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0701,Rosenblick Gmbh,Switzerland,25,Seller B,yes,no answer,2026-01-08,,,marketing,referral,"Call first: saw a demo, reason to talk",Seller,lost on no answer
+L0702,Hafenmarkt AG,Germany,15,Seller A,yes,price,2026-08-07,,newsletter click,office manager,referral,Wait: lost under 90 days ago,,lost recently
+L0703,Gartenmarkt KG,Austria,25,Seller C,yes,timing,2025-02-14,,newsletter click,owner,event,"Call first: saw a demo, reason to talk",Seller,"lost on timing; owner left, shared out"
+L0704,Lindenwerk Gmbh,Germany,90,Former owner 2,no,,2026-08-09,,,marketing,event,Wait: lost under 90 days ago,,lost recently
+L0705,Klosterservice AG,Germany,40,Seller D,no,,2025-04-25,,event stand,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0706,Waldplus GmbH,Germany,60,Seller B,no,competitor,2026-06-28,,,office manager,inbound demo request,Ask the seller,,"marked unqualified, no reason given"
+L0707,Sonnenmarkt KG,United Kingdom,90,Seller C,yes,price,2025-11-15,,,office manager,partner,Leave out,,not a target market
+L0708,Gartenblick AG,Germany,8,Seller B,no,,2024-11-13,,,marketing,referral,"Email first: no demo, no reason yet",,no reason yet
+L0709,Waldbau GmbH & Co. KG,Germany,90,Seller E,no,,2025-08-22,,pricing page,marketing,referral,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0710,Gartenhaus Gmbh,Switzerland,15,Seller D,no,,2026-08-11,,case study,owner,outbound,Wait: lost under 90 days ago,,lost recently
+L0711,Klosterwerk GmbH & Co. KG,Switzerland,150,Seller C,no,competitor,2026-09-28,,newsletter click,owner,referral,Leave out,,"key account, own seller"
+L0712,Klosterhaus AG,Germany,60,Seller D,yes,competitor,2026-06-04,2027-03-24,,managing director,partner,"Call first: saw a demo, reason to talk",Seller,competitor contract ends soon
+L0713,Stadtstudio GmbH & Co. KG,Austria,40,Seller D,no,no opportunity,2026-02-09,,,owner,partner,Leave out,,clear no on file: no opportunity
+L0714,Waldblick KG,Germany,25,Seller B,yes,,2026-07-28,,pricing page,office manager,event,Wait: lost under 90 days ago,,lost recently
+L0715,Rosenhof AG,Austria,15,Seller B,no,,2025-04-18,,,office manager,event,Leave out,,"key account, own seller"
+L0716,Klosterwerk GmbH,Germany,90,Former owner 2,no,,2026-09-26,,webinar,office manager,outbound,Wait: lost under 90 days ago,,lost recently
+L0717,Eichenbau AG,Germany,8,Seller D,no,,2025-12-09,,,managing director,event,"Email first: no demo, no reason yet",,no reason yet
+L0718,Waldblick AG,Germany,8,Seller B,no,,2025-02-13,,webinar,owner,partner,"Call first: no demo, reason to talk",Appointment setting,webinar this year
+L0719,Waldhaus KG,Germany,40,Seller D,no,,2025-12-10,,,owner,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0720,Lindenhof AG,Switzerland,15,Seller C,no,price,2026-02-22,,pricing page,office manager,outbound,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0721,Alpenstudio AG,Germany,150,Seller C,no,,2026-08-13,,case study,office manager,inbound demo request,Wait: lost under 90 days ago,,lost recently
+L0722,Hafenstudio AG,Germany,8,Former owner 1,no,,2025-04-22,,,office manager,partner,"Email first: no demo, no reason yet",,no reason yet
+L0723,Alpenbau GmbH,Germany,150,Seller E,yes,competitor,2024-12-25,2027-04-22,,owner,event,Wait: competitor contract runs over 6 months,,contract ends later
+L0724,Klosterplus Gmbh,Germany,60,Seller E,no,too small,2026-05-12,,pricing page,owner,referral,Leave out,,clear no on file: too small
+L0725,Stadthof AG,Germany,8,Seller A,yes,competitor,2026-07-08,,pricing page,managing director,outbound,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0726,Flusspartner AG,Germany,60,Seller E,no,,2026-08-11,,,managing director,partner,Wait: lost under 90 days ago,,lost recently
+L0727,Eichenpartner Gmbh,Switzerland,60,Seller C,yes,timing,2025-10-25,,newsletter click,office manager,referral,"Call first: saw a demo, reason to talk",Seller,lost on timing
+L0728,Klosterpartner GmbH & Co. KG,Austria,25,Seller E,yes,price,2025-04-28,,pricing page,managing director,referral,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0729,Klostermarkt Gmbh & Co. KG,Germany,15,Seller A,no,timing,2025-02-14,,,owner,inbound demo request,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0730,Sonnenwerk GmbH & Co. KG,Italy,90,Former owner 1,no,,2025-10-24,,newsletter click,marketing,event,Leave out,,not a target market
+L0731,Berghof GmbH & Co. KG,United Kingdom,90,Seller B,yes,chain,2024-12-07,,,owner,inbound demo request,Leave out,,not a target market
+L0732,Sonnenpartner KG,Italy,90,Seller B,no,,2025-09-07,,,owner,partner,Leave out,,not a target market
+L0733,Alpenhof KG,Germany,60,Seller E,yes,,2025-11-13,,newsletter click,office manager,partner,"Call next: saw a demo, no reason yet",Seller,no reason yet
+L0734,Hafenwerk GmbH,Germany,40,Seller B,yes,timing,2026-03-18,,pricing page,owner,partner,"Call first: saw a demo, reason to talk",Seller,lost on timing; pricing page this year
+L0735,Stadtbau AG,Switzerland,8,Seller C,no,not icp,2025-04-19,,newsletter click,owner,referral,Leave out,,clear no on file: not icp
+L0736,Flussblick KG,Germany,15,Seller D,no,,2025-01-23,,pricing page,owner,partner,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0737,Eichenplus GmbH,Germany,60,Former owner 1,yes,no opportunity,2026-02-04,,case study,marketing,outbound,Leave out,,clear no on file: no opportunity
+L0738,Waldhaus Gmbh,Germany,25,Former owner 1,no,competitor,2025-10-21,2027-10-14,event stand,owner,referral,Wait: competitor contract runs over 6 months,,contract ends later
+L0739,Alpenpartner AG,Switzerland,8,Seller E,yes,competitor,2025-01-18,2027-04-27,event stand,owner,partner,Wait: competitor contract runs over 6 months,,contract ends later
+L0740,Hafenblick Gmbh & Co. KG,Germany,8,Seller A,no,timing,2025-11-25,,newsletter click,owner,event,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0741,Waldplus KG,Austria,25,Seller A,no,no opportunity,2024-12-21,,case study,office manager,outbound,Leave out,,clear no on file: no opportunity
+L0742,Hafenmarkt GmbH,Italy,150,Seller B,no,competitor,2025-11-10,2026-10-10,pricing page,marketing,outbound,Leave out,,not a target market
+L0743,Alpenblick GmbH,Italy,90,Seller E,no,no opportunity,2026-08-28,,,owner,event,Leave out,,not a target market
+L0744,Rosenplus Gmbh & Co. KG,Germany,25,Seller D,no,competitor,2026-02-03,,,marketing,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0745,Rosenpartner GmbH & Co. KG,Germany,8,Seller D,yes,,2026-05-16,,case study,office manager,partner,"Call first: saw a demo, reason to talk",Seller,"case study this year; owner left, shared out"
+L0746,Eichenblick AG,Germany,60,Seller A,yes,,2026-08-09,,,owner,referral,Wait: lost under 90 days ago,,lost recently
+L0747,Alpenpartner Gmbh,United Kingdom,40,Seller D,no,competitor,2026-02-10,,,owner,outbound,Leave out,,not a target market
+L0748,Gartenmarkt GmbH,Germany,8,Seller A,no,competitor,2025-12-06,,,marketing,inbound demo request,"Email first: no demo, no reason yet",,no reason yet
+L0749,Rosenmarkt AG,Switzerland,25,Seller A,no,no answer,2026-03-26,,newsletter click,owner,event,"Call first: no demo, reason to talk",Appointment setting,lost on no answer
+L0750,Berghaus GmbH,Germany,25,Seller A,no,no answer,2026-09-04,,case study,marketing,event,Wait: lost under 90 days ago,,lost recently
+L0751,Sonnenhaus Gmbh & Co. KG,Italy,150,Seller B,yes,chain,2025-02-13,,pricing page,managing director,event,Leave out,,not a target market
+L0752,Waldhaus GmbH,Germany,15,Seller C,no,,2025-08-28,,event stand,owner,partner,"Call first: no demo, reason to talk",Appointment setting,event stand this year
+L0753,Klostermarkt Gmbh & Co. KG,United Kingdom,90,Seller C,no,,2025-02-06,,webinar,owner,event,Leave out,,not a target market
+L0754,Stadtpartner Gmbh & Co. KG,Switzerland,90,Seller C,yes,price,2025-05-27,,pricing page,owner,outbound,"Call first: saw a demo, reason to talk",Seller,pricing page this year
+L0755,Bergbau GmbH,Switzerland,25,Seller E,no,,2026-06-28,,case study,office manager,outbound,Ask the seller,,"marked unqualified, no reason given"
+L0756,Klosterhaus GmbH & Co. KG,Switzerland,40,Former owner 2,no,,2025-06-19,,pricing page,marketing,outbound,"Call first: no demo, reason to talk",Appointment setting,pricing page this year
+L0757,Eichenservice GmbH,Austria,150,Seller E,no,timing,2026-05-05,,,owner,partner,"Call first: no demo, reason to talk",Appointment setting,lost on timing
+L0758,Eichenstudio KG,Germany,60,Seller E,yes,,2026-08-08,,,marketing,event,Wait: lost under 90 days ago,,lost recently
+L0759,Bergblick KG,Italy,150,Seller E,yes,timing,2025-07-09,,,managing director,inbound demo request,Leave out,,not a target market
+L0760,Gartenhaus KG,Italy,15,Seller D,yes,,2025-08-28,,,owner,inbound demo request,Leave out,,not a target market
