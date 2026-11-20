@@ -1,0 +1,33 @@
+{
+  "profile": "Data Analyst search",
+  "runs": 14,
+  "skipped": 1,
+  "copies_read": 422,
+  "unique_roles": 370,
+  "in_titles": 53,
+  "already_seen": 29,
+  "main_8_plus": 7,
+  "reference": 11,
+  "seen_not_a_fit": 0,
+  "dropped": 31,
+  "could_not_verify": 3,
+  "closed_on_board": 1,
+  "tracked_closed_later": 2,
+  "cvs_drafted": 5,
+  "drop_reasons": {
+    "German C1 required": 13,
+    "junior, intern or student role": 9,
+    "outside the regions you work in": 4,
+    "Spanish required": 3,
+    "none of the duties you want to do": 2
+  },
+  "main": [
+    "Quarry Works, Data Analyst: fit 9.5 (role 9, Berlin needs a move +0, pay above floor +0.5)",
+    "Garnet Health, Analytics Engineer: fit 9 (role 8, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+    "Halcyon HQ, Data Analyst: fit 9 (role 9, Cologne needs a move +0, pay above floor +0.5, startup minus 0.5)",
+    "Saffron HQ, Senior Data Analyst: fit 8 (role 7.5, home city +0.5, pay not stated (ask))",
+    "Rook Cloud, BI Analyst: fit 9 (role 8.5, London needs a move +0, pay above floor +0.5)",
+    "Lumen Grid, Data Analyst: fit 8 (role 6.5, EU remote +1.5, pay above floor +0.5, light on wanted duties at a big team minus 0.5)",
+    "Halcyon Health, Senior Data Analyst: fit 8.5 (role 9, Munich needs a move +0, pay not stated (ask), startup minus 0.5)"
+  ]
+}

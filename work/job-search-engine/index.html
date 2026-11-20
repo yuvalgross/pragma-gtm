@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Job search engine · Yuval Gross</title>
-<meta name="description" content="A daily job scan and the board it feeds: dedupe board copies, prove roles on the company's own list, gate, score with a readable fit line, rank live processes, check the CV. Runs for any job title. Synthetic data and the source.">
+<meta name="description" content="A daily job scan and the board it feeds: dedupe board copies, prove roles on the company's own list, gate, score with a readable fit line, rank live processes, check the CV. Shown for Customer Success and Data Analyst searches. Synthetic data and the source.">
 <meta property="og:title" content="Job search engine · Yuval Gross">
 <meta property="og:description" content="A daily job scan and the board it feeds, for any job title.">
 <meta property="og:url" content="https://pragma-gtm.com/work/job-search-engine/">
@@ -106,48 +106,48 @@
   <header>
     <p class="eyebrow">Work sample</p>
     <h1>Job search engine: a daily scan and the board it feeds, <em>for any job title.</em></h1>
-    <p class="lead">The system my own search runs on, rebuilt on invented data and replayed over two weeks. Every morning it reads the job boards, proves each role on the company's own list, drops what can never work and scores the rest with a fit line anyone can read. The board then tracks applications, CVs, live processes ranked by preference and the decisions the outcomes point to. The rules sit in a profile file, so a Customer Success search runs on the same engine.</p>
+    <p class="lead">A job search tool built on invented data and replayed over two weeks. Every morning it reads the job boards, proves each role on the company's own list, drops what can never work and scores the rest with a fit line anyone can read. The board then tracks applications, CVs, live processes ranked by preference and the decisions the outcomes point to. The rules sit in a profile file: shown here for a Customer Success Manager in Berlin and a Data Analyst in Amsterdam, on the same engine.</p>
   </header>
 
   <section aria-labelledby="answer">
     <h2 id="answer">Two weeks of the scan</h2>
-    <p>Most of the work is saying no early and saying why. Out of 136 new roles in the titles, 8 were worth a tailored CV.</p>
+    <p>Most of the work is saying no early and saying why. Out of 47 new Customer Success roles, 4 were worth a tailored CV.</p>
     <div class="kpis">
-      <div class="kpi"><strong>435</strong><span>board copies read in 14 runs</span></div>
-      <div class="kpi"><strong>136</strong><span>new roles in the profile's titles</span></div>
-      <div class="kpi"><strong>85</strong><span>dropped by a gate before scoring, each with the reason</span></div>
-      <div class="kpi"><strong>8</strong><span>worth applying, 7 of them with a CV drafted</span></div>
+      <div class="kpi"><strong>422</strong><span>board copies read in 14 runs</span></div>
+      <div class="kpi"><strong>47</strong><span>new roles in the profile's titles</span></div>
+      <div class="kpi"><strong>28</strong><span>dropped by a gate before scoring, each with the reason</span></div>
+      <div class="kpi"><strong>4</strong><span>worth applying, 3 of them with a CV drafted</span></div>
     </div>
   </section>
 
   <section aria-labelledby="board">
     <h2 id="board">The board</h2>
-    <p>Built by the engine after the fortnight, in the same layout as the board I use. Click the tabs: applications, open roles, CVs, live processes ranked by preference, decisions and the run log.</p>
-    <iframe src="output/gtm-engineer/board.html" title="Job Hunt Board, synthetic data" loading="lazy" style="width:100%;height:900px;border:1px solid var(--line);background:#f3f4f1"></iframe>
-    <p class="note"><a href="output/gtm-engineer/board.html">Open the board full screen</a> · <a href="output/customer-success/board.html">the same board for the Customer Success profile</a></p>
+    <p>Built by the engine after the fortnight. Click the tabs: applications, open roles, CVs, live processes ranked by preference, decisions and the run log.</p>
+    <iframe src="output/customer-success/board.html" title="Job Hunt Board, synthetic data" loading="lazy" style="width:100%;height:900px;border:1px solid var(--line);background:#f3f4f1"></iframe>
+    <p class="note"><a href="output/customer-success/board.html">Open the board full screen</a> · <a href="output/data-analyst/board.html">the same board for the Data Analyst profile</a></p>
   </section>
 
   <section aria-labelledby="how">
     <h2 id="how">One run, every morning</h2>
     <div class="flow">
       <div class="step"><b>Discover</b><span>Board copies first seen since the last run. Tier A sources every run, tier B weekly, tier C monthly. A rerun under 20 hours after the last one is skipped.</span></div>
-      <div class="step"><b>Dedupe</b><span>One row per company and title. A role an earlier run handled is not scored again when a slower board picks it up (90 copies in two weeks).</span></div>
+      <div class="step"><b>Dedupe</b><span>One row per company and title. A role an earlier run handled is not scored again when a slower board picks it up (31 copies in two weeks).</span></div>
       <div class="step"><b>Prove</b><span>Only the company's own list decides. Gone from the list means closed, whatever the boards show. Unreadable means "could not verify", never closed on a guess.</span></div>
       <div class="step"><b>Gate and score</b><span>Drop what can never work, with the reason. Score the rest: role fit first, then location and the factors, written out as a fit line.</span></div>
-      <div class="step"><b>Recheck</b><span>Every tracked role is read again on its company's list. 3 closed during the fortnight, one of them after the first call.</span></div>
+      <div class="step"><b>Recheck</b><span>Every tracked role is read again on its company's list. 2 closed during the fortnight, one after the application went in.</span></div>
     </div>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="GTM Engineer profile, 14 runs, scrolls sideways on small screens">
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Customer Success profile, 14 runs, scrolls sideways on small screens">
 <table style="min-width:520px">
 <thead><tr><th>Step</th><th class="n">Roles</th></tr></thead>
 <tbody>
-<tr><td>Board copies read</td><td class="n">435</td></tr>
-<tr><td>New roles in the profile's titles</td><td class="n">136</td></tr>
-<tr><td>Closed on the company's own list, still on a board</td><td class="n">3</td></tr>
-<tr><td>Dropped by a gate</td><td class="n">85</td></tr>
-<tr><td>Seen, not a fit (role fit under 6.5)</td><td class="n">34</td></tr>
+<tr><td>Board copies read</td><td class="n">422</td></tr>
+<tr><td>New roles in the profile's titles</td><td class="n">47</td></tr>
+<tr><td>Closed on the company's own list, still on a board</td><td class="n">1</td></tr>
+<tr><td>Dropped by a gate</td><td class="n">28</td></tr>
+<tr><td>Seen, not a fit (role fit under 6.5)</td><td class="n">4</td></tr>
 <tr><td>Could not verify</td><td class="n">1</td></tr>
-<tr><td>Below the 8 bar, listed for reference</td><td class="n">5</td></tr>
-<tr class="hot"><td>Worth applying: fit 8 or more, CV brief and a note to a named person</td><td class="n total">8</td></tr>
+<tr><td>Below the 8 bar, listed for reference</td><td class="n">9</td></tr>
+<tr class="hot"><td>Worth applying: fit 8 or more, CV brief and a note to a named person</td><td class="n total">4</td></tr>
 </tbody>
 </table>
 </div>
@@ -155,17 +155,14 @@
 
   <section aria-labelledby="gates">
     <h2 id="gates">The gates: <em>no score for a role that cannot work</em></h2>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="Gate reasons, GTM Engineer profile, scrolls sideways on small screens">
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Gate reasons, Customer Success profile, scrolls sideways on small screens">
 <table style="min-width:480px">
 <thead><tr><th>Reason</th><th class="n">Dropped</th></tr></thead>
 <tbody>
-<tr><td>German C1 required, not on the profile</td><td class="n">21</td></tr>
-<tr><td>Junior, intern or student role</td><td class="n">17</td></tr>
-<tr><td>Outside the regions the profile works in (US remote, Paris)</td><td class="n">16</td></tr>
-<tr><td>Needs a move inside the home country, no remote option</td><td class="n">16</td></tr>
-<tr><td>Another local language required (Spanish, Dutch, French)</td><td class="n">8</td></tr>
-<tr><td>None of the duties the profile wants to do (pure run work)</td><td class="n">5</td></tr>
-<tr><td>Rejected there before: a done story</td><td class="n">2</td></tr>
+<tr><td>Needs a move inside the home country, no remote option</td><td class="n">9</td></tr>
+<tr><td>Outside the regions the profile works in (US remote, London, Paris)</td><td class="n">8</td></tr>
+<tr><td>None of the duties the profile wants to do (support desks, cold prospecting)</td><td class="n">6</td></tr>
+<tr><td>A local language the profile does not have (Dutch, Spanish)</td><td class="n">5</td></tr>
 </tbody>
 </table>
 </div>
@@ -174,16 +171,16 @@
   <section aria-labelledby="fit">
     <h2 id="fit">The fit line</h2>
     <p>Every score is written out, so a high number can be questioned and a low one explained. Role fit comes first and never moves; the factors sit next to it.</p>
-    <p class="formula">fit 8.5 (role 7.5, remote in home country +1.5, pay not stated (ask), startup minus 0.5)</p>
+    <p class="formula">fit 8 (role 7, remote in home country +1.5, pay not stated (ask), startup minus 0.5)</p>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Scoring rules, scrolls sideways on small screens">
 <table style="min-width:640px">
 <thead><tr><th>Part</th><th>Rule</th></tr></thead>
 <tbody>
 <tr class="hot"><td>Role fit, 0 to 10</td><td>Title (target or adjacent), share of the duties you want against the ones you avoid, tools on record against tools asked, minus 0.5 when the years asked sit 2 or more above your record, minus 1 for a title above what you have held</td></tr>
-<tr><td>Location</td><td>Points per place from the profile: home city, remote in the home country, EU remote, each relocation country</td></tr>
+<tr><td>Location</td><td>Points per place from the profile: home city, remote in the home country, EU remote, each relocation city</td></tr>
 <tr><td>Pay</td><td>Band top under your floor minus 1.5, floor inside the band 0, band bottom above the floor plus 0.5, not stated: ask</td></tr>
-<tr><td>Office and company</td><td>On site only minus 0.5; startup under 150 people minus 0.5; run shape role at 300+ people minus 0.5</td></tr>
-<tr><td>Show</td><td>Role fit under 6.5 is never a recommendation, whatever the location adds. Total 8 or more gets a CV brief and a note; while interviewing, a CV only from 8.5</td></tr>
+<tr><td>Office and company</td><td>On site only minus 0.5; startup under 150 people minus 0.5; a role light on the duties you want at 300+ people minus 0.5</td></tr>
+<tr><td>Show</td><td>Role fit under 6.5 is never a recommendation, whatever the location adds. Total 8 or more gets a CV brief and a note; with live interviews running, a CV only from 8.5</td></tr>
 </tbody>
 </table>
 </div>
@@ -197,31 +194,31 @@
 <tbody>
 <tr><td>Applications</td><td>Every application with its stage. Waiting over 21 days with no human reply becomes "no reply". A call whose feedback date passed gets a follow up draft, sent only after a yes</td></tr>
 <tr><td>CVs</td><td>Score on the rubric (target 9, floor 8), the channel that received it, whether a note went to a named person, and the outcome. A CV that was sent is never edited again</td></tr>
-<tr class="hot"><td>Salary &amp; companies</td><td>Live processes ranked by a preference score: salary 30%, safety 25%, remote 20%, role fit 15%, product 10%. Salary scores 0 at €60k and 10 at €90k; a number the company confirms replaces any estimate</td></tr>
+<tr class="hot"><td>Salary &amp; companies</td><td>Live processes ranked by a preference score: salary 30%, safety 25%, remote 20%, role fit 15%, product 10%. A number the company confirms replaces any estimate</td></tr>
 <tr><td>Decisions</td><td>What the outcomes show, written as a yes or no question. A yes changes a rule in the next scan. Under a 10 point gap, or under 10 outcomes, the board says it is too early to act</td></tr>
 <tr><td>Scans</td><td>One line per run: copies read, new roles, what was kept, what closed, CVs drafted, and skipped runs with the reason</td></tr>
 </tbody>
 </table>
 </div>
-    <p style="margin-top:14px">In this run the outcomes support one decision (small companies called back twice as often as companies over 500 people) and leave three open, including whether a note to a named person helps: 30% with a note against 27% without is too small a gap to change a rule on.</p>
+    <p style="margin-top:14px">In this run the outcomes support two decisions: roles built around the profile's core duties got calls (22%) where roles light on them got none, and companies under 150 people called back twice as often as companies over 500. A note to a named person (24% against 16%) stays open: an 8 point gap is too small to change a rule on.</p>
   </section>
 
   <section aria-labelledby="titles">
     <h2 id="titles">Same engine, <em>another job title</em></h2>
     <p>A new search is a new profile: target and adjacent titles, the duties you want and the ones you avoid, tools on record, languages, home city, regions, location points, pay floor and years on record. Nothing in the engine changes.</p>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Two profiles on the same two weeks, scrolls sideways on small screens">
-<table style="min-width:520px">
-<thead><tr><th>Result</th><th class="n">GTM Engineer</th><th class="n">Customer Success</th></tr></thead>
+<table style="min-width:560px">
+<thead><tr><th>Result</th><th class="n">Customer Success, Berlin</th><th class="n">Data Analyst, Amsterdam</th></tr></thead>
 <tbody>
-<tr><td>New roles in the profile's titles</td><td class="n">136</td><td class="n">22</td></tr>
-<tr><td>Dropped by a gate</td><td class="n">85</td><td class="n">12</td></tr>
-<tr><td>Seen, not a fit</td><td class="n">34</td><td class="n">6</td></tr>
-<tr><td>Listed for reference</td><td class="n">5</td><td class="n">2</td></tr>
-<tr class="hot"><td>Worth applying</td><td class="n total">8</td><td class="n total">1</td></tr>
+<tr><td>New roles in the profile's titles</td><td class="n">47</td><td class="n">53</td></tr>
+<tr><td>Dropped by a gate</td><td class="n">28</td><td class="n">31</td></tr>
+<tr><td>Main gate reason</td><td class="n">move, no remote (9)</td><td class="n">German C1 (13)</td></tr>
+<tr><td>Listed for reference</td><td class="n">9</td><td class="n">11</td></tr>
+<tr class="hot"><td>Worth applying</td><td class="n total">4</td><td class="n total">7</td></tr>
 </tbody>
 </table>
 </div>
-    <p style="margin-top:14px">The Customer Success profile lives in another city, speaks German and works only in Germany and EU remote, so its main gate is different: 8 of its 12 drops are roles with none of the duties it wants (support desks and cold prospecting).</p>
+    <p style="margin-top:14px">The Customer Success profile speaks German, so German roles pass; the Data Analyst profile does not, so German C1 is its biggest gate. The Data Analyst profile is open to moves, so a Berlin or London role scores on its merits instead of dropping.</p>
   </section>
 
   <section aria-labelledby="cv">
@@ -231,31 +228,33 @@
 <table style="min-width:520px">
 <thead><tr><th>Rubric part</th><th class="n">Draft</th><th class="n">Fixed</th></tr></thead>
 <tbody>
-<tr><td>ATS: JD title in the headline, keyword coverage</td><td class="n">1</td><td class="n">2</td></tr>
-<tr><td>Proof: a bullet with a number for each top need</td><td class="n">1</td><td class="n">2</td></tr>
+<tr><td>ATS: JD title in the headline, keyword coverage</td><td class="n">0</td><td class="n">2</td></tr>
+<tr><td>Proof: a bullet with a number for each top need</td><td class="n">0</td><td class="n">2</td></tr>
 <tr><td>Wording: at most one phrase lifted from the ad</td><td class="n">1</td><td class="n">2</td></tr>
 <tr><td>Writing: pronouns, hedges, dashes, filler, repeated verbs, one line bullets</td><td class="n">0</td><td class="n">2</td></tr>
-<tr class="hot"><td>Automatic part, of 8 (focus is left to a person)</td><td class="n">3</td><td class="n total">8</td></tr>
+<tr class="hot"><td>Automatic part, of 8 (focus is left to a person)</td><td class="n">1</td><td class="n total">8</td></tr>
 </tbody>
 </table>
 </div>
+    <p style="margin-top:14px">The fixed CV still misses Zendesk. The candidate never used it, so it is named as a gap, not written in.</p>
     <details>
       <summary>The draft's fix list</summary>
-      <pre><code>CV check against: GTM Systems Engineer
-Keywords: 4 of 6 covered; missing: HubSpot, n8n
-Rubric: ATS 1, proof 1, wording 1, writing 0, focus (set by a person)
-Automatic part: 3 of 8. Bar: 9 of 10 overall, never deliver under 8.
+      <pre><code>CV check against: Customer Success Manager
+Keywords: 4 of 7 covered; missing: Zendesk, Intercom, HubSpot
+Rubric: ATS 0, proof 0, wording 1, writing 0, focus (set by a person)
+Automatic part: 1 of 8. Bar: 9 of 10 overall, never deliver under 8.
 Fix list:
-  - Headline should start with the JD title &quot;GTM Systems Engineer&quot; (now: &quot;GTM Engineer | Clay, Salesforce and Automation&quot;)
-  - No bullet with a number proves &quot;APIs&quot;
-  - 3 phrases lifted from the JD, keep at most one: [&#x27;build lead routing from&#x27;, &#x27;integrate tools through apis&#x27;, &#x27;lead routing from scratch&#x27;]
+  - Headline should start with the JD title &quot;Customer Success Manager&quot; (now: &quot;Account Manager | SaaS and Customer Relationships&quot;)
+  - Put &quot;Salesforce&quot; in both SKILLS and a bullet (skills True, bullet False)
+  - No bullet with a number proves &quot;success playbooks&quot;
+  - No bullet with a number proves &quot;renewals expansion&quot;
+  - No bullet with a number proves &quot;churn risk reviews&quot;
+  - 2 phrases lifted from the JD, keep at most one: [&#x27;lead churn risk reviews&#x27;, &#x27;own renewals and expansion&#x27;]
   - line 4: pronoun
   - line 4: filler &quot;passionate&quot;
   - line 12: hedge before a number
   - line 13: dash used as punctuation
   - line 14: filler &quot;responsible for&quot;
-  - line 11: bullet over one line (136 characters)
-  - line 12: opening verb &quot;built&quot; repeated in GTM Engineer
   - line 13: no number or scope
   - line 14: no number or scope
 </code></pre>
@@ -264,20 +263,20 @@ Fix list:
       <summary>The fixed CV (invented candidate)</summary>
       <pre><code>Sample Candidate
 Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
-GTM Systems Engineer | Lead Routing, Outbound Signals and Integrations
-GTM Engineer who builds the routing, outbound and integration layer a sales team runs on, in HubSpot, Clay and n8n.
+Customer Success Manager | Renewals, Expansion and Churn Prevention
+Customer Success Manager who protects and grows a mid market book, with 4 years in SaaS on Salesforce, HubSpot and Intercom.
 
 SKILLS
-HubSpot, Clay, n8n, Python, APIs, webhooks, lead routing, outbound signals, Claude
+Salesforce, HubSpot, Intercom, Gainsight, renewals, expansion, churn risk, success playbooks, health scores
 
 WORK EXPERIENCE
-GTM Engineer | Example Events Ltd | Jan 2024 to Present
-- Routing: Built lead routing in HubSpot and Clay that assigns every inbound lead to the right rep within 5 minutes.
-- Outbound: Created a signal pipeline in Clay that lifted meetings booked 30% in two quarters.
-- Integrations: Connected HubSpot, the event platform and Slack through APIs in n8n, removing 6 weekly exports.
-- Reporting: Shipped a weekly pipeline view for 12 sellers, with a failure alert on every sync.
-Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
-- Quota: Closed 40 new business deals and finished at 104% of quota.
+Customer Success Manager | Example Software GmbH | Jan 2023 to Present
+- Renewals: Renewed 92% of a 60 account book (1.4M ARR) and grew expansion revenue 18% in Salesforce.
+- Churn: Ran monthly churn risk reviews in HubSpot that cut logo churn 4 points in a year.
+- Playbooks: Wrote 3 success playbooks in Intercom that every new customer now follows.
+- Escalations: Resolved 40 escalations a quarter with product, keeping 9 of 10 at risk accounts.
+Account Executive | Example Media GmbH | Mar 2019 to Dec 2022
+- Quota: Closed 35 new business deals and finished at 103% of quota.
 
 EDUCATION
 BA Business, Example University
@@ -286,14 +285,14 @@ BA Business, Example University
   </section>
 
   <section aria-labelledby="live">
-    <h2 id="live">What runs live, and what is in this sample</h2>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="Live against sample, scrolls sideways on small screens">
+    <h2 id="live">What a production version adds</h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Sample against production, scrolls sideways on small screens">
 <table style="min-width:760px">
-<thead><tr><th>Part</th><th>In this sample</th><th>In the live version</th></tr></thead>
+<thead><tr><th>Part</th><th>In this sample</th><th>In production</th></tr></thead>
 <tbody>
-<tr><td>Schedule</td><td>14 replayed days</td><td>A scheduled task every morning, plus manual runs; the 20 hour skip rule protects paid credits</td></tr>
-<tr><td>Sources</td><td>8 invented boards in three tiers</td><td>About 100 boards, VC portfolio boards and ATS host searches in tiers, each with a yield column; a board moves up when it finds a role that passes, down after 4 empty checks; blocked sources are never worked around</td></tr>
-<tr><td>Data tools</td><td>Not needed</td><td>Free sources first, paid last: web search and fetch, then Tavily and Firecrawl within a monthly budget, Apollo and Hunter for the named person, Clay only when nothing else found them</td></tr>
+<tr><td>Schedule</td><td>14 replayed days</td><td>A scheduled task every morning plus manual runs; the 20 hour skip rule protects paid credits</td></tr>
+<tr><td>Sources</td><td>8 invented boards in three tiers</td><td>Job boards, VC portfolio boards and ATS host searches in tiers, each with a yield column; a board moves up when it finds a role that passes, down after 4 empty checks; blocked sources are never worked around</td></tr>
+<tr><td>Data tools</td><td>Not needed</td><td>Free sources first, paid last: web search and fetch, then search APIs within a monthly budget, contact data tools for the named person, and the most expensive enrichment only when nothing else found them</td></tr>
 <tr><td>Proof</td><td>An open and close day per posting</td><td>The company's ATS feed or careers page read live; aggregator copies are discovery only</td></tr>
 <tr><td>Rules</td><td>Two profile files</td><td>Standing rules written down as they are decided, each with the date and the reason</td></tr>
 <tr><td>CV and note</td><td>A brief and a checker</td><td>The CV built on a template from confirmed facts only, then checked; a note under 100 words to a named person</td></tr>
@@ -305,10 +304,10 @@ BA Business, Example University
   <section aria-labelledby="built">
     <h2 id="built">How it was built</h2>
     <dl>
-      <dt>I did</dt><dd>Every rule: the gates, the fit parts and their weights, the show bar, the preference weights, the decision threshold and the CV rubric. Each one was written down the day a role wasted time or an application failed for a reason the scan could have caught.</dd>
+      <dt>I did</dt><dd>Every rule: the gates, the fit parts and their weights, the show bar, the preference weights, the decision threshold and the CV rubric, each one a setting in the profile or a check in the code.</dd>
       <dt>AI did</dt><dd>Claude Code wrote the scripts from those rules. No model scores a role during the run.</dd>
       <dt>Checks</dt><dd>The run stops if an unverified role, a role under the show bar or a done story reaches the list, if a role under 8 gets a CV brief, or if a role is reported twice.</dd>
-      <dt>Run it</dt><dd><code>python3 make_synthetic_jobs.py</code>, <code>python3 scan.py profiles/gtm-engineer.json --out output/gtm-engineer</code>, then <code>python3 board.py profiles/gtm-engineer.json output/gtm-engineer</code>. Standard library only.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_jobs.py</code>, <code>python3 scan.py profiles/customer-success.json --out output/customer-success</code>, then <code>python3 board.py profiles/customer-success.json output/customer-success</code>. Standard library only.</dd>
     </dl>
     <p class="note">Synthetic input. Every company, posting, candidate and application is invented to exercise the rules, and the application history has its odds built in, so the decisions show how the board reasons, not a finding. Links end in <code>.example</code>.</p>
   </section>
@@ -321,13 +320,13 @@ BA Business, Example University
       <div><a href="board.py">board.py</a><small>Applications, CVs, preference score, decisions, run log.</small></div>
       <div><a href="check_cv.py">check_cv.py</a><small>The tailoring rules run on a CV against one posting.</small></div>
       <div><a href="make_synthetic_jobs.py">make_synthetic_jobs.py</a><small>Builds the invented postings, board copies and history.</small></div>
-      <div><a href="profiles/gtm-engineer.json">profiles/gtm-engineer.json</a><small>Rules for a GTM Engineer search.</small></div>
-      <div><a href="profiles/customer-success.json">profiles/customer-success.json</a><small>Rules for a Customer Success search.</small></div>
-      <div><a href="output/gtm-engineer/board.html">output/gtm-engineer/board.html</a><small>The board for the GTM profile.</small></div>
+      <div><a href="profiles/customer-success.json">profiles/customer-success.json</a><small>Rules for a Customer Success Manager search.</small></div>
+      <div><a href="profiles/data-analyst.json">profiles/data-analyst.json</a><small>Rules for a Data Analyst search.</small></div>
       <div><a href="output/customer-success/board.html">output/customer-success/board.html</a><small>The board for the Customer Success profile.</small></div>
-      <div><a href="output/gtm-engineer/summary.json">output/gtm-engineer/summary.json</a><small>Counts behind every number on this page.</small></div>
-      <div><a href="data/postings.json">data/postings.json</a><small>651 invented postings with open and close days.</small></div>
-      <div><a href="data/board_copies.json">data/board_copies.json</a><small>1,258 invented board copies.</small></div>
+      <div><a href="output/data-analyst/board.html">output/data-analyst/board.html</a><small>The board for the Data Analyst profile.</small></div>
+      <div><a href="output/customer-success/summary.json">output/customer-success/summary.json</a><small>Counts behind every number on this page.</small></div>
+      <div><a href="data/postings.json">data/postings.json</a><small>659 invented postings with open and close days.</small></div>
+      <div><a href="data/board_copies.json">data/board_copies.json</a><small>1,268 invented board copies.</small></div>
       <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
     </div>
     <details>
@@ -337,8 +336,8 @@ Job search engine: a daily scan that finds roles, proves they are open, scores
 them honestly and keeps a board. The rules live in a profile file, so the same
 engine runs for any job title.
 
-    python3 scan.py profiles/gtm-engineer.json --out output/gtm-engineer
     python3 scan.py profiles/customer-success.json --out output/customer-success
+    python3 scan.py profiles/data-analyst.json --out output/data-analyst
 
 It replays 14 days of the scheduled scan (every morning, plus one manual
 evening rerun). Every run:
@@ -358,7 +357,7 @@ evening rerun). Every run:
   5. Role fit 0 to 10: title, share of wanted duties, tools on record against
      tools asked, years asked above the record, a title above the record.
   6. Fit line: role fit plus location points, then pay, office, startup and
-     run shape factors, each written out.
+     &quot;light on wanted duties&quot; factors, each written out.
   7. Show: role fit under 6.5 is &quot;seen, not a fit&quot;. Total 8+ is &quot;worth
      applying&quot; (9+ &quot;strong fit&quot;) and gets a CV brief and a note to a named
      person; while interviewing, a CV is drafted only from 8.5.
@@ -495,7 +494,7 @@ def fit_line(r, P, rf, share):
         parts.append(&quot;startup minus 0.5&quot;)
     if share &lt; 0.5 and r[&quot;employees&quot;] &gt;= 300:
         total -= 0.5
-        parts.append(&quot;run shape at a big team minus 0.5&quot;)
+        parts.append(&quot;light on wanted duties at a big team minus 0.5&quot;)
     total = max(0, min(half(total), 10))
     return total, f&quot;fit {total:g} ({&#x27;, &#x27;.join(parts)})&quot;
 
@@ -552,7 +551,7 @@ def run(day, last_day, P, posts, copies, companies, tracked, seen_keys):
             line += &quot;; title above the record, name the leadership gap&quot;
         p.update(role_fit=rf, total=total, fit_line=line, first_seen=day, key=list(key), state=&quot;open&quot;)
         if rf &lt; P[&quot;show_bar_role&quot;]:
-            out[&quot;seen&quot;].append(dict(p, why=f&quot;role {rf:g}, {&#x27;run shape&#x27; if share &lt; 0.5 else &#x27;tools and years&#x27;}&quot;))
+            out[&quot;seen&quot;].append(dict(p, why=f&quot;role {rf:g}, {&#x27;light on the duties you want&#x27; if share &lt; 0.5 else &#x27;tools and years&#x27;}&quot;))
         elif own != &quot;works&quot;:
             out[&quot;unverified&quot;].append(dict(p, why=&quot;board only&quot; if own == &quot;none&quot; else &quot;company list unreadable&quot;))
         elif total &gt;= P[&quot;cv_bar_total&quot;]:

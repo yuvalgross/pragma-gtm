@@ -1,0 +1,9 @@
+Senior Data Analyst
+Saffron HQ, Amsterdam (hybrid)
+
+What you will do:
+- model the revenue data warehouse
+- handle data access tickets
+
+Tools: BigQuery, dbt, SQL
+Experience: 4+ years

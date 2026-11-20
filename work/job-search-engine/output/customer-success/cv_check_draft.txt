@@ -1,0 +1,18 @@
+CV check against: Customer Success Manager
+Keywords: 4 of 7 covered; missing: Zendesk, Intercom, HubSpot
+Rubric: ATS 0, proof 0, wording 1, writing 0, focus (set by a person)
+Automatic part: 1 of 8. Bar: 9 of 10 overall, never deliver under 8.
+Fix list:
+  - Headline should start with the JD title "Customer Success Manager" (now: "Account Manager | SaaS and Customer Relationships")
+  - Put "Salesforce" in both SKILLS and a bullet (skills True, bullet False)
+  - No bullet with a number proves "success playbooks"
+  - No bullet with a number proves "renewals expansion"
+  - No bullet with a number proves "churn risk reviews"
+  - 2 phrases lifted from the JD, keep at most one: ['lead churn risk reviews', 'own renewals and expansion']
+  - line 4: pronoun
+  - line 4: filler "passionate"
+  - line 12: hedge before a number
+  - line 13: dash used as punctuation
+  - line 14: filler "responsible for"
+  - line 13: no number or scope
+  - line 14: no number or scope

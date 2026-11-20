@@ -1,7 +1,7 @@
 """
 Builds the job hunt board from one scan output and the application history.
 
-    python3 board.py profiles/gtm-engineer.json output/gtm-engineer
+    python3 board.py profiles/customer-success.json output/customer-success
 
 Adds what the board tracks around the scan:
   Applications  every application and its stage; a role at 8.5+ is applied to
@@ -30,9 +30,8 @@ companies = json.load(open(os.path.join(DATA, "companies.json")))
 past = list(csv.DictReader(open(os.path.join(DATA, "applications.csv"))))
 LAST = B["days"] - 1
 
-FULL = {"Revenue Operations": "Revenue Operations Manager", "RevOps": "RevOps Specialist", "Sales Operations": "Sales Operations Manager"}
-ROLE_BY_SHAPE = {"build": P["target_titles"], "run": [FULL.get(t, t) for t in P["adjacent_titles"]] or P["target_titles"],
-                 "sales": ["Account Executive"]}
+ROLE_BY_SHAPE = {"build": P["target_titles"], "run": P["adjacent_titles"] or P["target_titles"],
+                 "sales": P.get("other_titles") or P["target_titles"]}
 
 
 def title_for(shape):
@@ -50,7 +49,7 @@ for a in past:
         stage, note = rnd.choice([("rejected", "rejected after the hiring manager round"), ("rejected", "rejected after the case study"),
                                   ("closed", "role closed after the first call")])
     apps.append({"id": a["application"], "company": a["company"], "role": title_for(shape),
-                 "track": {"build": "Build", "run": "Run", "sales": "Sales"}[shape], "stage": stage, "day": day,
+                 "track": {"build": "Core", "run": "Light", "sales": "Other"}[shape], "stage": stage, "day": day,
                  "note": note, "channel": a["channel"], "cv": float(a["cv_score"]), "shape": shape,
                  "size": a["company_size"], "note_to_person": a["note_to_named_person"], "outcome": a["outcome"]})
 
@@ -64,7 +63,7 @@ for r in B["main"]:
     outcome = "call" if (waited >= 5 and rnd.random() < 0.45) else ("rejected at CV" if waited >= 4 and rnd.random() < 0.3 else "pending")
     stage = {"call": "interview", "rejected at CV": "rejected", "pending": "applied"}[outcome]
     size = "under 150" if r["employees"] < 150 else ("150 to 500" if r["employees"] <= 500 else "over 500")
-    apps.append({"id": "N" + r["id"], "company": r["company"], "role": r["title"], "track": "Build", "stage": stage, "day": day,
+    apps.append({"id": "N" + r["id"], "company": r["company"], "role": r["title"], "track": "Core", "stage": stage, "day": day,
                  "note": {"call": "first call booked", "rejected at CV": "rejected at CV stage", "pending": "applied with a note to the hiring manager"}[outcome],
                  "channel": r["brief"]["ats"], "cv": rnd.choice([8.5, 9, 9]), "shape": "build", "size": size,
                  "note_to_person": "yes", "outcome": outcome, "fit": r["total"], "headline": r["brief"]["headline"]})
@@ -134,15 +133,15 @@ def decision(q, why, a, b, change):
 
 
 decisions = [
-    decision("Rank run shape roles half a point below build roles with the same fit?",
-             f"Build shape roles got a call {b_calls} of {b_n} times ({pct(b_calls, b_n)}), run shape {r_calls} of {r_n} ({pct(r_calls, r_n)}).",
-             (b_calls, b_n), (r_calls, r_n), "Now in the fit line as \"run shape at a big team minus 0.5\"."),
+    decision("Rank roles light on the duties you want half a point lower?",
+             f"Roles built around your core duties got a call {b_calls} of {b_n} times ({pct(b_calls, b_n)}), roles light on them {r_calls} of {r_n} ({pct(r_calls, r_n)}).",
+             (b_calls, b_n), (r_calls, r_n), "Now in the fit line as \"light on wanted duties at a big team minus 0.5\"."),
     decision("Send a note to a named person with every application at 8 or more?",
              f"With a note: {y_calls} calls from {y_n} ({pct(y_calls, y_n)}). Without: {n_calls} from {n_n} ({pct(n_calls, n_n)}).",
              (y_calls, y_n), (n_calls, n_n), "Every CV brief now ends with the note."),
-    decision("Apply cold to companies over 500 people only when the role is build shape?",
+    decision("Apply cold to companies over 500 people only when the role is built around your core duties?",
              f"Under 150 people: {sm_calls} calls from {sm_n} ({pct(sm_calls, sm_n)}). Over 500: {big_calls} from {big_n} ({pct(big_calls, big_n)}).",
-             (sm_calls, sm_n), (big_calls, big_n), "Run shape roles at 500+ people are now listed for reference only."),
+             (sm_calls, sm_n), (big_calls, big_n), "Roles light on your core duties at 500+ people are now listed for reference only."),
     {"q": "Treat 21 days of silence as closed and stop follow ups there?",
      "why": f"{sum(1 for a in apps if a['outcome'] == 'no reply')} applications have had no human reply after 21 days.",
      "status": "open", "answer": ""},

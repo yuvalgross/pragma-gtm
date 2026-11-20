@@ -1,0 +1,10 @@
+Data Analyst
+Lumen Grid, Remote EU (remote)
+
+What you will do:
+- analyse A/B tests for product teams
+- maintain legacy reports
+- handle data access tickets
+
+Tools: SQL, BigQuery, Python, dbt, Looker
+Experience: 5+ years

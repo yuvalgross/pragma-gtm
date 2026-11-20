@@ -40,7 +40,7 @@ ATS_URL = {
 }
 # source, tier, chance a posting shows up there, (min, max) days of lag after it opens
 SOURCES = [
-    ("LinkedIn alert", "A", 0.55, (0, 1)), ("Indeed", "A", 0.25, (0, 12)), ("niche GTM board", "A", 0.35, (0, 4)),
+    ("LinkedIn alert", "A", 0.55, (0, 1)), ("Indeed", "A", 0.25, (0, 12)), ("niche job board", "A", 0.35, (0, 4)),
     ("ATS host search", "A", 0.30, (0, 2)), ("newsletter", "A", 0.15, (2, 7)), ("VC portfolio board", "B", 0.15, (3, 20)),
     ("startup board", "B", 0.12, (5, 25)), ("remote board", "C", 0.08, (5, 30)),
 ]
@@ -48,31 +48,31 @@ SOURCES = [
 LOCATIONS = [  # city, country, weight
     ("Berlin", "Germany", 30), ("Munich", "Germany", 9), ("Hamburg", "Germany", 5), ("Cologne", "Germany", 3),
     ("Remote EU", "EU", 10), ("Remote Germany", "Germany", 7), ("Madrid", "Spain", 3), ("Barcelona", "Spain", 3),
-    ("Remote Spain", "Spain", 3), ("Amsterdam", "Netherlands", 6), ("London", "United Kingdom", 8),
+    ("Remote Spain", "Spain", 3), ("Amsterdam", "Netherlands", 7), ("Rotterdam", "Netherlands", 2), ("Remote Netherlands", "Netherlands", 3), ("London", "United Kingdom", 8),
     ("Limassol", "Cyprus", 1), ("Remote US", "United States", 7), ("Stockholm", "Sweden", 3), ("Paris", "France", 4),
 ]
 LOCAL_LANGUAGE = {"Germany": "German C1", "Spain": "Spanish", "Netherlands": "Dutch", "France": "French", "Sweden": "Swedish"}
 
 FAMILIES = {
-    "gtm": {
-        "titles": ["GTM Engineer"] * 4 + ["Senior GTM Engineer", "Founding GTM Engineer", "GTM Systems Engineer",
-                   "RevOps Engineer", "Growth Engineer", "Head of GTM Engineering", "GTM Engineering Intern",
-                   "Working Student GTM Engineering"],
-        "build": ["build enrichment and scoring workflows", "build outbound and signal pipelines",
-                  "automate CRM updates with APIs and webhooks", "ship AI agents for research and routing",
-                  "build lead routing from scratch", "integrate tools through APIs"],
-        "run": ["own pipeline reporting for leadership", "administer the CRM", "run the forecast process",
-                "prepare QBR decks", "manage territory and quota planning", "write outbound copy for SDRs",
-                "maintain dashboards in Looker"],
-        "tools": ["Clay", "HubSpot", "Salesforce", "n8n", "Make", "Python", "SQL", "Claude", "Apollo", "Zapier", "CPQ", "dbt", "Looker"],
+    "marketing": {
+        "titles": ["Marketing Manager"] * 4 + ["Senior Marketing Manager", "Founding Marketer", "Lifecycle Marketing Manager",
+                   "Content Marketing Manager", "Growth Marketing Manager", "Head of Marketing", "Marketing Intern",
+                   "Working Student Marketing"],
+        "build": ["build the lifecycle email program", "launch paid campaigns in new markets",
+                  "set up marketing automation", "run product launches end to end",
+                  "build the content calendar", "own the website and landing pages"],
+        "run": ["report campaign results to leadership", "manage the agency", "run the events calendar",
+                "prepare board slides", "manage the budget", "write social posts",
+                "maintain the brand guidelines"],
+        "tools": ["HubSpot", "Google Ads", "Webflow", "Figma", "GA4", "Canva", "LinkedIn Ads", "Semrush", "Notion", "Zapier", "Salesforce", "Looker", "Mailchimp"],
         "pay": (50, 95),
     },
-    "revops": {
-        "titles": ["Revenue Operations Manager", "Senior RevOps Manager", "Sales Operations Analyst", "RevOps Specialist", "Head of Revenue Operations"],
-        "build": ["automate CRM updates with APIs and webhooks", "build lead routing from scratch"],
-        "run": ["own pipeline reporting for leadership", "administer the CRM", "run the forecast process",
-                "prepare QBR decks", "manage territory and quota planning", "design commission plans"],
-        "tools": ["HubSpot", "Salesforce", "SQL", "Looker", "Excel", "Gong", "CPQ"],
+    "ops": {
+        "titles": ["Operations Manager", "Senior Operations Manager", "Business Operations Analyst", "Operations Specialist", "Head of Operations"],
+        "build": ["automate internal processes", "build the operations playbook"],
+        "run": ["report weekly numbers to leadership", "administer internal tools", "run the planning process",
+                "prepare board decks", "manage vendor contracts", "own the office budget"],
+        "tools": ["Notion", "Excel", "SQL", "Looker", "Airtable", "Slack", "Jira"],
         "pay": (55, 95),
     },
     "ae": {
@@ -83,22 +83,23 @@ FAMILIES = {
         "pay": (60, 110),
     },
     "cs": {
-        "titles": ["Customer Success Manager"] * 3 + ["Senior Customer Success Manager", "Head of Customer Success", "Onboarding Manager"],
+        "titles": ["Customer Success Manager"] * 4 + ["Senior Customer Success Manager", "Head of Customer Success", "Onboarding Manager", "Customer Success Associate (Junior)", "Working Student Customer Success"],
         "build": ["run onboarding for new customers", "drive adoption and health scores", "own renewals and expansion",
-                  "build success playbooks"],
-        "run": ["answer support tickets", "prospect cold accounts", "handle billing questions"],
+                  "build success playbooks", "lead churn risk reviews", "run business reviews with key accounts"],
+        "run": ["answer support tickets", "prospect cold accounts", "handle billing questions", "chase overdue invoices"],
         "tools": ["Gainsight", "HubSpot", "Salesforce", "Intercom", "Zendesk"],
         "pay": (50, 85),
     },
     "data": {
-        "titles": ["Data Analyst", "Analytics Engineer", "BI Analyst"],
-        "build": ["build dbt models", "build dashboards for sales and marketing"],
-        "run": ["answer ad hoc data requests", "maintain reports"],
+        "titles": ["Data Analyst"] * 3 + ["Senior Data Analyst", "Analytics Engineer", "BI Analyst", "Head of Data", "Data Analyst Intern"],
+        "build": ["build dbt models", "build dashboards for sales and marketing", "model the revenue data warehouse",
+                  "analyse A/B tests for product teams"],
+        "run": ["answer ad hoc data requests", "maintain legacy reports", "handle data access tickets"],
         "tools": ["SQL", "dbt", "Looker", "Python", "BigQuery"],
         "pay": (55, 85),
     },
 }
-FAMILY_WEIGHTS = [("gtm", 34), ("revops", 22), ("ae", 22), ("cs", 14), ("data", 8)]
+FAMILY_WEIGHTS = [("cs", 30), ("data", 22), ("ae", 18), ("marketing", 14), ("ops", 16)]
 
 
 def wpick(pairs):
@@ -139,7 +140,7 @@ def main():
         else:
             workplace = wpick([("hybrid", 6), ("on site", 3)])[0]
             office_days = 5 if workplace == "on site" else rnd.choice([1, 2, 3, 3, 4])
-        if fam == "gtm" and rnd.random() < 0.3:
+        if fam in ("cs", "data") and rnd.random() < 0.3:
             duties = rnd.sample(F["build"], k=3) + rnd.sample(F["run"], k=rnd.choice([0, 1]))
         else:
             duties = rnd.sample(F["build"], k=min(len(F["build"]), rnd.choice([0, 1, 1, 2]))) + \

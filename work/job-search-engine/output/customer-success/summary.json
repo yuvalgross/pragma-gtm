@@ -1,26 +1,30 @@
 {
-  "profile": "Customer Success search",
+  "profile": "Customer Success Manager search",
   "runs": 14,
   "skipped": 1,
-  "copies_read": 435,
-  "unique_roles": 392,
-  "in_titles": 22,
-  "already_seen": 10,
-  "main_8_plus": 1,
-  "reference": 2,
-  "seen_not_a_fit": 6,
-  "dropped": 12,
-  "could_not_verify": 0,
+  "copies_read": 422,
+  "unique_roles": 370,
+  "in_titles": 47,
+  "already_seen": 31,
+  "main_8_plus": 4,
+  "reference": 9,
+  "seen_not_a_fit": 4,
+  "dropped": 28,
+  "could_not_verify": 1,
   "closed_on_board": 1,
-  "tracked_closed_later": 0,
-  "cvs_drafted": 1,
+  "tracked_closed_later": 2,
+  "cvs_drafted": 3,
   "drop_reasons": {
-    "none of the duties you want to do": 8,
-    "outside the regions you work in": 2,
-    "Swedish required": 1,
-    "Spanish required": 1
+    "needs a move inside the home country, no remote": 9,
+    "outside the regions you work in": 8,
+    "none of the duties you want to do": 6,
+    "Dutch required": 3,
+    "Spanish required": 2
   },
   "main": [
-    "Opal Pay, Onboarding Manager: fit 9.5 (role 8, remote in home country +1.5, pay above floor +0.5, startup minus 0.5)"
+    "Linden Data, Customer Success Manager: fit 8.5 (role 8, home city +0.5, pay not stated (ask))",
+    "Orchard Systems, Senior Customer Success Manager: fit 10 (role 8, remote in home country +1.5, pay above floor +0.5)",
+    "Ember Logic, Customer Success Manager: fit 8.5 (role 8, home city +0.5, pay not stated (ask))",
+    "Sable Systems, Onboarding Manager: fit 8 (role 7, remote in home country +1.5, pay not stated (ask), startup minus 0.5)"
   ]
 }

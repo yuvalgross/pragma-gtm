@@ -7,14 +7,14 @@ live processes and the decisions the outcomes point to. The rules sit in a
 profile file, so the same engine runs for any job title.
 
     python3 make_synthetic_jobs.py
-    python3 scan.py profiles/gtm-engineer.json --out output/gtm-engineer
-    python3 board.py profiles/gtm-engineer.json output/gtm-engineer
-    python3 check_cv.py data/sample_cv_draft.txt output/gtm-engineer/jds/4228.txt
+    python3 scan.py profiles/customer-success.json --out output/customer-success
+    python3 board.py profiles/customer-success.json output/customer-success
+    python3 check_cv.py data/sample_cv_draft.txt output/customer-success/jds/4577.txt
 
-Swap in profiles/customer-success.json to run a different search on the same feed.
+Swap in profiles/data-analyst.json to run a different search on the same feed.
 
 The scan replays 14 days: one scheduled run every morning and a manual rerun
-that the 20 hour skip rule stops. Open output/gtm-engineer/board.html to see the board.
+that the 20 hour skip rule stops. Open output/customer-success/board.html to see the board.
 
 Standard library only. Every company, posting, candidate and application is invented.
 

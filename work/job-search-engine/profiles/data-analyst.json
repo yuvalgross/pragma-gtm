@@ -1,0 +1,80 @@
+{
+  "name": "Data Analyst search",
+  "target_titles": [
+    "Data Analyst",
+    "Analytics Engineer",
+    "BI Analyst"
+  ],
+  "adjacent_titles": [],
+  "other_titles": [
+    "Data Analyst"
+  ],
+  "senior_titles_above_record": [
+    "Head of",
+    "Director",
+    "VP"
+  ],
+  "drop_titles": [
+    "Intern",
+    "Working Student",
+    "Junior"
+  ],
+  "core_duties": [
+    "dbt",
+    "dashboards",
+    "model",
+    "A/B"
+  ],
+  "avoid_duties": [
+    "ad hoc",
+    "legacy",
+    "tickets"
+  ],
+  "drop_when_no_core_duties": true,
+  "tools": [
+    "SQL",
+    "dbt",
+    "Looker",
+    "Python",
+    "BigQuery"
+  ],
+  "languages": [
+    "English",
+    "Dutch"
+  ],
+  "years_on_record": 3,
+  "home_city": "Amsterdam",
+  "home_country": "Netherlands",
+  "no_moves_inside_home_country": false,
+  "work_regions": [
+    "Netherlands",
+    "EU",
+    "Germany",
+    "United Kingdom"
+  ],
+  "location_points": {
+    "home city": 0.5,
+    "remote EU": 1.5,
+    "remote home country": 1.5,
+    "other": 0
+  },
+  "pay_floor_k_eur": 55,
+  "excluded_companies": [],
+  "rejected_before": [
+    "Harbor Health",
+    "Opal Health"
+  ],
+  "cv_bar_total": 8,
+  "cv_bar_interviewing": 8.5,
+  "show_bar_role": 6.5,
+  "cv_keywords_on_record": [
+    "SQL",
+    "dbt",
+    "Looker",
+    "Python",
+    "BigQuery",
+    "dashboards",
+    "data models",
+    "A/B tests"
+  ]
+}

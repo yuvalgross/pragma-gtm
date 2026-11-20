@@ -3,8 +3,8 @@ Job search engine: a daily scan that finds roles, proves they are open, scores
 them honestly and keeps a board. The rules live in a profile file, so the same
 engine runs for any job title.
 
-    python3 scan.py profiles/gtm-engineer.json --out output/gtm-engineer
     python3 scan.py profiles/customer-success.json --out output/customer-success
+    python3 scan.py profiles/data-analyst.json --out output/data-analyst
 
 It replays 14 days of the scheduled scan (every morning, plus one manual
 evening rerun). Every run:
@@ -24,7 +24,7 @@ evening rerun). Every run:
   5. Role fit 0 to 10: title, share of wanted duties, tools on record against
      tools asked, years asked above the record, a title above the record.
   6. Fit line: role fit plus location points, then pay, office, startup and
-     run shape factors, each written out.
+     "light on wanted duties" factors, each written out.
   7. Show: role fit under 6.5 is "seen, not a fit". Total 8+ is "worth
      applying" (9+ "strong fit") and gets a CV brief and a note to a named
      person; while interviewing, a CV is drafted only from 8.5.
@@ -161,7 +161,7 @@ def fit_line(r, P, rf, share):
         parts.append("startup minus 0.5")
     if share < 0.5 and r["employees"] >= 300:
         total -= 0.5
-        parts.append("run shape at a big team minus 0.5")
+        parts.append("light on wanted duties at a big team minus 0.5")
     total = max(0, min(half(total), 10))
     return total, f"fit {total:g} ({', '.join(parts)})"
 
@@ -218,7 +218,7 @@ def run(day, last_day, P, posts, copies, companies, tracked, seen_keys):
             line += "; title above the record, name the leadership gap"
         p.update(role_fit=rf, total=total, fit_line=line, first_seen=day, key=list(key), state="open")
         if rf < P["show_bar_role"]:
-            out["seen"].append(dict(p, why=f"role {rf:g}, {'run shape' if share < 0.5 else 'tools and years'}"))
+            out["seen"].append(dict(p, why=f"role {rf:g}, {'light on the duties you want' if share < 0.5 else 'tools and years'}"))
         elif own != "works":
             out["unverified"].append(dict(p, why="board only" if own == "none" else "company list unreadable"))
         elif total >= P["cv_bar_total"]:

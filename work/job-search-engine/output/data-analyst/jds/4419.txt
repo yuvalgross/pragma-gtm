@@ -1,0 +1,10 @@
+Data Analyst
+Quarry Works, Berlin (hybrid)
+
+What you will do:
+- build dashboards for sales and marketing
+- model the revenue data warehouse
+- build dbt models
+
+Tools: Python, dbt, Looker, SQL
+Experience: 4+ years

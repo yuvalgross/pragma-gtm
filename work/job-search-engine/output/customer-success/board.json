@@ -1,16 +1,50 @@
 {
- "profile": "Customer Success search",
+ "profile": "Customer Success Manager search",
  "days": 14,
  "run_log": [
   {
    "day": 0,
-   "copies_read": 83,
-   "unique_roles": 72,
-   "in_titles": 6,
+   "copies_read": 73,
+   "unique_roles": 60,
+   "in_titles": 13,
    "already_seen": 0,
+   "new_main": [
+    "Linden Data, Customer Success Manager (fit 8.5)"
+   ],
+   "reference": 3,
+   "seen_not_a_fit": 2,
+   "dropped": 7,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 1,
+   "copies_read": 35,
+   "unique_roles": 31,
+   "in_titles": 6,
+   "already_seen": 3,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 1,
+   "dropped": 4,
+   "could_not_verify": 1,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 2,
+   "copies_read": 27,
+   "unique_roles": 23,
+   "in_titles": 3,
+   "already_seen": 4,
    "new_main": [],
    "reference": 1,
-   "seen_not_a_fit": 3,
+   "seen_not_a_fit": 0,
    "dropped": 2,
    "could_not_verify": 0,
    "closed_on_board": 0,
@@ -19,29 +53,13 @@
    "kind": "scheduled"
   },
   {
-   "day": 1,
-   "copies_read": 25,
-   "unique_roles": 23,
-   "in_titles": 3,
-   "already_seen": 3,
-   "new_main": [],
-   "reference": 0,
-   "seen_not_a_fit": 0,
-   "dropped": 2,
-   "could_not_verify": 0,
-   "closed_on_board": 1,
-   "tracked_closed": [],
-   "cvs_drafted": 0,
-   "kind": "scheduled"
-  },
-  {
-   "day": 2,
-   "copies_read": 21,
+   "day": 3,
+   "copies_read": 19,
    "unique_roles": 19,
-   "in_titles": 0,
-   "already_seen": 0,
+   "in_titles": 1,
+   "already_seen": 2,
    "new_main": [],
-   "reference": 0,
+   "reference": 1,
    "seen_not_a_fit": 0,
    "dropped": 0,
    "could_not_verify": 0,
@@ -51,29 +69,11 @@
    "kind": "scheduled"
   },
   {
-   "day": 3,
-   "copies_read": 36,
-   "unique_roles": 33,
-   "in_titles": 3,
-   "already_seen": 1,
-   "new_main": [
-    "Opal Pay, Onboarding Manager (fit 9.5)"
-   ],
-   "reference": 0,
-   "seen_not_a_fit": 0,
-   "dropped": 2,
-   "could_not_verify": 0,
-   "closed_on_board": 0,
-   "tracked_closed": [],
-   "cvs_drafted": 1,
-   "kind": "scheduled"
-  },
-  {
    "day": 4,
-   "copies_read": 26,
-   "unique_roles": 24,
+   "copies_read": 24,
+   "unique_roles": 22,
    "in_titles": 0,
-   "already_seen": 1,
+   "already_seen": 3,
    "new_main": [],
    "reference": 0,
    "seen_not_a_fit": 0,
@@ -86,17 +86,19 @@
   },
   {
    "day": 5,
-   "copies_read": 20,
-   "unique_roles": 19,
-   "in_titles": 0,
-   "already_seen": 0,
+   "copies_read": 26,
+   "unique_roles": 23,
+   "in_titles": 5,
+   "already_seen": 2,
    "new_main": [],
-   "reference": 0,
+   "reference": 1,
    "seen_not_a_fit": 0,
-   "dropped": 0,
+   "dropped": 4,
    "could_not_verify": 0,
    "closed_on_board": 0,
-   "tracked_closed": [],
+   "tracked_closed": [
+    "Pebble Pay, Customer Success Manager"
+   ],
    "cvs_drafted": 0,
    "kind": "scheduled"
   },
@@ -107,46 +109,49 @@
   },
   {
    "day": 6,
-   "copies_read": 26,
+   "copies_read": 27,
    "unique_roles": 24,
-   "in_titles": 1,
-   "already_seen": 0,
-   "new_main": [],
-   "reference": 0,
+   "in_titles": 5,
+   "already_seen": 1,
+   "new_main": [
+    "Orchard Systems, Senior Customer Success Manager (fit 10)",
+    "Ember Logic, Customer Success Manager (fit 8.5)"
+   ],
+   "reference": 1,
    "seen_not_a_fit": 0,
-   "dropped": 1,
+   "dropped": 2,
    "could_not_verify": 0,
    "closed_on_board": 0,
    "tracked_closed": [],
-   "cvs_drafted": 0,
+   "cvs_drafted": 2,
    "kind": "scheduled"
   },
   {
    "day": 7,
-   "copies_read": 37,
-   "unique_roles": 32,
+   "copies_read": 27,
+   "unique_roles": 26,
    "in_titles": 2,
-   "already_seen": 1,
+   "already_seen": 4,
    "new_main": [],
    "reference": 1,
-   "seen_not_a_fit": 1,
+   "seen_not_a_fit": 0,
    "dropped": 0,
    "could_not_verify": 0,
-   "closed_on_board": 0,
+   "closed_on_board": 1,
    "tracked_closed": [],
    "cvs_drafted": 0,
    "kind": "scheduled"
   },
   {
    "day": 8,
-   "copies_read": 24,
-   "unique_roles": 20,
-   "in_titles": 1,
-   "already_seen": 0,
+   "copies_read": 33,
+   "unique_roles": 25,
+   "in_titles": 2,
+   "already_seen": 1,
    "new_main": [],
    "reference": 0,
    "seen_not_a_fit": 0,
-   "dropped": 1,
+   "dropped": 2,
    "could_not_verify": 0,
    "closed_on_board": 0,
    "tracked_closed": [],
@@ -155,30 +160,32 @@
   },
   {
    "day": 9,
-   "copies_read": 27,
-   "unique_roles": 27,
-   "in_titles": 0,
-   "already_seen": 1,
+   "copies_read": 25,
+   "unique_roles": 21,
+   "in_titles": 3,
+   "already_seen": 2,
    "new_main": [],
    "reference": 0,
    "seen_not_a_fit": 0,
-   "dropped": 0,
+   "dropped": 3,
    "could_not_verify": 0,
    "closed_on_board": 0,
-   "tracked_closed": [],
+   "tracked_closed": [
+    "Ember Logic, Customer Success Manager"
+   ],
    "cvs_drafted": 0,
    "kind": "scheduled"
   },
   {
    "day": 10,
-   "copies_read": 17,
-   "unique_roles": 16,
-   "in_titles": 0,
-   "already_seen": 0,
+   "copies_read": 34,
+   "unique_roles": 29,
+   "in_titles": 2,
+   "already_seen": 5,
    "new_main": [],
-   "reference": 0,
+   "reference": 1,
    "seen_not_a_fit": 0,
-   "dropped": 0,
+   "dropped": 1,
    "could_not_verify": 0,
    "closed_on_board": 0,
    "tracked_closed": [],
@@ -187,14 +194,14 @@
   },
   {
    "day": 11,
-   "copies_read": 32,
-   "unique_roles": 28,
-   "in_titles": 4,
-   "already_seen": 0,
+   "copies_read": 23,
+   "unique_roles": 23,
+   "in_titles": 1,
+   "already_seen": 1,
    "new_main": [],
    "reference": 0,
-   "seen_not_a_fit": 2,
-   "dropped": 2,
+   "seen_not_a_fit": 0,
+   "dropped": 1,
    "could_not_verify": 0,
    "closed_on_board": 0,
    "tracked_closed": [],
@@ -203,14 +210,14 @@
   },
   {
    "day": 12,
-   "copies_read": 31,
-   "unique_roles": 31,
-   "in_titles": 0,
-   "already_seen": 1,
+   "copies_read": 23,
+   "unique_roles": 21,
+   "in_titles": 2,
+   "already_seen": 2,
    "new_main": [],
    "reference": 0,
-   "seen_not_a_fit": 0,
-   "dropped": 0,
+   "seen_not_a_fit": 1,
+   "dropped": 1,
    "could_not_verify": 0,
    "closed_on_board": 0,
    "tracked_closed": [],
@@ -219,14 +226,16 @@
   },
   {
    "day": 13,
-   "copies_read": 30,
-   "unique_roles": 24,
+   "copies_read": 26,
+   "unique_roles": 23,
    "in_titles": 2,
-   "already_seen": 2,
-   "new_main": [],
+   "already_seen": 1,
+   "new_main": [
+    "Sable Systems, Onboarding Manager (fit 8)"
+   ],
    "reference": 0,
    "seen_not_a_fit": 0,
-   "dropped": 2,
+   "dropped": 1,
    "could_not_verify": 0,
    "closed_on_board": 0,
    "tracked_closed": [],
@@ -236,54 +245,224 @@
  ],
  "main": [
   {
-   "id": "4382",
-   "company": "Opal Pay",
-   "title": "Onboarding Manager",
-   "location": "Remote Germany",
-   "workplace": "remote",
-   "url": "https://opalpay.jobs.personio.example/job/4382",
+   "id": "4577",
+   "company": "Linden Data",
+   "title": "Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/lindendata/jobs/4577",
    "sources": [
-    "niche GTM board"
+    "niche job board"
    ],
    "role_fit": 8.0,
-   "total": 9.5,
-   "fit_line": "fit 9.5 (role 8, remote in home country +1.5, pay above floor +0.5, startup minus 0.5)",
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 8, home city +0.5, pay not stated (ask))",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Customer Success Manager",
+    "top_requirements": [
+     "build success playbooks",
+     "own renewals and expansion",
+     "lead churn risk reviews"
+    ],
+    "keywords_on_record": [
+     "renewals",
+     "expansion",
+     "HubSpot",
+     "Salesforce",
+     "playbooks",
+     "churn"
+    ],
+    "gaps_to_name_not_cover": [
+     "Zendesk",
+     "Intercom"
+    ],
+    "location_line": "Berlin, Germany",
+    "ats": "Greenhouse",
+    "ats_advice": "Parsed into fields and searched by keyword: exact terms and standard headings."
+   },
+   "first_seen": 0,
+   "state": "open",
+   "employees": 160,
+   "pay_k_eur": null,
+   "duties": [
+    "build success playbooks",
+    "own renewals and expansion",
+    "lead churn risk reviews"
+   ],
+   "tools": [
+    "Zendesk",
+    "Salesforce",
+    "Intercom",
+    "HubSpot"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4063",
+   "company": "Orchard Systems",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://join.example/companies/orchardsystems/4063",
+   "sources": [
+    "niche job board"
+   ],
+   "role_fit": 8.0,
+   "total": 10.0,
+   "fit_line": "fit 10 (role 8, remote in home country +1.5, pay above floor +0.5)",
    "verdict": "Strong fit",
    "brief": {
-    "headline": "Onboarding Manager",
+    "headline": "Senior Customer Success Manager",
     "top_requirements": [
-     "run onboarding for new customers",
-     "build success playbooks",
-     "handle billing questions"
+     "drive adoption and health scores",
+     "run business reviews with key accounts",
+     "run onboarding for new customers"
     ],
     "keywords_on_record": [
      "onboarding",
+     "adoption",
      "Gainsight",
-     "HubSpot",
      "Salesforce",
-     "playbooks"
+     "health scores",
+     "business reviews"
     ],
-    "gaps_to_name_not_cover": [],
-    "location_line": "Munich, Germany (open to remote)",
-    "ats": "Personio",
-    "ats_advice": "Plain text conversion: simple layout, extractable text, the ad's language."
+    "gaps_to_name_not_cover": [
+     "Intercom",
+     "Zendesk"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "JOIN",
+    "ats_advice": "Small companies, fast human read: the top third has to answer the JD."
    },
-   "first_seen": 3,
+   "first_seen": 6,
    "state": "open",
-   "employees": 70,
+   "employees": 240,
    "pay_k_eur": [
-    65,
-    90
+    60,
+    75
    ],
    "duties": [
-    "run onboarding for new customers",
-    "build success playbooks",
-    "handle billing questions"
+    "drive adoption and health scores",
+    "run business reviews with key accounts",
+    "run onboarding for new customers"
    ],
    "tools": [
     "Gainsight",
     "Salesforce",
-    "HubSpot"
+    "Intercom",
+    "Zendesk"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4629",
+   "company": "Ember Logic",
+   "title": "Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://emberlogic.recruitee.example/o/4629",
+   "sources": [
+    "newsletter"
+   ],
+   "role_fit": 8.0,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 8, home city +0.5, pay not stated (ask))",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Customer Success Manager",
+    "top_requirements": [
+     "lead churn risk reviews",
+     "own renewals and expansion",
+     "build success playbooks"
+    ],
+    "keywords_on_record": [
+     "renewals",
+     "expansion",
+     "Gainsight",
+     "HubSpot",
+     "Salesforce",
+     "playbooks",
+     "churn"
+    ],
+    "gaps_to_name_not_cover": [
+     "Intercom",
+     "Zendesk"
+    ],
+    "location_line": "Berlin, Germany",
+    "ats": "Recruitee",
+    "ats_advice": "Reliable parser plus screening questions: answer knockout questions carefully."
+   },
+   "first_seen": 6,
+   "state": "closed",
+   "closed_seen": 9,
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "lead churn risk reviews",
+    "own renewals and expansion",
+    "build success playbooks"
+   ],
+   "tools": [
+    "Salesforce",
+    "Intercom",
+    "HubSpot",
+    "Gainsight",
+    "Zendesk"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4443",
+   "company": "Sable Systems",
+   "title": "Onboarding Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4443",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.0,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7, remote in home country +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Onboarding Manager",
+    "top_requirements": [
+     "build success playbooks",
+     "answer support tickets",
+     "handle billing questions"
+    ],
+    "keywords_on_record": [
+     "Gainsight",
+     "HubSpot",
+     "playbooks"
+    ],
+    "gaps_to_name_not_cover": [
+     "Intercom"
+    ],
+    "location_line": "Berlin, Germany (open to remote)",
+    "ats": "Greenhouse",
+    "ats_advice": "Parsed into fields and searched by keyword: exact terms and standard headings."
+   },
+   "first_seen": 13,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build success playbooks",
+    "answer support tickets",
+    "handle billing questions"
+   ],
+   "tools": [
+    "HubSpot",
+    "Intercom",
+    "Gainsight"
    ],
    "years_required": 5,
    "languages_required": []
@@ -291,534 +470,475 @@
  ],
  "reference": [
   {
-   "id": "4369",
-   "company": "Delta Cloud",
+   "id": "4022",
+   "company": "Lumen AI",
    "title": "Customer Success Manager",
-   "location": "Munich",
-   "workplace": "hybrid",
-   "url": "https://deltacloud.teamtailor.example/jobs/4369",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://lumenai.teamtailor.example/jobs/4022",
    "sources": [
-    "VC portfolio board"
+    "LinkedIn alert"
    ],
-   "role_fit": 7.0,
-   "total": 7.5,
-   "fit_line": "fit 7.5 (role 7, home city +1, pay not stated (ask), run shape at a big team minus 0.5)",
+   "role_fit": 6.5,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 6.5, home city +0.5, floor inside the band, on site only minus 0.5)",
    "verdict": "Below the 8 bar, listed for reference",
    "first_seen": 0,
    "state": "open",
    "employees": 600,
-   "pay_k_eur": null,
+   "pay_k_eur": [
+    50,
+    70
+   ],
    "duties": [
     "run onboarding for new customers",
-    "answer support tickets",
-    "handle billing questions",
+    "handle billing questions"
+   ],
+   "tools": [
+    "Salesforce",
+    "HubSpot",
+    "Zendesk",
+    "Intercom",
+    "Gainsight"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4153",
+   "company": "Tidal Logic",
+   "title": "Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/tidallogic/j/4153",
+   "sources": [
+    "niche job board"
+   ],
+   "role_fit": 7.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7, home city +0.5, floor inside the band)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 160,
+   "pay_k_eur": [
+    50,
+    60
+   ],
+   "duties": [
+    "own renewals and expansion",
+    "build success playbooks",
+    "run business reviews with key accounts",
+    "handle billing questions"
+   ],
+   "tools": [
+    "Zendesk",
+    "HubSpot",
+    "Gainsight",
+    "Intercom"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4323",
+   "company": "Pebble Pay",
+   "title": "Customer Success Manager",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://pebblepay.recruitee.example/o/4323",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 8.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 8, Remote Spain needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "closed",
+   "closed_seen": 5,
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "drive adoption and health scores",
+    "run business reviews with key accounts",
     "prospect cold accounts"
    ],
    "tools": [
     "Salesforce",
     "HubSpot",
+    "Intercom",
+    "Gainsight"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4206",
+   "company": "Lumen Cloud",
+   "title": "Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/lumencloud/4206",
+   "sources": [
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, home city +0.5, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 2,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "drive adoption and health scores",
+    "answer support tickets"
+   ],
+   "tools": [
+    "Intercom",
+    "Salesforce",
+    "HubSpot",
+    "Gainsight"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4578",
+   "company": "Bramble Cloud",
+   "title": "Customer Success Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://bramblecloud.jobs.personio.example/job/4578",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 6.5,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 6.5, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 3,
+   "state": "open",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "drive adoption and health scores",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "HubSpot",
+    "Gainsight",
+    "Intercom",
+    "Salesforce",
+    "Zendesk"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4421",
+   "company": "Nimbus Cloud",
+   "title": "Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/nimbuscloud/jobs/4421",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, home city +0.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 5,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build success playbooks",
+    "drive adoption and health scores",
+    "answer support tickets"
+   ],
+   "tools": [
+    "Intercom",
+    "Zendesk",
+    "Gainsight",
+    "HubSpot"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4573",
+   "company": "Delta AI",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/deltaai/jobs/4573",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, home city +0.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 6,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "drive adoption and health scores",
+    "run business reviews with key accounts",
+    "chase overdue invoices"
+   ],
+   "tools": [
+    "Intercom",
+    "Salesforce",
+    "Gainsight",
+    "HubSpot",
+    "Zendesk"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4541",
+   "company": "Ember Systems",
+   "title": "Customer Success Manager",
+   "location": "Remote Netherlands",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/embersystems/4541",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 6.5,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 6.5, Remote Netherlands needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 7,
+   "state": "open",
+   "employees": 110,
+   "pay_k_eur": null,
+   "duties": [
+    "lead churn risk reviews",
+    "run onboarding for new customers",
+    "chase overdue invoices",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "Gainsight",
+    "Salesforce",
+    "HubSpot",
+    "Zendesk",
     "Intercom"
    ],
    "years_required": 3,
    "languages_required": []
   },
   {
-   "id": "4308",
-   "company": "Opal Systems",
-   "title": "Onboarding Manager",
+   "id": "4269",
+   "company": "Pebble Stack",
+   "title": "Customer Success Manager",
    "location": "Berlin",
    "workplace": "hybrid",
-   "url": "https://jobs.ashbyhq.example/opalsystems/4308",
+   "url": "https://jobs.lever.example/pebblestack/4269",
    "sources": [
-    "ATS host search",
     "LinkedIn alert"
    ],
    "role_fit": 6.5,
-   "total": 6.5,
-   "fit_line": "fit 6.5 (role 6.5, Berlin needs a move +0, pay not stated (ask))",
+   "total": 7.0,
+   "fit_line": "fit 7 (role 6.5, home city +0.5, pay not stated (ask))",
    "verdict": "Below the 8 bar, listed for reference",
-   "first_seen": 7,
+   "first_seen": 10,
    "state": "open",
-   "employees": 160,
+   "employees": 600,
    "pay_k_eur": null,
    "duties": [
-    "build success playbooks",
+    "run onboarding for new customers",
+    "lead churn risk reviews",
     "drive adoption and health scores",
-    "answer support tickets",
     "handle billing questions"
    ],
    "tools": [
     "Gainsight",
-    "Intercom",
     "HubSpot",
     "Salesforce",
     "Zendesk"
    ],
-   "years_required": 5,
+   "years_required": 6,
    "languages_required": []
   }
  ],
  "seen": [
   {
-   "id": "4172",
-   "company": "Ember Cloud",
+   "id": "4400",
+   "company": "Quarry Works",
    "title": "Customer Success Manager",
    "location": "Berlin",
    "workplace": "hybrid",
-   "url": "https://join.example/companies/embercloud/4172",
+   "url": "https://jobs.lever.example/quarryworks/4400",
    "sources": [
-    "LinkedIn alert"
-   ],
-   "role_fit": 6.0,
-   "total": 5.5,
-   "fit_line": "fit 5.5 (role 6, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
-   "why": "role 6, tools and years",
-   "first_seen": 0,
-   "state": "open",
-   "employees": 45,
-   "pay_k_eur": null,
-   "duties": [
-    "build success playbooks",
-    "own renewals and expansion",
-    "prospect cold accounts",
-    "handle billing questions"
-   ],
-   "tools": [
-    "HubSpot",
-    "Intercom",
-    "Zendesk"
-   ],
-   "years_required": 3,
-   "languages_required": []
-  },
-  {
-   "id": "4264",
-   "company": "Linden Systems",
-   "title": "Senior Customer Success Manager",
-   "location": "Munich",
-   "workplace": "on site",
-   "url": "https://job-boards.greenhouse.example/lindensystems/jobs/4264",
-   "sources": [
-    "VC portfolio board",
-    "newsletter"
+    "LinkedIn alert",
+    "niche job board"
    ],
    "role_fit": 6.0,
    "total": 7.0,
-   "fit_line": "fit 7 (role 6, home city +1, pay above floor +0.5, on site only minus 0.5)",
+   "fit_line": "fit 7 (role 6, home city +0.5, pay above floor +0.5)",
    "why": "role 6, tools and years",
    "first_seen": 0,
    "state": "open",
-   "employees": 1200,
+   "employees": 380,
    "pay_k_eur": [
     75,
     95
    ],
    "duties": [
     "build success playbooks",
-    "answer support tickets"
-   ],
-   "tools": [
-    "Salesforce",
-    "Zendesk",
-    "Intercom"
-   ],
-   "years_required": 5,
-   "languages_required": []
-  },
-  {
-   "id": "4367",
-   "company": "Opal Health",
-   "title": "Customer Success Manager",
-   "location": "Berlin",
-   "workplace": "hybrid",
-   "url": "https://opalhealth.jobs.personio.example/job/4367",
-   "sources": [
-    "newsletter"
-   ],
-   "role_fit": 5.5,
-   "total": 5.0,
-   "fit_line": "fit 5 (role 5.5, Berlin needs a move +0, pay not stated (ask), run shape at a big team minus 0.5)",
-   "why": "role 5.5, run shape",
-   "first_seen": 0,
-   "state": "open",
-   "employees": 3000,
-   "pay_k_eur": null,
-   "duties": [
-    "drive adoption and health scores",
-    "answer support tickets",
-    "prospect cold accounts",
     "handle billing questions"
    ],
    "tools": [
-    "Salesforce",
-    "Intercom",
-    "Zendesk",
-    "HubSpot"
+    "Gainsight",
+    "HubSpot",
+    "Zendesk"
    ],
-   "years_required": 3,
-   "languages_required": []
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
   },
   {
-   "id": "4080",
-   "company": "Prism Works",
-   "title": "Onboarding Manager",
-   "location": "Berlin",
-   "workplace": "hybrid",
-   "url": "https://prismworks.teamtailor.example/jobs/4080",
-   "sources": [
-    "Indeed"
-   ],
-   "role_fit": 6.0,
-   "total": 5.5,
-   "fit_line": "fit 5.5 (role 6, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
-   "why": "role 6, tools and years",
-   "first_seen": 7,
-   "state": "open",
-   "employees": 70,
-   "pay_k_eur": null,
-   "duties": [
-    "own renewals and expansion",
-    "handle billing questions"
-   ],
-   "tools": [
-    "Zendesk",
-    "Salesforce",
-    "HubSpot"
-   ],
-   "years_required": 2,
-   "languages_required": []
-  },
-  {
-   "id": "4197",
-   "company": "Halcyon Cloud",
+   "id": "4583",
+   "company": "Fable Systems",
    "title": "Senior Customer Success Manager",
-   "location": "Berlin",
-   "workplace": "on site",
-   "url": "https://apply.workable.example/halcyoncloud/j/4197",
-   "sources": [
-    "ATS host search"
-   ],
-   "role_fit": 5.5,
-   "total": 4.5,
-   "fit_line": "fit 4.5 (role 5.5, Berlin needs a move +0, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
-   "why": "role 5.5, run shape",
-   "first_seen": 11,
-   "state": "open",
-   "employees": 15,
-   "pay_k_eur": null,
-   "duties": [
-    "drive adoption and health scores",
-    "answer support tickets",
-    "handle billing questions",
-    "prospect cold accounts"
-   ],
-   "tools": [
-    "Gainsight",
-    "Salesforce",
-    "Intercom",
-    "HubSpot",
-    "Zendesk"
-   ],
-   "years_required": 3,
-   "languages_required": []
-  },
-  {
-   "id": "4639",
-   "company": "Lumen Cloud",
-   "title": "Customer Success Manager",
-   "location": "Hamburg",
-   "workplace": "on site",
-   "url": "https://jobs.ashbyhq.example/lumencloud/4639",
-   "sources": [
-    "LinkedIn alert"
-   ],
-   "role_fit": 5.5,
-   "total": 4.5,
-   "fit_line": "fit 4.5 (role 5.5, Hamburg needs a move +0, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
-   "why": "role 5.5, run shape",
-   "first_seen": 11,
-   "state": "open",
-   "employees": 30,
-   "pay_k_eur": null,
-   "duties": [
-    "own renewals and expansion",
-    "prospect cold accounts",
-    "answer support tickets",
-    "handle billing questions"
-   ],
-   "tools": [
-    "Gainsight",
-    "Zendesk",
-    "Salesforce"
-   ],
-   "years_required": 3,
-   "languages_required": []
-  }
- ],
- "dropped": [
-  {
-   "id": "4104",
-   "company": "Fable Data",
-   "title": "Customer Success Manager",
-   "location": "Remote US",
-   "workplace": "remote",
-   "url": "https://job-boards.greenhouse.example/fabledata/jobs/4104",
-   "sources": [
-    "Indeed"
-   ],
-   "why": "outside the regions you work in",
-   "employees": 600,
-   "pay_k_eur": null,
-   "duties": [
-    "answer support tickets",
-    "prospect cold accounts",
-    "handle billing questions"
-   ],
-   "tools": [
-    "Zendesk",
-    "Salesforce",
-    "HubSpot",
-    "Gainsight",
-    "Intercom"
-   ],
-   "years_required": 2,
-   "languages_required": []
-  },
-  {
-   "id": "4415",
-   "company": "Tidal Logic",
-   "title": "Customer Success Manager",
-   "location": "Berlin",
-   "workplace": "on site",
-   "url": "https://apply.workable.example/tidallogic/j/4415",
-   "sources": [
-    "LinkedIn alert"
-   ],
-   "why": "none of the duties you want to do",
-   "employees": 160,
-   "pay_k_eur": null,
-   "duties": [
-    "prospect cold accounts",
-    "handle billing questions"
-   ],
-   "tools": [
-    "Intercom",
-    "Gainsight",
-    "HubSpot",
-    "Zendesk"
-   ],
-   "years_required": 8,
-   "languages_required": []
-  },
-  {
-   "id": "4420",
-   "company": "Quarry Data",
-   "title": "Onboarding Manager",
-   "location": "Berlin",
-   "workplace": "on site",
-   "url": "https://quarrydata.jobs.personio.example/job/4420",
-   "sources": [
-    "niche GTM board"
-   ],
-   "why": "none of the duties you want to do",
-   "employees": 160,
-   "pay_k_eur": null,
-   "duties": [
-    "prospect cold accounts"
-   ],
-   "tools": [
-    "Salesforce",
-    "Intercom",
-    "Gainsight"
-   ],
-   "years_required": 2,
-   "languages_required": []
-  },
-  {
-   "id": "4509",
-   "company": "Quill Cloud",
-   "title": "Customer Success Manager",
    "location": "Remote EU",
    "workplace": "remote",
-   "url": "https://quillcloud.jobs.personio.example/job/4509",
+   "url": "https://jobs.ashbyhq.example/fablesystems/4583",
    "sources": [
-    "niche GTM board"
+    "LinkedIn alert"
    ],
-   "why": "none of the duties you want to do",
-   "employees": 15,
+   "role_fit": 6.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 6, EU remote +1.5, floor inside the band)",
+   "why": "role 6, tools and years",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 240,
    "pay_k_eur": [
-    70,
-    80
+    50,
+    70
    ],
    "duties": [
-    "prospect cold accounts"
+    "lead churn risk reviews",
+    "drive adoption and health scores",
+    "chase overdue invoices"
    ],
    "tools": [
-    "HubSpot",
-    "Salesforce",
-    "Intercom",
     "Zendesk",
-    "Gainsight"
-   ],
-   "years_required": 5,
-   "languages_required": []
-  },
-  {
-   "id": "4288",
-   "company": "Ember Grid",
-   "title": "Onboarding Manager",
-   "location": "Munich",
-   "workplace": "on site",
-   "url": "https://embergrid.jobs.personio.example/job/4288",
-   "sources": [
-    "Indeed"
-   ],
-   "why": "none of the duties you want to do",
-   "employees": 3000,
-   "pay_k_eur": null,
-   "duties": [
-    "handle billing questions",
-    "answer support tickets"
-   ],
-   "tools": [
-    "HubSpot",
-    "Intercom",
-    "Gainsight"
+    "Salesforce",
+    "HubSpot"
    ],
    "years_required": 6,
    "languages_required": []
   },
   {
-   "id": "4637",
+   "id": "4473",
    "company": "Quarry Pay",
-   "title": "Senior Customer Success Manager",
-   "location": "Stockholm",
+   "title": "Customer Success Manager",
+   "location": "Berlin",
    "workplace": "hybrid",
-   "url": "https://apply.workable.example/quarrypay/j/4637",
+   "url": "https://apply.workable.example/quarrypay/j/4473",
    "sources": [
-    "niche GTM board"
+    "newsletter"
    ],
-   "why": "Swedish required",
+   "role_fit": 6.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 6, home city +0.5, pay above floor +0.5)",
+   "why": "role 6, tools and years",
+   "first_seen": 1,
+   "state": "open",
    "employees": 600,
-   "pay_k_eur": null,
+   "pay_k_eur": [
+    65,
+    75
+   ],
+   "duties": [
+    "lead churn risk reviews",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "Intercom",
+    "Zendesk",
+    "HubSpot",
+    "Gainsight"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4591",
+   "company": "Nettle Data",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/nettledata/jobs/4591",
+   "sources": [
+    "newsletter"
+   ],
+   "role_fit": 5.5,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 5.5, home city +0.5, pay above floor +0.5, startup minus 0.5)",
+   "why": "role 5.5, light on the duties you want",
+   "first_seen": 12,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": [
+    60,
+    80
+   ],
    "duties": [
     "run onboarding for new customers",
+    "run business reviews with key accounts",
     "prospect cold accounts",
-    "handle billing questions"
-   ],
-   "tools": [
-    "Salesforce",
-    "Gainsight",
-    "HubSpot",
-    "Intercom",
-    "Zendesk"
-   ],
-   "years_required": 4,
-   "languages_required": [
-    "Swedish"
-   ]
-  },
-  {
-   "id": "4333",
-   "company": "Quill Systems",
-   "title": "Onboarding Manager",
-   "location": "Berlin",
-   "workplace": "hybrid",
-   "url": "https://jobs.ashbyhq.example/quillsystems/4333",
-   "sources": [
-    "LinkedIn alert"
-   ],
-   "why": "none of the duties you want to do",
-   "employees": 70,
-   "pay_k_eur": null,
-   "duties": [
     "answer support tickets",
-    "handle billing questions",
-    "prospect cold accounts"
-   ],
-   "tools": [
-    "HubSpot",
-    "Salesforce",
-    "Intercom",
-    "Gainsight",
-    "Zendesk"
-   ],
-   "years_required": 8,
-   "languages_required": []
-  },
-  {
-   "id": "4435",
-   "company": "Ember Health",
-   "title": "Customer Success Manager",
-   "location": "Berlin",
-   "workplace": "hybrid",
-   "url": "https://join.example/companies/emberhealth/4435",
-   "sources": [
-    "ATS host search"
-   ],
-   "why": "none of the duties you want to do",
-   "employees": 45,
-   "pay_k_eur": null,
-   "duties": [
-    "answer support tickets",
-    "prospect cold accounts",
     "handle billing questions"
    ],
    "tools": [
     "HubSpot",
-    "Salesforce",
-    "Intercom"
+    "Zendesk",
+    "Salesforce"
    ],
-   "years_required": 3,
+   "years_required": 6,
    "languages_required": []
-  },
+  }
+ ],
+ "dropped": [
   {
-   "id": "4480",
-   "company": "Kestrel Grid",
+   "id": "4003",
+   "company": "Saffron Systems",
    "title": "Customer Success Manager",
-   "location": "Berlin",
+   "location": "Hamburg",
    "workplace": "hybrid",
-   "url": "https://kestrelgrid.jobs.personio.example/job/4480",
+   "url": "https://saffronsystems.jobs.personio.example/job/4003",
    "sources": [
-    "LinkedIn alert"
+    "Indeed"
    ],
-   "why": "none of the duties you want to do",
-   "employees": 3000,
-   "pay_k_eur": null,
-   "duties": [
-    "answer support tickets",
-    "prospect cold accounts"
-   ],
-   "tools": [
-    "Intercom",
-    "Salesforce",
-    "HubSpot",
-    "Zendesk"
-   ],
-   "years_required": 2,
-   "languages_required": []
-  },
-  {
-   "id": "4536",
-   "company": "Indigo Cloud",
-   "title": "Customer Success Manager",
-   "location": "London",
-   "workplace": "on site",
-   "url": "https://indigocloud.teamtailor.example/jobs/4536",
-   "sources": [
-    "ATS host search"
-   ],
-   "why": "outside the regions you work in",
+   "why": "needs a move inside the home country, no remote",
    "employees": 45,
-   "pay_k_eur": null,
+   "pay_k_eur": [
+    55,
+    65
+   ],
    "duties": [
     "build success playbooks",
-    "prospect cold accounts"
+    "answer support tickets"
    ],
    "tools": [
     "Salesforce",
     "Zendesk",
-    "HubSpot",
     "Gainsight",
     "Intercom"
    ],
@@ -826,27 +946,628 @@
    "languages_required": []
   },
   {
-   "id": "4155",
-   "company": "Bramble Cloud",
-   "title": "Customer Success Manager",
-   "location": "Barcelona",
+   "id": "4006",
+   "company": "Garnet Cloud",
+   "title": "Onboarding Manager",
+   "location": "Munich",
    "workplace": "on site",
-   "url": "https://bramblecloud.jobs.personio.example/job/4155",
+   "url": "https://job-boards.greenhouse.example/garnetcloud/jobs/4006",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 30,
+   "pay_k_eur": [
+    55,
+    65
+   ],
+   "duties": [
+    "own renewals and expansion",
+    "chase overdue invoices",
+    "answer support tickets"
+   ],
+   "tools": [
+    "Intercom",
+    "HubSpot",
+    "Salesforce"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4011",
+   "company": "Ember Health",
+   "title": "Customer Success Manager",
+   "location": "Remote Netherlands",
+   "workplace": "remote",
+   "url": "https://join.example/companies/emberhealth/4011",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "Dutch required",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "run business reviews with key accounts",
+    "own renewals and expansion",
+    "build success playbooks",
+    "handle billing questions"
+   ],
+   "tools": [
+    "HubSpot",
+    "Salesforce",
+    "Zendesk",
+    "Gainsight"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4270",
+   "company": "Halcyon Cloud",
+   "title": "Customer Success Manager",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/halcyoncloud/j/4270",
+   "sources": [
+    "newsletter",
+    "startup board"
+   ],
+   "why": "Dutch required",
+   "employees": 15,
+   "pay_k_eur": [
+    55,
+    65
+   ],
+   "duties": [
+    "build success playbooks",
+    "lead churn risk reviews",
+    "drive adoption and health scores",
+    "answer support tickets"
+   ],
+   "tools": [
+    "Gainsight",
+    "HubSpot",
+    "Intercom",
+    "Salesforce"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4172",
+   "company": "Cobalt HQ",
+   "title": "Customer Success Manager",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/cobalthq/4172",
+   "sources": [
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 3000,
+   "pay_k_eur": [
+    55,
+    80
+   ],
+   "duties": [
+    "run onboarding for new customers",
+    "run business reviews with key accounts",
+    "build success playbooks"
+   ],
+   "tools": [
+    "HubSpot",
+    "Gainsight",
+    "Zendesk",
+    "Intercom",
+    "Salesforce"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4229",
+   "company": "Thistle Cloud",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://thistlecloud.jobs.personio.example/job/4229",
+   "sources": [
+    "ATS host search",
+    "niche job board"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 1200,
+   "pay_k_eur": [
+    50,
+    75
+   ],
+   "duties": [
+    "prospect cold accounts",
+    "handle billing questions",
+    "answer support tickets"
+   ],
+   "tools": [
+    "Intercom",
+    "Salesforce",
+    "Gainsight"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4429",
+   "company": "Pebble Systems",
+   "title": "Senior Customer Success Manager",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/pebblesystems/jobs/4429",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 240,
+   "pay_k_eur": [
+    50,
+    65
+   ],
+   "duties": [
+    "run business reviews with key accounts",
+    "drive adoption and health scores",
+    "build success playbooks",
+    "handle billing questions"
+   ],
+   "tools": [
+    "Gainsight",
+    "HubSpot",
+    "Zendesk",
+    "Salesforce",
+    "Intercom"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4026",
+   "company": "Orchard Pay",
+   "title": "Customer Success Manager",
+   "location": "Rotterdam",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/orchardpay/4026",
    "sources": [
     "LinkedIn alert"
    ],
-   "why": "Spanish required",
-   "employees": 15,
+   "why": "Dutch required",
+   "employees": 600,
+   "pay_k_eur": [
+    65,
+    75
+   ],
+   "duties": [
+    "drive adoption and health scores",
+    "run onboarding for new customers",
+    "lead churn risk reviews"
+   ],
+   "tools": [
+    "Gainsight",
+    "Intercom",
+    "HubSpot",
+    "Zendesk",
+    "Salesforce"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4137",
+   "company": "Indigo Health",
+   "title": "Customer Success Manager",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/indigohealth/4137",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 380,
    "pay_k_eur": null,
    "duties": [
+    "drive adoption and health scores",
+    "handle billing questions",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "Intercom",
+    "Gainsight",
+    "HubSpot",
+    "Salesforce"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4321",
+   "company": "Garnet Data",
+   "title": "Onboarding Manager",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/garnetdata/jobs/4321",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 240,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "lead churn risk reviews",
+    "own renewals and expansion",
     "build success playbooks",
-    "run onboarding for new customers",
     "handle billing questions"
+   ],
+   "tools": [
+    "Intercom",
+    "Gainsight",
+    "Zendesk",
+    "HubSpot",
+    "Salesforce"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4526",
+   "company": "Nettle Stack",
+   "title": "Customer Success Manager",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/nettlestack/4526",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "own renewals and expansion",
+    "drive adoption and health scores",
+    "run onboarding for new customers",
+    "chase overdue invoices"
+   ],
+   "tools": [
+    "Salesforce",
+    "Zendesk",
+    "Gainsight",
+    "Intercom",
+    "HubSpot"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4201",
+   "company": "Garnet Health",
+   "title": "Customer Success Manager",
+   "location": "London",
+   "workplace": "on site",
+   "url": "https://garnethealth.jobs.personio.example/job/4201",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 30,
+   "pay_k_eur": [
+    50,
+    75
+   ],
+   "duties": [
+    "chase overdue invoices"
+   ],
+   "tools": [
+    "Salesforce",
+    "Intercom",
+    "Zendesk",
+    "Gainsight"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4212",
+   "company": "Thistle Cloud",
+   "title": "Onboarding Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://thistlecloud.jobs.personio.example/job/4212",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "answer support tickets"
+   ],
+   "tools": [
+    "Salesforce",
+    "Zendesk",
+    "Gainsight",
+    "Intercom",
+    "HubSpot"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4050",
+   "company": "Garnet Cloud",
+   "title": "Customer Success Manager",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/garnetcloud/jobs/4050",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 30,
+   "pay_k_eur": [
+    50,
+    75
+   ],
+   "duties": [
+    "own renewals and expansion",
+    "drive adoption and health scores",
+    "answer support tickets"
    ],
    "tools": [
     "Salesforce",
     "HubSpot",
     "Gainsight"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4151",
+   "company": "Prism Labs",
+   "title": "Customer Success Manager",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/prismlabs/jobs/4151",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 110,
+   "pay_k_eur": [
+    70,
+    80
+   ],
+   "duties": [
+    "build success playbooks",
+    "drive adoption and health scores",
+    "lead churn risk reviews"
+   ],
+   "tools": [
+    "HubSpot",
+    "Intercom",
+    "Salesforce",
+    "Zendesk"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4200",
+   "company": "Delta Logic",
+   "title": "Onboarding Manager",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/deltalogic/jobs/4200",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 3000,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "drive adoption and health scores",
+    "handle billing questions",
+    "answer support tickets",
+    "chase overdue invoices"
+   ],
+   "tools": [
+    "Gainsight",
+    "Intercom",
+    "Zendesk",
+    "HubSpot"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4528",
+   "company": "Nimbus Data",
+   "title": "Customer Success Manager",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/nimbusdata/4528",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 110,
+   "pay_k_eur": null,
+   "duties": [
+    "run business reviews with key accounts",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "Salesforce",
+    "Gainsight",
+    "Zendesk",
+    "Intercom",
+    "HubSpot"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4020",
+   "company": "Harbor Data",
+   "title": "Senior Customer Success Manager",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/harbordata/4020",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "prospect cold accounts",
+    "chase overdue invoices",
+    "handle billing questions"
+   ],
+   "tools": [
+    "HubSpot",
+    "Gainsight",
+    "Zendesk",
+    "Salesforce",
+    "Intercom"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4179",
+   "company": "Linden Pay",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://lindenpay.teamtailor.example/jobs/4179",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "build success playbooks",
+    "drive adoption and health scores",
+    "answer support tickets"
+   ],
+   "tools": [
+    "HubSpot",
+    "Intercom",
+    "Salesforce",
+    "Gainsight",
+    "Zendesk"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4258",
+   "company": "Indigo Cloud",
+   "title": "Senior Customer Success Manager",
+   "location": "Rotterdam",
+   "workplace": "on site",
+   "url": "https://indigocloud.teamtailor.example/jobs/4258",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 45,
+   "pay_k_eur": [
+    70,
+    90
+   ],
+   "duties": [
+    "chase overdue invoices",
+    "handle billing questions"
+   ],
+   "tools": [
+    "Zendesk",
+    "Salesforce",
+    "Gainsight"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4614",
+   "company": "Quill HQ",
+   "title": "Customer Success Manager",
+   "location": "Paris",
+   "workplace": "on site",
+   "url": "https://quillhq.jobs.personio.example/job/4614",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 15,
+   "pay_k_eur": [
+    65,
+    75
+   ],
+   "duties": [
+    "answer support tickets"
+   ],
+   "tools": [
+    "Intercom",
+    "HubSpot",
+    "Gainsight",
+    "Salesforce",
+    "Zendesk"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4085",
+   "company": "Indigo Labs",
+   "title": "Customer Success Manager",
+   "location": "Barcelona",
+   "workplace": "on site",
+   "url": "https://indigolabs.jobs.personio.example/job/4085",
+   "sources": [
+    "ATS host search",
+    "niche job board"
+   ],
+   "why": "Spanish required",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "run business reviews with key accounts",
+    "build success playbooks",
+    "chase overdue invoices"
+   ],
+   "tools": [
+    "Gainsight",
+    "Zendesk",
+    "Salesforce"
    ],
    "years_required": 3,
    "languages_required": [
@@ -854,62 +1575,241 @@
    ]
   },
   {
-   "id": "4279",
-   "company": "Quill Cloud",
-   "title": "Onboarding Manager",
-   "location": "Berlin",
-   "workplace": "hybrid",
-   "url": "https://quillcloud.jobs.personio.example/job/4279",
+   "id": "4408",
+   "company": "Rook Works",
+   "title": "Customer Success Manager",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/rookworks/jobs/4408",
    "sources": [
+    "Indeed",
     "LinkedIn alert"
    ],
-   "why": "none of the duties you want to do",
-   "employees": 15,
+   "why": "Spanish required",
+   "employees": 30,
    "pay_k_eur": null,
    "duties": [
-    "answer support tickets",
-    "prospect cold accounts"
-   ],
-   "tools": [
-    "Intercom",
-    "HubSpot",
-    "Salesforce"
-   ],
-   "years_required": 5,
-   "languages_required": [
-    "German C1"
-   ]
-  }
- ],
- "could_not_verify": [],
- "closed_on_board": [
-  {
-   "id": "4320",
-   "company": "Ember Grid",
-   "title": "Customer Success Manager",
-   "location": "Berlin",
-   "workplace": "hybrid",
-   "url": "https://embergrid.jobs.personio.example/job/4320",
-   "sources": [
-    "Indeed"
-   ],
-   "why": "closed on the company's list, still on a board",
-   "employees": 3000,
-   "pay_k_eur": [
-    75,
-    85
-   ],
-   "duties": [
-    "own renewals and expansion",
+    "run onboarding for new customers",
+    "handle billing questions",
+    "prospect cold accounts",
     "answer support tickets"
    ],
    "tools": [
+    "Gainsight",
+    "HubSpot",
+    "Zendesk",
     "Intercom",
+    "Salesforce"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4453",
+   "company": "Bramble Health",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote US",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/bramblehealth/j/4453",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "run onboarding for new customers",
+    "own renewals and expansion",
+    "build success playbooks"
+   ],
+   "tools": [
     "Salesforce",
     "Gainsight",
     "Zendesk"
    ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4390",
+   "company": "Linden Systems",
+   "title": "Senior Customer Success Manager",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://job-boards.greenhouse.example/lindensystems/jobs/4390",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "handle billing questions"
+   ],
+   "tools": [
+    "Salesforce",
+    "Zendesk",
+    "HubSpot",
+    "Intercom",
+    "Gainsight"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  },
+  {
+   "id": "4197",
+   "company": "Marlow Logic",
+   "title": "Customer Success Manager",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/marlowlogic/4197",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "needs a move inside the home country, no remote",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "answer support tickets",
+    "chase overdue invoices",
+    "handle billing questions"
+   ],
+   "tools": [
+    "Zendesk",
+    "HubSpot",
+    "Intercom"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4641",
+   "company": "Kestrel Grid",
+   "title": "Senior Customer Success Manager",
+   "location": "London",
+   "workplace": "on site",
+   "url": "https://kestrelgrid.jobs.personio.example/job/4641",
+   "sources": [
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": [
+    50,
+    70
+   ],
+   "duties": [
+    "drive adoption and health scores",
+    "build success playbooks",
+    "lead churn risk reviews"
+   ],
+   "tools": [
+    "Gainsight",
+    "HubSpot",
+    "Salesforce"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4485",
+   "company": "Prism Works",
+   "title": "Customer Success Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://prismworks.teamtailor.example/jobs/4485",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 70,
+   "pay_k_eur": [
+    65,
+    90
+   ],
+   "duties": [
+    "handle billing questions",
+    "chase overdue invoices",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "HubSpot",
+    "Salesforce",
+    "Zendesk",
+    "Intercom"
+   ],
    "years_required": 4,
+   "languages_required": []
+  }
+ ],
+ "could_not_verify": [
+  {
+   "id": "4590",
+   "company": "Harbor Data",
+   "title": "Onboarding Manager",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/harbordata/4590",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 6.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 6.5, EU remote +1.5, pay not stated (ask))",
+   "why": "board only",
+   "first_seen": 1,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "run business reviews with key accounts",
+    "build success playbooks",
+    "prospect cold accounts",
+    "answer support tickets"
+   ],
+   "tools": [
+    "Gainsight",
+    "Salesforce",
+    "Zendesk",
+    "HubSpot",
+    "Intercom"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  }
+ ],
+ "closed_on_board": [
+  {
+   "id": "4509",
+   "company": "Lumen Data",
+   "title": "Onboarding Manager",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/lumendata/4509",
+   "sources": [
+    "startup board"
+   ],
+   "why": "closed on the company's list, still on a board",
+   "employees": 1200,
+   "pay_k_eur": [
+    75,
+    90
+   ],
+   "duties": [
+    "build success playbooks",
+    "handle billing questions",
+    "chase overdue invoices",
+    "prospect cold accounts"
+   ],
+   "tools": [
+    "Salesforce",
+    "Zendesk",
+    "HubSpot"
+   ],
+   "years_required": 6,
    "languages_required": []
   }
  ]

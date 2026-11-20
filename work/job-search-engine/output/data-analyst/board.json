@@ -1,0 +1,2061 @@
+{
+ "profile": "Data Analyst search",
+ "days": 14,
+ "run_log": [
+  {
+   "day": 0,
+   "copies_read": 73,
+   "unique_roles": 60,
+   "in_titles": 14,
+   "already_seen": 0,
+   "new_main": [
+    "Quarry Works, Data Analyst (fit 9.5)"
+   ],
+   "reference": 5,
+   "seen_not_a_fit": 0,
+   "dropped": 5,
+   "could_not_verify": 3,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 1,
+   "copies_read": 35,
+   "unique_roles": 31,
+   "in_titles": 5,
+   "already_seen": 3,
+   "new_main": [
+    "Garnet Health, Analytics Engineer (fit 9)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 4,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 2,
+   "copies_read": 27,
+   "unique_roles": 23,
+   "in_titles": 4,
+   "already_seen": 1,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 4,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 3,
+   "copies_read": 19,
+   "unique_roles": 19,
+   "in_titles": 3,
+   "already_seen": 2,
+   "new_main": [
+    "Halcyon HQ, Data Analyst (fit 9)"
+   ],
+   "reference": 1,
+   "seen_not_a_fit": 0,
+   "dropped": 1,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 4,
+   "copies_read": 24,
+   "unique_roles": 22,
+   "in_titles": 1,
+   "already_seen": 1,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 0,
+   "could_not_verify": 0,
+   "closed_on_board": 1,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 5,
+   "copies_read": 26,
+   "unique_roles": 23,
+   "in_titles": 4,
+   "already_seen": 2,
+   "new_main": [
+    "Saffron HQ, Senior Data Analyst (fit 8)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 3,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [
+    "Opal Pay, Data Analyst"
+   ],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 5,
+   "kind": "manual rerun",
+   "skipped": "last run started 13h ago, under 20h"
+  },
+  {
+   "day": 6,
+   "copies_read": 27,
+   "unique_roles": 24,
+   "in_titles": 2,
+   "already_seen": 2,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 2,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 7,
+   "copies_read": 27,
+   "unique_roles": 26,
+   "in_titles": 3,
+   "already_seen": 3,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 3,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 8,
+   "copies_read": 33,
+   "unique_roles": 25,
+   "in_titles": 2,
+   "already_seen": 3,
+   "new_main": [],
+   "reference": 1,
+   "seen_not_a_fit": 0,
+   "dropped": 1,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 9,
+   "copies_read": 25,
+   "unique_roles": 21,
+   "in_titles": 5,
+   "already_seen": 2,
+   "new_main": [
+    "Rook Cloud, BI Analyst (fit 9)"
+   ],
+   "reference": 1,
+   "seen_not_a_fit": 0,
+   "dropped": 3,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 10,
+   "copies_read": 34,
+   "unique_roles": 29,
+   "in_titles": 3,
+   "already_seen": 5,
+   "new_main": [
+    "Lumen Grid, Data Analyst (fit 8)"
+   ],
+   "reference": 1,
+   "seen_not_a_fit": 0,
+   "dropped": 1,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 11,
+   "copies_read": 23,
+   "unique_roles": 23,
+   "in_titles": 1,
+   "already_seen": 1,
+   "new_main": [
+    "Halcyon Health, Senior Data Analyst (fit 8.5)"
+   ],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 0,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [
+    "Kestrel Pay, Analytics Engineer"
+   ],
+   "cvs_drafted": 1,
+   "kind": "scheduled"
+  },
+  {
+   "day": 12,
+   "copies_read": 23,
+   "unique_roles": 21,
+   "in_titles": 4,
+   "already_seen": 2,
+   "new_main": [],
+   "reference": 0,
+   "seen_not_a_fit": 0,
+   "dropped": 4,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  },
+  {
+   "day": 13,
+   "copies_read": 26,
+   "unique_roles": 23,
+   "in_titles": 2,
+   "already_seen": 2,
+   "new_main": [],
+   "reference": 2,
+   "seen_not_a_fit": 0,
+   "dropped": 0,
+   "could_not_verify": 0,
+   "closed_on_board": 0,
+   "tracked_closed": [],
+   "cvs_drafted": 0,
+   "kind": "scheduled"
+  }
+ ],
+ "main": [
+  {
+   "id": "4419",
+   "company": "Quarry Works",
+   "title": "Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://jobs.lever.example/quarryworks/4419",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "role_fit": 9.0,
+   "total": 9.5,
+   "fit_line": "fit 9.5 (role 9, Berlin needs a move +0, pay above floor +0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "Data Analyst",
+    "top_requirements": [
+     "build dashboards for sales and marketing",
+     "model the revenue data warehouse",
+     "build dbt models"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "Looker",
+     "Python",
+     "dashboards"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Amsterdam, Netherlands (open to relocation)",
+    "ats": "Lever",
+    "ats_advice": "No stemming, one profile per company: exact terms, identical facts across applications."
+   },
+   "first_seen": 0,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": [
+    60,
+    85
+   ],
+   "duties": [
+    "build dashboards for sales and marketing",
+    "model the revenue data warehouse",
+    "build dbt models"
+   ],
+   "tools": [
+    "Python",
+    "dbt",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4178",
+   "company": "Garnet Health",
+   "title": "Analytics Engineer",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://garnethealth.jobs.personio.example/job/4178",
+   "sources": [
+    "newsletter"
+   ],
+   "role_fit": 8.0,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 8, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "Analytics Engineer",
+    "top_requirements": [
+     "model the revenue data warehouse",
+     "analyse A/B tests for product teams",
+     "build dashboards for sales and marketing"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "Looker",
+     "Python",
+     "BigQuery",
+     "dashboards",
+     "A/B tests"
+    ],
+    "gaps_to_name_not_cover": [
+     "5 years asked"
+    ],
+    "location_line": "Amsterdam, Netherlands (open to remote)",
+    "ats": "Personio",
+    "ats_advice": "Plain text conversion: simple layout, extractable text, the ad's language."
+   },
+   "first_seen": 1,
+   "state": "open",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "Python",
+    "SQL",
+    "Looker",
+    "dbt",
+    "BigQuery"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4588",
+   "company": "Halcyon HQ",
+   "title": "Data Analyst",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/halcyonhq/4588",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 9.0,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 9, Cologne needs a move +0, pay above floor +0.5, startup minus 0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "Data Analyst",
+    "top_requirements": [
+     "analyse A/B tests for product teams",
+     "build dbt models",
+     "model the revenue data warehouse"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "Python",
+     "BigQuery",
+     "A/B tests"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Amsterdam, Netherlands (open to relocation)",
+    "ats": "Ashby",
+    "ats_advice": "AI assisted screening checks each requirement: mirror the JD's skill and tool terms in skills and in bullets."
+   },
+   "first_seen": 3,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": [
+    55,
+    75
+   ],
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dbt models",
+    "model the revenue data warehouse"
+   ],
+   "tools": [
+    "SQL",
+    "BigQuery",
+    "Python",
+    "dbt"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4218",
+   "company": "Saffron HQ",
+   "title": "Senior Data Analyst",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://jobs.ashbyhq.example/saffronhq/4218",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7.5, home city +0.5, pay not stated (ask))",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Senior Data Analyst",
+    "top_requirements": [
+     "model the revenue data warehouse",
+     "handle data access tickets"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "BigQuery"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Amsterdam, Netherlands",
+    "ats": "Ashby",
+    "ats_advice": "AI assisted screening checks each requirement: mirror the JD's skill and tool terms in skills and in bullets."
+   },
+   "first_seen": 5,
+   "state": "open",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "BigQuery",
+    "dbt",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4227",
+   "company": "Rook Cloud",
+   "title": "BI Analyst",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/rookcloud/jobs/4227",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 8.5,
+   "total": 9.0,
+   "fit_line": "fit 9 (role 8.5, London needs a move +0, pay above floor +0.5)",
+   "verdict": "Strong fit",
+   "brief": {
+    "headline": "BI Analyst",
+    "top_requirements": [
+     "model the revenue data warehouse",
+     "build dashboards for sales and marketing",
+     "build dbt models"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "Looker",
+     "Python",
+     "BigQuery",
+     "dashboards"
+    ],
+    "gaps_to_name_not_cover": [
+     "5 years asked"
+    ],
+    "location_line": "Amsterdam, Netherlands (open to relocation)",
+    "ats": "Greenhouse",
+    "ats_advice": "Parsed into fields and searched by keyword: exact terms and standard headings."
+   },
+   "first_seen": 9,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    75,
+    95
+   ],
+   "duties": [
+    "model the revenue data warehouse",
+    "build dashboards for sales and marketing",
+    "build dbt models"
+   ],
+   "tools": [
+    "SQL",
+    "Python",
+    "dbt",
+    "BigQuery",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4624",
+   "company": "Lumen Grid",
+   "title": "Data Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/lumengrid/4624",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 6.5,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 6.5, EU remote +1.5, pay above floor +0.5, light on wanted duties at a big team minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Data Analyst",
+    "top_requirements": [
+     "analyse A/B tests for product teams",
+     "maintain legacy reports",
+     "handle data access tickets"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "Looker",
+     "Python",
+     "BigQuery",
+     "A/B tests"
+    ],
+    "gaps_to_name_not_cover": [
+     "5 years asked"
+    ],
+    "location_line": "Amsterdam, Netherlands (open to remote)",
+    "ats": "Ashby",
+    "ats_advice": "AI assisted screening checks each requirement: mirror the JD's skill and tool terms in skills and in bullets."
+   },
+   "first_seen": 10,
+   "state": "open",
+   "employees": 380,
+   "pay_k_eur": [
+    55,
+    70
+   ],
+   "duties": [
+    "analyse A/B tests for product teams",
+    "maintain legacy reports",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "SQL",
+    "BigQuery",
+    "Python",
+    "dbt",
+    "Looker"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4278",
+   "company": "Halcyon Health",
+   "title": "Senior Data Analyst",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/halcyonhealth/jobs/4278",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 9.0,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 9, Munich needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Worth applying",
+   "brief": {
+    "headline": "Senior Data Analyst",
+    "top_requirements": [
+     "build dashboards for sales and marketing",
+     "build dbt models",
+     "analyse A/B tests for product teams"
+    ],
+    "keywords_on_record": [
+     "SQL",
+     "dbt",
+     "Python",
+     "BigQuery",
+     "dashboards",
+     "A/B tests"
+    ],
+    "gaps_to_name_not_cover": [],
+    "location_line": "Amsterdam, Netherlands (open to relocation)",
+    "ats": "Greenhouse",
+    "ats_advice": "Parsed into fields and searched by keyword: exact terms and standard headings."
+   },
+   "first_seen": 11,
+   "state": "open",
+   "employees": 110,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "analyse A/B tests for product teams"
+   ],
+   "tools": [
+    "BigQuery",
+    "Python",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  }
+ ],
+ "reference": [
+  {
+   "id": "4017",
+   "company": "Opal Pay",
+   "title": "Data Analyst",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://opalpay.jobs.personio.example/job/4017",
+   "sources": [
+    "Indeed"
+   ],
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, Munich needs a move +0, pay above floor +0.5, on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "closed",
+   "closed_seen": 5,
+   "employees": 70,
+   "pay_k_eur": [
+    65,
+    75
+   ],
+   "duties": [
+    "build dashboards for sales and marketing",
+    "maintain legacy reports",
+    "handle data access tickets",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "SQL",
+    "BigQuery",
+    "dbt",
+    "Looker"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4123",
+   "company": "Tidal AI",
+   "title": "Data Analyst",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://tidalai.jobs.personio.example/job/4123",
+   "sources": [
+    "startup board"
+   ],
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, home city +0.5, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "handle data access tickets",
+    "maintain legacy reports",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "dbt",
+    "Looker",
+    "BigQuery",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4233",
+   "company": "Prism Labs",
+   "title": "BI Analyst",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/prismlabs/jobs/4233",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 7.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7, home city +0.5, pay above floor +0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 110,
+   "pay_k_eur": [
+    65,
+    90
+   ],
+   "duties": [
+    "model the revenue data warehouse",
+    "maintain legacy reports",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Python",
+    "BigQuery",
+    "dbt",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4477",
+   "company": "Kestrel Pay",
+   "title": "Analytics Engineer",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/kestrelpay/jobs/4477",
+   "sources": [
+    "remote board"
+   ],
+   "role_fit": 7.5,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7.5, Hamburg needs a move +0, pay not stated (ask))",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "closed",
+   "closed_seen": 11,
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "build dbt models",
+    "analyse A/B tests for product teams",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "SQL",
+    "Looker",
+    "Python",
+    "BigQuery"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4587",
+   "company": "Nimbus Data",
+   "title": "Data Analyst",
+   "location": "Cologne",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/nimbusdata/4587",
+   "sources": [
+    "niche job board"
+   ],
+   "role_fit": 7.0,
+   "total": 6.0,
+   "fit_line": "fit 6 (role 7, Cologne needs a move +0, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 110,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "dbt",
+    "BigQuery",
+    "SQL",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4288",
+   "company": "Saffron AI",
+   "title": "BI Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/saffronai/jobs/4288",
+   "sources": [
+    "niche job board"
+   ],
+   "role_fit": 7.5,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7.5, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 3,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "Python",
+    "dbt",
+    "SQL",
+    "BigQuery"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4409",
+   "company": "Rook Cloud",
+   "title": "Data Analyst",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/rookcloud/jobs/4409",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, Munich needs a move +0, pay above floor +0.5, light on wanted duties at a big team minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 8,
+   "state": "open",
+   "employees": 3000,
+   "pay_k_eur": [
+    75,
+    95
+   ],
+   "duties": [
+    "analyse A/B tests for product teams",
+    "model the revenue data warehouse",
+    "maintain legacy reports",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "dbt",
+    "SQL",
+    "Looker",
+    "BigQuery",
+    "Python"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4067",
+   "company": "Prism Works",
+   "title": "Senior Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://prismworks.teamtailor.example/jobs/4067",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, Berlin needs a move +0, pay not stated (ask), startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 9,
+   "state": "open",
+   "employees": 70,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "analyse A/B tests for product teams",
+    "maintain legacy reports",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Python",
+    "BigQuery",
+    "Looker",
+    "dbt"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4653",
+   "company": "Quill Grid",
+   "title": "Data Analyst",
+   "location": "Amsterdam",
+   "workplace": "hybrid",
+   "url": "https://quillgrid.jobs.personio.example/job/4653",
+   "sources": [
+    "niche job board"
+   ],
+   "role_fit": 7.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 7, home city +0.5, pay not stated (ask))",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 10,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build dbt models",
+    "analyse A/B tests for product teams",
+    "handle data access tickets",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "Looker",
+    "dbt",
+    "SQL"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4062",
+   "company": "Halcyon Health",
+   "title": "BI Analyst",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/halcyonhealth/jobs/4062",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 7.0,
+   "total": 7.0,
+   "fit_line": "fit 7 (role 7, Munich needs a move +0, pay above floor +0.5, startup minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 13,
+   "state": "open",
+   "employees": 110,
+   "pay_k_eur": [
+    70,
+    85
+   ],
+   "duties": [
+    "build dashboards for sales and marketing",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "BigQuery",
+    "SQL",
+    "Looker",
+    "Python",
+    "dbt"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4084",
+   "company": "Linden Systems",
+   "title": "BI Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/lindensystems/jobs/4084",
+   "sources": [
+    "ATS host search"
+   ],
+   "role_fit": 7.0,
+   "total": 6.5,
+   "fit_line": "fit 6.5 (role 7, Berlin needs a move +0, pay not stated (ask), light on wanted duties at a big team minus 0.5)",
+   "verdict": "Below the 8 bar, listed for reference",
+   "first_seen": 13,
+   "state": "open",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "maintain legacy reports",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "dbt",
+    "BigQuery",
+    "Python",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  }
+ ],
+ "seen": [],
+ "dropped": [
+  {
+   "id": "4037",
+   "company": "Nimbus Labs",
+   "title": "BI Analyst",
+   "location": "Madrid",
+   "workplace": "on site",
+   "url": "https://nimbuslabs.recruitee.example/o/4037",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "Spanish required",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "analyse A/B tests for product teams",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "dbt",
+    "SQL",
+    "Python"
+   ],
+   "years_required": 8,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4113",
+   "company": "Quarry Pay",
+   "title": "Data Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://apply.workable.example/quarrypay/j/4113",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 600,
+   "pay_k_eur": [
+    70,
+    95
+   ],
+   "duties": [
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "BigQuery",
+    "Python",
+    "dbt"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  },
+  {
+   "id": "4300",
+   "company": "Indigo Cloud",
+   "title": "Data Analyst",
+   "location": "Madrid",
+   "workplace": "hybrid",
+   "url": "https://indigocloud.teamtailor.example/jobs/4300",
+   "sources": [
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "why": "Spanish required",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "build dbt models",
+    "build dashboards for sales and marketing"
+   ],
+   "tools": [
+    "Looker",
+    "SQL",
+    "dbt",
+    "BigQuery",
+    "Python"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4365",
+   "company": "Opal Labs",
+   "title": "Data Analyst Intern",
+   "location": "Berlin",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/opallabs/4365",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Looker",
+    "dbt",
+    "BigQuery",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4492",
+   "company": "Quill Cloud",
+   "title": "Data Analyst Intern",
+   "location": "Barcelona",
+   "workplace": "hybrid",
+   "url": "https://quillcloud.jobs.personio.example/job/4492",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 15,
+   "pay_k_eur": [
+    60,
+    80
+   ],
+   "duties": [
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "BigQuery",
+    "dbt",
+    "SQL",
+    "Looker"
+   ],
+   "years_required": 6,
+   "languages_required": []
+  },
+  {
+   "id": "4056",
+   "company": "Kestrel Stack",
+   "title": "Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://kestrelstack.recruitee.example/o/4056",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 45,
+   "pay_k_eur": [
+    65,
+    85
+   ],
+   "duties": [
+    "build dbt models",
+    "analyse A/B tests for product teams",
+    "maintain legacy reports",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Python",
+    "Looker",
+    "SQL",
+    "BigQuery"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4353",
+   "company": "Fable Systems",
+   "title": "Analytics Engineer",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/fablesystems/4353",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "SQL",
+    "Python",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4582",
+   "company": "Saffron HQ",
+   "title": "Analytics Engineer",
+   "location": "Remote Germany",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/saffronhq/4582",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "Looker",
+    "Python",
+    "SQL"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4645",
+   "company": "Fable Logic",
+   "title": "Senior Data Analyst",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/fablelogic/4645",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "German C1 required",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "build dbt models",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Looker",
+    "Python",
+    "BigQuery",
+    "dbt"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4071",
+   "company": "Bramble Systems",
+   "title": "Analytics Engineer",
+   "location": "Remote Spain",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/bramblesystems/4071",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "Spanish required",
+   "employees": 160,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "maintain legacy reports",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "SQL",
+    "BigQuery",
+    "dbt"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "Spanish"
+   ]
+  },
+  {
+   "id": "4162",
+   "company": "Nettle Data",
+   "title": "Data Analyst Intern",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/nettledata/jobs/4162",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "maintain legacy reports",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "BigQuery",
+    "dbt",
+    "Looker",
+    "SQL",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4445",
+   "company": "Halcyon Cloud",
+   "title": "Data Analyst Intern",
+   "location": "Stockholm",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/halcyoncloud/j/4445",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "build dbt models"
+   ],
+   "tools": [
+    "dbt",
+    "SQL",
+    "Looker",
+    "BigQuery"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "Swedish"
+   ]
+  },
+  {
+   "id": "4613",
+   "company": "Marlow Logic",
+   "title": "Data Analyst",
+   "location": "Paris",
+   "workplace": "on site",
+   "url": "https://join.example/companies/marlowlogic/4613",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 240,
+   "pay_k_eur": [
+    60,
+    80
+   ],
+   "duties": [
+    "model the revenue data warehouse",
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Python",
+    "SQL",
+    "Looker",
+    "BigQuery"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4150",
+   "company": "Bramble Health",
+   "title": "Data Analyst Intern",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://apply.workable.example/bramblehealth/j/4150",
+   "sources": [
+    "newsletter"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "model the revenue data warehouse"
+   ],
+   "tools": [
+    "SQL",
+    "Python",
+    "Looker",
+    "dbt"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4171",
+   "company": "Nettle Pay",
+   "title": "Data Analyst",
+   "location": "Munich",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/nettlepay/jobs/4171",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "German C1 required",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "model the revenue data warehouse",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "Looker",
+    "BigQuery",
+    "Python",
+    "dbt",
+    "SQL"
+   ],
+   "years_required": 5,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4260",
+   "company": "Juniper Pay",
+   "title": "Data Analyst Intern",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://juniperpay.teamtailor.example/jobs/4260",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 380,
+   "pay_k_eur": [
+    70,
+    85
+   ],
+   "duties": [
+    "answer ad hoc data requests",
+    "handle data access tickets",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "Python",
+    "BigQuery",
+    "dbt",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4494",
+   "company": "Sable Systems",
+   "title": "Data Analyst Intern",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4494",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "build dbt models",
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing"
+   ],
+   "tools": [
+    "Python",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 8,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4100",
+   "company": "Saffron Grid",
+   "title": "Senior Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/saffrongrid/4100",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 240,
+   "pay_k_eur": [
+    70,
+    90
+   ],
+   "duties": [
+    "maintain legacy reports",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "BigQuery",
+    "Python",
+    "Looker",
+    "dbt"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4121",
+   "company": "Halcyon HQ",
+   "title": "Data Analyst Intern",
+   "location": "Remote Netherlands",
+   "workplace": "remote",
+   "url": "https://jobs.ashbyhq.example/halcyonhq/4121",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 45,
+   "pay_k_eur": [
+    55,
+    70
+   ],
+   "duties": [
+    "model the revenue data warehouse",
+    "build dbt models",
+    "analyse A/B tests for product teams"
+   ],
+   "tools": [
+    "Looker",
+    "Python",
+    "BigQuery"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4138",
+   "company": "Rook Stack",
+   "title": "Data Analyst Intern",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/rookstack/4138",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "junior, intern or student role",
+   "employees": 15,
+   "pay_k_eur": [
+    65,
+    90
+   ],
+   "duties": [
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "model the revenue data warehouse"
+   ],
+   "tools": [
+    "BigQuery",
+    "Looker",
+    "Python",
+    "dbt"
+   ],
+   "years_required": 2,
+   "languages_required": [
+    "Dutch"
+   ]
+  },
+  {
+   "id": "4359",
+   "company": "Fable Logic",
+   "title": "BI Analyst",
+   "location": "Cologne",
+   "workplace": "hybrid",
+   "url": "https://join.example/companies/fablelogic/4359",
+   "sources": [
+    "Indeed",
+    "newsletter"
+   ],
+   "why": "German C1 required",
+   "employees": 15,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Looker",
+    "SQL",
+    "BigQuery"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4610",
+   "company": "Opal Works",
+   "title": "Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/opalworks/jobs/4610",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "maintain legacy reports",
+    "handle data access tickets",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "SQL",
+    "BigQuery",
+    "dbt",
+    "Python",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4199",
+   "company": "Sable AI",
+   "title": "Senior Data Analyst",
+   "location": "Madrid",
+   "workplace": "on site",
+   "url": "https://jobs.lever.example/sableai/4199",
+   "sources": [
+    "ATS host search",
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 3000,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "handle data access tickets",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "BigQuery",
+    "Looker",
+    "Python",
+    "SQL"
+   ],
+   "years_required": 4,
+   "languages_required": []
+  },
+  {
+   "id": "4295",
+   "company": "Quill Health",
+   "title": "Data Analyst",
+   "location": "Stockholm",
+   "workplace": "on site",
+   "url": "https://job-boards.greenhouse.example/quillhealth/jobs/4295",
+   "sources": [
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "why": "outside the regions you work in",
+   "employees": 45,
+   "pay_k_eur": [
+    75,
+    85
+   ],
+   "duties": [
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "analyse A/B tests for product teams"
+   ],
+   "tools": [
+    "SQL",
+    "dbt",
+    "Looker",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4352",
+   "company": "Kestrel Pay",
+   "title": "Senior Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/kestrelpay/jobs/4352",
+   "sources": [
+    "niche job board"
+   ],
+   "why": "German C1 required",
+   "employees": 380,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dbt models",
+    "build dashboards for sales and marketing",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "dbt",
+    "SQL",
+    "Python",
+    "BigQuery",
+    "Looker"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4497",
+   "company": "Linden Systems",
+   "title": "Senior Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/lindensystems/jobs/4497",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 1200,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "model the revenue data warehouse",
+    "answer ad hoc data requests",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "Python",
+    "SQL",
+    "BigQuery",
+    "dbt"
+   ],
+   "years_required": 4,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4234",
+   "company": "Halcyon Systems",
+   "title": "BI Analyst",
+   "location": "Hamburg",
+   "workplace": "hybrid",
+   "url": "https://halcyonsystems.jobs.personio.example/job/4234",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "none of the duties you want to do",
+   "employees": 600,
+   "pay_k_eur": null,
+   "duties": [
+    "handle data access tickets",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "Looker",
+    "dbt",
+    "Python"
+   ],
+   "years_required": 5,
+   "languages_required": []
+  },
+  {
+   "id": "4057",
+   "company": "Nettle Data",
+   "title": "BI Analyst",
+   "location": "Munich",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/nettledata/jobs/4057",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 30,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "model the revenue data warehouse",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "Python",
+    "Looker",
+    "dbt",
+    "BigQuery",
+    "SQL"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4257",
+   "company": "Sable Systems",
+   "title": "Analytics Engineer",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/sablesystems/jobs/4257",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "why": "German C1 required",
+   "employees": 45,
+   "pay_k_eur": [
+    75,
+    100
+   ],
+   "duties": [
+    "answer ad hoc data requests",
+    "maintain legacy reports",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "dbt",
+    "Python",
+    "SQL",
+    "Looker"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4488",
+   "company": "Linden Pay",
+   "title": "Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://lindenpay.teamtailor.example/jobs/4488",
+   "sources": [
+    "ATS host search"
+   ],
+   "why": "German C1 required",
+   "employees": 3000,
+   "pay_k_eur": [
+    60,
+    85
+   ],
+   "duties": [
+    "maintain legacy reports",
+    "answer ad hoc data requests",
+    "handle data access tickets"
+   ],
+   "tools": [
+    "BigQuery",
+    "Python",
+    "dbt",
+    "Looker",
+    "SQL"
+   ],
+   "years_required": 6,
+   "languages_required": [
+    "German C1"
+   ]
+  },
+  {
+   "id": "4619",
+   "company": "Saffron AI",
+   "title": "Data Analyst",
+   "location": "Berlin",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/saffronai/jobs/4619",
+   "sources": [
+    "LinkedIn alert",
+    "niche job board"
+   ],
+   "why": "German C1 required",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "handle data access tickets",
+    "answer ad hoc data requests"
+   ],
+   "tools": [
+    "SQL",
+    "dbt",
+    "Python"
+   ],
+   "years_required": 3,
+   "languages_required": [
+    "German C1"
+   ]
+  }
+ ],
+ "could_not_verify": [
+  {
+   "id": "4250",
+   "company": "Bramble Grid",
+   "title": "Data Analyst",
+   "location": "Amsterdam",
+   "workplace": "on site",
+   "url": "https://jobs.ashbyhq.example/bramblegrid/4250",
+   "sources": [
+    "newsletter",
+    "remote board"
+   ],
+   "role_fit": 8.0,
+   "total": 7.5,
+   "fit_line": "fit 7.5 (role 8, home city +0.5, pay not stated (ask), on site only minus 0.5, startup minus 0.5)",
+   "why": "board only",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 45,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "build dbt models",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "SQL",
+    "dbt",
+    "Python"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4335",
+   "company": "Vesper Systems",
+   "title": "Data Analyst",
+   "location": "Remote EU",
+   "workplace": "remote",
+   "url": "https://vespersystems.jobs.personio.example/job/4335",
+   "sources": [
+    "niche job board"
+   ],
+   "role_fit": 7.0,
+   "total": 8.0,
+   "fit_line": "fit 8 (role 7, EU remote +1.5, pay not stated (ask), startup minus 0.5)",
+   "why": "board only",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 70,
+   "pay_k_eur": null,
+   "duties": [
+    "model the revenue data warehouse",
+    "analyse A/B tests for product teams",
+    "answer ad hoc data requests",
+    "handle data access tickets",
+    "maintain legacy reports"
+   ],
+   "tools": [
+    "dbt",
+    "Looker",
+    "SQL",
+    "Python"
+   ],
+   "years_required": 3,
+   "languages_required": []
+  },
+  {
+   "id": "4414",
+   "company": "Pebble Systems",
+   "title": "Data Analyst",
+   "location": "London",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/pebblesystems/jobs/4414",
+   "sources": [
+    "LinkedIn alert"
+   ],
+   "role_fit": 8.5,
+   "total": 8.5,
+   "fit_line": "fit 8.5 (role 8.5, London needs a move +0, pay not stated (ask))",
+   "why": "company list unreadable",
+   "first_seen": 0,
+   "state": "open",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "analyse A/B tests for product teams",
+    "build dashboards for sales and marketing",
+    "model the revenue data warehouse"
+   ],
+   "tools": [
+    "Python",
+    "SQL",
+    "dbt",
+    "BigQuery"
+   ],
+   "years_required": 8,
+   "languages_required": []
+  }
+ ],
+ "closed_on_board": [
+  {
+   "id": "4103",
+   "company": "Ember Pay",
+   "title": "Data Analyst",
+   "location": "Stockholm",
+   "workplace": "hybrid",
+   "url": "https://job-boards.greenhouse.example/emberpay/jobs/4103",
+   "sources": [
+    "Indeed"
+   ],
+   "why": "closed on the company's list, still on a board",
+   "employees": 240,
+   "pay_k_eur": null,
+   "duties": [
+    "build dashboards for sales and marketing",
+    "model the revenue data warehouse",
+    "build dbt models"
+   ],
+   "tools": [
+    "dbt",
+    "BigQuery",
+    "Python"
+   ],
+   "years_required": 2,
+   "languages_required": []
+  }
+ ]
+}

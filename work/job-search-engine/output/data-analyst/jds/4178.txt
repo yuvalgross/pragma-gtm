@@ -1,0 +1,11 @@
+Analytics Engineer
+Garnet Health, Remote EU (remote)
+
+What you will do:
+- model the revenue data warehouse
+- analyse A/B tests for product teams
+- build dashboards for sales and marketing
+- maintain legacy reports
+
+Tools: Python, SQL, Looker, dbt, BigQuery
+Experience: 5+ years

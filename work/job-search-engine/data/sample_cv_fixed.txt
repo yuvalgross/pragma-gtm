@@ -1,19 +1,19 @@
 Sample Candidate
 Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
-GTM Systems Engineer | Lead Routing, Outbound Signals and Integrations
-GTM Engineer who builds the routing, outbound and integration layer a sales team runs on, in HubSpot, Clay and n8n.
+Customer Success Manager | Renewals, Expansion and Churn Prevention
+Customer Success Manager who protects and grows a mid market book, with 4 years in SaaS on Salesforce, HubSpot and Intercom.
 
 SKILLS
-HubSpot, Clay, n8n, Python, APIs, webhooks, lead routing, outbound signals, Claude
+Salesforce, HubSpot, Intercom, Gainsight, renewals, expansion, churn risk, success playbooks, health scores
 
 WORK EXPERIENCE
-GTM Engineer | Example Events Ltd | Jan 2024 to Present
-- Routing: Built lead routing in HubSpot and Clay that assigns every inbound lead to the right rep within 5 minutes.
-- Outbound: Created a signal pipeline in Clay that lifted meetings booked 30% in two quarters.
-- Integrations: Connected HubSpot, the event platform and Slack through APIs in n8n, removing 6 weekly exports.
-- Reporting: Shipped a weekly pipeline view for 12 sellers, with a failure alert on every sync.
-Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
-- Quota: Closed 40 new business deals and finished at 104% of quota.
+Customer Success Manager | Example Software GmbH | Jan 2023 to Present
+- Renewals: Renewed 92% of a 60 account book (1.4M ARR) and grew expansion revenue 18% in Salesforce.
+- Churn: Ran monthly churn risk reviews in HubSpot that cut logo churn 4 points in a year.
+- Playbooks: Wrote 3 success playbooks in Intercom that every new customer now follows.
+- Escalations: Resolved 40 escalations a quarter with product, keeping 9 of 10 at risk accounts.
+Account Executive | Example Media GmbH | Mar 2019 to Dec 2022
+- Quota: Closed 35 new business deals and finished at 103% of quota.
 
 EDUCATION
 BA Business, Example University

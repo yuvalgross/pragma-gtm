@@ -1,7 +1,7 @@
 """
 CV check: runs the tailoring rules on a plain text CV against one job post.
 
-    python3 check_cv.py data/sample_cv_draft.txt output/gtm-engineer/jds/4228.txt
+    python3 check_cv.py data/sample_cv_draft.txt output/customer-success/jds/4577.txt
 
 What it checks
   ATS       headline mirrors the JD title; JD keywords covered (x of y); each

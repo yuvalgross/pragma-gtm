@@ -1,0 +1,10 @@
+Data Analyst
+Halcyon HQ, Cologne (hybrid)
+
+What you will do:
+- analyse A/B tests for product teams
+- build dbt models
+- model the revenue data warehouse
+
+Tools: SQL, BigQuery, Python, dbt
+Experience: 3+ years

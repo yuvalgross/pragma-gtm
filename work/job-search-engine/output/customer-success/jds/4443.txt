@@ -1,10 +1,10 @@
 Onboarding Manager
-Opal Pay, Remote Germany (remote)
+Sable Systems, Remote Germany (remote)
 
 What you will do:
-- run onboarding for new customers
 - build success playbooks
+- answer support tickets
 - handle billing questions
 
-Tools: Gainsight, Salesforce, HubSpot
+Tools: HubSpot, Intercom, Gainsight
 Experience: 5+ years

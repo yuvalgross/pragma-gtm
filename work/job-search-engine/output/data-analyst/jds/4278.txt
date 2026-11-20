@@ -1,0 +1,10 @@
+Senior Data Analyst
+Halcyon Health, Munich (hybrid)
+
+What you will do:
+- build dashboards for sales and marketing
+- build dbt models
+- analyse A/B tests for product teams
+
+Tools: BigQuery, Python, SQL
+Experience: 4+ years

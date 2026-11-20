@@ -1,0 +1,10 @@
+BI Analyst
+Rook Cloud, London (hybrid)
+
+What you will do:
+- model the revenue data warehouse
+- build dashboards for sales and marketing
+- build dbt models
+
+Tools: SQL, Python, dbt, BigQuery, Looker
+Experience: 5+ years

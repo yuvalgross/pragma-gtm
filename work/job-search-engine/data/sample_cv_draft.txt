@@ -1,19 +1,19 @@
 Sample Candidate
 Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate
-GTM Engineer | Clay, Salesforce and Automation
-Passionate builder who helped sales teams grow. I build lead routing from scratch and integrate tools through APIs.
+Account Manager | SaaS and Customer Relationships
+Passionate people person who helped customers succeed. I own renewals and expansion and lead churn risk reviews.
 
 SKILLS
-Clay, Salesforce, Python, Claude, Zapier
+Salesforce, Gainsight, Excel, Slack
 
 WORK EXPERIENCE
-GTM Engineer | Example Events Ltd | Jan 2024 to Present
-- Routing: Built lead routing that sends every inbound lead to the right rep within 5 minutes, using Salesforce flows and Clay enrichment.
-- Outbound: Built a signal pipeline in Clay that lifted meetings booked by about 30% in two quarters.
-- Integrations: Connected the CRM, the event platform and Slack through APIs - no manual exports left.
-- Reporting: Responsible for weekly pipeline reporting to leadership.
-Account Executive | Example Software GmbH | Mar 2019 to Dec 2023
-- Quota: Closed 40 new business deals and finished at 104% of quota.
+Customer Success Manager | Example Software GmbH | Jan 2023 to Present
+- Renewals: Renewed 92% of a 60 account book worth 1.4M in ARR, using health scores in Gainsight and early renewal calls.
+- Churn: Ran churn reviews that cut logo churn by about 4 points in a year.
+- Playbooks: Wrote onboarding playbooks - every new customer now follows them.
+- Support: Responsible for answering escalated tickets.
+Account Executive | Example Media GmbH | Mar 2019 to Dec 2022
+- Quota: Closed 35 new business deals and finished at 103% of quota.
 
 EDUCATION
 BA Business, Example University
