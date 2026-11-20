@@ -43,17 +43,17 @@
       36
     ],
     "deals": [
-      6,
-      10
+      4,
+      9
     ],
     "new_mrr_eur": [
-      8200,
-      16500
+      6800,
+      13700
     ],
     "call_next": [
       8,
-      3,
-      4000
+      2,
+      3300
     ],
     "assumed": {
       "seller_demo_rate_low": 0.1,
@@ -61,7 +61,7 @@
       "setting_demo_rate_low": 0.05,
       "setting_demo_rate_high": 0.1,
       "next_demo_rate": 0.1,
-      "win_rate": 0.3,
+      "win_rate": 0.25,
       "mrr_per_deal": 1550
     }
   },

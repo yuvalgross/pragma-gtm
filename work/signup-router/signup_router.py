@@ -52,7 +52,9 @@ def volume(row):
 
 
 def trend(vols):
-    """'rising' if three of three week over week steps are up and w4 >= 1.3 x w1."""
+    """'none' if no usage at all; 'rising' if three of three week over week steps are up and w4 >= 1.3 x w1."""
+    if not any(vols):
+        return "none"
     steps = [b > a for a, b in zip(vols, vols[1:])]
     if all(steps) and vols[0] and vols[3] >= 1.3 * vols[0]:
         return "rising"
@@ -136,6 +138,9 @@ def next_action(total, t, path):
         return "Nurture, flag to the marketplace partner owner"
     if path == "reseller_channel":
         return "Nurture, flag to the reseller channel owner"
+    if t in ("falling", "none"):
+        # a trial that stopped or never started gets no person, whatever the fit
+        return "Nurture"
     if total > THRESHOLD_ENTERPRISE and t == "rising":
         return "Custom benchmark, open the enterprise conversation"
     if total >= THRESHOLD_MIDTIER:
@@ -210,14 +215,18 @@ def write_outputs(scored, excluded, out_dir, source):
         acct = f"{r['company_name']}, {r['hq_city']}, {r['headcount']} staff, {r['integration_path'].replace('_', ' ')}"
         lines.append(f"| {r['rank']} | {acct} | {r['score']} | {r['why']} | {r['next_action']} |")
     lines.append("")
-    lines.append("Dropped before scoring: " + "; ".join(f"{e['domain']} ({e['reason']})" for e in excluded))
+    reasons = {}
+    for e in excluded:
+        reasons[e["reason"]] = reasons.get(e["reason"], 0) + 1
+    lines.append("Dropped before scoring: " + "; ".join(f"{n} {r}" for r, n in sorted(reasons.items())))
     with open(os.path.join(out_dir, "top5.md"), "w") as f:
         f.write("\n".join(lines) + "\n")
     summary = {
         "run_date": date.today().isoformat(),
         "input": source,
         "rows_in": len(scored) + len(excluded),
-        "excluded": excluded,
+        "excluded": len(excluded),
+        "excluded_by_reason": {r: sum(1 for e in excluded if e["reason"] == r) for r in sorted({e["reason"] for e in excluded})},
         "scored": len(scored),
         "weights": WEIGHTS,
         "thresholds": {"enterprise": THRESHOLD_ENTERPRISE, "mid_tier": THRESHOLD_MIDTIER},

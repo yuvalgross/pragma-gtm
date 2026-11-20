@@ -22,6 +22,7 @@ import random
 SEED = 21
 DAYS = 14
 rnd = random.Random(SEED)
+HISTORY_SEED = int(os.environ.get("HISTORY_SEED", "30"))
 
 A = ["Lumen", "Quill", "Harbor", "Juniper", "Nimbus", "Orchard", "Pebble", "Saffron", "Tidal", "Vesper",
      "Wren", "Atlas", "Bramble", "Cobalt", "Delta", "Ember", "Fable", "Garnet", "Halcyon", "Indigo",
@@ -182,20 +183,27 @@ def main():
         json.dump(companies, f, indent=1)
 
     # applications before the fortnight: shape, size, note, channel and outcome
+    # the history has its own seed so the postings above stay the same when it changes
+    hist = random.Random(HISTORY_SEED)
+
+    def wpick_h(pairs):
+        return hist.choices(pairs, weights=[w for _, w in pairs])[0]
+
     rows = []
-    for i in range(72):
-        shape = wpick([("build", 6), ("run", 3), ("sales", 2)])[0]
-        size = wpick([("under 150", 4), ("150 to 500", 3), ("over 500", 3)])[0]
-        note = rnd.random() < 0.3
-        p_call = {"build": 0.30, "run": 0.10, "sales": 0.15}[shape] * {"under 150": 1.2, "150 to 500": 1.0, "over 500": 0.6}[size]
-        p_call *= 1.7 if note else 1.0
-        r = rnd.random()
-        outcome = "call" if r < p_call else ("rejected at CV" if r < p_call + 0.38 else ("no reply" if r < p_call + 0.7 else "pending"))
-        cname = rnd.choice(list(companies))
+    for i in range(110):
+        shape = wpick_h([("build", 6), ("run", 3), ("sales", 2)])[0]
+        size = wpick_h([("under 150", 4), ("150 to 500", 3), ("over 500", 3)])[0]
+        note = hist.random() < 0.3
+        # call rates sit near what tailored applications get: roughly 1 in 10, lower cold at big companies
+        p_call = {"build": 0.12, "run": 0.04, "sales": 0.06}[shape] * {"under 150": 1.3, "150 to 500": 1.0, "over 500": 0.6}[size]
+        p_call *= 1.8 if note else 1.0
+        r = hist.random()
+        outcome = "call" if r < p_call else ("rejected at CV" if r < p_call + 0.35 else ("no reply" if r < p_call + 0.80 else "pending"))
+        cname = hist.choice(list(companies))
         rows.append({"application": f"P{i + 1:03d}", "company": cname, "role_shape": shape, "company_size": size,
-                     "channel": rnd.choice(["Ashby", "Ashby", "Personio", "Greenhouse", "Teamtailor", "JOIN", "LinkedIn Easy Apply", "Email"]),
-                     "cv_score": rnd.choice([8, 8.5, 8.5, 9, 9, 9]), "note_to_named_person": "yes" if note else "no",
-                     "days_before_start": rnd.randint(1, 50), "outcome": outcome})
+                     "channel": hist.choice(["Ashby", "Ashby", "Personio", "Greenhouse", "Teamtailor", "JOIN", "LinkedIn Easy Apply", "Email"]),
+                     "cv_score": hist.choice([8, 8.5, 8.5, 9, 9, 9]), "note_to_named_person": "yes" if note else "no",
+                     "days_before_start": hist.randint(1, 50), "outcome": outcome})
     with open("data/applications.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()

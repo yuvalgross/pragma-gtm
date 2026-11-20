@@ -1,5 +1,5 @@
 deal_id,company_id,deal_name,stage,amount_eur,close_date,owner_id
-d01,c101,Fleet renewal 2026,closedwon,950000,2026-01-15,o6
+d01,c101,Fleet renewal 2026,closedwon,320000,2026-01-15,o6
 d02,c102,Grid expansion,closedwon,420000,2025-06-30,o8
 d03,c103,Rail data platform,closedwon,180000,2025-12-20,o6
 d04,c104,Cold chain rollout,closedwon,120000,2025-09-01,o6

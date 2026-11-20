@@ -200,7 +200,7 @@
 </tbody>
 </table>
 </div>
-    <p style="margin-top:14px">In this run the outcomes support two decisions: roles built around the profile's core duties got calls (22%) where roles light on them got none, and companies under 150 people called back twice as often as companies over 500. A note to a named person (24% against 16%) stays open: an 8 point gap is too small to change a rule on.</p>
+    <p style="margin-top:14px">13 calls from 113 applications, about 1 in 9, which is in line with what tailored applications get. Over half had no human reply after 21 days. Only one decision clears the bar: companies under 150 people called back 15% of the time, companies over 500 only 4%, so cold applications to big companies now need a role built around the profile's core duties. A note to a named person (19% against 10%) and roles built around the core duties (14% against 8%) stay open: the gaps are under 10 points.</p>
   </section>
 
   <section aria-labelledby="titles">
@@ -236,6 +236,69 @@
 </tbody>
 </table>
 </div>
+    
+    <style>
+      .cvfig { margin: 22px 0 6px; }
+      .cvscore { display:grid; grid-template-columns: auto 1fr auto; gap:6px 12px; align-items:center; font-size:14px; color:var(--muted); margin-bottom:14px; }
+      .cvscore .bar { display:grid; grid-template-columns: repeat(8, 1fr); gap:3px; }
+      .cvscore .bar i { height:10px; background:var(--line); display:block; }
+      .cvscore .bar i.on { background:var(--accent); }
+      .cvscore strong { color:var(--ink); font-weight:600; }
+      .cvgrid { display:grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap:18px; align-items:start; }
+      .cvpaper { background:#fffdf7; color:#1c1a14; border:1px solid var(--line); box-shadow:0 8px 24px rgba(0,0,0,.08); padding:22px 22px 26px; font-size:13px; line-height:1.5; }
+      .cvpaper mark { background:#fde68a; color:inherit; padding:0 2px; }
+      .cvpaper .cvn { font-weight:700; color:#92400e; }
+      .cv-name { font-family:var(--serif); font-size:22px; font-weight:600; }
+      .cv-contact { color:#5f5b4d; font-size:12px; margin-bottom:8px; }
+      .cv-head { font-weight:600; font-size:14px; margin-bottom:4px; }
+      .cv-sec { font-size:11px; letter-spacing:.08em; color:#5f5b4d; border-bottom:1px solid #e6dfc9; margin:12px 0 6px; padding-bottom:2px; }
+      .cv-role { font-weight:600; margin-top:6px; }
+      .cv-b { padding-left:12px; position:relative; margin:2px 0; }
+      .cv-b::before { content:"\2022"; position:absolute; left:0; color:#5f5b4d; }
+      .pin { display:inline-grid; place-items:center; width:18px; height:18px; border-radius:50%; background:#92400e; color:#fff; font:600 11px/1 var(--sans); margin-right:6px; vertical-align:1px; }
+      .cvnotes { list-style:none; margin:0; padding:0; display:grid; gap:10px; font-size:14.5px; }
+      .cvnotes li { background:var(--panel); border:1px solid var(--line); padding:10px 12px 10px 40px; position:relative; }
+      .cvnotes li .pin { position:absolute; left:11px; top:11px; margin:0; }
+      .cvnotes b { color:var(--ink); }
+      .cvlegend { font-size:13px; color:var(--muted); margin-top:10px; }
+      .cvlegend mark { background:#fde68a; color:#1c1a14; padding:0 3px; }
+      .cvlegend .cvn { font-weight:700; color:var(--accent); }
+      @media (max-width: 760px) { .cvgrid { grid-template-columns: 1fr; } .cvpaper { padding:16px; font-size:12.5px; } }
+    </style>
+    <figure class="cvfig" aria-label="The fixed CV with what changed">
+      <div class="cvscore">
+        <span>Draft</span><span class="bar" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span><strong>1 of 8</strong>
+        <span>Fixed</span><span class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><strong>8 of 8</strong>
+      </div>
+      <div class="cvgrid">
+        <div class="cvpaper">
+<div class="cv-name">Sample Candidate</div>
+<div class="cv-contact">Berlin, Germany | candidate@example.com | linkedin.com/in/sample-candidate</div>
+<div class="cv-head"><span class="pin" aria-label="note 1">1</span><mark>Customer Success Manager</mark> | <mark>Renewals</mark>, Expansion and Churn Prevention</div>
+<div class="cv-p"><span class="pin" aria-label="note 2">2</span><mark>Customer Success Manager</mark> who protects and grows a mid market book, with <b class="cvn">4 years</b> in SaaS on <mark>Salesforce</mark>, <mark>HubSpot</mark> and <mark>Intercom</mark>.</div>
+<div class="cv-sec">SKILLS</div>
+<div class="cv-p"><span class="pin" aria-label="note 3">3</span><mark>Salesforce</mark>, <mark>HubSpot</mark>, <mark>Intercom</mark>, Gainsight, <mark>renewals</mark>, <mark>expansion</mark>, <mark>churn risk</mark>, <mark>success playbooks</mark>, health scores</div>
+<div class="cv-sec">WORK EXPERIENCE</div>
+<div class="cv-role">Customer Success Manager | Example Software GmbH | Jan 2023 to Present</div>
+<div class="cv-b"><span class="pin" aria-label="note 4">4</span><mark>Renewals</mark>: <mark>Renewed</mark> <b class="cvn">92%</b> of a <b class="cvn">60 account</b> book (<b class="cvn">1.4M</b> ARR) and grew <mark>expansion</mark> revenue <b class="cvn">18%</b> in <mark>Salesforce</mark>.</div>
+<div class="cv-b">Churn: Ran monthly <mark>churn risk</mark> reviews in <mark>HubSpot</mark> that cut logo churn <b class="cvn">4 points</b> in a year.</div>
+<div class="cv-b">Playbooks: Wrote <b class="cvn">3</b> <mark>success playbooks</mark> in <mark>Intercom</mark> that every new customer now follows.</div>
+<div class="cv-b"><span class="pin" aria-label="note 5">5</span>Escalations: Resolved <b class="cvn">40 escalations</b> a quarter with product, keeping <b class="cvn">9</b> of <b class="cvn">10</b> at risk accounts.</div>
+<div class="cv-role">Account Executive | Example Media GmbH | Mar 2019 to Dec 2022</div>
+<div class="cv-b">Quota: Closed <b class="cvn">35</b> new business deals and finished at <b class="cvn">103%</b> of quota.</div>
+<div class="cv-sec">EDUCATION</div>
+<div class="cv-p">BA Business, Example University</div>
+        </div>
+        <ol class="cvnotes">
+          <li><span class="pin">1</span><b>Headline is the JD title.</b> The draft said Account Manager, so a title match in the ATS missed.</li>
+          <li><span class="pin">2</span><b>Summary rewritten.</b> The pronoun and "passionate" are gone; the tools on record are named instead.</li>
+          <li><span class="pin">3</span><b>Skills carry the JD tools used in the job.</b> HubSpot and Intercom added, each also in a bullet. Zendesk stays out: never used, so it is a gap to name.</li>
+          <li><span class="pin">4</span><b>A number for each top need.</b> Renewals and expansion, churn risk reviews and success playbooks each have a bullet with a result.</li>
+          <li><span class="pin">5</span><b>Writing fixed.</b> "About" before a number, a dash and "responsible for" removed; the escalation bullet now has scope.</li>
+        </ol>
+      </div>
+      <p class="cvlegend"><mark>Highlighted</mark> terms come from the posting. <b class="cvn">Bold</b> figures are the proof. Invented candidate.</p>
+    </figure>
     <p style="margin-top:14px">The fixed CV still misses Zendesk. The candidate never used it, so it is named as a gap, not written in.</p>
     <details>
       <summary>The draft's fix list</summary>

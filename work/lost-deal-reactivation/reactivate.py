@@ -32,7 +32,7 @@ S = {
     "seller_demo_rate_low": 0.10, "seller_demo_rate_high": 0.20,
     "setting_demo_rate_low": 0.05, "setting_demo_rate_high": 0.10,
     "next_demo_rate": 0.10,
-    "win_rate": 0.30,
+    "win_rate": 0.25,
     "mrr_per_deal": 1550,
 }
 SELLERS = ["Seller A", "Seller B", "Seller C", "Seller D", "Seller E"]

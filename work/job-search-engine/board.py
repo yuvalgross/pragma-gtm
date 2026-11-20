@@ -60,7 +60,7 @@ for r in B["main"]:
     if day > LAST:
         continue
     waited = LAST - day
-    outcome = "call" if (waited >= 5 and rnd.random() < 0.45) else ("rejected at CV" if waited >= 4 and rnd.random() < 0.3 else "pending")
+    outcome = "call" if (waited >= 5 and rnd.random() < 0.15) else ("rejected at CV" if waited >= 4 and rnd.random() < 0.3 else "pending")
     stage = {"call": "interview", "rejected at CV": "rejected", "pending": "applied"}[outcome]
     size = "under 150" if r["employees"] < 150 else ("150 to 500" if r["employees"] <= 500 else "over 500")
     apps.append({"id": "N" + r["id"], "company": r["company"], "role": r["title"], "track": "Core", "stage": stage, "day": day,

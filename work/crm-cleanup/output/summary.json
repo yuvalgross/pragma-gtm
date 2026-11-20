@@ -18,12 +18,12 @@
     "owners": 17
   },
   "customers_in_book": 17,
-  "book_arr_eur": 1923142,
+  "book_arr_eur": 1304800,
   "arr_on_duplicate_records_eur": 15000,
-  "customer_arr_with_no_active_owner_eur": 532852,
+  "customer_arr_with_no_active_owner_eur": 539200,
   "stale_open_pipeline_eur": 190000,
   "human_calls": 8,
-  "arr_with_risk_signal_eur": 1216142,
+  "arr_with_risk_signal_eur": 597800,
   "expansion_potential_eur": 150250,
   "channels": {
     "ai, human on reply": 7,

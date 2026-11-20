@@ -5,14 +5,224 @@ rank,account_id,company_name,domain,hq_city,country,headcount,integration_path,t
 4,syn-003,Synthetic Company C,company-c.example,Austin,US,60,self_hosted,rising,32,18,25,5,80,"Custom benchmark, open the enterprise conversation","volume up four weeks running; 17,000 units last week; add on used alongside core product; core segment; 60 staff; self hosted; blog: public problem statement"
 5,syn-002,Synthetic Company B,company-b.example,Amsterdam,NL,300,open_framework,flat,16,25,25,5,71,"Offer the mid tier, open a shared Slack channel","52,000 units last week; core segment; 300 staff; funded 14 months ago; open framework; blog: public problem statement"
 6,syn-011,Synthetic Company K,company-k.example,Chicago,US,35,partner_marketplace,rising,35,25,6,5,71,"Nurture, flag to the marketplace partner owner","volume up four weeks running; 36,000 units last week; add on used alongside core product; core segment; 35 staff; funded 8 months ago; partner marketplace; scores a quarter, a partner already sells to this account; blog: public problem statement"
-7,syn-014,Synthetic Company N,company-n.example,Madrid,ES,220,direct_api,flat,16,18,25,10,69,"Offer the mid tier, open a shared Slack channel","30,000 units last week; core segment; 220 staff; direct api; job: specialist role; incumbent tool already in product (displacement, warm)"
-8,syn-015,Synthetic Company O,company-o.example,Stuttgart,DE,900,direct_api,rising,32,4,25,8,69,"Offer the mid tier, open a shared Slack channel","volume up four weeks running; 9,000 units last week; add on used alongside core product; direct api; self hosted; job: specialist role; in house build"
-9,syn-004,Synthetic Company D,company-d.example,Munich,DE,25,direct_api,flat,9,25,25,0,59,"Offer the mid tier, open a shared Slack channel",core segment; 25 staff; funded 6 months ago; direct api
-10,syn-017,Synthetic Company Q,company-q.example,Barcelona,ES,65,reseller_channel,flat,23,25,6,5,59,"Nurture, flag to the reseller channel owner","16,000 units last week; add on used alongside core product; core segment; 65 staff; funded 13 months ago; reseller channel; scores a quarter, a partner already sells to this account; docs: technical need"
-11,syn-012,Synthetic Company L,company-l.example,Dublin,IE,48,direct_api,flat,9,18,25,5,57,"Offer the mid tier, open a shared Slack channel","core segment; 48 staff; direct api; incumbent tool already in product (displacement, warm)"
-12,syn-006,Synthetic Company F,company-f.example,Vienna,AT,80,reseller_channel,flat,16,18,6,5,45,"Nurture, flag to the reseller channel owner","25,000 units last week; core segment; 80 staff; reseller channel; scores a quarter, a partner already sells to this account; job: specialist role"
-13,syn-008,Synthetic Company H,company-h.example,Paris,FR,700,direct_api,flat,6,11,25,0,42,Nurture,funded 5 months ago; direct api
-14,syn-013,Synthetic Company M,company-m.example,Aachen,DE,12,direct_api,flat,16,0,25,0,41,Nurture,add on used alongside core product; direct api; self hosted
-15,syn-016,Synthetic Company P,company-p.example,Toronto,CA,9,partner_marketplace,rising,18,17,6,0,41,"Nurture, flag to the marketplace partner owner","volume up four weeks running; core segment; funded 4 months ago; partner marketplace; scores a quarter, a partner already sells to this account"
-16,syn-005,Synthetic Company E,company-e.example,London,GB,15,partner_marketplace,rising,22,0,6,0,28,"Nurture, flag to the marketplace partner owner","volume up four weeks running; 11,000 units last week; partner marketplace; scores a quarter, a partner already sells to this account"
-17,syn-009,Synthetic Company I,company-i.example,Lisbon,PT,2,direct_api,falling,0,0,25,0,25,Nurture,direct api
+7,syn-163,Synthetic Signup 146,signup-146.example,Toronto,CA,35,direct_api,rising,15,25,25,5,70,"Offer the mid tier, open a shared Slack channel",volume up four weeks running; core segment; 35 staff; funded 3 months ago; direct api; job: specialist role
+8,syn-014,Synthetic Company N,company-n.example,Madrid,ES,220,direct_api,flat,16,18,25,10,69,"Offer the mid tier, open a shared Slack channel","30,000 units last week; core segment; 220 staff; direct api; job: specialist role; incumbent tool already in product (displacement, warm)"
+9,syn-015,Synthetic Company O,company-o.example,Stuttgart,DE,900,direct_api,rising,32,4,25,8,69,"Offer the mid tier, open a shared Slack channel","volume up four weeks running; 9,000 units last week; add on used alongside core product; direct api; self hosted; job: specialist role; in house build"
+10,syn-057,Synthetic Signup 040,signup-040.example,Warsaw,PL,33,self_hosted,rising,18,18,25,0,61,"Offer the mid tier, open a shared Slack channel",volume up four weeks running; core segment; 33 staff; self hosted
+11,syn-076,Synthetic Signup 059,signup-059.example,Sao Paulo,BR,240,direct_api,flat,6,25,25,5,61,"Offer the mid tier, open a shared Slack channel","core segment; 240 staff; funded 8 months ago; direct api; incumbent tool already in product (displacement, warm)"
+12,syn-004,Synthetic Company D,company-d.example,Munich,DE,25,direct_api,flat,9,25,25,0,59,"Offer the mid tier, open a shared Slack channel",core segment; 25 staff; funded 6 months ago; direct api
+13,syn-017,Synthetic Company Q,company-q.example,Barcelona,ES,65,reseller_channel,flat,23,25,6,5,59,"Nurture, flag to the reseller channel owner","16,000 units last week; add on used alongside core product; core segment; 65 staff; funded 13 months ago; reseller channel; scores a quarter, a partner already sells to this account; docs: technical need"
+14,syn-012,Synthetic Company L,company-l.example,Dublin,IE,48,direct_api,flat,9,18,25,5,57,"Offer the mid tier, open a shared Slack channel","core segment; 48 staff; direct api; incumbent tool already in product (displacement, warm)"
+15,syn-062,Synthetic Signup 045,signup-045.example,Milan,IT,359,open_framework,flat,6,18,25,8,57,"Offer the mid tier, open a shared Slack channel",core segment; 359 staff; open framework; self hosted; docs: technical need; in house build
+16,syn-025,Synthetic Signup 008,signup-008.example,Stockholm,SE,3,direct_api,rising,15,10,25,5,55,"Offer the mid tier, open a shared Slack channel","volume up four weeks running; core segment; direct api; incumbent tool already in product (displacement, warm)"
+17,syn-195,Synthetic Signup 178,signup-178.example,Toronto,CA,469,direct_api,flat,6,18,25,5,54,"Offer the mid tier, open a shared Slack channel",core segment; 469 staff; direct api; self hosted; docs: technical need
+18,syn-032,Synthetic Signup 015,signup-015.example,London,GB,30,direct_api,falling,0,18,25,10,53,Nurture,"core segment; 30 staff; direct api; job: specialist role; incumbent tool already in product (displacement, warm)"
+19,syn-153,Synthetic Signup 136,signup-136.example,Bangalore,IN,3,direct_api,falling,0,17,25,10,52,Nurture,"core segment; funded 3 months ago; direct api; docs: technical need; incumbent tool already in product (displacement, warm)"
+20,syn-190,Synthetic Signup 173,signup-173.example,Munich,DE,15,direct_api,rising,15,10,25,0,50,"Offer the mid tier, open a shared Slack channel",volume up four weeks running; core segment; direct api; self hosted
+21,syn-021,Synthetic Signup 004,signup-004.example,Milan,IT,135,open_framework,flat,6,18,25,0,49,"Offer the mid tier, open a shared Slack channel",core segment; 135 staff; open framework; self hosted
+22,syn-128,Synthetic Signup 111,signup-111.example,Austin,US,71,self_hosted,flat,6,18,25,0,49,"Offer the mid tier, open a shared Slack channel",core segment; 71 staff; self hosted
+23,syn-122,Synthetic Signup 105,signup-105.example,Madrid,ES,7,direct_api,rising,18,0,25,5,48,"Offer the mid tier, open a shared Slack channel",volume up four weeks running; direct api; docs: technical need
+24,syn-147,Synthetic Signup 130,signup-130.example,Berlin,DE,407,open_framework,rising,15,8,25,0,48,"Offer the mid tier, open a shared Slack channel",volume up four weeks running; 407 staff; open framework
+25,syn-159,Synthetic Signup 142,signup-142.example,Bangalore,IN,4,direct_api,flat,6,17,25,0,48,"Offer the mid tier, open a shared Slack channel",core segment; funded 16 months ago; direct api
+26,syn-189,Synthetic Signup 172,signup-172.example,Hamburg,DE,345,direct_api,falling,0,18,25,5,48,Nurture,core segment; 345 staff; direct api; job: specialist role
+27,syn-079,Synthetic Signup 062,signup-062.example,Toronto,CA,28,self_hosted,flat,6,15,25,0,46,"Offer the mid tier, open a shared Slack channel",28 staff; funded 15 months ago; self hosted
+28,syn-193,Synthetic Signup 176,signup-176.example,Sao Paulo,BR,41,partner_marketplace,rising,15,25,6,0,46,"Nurture, flag to the marketplace partner owner","volume up four weeks running; core segment; 41 staff; funded 14 months ago; partner marketplace; scores a quarter, a partner already sells to this account"
+29,syn-201,Synthetic Signup 184,signup-184.example,Madrid,ES,8,open_framework,flat,6,10,25,5,46,"Offer the mid tier, open a shared Slack channel","core segment; open framework; incumbent tool already in product (displacement, warm)"
+30,syn-006,Synthetic Company F,company-f.example,Vienna,AT,80,reseller_channel,flat,16,18,6,5,45,"Nurture, flag to the reseller channel owner","25,000 units last week; core segment; 80 staff; reseller channel; scores a quarter, a partner already sells to this account; job: specialist role"
+31,syn-022,Synthetic Signup 005,signup-005.example,Madrid,ES,22,direct_api,falling,0,15,25,3,43,Nurture,22 staff; funded 3 months ago; direct api; in house build
+32,syn-090,Synthetic Signup 073,signup-073.example,Toronto,CA,47,direct_api,falling,0,18,25,0,43,Nurture,core segment; 47 staff; direct api
+33,syn-157,Synthetic Signup 140,signup-140.example,Toronto,CA,34,direct_api,falling,0,18,25,0,43,Nurture,core segment; 34 staff; direct api
+34,syn-184,Synthetic Signup 167,signup-167.example,Stockholm,SE,22,direct_api,falling,0,18,25,0,43,Nurture,core segment; 22 staff; direct api
+35,syn-198,Synthetic Signup 181,signup-181.example,Toronto,CA,232,direct_api,falling,0,18,25,0,43,Nurture,core segment; 232 staff; direct api; self hosted
+36,syn-008,Synthetic Company H,company-h.example,Paris,FR,700,direct_api,flat,6,11,25,0,42,Nurture,funded 5 months ago; direct api
+37,syn-036,Synthetic Signup 019,signup-019.example,Bangalore,IN,54,reseller_channel,rising,18,18,6,0,42,"Nurture, flag to the reseller channel owner","volume up four weeks running; core segment; 54 staff; reseller channel; scores a quarter, a partner already sells to this account; self hosted"
+38,syn-072,Synthetic Signup 055,signup-055.example,London,GB,260,reseller_channel,rising,18,18,6,0,42,"Nurture, flag to the reseller channel owner","volume up four weeks running; core segment; 260 staff; reseller channel; scores a quarter, a partner already sells to this account; self hosted"
+39,syn-114,Synthetic Signup 097,signup-097.example,Munich,DE,393,open_framework,flat,6,8,25,3,42,Nurture,393 staff; open framework; in house build
+40,syn-013,Synthetic Company M,company-m.example,Aachen,DE,12,direct_api,flat,16,0,25,0,41,Nurture,add on used alongside core product; direct api; self hosted
+41,syn-016,Synthetic Company P,company-p.example,Toronto,CA,9,partner_marketplace,rising,18,17,6,0,41,"Nurture, flag to the marketplace partner owner","volume up four weeks running; core segment; funded 4 months ago; partner marketplace; scores a quarter, a partner already sells to this account"
+42,syn-041,Synthetic Signup 024,signup-024.example,Stockholm,SE,3,open_framework,flat,6,10,25,0,41,Nurture,core segment; open framework
+43,syn-101,Synthetic Signup 084,signup-084.example,New York,US,10,direct_api,flat,6,10,25,0,41,Nurture,core segment; direct api
+44,syn-191,Synthetic Signup 174,signup-174.example,Hamburg,DE,12,open_framework,flat,6,10,25,0,41,Nurture,core segment; open framework
+45,syn-035,Synthetic Signup 018,signup-018.example,Amsterdam,NL,6,direct_api,rising,15,0,25,0,40,Nurture,volume up four weeks running; direct api; self hosted
+46,syn-050,Synthetic Signup 033,signup-033.example,Toronto,CA,3,direct_api,rising,15,0,25,0,40,Nurture,volume up four weeks running; direct api; self hosted
+47,syn-054,Synthetic Signup 037,signup-037.example,Bangalore,IN,1,self_hosted,rising,15,0,25,0,40,Nurture,volume up four weeks running; self hosted; self hosted
+48,syn-061,Synthetic Signup 044,signup-044.example,London,GB,13,direct_api,rising,15,0,25,0,40,Nurture,volume up four weeks running; direct api
+49,syn-063,Synthetic Signup 046,signup-046.example,Amsterdam,NL,4936,open_framework,flat,6,4,25,5,40,Nurture,open framework; job: specialist role
+50,syn-181,Synthetic Signup 164,signup-164.example,Sao Paulo,BR,3,direct_api,falling,0,10,25,5,40,Nurture,core segment; direct api; self hosted; docs: technical need
+51,syn-031,Synthetic Signup 014,signup-014.example,Paris,FR,4086,self_hosted,falling,0,14,25,0,39,Nurture,core segment; self hosted
+52,syn-118,Synthetic Signup 101,signup-101.example,Toronto,CA,40,direct_api,flat,6,8,25,0,39,Nurture,40 staff; direct api
+53,syn-155,Synthetic Signup 138,signup-138.example,Austin,US,402,direct_api,flat,6,8,25,0,39,Nurture,402 staff; direct api; self hosted
+54,syn-197,Synthetic Signup 180,signup-180.example,Paris,FR,358,open_framework,flat,6,8,25,0,39,Nurture,358 staff; open framework
+55,syn-091,Synthetic Signup 074,signup-074.example,Hamburg,DE,45,direct_api,falling,0,8,25,5,38,Nurture,"45 staff; direct api; incumbent tool already in product (displacement, warm)"
+56,syn-126,Synthetic Signup 109,signup-109.example,Milan,IT,33,,none,0,25,10,3,38,Nurture,core segment; 33 staff; funded 8 months ago; unknown; in house build
+57,syn-130,Synthetic Signup 113,signup-113.example,London,GB,42,,none,0,18,10,10,38,Nurture,"core segment; 42 staff; unknown; self hosted; docs: technical need; incumbent tool already in product (displacement, warm)"
+58,syn-194,Synthetic Signup 177,signup-177.example,Madrid,ES,3,reseller_channel,rising,15,17,6,0,38,"Nurture, flag to the reseller channel owner","volume up four weeks running; core segment; funded 13 months ago; reseller channel; scores a quarter, a partner already sells to this account"
+59,syn-165,Synthetic Signup 148,signup-148.example,New York,US,2,,none,0,17,10,10,37,Nurture,"core segment; funded 18 months ago; unknown; docs: technical need; incumbent tool already in product (displacement, warm)"
+60,syn-040,Synthetic Signup 023,signup-023.example,Berlin,DE,166,,none,0,25,10,0,35,Nurture,core segment; 166 staff; funded 4 months ago; unknown
+61,syn-089,Synthetic Signup 072,signup-072.example,Hamburg,DE,12,direct_api,falling,0,10,25,0,35,Nurture,core segment; direct api
+62,syn-107,Synthetic Signup 090,signup-090.example,Madrid,ES,2,direct_api,falling,0,10,25,0,35,Nurture,core segment; direct api; self hosted
+63,syn-187,Synthetic Signup 170,signup-170.example,Milan,IT,16,direct_api,falling,0,10,25,0,35,Nurture,core segment; direct api
+64,syn-207,Synthetic Signup 190,signup-190.example,Stockholm,SE,10,open_framework,falling,0,10,25,0,35,Nurture,core segment; open framework
+65,syn-214,Synthetic Signup 197,signup-197.example,London,GB,45,,none,0,25,10,0,35,Nurture,core segment; 45 staff; funded 13 months ago; unknown; self hosted
+66,syn-167,Synthetic Signup 150,signup-150.example,Madrid,ES,13,direct_api,flat,6,0,25,3,34,Nurture,direct api; in house build
+67,syn-185,Synthetic Signup 168,signup-168.example,Toronto,CA,23,reseller_channel,falling,0,18,6,10,34,"Nurture, flag to the reseller channel owner","core segment; 23 staff; reseller channel; scores a quarter, a partner already sells to this account; docs: technical need; incumbent tool already in product (displacement, warm)"
+68,syn-075,Synthetic Signup 058,signup-058.example,Toronto,CA,229,,none,0,18,10,5,33,Nurture,"core segment; 229 staff; unknown; incumbent tool already in product (displacement, warm)"
+69,syn-083,Synthetic Signup 066,signup-066.example,Stockholm,SE,44,direct_api,falling,0,8,25,0,33,Nurture,44 staff; direct api
+70,syn-172,Synthetic Signup 155,signup-155.example,Sao Paulo,BR,26,,none,0,18,10,5,33,Nurture,core segment; 26 staff; unknown; docs: technical need
+71,syn-178,Synthetic Signup 161,signup-161.example,Bangalore,IN,30,direct_api,falling,0,8,25,0,33,Nurture,30 staff; direct api
+72,syn-224,Synthetic Signup 207,signup-207.example,Milan,IT,34,direct_api,falling,0,8,25,0,33,Nurture,34 staff; direct api; self hosted
+73,syn-028,Synthetic Signup 011,signup-011.example,New York,US,15,,none,0,17,10,5,32,Nurture,core segment; funded 8 months ago; unknown; job: specialist role
+74,syn-034,Synthetic Signup 017,signup-017.example,Munich,DE,2,,none,0,17,10,5,32,Nurture,"core segment; funded 3 months ago; unknown; incumbent tool already in product (displacement, warm)"
+75,syn-100,Synthetic Signup 083,signup-083.example,Munich,DE,12,open_framework,falling,0,7,25,0,32,Nurture,funded 3 months ago; open framework
+76,syn-132,Synthetic Signup 115,signup-115.example,Berlin,DE,4,open_framework,falling,0,7,25,0,32,Nurture,funded 4 months ago; open framework; self hosted
+77,syn-133,Synthetic Signup 116,signup-116.example,New York,US,18,direct_api,falling,0,7,25,0,32,Nurture,funded 8 months ago; direct api
+78,syn-162,Synthetic Signup 145,signup-145.example,London,GB,3,,none,0,17,10,5,32,Nurture,"core segment; funded 7 months ago; unknown; incumbent tool already in product (displacement, warm)"
+79,syn-026,Synthetic Signup 009,signup-009.example,New York,US,5,direct_api,flat,6,0,25,0,31,Nurture,direct api
+80,syn-038,Synthetic Signup 021,signup-021.example,Bangalore,IN,8,open_framework,flat,6,0,25,0,31,Nurture,open framework; self hosted
+81,syn-073,Synthetic Signup 056,signup-056.example,Stockholm,SE,2,direct_api,flat,6,0,25,0,31,Nurture,direct api
+82,syn-086,Synthetic Signup 069,signup-069.example,Hamburg,DE,3,self_hosted,flat,6,0,25,0,31,Nurture,self hosted
+83,syn-087,Synthetic Signup 070,signup-070.example,Hamburg,DE,6,self_hosted,flat,6,0,25,0,31,Nurture,self hosted
+84,syn-093,Synthetic Signup 076,signup-076.example,Madrid,ES,10,open_framework,flat,6,0,25,0,31,Nurture,open framework; self hosted
+85,syn-137,Synthetic Signup 120,signup-120.example,Amsterdam,NL,1,open_framework,flat,6,0,25,0,31,Nurture,open framework
+86,syn-144,Synthetic Signup 127,signup-127.example,Stockholm,SE,2,direct_api,flat,6,0,25,0,31,Nurture,direct api
+87,syn-217,Synthetic Signup 200,signup-200.example,Berlin,DE,26,,none,0,18,10,3,31,Nurture,core segment; 26 staff; unknown; self hosted; in house build
+88,syn-096,Synthetic Signup 079,signup-079.example,Milan,IT,4503,direct_api,falling,0,4,25,0,29,Nurture,direct api
+89,syn-102,Synthetic Signup 085,signup-085.example,Madrid,ES,153,partner_marketplace,rising,15,8,6,0,29,"Nurture, flag to the marketplace partner owner","volume up four weeks running; 153 staff; partner marketplace; scores a quarter, a partner already sells to this account"
+90,syn-005,Synthetic Company E,company-e.example,London,GB,15,partner_marketplace,rising,22,0,6,0,28,"Nurture, flag to the marketplace partner owner","volume up four weeks running; 11,000 units last week; partner marketplace; scores a quarter, a partner already sells to this account"
+91,syn-078,Synthetic Signup 061,signup-061.example,Madrid,ES,343,,none,0,18,10,0,28,Nurture,core segment; 343 staff; unknown
+92,syn-082,Synthetic Signup 065,signup-065.example,Warsaw,PL,49,,none,0,18,10,0,28,Nurture,core segment; 49 staff; unknown; self hosted
+93,syn-095,Synthetic Signup 078,signup-078.example,Berlin,DE,21,,none,0,18,10,0,28,Nurture,core segment; 21 staff; unknown
+94,syn-099,Synthetic Signup 082,signup-082.example,Berlin,DE,433,,none,0,8,10,10,28,Nurture,"433 staff; unknown; job: specialist role; incumbent tool already in product (displacement, warm)"
+95,syn-108,Synthetic Signup 091,signup-091.example,Toronto,CA,277,,none,0,18,10,0,28,Nurture,core segment; 277 staff; unknown
+96,syn-113,Synthetic Signup 096,signup-096.example,Milan,IT,103,,none,0,18,10,0,28,Nurture,core segment; 103 staff; unknown
+97,syn-121,Synthetic Signup 104,signup-104.example,Berlin,DE,38,,none,0,18,10,0,28,Nurture,core segment; 38 staff; unknown
+98,syn-125,Synthetic Signup 108,signup-108.example,Toronto,CA,1,open_framework,falling,0,0,25,3,28,Nurture,open framework; in house build
+99,syn-145,Synthetic Signup 128,signup-128.example,Paris,FR,63,,none,0,18,10,0,28,Nurture,core segment; 63 staff; unknown
+100,syn-161,Synthetic Signup 144,signup-144.example,Bangalore,IN,40,,none,0,18,10,0,28,Nurture,core segment; 40 staff; unknown; self hosted
+101,syn-169,Synthetic Signup 152,signup-152.example,Toronto,CA,29,,none,0,18,10,0,28,Nurture,core segment; 29 staff; unknown; self hosted
+102,syn-203,Synthetic Signup 186,signup-186.example,Stockholm,SE,21,,none,0,18,10,0,28,Nurture,core segment; 21 staff; unknown; self hosted
+103,syn-210,Synthetic Signup 193,signup-193.example,Warsaw,PL,32,,none,0,18,10,0,28,Nurture,core segment; 32 staff; unknown
+104,syn-225,Synthetic Signup 208,signup-208.example,Austin,US,473,,none,0,18,10,0,28,Nurture,core segment; 473 staff; unknown; self hosted
+105,syn-023,Synthetic Signup 006,signup-006.example,New York,US,11,partner_marketplace,flat,6,10,6,5,27,"Nurture, flag to the marketplace partner owner","core segment; partner marketplace; scores a quarter, a partner already sells to this account; self hosted; job: specialist role"
+106,syn-039,Synthetic Signup 022,signup-022.example,Munich,DE,9,,none,0,17,10,0,27,Nurture,core segment; funded 5 months ago; unknown
+107,syn-196,Synthetic Signup 179,signup-179.example,Milan,IT,8,,none,0,17,10,0,27,Nurture,core segment; funded 18 months ago; unknown
+108,syn-009,Synthetic Company I,company-i.example,Lisbon,PT,2,direct_api,falling,0,0,25,0,25,Nurture,direct api
+109,syn-019,Synthetic Signup 002,signup-002.example,Warsaw,PL,15,direct_api,falling,0,0,25,0,25,Nurture,direct api
+110,syn-030,Synthetic Signup 013,signup-013.example,Sao Paulo,BR,1,direct_api,falling,0,0,25,0,25,Nurture,direct api; self hosted
+111,syn-047,Synthetic Signup 030,signup-030.example,London,GB,3,self_hosted,falling,0,0,25,0,25,Nurture,self hosted; self hosted
+112,syn-058,Synthetic Signup 041,signup-041.example,New York,US,5,self_hosted,falling,0,0,25,0,25,Nurture,self hosted; self hosted
+113,syn-071,Synthetic Signup 054,signup-054.example,Berlin,DE,6,self_hosted,falling,0,0,25,0,25,Nurture,self hosted
+114,syn-088,Synthetic Signup 071,signup-071.example,Milan,IT,1,direct_api,falling,0,0,25,0,25,Nurture,direct api
+115,syn-110,Synthetic Signup 093,signup-093.example,Berlin,DE,2,open_framework,falling,0,0,25,0,25,Nurture,open framework; self hosted
+116,syn-116,Synthetic Signup 099,signup-099.example,Austin,US,11,self_hosted,falling,0,0,25,0,25,Nurture,self hosted; self hosted
+117,syn-120,Synthetic Signup 103,signup-103.example,Paris,FR,5,direct_api,falling,0,0,25,0,25,Nurture,direct api; self hosted
+118,syn-134,Synthetic Signup 117,signup-117.example,Bangalore,IN,5,direct_api,falling,0,0,25,0,25,Nurture,direct api
+119,syn-136,Synthetic Signup 119,signup-119.example,Milan,IT,9,open_framework,falling,0,0,25,0,25,Nurture,open framework; self hosted
+120,syn-141,Synthetic Signup 124,signup-124.example,Bangalore,IN,92,,none,0,15,10,0,25,Nurture,92 staff; funded 8 months ago; unknown
+121,syn-179,Synthetic Signup 162,signup-162.example,New York,US,16,direct_api,falling,0,0,25,0,25,Nurture,direct api; self hosted
+122,syn-183,Synthetic Signup 166,signup-166.example,Sao Paulo,BR,10,direct_api,falling,0,0,25,0,25,Nurture,direct api
+123,syn-186,Synthetic Signup 169,signup-169.example,Berlin,DE,26,reseller_channel,flat,6,8,6,5,25,"Nurture, flag to the reseller channel owner","26 staff; reseller channel; scores a quarter, a partner already sells to this account; docs: technical need"
+124,syn-192,Synthetic Signup 175,signup-175.example,Bangalore,IN,4,direct_api,falling,0,0,25,0,25,Nurture,direct api
+125,syn-199,Synthetic Signup 182,signup-182.example,Paris,FR,1,direct_api,falling,0,0,25,0,25,Nurture,direct api
+126,syn-219,Synthetic Signup 202,signup-202.example,Warsaw,PL,7,open_framework,falling,0,0,25,0,25,Nurture,open framework
+127,syn-142,Synthetic Signup 125,signup-125.example,Munich,DE,22,partner_marketplace,falling,0,18,6,0,24,"Nurture, flag to the marketplace partner owner","core segment; 22 staff; partner marketplace; scores a quarter, a partner already sells to this account"
+128,syn-177,Synthetic Signup 160,signup-160.example,Warsaw,PL,1431,,none,0,14,10,0,24,Nurture,core segment; unknown
+129,syn-208,Synthetic Signup 191,signup-191.example,Milan,IT,1993,,none,0,14,10,0,24,Nurture,core segment; unknown
+130,syn-212,Synthetic Signup 195,signup-195.example,Milan,IT,2084,,none,0,14,10,0,24,Nurture,core segment; unknown
+131,syn-222,Synthetic Signup 205,signup-205.example,Madrid,ES,2931,,none,0,14,10,0,24,Nurture,core segment; unknown
+132,syn-052,Synthetic Signup 035,signup-035.example,Paris,FR,2,reseller_channel,falling,0,17,6,0,23,"Nurture, flag to the reseller channel owner","core segment; funded 13 months ago; reseller channel; scores a quarter, a partner already sells to this account"
+133,syn-074,Synthetic Signup 057,signup-057.example,Paris,FR,309,,none,0,8,10,5,23,Nurture,309 staff; unknown; job: specialist role
+134,syn-077,Synthetic Signup 060,signup-060.example,Sao Paulo,BR,245,,none,0,8,10,5,23,Nurture,"245 staff; unknown; incumbent tool already in product (displacement, warm)"
+135,syn-106,Synthetic Signup 089,signup-089.example,Toronto,CA,198,,none,0,8,10,5,23,Nurture,"198 staff; unknown; self hosted; incumbent tool already in product (displacement, warm)"
+136,syn-150,Synthetic Signup 133,signup-133.example,Madrid,ES,36,,none,0,8,10,5,23,Nurture,"36 staff; unknown; self hosted; incumbent tool already in product (displacement, warm)"
+137,syn-151,Synthetic Signup 134,signup-134.example,Warsaw,PL,128,,none,0,8,10,5,23,Nurture,"128 staff; unknown; incumbent tool already in product (displacement, warm)"
+138,syn-205,Synthetic Signup 188,signup-188.example,London,GB,4,partner_marketplace,falling,0,17,6,0,23,"Nurture, flag to the marketplace partner owner","core segment; funded 4 months ago; partner marketplace; scores a quarter, a partner already sells to this account"
+139,syn-206,Synthetic Signup 189,signup-189.example,Bangalore,IN,9,partner_marketplace,falling,0,17,6,0,23,"Nurture, flag to the marketplace partner owner","core segment; funded 12 months ago; partner marketplace; scores a quarter, a partner already sells to this account; self hosted"
+140,syn-067,Synthetic Signup 050,signup-050.example,Madrid,ES,9,,none,0,7,10,5,22,Nurture,funded 14 months ago; unknown; self hosted; docs: technical need
+141,syn-170,Synthetic Signup 153,signup-153.example,Hamburg,DE,2,partner_marketplace,flat,6,10,6,0,22,"Nurture, flag to the marketplace partner owner","core segment; partner marketplace; scores a quarter, a partner already sells to this account"
+142,syn-045,Synthetic Signup 028,signup-028.example,Madrid,ES,25,,none,0,8,10,3,21,Nurture,25 staff; unknown; in house build
+143,syn-049,Synthetic Signup 032,signup-032.example,London,GB,1,partner_marketplace,rising,15,0,6,0,21,"Nurture, flag to the marketplace partner owner","volume up four weeks running; partner marketplace; scores a quarter, a partner already sells to this account; self hosted"
+144,syn-051,Synthetic Signup 034,signup-034.example,Paris,FR,4,partner_marketplace,rising,15,0,6,0,21,"Nurture, flag to the marketplace partner owner","volume up four weeks running; partner marketplace; scores a quarter, a partner already sells to this account"
+145,syn-068,Synthetic Signup 051,signup-051.example,New York,US,412,,none,0,8,10,3,21,Nurture,412 staff; unknown; self hosted; in house build
+146,syn-043,Synthetic Signup 026,signup-026.example,Madrid,ES,4,,none,0,10,10,0,20,Nurture,core segment; unknown; self hosted
+147,syn-044,Synthetic Signup 027,signup-027.example,Warsaw,PL,8,,none,0,10,10,0,20,Nurture,core segment; unknown; self hosted
+148,syn-053,Synthetic Signup 036,signup-036.example,Berlin,DE,2,,none,0,10,10,0,20,Nurture,core segment; unknown; self hosted
+149,syn-115,Synthetic Signup 098,signup-098.example,Milan,IT,9,,none,0,10,10,0,20,Nurture,core segment; unknown; self hosted
+150,syn-149,Synthetic Signup 132,signup-132.example,Stockholm,SE,1,,none,0,10,10,0,20,Nurture,core segment; unknown
+151,syn-164,Synthetic Signup 147,signup-147.example,Berlin,DE,8,,none,0,10,10,0,20,Nurture,core segment; unknown
+152,syn-188,Synthetic Signup 171,signup-171.example,Amsterdam,NL,7,,none,0,10,10,0,20,Nurture,core segment; unknown
+153,syn-209,Synthetic Signup 192,signup-192.example,London,GB,6,,none,0,10,10,0,20,Nurture,core segment; unknown
+154,syn-211,Synthetic Signup 194,signup-194.example,Milan,IT,45,partner_marketplace,flat,6,8,6,0,20,"Nurture, flag to the marketplace partner owner","45 staff; partner marketplace; scores a quarter, a partner already sells to this account"
+155,syn-104,Synthetic Signup 087,signup-087.example,Austin,US,341,partner_marketplace,falling,0,8,6,5,19,"Nurture, flag to the marketplace partner owner","341 staff; partner marketplace; scores a quarter, a partner already sells to this account; docs: technical need"
+156,syn-156,Synthetic Signup 139,signup-139.example,Hamburg,DE,4386,,none,0,4,10,5,19,Nurture,"unknown; self hosted; incumbent tool already in product (displacement, warm)"
+157,syn-020,Synthetic Signup 003,signup-003.example,Berlin,DE,25,,none,0,8,10,0,18,Nurture,25 staff; unknown
+158,syn-037,Synthetic Signup 020,signup-020.example,New York,US,241,,none,0,8,10,0,18,Nurture,241 staff; unknown
+159,syn-048,Synthetic Signup 031,signup-031.example,Milan,IT,46,,none,0,8,10,0,18,Nurture,46 staff; unknown; self hosted
+160,syn-060,Synthetic Signup 043,signup-043.example,Hamburg,DE,36,,none,0,8,10,0,18,Nurture,36 staff; unknown; self hosted
+161,syn-064,Synthetic Signup 047,signup-047.example,London,GB,30,,none,0,8,10,0,18,Nurture,30 staff; unknown
+162,syn-094,Synthetic Signup 077,signup-077.example,Austin,US,317,,none,0,8,10,0,18,Nurture,317 staff; unknown; self hosted
+163,syn-111,Synthetic Signup 094,signup-094.example,Stockholm,SE,25,,none,0,8,10,0,18,Nurture,25 staff; unknown
+164,syn-112,Synthetic Signup 095,signup-095.example,Sao Paulo,BR,8,partner_marketplace,falling,0,7,6,5,18,"Nurture, flag to the marketplace partner owner","funded 11 months ago; partner marketplace; scores a quarter, a partner already sells to this account; incumbent tool already in product (displacement, warm)"
+165,syn-124,Synthetic Signup 107,signup-107.example,Austin,US,34,,none,0,8,10,0,18,Nurture,34 staff; unknown
+166,syn-131,Synthetic Signup 114,signup-114.example,Stockholm,SE,23,,none,0,8,10,0,18,Nurture,23 staff; unknown
+167,syn-135,Synthetic Signup 118,signup-118.example,Bangalore,IN,337,,none,0,8,10,0,18,Nurture,337 staff; unknown; self hosted
+168,syn-154,Synthetic Signup 137,signup-137.example,Toronto,CA,39,,none,0,8,10,0,18,Nurture,39 staff; unknown
+169,syn-173,Synthetic Signup 156,signup-156.example,Hamburg,DE,312,,none,0,8,10,0,18,Nurture,312 staff; unknown; self hosted
+170,syn-180,Synthetic Signup 163,signup-163.example,Milan,IT,40,,none,0,8,10,0,18,Nurture,40 staff; unknown
+171,syn-182,Synthetic Signup 165,signup-165.example,Hamburg,DE,27,,none,0,8,10,0,18,Nurture,27 staff; unknown
+172,syn-200,Synthetic Signup 183,signup-183.example,Austin,US,36,,none,0,8,10,0,18,Nurture,36 staff; unknown
+173,syn-204,Synthetic Signup 187,signup-187.example,Warsaw,PL,173,,none,0,8,10,0,18,Nurture,173 staff; unknown
+174,syn-216,Synthetic Signup 199,signup-199.example,Stockholm,SE,44,,none,0,8,10,0,18,Nurture,44 staff; unknown
+175,syn-218,Synthetic Signup 201,signup-201.example,Stockholm,SE,129,,none,0,8,10,0,18,Nurture,129 staff; unknown
+176,syn-221,Synthetic Signup 204,signup-204.example,Milan,IT,48,,none,0,8,10,0,18,Nurture,48 staff; unknown; self hosted
+177,syn-223,Synthetic Signup 206,signup-206.example,London,GB,437,,none,0,8,10,0,18,Nurture,437 staff; unknown
+178,syn-226,Synthetic Signup 209,signup-209.example,Stockholm,SE,35,,none,0,8,10,0,18,Nurture,35 staff; unknown
+179,syn-027,Synthetic Signup 010,signup-010.example,Munich,DE,1,,none,0,7,10,0,17,Nurture,funded 10 months ago; unknown
+180,syn-127,Synthetic Signup 110,signup-110.example,Austin,US,7,,none,0,7,10,0,17,Nurture,funded 12 months ago; unknown
+181,syn-213,Synthetic Signup 196,signup-196.example,Toronto,CA,10,,none,0,7,10,0,17,Nurture,funded 12 months ago; unknown
+182,syn-227,Synthetic Signup 210,signup-210.example,Milan,IT,10,,none,0,7,10,0,17,Nurture,funded 7 months ago; unknown
+183,syn-042,Synthetic Signup 025,signup-025.example,London,GB,8,partner_marketplace,falling,0,10,6,0,16,"Nurture, flag to the marketplace partner owner","core segment; partner marketplace; scores a quarter, a partner already sells to this account"
+184,syn-066,Synthetic Signup 049,signup-049.example,Berlin,DE,9,partner_marketplace,falling,0,10,6,0,16,"Nurture, flag to the marketplace partner owner","core segment; partner marketplace; scores a quarter, a partner already sells to this account; self hosted"
+185,syn-024,Synthetic Signup 007,signup-007.example,Austin,US,4,,none,0,0,10,5,15,Nurture,"unknown; incumbent tool already in product (displacement, warm)"
+186,syn-029,Synthetic Signup 012,signup-012.example,Hamburg,DE,3726,,none,0,4,10,0,14,Nurture,unknown
+187,syn-055,Synthetic Signup 038,signup-038.example,Warsaw,PL,4553,,none,0,4,10,0,14,Nurture,unknown
+188,syn-065,Synthetic Signup 048,signup-048.example,Milan,IT,4476,,none,0,4,10,0,14,Nurture,unknown; self hosted
+189,syn-080,Synthetic Signup 063,signup-063.example,Hamburg,DE,338,partner_marketplace,falling,0,8,6,0,14,"Nurture, flag to the marketplace partner owner","338 staff; partner marketplace; scores a quarter, a partner already sells to this account"
+190,syn-105,Synthetic Signup 088,signup-088.example,Milan,IT,3833,,none,0,4,10,0,14,Nurture,unknown
+191,syn-084,Synthetic Signup 067,signup-067.example,Madrid,ES,5,partner_marketplace,falling,0,7,6,0,13,"Nurture, flag to the marketplace partner owner","funded 17 months ago; partner marketplace; scores a quarter, a partner already sells to this account"
+192,syn-092,Synthetic Signup 075,signup-075.example,Madrid,ES,13,partner_marketplace,falling,0,7,6,0,13,"Nurture, flag to the marketplace partner owner","funded 13 months ago; partner marketplace; scores a quarter, a partner already sells to this account"
+193,syn-176,Synthetic Signup 159,signup-159.example,New York,US,1,,none,0,0,10,3,13,Nurture,unknown; in house build
+194,syn-202,Synthetic Signup 185,signup-185.example,Hamburg,DE,19,,none,0,0,10,3,13,Nurture,unknown; in house build
+195,syn-059,Synthetic Signup 042,signup-042.example,Sao Paulo,BR,7,partner_marketplace,flat,6,0,6,0,12,"Nurture, flag to the marketplace partner owner","partner marketplace; scores a quarter, a partner already sells to this account"
+196,syn-103,Synthetic Signup 086,signup-086.example,Sao Paulo,BR,2,reseller_channel,flat,6,0,6,0,12,"Nurture, flag to the reseller channel owner","reseller channel; scores a quarter, a partner already sells to this account"
+197,syn-018,Synthetic Signup 001,signup-001.example,Madrid,ES,7,,none,0,0,10,0,10,Nurture,unknown; self hosted
+198,syn-033,Synthetic Signup 016,signup-016.example,Stockholm,SE,12,,none,0,0,10,0,10,Nurture,unknown
+199,syn-046,Synthetic Signup 029,signup-029.example,Munich,DE,9,,none,0,0,10,0,10,Nurture,unknown
+200,syn-056,Synthetic Signup 039,signup-039.example,London,GB,8,,none,0,0,10,0,10,Nurture,unknown; self hosted
+201,syn-069,Synthetic Signup 052,signup-052.example,Munich,DE,12,,none,0,0,10,0,10,Nurture,unknown
+202,syn-081,Synthetic Signup 064,signup-064.example,Paris,FR,3,,none,0,0,10,0,10,Nurture,unknown
+203,syn-085,Synthetic Signup 068,signup-068.example,Madrid,ES,1,,none,0,0,10,0,10,Nurture,unknown; self hosted
+204,syn-097,Synthetic Signup 080,signup-080.example,Milan,IT,7,,none,0,0,10,0,10,Nurture,unknown
+205,syn-098,Synthetic Signup 081,signup-081.example,Warsaw,PL,1,,none,0,0,10,0,10,Nurture,unknown; self hosted
+206,syn-109,Synthetic Signup 092,signup-092.example,Bangalore,IN,12,,none,0,0,10,0,10,Nurture,unknown
+207,syn-117,Synthetic Signup 100,signup-100.example,Sao Paulo,BR,3,,none,0,0,10,0,10,Nurture,unknown
+208,syn-119,Synthetic Signup 102,signup-102.example,Berlin,DE,9,,none,0,0,10,0,10,Nurture,unknown
+209,syn-123,Synthetic Signup 106,signup-106.example,Berlin,DE,1,,none,0,0,10,0,10,Nurture,unknown
+210,syn-129,Synthetic Signup 112,signup-112.example,Toronto,CA,9,,none,0,0,10,0,10,Nurture,unknown
+211,syn-138,Synthetic Signup 121,signup-121.example,Austin,US,7,,none,0,0,10,0,10,Nurture,unknown
+212,syn-140,Synthetic Signup 123,signup-123.example,Stockholm,SE,10,,none,0,0,10,0,10,Nurture,unknown
+213,syn-143,Synthetic Signup 126,signup-126.example,Austin,US,5,,none,0,0,10,0,10,Nurture,unknown
+214,syn-146,Synthetic Signup 129,signup-129.example,Munich,DE,17,,none,0,0,10,0,10,Nurture,unknown
+215,syn-148,Synthetic Signup 131,signup-131.example,Munich,DE,5,,none,0,0,10,0,10,Nurture,unknown
+216,syn-152,Synthetic Signup 135,signup-135.example,Hamburg,DE,3,,none,0,0,10,0,10,Nurture,unknown; self hosted
+217,syn-160,Synthetic Signup 143,signup-143.example,Amsterdam,NL,1,,none,0,0,10,0,10,Nurture,unknown
+218,syn-166,Synthetic Signup 149,signup-149.example,Sao Paulo,BR,9,,none,0,0,10,0,10,Nurture,unknown
+219,syn-168,Synthetic Signup 151,signup-151.example,Toronto,CA,10,,none,0,0,10,0,10,Nurture,unknown
+220,syn-171,Synthetic Signup 154,signup-154.example,Berlin,DE,15,,none,0,0,10,0,10,Nurture,unknown
+221,syn-174,Synthetic Signup 157,signup-157.example,New York,US,5,,none,0,0,10,0,10,Nurture,unknown
+222,syn-175,Synthetic Signup 158,signup-158.example,Stockholm,SE,2,,none,0,0,10,0,10,Nurture,unknown
+223,syn-215,Synthetic Signup 198,signup-198.example,Austin,US,2,,none,0,0,10,0,10,Nurture,unknown
+224,syn-220,Synthetic Signup 203,signup-203.example,Sao Paulo,BR,1,,none,0,0,10,0,10,Nurture,unknown; self hosted
+225,syn-070,Synthetic Signup 053,signup-053.example,Madrid,ES,7,reseller_channel,falling,0,0,6,0,6,"Nurture, flag to the reseller channel owner","reseller channel; scores a quarter, a partner already sells to this account"
+226,syn-139,Synthetic Signup 122,signup-122.example,Hamburg,DE,4,partner_marketplace,falling,0,0,6,0,6,"Nurture, flag to the marketplace partner owner","partner marketplace; scores a quarter, a partner already sells to this account"
+227,syn-158,Synthetic Signup 141,signup-141.example,Munich,DE,9,partner_marketplace,falling,0,0,6,0,6,"Nurture, flag to the marketplace partner owner","partner marketplace; scores a quarter, a partner already sells to this account"

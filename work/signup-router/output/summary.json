@@ -1,25 +1,13 @@
 {
-  "run_date": "2026-10-29",
+  "run_date": "2026-11-20",
   "input": "signups_week_43_synthetic.csv",
-  "rows_in": 20,
-  "excluded": [
-    {
-      "account_id": "syn-018",
-      "domain": "customer-one.example",
-      "reason": "existing customer or partner"
-    },
-    {
-      "account_id": "syn-019",
-      "domain": "partner-two.example",
-      "reason": "existing customer or partner"
-    },
-    {
-      "account_id": "syn-020",
-      "domain": "gmail.com",
-      "reason": "personal email"
-    }
-  ],
-  "scored": 17,
+  "rows_in": 318,
+  "excluded": 91,
+  "excluded_by_reason": {
+    "existing customer or partner": 3,
+    "personal email": 88
+  },
+  "scored": 227,
   "weights": {
     "usage": 35,
     "company": 25,
@@ -32,9 +20,9 @@
   },
   "actions": {
     "Custom benchmark, open the enterprise conversation": 4,
-    "Nurture": 3,
-    "Nurture, flag to the marketplace partner owner": 3,
-    "Nurture, flag to the reseller channel owner": 2,
-    "Offer the mid tier, open a shared Slack channel": 5
+    "Nurture": 171,
+    "Nurture, flag to the marketplace partner owner": 23,
+    "Nurture, flag to the reseller channel owner": 10,
+    "Offer the mid tier, open a shared Slack channel": 19
   }
 }

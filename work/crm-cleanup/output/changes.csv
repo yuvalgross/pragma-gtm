@@ -33,9 +33,9 @@ ch031,owners,approve,company,c102,Synthetic Grid Energy AG,hubspot_owner_id,o8,o
 ch032,owners,approve,company,c107,Synthetic Smart Meter Oy,hubspot_owner_id,o4,o6,"owner has left; customers go to account management; EUR 75,000 ARR"
 ch033,owners,approve,company,c109,Synthetic Bike Share GmbH,hubspot_owner_id,,o6,"no owner; customers go to account management; EUR 28,000 ARR"
 ch034,owners,approve,company,c111,Synthetic Parking ApS,hubspot_owner_id,o4,o6,"owner has left; customers go to account management; EUR 9,000 ARR"
-ch035,owners,approve,company,c115,Synthetic Garden Pump BV,hubspot_owner_id,o5,o6,owner has left; customers go to account management; EUR 600 ARR
-ch036,owners,approve,company,c116,Synthetic Beehive Monitor,hubspot_owner_id,o5,o6,owner has left; customers go to account management; EUR 240 ARR
-ch037,owners,approve,company,c118,Synthetic Hobby Drone,hubspot_owner_id,,o6,no owner; customers go to account management; EUR 12 ARR
+ch035,owners,approve,company,c115,Synthetic Garden Pump BV,hubspot_owner_id,o5,o6,"owner has left; customers go to account management; EUR 3,600 ARR"
+ch036,owners,approve,company,c116,Synthetic Beehive Monitor,hubspot_owner_id,o5,o6,"owner has left; customers go to account management; EUR 2,400 ARR"
+ch037,owners,approve,company,c118,Synthetic Hobby Drone,hubspot_owner_id,,o6,"no owner; customers go to account management; EUR 1,200 ARR"
 ch038,owners,approve,company,c204,Nordwind Fleet,hubspot_owner_id,o4,o7,owner has left; territory Nordics
 ch039,owners,approve,company,c210,Synthetic Smart Lock AS,hubspot_owner_id,o4,o7,owner has left; territory Nordics
 ch040,owners,approve,company,c214,Synthetic Scooter Oy,hubspot_owner_id,o4,o7,owner has left; territory Nordics

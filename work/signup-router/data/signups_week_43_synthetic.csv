@@ -1,21 +1,319 @@
 account_id,domain,email_type,signup_date,volume_w1,volume_w2,volume_w3,volume_w4,products_used,integration_path,company_name,hq_city,country,headcount,category,last_funding_months_ago,pain_signals,existing_tool,hosting
-syn-016,company-p.example,work,2026-10-23,800,1200,1900,2600,core_a,partner_marketplace,Synthetic Company P,Toronto,CA,9,core_segment,4,,none,cloud
+syn-223,signup-206.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 206,London,GB,437,other,99,,none,cloud
+syn-112,signup-095.example,work,2026-10-23,94,31,9,0,core_a,partner_marketplace,Synthetic Signup 095,Sao Paulo,BR,8,other,11,,incumbent,cloud
+syn-258,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-287,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-047,signup-030.example,work,2026-10-24,851,283,42,0,core_b,self_hosted,Synthetic Signup 030,London,GB,3,other,99,,none,self
+syn-250,gmx.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-096,signup-079.example,work,2026-10-19,565,188,30,0,core_b,direct_api,Synthetic Signup 079,Milan,IT,4503,other,99,,none,cloud
+syn-306,web.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-201,signup-184.example,work,2026-10-22,30,30,32,28,core_a,open_framework,Synthetic Signup 184,Madrid,ES,8,core_segment,40,,incumbent,unknown
+syn-188,signup-171.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 171,Amsterdam,NL,7,core_segment,99,,none,cloud
+syn-043,signup-026.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 026,Madrid,ES,4,core_segment,99,,none,self
+syn-266,hotmail.com,personal,2026-10-21,429,165,88,413,core_a,,,,,0,,0,,none,unknown
+syn-285,yahoo.com,personal,2026-10-21,527,381,264,552,core_a,direct_api,,,,0,,0,,none,unknown
+syn-256,proton.me,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-130,signup-113.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 113,London,GB,42,core_segment,99,docs:technical need,incumbent,self
+syn-194,signup-177.example,work,2026-10-21,324,421,550,712,core_b,reseller_channel,Synthetic Signup 177,Madrid,ES,3,core_segment,13,,none,cloud
+syn-208,signup-191.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 191,Milan,IT,1993,core_segment,99,,none,cloud
+syn-039,signup-022.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 022,Munich,DE,9,core_segment,5,,none,unknown
+syn-215,signup-198.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 198,Austin,US,2,other,99,,none,cloud
+syn-183,signup-166.example,work,2026-10-22,206,68,2,0,core_a,direct_api,Synthetic Signup 166,Sao Paulo,BR,10,other,99,,none,cloud
+syn-035,signup-018.example,work,2026-10-24,196,254,333,431,core_b,direct_api,Synthetic Signup 018,Amsterdam,NL,6,other,99,,none,self
+syn-118,signup-101.example,work,2026-10-23,1382,1271,1181,1204,core_b,direct_api,Synthetic Signup 101,Toronto,CA,40,other,99,,none,cloud
+syn-160,signup-143.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 143,Amsterdam,NL,1,other,99,,none,unknown
+syn-230,customer-one.example,work,2026-10-21,500,800,600,900,core_a,direct_api,Customer One,London,GB,300,core_segment,12,,none,self
+syn-089,signup-072.example,work,2026-10-24,1472,490,48,0,core_a,direct_api,Synthetic Signup 072,Hamburg,DE,12,core_segment,27,,none,cloud
+syn-134,signup-117.example,work,2026-10-21,433,144,5,0,core_b,direct_api,Synthetic Signup 117,Bangalore,IN,5,other,99,,none,cloud
+syn-142,signup-125.example,work,2026-10-23,1021,340,30,0,core_a,partner_marketplace,Synthetic Signup 125,Munich,DE,22,core_segment,99,,none,unknown
+syn-068,signup-051.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 051,New York,US,412,other,99,,inhouse,self
+syn-239,web.de,personal,2026-10-21,421,352,61,36,core_a,direct_api,,,,0,,0,,none,unknown
+syn-262,outlook.com,personal,2026-10-21,270,167,272,139,core_a,,,,,0,,0,,none,unknown
+syn-078,signup-061.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 061,Madrid,ES,343,core_segment,99,,none,cloud
+syn-203,signup-186.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 186,Stockholm,SE,21,core_segment,99,,none,self
+syn-246,gmail.com,personal,2026-10-21,47,10,579,400,core_a,,,,,0,,0,,none,unknown
+syn-278,gmx.de,personal,2026-10-21,122,323,109,550,core_a,direct_api,,,,0,,0,,none,unknown
 syn-005,company-e.example,work,2026-10-24,4000,6000,8000,11000,core_a,partner_marketplace,Synthetic Company E,London,GB,15,other,40,,none,cloud
-syn-018,customer-one.example,work,2026-10-21,40000,42000,41000,43000,core_b,direct_api,Customer One,London,GB,300,core_segment,12,,none,self
-syn-010,company-j.example,work,2026-10-23,7000,7500,9000,12000,core_b;addon_y,open_framework,Synthetic Company J,Hamburg,DE,140,core_segment,16,job:specialist role;docs:technical need,none,cloud
+syn-191,signup-174.example,work,2026-10-24,753,829,783,805,core_b,open_framework,Synthetic Signup 174,Hamburg,DE,12,core_segment,99,,none,cloud
+syn-242,yahoo.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-311,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-169,signup-152.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 152,Toronto,CA,29,core_segment,28,,none,self
+syn-121,signup-104.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 104,Berlin,DE,38,core_segment,99,,none,unknown
+syn-067,signup-050.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 050,Madrid,ES,9,other,14,docs:technical need,none,self
+syn-062,signup-045.example,work,2026-10-21,227,187,238,240,core_a,open_framework,Synthetic Signup 045,Milan,IT,359,core_segment,33,docs:technical need,inhouse,self
+syn-296,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-146,signup-129.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 129,Munich,DE,17,other,99,,none,cloud
+syn-085,signup-068.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 068,Madrid,ES,1,other,99,,none,self
+syn-136,signup-119.example,work,2026-10-23,336,112,17,0,core_b,open_framework,Synthetic Signup 119,Milan,IT,9,other,26,,none,self
+syn-038,signup-021.example,work,2026-10-21,1465,1303,1314,1191,core_a,open_framework,Synthetic Signup 021,Bangalore,IN,8,other,99,,none,self
+syn-086,signup-069.example,work,2026-10-21,52,39,46,51,core_a,self_hosted,Synthetic Signup 069,Hamburg,DE,3,other,99,,none,cloud
+syn-184,signup-167.example,work,2026-10-23,367,122,30,0,core_b,direct_api,Synthetic Signup 167,Stockholm,SE,22,core_segment,99,,none,cloud
+syn-128,signup-111.example,work,2026-10-21,1002,1071,984,1008,core_a,self_hosted,Synthetic Signup 111,Austin,US,71,core_segment,99,,none,unknown
+syn-129,signup-112.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 112,Toronto,CA,9,other,99,,none,cloud
+syn-318,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-186,signup-169.example,work,2026-10-19,1250,1307,1338,1392,core_a,reseller_channel,Synthetic Signup 169,Berlin,DE,26,other,99,docs:technical need,none,cloud
+syn-187,signup-170.example,work,2026-10-20,710,236,61,0,core_b,direct_api,Synthetic Signup 170,Milan,IT,16,core_segment,34,,none,cloud
+syn-167,signup-150.example,work,2026-10-24,944,959,1075,898,core_a,direct_api,Synthetic Signup 150,Madrid,ES,13,other,35,,inhouse,cloud
+syn-140,signup-123.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 123,Stockholm,SE,10,other,99,,none,cloud
+syn-037,signup-020.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 020,New York,US,241,other,99,,none,unknown
+syn-225,signup-208.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 208,Austin,US,473,core_segment,25,,none,self
+syn-281,icloud.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-181,signup-164.example,work,2026-10-20,1416,472,29,0,core_a,direct_api,Synthetic Signup 164,Sao Paulo,BR,3,core_segment,99,docs:technical need,none,self
+syn-283,proton.me,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-069,signup-052.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 052,Munich,DE,12,other,99,,none,cloud
+syn-166,signup-149.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 149,Sao Paulo,BR,9,other,99,,none,unknown
+syn-301,proton.me,personal,2026-10-21,479,128,411,588,core_a,,,,,0,,0,,none,unknown
+syn-303,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-070,signup-053.example,work,2026-10-23,874,291,14,0,core_a,reseller_channel,Synthetic Signup 053,Madrid,ES,7,other,99,,none,cloud
+syn-115,signup-098.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 098,Milan,IT,9,core_segment,99,,none,self
+syn-312,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-305,yahoo.com,personal,2026-10-21,483,537,234,201,core_a,,,,,0,,0,,none,unknown
 syn-009,company-i.example,work,2026-10-22,200,150,300,100,core_a,direct_api,Synthetic Company I,Lisbon,PT,2,other,99,,none,unknown
-syn-019,partner-two.example,work,2026-10-21,25000,26000,27000,28000,core_b;addon_y,direct_api,Partner Two,San Francisco,US,60,core_segment,10,,none,cloud
-syn-004,company-d.example,work,2026-10-23,3000,3200,3100,3400,core_a,direct_api,Synthetic Company D,Munich,DE,25,core_segment,6,,none,cloud
-syn-012,company-l.example,work,2026-10-19,2500,2400,2600,2500,core_a,direct_api,Synthetic Company L,Dublin,IE,48,core_segment,24,,incumbent,cloud
-syn-001,company-a.example,work,2026-10-20,18000,24000,31000,39000,core_a;addon_x,direct_api,Synthetic Company A,Berlin,DE,120,core_segment,9,job:specialist role;docs:technical need,incumbent,self
-syn-011,company-k.example,work,2026-10-24,15000,21000,28000,36000,core_b;addon_y,partner_marketplace,Synthetic Company K,Chicago,US,35,core_segment,8,blog:public problem statement,none,cloud
-syn-003,company-c.example,work,2026-10-22,9000,12000,15000,17000,core_b;addon_y,self_hosted,Synthetic Company C,Austin,US,60,core_segment,22,blog:public problem statement,none,cloud
-syn-006,company-f.example,work,2026-10-19,20000,22000,21000,25000,core_b,reseller_channel,Synthetic Company F,Vienna,AT,80,core_segment,30,job:specialist role,none,unknown
-syn-017,company-q.example,work,2026-10-24,11000,13000,12000,16000,core_b;addon_x,reseller_channel,Synthetic Company Q,Barcelona,ES,65,core_segment,13,docs:technical need,none,cloud
-syn-020,gmail.com,personal,2026-10-21,300,500,200,400,core_a,direct_api,,,,0,,0,,none,unknown
-syn-002,company-b.example,work,2026-10-21,52000,51000,53000,52000,core_b,open_framework,Synthetic Company B,Amsterdam,NL,300,core_segment,14,blog:public problem statement,none,cloud
-syn-015,company-o.example,work,2026-10-22,5000,5500,7000,9000,core_a;addon_z,direct_api,Synthetic Company O,Stuttgart,DE,900,other,99,job:specialist role,inhouse,self
-syn-007,company-g.example,work,2026-10-20,14000,19000,26000,33000,core_b;addon_y;addon_x,direct_api,Synthetic Company G,Zurich,CH,450,core_segment,11,job:specialist role;job:second hire;blog:public problem statement,inhouse,self
-syn-008,company-h.example,work,2026-10-21,1000,900,1100,1000,core_a,direct_api,Synthetic Company H,Paris,FR,700,other,5,,none,cloud
-syn-013,company-m.example,work,2026-10-20,600,800,400,900,core_b;addon_y;addon_x,direct_api,Synthetic Company M,Aachen,DE,12,other,99,,none,self
+syn-055,signup-038.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 038,Warsaw,PL,4553,other,99,,none,unknown
+syn-211,signup-194.example,work,2026-10-20,1516,1361,1684,1439,core_b,partner_marketplace,Synthetic Signup 194,Milan,IT,45,other,40,,none,cloud
+syn-021,signup-004.example,work,2026-10-22,118,122,123,142,core_b,open_framework,Synthetic Signup 004,Milan,IT,135,core_segment,99,,none,self
+syn-095,signup-078.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 078,Berlin,DE,21,core_segment,99,,none,unknown
+syn-053,signup-036.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 036,Berlin,DE,2,core_segment,99,,none,self
+syn-243,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-081,signup-064.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 064,Paris,FR,3,other,27,,none,cloud
+syn-105,signup-088.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 088,Milan,IT,3833,other,99,,none,unknown
+syn-200,signup-183.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 183,Austin,US,36,other,99,,none,unknown
+syn-137,signup-120.example,work,2026-10-24,1095,1243,1214,1306,core_b,open_framework,Synthetic Signup 120,Amsterdam,NL,1,other,99,,none,cloud
+syn-099,signup-082.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 082,Berlin,DE,433,other,99,job:specialist role,incumbent,cloud
+syn-165,signup-148.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 148,New York,US,2,core_segment,18,docs:technical need,incumbent,cloud
+syn-240,gmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-234,web.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-032,signup-015.example,work,2026-10-21,1205,401,13,0,core_b,direct_api,Synthetic Signup 015,London,GB,30,core_segment,99,job:specialist role,incumbent,cloud
+syn-218,signup-201.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 201,Stockholm,SE,129,other,99,,none,unknown
+syn-126,signup-109.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 109,Milan,IT,33,core_segment,8,,inhouse,unknown
+syn-100,signup-083.example,work,2026-10-23,1343,447,61,0,core_b,open_framework,Synthetic Signup 083,Munich,DE,12,other,3,,none,unknown
+syn-254,gmail.com,personal,2026-10-21,171,17,336,508,core_a,,,,,0,,0,,none,unknown
+syn-097,signup-080.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 080,Milan,IT,7,other,35,,none,unknown
+syn-251,gmx.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-314,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-149,signup-132.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 132,Stockholm,SE,1,core_segment,99,,none,cloud
+syn-072,signup-055.example,work,2026-10-19,1309,1701,2225,2879,core_b,reseller_channel,Synthetic Signup 055,London,GB,260,core_segment,99,,none,self
+syn-019,signup-002.example,work,2026-10-20,225,75,13,0,core_a,direct_api,Synthetic Signup 002,Warsaw,PL,15,other,99,,none,cloud
 syn-014,company-n.example,work,2026-10-21,30000,29000,31000,30000,core_b,direct_api,Synthetic Company N,Madrid,ES,220,core_segment,20,job:specialist role,incumbent,cloud
+syn-280,gmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-117,signup-100.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 100,Sao Paulo,BR,3,other,99,,none,unknown
+syn-123,signup-106.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 106,Berlin,DE,1,other,19,,none,cloud
+syn-013,company-m.example,work,2026-10-20,600,800,400,900,core_b;addon_y;addon_x,direct_api,Synthetic Company M,Aachen,DE,12,other,99,,none,self
+syn-304,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-237,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-125,signup-108.example,work,2026-10-24,1428,476,12,0,core_b,open_framework,Synthetic Signup 108,Toronto,CA,1,other,99,,inhouse,cloud
+syn-031,signup-014.example,work,2026-10-20,153,51,1,0,core_a,self_hosted,Synthetic Signup 014,Paris,FR,4086,core_segment,22,,none,unknown
+syn-231,web.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-143,signup-126.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 126,Austin,US,5,other,99,,none,cloud
+syn-110,signup-093.example,work,2026-10-21,1133,377,77,0,core_a,open_framework,Synthetic Signup 093,Berlin,DE,2,other,99,,none,self
+syn-091,signup-074.example,work,2026-10-20,276,92,27,0,core_b,direct_api,Synthetic Signup 074,Hamburg,DE,45,other,99,,incumbent,unknown
+syn-270,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-190,signup-173.example,work,2026-10-23,838,1089,1424,1843,core_b,direct_api,Synthetic Signup 173,Munich,DE,15,core_segment,99,,none,self
+syn-178,signup-161.example,work,2026-10-23,550,183,45,0,core_b,direct_api,Synthetic Signup 161,Bangalore,IN,30,other,99,,none,unknown
+syn-139,signup-122.example,work,2026-10-20,410,136,5,0,core_a,partner_marketplace,Synthetic Signup 122,Hamburg,DE,4,other,36,,none,cloud
+syn-074,signup-057.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 057,Paris,FR,309,other,99,job:specialist role,none,cloud
+syn-151,signup-134.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 134,Warsaw,PL,128,other,99,,incumbent,cloud
+syn-044,signup-027.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 027,Warsaw,PL,8,core_segment,99,,none,self
+syn-269,web.de,personal,2026-10-21,512,472,189,42,core_a,,,,,0,,0,,none,unknown
+syn-235,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-196,signup-179.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 179,Milan,IT,8,core_segment,18,,none,cloud
+syn-174,signup-157.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 157,New York,US,5,other,99,,none,cloud
+syn-205,signup-188.example,work,2026-10-20,1376,458,79,0,core_b,partner_marketplace,Synthetic Signup 188,London,GB,4,core_segment,4,,none,unknown
+syn-308,icloud.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-177,signup-160.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 160,Warsaw,PL,1431,core_segment,99,,none,cloud
+syn-054,signup-037.example,work,2026-10-19,869,1129,1477,1911,core_b,self_hosted,Synthetic Signup 037,Bangalore,IN,1,other,30,,none,self
+syn-224,signup-207.example,work,2026-10-21,171,57,13,0,core_a,direct_api,Synthetic Signup 207,Milan,IT,34,other,99,,none,self
+syn-012,company-l.example,work,2026-10-19,2500,2400,2600,2500,core_a,direct_api,Synthetic Company L,Dublin,IE,48,core_segment,24,,incumbent,cloud
+syn-088,signup-071.example,work,2026-10-23,1388,462,110,0,core_b,direct_api,Synthetic Signup 071,Milan,IT,1,other,99,,none,unknown
+syn-216,signup-199.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 199,Stockholm,SE,44,other,99,,none,unknown
+syn-016,company-p.example,work,2026-10-23,800,1200,1900,2600,core_a,partner_marketplace,Synthetic Company P,Toronto,CA,9,core_segment,4,,none,cloud
+syn-265,proton.me,personal,2026-10-21,294,17,170,304,core_a,direct_api,,,,0,,0,,none,unknown
+syn-079,signup-062.example,work,2026-10-20,1103,1216,1303,1240,core_a,self_hosted,Synthetic Signup 062,Toronto,CA,28,other,15,,none,cloud
+syn-257,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-050,signup-033.example,work,2026-10-21,676,878,1149,1487,core_a,direct_api,Synthetic Signup 033,Toronto,CA,3,other,99,,none,self
+syn-066,signup-049.example,work,2026-10-19,57,19,3,0,core_a,partner_marketplace,Synthetic Signup 049,Berlin,DE,9,core_segment,37,,none,self
+syn-026,signup-009.example,work,2026-10-21,1270,1101,1287,1255,core_a,direct_api,Synthetic Signup 009,New York,US,5,other,99,,none,cloud
+syn-185,signup-168.example,work,2026-10-24,374,124,7,0,core_a,reseller_channel,Synthetic Signup 168,Toronto,CA,23,core_segment,99,docs:technical need,incumbent,cloud
+syn-297,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-315,icloud.com,personal,2026-10-21,9,95,452,562,core_a,,,,,0,,0,,none,unknown
+syn-040,signup-023.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 023,Berlin,DE,166,core_segment,4,,none,cloud
+syn-116,signup-099.example,work,2026-10-21,62,20,4,0,core_a,self_hosted,Synthetic Signup 099,Austin,US,11,other,99,,none,self
+syn-158,signup-141.example,work,2026-10-21,1288,429,36,0,core_b,partner_marketplace,Synthetic Signup 141,Munich,DE,9,other,99,,none,cloud
+syn-145,signup-128.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 128,Paris,FR,63,core_segment,99,,none,cloud
+syn-261,icloud.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-018,signup-001.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 001,Madrid,ES,7,other,99,,none,self
+syn-244,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-061,signup-044.example,work,2026-10-20,414,538,703,910,core_b,direct_api,Synthetic Signup 044,London,GB,13,other,20,,none,cloud
+syn-163,signup-146.example,work,2026-10-20,750,975,1275,1650,core_a,direct_api,Synthetic Signup 146,Toronto,CA,35,core_segment,3,job:specialist role,none,unknown
+syn-299,gmx.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-227,signup-210.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 210,Milan,IT,10,other,7,,none,cloud
+syn-056,signup-039.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 039,London,GB,8,other,99,,none,self
+syn-057,signup-040.example,work,2026-10-22,1016,1320,1727,2235,core_b,self_hosted,Synthetic Signup 040,Warsaw,PL,33,core_segment,99,,none,cloud
+syn-277,gmail.com,personal,2026-10-21,88,379,140,256,core_a,direct_api,,,,0,,0,,none,unknown
+syn-206,signup-189.example,work,2026-10-21,1301,433,79,0,core_a,partner_marketplace,Synthetic Signup 189,Bangalore,IN,9,core_segment,12,,none,self
+syn-229,partner-two.example,work,2026-10-21,25000,26000,27000,28000,core_b;addon_y,direct_api,Partner Two,San Francisco,US,60,core_segment,10,,none,cloud
+syn-213,signup-196.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 196,Toronto,CA,10,other,12,,none,cloud
+syn-276,gmail.com,personal,2026-10-21,458,5,395,595,core_a,direct_api,,,,0,,0,,none,unknown
+syn-098,signup-081.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 081,Warsaw,PL,1,other,99,,none,self
+syn-090,signup-073.example,work,2026-10-19,1406,468,103,0,core_b,direct_api,Synthetic Signup 073,Toronto,CA,47,core_segment,32,,none,cloud
+syn-170,signup-153.example,work,2026-10-21,938,906,1025,1046,core_b,partner_marketplace,Synthetic Signup 153,Hamburg,DE,2,core_segment,99,,none,unknown
+syn-048,signup-031.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 031,Milan,IT,46,other,99,,none,self
+syn-119,signup-102.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 102,Berlin,DE,9,other,99,,none,cloud
+syn-310,gmx.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-268,proton.me,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-161,signup-144.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 144,Bangalore,IN,40,core_segment,32,,none,self
+syn-023,signup-006.example,work,2026-10-24,1414,1268,1363,1371,core_a,partner_marketplace,Synthetic Signup 006,New York,US,11,core_segment,99,job:specialist role,none,self
+syn-114,signup-097.example,work,2026-10-19,1404,1428,1379,1490,core_a,open_framework,Synthetic Signup 097,Munich,DE,393,other,99,,inhouse,unknown
+syn-267,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-030,signup-013.example,work,2026-10-19,572,190,26,0,core_b,direct_api,Synthetic Signup 013,Sao Paulo,BR,1,other,99,,none,self
+syn-192,signup-175.example,work,2026-10-19,1299,433,23,0,core_a,direct_api,Synthetic Signup 175,Bangalore,IN,4,other,99,,none,cloud
+syn-063,signup-046.example,work,2026-10-22,598,686,619,748,core_b,open_framework,Synthetic Signup 046,Amsterdam,NL,4936,other,99,job:specialist role,none,unknown
+syn-263,gmx.de,personal,2026-10-21,342,112,94,91,core_a,,,,,0,,0,,none,unknown
+syn-101,signup-084.example,work,2026-10-24,520,568,612,557,core_a,direct_api,Synthetic Signup 084,New York,US,10,core_segment,99,,none,unknown
+syn-209,signup-192.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 192,London,GB,6,core_segment,99,,none,cloud
+syn-084,signup-067.example,work,2026-10-19,759,253,46,0,core_a,partner_marketplace,Synthetic Signup 067,Madrid,ES,5,other,17,,none,cloud
+syn-141,signup-124.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 124,Bangalore,IN,92,other,8,,none,unknown
+syn-253,gmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-087,signup-070.example,work,2026-10-22,171,167,174,146,core_a,self_hosted,Synthetic Signup 070,Hamburg,DE,6,other,24,,none,cloud
+syn-052,signup-035.example,work,2026-10-23,991,330,18,0,core_a,reseller_channel,Synthetic Signup 035,Paris,FR,2,core_segment,13,,none,cloud
+syn-093,signup-076.example,work,2026-10-22,1364,1273,1302,1332,core_b,open_framework,Synthetic Signup 076,Madrid,ES,10,other,99,,none,self
+syn-133,signup-116.example,work,2026-10-20,1202,400,38,0,core_b,direct_api,Synthetic Signup 116,New York,US,18,other,8,,none,cloud
+syn-164,signup-147.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 147,Berlin,DE,8,core_segment,99,,none,unknown
+syn-175,signup-158.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 158,Stockholm,SE,2,other,99,,none,unknown
+syn-293,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-131,signup-114.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 114,Stockholm,SE,23,other,34,,none,cloud
+syn-010,company-j.example,work,2026-10-23,7000,7500,9000,12000,core_b;addon_y,open_framework,Synthetic Company J,Hamburg,DE,140,core_segment,16,job:specialist role;docs:technical need,none,cloud
+syn-132,signup-115.example,work,2026-10-19,525,175,0,0,core_b,open_framework,Synthetic Signup 115,Berlin,DE,4,other,4,,none,self
+syn-220,signup-203.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 203,Sao Paulo,BR,1,other,99,,none,self
+syn-157,signup-140.example,work,2026-10-20,747,249,48,0,core_a,direct_api,Synthetic Signup 140,Toronto,CA,34,core_segment,99,,none,unknown
+syn-217,signup-200.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 200,Berlin,DE,26,core_segment,39,,inhouse,self
+syn-198,signup-181.example,work,2026-10-19,1068,356,90,0,core_a,direct_api,Synthetic Signup 181,Toronto,CA,232,core_segment,99,,none,self
+syn-042,signup-025.example,work,2026-10-19,541,180,32,0,core_b,partner_marketplace,Synthetic Signup 025,London,GB,8,core_segment,99,,none,cloud
+syn-015,company-o.example,work,2026-10-22,5000,5500,7000,9000,core_a;addon_z,direct_api,Synthetic Company O,Stuttgart,DE,900,other,99,job:specialist role,inhouse,self
+syn-094,signup-077.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 077,Austin,US,317,other,99,,none,self
+syn-107,signup-090.example,work,2026-10-24,954,318,34,0,core_b,direct_api,Synthetic Signup 090,Madrid,ES,2,core_segment,99,,none,self
+syn-124,signup-107.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 107,Austin,US,34,other,99,,none,cloud
+syn-003,company-c.example,work,2026-10-22,9000,12000,15000,17000,core_b;addon_y,self_hosted,Synthetic Company C,Austin,US,60,core_segment,22,blog:public problem statement,none,cloud
+syn-179,signup-162.example,work,2026-10-24,1236,1165,1080,956,core_b,direct_api,Synthetic Signup 162,New York,US,16,other,99,,none,self
+syn-162,signup-145.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 145,London,GB,3,core_segment,7,,incumbent,cloud
+syn-138,signup-121.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 121,Austin,US,7,other,99,,none,cloud
+syn-298,icloud.com,personal,2026-10-21,591,211,539,512,core_a,direct_api,,,,0,,0,,none,unknown
+syn-076,signup-059.example,work,2026-10-23,128,142,138,154,core_b,direct_api,Synthetic Signup 059,Sao Paulo,BR,240,core_segment,8,,incumbent,cloud
+syn-245,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-135,signup-118.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 118,Bangalore,IN,337,other,99,,none,self
+syn-113,signup-096.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 096,Milan,IT,103,core_segment,99,,none,unknown
+syn-182,signup-165.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 165,Hamburg,DE,27,other,99,,none,cloud
+syn-017,company-q.example,work,2026-10-24,11000,13000,12000,16000,core_b;addon_x,reseller_channel,Synthetic Company Q,Barcelona,ES,65,core_segment,13,docs:technical need,none,cloud
+syn-271,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-058,signup-041.example,work,2026-10-23,994,331,84,0,core_a,self_hosted,Synthetic Signup 041,New York,US,5,other,99,,none,self
+syn-155,signup-138.example,work,2026-10-24,1211,1382,1347,1130,core_a,direct_api,Synthetic Signup 138,Austin,US,402,other,99,,none,self
+syn-006,company-f.example,work,2026-10-19,20000,22000,21000,25000,core_b,reseller_channel,Synthetic Company F,Vienna,AT,80,core_segment,30,job:specialist role,none,unknown
+syn-294,gmx.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-156,signup-139.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 139,Hamburg,DE,4386,other,99,,incumbent,self
+syn-082,signup-065.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 065,Warsaw,PL,49,core_segment,99,,none,self
+syn-272,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-083,signup-066.example,work,2026-10-24,529,176,11,0,core_a,direct_api,Synthetic Signup 066,Stockholm,SE,44,other,99,,none,cloud
+syn-236,gmx.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-232,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-154,signup-137.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 137,Toronto,CA,39,other,30,,none,cloud
+syn-049,signup-032.example,work,2026-10-20,94,122,159,206,core_a,partner_marketplace,Synthetic Signup 032,London,GB,1,other,99,,none,self
+syn-221,signup-204.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 204,Milan,IT,48,other,99,,none,self
+syn-307,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-273,gmail.com,personal,2026-10-21,164,227,489,260,core_a,,,,,0,,0,,none,unknown
+syn-176,signup-159.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 159,New York,US,1,other,99,,inhouse,unknown
+syn-316,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-011,company-k.example,work,2026-10-24,15000,21000,28000,36000,core_b;addon_y,partner_marketplace,Synthetic Company K,Chicago,US,35,core_segment,8,blog:public problem statement,none,cloud
+syn-300,hotmail.com,personal,2026-10-21,587,407,343,330,core_a,direct_api,,,,0,,0,,none,unknown
+syn-002,company-b.example,work,2026-10-21,52000,51000,53000,52000,core_b,open_framework,Synthetic Company B,Amsterdam,NL,300,core_segment,14,blog:public problem statement,none,cloud
+syn-022,signup-005.example,work,2026-10-23,1404,468,94,0,core_b,direct_api,Synthetic Signup 005,Madrid,ES,22,other,3,,inhouse,unknown
+syn-292,proton.me,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-041,signup-024.example,work,2026-10-24,419,398,398,403,core_a,open_framework,Synthetic Signup 024,Stockholm,SE,3,core_segment,99,,none,unknown
+syn-274,proton.me,personal,2026-10-21,495,423,214,307,core_a,direct_api,,,,0,,0,,none,unknown
+syn-148,signup-131.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 131,Munich,DE,5,other,99,,none,cloud
+syn-071,signup-054.example,work,2026-10-24,1286,428,11,0,core_b,self_hosted,Synthetic Signup 054,Berlin,DE,6,other,99,,none,unknown
+syn-233,gmx.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-260,proton.me,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-147,signup-130.example,work,2026-10-22,482,626,819,1060,core_b,open_framework,Synthetic Signup 130,Berlin,DE,407,other,99,,none,unknown
+syn-008,company-h.example,work,2026-10-21,1000,900,1100,1000,core_a,direct_api,Synthetic Company H,Paris,FR,700,other,5,,none,cloud
+syn-075,signup-058.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 058,Toronto,CA,229,core_segment,99,,incumbent,cloud
+syn-102,signup-085.example,work,2026-10-19,508,660,863,1117,core_b,partner_marketplace,Synthetic Signup 085,Madrid,ES,153,other,99,,none,cloud
+syn-309,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-024,signup-007.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 007,Austin,US,4,other,99,,incumbent,cloud
+syn-228,customer-one.example,work,2026-10-21,40000,42000,41000,43000,core_b,direct_api,Customer One,London,GB,300,core_segment,12,,none,self
+syn-111,signup-094.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 094,Stockholm,SE,25,other,99,,none,cloud
+syn-275,gmail.com,personal,2026-10-21,365,238,452,133,core_a,,,,,0,,0,,none,unknown
+syn-189,signup-172.example,work,2026-10-22,890,296,22,0,core_a,direct_api,Synthetic Signup 172,Hamburg,DE,345,core_segment,99,job:specialist role,none,cloud
+syn-207,signup-190.example,work,2026-10-22,315,105,16,0,core_b,open_framework,Synthetic Signup 190,Stockholm,SE,10,core_segment,99,,none,cloud
+syn-152,signup-135.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 135,Hamburg,DE,3,other,21,,none,self
+syn-252,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-238,gmx.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-219,signup-202.example,work,2026-10-22,1213,404,108,0,core_a,open_framework,Synthetic Signup 202,Warsaw,PL,7,other,99,,none,unknown
+syn-059,signup-042.example,work,2026-10-24,649,554,575,717,core_a,partner_marketplace,Synthetic Signup 042,Sao Paulo,BR,7,other,99,,none,cloud
+syn-317,proton.me,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-197,signup-180.example,work,2026-10-24,641,778,620,721,core_b,open_framework,Synthetic Signup 180,Paris,FR,358,other,35,,none,unknown
+syn-060,signup-043.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 043,Hamburg,DE,36,other,99,,none,self
+syn-172,signup-155.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 155,Sao Paulo,BR,26,core_segment,37,docs:technical need,none,cloud
+syn-020,signup-003.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 003,Berlin,DE,25,other,32,,none,cloud
+syn-171,signup-154.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 154,Berlin,DE,15,other,99,,none,cloud
+syn-282,web.de,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-295,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-046,signup-029.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 029,Munich,DE,9,other,99,,none,cloud
+syn-199,signup-182.example,work,2026-10-20,1298,432,76,0,core_a,direct_api,Synthetic Signup 182,Paris,FR,1,other,99,,none,cloud
+syn-249,outlook.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-004,company-d.example,work,2026-10-23,3000,3200,3100,3400,core_a,direct_api,Synthetic Company D,Munich,DE,25,core_segment,6,,none,cloud
+syn-051,signup-034.example,work,2026-10-22,828,1076,1407,1821,core_b,partner_marketplace,Synthetic Signup 034,Paris,FR,4,other,99,,none,unknown
+syn-033,signup-016.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 016,Stockholm,SE,12,other,99,,none,cloud
+syn-302,web.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-214,signup-197.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 197,London,GB,45,core_segment,13,,none,self
+syn-122,signup-105.example,work,2026-10-21,1052,1367,1788,2314,core_a,direct_api,Synthetic Signup 105,Madrid,ES,7,other,19,docs:technical need,none,cloud
+syn-247,gmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-291,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-108,signup-091.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 091,Toronto,CA,277,core_segment,99,,none,cloud
+syn-212,signup-195.example,work,2026-10-21,0,0,0,0,core_a,,Synthetic Signup 195,Milan,IT,2084,core_segment,35,,none,cloud
+syn-159,signup-142.example,work,2026-10-22,565,701,707,566,core_b,direct_api,Synthetic Signup 142,Bangalore,IN,4,core_segment,16,,none,cloud
+syn-248,gmx.de,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-007,company-g.example,work,2026-10-20,14000,19000,26000,33000,core_b;addon_y;addon_x,direct_api,Synthetic Company G,Zurich,CH,450,core_segment,11,job:specialist role;job:second hire;blog:public problem statement,inhouse,self
+syn-092,signup-075.example,work,2026-10-21,1378,459,109,0,core_a,partner_marketplace,Synthetic Signup 075,Madrid,ES,13,other,13,,none,unknown
+syn-284,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-168,signup-151.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 151,Toronto,CA,10,other,99,,none,unknown
+syn-028,signup-011.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 011,New York,US,15,core_segment,8,job:specialist role,none,unknown
+syn-153,signup-136.example,work,2026-10-22,44,37,34,34,core_a,direct_api,Synthetic Signup 136,Bangalore,IN,3,core_segment,3,docs:technical need,incumbent,cloud
+syn-259,gmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-027,signup-010.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 010,Munich,DE,1,other,10,,none,cloud
+syn-064,signup-047.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 047,London,GB,30,other,99,,none,unknown
+syn-173,signup-156.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 156,Hamburg,DE,312,other,99,,none,self
+syn-193,signup-176.example,work,2026-10-20,723,939,1229,1590,core_b,partner_marketplace,Synthetic Signup 176,Sao Paulo,BR,41,core_segment,14,,none,unknown
+syn-034,signup-017.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 017,Munich,DE,2,core_segment,3,,incumbent,cloud
+syn-289,yahoo.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-226,signup-209.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 209,Stockholm,SE,35,other,99,,none,unknown
+syn-202,signup-185.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 185,Hamburg,DE,19,other,99,,inhouse,cloud
+syn-290,web.de,personal,2026-10-21,57,355,566,122,core_a,,,,,0,,0,,none,unknown
+syn-036,signup-019.example,work,2026-10-19,1148,1492,1951,2525,core_b,reseller_channel,Synthetic Signup 019,Bangalore,IN,54,core_segment,99,,none,self
+syn-180,signup-163.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 163,Milan,IT,40,other,99,,none,cloud
+syn-106,signup-089.example,work,2026-10-23,0,0,0,0,core_a,,Synthetic Signup 089,Toronto,CA,198,other,37,,incumbent,self
+syn-109,signup-092.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 092,Bangalore,IN,12,other,35,,none,cloud
+syn-029,signup-012.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 012,Hamburg,DE,3726,other,99,,none,unknown
+syn-127,signup-110.example,work,2026-10-20,0,0,0,0,core_a,,Synthetic Signup 110,Austin,US,7,other,12,,none,cloud
+syn-204,signup-187.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 187,Warsaw,PL,173,other,99,,none,unknown
+syn-279,hotmail.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-120,signup-103.example,work,2026-10-19,533,177,39,0,core_b,direct_api,Synthetic Signup 103,Paris,FR,5,other,99,,none,self
+syn-286,icloud.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-144,signup-127.example,work,2026-10-19,1029,1149,1037,955,core_b,direct_api,Synthetic Signup 127,Stockholm,SE,2,other,26,,none,cloud
+syn-073,signup-056.example,work,2026-10-20,272,241,257,245,core_a,direct_api,Synthetic Signup 056,Stockholm,SE,2,other,29,,none,cloud
+syn-065,signup-048.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 048,Milan,IT,4476,other,24,,none,self
+syn-104,signup-087.example,work,2026-10-21,1093,364,59,0,core_a,partner_marketplace,Synthetic Signup 087,Austin,US,341,other,99,docs:technical need,none,cloud
+syn-103,signup-086.example,work,2026-10-20,1009,991,1203,1165,core_a,reseller_channel,Synthetic Signup 086,Sao Paulo,BR,2,other,99,,none,unknown
+syn-255,proton.me,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-241,hotmail.com,personal,2026-10-21,171,156,316,372,core_a,direct_api,,,,0,,0,,none,unknown
+syn-001,company-a.example,work,2026-10-20,18000,24000,31000,39000,core_a;addon_x,direct_api,Synthetic Company A,Berlin,DE,120,core_segment,9,job:specialist role;docs:technical need,incumbent,self
+syn-222,signup-205.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 205,Madrid,ES,2931,core_segment,99,,none,cloud
+syn-045,signup-028.example,work,2026-10-22,0,0,0,0,core_a,,Synthetic Signup 028,Madrid,ES,25,other,99,,inhouse,cloud
+syn-080,signup-063.example,work,2026-10-21,1277,425,63,0,core_a,partner_marketplace,Synthetic Signup 063,Hamburg,DE,338,other,99,,none,unknown
+syn-313,proton.me,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-150,signup-133.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 133,Madrid,ES,36,other,99,,incumbent,self
+syn-288,yahoo.com,personal,2026-10-21,0,0,0,0,core_a,,,,,0,,0,,none,unknown
+syn-210,signup-193.example,work,2026-10-19,0,0,0,0,core_a,,Synthetic Signup 193,Warsaw,PL,32,core_segment,99,,none,unknown
+syn-264,outlook.com,personal,2026-10-21,0,0,0,0,core_a,direct_api,,,,0,,0,,none,unknown
+syn-077,signup-060.example,work,2026-10-24,0,0,0,0,core_a,,Synthetic Signup 060,Sao Paulo,BR,245,other,99,,incumbent,cloud
+syn-025,signup-008.example,work,2026-10-20,563,731,957,1238,core_b,direct_api,Synthetic Signup 008,Stockholm,SE,3,core_segment,99,,incumbent,unknown
+syn-195,signup-178.example,work,2026-10-22,1374,1406,1198,1410,core_b,direct_api,Synthetic Signup 178,Toronto,CA,469,core_segment,99,docs:technical need,none,self

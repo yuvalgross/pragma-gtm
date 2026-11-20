@@ -105,7 +105,7 @@
       <div class="step"><b>Input</b><span>Weekly signup export with usage volume per week, products used and integration path, plus the columns Clay would add: company, size, funding and pain signals. In Clay the week is a saved segment in Audiences, read with the Clay CLI.</span></div>
       <div class="step"><b>Gate</b><span>Existing customers, partners and personal email domains are dropped before any scoring and logged with the reason.</span></div>
       <div class="step"><b>Score</b><span>Usage 35, company 25, integration 25, pain 15. Accounts that arrive through a marketplace or a reseller score a quarter on integration, because a partner already sells to them.</span></div>
-      <div class="step"><b>Route</b><span>Above 70 and rising (three weekly steps up, week four at least 1.3 times week one): custom benchmark and an enterprise conversation. 45 to 70: mid tier offer and a shared Slack channel. Below 45: nurture. Partner accounts go to the partner owner.</span></div>
+      <div class="step"><b>Route</b><span>Above 70 and rising (three weekly steps up, week four at least 1.3 times week one): custom benchmark and an enterprise conversation. 45 to 70: mid tier offer and a shared Slack channel. Below 45, or usage falling or never started: nurture. Partner accounts go to the partner owner.</span></div>
     </div>
   </section>
 
@@ -116,11 +116,11 @@
     <table style="min-width:640px">
       <thead><tr><th>What comes in</th><th>Rule</th><th>Who acts</th><th class="n">This run</th></tr></thead>
       <tbody>
-<tr><td>Existing customer, partner, personal email or no domain</td><td>Dropped at the gate, before any scoring. The reason is logged.</td><td>Nobody in sales</td><td class="n">3</td></tr>
-<tr><td>Signup through a marketplace or a reseller</td><td>Any score. A partner already sells to this account.</td><td>The partner or channel owner</td><td class="n">5</td></tr>
+<tr><td>Existing customer, partner, personal email or no domain</td><td>Dropped at the gate, before any scoring. The reason is logged.</td><td>Nobody in sales</td><td class="n">91</td></tr>
+<tr><td>Signup through a marketplace or a reseller</td><td>Any score. A partner already sells to this account.</td><td>The partner or channel owner</td><td class="n">33</td></tr>
 <tr class="hot"><td>Score above 70 and usage rising</td><td>Three weekly steps up, and week four at least 1.3 times week one.</td><td>An AE: custom benchmark and an enterprise conversation</td><td class="n">4</td></tr>
-<tr><td>Score 45 to 70, or above 70 without the rising trend</td><td>Fit is there, urgency isn't proven yet.</td><td>A person: mid tier offer and a shared Slack channel</td><td class="n">5</td></tr>
-<tr><td>Score below 45</td><td>Not worth a person's time this week.</td><td>No person: nurture</td><td class="n">3</td></tr>
+<tr><td>Score 45 to 70, or above 70 without the rising trend</td><td>Fit is there, urgency isn't proven yet.</td><td>A person: mid tier offer and a shared Slack channel</td><td class="n">19</td></tr>
+<tr><td>Score below 45, or usage falling or never started</td><td>Not worth a person's time this week. A trial that stopped gets no person, whatever the fit.</td><td>No person: nurture</td><td class="n">171</td></tr>
       </tbody>
     </table>
     </div>
@@ -129,7 +129,7 @@
 
   <section aria-labelledby="run">
     <h2 id="run">Run output</h2>
-    <p>20 rows in. The gate dropped 3: a customer, a partner and a personal email address. 17 were scored. Four get a custom benchmark and an enterprise conversation, five get a mid tier offer, and eight go to nurture, five of those flagged to a partner owner instead of sales.</p>
+    <p>318 signups in one week. The gate dropped 91: 88 personal email addresses and 3 users from an existing customer or partner. 227 were scored. Most never integrated or stopped after a few test calls, which is the normal shape of a self serve trial. 23 get a person: 4 a custom benchmark and an enterprise conversation, 19 a mid tier offer. 33 go to a partner owner and 171 to nurture. The table shows the top 30; all 227 are in <code>scored.csv</code>.</p>
     <div class="tablewrap" tabindex="0" role="region" aria-label="Scored accounts, scrolls sideways on small screens">
     <table>
       <thead><tr><th class="n">#</th><th>Account</th><th class="n">Usage /35</th><th class="n">Company /25</th><th class="n">Integration /25</th><th class="n">Pain /15</th><th class="n">Score</th><th>Next action</th></tr></thead>
@@ -140,26 +140,39 @@
 <tr class="hot"><td class="n">4</td><td class="acct">Synthetic Company C<span class="sub">Austin, 60 staff, self hosted</span></td><td class="n">32</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">80</td><td>Custom benchmark, open the enterprise conversation</td></tr>
 <tr><td class="n">5</td><td class="acct">Synthetic Company B<span class="sub">Amsterdam, 300 staff, open framework, volume flat</span></td><td class="n">16</td><td class="n">25</td><td class="n">25</td><td class="n">5</td><td class="n total">71</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
 <tr><td class="n">6</td><td class="acct">Synthetic Company K<span class="sub">Chicago, 35 staff, partner marketplace</span></td><td class="n">35</td><td class="n">25</td><td class="n">6</td><td class="n">5</td><td class="n total">71</td><td>Nurture, flag to the marketplace partner owner</td></tr>
-<tr><td class="n">7</td><td class="acct">Synthetic Company N<span class="sub">Madrid, 220 staff, direct api</span></td><td class="n">16</td><td class="n">18</td><td class="n">25</td><td class="n">10</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
-<tr><td class="n">8</td><td class="acct">Synthetic Company O<span class="sub">Stuttgart, 900 staff, direct api</span></td><td class="n">32</td><td class="n">4</td><td class="n">25</td><td class="n">8</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
-<tr><td class="n">9</td><td class="acct">Synthetic Company D<span class="sub">Munich, 25 staff, direct api</span></td><td class="n">9</td><td class="n">25</td><td class="n">25</td><td class="n">0</td><td class="n total">59</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
-<tr><td class="n">10</td><td class="acct">Synthetic Company Q<span class="sub">Barcelona, 65 staff, reseller channel</span></td><td class="n">23</td><td class="n">25</td><td class="n">6</td><td class="n">5</td><td class="n total">59</td><td>Nurture, flag to the reseller channel owner</td></tr>
-<tr><td class="n">11</td><td class="acct">Synthetic Company L<span class="sub">Dublin, 48 staff, direct api</span></td><td class="n">9</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">57</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
-<tr><td class="n">12</td><td class="acct">Synthetic Company F<span class="sub">Vienna, 80 staff, reseller channel</span></td><td class="n">16</td><td class="n">18</td><td class="n">6</td><td class="n">5</td><td class="n total">45</td><td>Nurture, flag to the reseller channel owner</td></tr>
-<tr><td class="n">13</td><td class="acct">Synthetic Company H<span class="sub">Paris, 700 staff, direct api</span></td><td class="n">6</td><td class="n">11</td><td class="n">25</td><td class="n">0</td><td class="n total">42</td><td>Nurture</td></tr>
-<tr><td class="n">14</td><td class="acct">Synthetic Company M<span class="sub">Aachen, 12 staff, direct api</span></td><td class="n">16</td><td class="n">0</td><td class="n">25</td><td class="n">0</td><td class="n total">41</td><td>Nurture</td></tr>
-<tr><td class="n">15</td><td class="acct">Synthetic Company P<span class="sub">Toronto, 9 staff, partner marketplace</span></td><td class="n">18</td><td class="n">17</td><td class="n">6</td><td class="n">0</td><td class="n total">41</td><td>Nurture, flag to the marketplace partner owner</td></tr>
-<tr><td class="n">16</td><td class="acct">Synthetic Company E<span class="sub">London, 15 staff, partner marketplace</span></td><td class="n">22</td><td class="n">0</td><td class="n">6</td><td class="n">0</td><td class="n total">28</td><td>Nurture, flag to the marketplace partner owner</td></tr>
-<tr><td class="n">17</td><td class="acct">Synthetic Company I<span class="sub">Lisbon, 2 staff, direct api</span></td><td class="n">0</td><td class="n">0</td><td class="n">25</td><td class="n">0</td><td class="n total">25</td><td>Nurture</td></tr>
+<tr><td class="n">7</td><td class="acct">Synthetic Signup 146<span class="sub">Toronto, 35 staff, direct api</span></td><td class="n">15</td><td class="n">25</td><td class="n">25</td><td class="n">5</td><td class="n total">70</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">8</td><td class="acct">Synthetic Company N<span class="sub">Madrid, 220 staff, direct api, volume flat</span></td><td class="n">16</td><td class="n">18</td><td class="n">25</td><td class="n">10</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">9</td><td class="acct">Synthetic Company O<span class="sub">Stuttgart, 900 staff, direct api</span></td><td class="n">32</td><td class="n">4</td><td class="n">25</td><td class="n">8</td><td class="n total">69</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">10</td><td class="acct">Synthetic Signup 040<span class="sub">Warsaw, 33 staff, self hosted</span></td><td class="n">18</td><td class="n">18</td><td class="n">25</td><td class="n">0</td><td class="n total">61</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">11</td><td class="acct">Synthetic Signup 059<span class="sub">Sao Paulo, 240 staff, direct api, volume flat</span></td><td class="n">6</td><td class="n">25</td><td class="n">25</td><td class="n">5</td><td class="n total">61</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">12</td><td class="acct">Synthetic Company D<span class="sub">Munich, 25 staff, direct api, volume flat</span></td><td class="n">9</td><td class="n">25</td><td class="n">25</td><td class="n">0</td><td class="n total">59</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">13</td><td class="acct">Synthetic Company Q<span class="sub">Barcelona, 65 staff, reseller channel, volume flat</span></td><td class="n">23</td><td class="n">25</td><td class="n">6</td><td class="n">5</td><td class="n total">59</td><td>Nurture, flag to the reseller channel owner</td></tr>
+<tr><td class="n">14</td><td class="acct">Synthetic Company L<span class="sub">Dublin, 48 staff, direct api, volume flat</span></td><td class="n">9</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">57</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">15</td><td class="acct">Synthetic Signup 045<span class="sub">Milan, 359 staff, open framework, volume flat</span></td><td class="n">6</td><td class="n">18</td><td class="n">25</td><td class="n">8</td><td class="n total">57</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">16</td><td class="acct">Synthetic Signup 008<span class="sub">Stockholm, 3 staff, direct api</span></td><td class="n">15</td><td class="n">10</td><td class="n">25</td><td class="n">5</td><td class="n total">55</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">17</td><td class="acct">Synthetic Signup 178<span class="sub">Toronto, 469 staff, direct api, volume flat</span></td><td class="n">6</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">54</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">18</td><td class="acct">Synthetic Signup 015<span class="sub">London, 30 staff, direct api, volume falling</span></td><td class="n">0</td><td class="n">18</td><td class="n">25</td><td class="n">10</td><td class="n total">53</td><td>Nurture</td></tr>
+<tr><td class="n">19</td><td class="acct">Synthetic Signup 136<span class="sub">Bangalore, 3 staff, direct api, volume falling</span></td><td class="n">0</td><td class="n">17</td><td class="n">25</td><td class="n">10</td><td class="n total">52</td><td>Nurture</td></tr>
+<tr><td class="n">20</td><td class="acct">Synthetic Signup 173<span class="sub">Munich, 15 staff, direct api</span></td><td class="n">15</td><td class="n">10</td><td class="n">25</td><td class="n">0</td><td class="n total">50</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">21</td><td class="acct">Synthetic Signup 004<span class="sub">Milan, 135 staff, open framework, volume flat</span></td><td class="n">6</td><td class="n">18</td><td class="n">25</td><td class="n">0</td><td class="n total">49</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">22</td><td class="acct">Synthetic Signup 111<span class="sub">Austin, 71 staff, self hosted, volume flat</span></td><td class="n">6</td><td class="n">18</td><td class="n">25</td><td class="n">0</td><td class="n total">49</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">23</td><td class="acct">Synthetic Signup 105<span class="sub">Madrid, 7 staff, direct api</span></td><td class="n">18</td><td class="n">0</td><td class="n">25</td><td class="n">5</td><td class="n total">48</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">24</td><td class="acct">Synthetic Signup 130<span class="sub">Berlin, 407 staff, open framework</span></td><td class="n">15</td><td class="n">8</td><td class="n">25</td><td class="n">0</td><td class="n total">48</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">25</td><td class="acct">Synthetic Signup 142<span class="sub">Bangalore, 4 staff, direct api, volume flat</span></td><td class="n">6</td><td class="n">17</td><td class="n">25</td><td class="n">0</td><td class="n total">48</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">26</td><td class="acct">Synthetic Signup 172<span class="sub">Hamburg, 345 staff, direct api, volume falling</span></td><td class="n">0</td><td class="n">18</td><td class="n">25</td><td class="n">5</td><td class="n total">48</td><td>Nurture</td></tr>
+<tr><td class="n">27</td><td class="acct">Synthetic Signup 062<span class="sub">Toronto, 28 staff, self hosted, volume flat</span></td><td class="n">6</td><td class="n">15</td><td class="n">25</td><td class="n">0</td><td class="n total">46</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">28</td><td class="acct">Synthetic Signup 176<span class="sub">Sao Paulo, 41 staff, partner marketplace</span></td><td class="n">15</td><td class="n">25</td><td class="n">6</td><td class="n">0</td><td class="n total">46</td><td>Nurture, flag to the marketplace partner owner</td></tr>
+<tr><td class="n">29</td><td class="acct">Synthetic Signup 184<span class="sub">Madrid, 8 staff, open framework, volume flat</span></td><td class="n">6</td><td class="n">10</td><td class="n">25</td><td class="n">5</td><td class="n total">46</td><td>Offer the mid tier, open a shared Slack channel</td></tr>
+<tr><td class="n">30</td><td class="acct">Synthetic Company F<span class="sub">Vienna, 80 staff, reseller channel, volume flat</span></td><td class="n">16</td><td class="n">18</td><td class="n">6</td><td class="n">5</td><td class="n total">45</td><td>Nurture, flag to the reseller channel owner</td></tr>
       </tbody>
     </table>
     </div>
-    <p class="note">Synthetic input. Every domain ends in <code>.example</code> except the personal email row that tests the gate. Company names, volumes and signals are invented to exercise the rules and say nothing about real companies. The column names are my assumption of what a product database and a Clay table would hold.</p>
+    <p class="note">Synthetic input. Every work domain ends in <code>.example</code>; personal email rows use public webmail domains so the gate has something to drop. 17 accounts are built by hand to exercise every rule, the rest are generated with a fixed seed. Company names, volumes and signals are invented and say nothing about real companies. The column names are my assumption of what a product database and a Clay table would hold.</p>
   </section>
 
   <section aria-labelledby="change">
     <h2 id="change">What I would change <em>first</em></h2>
-    <p>Two results from this run need a conversation before the weights are trusted. A 900 person company scores 69 and gets a mid tier offer, because integration and usage outrun a weak company fit. That is the first weight I would revisit. And two accounts hit 100, so the scale saturates at the top. A tie break on last week's volume is the simplest fix.</p>
+    <p>Two results from this run need a conversation before the weights are trusted. A 900 person company scores 69 and gets a mid tier offer, because integration and usage outrun a weak company fit. That is the first weight I would revisit. And two accounts hit 100, so the scale saturates at the top. A tie break on last week's volume is the simplest fix. The long tail adds a third: a 4 person team with flat test volume reaches 48 and a mid tier offer, mostly on the integration path. A floor on last week's volume before any person is assigned would stop that.</p>
     <p>How I would judge the tool: flagged accounts should convert to a paid tier within 90 days at a higher rate than unflagged accounts of the same age. If they do not after two weekly cycles, change the weights or drop it. The weekly check is simpler still: does the account owner agree with the top five.</p>
   </section>
 
@@ -198,8 +211,8 @@ clay audiences create --entity-type companies --name "Custom benchmark" --filter
     <div class="files">
       <div><a href="signup_router.py">signup_router.py</a><small>Gate, scoring, routing and outputs.</small></div>
       <div><a href="make_synthetic_signups.py">make_synthetic_signups.py</a><small>Builds the labelled synthetic input.</small></div>
-      <div><a href="data/signups_week_43_synthetic.csv">signups_week_43_synthetic.csv</a><small>The 20 input rows.</small></div>
-      <div><a href="output/scored.csv">scored.csv</a><small>All 17 scored accounts with the evidence string per row.</small></div>
+      <div><a href="data/signups_week_43_synthetic.csv">signups_week_43_synthetic.csv</a><small>The 318 input rows.</small></div>
+      <div><a href="output/scored.csv">scored.csv</a><small>All 227 scored accounts with the evidence string per row.</small></div>
       <div><a href="output/excluded.csv">excluded.csv</a><small>What the gate dropped and why.</small></div>
       <div><a href="output/summary.json">summary.json</a><small>Weights, thresholds and action counts.</small></div>
       <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
@@ -260,7 +273,9 @@ def volume(row):
 
 
 def trend(vols):
-    """'rising' if three of three week over week steps are up and w4 &gt;= 1.3 x w1."""
+    """'none' if no usage at all; 'rising' if three of three week over week steps are up and w4 &gt;= 1.3 x w1."""
+    if not any(vols):
+        return "none"
     steps = [b &gt; a for a, b in zip(vols, vols[1:])]
     if all(steps) and vols[0] and vols[3] &gt;= 1.3 * vols[0]:
         return "rising"
@@ -344,6 +359,9 @@ def next_action(total, t, path):
         return "Nurture, flag to the marketplace partner owner"
     if path == "reseller_channel":
         return "Nurture, flag to the reseller channel owner"
+    if t in ("falling", "none"):
+        # a trial that stopped or never started gets no person, whatever the fit
+        return "Nurture"
     if total &gt; THRESHOLD_ENTERPRISE and t == "rising":
         return "Custom benchmark, open the enterprise conversation"
     if total &gt;= THRESHOLD_MIDTIER:
@@ -418,14 +436,18 @@ def write_outputs(scored, excluded, out_dir, source):
         acct = f"{r['company_name']}, {r['hq_city']}, {r['headcount']} staff, {r['integration_path'].replace('_', ' ')}"
         lines.append(f"| {r['rank']} | {acct} | {r['score']} | {r['why']} | {r['next_action']} |")
     lines.append("")
-    lines.append("Dropped before scoring: " + "; ".join(f"{e['domain']} ({e['reason']})" for e in excluded))
+    reasons = {}
+    for e in excluded:
+        reasons[e["reason"]] = reasons.get(e["reason"], 0) + 1
+    lines.append("Dropped before scoring: " + "; ".join(f"{n} {r}" for r, n in sorted(reasons.items())))
     with open(os.path.join(out_dir, "top5.md"), "w") as f:
         f.write("\n".join(lines) + "\n")
     summary = {
         "run_date": date.today().isoformat(),
         "input": source,
         "rows_in": len(scored) + len(excluded),
-        "excluded": excluded,
+        "excluded": len(excluded),
+        "excluded_by_reason": {r: sum(1 for e in excluded if e["reason"] == r) for r in sorted({e["reason"] for e in excluded})},
         "scored": len(scored),
         "weights": WEIGHTS,
         "thresholds": {"enterprise": THRESHOLD_ENTERPRISE, "mid_tier": THRESHOLD_MIDTIER},

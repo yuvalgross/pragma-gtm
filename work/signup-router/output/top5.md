@@ -1,5 +1,5 @@
-# Signup router, run 2026-10-29
-Input: signups_week_43_synthetic.csv (20 rows). Gate dropped 3. Scored 17.
+# Signup router, run 2026-11-20
+Input: signups_week_43_synthetic.csv (318 rows). Gate dropped 91. Scored 227.
 
 | # | Account | Score | Why | Next action |
 | --- | --- | --- | --- | --- |
@@ -9,4 +9,4 @@ Input: signups_week_43_synthetic.csv (20 rows). Gate dropped 3. Scored 17.
 | 4 | Synthetic Company C, Austin, 60 staff, self hosted | 80 | volume up four weeks running; 17,000 units last week; add on used alongside core product; core segment; 60 staff; self hosted; blog: public problem statement | Custom benchmark, open the enterprise conversation |
 | 5 | Synthetic Company B, Amsterdam, 300 staff, open framework | 71 | 52,000 units last week; core segment; 300 staff; funded 14 months ago; open framework; blog: public problem statement | Offer the mid tier, open a shared Slack channel |
 
-Dropped before scoring: customer-one.example (existing customer or partner); partner-two.example (existing customer or partner); gmail.com (personal email)
+Dropped before scoring: 3 existing customer or partner; 88 personal email

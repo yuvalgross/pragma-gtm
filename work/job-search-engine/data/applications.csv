@@ -1,73 +1,111 @@
 application,company,role_shape,company_size,channel,cv_score,note_to_named_person,days_before_start,outcome
-P001,Indigo Health,sales,over 500,Teamtailor,9,no,26,no reply
-P002,Juniper Pay,build,under 150,Personio,9,no,24,call
-P003,Sable Data,sales,150 to 500,Personio,9,no,25,call
-P004,Indigo Labs,build,under 150,Ashby,9,yes,45,call
-P005,Harbor Health,build,under 150,Email,9,no,26,rejected at CV
-P006,Sable Systems,build,over 500,Teamtailor,9,no,50,no reply
-P007,Opal Health,sales,150 to 500,Personio,8,no,23,rejected at CV
-P008,Garnet Data,sales,150 to 500,Greenhouse,8.5,no,4,rejected at CV
-P009,Prism Labs,build,150 to 500,Ashby,9,no,44,no reply
-P010,Nettle Data,build,over 500,Greenhouse,8.5,yes,45,rejected at CV
-P011,Opal Pay,build,under 150,Ashby,8.5,no,17,rejected at CV
-P012,Cobalt HQ,sales,under 150,Ashby,9,no,8,call
-P013,Indigo Cloud,run,over 500,Email,8.5,yes,10,no reply
-P014,Orchard Stack,build,150 to 500,Ashby,8.5,no,16,rejected at CV
-P015,Linden Logic,sales,over 500,Email,8.5,no,2,rejected at CV
-P016,Nimbus Data,build,over 500,Teamtailor,8.5,yes,32,no reply
-P017,Nimbus Cloud,build,150 to 500,Greenhouse,8.5,yes,47,call
-P018,Nimbus Systems,build,over 500,LinkedIn Easy Apply,8.5,no,7,no reply
-P019,Nimbus Cloud,build,over 500,Teamtailor,9,no,20,pending
-P020,Linden Systems,sales,150 to 500,Personio,9,yes,5,call
-P021,Rook Stack,run,under 150,JOIN,9,no,33,pending
-P022,Nimbus Systems,run,under 150,Email,8.5,no,4,rejected at CV
-P023,Opal Pay,build,over 500,LinkedIn Easy Apply,8,no,5,rejected at CV
-P024,Saffron HQ,build,over 500,Email,8,no,44,rejected at CV
-P025,Cobalt HQ,run,150 to 500,Teamtailor,9,no,36,no reply
-P026,Saffron Health,build,150 to 500,Teamtailor,8.5,no,48,no reply
-P027,Pebble Labs,run,under 150,Teamtailor,9,no,26,no reply
-P028,Quill Pay,build,over 500,LinkedIn Easy Apply,8.5,no,22,rejected at CV
-P029,Marlow Labs,run,over 500,Ashby,9,no,50,rejected at CV
-P030,Sable Logic,build,over 500,LinkedIn Easy Apply,9,yes,19,no reply
-P031,Opal Labs,run,under 150,JOIN,8.5,no,28,rejected at CV
-P032,Fable Data,build,over 500,LinkedIn Easy Apply,8,no,19,no reply
-P033,Opal Works,build,under 150,Ashby,9,no,19,no reply
-P034,Saffron AI,build,over 500,Teamtailor,9,no,15,rejected at CV
-P035,Ember Logic,sales,under 150,Personio,9,no,24,no reply
-P036,Orchard Stack,build,over 500,LinkedIn Easy Apply,8.5,no,16,rejected at CV
-P037,Bramble Health,build,under 150,Email,9,no,4,rejected at CV
-P038,Halcyon Health,run,over 500,LinkedIn Easy Apply,8,yes,34,no reply
-P039,Bramble Cloud,sales,under 150,Greenhouse,8,no,30,rejected at CV
-P040,Pebble Stack,build,over 500,Ashby,8.5,no,32,rejected at CV
-P041,Kestrel AI,build,over 500,Greenhouse,9,no,35,call
-P042,Vesper Data,build,150 to 500,Ashby,9,no,48,no reply
-P043,Linden Grid,sales,under 150,Personio,9,yes,13,no reply
-P044,Opal Works,run,under 150,Teamtailor,8.5,no,2,pending
-P045,Garnet Cloud,sales,over 500,Ashby,8.5,no,2,no reply
-P046,Indigo Health,build,under 150,Personio,8,yes,6,rejected at CV
-P047,Fable HQ,build,under 150,Teamtailor,8,yes,8,rejected at CV
-P048,Atlas Pay,run,under 150,Personio,8.5,no,12,pending
-P049,Opal Labs,run,under 150,Ashby,8.5,no,15,rejected at CV
-P050,Ember Pay,build,over 500,JOIN,9,yes,46,call
-P051,Linden Logic,build,150 to 500,Teamtailor,8.5,yes,50,rejected at CV
-P052,Lumen AI,sales,150 to 500,Greenhouse,8.5,yes,20,rejected at CV
-P053,Kestrel AI,build,under 150,LinkedIn Easy Apply,9,no,1,rejected at CV
-P054,Sable AI,build,over 500,Teamtailor,9,no,37,rejected at CV
-P055,Quill Pay,build,under 150,Teamtailor,9,no,13,call
-P056,Linden Data,build,under 150,Ashby,8.5,no,40,call
-P057,Quarry Data,build,under 150,LinkedIn Easy Apply,9,no,48,rejected at CV
-P058,Delta Cloud,sales,under 150,Ashby,9,yes,27,no reply
-P059,Rook Works,build,150 to 500,Ashby,8.5,no,16,rejected at CV
-P060,Quill Health,build,150 to 500,LinkedIn Easy Apply,8.5,no,38,rejected at CV
-P061,Nettle Stack,build,over 500,JOIN,9,no,34,no reply
-P062,Tidal AI,build,150 to 500,JOIN,8,no,21,call
-P063,Lumen Cloud,run,150 to 500,Ashby,8.5,no,6,rejected at CV
-P064,Ember Health,build,over 500,Ashby,9,no,21,no reply
-P065,Sable AI,run,150 to 500,Greenhouse,8,yes,40,rejected at CV
-P066,Saffron AI,build,under 150,Teamtailor,9,yes,6,call
-P067,Quarry Pay,build,150 to 500,Personio,8,yes,42,rejected at CV
-P068,Quill Pay,run,150 to 500,Ashby,9,no,24,no reply
-P069,Quill Grid,sales,150 to 500,Email,9,no,44,no reply
-P070,Linden Grid,build,under 150,Greenhouse,9,no,11,rejected at CV
-P071,Linden Grid,build,over 500,Greenhouse,9,no,2,call
-P072,Orchard Logic,build,over 500,JOIN,8.5,yes,8,rejected at CV
+P001,Quill HQ,build,under 150,Teamtailor,8,yes,26,no reply
+P002,Tidal AI,build,under 150,Greenhouse,8,yes,5,call
+P003,Harbor Data,sales,over 500,JOIN,9,no,5,no reply
+P004,Fable Systems,build,under 150,Ashby,9,no,18,rejected at CV
+P005,Rook AI,run,over 500,Personio,8.5,yes,20,no reply
+P006,Nettle Data,build,under 150,Ashby,9,yes,48,rejected at CV
+P007,Pebble Stack,build,under 150,Email,9,no,22,rejected at CV
+P008,Saffron Health,build,under 150,Email,8.5,no,31,no reply
+P009,Garnet HQ,build,under 150,Personio,8.5,no,33,no reply
+P010,Quill Grid,build,150 to 500,Teamtailor,9,no,25,no reply
+P011,Quill Pay,run,over 500,Email,8.5,no,20,no reply
+P012,Indigo Cloud,build,over 500,Ashby,9,no,13,no reply
+P013,Ember Logic,build,under 150,LinkedIn Easy Apply,9,yes,41,rejected at CV
+P014,Halcyon Systems,build,over 500,Email,9,no,24,rejected at CV
+P015,Fable HQ,build,over 500,Ashby,9,yes,22,no reply
+P016,Juniper Cloud,sales,under 150,LinkedIn Easy Apply,8,no,25,no reply
+P017,Quarry Works,build,under 150,JOIN,8.5,yes,1,no reply
+P018,Pebble Works,build,150 to 500,Email,9,yes,47,rejected at CV
+P019,Harbor Health,build,under 150,Email,9,no,7,call
+P020,Orchard Pay,build,under 150,Personio,9,yes,24,rejected at CV
+P021,Nettle Stack,build,under 150,Greenhouse,9,no,40,call
+P022,Rook Data,run,under 150,JOIN,9,no,33,no reply
+P023,Prism Labs,build,under 150,LinkedIn Easy Apply,9,no,19,rejected at CV
+P024,Marlow Labs,build,under 150,Teamtailor,8,yes,27,no reply
+P025,Ember Cloud,run,150 to 500,Greenhouse,8,yes,36,pending
+P026,Garnet Logic,sales,150 to 500,Ashby,9,no,40,no reply
+P027,Linden Data,run,under 150,Email,8.5,no,47,rejected at CV
+P028,Sable Logic,run,150 to 500,Ashby,8.5,no,2,rejected at CV
+P029,Cobalt HQ,run,under 150,Ashby,9,yes,29,no reply
+P030,Nettle Systems,run,under 150,Ashby,9,no,41,rejected at CV
+P031,Vesper Data,sales,over 500,LinkedIn Easy Apply,8.5,no,18,rejected at CV
+P032,Lumen AI,build,150 to 500,JOIN,8.5,no,27,rejected at CV
+P033,Quarry Pay,build,150 to 500,Personio,9,no,42,no reply
+P034,Vesper Logic,build,under 150,Personio,9,yes,24,no reply
+P035,Linden Grid,run,under 150,Personio,8,yes,33,no reply
+P036,Saffron Logic,build,150 to 500,Personio,8.5,no,40,rejected at CV
+P037,Indigo Cloud,build,over 500,Ashby,8.5,no,4,no reply
+P038,Ember Logic,build,under 150,Personio,8.5,no,7,no reply
+P039,Bramble Health,sales,over 500,Email,9,yes,12,pending
+P040,Nettle Pay,run,under 150,Greenhouse,8.5,no,36,no reply
+P041,Quill Pay,run,under 150,Ashby,8.5,no,31,no reply
+P042,Indigo Cloud,sales,150 to 500,Ashby,8,no,30,no reply
+P043,Saffron Logic,build,over 500,Personio,9,no,49,pending
+P044,Garnet Logic,run,under 150,Personio,8,no,1,no reply
+P045,Quill Systems,run,150 to 500,Ashby,8.5,yes,34,no reply
+P046,Garnet Data,build,150 to 500,Teamtailor,8.5,no,11,call
+P047,Fable HQ,run,over 500,Teamtailor,8.5,no,29,no reply
+P048,Kestrel Pay,build,under 150,Personio,9,yes,4,no reply
+P049,Indigo Labs,sales,under 150,JOIN,8.5,no,29,no reply
+P050,Fable Systems,run,over 500,Email,8,no,26,rejected at CV
+P051,Vesper Systems,build,150 to 500,LinkedIn Easy Apply,8.5,yes,49,no reply
+P052,Atlas Pay,build,over 500,LinkedIn Easy Apply,9,no,1,no reply
+P053,Thistle Cloud,sales,under 150,Ashby,9,no,26,no reply
+P054,Harbor Pay,build,over 500,JOIN,9,no,39,no reply
+P055,Saffron Health,run,150 to 500,LinkedIn Easy Apply,8,no,9,no reply
+P056,Ember Cloud,build,under 150,Greenhouse,8.5,no,38,no reply
+P057,Prism Labs,run,under 150,JOIN,9,no,43,pending
+P058,Sable AI,build,over 500,Ashby,8.5,no,25,rejected at CV
+P059,Indigo Labs,build,150 to 500,JOIN,8.5,yes,17,no reply
+P060,Juniper Pay,build,over 500,Teamtailor,9,no,4,no reply
+P061,Delta Cloud,build,over 500,Email,9,no,43,no reply
+P062,Rook Works,build,150 to 500,Personio,8.5,yes,36,no reply
+P063,Nettle Pay,build,over 500,Ashby,9,no,42,rejected at CV
+P064,Delta Data,run,under 150,Email,8.5,no,24,rejected at CV
+P065,Fable Systems,build,over 500,Email,9,no,9,no reply
+P066,Linden Systems,build,over 500,Email,8.5,yes,46,rejected at CV
+P067,Orchard Pay,build,under 150,Greenhouse,9,no,19,pending
+P068,Quarry Pay,sales,over 500,Personio,8.5,no,30,call
+P069,Bramble Grid,build,150 to 500,Personio,8.5,no,5,no reply
+P070,Bramble Cloud,run,under 150,JOIN,9,no,41,no reply
+P071,Orchard Systems,run,under 150,Greenhouse,9,no,42,rejected at CV
+P072,Pebble Stack,run,under 150,Teamtailor,9,no,17,call
+P073,Vesper Logic,run,150 to 500,Personio,9,yes,11,no reply
+P074,Halcyon Health,build,150 to 500,LinkedIn Easy Apply,9,yes,2,call
+P075,Orchard Logic,sales,under 150,Teamtailor,8,yes,30,call
+P076,Saffron Grid,sales,over 500,Ashby,8.5,no,41,no reply
+P077,Vesper Logic,build,under 150,Ashby,8,no,13,no reply
+P078,Halcyon Systems,build,under 150,Greenhouse,8,no,6,rejected at CV
+P079,Bramble Systems,sales,under 150,Email,8.5,yes,29,no reply
+P080,Rook Stack,build,under 150,Teamtailor,9,no,7,rejected at CV
+P081,Bramble Cloud,sales,under 150,Personio,8.5,yes,33,pending
+P082,Fable Logic,sales,over 500,LinkedIn Easy Apply,9,no,35,rejected at CV
+P083,Atlas Pay,build,150 to 500,JOIN,9,no,37,rejected at CV
+P084,Pebble Works,build,150 to 500,Email,9,no,46,rejected at CV
+P085,Harbor Data,sales,over 500,Ashby,8,no,33,no reply
+P086,Opal Systems,run,under 150,Teamtailor,9,no,44,rejected at CV
+P087,Kestrel Grid,run,under 150,Personio,8.5,no,13,no reply
+P088,Juniper Grid,build,under 150,Greenhouse,9,yes,11,no reply
+P089,Lumen Data,build,over 500,Ashby,9,no,22,no reply
+P090,Pebble Data,run,150 to 500,Greenhouse,8.5,no,43,pending
+P091,Quill Cloud,sales,under 150,Teamtailor,9,no,25,no reply
+P092,Fable Data,run,over 500,JOIN,8.5,no,44,pending
+P093,Ember Cloud,build,150 to 500,Ashby,9,no,17,no reply
+P094,Garnet Data,build,over 500,Email,8,no,28,rejected at CV
+P095,Fable Systems,build,under 150,Greenhouse,9,no,44,no reply
+P096,Halcyon Cloud,build,under 150,LinkedIn Easy Apply,9,yes,32,call
+P097,Juniper Pay,run,150 to 500,Ashby,9,no,8,rejected at CV
+P098,Orchard Logic,build,under 150,LinkedIn Easy Apply,8,no,50,rejected at CV
+P099,Lumen Data,sales,over 500,Greenhouse,8,no,22,rejected at CV
+P100,Orchard Pay,build,over 500,LinkedIn Easy Apply,8.5,no,47,rejected at CV
+P101,Nettle Systems,build,under 150,Email,9,no,24,call
+P102,Atlas Pay,run,under 150,Teamtailor,9,yes,23,call
+P103,Quill Pay,build,150 to 500,JOIN,9,no,20,call
+P104,Lumen Cloud,build,under 150,Personio,9,yes,5,no reply
+P105,Ember Logic,build,under 150,Greenhouse,8.5,yes,19,no reply
+P106,Ember Cloud,build,over 500,LinkedIn Easy Apply,8,no,9,no reply
+P107,Pebble Works,run,under 150,Ashby,8,no,48,no reply
+P108,Prism Labs,build,under 150,JOIN,9,no,46,no reply
+P109,Linden Logic,sales,under 150,LinkedIn Easy Apply,9,yes,30,rejected at CV
+P110,Garnet Cloud,build,under 150,Ashby,8.5,no,16,no reply

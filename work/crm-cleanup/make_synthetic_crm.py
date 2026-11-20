@@ -36,7 +36,7 @@ OWNERS = [
 # arr_eur, renewal, usage_m1, usage_m2, usage_m3, seats_used, seats_limit, last_human_touch
 COMPANIES = [
     # customers, largest to the long tail
-    ("c101", "Synthetic Fleet Systems GmbH", "synfleet.example", "Germany", "Logistics", "customer", "o6", "2019-03-04", 950000, "2027-01-15", 41000, 38000, 29000, 820, 1000, "2026-07-02"),
+    ("c101", "Synthetic Fleet Systems GmbH", "synfleet.example", "Germany", "Logistics", "customer", "o6", "2019-03-04", 320000, "2027-01-15", 41000, 38000, 29000, 820, 1000, "2026-07-02"),
     ("c102", "Synthetic Grid Energy AG", "syngrid.example", "DE", "Energy", "customer", "o8", "2018-11-20", 420000, "2027-06-30", 18000, 21000, 26500, 470, 500, "2026-10-12"),
     ("c103", "Synthetic Rail Data Ltd", "synrail.example", "United Kingdom", "Transport", "customer", "o6", "2020-05-11", 180000, "2026-12-20", 9000, 9100, 8900, 210, 400, "2026-06-01"),
     ("c104", "Synthetic Cold Chain BV", "syncold.example", "NL", "Logistics", "customer", "o6", "2021-02-17", 120000, "2027-09-01", 5000, 6200, 7400, 95, 100, "2026-09-20"),
@@ -49,11 +49,11 @@ COMPANIES = [
     ("c111", "Synthetic Parking ApS", "synpark.example", "Denmark", "Mobility", "customer", "o4", "2023-09-19", 9000, "2027-01-31", 800, 600, 450, 9, 25, ""),
     ("c112", "Synthetic Pet Tracker GmbH", "synpet.example", "germany", "Consumer", "customer", "o1", "2024-01-10", 6000, "2027-05-31", 300, 450, 700, 10, 10, "2026-01-20"),
     ("c113", "Synthetic Alarm Box Ltd", "synalarm.example", "Great Britain", "Security", "customer", "o2", "2024-03-15", 3000, "2027-03-15", 200, 210, 190, 4, 10, ""),
-    ("c114", "Synthetic Water Sensor SL", "synwater.example", "Spain", "Utilities", "customer", "o3", "2024-06-01", 1200, "2027-06-01", 80, 60, 40, 2, 5, ""),
-    ("c115", "Synthetic Garden Pump BV", "synpump.example", "Netherlands", "Consumer", "customer", "o5", "2024-11-11", 600, "2026-12-10", 30, 30, 32, 1, 5, ""),
-    ("c116", "Synthetic Beehive Monitor", "synbee.example", "Austria", "Agriculture", "customer", "o5", "2025-02-02", 240, "2027-02-02", 10, 14, 22, 1, 1, ""),
-    ("c117", "Synthetic Kiosk Display", "synkiosk.example", "Belgium", "Retail", "customer", "o3", "2025-05-05", 90, "2027-05-05", 5, 5, 4, 1, 2, ""),
-    ("c118", "Synthetic Hobby Drone", "syndrone.example", "Ireland", "Consumer", "customer", "", "2025-08-08", 12, "2026-11-30", 1, 1, 0, 1, 1, ""),
+    ("c114", "Synthetic Water Sensor SL", "synwater.example", "Spain", "Utilities", "customer", "o3", "2024-06-01", 4800, "2027-06-01", 80, 60, 40, 2, 5, ""),
+    ("c115", "Synthetic Garden Pump BV", "synpump.example", "Netherlands", "Consumer", "customer", "o5", "2024-11-11", 3600, "2026-12-10", 30, 30, 32, 1, 5, ""),
+    ("c116", "Synthetic Beehive Monitor", "synbee.example", "Austria", "Agriculture", "customer", "o5", "2025-02-02", 2400, "2027-02-02", 10, 14, 22, 1, 1, ""),
+    ("c117", "Synthetic Kiosk Display", "synkiosk.example", "Belgium", "Retail", "customer", "o3", "2025-05-05", 1800, "2027-05-05", 5, 5, 4, 1, 2, ""),
+    ("c118", "Synthetic Hobby Drone", "syndrone.example", "Ireland", "Consumer", "customer", "", "2025-08-08", 1200, "2026-11-30", 1, 1, 0, 1, 1, ""),
     # says customer, but no closed won deal and no ARR
     ("c119", "Synthetic Port Cranes AB", "syncranes.example", "Sweden", "Maritime", "customer", "o7", "2021-10-10", 0, "", 0, 0, 0, 0, 0, "2025-02-11"),
     # prospects and the duplicates that hide among them
@@ -103,7 +103,7 @@ CONTACTS = [
 
 # deal_id, company_id, name, stage, amount_eur, close_date, owner
 DEALS = [
-    ("d01", "c101", "Fleet renewal 2026", "closedwon", 950000, "2026-01-15", "o6"),
+    ("d01", "c101", "Fleet renewal 2026", "closedwon", 320000, "2026-01-15", "o6"),
     ("d02", "c102", "Grid expansion", "closedwon", 420000, "2025-06-30", "o8"),
     ("d03", "c103", "Rail data platform", "closedwon", 180000, "2025-12-20", "o6"),
     ("d04", "c104", "Cold chain rollout", "closedwon", 120000, "2025-09-01", "o6"),

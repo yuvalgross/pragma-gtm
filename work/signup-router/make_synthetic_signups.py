@@ -1,8 +1,15 @@
 """
 Builds a labelled synthetic export of one week of product trial signups.
 
-Every row is invented. Domains end in .example (reserved, never real) except the
-personal email row that exists to test the gate. Columns up to integration_path
+Every row is invented. Work domains end in .example (reserved, never real);
+personal email rows use public webmail domains so the gate has something to drop.
+
+The week has three layers:
+  - 17 hand built accounts that exercise every scoring rule,
+  - a generated long tail: most trial signups never integrate or stop after a
+    few test calls, which is the normal shape of a self serve funnel,
+  - gate rows: personal email signups (roughly a quarter to a third of signups
+    in a self serve product) and users from existing customers and partners. Columns up to integration_path
 mimic what a product database and an analytics tool would hold; the columns
 after it mimic what a Clay enrichment table would add. Both are assumptions
 about field names, not a copy of a real schema.
@@ -52,9 +59,48 @@ GATE_TEST_ROWS = [
 ]
 
 
+LONG_TAIL = 210          # work email signups beyond the hand built rows
+PERSONAL = 88            # personal email signups
+PERSONAL_DOMAINS = ["gmail.com", "outlook.com", "hotmail.com", "yahoo.com", "icloud.com",
+                    "proton.me", "gmx.de", "web.de"]
+CITIES = [("Berlin", "DE"), ("Munich", "DE"), ("Hamburg", "DE"), ("Amsterdam", "NL"), ("Paris", "FR"),
+          ("London", "GB"), ("Madrid", "ES"), ("Warsaw", "PL"), ("Stockholm", "SE"), ("Milan", "IT"),
+          ("New York", "US"), ("Austin", "US"), ("Toronto", "CA"), ("Bangalore", "IN"), ("Sao Paulo", "BR")]
+
+
+def long_tail_row(n):
+    """One generated work email signup. Most never integrate; some test a little."""
+    city, country = random.choice(CITIES)
+    hc = random.choices([random.randint(1, 10), random.randint(11, 50), random.randint(51, 500),
+                         random.randint(501, 5000)], weights=[45, 30, 20, 5])[0]
+    cat = "core_segment" if random.random() < 0.35 else "other"
+    fund = random.randint(3, 40) if random.random() < 0.35 else 99
+    stage = random.choices(["never", "tested", "partner"], weights=[55, 33, 12])[0]
+    if stage == "never":
+        path_, products, vols = "", "core_a", (0, 0, 0, 0)
+    else:
+        path_ = (random.choice(["partner_marketplace", "reseller_channel"]) if stage == "partner"
+                 else random.choices(["direct_api", "open_framework", "self_hosted"], weights=[60, 30, 10])[0])
+        products = random.choice(["core_a", "core_b"])
+        base = random.randint(20, 1500)
+        shape = random.choices(["stop", "flat", "grow"], weights=[50, 35, 15])[0]
+        if shape == "stop":
+            vols = (base, base // 3, random.randint(0, base // 10), 0)
+        elif shape == "flat":
+            vols = tuple(max(0, int(base * random.uniform(0.85, 1.15))) for _ in range(4))
+        else:
+            vols = tuple(int(base * f) for f in (1, 1.3, 1.7, 2.2))
+    pain = random.choice(["job:specialist role", "docs:technical need"]) if random.random() < 0.08 else ""
+    tool = random.choices(["none", "incumbent", "inhouse"], weights=[85, 10, 5])[0]
+    hosting = random.choice(["cloud", "cloud", "self", "unknown"])
+    name = f"Synthetic Signup {n:03d}"
+    return (name, city, country, hc, cat, fund, path_, products, vols, pain, tool, hosting)
+
+
 def main(path="data/signups_week_43_synthetic.csv"):
+    rows = list(ROWS) + [long_tail_row(n) for n in range(1, LONG_TAIL + 1)]
     out = []
-    for i, r in enumerate(ROWS, start=1):
+    for i, r in enumerate(rows, start=1):
         name, city, country, hc, cat, fund, path_, products, vols, pain, tool, hosting = r
         slug = name.lower().replace("synthetic ", "").replace(" ", "-")
         out.append([
@@ -62,7 +108,15 @@ def main(path="data/signups_week_43_synthetic.csv"):
             *vols, products, path_,
             name, city, country, hc, cat, fund, pain, tool, hosting,
         ])
-    for j, r in enumerate(GATE_TEST_ROWS, start=len(ROWS) + 1):
+    gate_rows = list(GATE_TEST_ROWS[:2]) + [
+        # a second user from the existing customer signs up for a trial: still a customer
+        ("Customer One", "London", "GB", 300, "core_segment", 12, "direct_api", "core_a", (500, 800, 600, 900), "", "none", "self", "customer-one.example", "work"),
+    ]
+    for k in range(PERSONAL):
+        vols = (0, 0, 0, 0) if random.random() < 0.7 else tuple(random.randint(0, 600) for _ in range(4))
+        gate_rows.append(("", "", "", 0, "", 0, random.choice(["direct_api", ""]), "core_a", vols, "", "none",
+                          "unknown", random.choice(PERSONAL_DOMAINS), "personal"))
+    for j, r in enumerate(gate_rows, start=len(rows) + 1):
         name, city, country, hc, cat, fund, path_, products, vols, pain, tool, hosting, domain, etype = r
         out.append([
             f"syn-{j:03d}", domain, etype, "2026-10-21",
