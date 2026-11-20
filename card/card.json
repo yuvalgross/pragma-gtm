@@ -12,7 +12,7 @@
     { "label": "CRM", "items": ["HubSpot", "Salesforce (as a rep)"] },
     { "label": "AI", "items": ["Claude API", "OpenAI API", "Claude Code"] },
     { "label": "Sales", "items": ["Gong", "MEDDPICC", "SPICED"] },
-    { "label": "Code", "items": ["Python", "JavaScript", "APIs & webhooks"] }
+    { "label": "Code", "items": ["Claude Code builds", "APIs & webhooks", "Reads and adjusts Python and JavaScript"] }
   ],
   "nums": [
     { "b": "€295k → €390k", "t": "program revenue after the signal engine" },

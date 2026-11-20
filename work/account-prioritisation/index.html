@@ -143,6 +143,7 @@
     details.fold > summary h2 { font-size: 23px; }
   }
 </style>
+<style>.ws-own{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.ws-own>div{background:var(--panel);border:1px solid var(--line);padding:10px 14px;font-size:14.5px;color:var(--muted)}.ws-own b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:2px}@media(max-width:760px){.ws-own{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <main>
@@ -152,6 +153,8 @@
     <p class="eyebrow">Work sample</p>
     <h1>Account prioritisation: which 80 accounts get a call this week, and <em>what happens when the signals run out.</em></h1>
     <p class="lead">A weekly run for an outbound team of four SDRs selling B2B software. It reads 500 accounts and their buying signals, decides who a rep may call, scores the rest, routes them by territory and capacity, and gives every rep a Monday list with the reason to call, who to call and a first step. Leadership changes the rules in settings, never in the logic.</p>
+
+    <div class="ws-own"><div><b>Designed and built</b><span>Gate, scoring, territory and capacity routing, run checks. Rules are mine; Claude Code wrote the code from them.</span></div><div><b>Designed, not running</b><span>Clay enrichment, Salesforce writes, Slack message.</span></div></div><!--/ws-own-->
   </header>
   <nav class="ws-nav" aria-label="On this page"><a href="#answer">Result</a><a href="#how">How it works</a><a href="#monday">Monday list</a><a href="#data">What the data hid</a><a href="#score" class="folded">Scoring</a><a href="#decide">Decision</a><a href="#prod" class="folded">Production</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 

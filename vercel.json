@@ -96,6 +96,15 @@
       ]
     },
     {
+      "source": "/Yuval_Gross_GTM_Engineer_CV.pdf",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/Yuval_Gross_CV.pdf",
       "headers": [
         {
