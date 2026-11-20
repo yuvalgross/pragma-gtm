@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account prioritisation · Yuval Gross</title>
+<meta name="description" content="A weekly scoring and routing run for an outbound SDR team: gate, signal and fit scoring, territory routing and checks, with synthetic data and the source.">
+<meta property="og:title" content="Account prioritisation · Yuval Gross">
+<meta property="og:description" content="Which 80 accounts get a call this week, and what happens when the buying signals run out.">
+<meta property="og:url" content="https://pragma-gtm.com/work/account-prioritisation/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/account-prioritisation/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+<style>
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:6px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); padding:14px 16px; }
+  .kpi strong { display:block; font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.1; color:var(--accent); }
+  .kpi span { font-size:14.5px; color:var(--muted); }
+  ul.plain { margin:0 0 14px; padding-left:20px; max-width:66ch; } ul.plain li { margin-bottom:8px; }
+  ol.plain { margin:0 0 14px; padding-left:22px; max-width:66ch; } ol.plain li { margin-bottom:8px; }
+  .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
+  .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Account prioritisation: which 80 accounts get a call this week, and <em>what happens when the signals run out.</em></h1>
+    <p class="lead">A weekly run for an outbound team of four SDRs selling B2B software. It reads 500 accounts and their buying signals, decides who a rep may call, scores the rest, routes them by territory and capacity, and gives every rep a Monday list with the reason to call, who to call and a first step. Leadership changes the rules in settings, never in the logic.</p>
+  </header>
+
+  <section aria-labelledby="answer">
+    <h2 id="answer">The answer: <em>the limit is signals, not reps</em></h2>
+    <p>Picking 80 accounts a week is the easy part. Run two Mondays in a row and the accounts with a real buying signal are used up by the second week. Adding SDR hours does not fix that. More signal sources do, and so does putting capacity where the signals are.</p>
+    <div class="kpis">
+      <div class="kpi"><strong>80 of 80</strong><span>week 1 accounts with a live signal</span></div>
+      <div class="kpi"><strong>59</strong><span>week 2 accounts with a signal, 21 fit only</span></div>
+      <div class="kpi"><strong>23.1 to 9.6</strong><span>average signal points, week 1 to week 2</span></div>
+      <div class="kpi"><strong>12</strong><span>signal accounts left after week 2, all in EMEA</span></div>
+    </div>
+    <p class="note">Only a handful of accounts show a first signal between the two Mondays, so at this pace most of week 3 would go to accounts with no reason to call now.</p>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="flow">
+      <div class="step"><b>Clean</b><span>Fix the data before trusting it and log every fix. Each fix becomes a check on every weekly load.</span></div>
+      <div class="step"><b>Gate</b><span>May a rep call it? Yes or no rules before any scoring: AE owned, no rep for the region, touched in the last 21 days, lost in the last 120.</span></div>
+      <div class="step"><b>Score</b><span>Is it worth calling this week? Signal points plus fit points, times a leadership boost.</span></div>
+      <div class="step"><b>Route</b><span>Territory first, then each rep's capacity for new accounts. Free slots take the best fitting accounts with no signal, marked fit only.</span></div>
+      <div class="step"><b>Output</b><span>One list per rep, best first, with why now, who to call and a first step from the strongest signal.</span></div>
+    </div>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="How 500 rows became 80, scrolls sideways on small screens">
+<table style="min-width:560px">
+<thead><tr><th>Rule, in the order the run applies it</th><th class="n">Taken out</th><th class="n">Left</th></tr></thead>
+<tbody>
+<tr><td>Start: 500 rows, 3 companies stored twice merged</td><td class="n">3</td><td class="n">497</td></tr>
+<tr><td>Owned by an AE: customers, open deals, other AE accounts</td><td class="n">111</td><td class="n">386</td></tr>
+<tr><td>Region with no rep to cover it</td><td class="n">56</td><td class="n">330</td></tr>
+<tr><td>Touched in the last 21 days, or lost less than 120 days ago</td><td class="n">15</td><td class="n">315</td></tr>
+<tr><td>No buying signal in the last 90 days</td><td class="n">165</td><td class="n">150</td></tr>
+<tr><td>Signal too weak, score under 15</td><td class="n">2</td><td class="n">148</td></tr>
+<tr class="hot"><td>No room left in the rep's territory this week</td><td class="n">68</td><td class="n total">80</td></tr>
+</tbody>
+</table>
+</div>
+  </section>
+
+  <section aria-labelledby="monday">
+    <h2 id="monday">What a rep sees <em>on Monday</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Number one on each list, week 1, scrolls sideways on small screens">
+<table style="min-width:900px">
+<thead><tr><th>Rep</th><th>Account</th><th class="n">Score</th><th>Why now</th><th>Who to call</th><th>First step</th></tr></thead>
+<tbody>
+<tr><td>EMEA rep</td><td class="acct">Fernbridge Ltd<span class="sub">United Kingdom</span></td><td class="n total">72.0</td><td>Contract renewal due; pricing page; complained about current vendor</td><td>Head of Procurement</td><td>Open with a cost comparison before they renew</td></tr>
+<tr><td>US senior rep</td><td class="acct">Hazelgate Inc<span class="sub">United States</span></td><td class="n total">78.1</td><td>Contract renewal due; hiring a platform engineer; whitepaper</td><td>Head of Procurement</td><td>Open with a cost comparison before they renew</td></tr>
+<tr><td>US junior rep</td><td class="acct">Rowanstone Inc<span class="sub">United States</span></td><td class="n total">68.0</td><td>Complained about current vendor; hiring a platform engineer; new VP Engineering</td><td>Head of Engineering</td><td>Ask what broke and show how it is handled</td></tr>
+<tr><td>LATAM rep</td><td class="acct">Junipermark Ltda<span class="sub">Colombia</span></td><td class="n total">61.5</td><td>Pricing page 3 times; new head of procurement; complained about current vendor</td><td>Head of Engineering</td><td>Offer a pricing walkthrough for their volume</td></tr>
+</tbody>
+</table>
+</div>
+  </section>
+
+  <section aria-labelledby="data">
+    <h2 id="data">What the data <em>was hiding</em></h2>
+    <p>The synthetic input carries the problems a real CRM export has. Each would put a wrong list in front of a rep without any error message.</p>
+    <ul class="plain">
+      <li><strong>A third of the list can disappear on load.</strong> The region code NA (North America) reads as an empty value in pandas by default. Here that is 173 accounts. The run reads it as text and logs it.</li>
+      <li><strong>Signal labels are wrong.</strong> 34 single blog visits are filed as pricing interest. The score reads what a signal says, not the type it was filed under, so they count for nothing.</li>
+      <li><strong>Some competitor renewals are the seller's own.</strong> 4 customers carry a renewal signal while their current vendor is the seller. Those go to the AE as retention alerts, not to an SDR.</li>
+      <li><strong>The same company twice.</strong> 3 companies sit under two records, one with sales history and one that looks new. The run merges each pair into the record with history and logs it, so the cool down holds.</li>
+      <li><strong>Demand sits where nobody sells.</strong> 26 accounts in a region with no rep show a signal. That is a staffing question for leadership, not a routing rule.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="score">
+    <h2 id="score">How an account <em>is scored</em></h2>
+    <p class="formula">Score = (signal points + fit points) &times; leadership boost</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Signal points, scrolls sideways on small screens">
+<table style="min-width:640px">
+<thead><tr><th>Level</th><th class="n">Points</th><th>Examples</th></tr></thead>
+<tbody>
+<tr class="hot"><td>High: close to a decision</td><td class="n">18 to 30</td><td>Contract renewal due, three pricing visits, complained about current vendor, API docs</td></tr>
+<tr><td>Medium: something is changing in their business</td><td class="n">12 to 22</td><td>Hiring a platform engineer, new product launch, new head of procurement, funding, new market</td></tr>
+<tr><td>Low: weak or early</td><td class="n">8 to 10</td><td>New VP Engineering, webinar, whitepaper</td></tr>
+<tr><td>Ignored</td><td class="n">0</td><td>A single blog visit</td></tr>
+</tbody>
+</table>
+</div>
+    <ul class="plain" style="margin-top:14px">
+      <li><strong>Signals fade.</strong> Half the points every 21 days, nothing after 90.</li>
+      <li><strong>Renewals work the other way.</strong> Full points while the date is 1 to 6 months away, half in the final month, nothing once it has passed.</li>
+      <li><strong>One per kind, plus a bonus for variety.</strong> Ten docs visits count as one. Each extra kind of signal adds 6 points.</li>
+      <li><strong>Funding counts double next to a build signal.</strong> Money on its own says nothing about a buying decision. Money within 60 days of an engineering hire or a launch says it is going into the product.</li>
+      <li><strong>Fit, up to 29 points.</strong> Company size, current vendor (an in house build or several vendors scores highest) and industry. A missing value scores a small default, not zero, so a gap does not knock an account out.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="decide">
+    <h2 id="decide">What I would <em>decide</em></h2>
+    <p>Every rule is a setting, so leadership can try a decision and rerun. I tried the obvious one.</p>
+    <ul class="plain">
+      <li>EMEA has the backlog: 35 signal accounts wait for room in week 1, and the only 12 left after week 2 are all there.</li>
+      <li>Moving 8 weekly slots from LATAM to EMEA cuts fit only accounts in week 2 from 21 to 15, and 145 signal accounts get worked over two weeks instead of 139.</li>
+      <li>No setting gets past 151, because that is every signal account there is.</li>
+    </ul>
+    <p class="decide"><strong>My call:</strong> move rep time to EMEA now, make new signal sources the first build, and set the weekly pace once week 2 replies are in. The sources I would add first are tied to a buying moment rather than another intent feed: a competing product reaching end of support, public tech stack changes, and product sign ups matched to named accounts.</p>
+  </section>
+
+  <section aria-labelledby="prod">
+    <h2 id="prod">From prototype <em>to production</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Prototype against production, scrolls sideways on small screens">
+<table style="min-width:760px">
+<thead><tr><th>Layer</th><th>In this sample</th><th>In production</th></tr></thead>
+<tbody>
+<tr><td>Accounts, owners, stages</td><td>CSV</td><td>Salesforce as the system of record, read live every Monday</td></tr>
+<tr><td>Signals</td><td>CSV</td><td>One signal record per event, keyed on account, type and date, so nothing lands twice</td></tr>
+<tr><td>Signal sources</td><td>Invented</td><td>Website and marketing data, plus job posts, funding and launches through Clay, paid for only on accounts that pass the fit gate</td></tr>
+<tr><td>Weekly run</td><td>Python script</td><td>n8n every Monday at 06:00, writing score, tier and reason onto the account, with a duplicate check before each write and a Slack alert on failure</td></tr>
+<tr><td>What the rep sees</td><td>A CSV per week</td><td>A Slack message at 07:00 and the same list in Salesforce</td></tr>
+<tr><td>Outcomes</td><td>Not modelled</td><td>Replies and meetings read back from Salesforce and the sequencer</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">How I would know it works: share of each list with a live signal, meetings per 100 accounts worked and pipeline per SDR hour, split by signal type, against a small group of accounts left unprioritised.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>I did</dt><dd>Every decision: which signals count and how much, the gate, the routing rules and the recommendation. I checked every number on this page against the output.</dd>
+      <dt>AI did</dt><dd>Claude Code wrote both scripts from those decisions. No model scores anything during the run: every signal text maps to a readable rule.</dd>
+      <dt>Checks</dt><dd>The run stops if anything breaks: a rep over capacity, an account listed twice, an account on both weeks' lists, an AE owned account or an account with no rep on a list, or a signal dated on or after its Monday that scored.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment, the n8n writes into Salesforce and the Slack message. Designed, not running.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_accounts.py</code> then <code>python3 prioritise.py data/accounts.csv data/signals.csv --out output</code>. Standard library only.</dd>
+    </dl>
+    <p class="note">Synthetic input. Every company, domain and signal is invented to exercise the rules and says nothing about real companies. Domains end in <code>.example</code>.</p>
+  </section>
+
+  <section aria-labelledby="files">
+    <h2 id="files">Files</h2>
+    <div class="files">
+      <div><a href="prioritise.py">prioritise.py</a><small>Clean, gate, score, route, outputs and checks.</small></div>
+      <div><a href="make_synthetic_accounts.py">make_synthetic_accounts.py</a><small>Builds the synthetic input, problems included.</small></div>
+      <div><a href="data/accounts.csv">accounts.csv</a><small>500 invented accounts.</small></div>
+      <div><a href="data/signals.csv">signals.csv</a><small>540 invented signals.</small></div>
+      <div><a href="output/week1_lists.csv">week1_lists.csv</a><small>Week 1: 80 accounts across four reps.</small></div>
+      <div><a href="output/week2_lists.csv">week2_lists.csv</a><small>Week 2: 80 new accounts, none repeated.</small></div>
+      <div><a href="output/ae_alerts.csv">ae_alerts.csv</a><small>Signals on AE owned accounts, sent to the AE.</small></div>
+      <div><a href="output/data_quality.csv">data_quality.csv</a><small>Every fix the run made.</small></div>
+      <div><a href="output/monday.md">monday.md</a><small>Top three per rep, as a rep would read it.</small></div>
+      <div><a href="output/summary.json">summary.json</a><small>Counts behind every number on this page.</small></div>
+      <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
+    </div>
+    <details>
+      <summary>Read prioritise.py here</summary>
+      <pre><code>&quot;&quot;&quot;
+Account prioritisation: which accounts each SDR works this week, and why.
+
+    python3 prioritise.py data/accounts.csv data/signals.csv --out output
+
+Runs two Mondays in a row. Week 2 never repeats an account from week 1.
+
+Steps, every Monday
+  1. Clean: read the region code NA as North America, merge companies stored
+     twice, ignore signals whose text says nothing, log every fix.
+  2. Gate: may a rep call it? AE owned, no rep for the region, touched in the
+     last 21 days, lost in the last 120 days.
+  3. Score: (signal points + fit points) x boost. Signals fade, renewals count
+     as they come closer, one signal per type plus a bonus for variety.
+  4. Route: territory, then each rep&#x27;s capacity for new accounts. Free slots
+     take the best fitting accounts with no signal, marked fit only.
+  5. Output: one list per rep, best first, with why now and a first step.
+
+Every rule is a setting at the top of this file. Standard library only.
+&quot;&quot;&quot;
+import argparse
+import csv
+import json
+import os
+import re
+from collections import Counter, defaultdict
+from datetime import date, timedelta
+
+# ---- settings ---------------------------------------------------------------
+
+MONDAYS = [date(2026, 10, 5), date(2026, 10, 12)]
+
+REPS = [  # name, territory, new accounts per week, months in role
+    (&quot;EMEA rep&quot;, &quot;EMEA&quot;, 25, 14),
+    (&quot;US senior rep&quot;, &quot;NA&quot;, 20, 18),
+    (&quot;US junior rep&quot;, &quot;NA&quot;, 15, 4),
+    (&quot;LATAM rep&quot;, &quot;LATAM&quot;, 20, 12),
+]
+SENIOR_FIRST_EMPLOYEES = 2000  # in NA, accounts this big go to the senior rep first
+
+# points are set on what a signal says, not on the type it was filed under
+SIGNAL_POINTS = {
+    &quot;contract renewal due with current vendor&quot;: 30,
+    &quot;visited pricing page 3 times&quot;: 25,
+    &quot;complained about current vendor in a review&quot;: 24,
+    &quot;read API docs&quot;: 20,
+    &quot;hiring a platform engineer&quot;: 22,
+    &quot;visited pricing page&quot;: 18,
+    &quot;launched a new product line&quot;: 18,
+    &quot;new head of procurement&quot;: 15,
+    &quot;raised a funding round&quot;: 12,
+    &quot;opened an office in a new market&quot;: 12,
+    &quot;new VP Engineering&quot;: 10,
+    &quot;attended a webinar&quot;: 8,
+    &quot;downloaded a whitepaper&quot;: 8,
+    &quot;read one blog post&quot;: 0,
+}
+FIRST_STEP = {
+    &quot;contract renewal due with current vendor&quot;: (&quot;Head of Procurement&quot;, &quot;Open with a cost comparison before they renew&quot;),
+    &quot;visited pricing page 3 times&quot;: (&quot;Head of Engineering&quot;, &quot;Offer a pricing walkthrough for their volume&quot;),
+    &quot;visited pricing page&quot;: (&quot;Head of Engineering&quot;, &quot;Offer a pricing walkthrough for their volume&quot;),
+    &quot;complained about current vendor in a review&quot;: (&quot;Head of Engineering&quot;, &quot;Ask what broke and show how it is handled&quot;),
+    &quot;read API docs&quot;: (&quot;Lead developer&quot;, &quot;Offer a technical session on the integration&quot;),
+    &quot;hiring a platform engineer&quot;: (&quot;VP Engineering&quot;, &quot;Reference the role and the build it is hired for&quot;),
+    &quot;launched a new product line&quot;: (&quot;Head of Product&quot;, &quot;Ask what the launch needs from the stack&quot;),
+}
+HALF_LIFE_DAYS = 21
+MAX_SIGNAL_AGE = 90
+VARIETY_BONUS = 6
+FUNDING_NEAR_BUILD_DAYS = 60   # funding counts double within this many days of a build signal
+COOL_DOWN_DAYS = 21
+LOST_WAIT_DAYS = 120
+MIN_SCORE = 15
+BOOSTS = {}  # e.g. {&quot;logistics&quot;: 1.5}
+
+SIZE_POINTS = [(5000, 15), (2000, 12), (800, 9), (300, 6), (0, 3)]
+VENDOR_POINTS = {&quot;in house build&quot;: 8, &quot;several vendors&quot;: 8, &quot;single vendor&quot;: 5}
+CORE_INDUSTRIES = {&quot;logistics&quot;, &quot;fintech&quot;, &quot;energy&quot;, &quot;mobility&quot;}
+MISSING = {&quot;size&quot;: 5, &quot;vendor&quot;: 3}
+
+# ---- clean ------------------------------------------------------------------
+
+
+def norm(name):
+    n = re.sub(r&quot;\(.*?\)&quot;, &quot;&quot;, name.lower())
+    n = re.sub(r&quot;[^a-z0-9 ]&quot;, &quot;&quot;, n)
+    return re.sub(r&quot;\s+&quot;, &quot; &quot;, n).strip()
+
+
+def clean(accounts, signals, log):
+    na = sum(1 for a in accounts if a[&quot;region&quot;] == &quot;NA&quot;)
+    log.append((&quot;region NA read as North America, not as empty&quot;, na))
+    # merge companies stored twice into the record with sales history
+    groups = defaultdict(list)
+    for a in accounts:
+        groups[(norm(a[&quot;company&quot;]), a[&quot;country&quot;])].append(a)
+    remap, keep = {}, []
+    for recs in groups.values():
+        recs.sort(key=lambda a: (a[&quot;last_touch&quot;] == &quot;&quot;, a[&quot;account_id&quot;]))
+        keep.append(recs[0])
+        for dup in recs[1:]:
+            remap[dup[&quot;account_id&quot;]] = recs[0][&quot;account_id&quot;]
+    if remap:
+        log.append((&quot;companies stored twice, merged into the record with history&quot;, len(remap)))
+    for s in signals:
+        s[&quot;account_id&quot;] = remap.get(s[&quot;account_id&quot;], s[&quot;account_id&quot;])
+    blog = sum(1 for s in signals if s[&quot;detail&quot;] == &quot;read one blog post&quot; and s[&quot;signal_type&quot;] == &quot;web_intent&quot;)
+    log.append((&quot;single blog visits filed as pricing interest, scored 0&quot;, blog))
+    return keep, signals
+
+# ---- score ------------------------------------------------------------------
+
+
+def days(a, b):
+    return (a - b).days
+
+
+def signal_points(sig, monday):
+    base = SIGNAL_POINTS.get(sig[&quot;detail&quot;], 0)
+    when = date.fromisoformat(sig[&quot;signal_date&quot;])
+    if when &gt;= monday:
+        return 0.0
+    if sig[&quot;detail&quot;].startswith(&quot;contract renewal&quot;) and sig[&quot;extra&quot;]:
+        to_go = days(date.fromisoformat(sig[&quot;extra&quot;]), monday)
+        if to_go &lt;= 0 or to_go &gt; 180:
+            return 0.0
+        return base / 2 if to_go &lt;= 30 else float(base)
+    age = days(monday, when)
+    if age &gt; MAX_SIGNAL_AGE:
+        return 0.0
+    return base * 0.5 ** (age / HALF_LIFE_DAYS)
+
+
+def score_signals(sigs, monday):
+    best = {}
+    for s in sigs:
+        p = signal_points(s, monday)
+        if p &lt;= 0:
+            continue
+        key = s[&quot;detail&quot;]  # one per kind of signal
+        if p &gt; best.get(key, (0, None))[0]:
+            best[key] = (p, s)
+    if not best:
+        return 0.0, None, []
+    build_dates = [date.fromisoformat(s[&quot;signal_date&quot;]) for p, s in best.values()
+                   if s[&quot;detail&quot;] in (&quot;hiring a platform engineer&quot;, &quot;launched a new product line&quot;)]
+    total = 0.0
+    for key, (p, s) in best.items():
+        if key == &quot;raised a funding round&quot; and any(
+                abs(days(date.fromisoformat(s[&quot;signal_date&quot;]), d)) &lt;= FUNDING_NEAR_BUILD_DAYS for d in build_dates):
+            p *= 2
+        total += p
+    total += VARIETY_BONUS * (len(best) - 1)
+    ranked = sorted(best.values(), key=lambda x: -x[0])
+    return round(total, 1), ranked[0][1], [s[&quot;detail&quot;] for _, s in ranked]
+
+
+def fit_points(a):
+    if a[&quot;employees&quot;]:
+        n = int(a[&quot;employees&quot;])
+        size = next(p for floor, p in SIZE_POINTS if n &gt;= floor)
+    else:
+        size = MISSING[&quot;size&quot;]
+    vendor = VENDOR_POINTS.get(a[&quot;current_vendor&quot;], MISSING[&quot;vendor&quot;])
+    industry = 6 if a[&quot;industry&quot;] in CORE_INDUSTRIES else 4
+    return size + vendor + industry
+
+# ---- gate -------------------------------------------------------------------
+
+
+def gate(a, monday, has_rep):
+    if a[&quot;owner_type&quot;] == &quot;AE&quot; or a[&quot;stage&quot;] in (&quot;customer&quot;, &quot;open_deal&quot;):
+        return &quot;owned by an AE&quot;
+    if a[&quot;region&quot;] not in has_rep:
+        return &quot;region with no rep&quot;
+    if a[&quot;last_touch&quot;] and days(monday, date.fromisoformat(a[&quot;last_touch&quot;])) &lt; COOL_DOWN_DAYS:
+        return &quot;touched in the last 21 days&quot;
+    if a[&quot;lost_date&quot;] and days(monday, date.fromisoformat(a[&quot;lost_date&quot;])) &lt; LOST_WAIT_DAYS:
+        return &quot;lost less than 120 days ago&quot;
+    return None
+
+# ---- one Monday -------------------------------------------------------------
+
+
+def run_week(accounts, by_acc, monday, already):
+    has_rep = {t for _, t, _, _ in REPS}
+    rows, out, alerts = [], Counter(), []
+    for a in accounts:
+        if a[&quot;account_id&quot;] in already:
+            continue
+        sig, top, kinds = score_signals(by_acc.get(a[&quot;account_id&quot;], []), monday)
+        reason = gate(a, monday, has_rep)
+        if reason == &quot;owned by an AE&quot;:
+            if sig &gt; 0:
+                kind = &quot;retention&quot; if a[&quot;current_vendor&quot;] == &quot;us&quot; else (&quot;open deal&quot; if a[&quot;stage&quot;] == &quot;open_deal&quot; else &quot;expansion&quot;)
+                alerts.append({&quot;monday&quot;: monday.isoformat(), &quot;account_id&quot;: a[&quot;account_id&quot;], &quot;company&quot;: a[&quot;company&quot;],
+                               &quot;alert&quot;: kind, &quot;signals&quot;: &quot;; &quot;.join(kinds)})
+            out[reason] += 1
+            continue
+        if reason:
+            out[reason] += 1
+            if reason == &quot;region with no rep&quot; and sig &gt; 0:
+                out[&quot;region with no rep, with a signal&quot;] += 1
+            continue
+        fit = fit_points(a)
+        boost = BOOSTS.get(a[&quot;industry&quot;], 1.0)
+        score = round((sig + fit) * boost, 1)
+        rows.append({&quot;a&quot;: a, &quot;signal&quot;: sig, &quot;fit&quot;: fit, &quot;score&quot;: score, &quot;top&quot;: top, &quot;kinds&quot;: kinds})
+
+    signal_rows = [r for r in rows if r[&quot;signal&quot;] &gt; 0]
+    out[&quot;no buying signal in the last 90 days&quot;] = len(rows) - len(signal_rows)
+    weak = [r for r in signal_rows if r[&quot;score&quot;] &lt; MIN_SCORE]
+    out[&quot;signal too weak, score under 15&quot;] = len(weak)
+    strong = sorted([r for r in signal_rows if r[&quot;score&quot;] &gt;= MIN_SCORE], key=lambda r: -r[&quot;score&quot;])
+    fit_only = sorted([r for r in rows if r[&quot;signal&quot;] == 0], key=lambda r: -r[&quot;fit&quot;])
+
+    lists = {name: [] for name, _, _, _ in REPS}
+    cap = {name: c for name, _, c, _ in REPS}
+
+    def place(r, label):
+        terr = r[&quot;a&quot;][&quot;region&quot;]
+        reps = [n for n, t, _, _ in REPS if t == terr and len(lists[n]) &lt; cap[n]]
+        if not reps:
+            return False
+        if terr == &quot;NA&quot;:
+            big = r[&quot;a&quot;][&quot;employees&quot;] and int(r[&quot;a&quot;][&quot;employees&quot;]) &gt;= SENIOR_FIRST_EMPLOYEES
+            if big and &quot;US senior rep&quot; in reps:
+                reps = [&quot;US senior rep&quot;]
+            else:
+                reps.sort(key=lambda n: len(lists[n]) / cap[n])
+        lists[reps[0]].append(dict(r, kind=label))
+        return True
+
+    waiting = Counter()
+    for r in strong:
+        if not place(r, &quot;signal&quot;):
+            waiting[r[&quot;a&quot;][&quot;region&quot;]] += 1
+    out[&quot;no room left in the rep&#x27;s territory&quot;] = sum(waiting.values())
+    for r in fit_only:
+        if all(len(lists[n]) &gt;= cap[n] for n in lists):
+            break
+        place(r, &quot;fit only&quot;)
+    return lists, out, alerts, waiting
+
+
+def tier(r):
+    hi_fit, hi_sig = r[&quot;fit&quot;] &gt;= 20, r[&quot;signal&quot;] &gt;= 30
+    return 1 if hi_fit and hi_sig else (2 if hi_fit or hi_sig else 3)
+
+
+def as_rows(lists, monday):
+    rows = []
+    months = {n: m for n, _, _, m in REPS}
+    for rep, items in lists.items():
+        for i, r in enumerate(sorted(items, key=lambda x: (x[&quot;kind&quot;] != &quot;signal&quot;, -x[&quot;score&quot;])), start=1):
+            a, top = r[&quot;a&quot;], r[&quot;top&quot;]
+            who, step = FIRST_STEP.get(top[&quot;detail&quot;], (&quot;Head of Engineering&quot;, &quot;Lead with the signal&quot;)) if top else (
+                &quot;Head of Engineering&quot;, &quot;Fit only: open on their stack and size, no trigger yet&quot;)
+            note = &quot;Manager joins the first call&quot; if months[rep] &lt; 6 and tier(r) == 1 else &quot;&quot;
+            rows.append({
+                &quot;monday&quot;: monday.isoformat(), &quot;rep&quot;: rep, &quot;rank&quot;: i, &quot;account_id&quot;: a[&quot;account_id&quot;],
+                &quot;company&quot;: a[&quot;company&quot;], &quot;country&quot;: a[&quot;country&quot;], &quot;kind&quot;: r[&quot;kind&quot;], &quot;tier&quot;: tier(r),
+                &quot;signal_points&quot;: r[&quot;signal&quot;], &quot;fit_points&quot;: r[&quot;fit&quot;], &quot;score&quot;: r[&quot;score&quot;],
+                &quot;why_now&quot;: &quot;; &quot;.join(r[&quot;kinds&quot;]) if r[&quot;kinds&quot;] else &quot;no signal yet&quot;,
+                &quot;who_to_call&quot;: who, &quot;first_step&quot;: step, &quot;note&quot;: note,
+            })
+    return rows
+
+# ---- checks -----------------------------------------------------------------
+
+
+def checks(weeks, accounts_by_id, signals):
+    seen = set()
+    for monday, rows in weeks:
+        per_rep = Counter(r[&quot;rep&quot;] for r in rows)
+        for name, _, c, _ in REPS:
+            assert per_rep[name] &lt;= c, f&quot;{name} over capacity&quot;
+        ids = [r[&quot;account_id&quot;] for r in rows]
+        assert len(ids) == len(set(ids)), &quot;an account is listed twice&quot;
+        assert not seen &amp; set(ids), &quot;an account is on both weeks&#x27; lists&quot;
+        seen |= set(ids)
+        for r in rows:
+            a = accounts_by_id[r[&quot;account_id&quot;]]
+            assert a[&quot;owner_type&quot;] != &quot;AE&quot; and a[&quot;stage&quot;] not in (&quot;customer&quot;, &quot;open_deal&quot;), &quot;AE account on a list&quot;
+            assert a[&quot;region&quot;] != &quot;APAC&quot;, &quot;APAC account on a list&quot;
+        for s in signals:
+            if s[&quot;account_id&quot;] in ids and date.fromisoformat(s[&quot;signal_date&quot;]) &gt;= monday:
+                # allowed in the file, but it must not have scored: verified by signal_points returning 0
+                assert signal_points(s, monday) == 0
+    return &quot;all checks passed&quot;
+
+# ---- main -------------------------------------------------------------------
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument(&quot;accounts&quot;)
+    ap.add_argument(&quot;signals&quot;)
+    ap.add_argument(&quot;--out&quot;, default=&quot;output&quot;)
+    ap.add_argument(&quot;--capacity&quot;, default=&quot;&quot;, help=&#x27;change capacity, e.g. &quot;LATAM rep=12,EMEA rep=33&quot;&#x27;)
+    args = ap.parse_args()
+    if args.capacity:
+        change = dict(x.split(&quot;=&quot;) for x in args.capacity.split(&quot;,&quot;))
+        REPS[:] = [(n, t, int(change.get(n, c)), m) for n, t, c, m in REPS]
+
+    with open(args.accounts, newline=&quot;&quot;) as f:
+        accounts = list(csv.DictReader(f))  # csv keeps &quot;NA&quot; as text; pandas would not by default
+    with open(args.signals, newline=&quot;&quot;) as f:
+        signals = list(csv.DictReader(f))
+
+    log = []
+    accounts, signals = clean(accounts, signals, log)
+    by_acc = defaultdict(list)
+    for s in signals:
+        by_acc[s[&quot;account_id&quot;]].append(s)
+
+    os.makedirs(args.out, exist_ok=True)
+    already, weeks, summary_weeks, all_alerts = set(), [], [], []
+    for n, monday in enumerate(MONDAYS, start=1):
+        lists, out, alerts, waiting = run_week(accounts, by_acc, monday, already)
+        rows = as_rows(lists, monday)
+        weeks.append((monday, rows))
+        all_alerts += alerts
+        already |= {r[&quot;account_id&quot;] for r in rows}
+        sig_rows = [r for r in rows if r[&quot;kind&quot;] == &quot;signal&quot;]
+        summary_weeks.append({
+            &quot;week&quot;: n, &quot;monday&quot;: monday.isoformat(), &quot;listed&quot;: len(rows),
+            &quot;with_signal&quot;: len(sig_rows), &quot;fit_only&quot;: len(rows) - len(sig_rows),
+            &quot;tier_1&quot;: sum(1 for r in rows if r[&quot;tier&quot;] == 1),
+            &quot;avg_signal_points&quot;: round(sum(r[&quot;signal_points&quot;] for r in sig_rows) / max(len(sig_rows), 1), 1),
+            &quot;avg_fit_points&quot;: round(sum(r[&quot;fit_points&quot;] for r in sig_rows) / max(len(sig_rows), 1), 1),
+            &quot;gate&quot;: dict(out), &quot;signal_accounts_waiting_by_region&quot;: dict(waiting),
+            &quot;ae_alerts&quot;: len(alerts),
+        })
+        with open(os.path.join(args.out, f&quot;week{n}_lists.csv&quot;), &quot;w&quot;, newline=&quot;&quot;) as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+            w.writeheader()
+            w.writerows(rows)
+
+    result = checks(weeks, {a[&quot;account_id&quot;]: a for a in accounts}, signals)
+
+    with open(os.path.join(args.out, &quot;ae_alerts.csv&quot;), &quot;w&quot;, newline=&quot;&quot;) as f:
+        w = csv.DictWriter(f, fieldnames=[&quot;monday&quot;, &quot;account_id&quot;, &quot;company&quot;, &quot;alert&quot;, &quot;signals&quot;])
+        w.writeheader()
+        w.writerows(all_alerts)
+    with open(os.path.join(args.out, &quot;data_quality.csv&quot;), &quot;w&quot;, newline=&quot;&quot;) as f:
+        w = csv.writer(f)
+        w.writerow([&quot;fix&quot;, &quot;rows&quot;])
+        w.writerows(log)
+
+    lines = [&quot;# Monday lists, week 1&quot;, &quot;&quot;]
+    for rep in [r[0] for r in REPS]:
+        top = [r for r in weeks[0][1] if r[&quot;rep&quot;] == rep][:3]
+        lines.append(f&quot;## {rep}&quot;)
+        lines.append(&quot;| # | Account | Score | Why now | Who to call | First step |&quot;)
+        lines.append(&quot;| --- | --- | --- | --- | --- | --- |&quot;)
+        for r in top:
+            lines.append(f&quot;| {r[&#x27;rank&#x27;]} | {r[&#x27;company&#x27;]}, {r[&#x27;country&#x27;]} | {r[&#x27;score&#x27;]} | {r[&#x27;why_now&#x27;]} | {r[&#x27;who_to_call&#x27;]} | {r[&#x27;first_step&#x27;]} |&quot;)
+        lines.append(&quot;&quot;)
+    with open(os.path.join(args.out, &quot;monday.md&quot;), &quot;w&quot;) as f:
+        f.write(&quot;\n&quot;.join(lines))
+
+    summary = {&quot;accounts_after_merge&quot;: len(accounts), &quot;data_quality&quot;: dict(log),
+               &quot;weeks&quot;: summary_weeks, &quot;checks&quot;: result}
+    with open(os.path.join(args.out, &quot;summary.json&quot;), &quot;w&quot;) as f:
+        json.dump(summary, f, indent=2)
+    print(json.dumps(summary, indent=2))
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+    </details>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>

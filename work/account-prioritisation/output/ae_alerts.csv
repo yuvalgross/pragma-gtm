@@ -1,0 +1,111 @@
+monday,account_id,company,alert,signals
+2026-10-05,A0011,Heathcraft AB,expansion,visited pricing page; read API docs
+2026-10-05,A0016,Mossgate Pty Ltd,retention,contract renewal due with current vendor
+2026-10-05,A0017,Sorrelfield Inc,open deal,launched a new product line; opened an office in a new market
+2026-10-05,A0023,Hazelbridge Pte Ltd,expansion,attended a webinar
+2026-10-05,A0024,Thistlemark Ltd,expansion,new head of procurement
+2026-10-05,A0036,Reedcraft Inc,expansion,read API docs; opened an office in a new market
+2026-10-05,A0044,Birchline Ltd,expansion,new VP Engineering
+2026-10-05,A0067,Reedwright LLC,expansion,hiring a platform engineer
+2026-10-05,A0071,Reedmark Pte Ltd,expansion,visited pricing page
+2026-10-05,A0075,Birchwright Inc,expansion,read API docs; visited pricing page; launched a new product line
+2026-10-05,A0077,Willowcraft Ltda,open deal,opened an office in a new market
+2026-10-05,A0095,Willowpoint Pty Ltd,expansion,attended a webinar; visited pricing page 3 times
+2026-10-05,A0096,Willowgate Inc,expansion,raised a funding round; complained about current vendor in a review
+2026-10-05,A0100,Sorrelbridge AB,open deal,contract renewal due with current vendor; complained about current vendor in a review
+2026-10-05,A0103,Mossbridge LLC,open deal,complained about current vendor in a review; new VP Engineering
+2026-10-05,A0104,Birchfield Corp,retention,contract renewal due with current vendor
+2026-10-05,A0105,Fernfield Pte Ltd,expansion,visited pricing page 3 times
+2026-10-05,A0120,Juniperstone KK,expansion,read API docs; new VP Engineering
+2026-10-05,A0124,Birchstone Corp,retention,contract renewal due with current vendor
+2026-10-05,A0125,Alderstone SA,expansion,opened an office in a new market; launched a new product line; new head of procurement
+2026-10-05,A0141,Elmfield LLC,expansion,read API docs
+2026-10-05,A0153,Ferngate Inc,expansion,new head of procurement
+2026-10-05,A0168,Mossgate Corp,open deal,launched a new product line; raised a funding round; visited pricing page 3 times
+2026-10-05,A0202,Ashcraft Inc,retention,contract renewal due with current vendor; hiring a platform engineer; raised a funding round; attended a webinar
+2026-10-05,A0214,Thistlewright LLC,expansion,raised a funding round
+2026-10-05,A0224,Hazelmark SAS,expansion,new head of procurement; complained about current vendor in a review
+2026-10-05,A0232,Fernpoint Ltd,expansion,downloaded a whitepaper
+2026-10-05,A0238,Mossbridge Ltda,expansion,attended a webinar
+2026-10-05,A0239,Mapleport LLC,expansion,complained about current vendor in a review
+2026-10-05,A0245,Thistleline SA,expansion,launched a new product line; new VP Engineering
+2026-10-05,A0249,Birchline BV,open deal,contract renewal due with current vendor; opened an office in a new market
+2026-10-05,A0254,Willowline Inc,expansion,read API docs; new VP Engineering
+2026-10-05,A0257,Heathcraft GmbH,expansion,opened an office in a new market; hiring a platform engineer; raised a funding round
+2026-10-05,A0266,Juniperwright GmbH,expansion,complained about current vendor in a review
+2026-10-05,A0267,Sorrelcraft Corp,expansion,visited pricing page
+2026-10-05,A0285,Alderline Pty Ltd,expansion,visited pricing page 3 times; complained about current vendor in a review
+2026-10-05,A0294,Oakbridge Ltda,expansion,raised a funding round
+2026-10-05,A0301,Maplestone Pty Ltd,expansion,new VP Engineering
+2026-10-05,A0317,Mossport LLC,expansion,hiring a platform engineer; attended a webinar; visited pricing page
+2026-10-05,A0318,Maplepoint Ltda,expansion,contract renewal due with current vendor
+2026-10-05,A0340,Juniperpoint Inc,expansion,visited pricing page 3 times
+2026-10-05,A0343,Heathfield Inc,open deal,launched a new product line; read API docs; new VP Engineering
+2026-10-05,A0357,Fernwright SpA,expansion,contract renewal due with current vendor; hiring a platform engineer
+2026-10-05,A0376,Heathgate Corp,expansion,contract renewal due with current vendor
+2026-10-05,A0388,Elmbridge SA,expansion,contract renewal due with current vendor
+2026-10-05,A0406,Willowline BV,expansion,downloaded a whitepaper
+2026-10-05,A0416,Alderfield KK,expansion,new head of procurement; read API docs; opened an office in a new market
+2026-10-05,A0430,Cedarwright AB,expansion,contract renewal due with current vendor; visited pricing page 3 times; new VP Engineering
+2026-10-05,A0454,Ashfield Ltd,expansion,raised a funding round
+2026-10-05,A0457,Ashbridge LLC,expansion,hiring a platform engineer
+2026-10-05,A0469,Alderbridge AB,expansion,complained about current vendor in a review; downloaded a whitepaper
+2026-10-05,A0471,Alderbridge LLC,open deal,visited pricing page
+2026-10-05,A0474,Reedbridge AB,expansion,new VP Engineering
+2026-10-05,A0483,Oakstone LLC,open deal,new VP Engineering
+2026-10-05,A0484,Ashstone Corp,open deal,complained about current vendor in a review; launched a new product line; new VP Engineering
+2026-10-12,A0011,Heathcraft AB,expansion,visited pricing page; read API docs
+2026-10-12,A0016,Mossgate Pty Ltd,retention,contract renewal due with current vendor
+2026-10-12,A0017,Sorrelfield Inc,open deal,launched a new product line; opened an office in a new market
+2026-10-12,A0023,Hazelbridge Pte Ltd,expansion,attended a webinar
+2026-10-12,A0024,Thistlemark Ltd,expansion,new head of procurement
+2026-10-12,A0036,Reedcraft Inc,expansion,read API docs; opened an office in a new market
+2026-10-12,A0044,Birchline Ltd,expansion,new VP Engineering
+2026-10-12,A0067,Reedwright LLC,expansion,hiring a platform engineer
+2026-10-12,A0071,Reedmark Pte Ltd,expansion,visited pricing page
+2026-10-12,A0075,Birchwright Inc,expansion,read API docs; visited pricing page; launched a new product line
+2026-10-12,A0077,Willowcraft Ltda,open deal,opened an office in a new market
+2026-10-12,A0095,Willowpoint Pty Ltd,expansion,attended a webinar; visited pricing page 3 times
+2026-10-12,A0096,Willowgate Inc,expansion,raised a funding round; complained about current vendor in a review
+2026-10-12,A0100,Sorrelbridge AB,open deal,contract renewal due with current vendor; complained about current vendor in a review
+2026-10-12,A0103,Mossbridge LLC,open deal,complained about current vendor in a review; new VP Engineering
+2026-10-12,A0104,Birchfield Corp,retention,contract renewal due with current vendor
+2026-10-12,A0105,Fernfield Pte Ltd,expansion,visited pricing page 3 times
+2026-10-12,A0120,Juniperstone KK,expansion,read API docs; new VP Engineering
+2026-10-12,A0124,Birchstone Corp,retention,contract renewal due with current vendor
+2026-10-12,A0125,Alderstone SA,expansion,opened an office in a new market; launched a new product line; new head of procurement
+2026-10-12,A0141,Elmfield LLC,expansion,read API docs
+2026-10-12,A0153,Ferngate Inc,expansion,new head of procurement
+2026-10-12,A0168,Mossgate Corp,open deal,launched a new product line; raised a funding round; visited pricing page 3 times
+2026-10-12,A0202,Ashcraft Inc,retention,contract renewal due with current vendor; hiring a platform engineer; raised a funding round; attended a webinar
+2026-10-12,A0214,Thistlewright LLC,expansion,raised a funding round
+2026-10-12,A0224,Hazelmark SAS,expansion,new head of procurement; complained about current vendor in a review
+2026-10-12,A0232,Fernpoint Ltd,expansion,downloaded a whitepaper
+2026-10-12,A0238,Mossbridge Ltda,expansion,attended a webinar
+2026-10-12,A0239,Mapleport LLC,expansion,complained about current vendor in a review
+2026-10-12,A0245,Thistleline SA,expansion,launched a new product line; new VP Engineering
+2026-10-12,A0249,Birchline BV,open deal,contract renewal due with current vendor; opened an office in a new market
+2026-10-12,A0254,Willowline Inc,expansion,read API docs; new VP Engineering
+2026-10-12,A0257,Heathcraft GmbH,expansion,opened an office in a new market; hiring a platform engineer; raised a funding round
+2026-10-12,A0266,Juniperwright GmbH,expansion,complained about current vendor in a review
+2026-10-12,A0267,Sorrelcraft Corp,expansion,visited pricing page
+2026-10-12,A0285,Alderline Pty Ltd,expansion,visited pricing page 3 times; complained about current vendor in a review
+2026-10-12,A0294,Oakbridge Ltda,expansion,raised a funding round
+2026-10-12,A0301,Maplestone Pty Ltd,expansion,new VP Engineering
+2026-10-12,A0317,Mossport LLC,expansion,hiring a platform engineer; attended a webinar; visited pricing page
+2026-10-12,A0318,Maplepoint Ltda,expansion,contract renewal due with current vendor
+2026-10-12,A0340,Juniperpoint Inc,expansion,visited pricing page 3 times
+2026-10-12,A0343,Heathfield Inc,open deal,launched a new product line; read API docs; new VP Engineering
+2026-10-12,A0357,Fernwright SpA,expansion,contract renewal due with current vendor; hiring a platform engineer
+2026-10-12,A0376,Heathgate Corp,expansion,contract renewal due with current vendor
+2026-10-12,A0388,Elmbridge SA,expansion,contract renewal due with current vendor
+2026-10-12,A0406,Willowline BV,expansion,downloaded a whitepaper
+2026-10-12,A0416,Alderfield KK,expansion,new head of procurement; read API docs; opened an office in a new market
+2026-10-12,A0430,Cedarwright AB,expansion,contract renewal due with current vendor; visited pricing page 3 times
+2026-10-12,A0454,Ashfield Ltd,expansion,raised a funding round
+2026-10-12,A0457,Ashbridge LLC,expansion,hiring a platform engineer
+2026-10-12,A0469,Alderbridge AB,expansion,complained about current vendor in a review; downloaded a whitepaper
+2026-10-12,A0471,Alderbridge LLC,open deal,visited pricing page
+2026-10-12,A0474,Reedbridge AB,expansion,new VP Engineering
+2026-10-12,A0483,Oakstone LLC,open deal,new VP Engineering
+2026-10-12,A0484,Ashstone Corp,open deal,complained about current vendor in a review; launched a new product line; new VP Engineering

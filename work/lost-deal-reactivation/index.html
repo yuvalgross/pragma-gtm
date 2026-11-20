@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lost deal reactivation · Yuval Gross</title>
+<meta name="description" content="A weekly play that sorts 760 lost accounts, picks the ones worth a second call, routes them to sellers or appointment setting and checks itself. Synthetic data and the source.">
+<meta property="og:title" content="Lost deal reactivation · Yuval Gross">
+<meta property="og:description" content="Which lost deals are worth a second call this week, who makes it and with what reason.">
+<meta property="og:url" content="https://pragma-gtm.com/work/lost-deal-reactivation/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/lost-deal-reactivation/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+<style>
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:6px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); padding:14px 16px; }
+  .kpi strong { display:block; font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.1; color:var(--accent); }
+  .kpi span { font-size:14.5px; color:var(--muted); }
+  ul.plain { margin:0 0 14px; padding-left:20px; max-width:66ch; } ul.plain li { margin-bottom:8px; }
+  ol.plain { margin:0 0 14px; padding-left:22px; max-width:66ch; } ol.plain li { margin-bottom:8px; }
+  .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
+  .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Lost deal reactivation: which of 760 lost accounts are worth <em>a second call.</em></h1>
+    <p class="lead">A weekly play for an SMB software company. It reads a CRM export of every account that did not buy, decides which are worth another try now, who calls them and with what reason, and hands each of five sellers and the appointment setting team a short list every Monday.</p>
+  </header>
+
+  <section aria-labelledby="answer">
+    <h2 id="answer">The answer</h2>
+    <p>235 of the 760 accounts are worth a second try now. Each has a reason to talk: 134 have a competitor contract ending or a deal that stalled on timing or silence, and 101 showed real interest this year. 150 of the 235 have had no contact for 11 months.</p>
+    <div class="kpis">
+      <div class="kpi"><strong>235</strong><span>accounts to call first, out of 760</span></div>
+      <div class="kpi"><strong>261</strong><span>left out, each with the reason</span></div>
+      <div class="kpi"><strong>40</strong><span>calls handed out this week</span></div>
+      <div class="kpi"><strong>6 to 10</strong><span>new customers in the first quarter (assumed rates)</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="groups">
+    <h2 id="groups">Where every account goes</h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Reactivation groups, scrolls sideways on small screens">
+<table style="min-width:640px">
+<thead><tr><th>Group</th><th class="n">Accounts</th><th>Who, and when</th></tr></thead>
+<tbody>
+<tr class="hot"><td>Call first: saw a demo, has a reason to talk</td><td class="n">119</td><td>Seller, weeks 1 to 4</td></tr>
+<tr class="hot"><td>Call first: no demo, has a reason to talk</td><td class="n">116</td><td>Appointment setting, weeks 1 to 8</td></tr>
+<tr><td>Call next: saw a demo, no reason yet</td><td class="n">85</td><td>Seller, weeks 5 to 8, only if weeks 1 to 4 pay off</td></tr>
+<tr><td>Email first: no demo, no reason yet</td><td class="n">90</td><td>One email. A click on pricing or a case study moves the account up</td></tr>
+<tr><td>Wait: lost under 90 days ago</td><td class="n">39</td><td>Same rules once the wait ends</td></tr>
+<tr><td>Wait: competitor contract runs over 6 months</td><td class="n">23</td><td>Back 6 months before it ends</td></tr>
+<tr><td>Ask the seller</td><td class="n">27</td><td>Marked unqualified with no reason: the seller answers yes or no</td></tr>
+<tr><td>Leave out</td><td class="n">261</td><td>Nobody</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px"><strong>Who calls.</strong> An account that saw a demo goes to a seller. One that never saw one goes to appointment setting. Never both. 47 callable accounts belong to owners who left the sales team; they go to the seller with the shortest list.</p>
+  </section>
+
+  <section aria-labelledby="reason">
+    <h2 id="reason">What counts as <em>a reason to talk</em></h2>
+    <ul class="plain">
+      <li><strong>A competitor contract that ends within 6 months, or ended in the last 2.</strong> 18 accounts.</li>
+      <li><strong>A loss on timing or no answer.</strong> 116 accounts.</li>
+      <li><strong>Interest this year:</strong> pricing page, case study, webinar or event stand. 146 accounts, 45 of them with a second reason too.</li>
+    </ul>
+    <p>Contract and timing reasons rank ahead of interest. Inside a group, accounts where the contact is the owner or managing director go first, then the best lead sources.</p>
+    <p><strong>What is cut.</strong> 113 are outside the target markets, 33 are key accounts with their own seller and 9 are customers today. 106 have a clear no on file: no opportunity, not ICP, too small or a chain. Nothing outweighs a clear no, not even a contract ending. Size cuts nobody.</p>
+  </section>
+
+  <section aria-labelledby="rules">
+    <h2 id="rules">Four rules <em>I chose</em></h2>
+    <p>Each is one setting. Change it with <code>--set</code>, run again, and the list shows what moved.</p>
+    <ul class="plain">
+      <li><strong>Wait 90 days after a loss.</strong> An account that just said no should not get a call the next week. 90 is my judgement; with real history I would set it from how long lost accounts take to come back on their own.</li>
+      <li><strong>A 6 month window for competitor contracts.</strong> Renewal is decided before the end date, so the call has to come before it too.</li>
+      <li><strong>A newsletter click alone is not a reason to call.</strong> It shows the account reads the emails, not that it is buying.</li>
+      <li><strong>A person reviews probable duplicates.</strong> With no website field, the match is on name, country and size. It flags 45 groups, and several are clearly different companies with a common name. That is why nothing merges automatically: a wrong merge could put a customer on a call list.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="proto">
+    <h2 id="proto">This week's top 40</h2>
+    <p>5 accounts for each of the five sellers and 15 for appointment setting, each with the reason, an angle and the caller. All 40 come from the call first groups and 39 of the contacts are an owner or managing director. Same input gives the same output, with no AI call or paid tool inside the run. Running it again with last week's list gives 40 new accounts and no repeats.</p>
+    <p><strong>Nine checks on every run.</strong> The run stops if any breaks: one group per account, no account on two lists, no seller over 5, appointment setting at most 15, no excluded market, key account or customer, no clear no, seller accounts saw a demo and setter accounts did not, no opted out or invalid contact on the email list, and nobody from last week.</p>
+  </section>
+
+  <section aria-labelledby="hubspot">
+    <h2 id="hubspot">Running it every week <em>in HubSpot</em></h2>
+    <p>Every Monday the ranking runs on a fresh export and writes its result to each account through a private app. If a run fails or a check breaks, nothing is written and last week's lists stay.</p>
+    <ol class="plain">
+      <li><strong>Hand out the week.</strong> Sets the owner and creates one call task with reason, angle and fit.</li>
+      <li><strong>German sequence.</strong> For accounts whose competitor contract is ending, the seller calls first and three German mails follow. It stops on a reply or a booked demo.</li>
+      <li><strong>Email first.</strong> One mail. A click on pricing or a case study moves the account to call first.</li>
+      <li><strong>End of wait.</strong> After 90 days, or 6 months before a contract ends, the account is ranked again.</li>
+      <li><strong>Ask the seller.</strong> One task per unqualified account: still unqualified, yes or no, and why.</li>
+      <li><strong>Demo booked.</strong> Creates the deal, stamps the source and hands a setter's account to a seller.</li>
+      <li><strong>Stop.</strong> A new deal, a new customer or an opt out removes the account from every list.</li>
+    </ol>
+    <p><strong>Clean data.</strong> The lost reason is empty on 245 of 760 accounts, so it becomes a required dropdown with a clear no as a value. The website domain becomes required so the CRM catches most new duplicates.</p>
+  </section>
+
+  <section aria-labelledby="impact">
+    <h2 id="impact">What it could be worth <em>per quarter</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Impact estimate, scrolls sideways on small screens">
+<table style="min-width:560px">
+<thead><tr><th>Group</th><th class="n">Demos</th><th class="n">New customers</th><th class="n">New MRR</th></tr></thead>
+<tbody>
+<tr class="hot"><td>The 235, call first</td><td class="n">18 to 36</td><td class="n">6 to 10</td><td class="n total">&euro;8,200 to &euro;16,500</td></tr>
+<tr><td>The 85, call next, weeks 5 to 8</td><td class="n">8</td><td class="n">3</td><td class="n">&euro;4,000</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">Every rate here is assumed, because the sample has no history: 1 in 10 to 1 in 5 seller accounts take a demo, 1 in 20 to 1 in 10 setter accounts, 3 in 10 demos close, &euro;1,550 MRR per deal. Each is a setting at the top of the script. These accounts already said no once, so the real rate is likely lower than for a first demo.</p>
+    <p class="decide"><strong>How I will know.</strong> After four weeks the sellers have called the first 119. If fewer than 1 in 10 took a demo, I stop and the 85 are not called. If 1 in 5 did, the high case holds. One weekly dashboard by group, reason and seller shows accounts handed out, reached, demos, deals and new MRR.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>I did</dt><dd>The groups, the reasons, the cuts, the four rules above, the routing and the stop rule after week 4. I checked every number on this page against the output.</dd>
+      <dt>AI did</dt><dd>Claude Code wrote both scripts from those rules. In production Claude drafts a researched first line for each call, and a seller approves it before it is used.</dd>
+      <dt>Not built</dt><dd>The private app that writes back to HubSpot, the workflows and the sequence. Specified, not running.</dd>
+      <dt>Run it</dt><dd><code>python3 make_synthetic_lost.py</code> then <code>python3 reactivate.py data/lost_accounts.csv --out output</code>. Standard library only.</dd>
+    </dl>
+    <p class="note">Synthetic input. Every account and owner is invented to exercise the rules and says nothing about real companies.</p>
+  </section>
+
+  <section aria-labelledby="files">
+    <h2 id="files">Files</h2>
+    <div class="files">
+      <div><a href="reactivate.py">reactivate.py</a><small>Grouping, routing, top 40, impact and the nine checks.</small></div>
+      <div><a href="make_synthetic_lost.py">make_synthetic_lost.py</a><small>Builds the synthetic CRM export.</small></div>
+      <div><a href="data/lost_accounts.csv">lost_accounts.csv</a><small>760 invented lost accounts.</small></div>
+      <div><a href="output/top40.csv">top40.csv</a><small>This week's calls with reason and angle.</small></div>
+      <div><a href="output/all_accounts.csv">all_accounts.csv</a><small>Every account with its group and why.</small></div>
+      <div><a href="output/probable_duplicates.csv">probable_duplicates.csv</a><small>Pairs a person should review.</small></div>
+      <div><a href="output/summary.json">summary.json</a><small>Counts behind every number on this page.</small></div>
+      <div><a href="README.md">README.md</a><small>How to run it and what is real.</small></div>
+    </div>
+    <details>
+      <summary>Read reactivate.py here</summary>
+      <pre><code>&quot;&quot;&quot;
+Lost deal reactivation: which lost accounts are worth a second call this week,
+who calls them, and with what reason.
+
+    python3 reactivate.py data/lost_accounts.csv --out output
+    python3 reactivate.py data/lost_accounts.csv --set wait_days_after_loss=60 --out output_60
+    python3 reactivate.py data/lost_accounts.csv --worked output/top40.csv --out output_week2
+
+Every account gets exactly one group. The top 40 for the week is 5 per seller
+and 15 for appointment setting. A seller takes accounts that saw a demo, a
+setter takes the ones that never did, never both. Nine checks run at the end
+and the run fails loudly if any breaks. Standard library only.
+&quot;&quot;&quot;
+import argparse
+import csv
+import json
+import os
+import re
+from collections import Counter, defaultdict
+from datetime import date
+
+# ---- settings (each is one rule; change it with --set name=value) ------------
+
+S = {
+    &quot;today&quot;: &quot;2026-10-14&quot;,
+    &quot;wait_days_after_loss&quot;: 90,
+    &quot;contract_window_days&quot;: 183,        # competitor contract ends within 6 months
+    &quot;interest_days&quot;: 365,               # interest this year
+    &quot;per_seller&quot;: 5,
+    &quot;setting_cap&quot;: 15,
+    # impact estimate, assumed rates
+    &quot;seller_demo_rate_low&quot;: 0.10, &quot;seller_demo_rate_high&quot;: 0.20,
+    &quot;setting_demo_rate_low&quot;: 0.05, &quot;setting_demo_rate_high&quot;: 0.10,
+    &quot;next_demo_rate&quot;: 0.10,
+    &quot;win_rate&quot;: 0.30,
+    &quot;mrr_per_deal&quot;: 1550,
+}
+SELLERS = [&quot;Seller A&quot;, &quot;Seller B&quot;, &quot;Seller C&quot;, &quot;Seller D&quot;, &quot;Seller E&quot;]
+TARGET_COUNTRIES = {&quot;Germany&quot;, &quot;Austria&quot;, &quot;Switzerland&quot;}
+CLEAR_NO = {&quot;no opportunity&quot;, &quot;not icp&quot;, &quot;too small&quot;, &quot;chain&quot;}
+STRONG_INTEREST = {&quot;pricing page&quot;, &quot;case study&quot;, &quot;webinar&quot;, &quot;event stand&quot;}
+SOURCE_RANK = {&quot;referral&quot;: 0, &quot;inbound demo request&quot;: 1, &quot;event&quot;: 2, &quot;partner&quot;: 3, &quot;outbound&quot;: 4}
+DECISION_MAKER = {&quot;owner&quot;, &quot;managing director&quot;}
+
+GROUPS = [
+    &quot;Call first: saw a demo, reason to talk&quot;,
+    &quot;Call first: no demo, reason to talk&quot;,
+    &quot;Call next: saw a demo, no reason yet&quot;,
+    &quot;Email first: no demo, no reason yet&quot;,
+    &quot;Wait: lost under 90 days ago&quot;,
+    &quot;Wait: competitor contract runs over 6 months&quot;,
+    &quot;Ask the seller&quot;,
+    &quot;Leave out&quot;,
+]
+
+
+def days(a, b):
+    return (a - b).days
+
+
+def reasons(r, today):
+    &quot;&quot;&quot;Return (reason list, rank). Rank 0 is contract or timing, 1 is interest.&quot;&quot;&quot;
+    out = []
+    if r[&quot;competitor_contract_end&quot;]:
+        to_go = days(date.fromisoformat(r[&quot;competitor_contract_end&quot;]), today)
+        if -60 &lt;= to_go &lt;= S[&quot;contract_window_days&quot;]:
+            out.append((&quot;competitor contract ends &quot; + (&quot;soon&quot; if to_go &gt;= 0 else &quot;recently&quot;), 0))
+    if r[&quot;lost_reason&quot;] in (&quot;timing&quot;, &quot;no answer&quot;):
+        out.append((f&quot;lost on {r[&#x27;lost_reason&#x27;]}&quot;, 0))
+    if r[&quot;last_engagement&quot;] in STRONG_INTEREST and r[&quot;last_engagement_date&quot;]:
+        if days(today, date.fromisoformat(r[&quot;last_engagement_date&quot;])) &lt;= S[&quot;interest_days&quot;]:
+            out.append((f&quot;{r[&#x27;last_engagement&#x27;]} this year&quot;, 1))
+    return out
+
+
+def classify(r, today):
+    if r[&quot;country&quot;] not in TARGET_COUNTRIES:
+        return &quot;Leave out&quot;, &quot;not a target market&quot;
+    if r[&quot;key_account&quot;] == &quot;yes&quot;:
+        return &quot;Leave out&quot;, &quot;key account, own seller&quot;
+    if r[&quot;is_customer&quot;] == &quot;yes&quot;:
+        return &quot;Leave out&quot;, &quot;customer today&quot;
+    if r[&quot;lost_reason&quot;] in CLEAR_NO:
+        return &quot;Leave out&quot;, f&quot;clear no on file: {r[&#x27;lost_reason&#x27;]}&quot;
+    if r[&quot;lifecycle&quot;] == &quot;unqualified&quot;:
+        return &quot;Ask the seller&quot;, &quot;marked unqualified, no reason given&quot;
+    if days(today, date.fromisoformat(r[&quot;lost_date&quot;])) &lt; S[&quot;wait_days_after_loss&quot;]:
+        return &quot;Wait: lost under 90 days ago&quot;, &quot;lost recently&quot;
+    if r[&quot;competitor_contract_end&quot;]:
+        to_go = days(date.fromisoformat(r[&quot;competitor_contract_end&quot;]), today)
+        if to_go &gt; S[&quot;contract_window_days&quot;] and r[&quot;lost_reason&quot;] not in (&quot;timing&quot;, &quot;no answer&quot;):
+            return &quot;Wait: competitor contract runs over 6 months&quot;, &quot;contract ends later&quot;
+    why = reasons(r, today)
+    demo = r[&quot;saw_demo&quot;] == &quot;yes&quot;
+    if why:
+        return (GROUPS[0] if demo else GROUPS[1]), &quot;; &quot;.join(w for w, _ in why)
+    return (GROUPS[2] if demo else GROUPS[3]), &quot;no reason yet&quot;
+
+
+def sort_key(r):
+    why = reasons(r, TODAY)
+    best = min((rank for _, rank in why), default=2)
+    return (best, r[&quot;contact_role&quot;] not in DECISION_MAKER, SOURCE_RANK.get(r[&quot;lead_source&quot;], 9), r[&quot;account_id&quot;])
+
+
+def angle(why):
+    if &quot;contract&quot; in why:
+        return &quot;Their contract is ending: offer a side by side before they renew&quot;
+    if &quot;timing&quot; in why:
+        return &quot;They said not now: ask what changed since&quot;
+    if &quot;no answer&quot; in why:
+        return &quot;The thread went quiet: reopen with one new reason&quot;
+    return &quot;They looked again this year: ask what they were checking&quot;
+
+
+def norm(name):
+    return re.sub(r&quot;[^a-z]&quot;, &quot;&quot;, name.lower().replace(&quot;gmbh&quot;, &quot;&quot;).replace(&quot;co kg&quot;, &quot;&quot;).replace(&quot;ag&quot;, &quot;&quot;))
+
+
+def main():
+    global TODAY
+    ap = argparse.ArgumentParser()
+    ap.add_argument(&quot;export&quot;)
+    ap.add_argument(&quot;--out&quot;, default=&quot;output&quot;)
+    ap.add_argument(&quot;--set&quot;, action=&quot;append&quot;, default=[])
+    ap.add_argument(&quot;--worked&quot;, help=&quot;last week&#x27;s top40.csv, so nobody gets the same call twice&quot;)
+    args = ap.parse_args()
+    for kv in args.set:
+        k, v = kv.split(&quot;=&quot;)
+        S[k] = type(S[k])(v)
+    TODAY = date.fromisoformat(S[&quot;today&quot;])
+
+    with open(args.export, newline=&quot;&quot;) as f:
+        rows = list(csv.DictReader(f))
+    worked = set()
+    if args.worked:
+        with open(args.worked, newline=&quot;&quot;) as f:
+            worked = {r[&quot;account_id&quot;] for r in csv.DictReader(f)}
+
+    for r in rows:
+        r[&quot;group&quot;], r[&quot;why&quot;] = classify(r, TODAY)
+        r[&quot;caller&quot;] = (&quot;Seller&quot; if r[&quot;saw_demo&quot;] == &quot;yes&quot; else &quot;Appointment setting&quot;) if r[&quot;group&quot;] in GROUPS[:3] else &quot;&quot;
+
+    # owners no longer on the sales team: their callable accounts go to the seller with the shortest list
+    load = Counter(r[&quot;owner&quot;] for r in rows if r[&quot;group&quot;] in GROUPS[:3] and r[&quot;caller&quot;] == &quot;Seller&quot; and r[&quot;owner&quot;] in SELLERS)
+    reassigned = 0
+    for r in sorted(rows, key=lambda x: x[&quot;account_id&quot;]):
+        if r[&quot;caller&quot;] == &quot;Seller&quot; and r[&quot;owner&quot;] not in SELLERS:
+            to = min(SELLERS, key=lambda s: (load[s], s))
+            load[to] += 1
+            r[&quot;owner&quot;] = to
+            r[&quot;why&quot;] += &quot;; owner left, shared out&quot;
+            reassigned += 1
+
+    # the week&#x27;s top 40
+    pool = [r for r in rows if r[&quot;group&quot;] in GROUPS[:2] and r[&quot;account_id&quot;] not in worked]
+    top = []
+    for s in SELLERS:
+        mine = sorted([r for r in pool if r[&quot;caller&quot;] == &quot;Seller&quot; and r[&quot;owner&quot;] == s], key=sort_key)
+        top += mine[:S[&quot;per_seller&quot;]]
+    setting = sorted([r for r in pool if r[&quot;caller&quot;] == &quot;Appointment setting&quot;], key=sort_key)
+    top += setting[:S[&quot;setting_cap&quot;]]
+    for r in top:
+        r[&quot;angle&quot;] = angle(r[&quot;why&quot;])
+
+    # probable duplicates: same normalised name, country and size; a person decides
+    groups = defaultdict(list)
+    for r in rows:
+        groups[(norm(r[&quot;name&quot;]), r[&quot;country&quot;], r[&quot;employees&quot;])].append(r[&quot;account_id&quot;])
+    dups = [ids for ids in groups.values() if len(ids) &gt; 1]
+
+    email = [r for r in rows if r[&quot;group&quot;] == GROUPS[3] and r[&quot;email_status&quot;] == &quot;ok&quot;]
+
+    # nine checks
+    ids = [r[&quot;account_id&quot;] for r in top]
+    per = Counter(r[&quot;owner&quot;] for r in top if r[&quot;caller&quot;] == &quot;Seller&quot;)
+    results = {
+        &quot;one group per account&quot;: len({r[&quot;account_id&quot;] for r in rows}) == len(rows) and all(r[&quot;group&quot;] in GROUPS for r in rows),
+        &quot;no account on two lists&quot;: len(ids) == len(set(ids)),
+        &quot;no seller over 5&quot;: all(v &lt;= S[&quot;per_seller&quot;] for v in per.values()),
+        &quot;appointment setting at most 15&quot;: sum(1 for r in top if r[&quot;caller&quot;] == &quot;Appointment setting&quot;) &lt;= S[&quot;setting_cap&quot;],
+        &quot;no excluded market, key account or customer&quot;: all(r[&quot;country&quot;] in TARGET_COUNTRIES and r[&quot;key_account&quot;] == &quot;no&quot; and r[&quot;is_customer&quot;] == &quot;no&quot; for r in top),
+        &quot;no clear no&quot;: all(r[&quot;lost_reason&quot;] not in CLEAR_NO for r in top),
+        &quot;sellers saw a demo, setters did not&quot;: all((r[&quot;caller&quot;] == &quot;Seller&quot;) == (r[&quot;saw_demo&quot;] == &quot;yes&quot;) for r in top),
+        &quot;no opted out or invalid contact on the email list&quot;: all(r[&quot;email_status&quot;] == &quot;ok&quot; for r in email),
+        &quot;nobody from last week&quot;: not (set(ids) &amp; worked),
+    }
+    failed = [k for k, ok in results.items() if not ok]
+    if failed:
+        raise SystemExit(&quot;checks failed: &quot; + &quot;, &quot;.join(failed))
+
+    os.makedirs(args.out, exist_ok=True)
+    cols = [&quot;account_id&quot;, &quot;name&quot;, &quot;country&quot;, &quot;employees&quot;, &quot;owner&quot;, &quot;saw_demo&quot;, &quot;lost_reason&quot;, &quot;lost_date&quot;,
+            &quot;competitor_contract_end&quot;, &quot;last_engagement&quot;, &quot;contact_role&quot;, &quot;lead_source&quot;, &quot;group&quot;, &quot;caller&quot;, &quot;why&quot;]
+    with open(os.path.join(args.out, &quot;all_accounts.csv&quot;), &quot;w&quot;, newline=&quot;&quot;) as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction=&quot;ignore&quot;)
+        w.writeheader()
+        w.writerows(rows)
+    with open(os.path.join(args.out, &quot;top40.csv&quot;), &quot;w&quot;, newline=&quot;&quot;) as f:
+        w = csv.DictWriter(f, fieldnames=[&quot;account_id&quot;, &quot;name&quot;, &quot;caller&quot;, &quot;owner&quot;, &quot;contact_role&quot;, &quot;why&quot;, &quot;angle&quot;], extrasaction=&quot;ignore&quot;)
+        w.writeheader()
+        w.writerows(top)
+    with open(os.path.join(args.out, &quot;probable_duplicates.csv&quot;), &quot;w&quot;, newline=&quot;&quot;) as f:
+        w = csv.writer(f)
+        w.writerow([&quot;account_ids&quot;])
+        w.writerows([[&quot; &quot;.join(ids)] for ids in dups])
+
+    counts = Counter(r[&quot;group&quot;] for r in rows)
+    first_s = counts[GROUPS[0]]
+    first_a = counts[GROUPS[1]]
+    nxt = counts[GROUPS[2]]
+
+    def impact(n, rate):
+        demos = n * rate
+        deals = demos * S[&quot;win_rate&quot;]
+        return round(demos), round(deals), int(round(deals * S[&quot;mrr_per_deal&quot;], -2))
+
+    lo = [impact(first_s, S[&quot;seller_demo_rate_low&quot;]), impact(first_a, S[&quot;setting_demo_rate_low&quot;])]
+    hi = [impact(first_s, S[&quot;seller_demo_rate_high&quot;]), impact(first_a, S[&quot;setting_demo_rate_high&quot;])]
+    why_counts = Counter()
+    for r in rows:
+        if r[&quot;group&quot;] in GROUPS[:2]:
+            for w_, _ in reasons(r, TODAY):
+                why_counts[w_.split(&quot; this year&quot;)[0] if &quot;this year&quot; in w_ else w_] += 1
+    stale = sum(1 for r in rows if r[&quot;group&quot;] in GROUPS[:2] and days(TODAY, date.fromisoformat(r[&quot;last_contact_date&quot;])) &gt; 330)
+    summary = {
+        &quot;accounts&quot;: len(rows),
+        &quot;groups&quot;: {g: counts[g] for g in GROUPS},
+        &quot;call_first&quot;: first_s + first_a,
+        &quot;reasons_in_call_first&quot;: dict(why_counts),
+        &quot;call_first_no_contact_11_months&quot;: stale,
+        &quot;owner_left_reassigned&quot;: reassigned,
+        &quot;top40&quot;: {&quot;sellers&quot;: dict(per), &quot;appointment_setting&quot;: sum(1 for r in top if r[&quot;caller&quot;] == &quot;Appointment setting&quot;),
+                  &quot;decision_maker_contacts&quot;: sum(1 for r in top if r[&quot;contact_role&quot;] in DECISION_MAKER)},
+        &quot;probable_duplicate_groups&quot;: len(dups),
+        &quot;email_first_sendable&quot;: len(email),
+        &quot;empty_lost_reason&quot;: sum(1 for r in rows if r[&quot;lost_reason&quot;] == &quot;&quot;),
+        &quot;impact_quarter_1&quot;: {
+            &quot;demos&quot;: [lo[0][0] + lo[1][0], hi[0][0] + hi[1][0]],
+            &quot;deals&quot;: [lo[0][1] + lo[1][1], hi[0][1] + hi[1][1]],
+            &quot;new_mrr_eur&quot;: [lo[0][2] + lo[1][2], hi[0][2] + hi[1][2]],
+            &quot;call_next&quot;: impact(nxt, S[&quot;next_demo_rate&quot;]),
+            &quot;assumed&quot;: {k: S[k] for k in S if &quot;rate&quot; in k or k == &quot;mrr_per_deal&quot;},
+        },
+        &quot;checks&quot;: results,
+        &quot;settings&quot;: {k: S[k] for k in (&quot;today&quot;, &quot;wait_days_after_loss&quot;, &quot;contract_window_days&quot;, &quot;interest_days&quot;)},
+    }
+    with open(os.path.join(args.out, &quot;summary.json&quot;), &quot;w&quot;) as f:
+        json.dump(summary, f, indent=2)
+    print(json.dumps(summary, indent=2))
+
+
+TODAY = date.fromisoformat(S[&quot;today&quot;])
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+    </details>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>

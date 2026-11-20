@@ -1,0 +1,61 @@
+{
+  "accounts_after_merge": 497,
+  "data_quality": {
+    "region NA read as North America, not as empty": 173,
+    "companies stored twice, merged into the record with history": 3,
+    "single blog visits filed as pricing interest, scored 0": 34
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "monday": "2026-10-05",
+      "listed": 80,
+      "with_signal": 80,
+      "fit_only": 0,
+      "tier_1": 4,
+      "avg_signal_points": 23.1,
+      "avg_fit_points": 18.8,
+      "gate": {
+        "touched in the last 21 days": 5,
+        "owned by an AE": 111,
+        "region with no rep": 56,
+        "region with no rep, with a signal": 26,
+        "lost less than 120 days ago": 10,
+        "no buying signal in the last 90 days": 165,
+        "signal too weak, score under 15": 2,
+        "no room left in the rep's territory": 68
+      },
+      "signal_accounts_waiting_by_region": {
+        "EMEA": 35,
+        "NA": 24,
+        "LATAM": 9
+      },
+      "ae_alerts": 55
+    },
+    {
+      "week": 2,
+      "monday": "2026-10-12",
+      "listed": 80,
+      "with_signal": 59,
+      "fit_only": 21,
+      "tier_1": 1,
+      "avg_signal_points": 9.6,
+      "avg_fit_points": 17.0,
+      "gate": {
+        "touched in the last 21 days": 5,
+        "owned by an AE": 111,
+        "region with no rep": 56,
+        "region with no rep, with a signal": 26,
+        "lost less than 120 days ago": 9,
+        "no buying signal in the last 90 days": 161,
+        "signal too weak, score under 15": 4,
+        "no room left in the rep's territory": 12
+      },
+      "signal_accounts_waiting_by_region": {
+        "EMEA": 12
+      },
+      "ae_alerts": 55
+    }
+  ],
+  "checks": "all checks passed"
+}

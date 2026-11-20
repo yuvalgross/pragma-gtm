@@ -1,0 +1,761 @@
+account_id,name,country,employees,owner,saw_demo,lifecycle,lost_reason,lost_date,competitor_contract_end,last_engagement,last_engagement_date,last_contact_date,contact_role,email_status,lead_source,key_account,is_customer
+L0001,Hafenbau GmbH & Co. KG,Italy,60,Former owner 2,no,lost,,2026-03-24,,webinar,2026-08-22,2026-02-25,owner,ok,referral,no,no
+L0002,Eichenwerk GmbH & Co. KG,Switzerland,8,Seller A,no,unqualified,,2025-01-12,,,,2025-01-18,managing director,ok,referral,no,no
+L0003,Rosenblick AG,Austria,60,Seller C,no,lost,too small,2026-09-30,,,,2026-10-03,owner,ok,event,no,no
+L0004,Rosenhaus GmbH & Co. KG,Germany,40,Seller B,yes,lost,competitor,2025-09-04,2026-09-12,,,2025-08-17,office manager,ok,referral,no,no
+L0005,Eichenmarkt KG,Germany,15,Seller A,yes,lost,price,2026-09-19,,,,2026-10-01,owner,ok,outbound,no,no
+L0006,Gartenblick GmbH & Co. KG,Austria,40,Seller A,no,lost,,2026-05-23,,,,2026-06-22,owner,invalid,partner,no,no
+L0007,Lindenhof GmbH & Co. KG,Germany,40,Seller B,no,lost,,2024-12-16,,,,2024-10-29,owner,invalid,inbound demo request,no,no
+L0008,Lindenplus AG,Austria,150,Seller E,yes,lost,price,2025-09-19,,,,2025-08-07,managing director,invalid,outbound,no,no
+L0009,Lindenplus AG,Austria,60,Seller D,no,unqualified,no answer,2024-12-29,,,,2025-01-22,owner,ok,referral,no,no
+L0010,Klosterpartner KG,Germany,15,Seller A,yes,lost,,2025-05-20,,newsletter click,2026-02-06,2025-04-09,marketing,ok,referral,no,no
+L0011,Lindenwerk GmbH,Germany,60,Seller C,yes,lost,no opportunity,2026-01-22,,pricing page,2025-12-21,2026-02-05,owner,ok,event,no,no
+L0012,Eichenbau AG,Germany,60,Seller A,no,lost,timing,2025-06-05,,newsletter click,2026-02-05,2025-06-27,owner,ok,event,no,no
+L0013,Gartenstudio GmbH,Germany,150,Seller D,no,lost,,2026-05-25,,newsletter click,2026-09-24,2026-04-22,marketing,ok,partner,no,no
+L0014,Alpenplus GmbH,Austria,90,Former owner 2,yes,lost,,2026-06-08,,newsletter click,2026-02-17,2026-05-13,office manager,invalid,partner,no,no
+L0015,Alpenmarkt GmbH,Germany,25,Former owner 2,no,lost,competitor,2026-06-11,2027-07-15,,,2026-04-16,marketing,ok,partner,no,no
+L0016,Eichenservice GmbH & Co. KG,Germany,15,Seller D,no,lost,price,2025-08-16,,,,2025-07-03,owner,ok,event,no,no
+L0017,Alpenhaus KG,Austria,40,Seller B,no,lost,no answer,2025-06-30,,,,2025-05-28,owner,ok,partner,no,no
+L0018,Alpenmarkt GmbH,Austria,40,Seller B,no,lost,competitor,2025-02-27,2027-08-02,,,2025-02-23,managing director,opted out,event,no,no
+L0019,Bergservice GmbH,Germany,150,Former owner 1,no,lost,,2024-12-18,,newsletter click,2026-07-10,2025-01-16,office manager,ok,referral,no,no
+L0020,Waldbau AG,Germany,40,Seller D,yes,lost,,2026-02-17,,pricing page,2026-02-19,2026-02-22,owner,ok,partner,no,no
+L0021,Waldservice KG,Germany,15,Former owner 1,no,lost,competitor,2026-06-25,,,,2026-07-14,owner,ok,inbound demo request,no,no
+L0022,Alpenstudio GmbH,Germany,15,Seller D,yes,lost,price,2025-03-20,,,,2025-04-11,office manager,opted out,referral,no,no
+L0023,Flussservice AG,Switzerland,90,Seller D,no,lost,,2025-04-22,,,,2025-04-24,office manager,ok,partner,no,no
+L0024,Eichenhof KG,Switzerland,60,Seller B,yes,lost,price,2025-01-18,,webinar,2026-05-23,2024-12-06,office manager,ok,outbound,no,no
+L0025,Rosenpartner GmbH,Germany,40,Seller E,no,lost,timing,2025-04-24,,,,2025-05-03,owner,ok,outbound,no,no
+L0026,Stadtmarkt AG,Switzerland,25,Former owner 2,no,lost,no answer,2025-10-22,,,,2025-09-29,marketing,ok,inbound demo request,no,no
+L0027,Alpenwerk AG,Switzerland,40,Seller B,yes,lost,timing,2025-12-18,,newsletter click,2026-08-17,2025-11-15,marketing,ok,partner,no,no
+L0028,Klosterbau GmbH & Co. KG,Germany,150,Seller E,yes,lost,,2025-08-07,,,,2025-06-18,marketing,ok,event,no,no
+L0029,Rosenplus AG,Switzerland,25,Former owner 2,yes,lost,,2024-12-31,,newsletter click,2026-07-02,2025-01-03,managing director,ok,event,no,no
+L0030,Bergmarkt GmbH & Co. KG,Germany,15,Seller A,yes,lost,no opportunity,2025-03-27,,case study,2025-12-22,2025-01-29,owner,invalid,inbound demo request,no,no
+L0031,Waldbau AG,Switzerland,60,Seller E,no,lost,not icp,2026-06-18,,pricing page,2026-02-05,2026-06-30,managing director,ok,referral,no,no
+L0032,Sonnenhaus GmbH,Austria,40,Seller C,yes,lost,,2025-06-18,,pricing page,2026-03-05,2025-05-14,owner,ok,event,no,yes
+L0033,Klosterwerk AG,Switzerland,15,Seller B,yes,lost,not icp,2025-10-01,,newsletter click,2026-08-22,2025-08-27,owner,ok,referral,no,no
+L0034,Eichenpartner AG,Austria,15,Former owner 1,no,lost,price,2026-01-13,,newsletter click,2026-01-07,2025-11-16,owner,opted out,outbound,no,no
+L0035,Klosterhof GmbH,Italy,60,Seller C,no,unqualified,price,2025-06-11,,case study,2026-05-23,2025-04-17,owner,ok,event,no,no
+L0036,Gartenhaus GmbH & Co. KG,Switzerland,8,Seller D,no,lost,too small,2024-12-16,,webinar,2026-08-15,2024-12-16,owner,ok,outbound,no,no
+L0037,Eichenpartner GmbH,Switzerland,60,Seller D,yes,lost,competitor,2025-12-26,,,,2026-01-13,office manager,opted out,referral,no,no
+L0038,Alpenpartner AG,Austria,40,Seller A,yes,lost,no answer,2025-05-15,,,,2025-04-22,owner,ok,outbound,no,no
+L0039,Sonnenservice KG,Switzerland,8,Seller B,no,lost,competitor,2024-11-24,,newsletter click,2026-03-14,2024-09-28,office manager,ok,inbound demo request,no,no
+L0040,Klosterstudio GmbH,Germany,60,Former owner 1,no,lost,competitor,2025-07-22,,newsletter click,2026-02-12,2025-08-03,managing director,ok,referral,yes,no
+L0041,Bergblick GmbH,Austria,60,Seller D,yes,lost,no answer,2026-05-30,,newsletter click,2026-05-28,2026-04-09,marketing,ok,outbound,no,no
+L0042,Flussmarkt AG,Germany,25,Seller E,yes,lost,no answer,2025-05-07,,newsletter click,2026-05-23,2025-03-20,marketing,ok,partner,no,no
+L0043,Lindenblick AG,Germany,25,Seller A,no,lost,,2026-03-18,,,,2026-04-14,marketing,ok,referral,no,no
+L0044,Berghof AG,Germany,40,Seller C,no,lost,price,2025-05-27,,,,2025-06-17,owner,ok,partner,no,no
+L0045,Hafenpartner KG,Germany,25,Seller E,yes,lost,no answer,2025-09-22,,case study,2026-01-02,2025-09-29,office manager,ok,inbound demo request,no,no
+L0046,Waldhaus GmbH,Germany,25,Seller A,yes,lost,,2025-05-26,,,,2025-05-29,marketing,ok,inbound demo request,no,no
+L0047,Waldmarkt AG,United Kingdom,40,Former owner 2,yes,lost,,2025-11-04,,newsletter click,2025-12-22,2025-09-19,owner,ok,partner,no,no
+L0048,Waldblick GmbH & Co. KG,Germany,25,Seller C,no,lost,,2025-04-24,,event stand,2026-03-25,2025-04-30,marketing,ok,outbound,no,no
+L0049,Rosenhof AG,Switzerland,15,Seller A,yes,lost,not icp,2025-12-20,,pricing page,2025-12-23,2025-12-13,owner,ok,outbound,no,no
+L0050,Gartenhaus KG,Germany,90,Seller B,yes,lost,,2026-06-19,,newsletter click,2026-03-07,2026-06-18,managing director,ok,partner,no,no
+L0051,Waldstudio KG,United Kingdom,60,Former owner 1,no,lost,too small,2025-05-23,,,,2025-05-01,owner,invalid,referral,no,no
+L0052,Hafenbau GmbH,Germany,15,Seller D,no,lost,,2026-09-24,,case study,2026-03-31,2026-09-22,owner,ok,outbound,no,no
+L0053,Alpenservice KG,Germany,150,Seller B,no,lost,price,2024-12-10,,case study,2026-02-05,2025-01-05,owner,ok,event,no,no
+L0054,Lindenplus GmbH & Co. KG,Italy,60,Seller C,no,lost,competitor,2025-07-09,2027-01-25,,,2025-05-30,office manager,invalid,inbound demo request,no,no
+L0055,Waldbau GmbH,Germany,90,Former owner 2,no,lost,competitor,2025-08-21,2026-11-11,,,2025-09-19,office manager,ok,outbound,no,no
+L0056,Rosenhof GmbH & Co. KG,Italy,90,Former owner 1,yes,lost,price,2026-05-09,,newsletter click,2026-05-26,2026-04-03,marketing,ok,event,no,no
+L0057,Lindenhof AG,Germany,90,Former owner 2,yes,lost,competitor,2025-01-13,,case study,2026-01-04,2024-12-10,owner,ok,event,no,no
+L0058,Bergservice AG,Germany,25,Seller C,yes,lost,no opportunity,2025-04-14,,,,2025-03-24,owner,ok,inbound demo request,no,no
+L0059,Bergstudio GmbH,Italy,40,Seller A,no,unqualified,timing,2024-11-20,,,,2024-11-02,office manager,ok,inbound demo request,no,no
+L0060,Alpenblick AG,Switzerland,90,Former owner 2,yes,lost,price,2025-03-31,,newsletter click,2026-08-26,2025-03-29,managing director,ok,outbound,no,no
+L0061,Sonnenplus GmbH & Co. KG,Switzerland,8,Seller B,no,lost,price,2025-07-04,,,,2025-05-15,managing director,ok,event,no,no
+L0062,Rosenhaus GmbH,Germany,150,Seller A,yes,lost,no answer,2026-05-30,,,,2026-05-06,marketing,ok,event,no,no
+L0063,Stadtservice KG,Germany,90,Seller C,no,lost,,2026-09-19,,,,2026-08-07,owner,ok,inbound demo request,no,no
+L0064,Hafenhaus GmbH & Co. KG,Germany,150,Seller B,yes,lost,price,2025-12-08,,case study,2026-01-07,2025-11-30,marketing,ok,inbound demo request,no,no
+L0065,Rosenblick AG,Germany,15,Seller A,no,lost,timing,2024-12-31,,,,2024-12-08,owner,ok,referral,no,no
+L0066,Hafenhaus GmbH & Co. KG,Germany,60,Seller E,no,lost,no answer,2026-02-02,,,,2026-02-11,owner,ok,event,no,no
+L0067,Sonnenstudio AG,Austria,8,Seller A,no,lost,price,2026-04-18,,webinar,2026-07-31,2026-04-09,office manager,ok,partner,no,no
+L0068,Flussblick GmbH & Co. KG,Germany,25,Seller D,no,lost,no answer,2025-04-12,,,,2025-04-09,managing director,ok,inbound demo request,yes,no
+L0069,Klosterhof GmbH & Co. KG,United Kingdom,60,Seller E,no,lost,,2026-06-22,,,,2026-06-16,office manager,ok,outbound,no,no
+L0070,Bergbau KG,Germany,90,Seller A,no,lost,no opportunity,2025-07-31,,pricing page,2026-03-02,2025-07-13,marketing,ok,inbound demo request,no,no
+L0071,Lindenhaus GmbH & Co. KG,Germany,60,Seller E,yes,lost,no opportunity,2026-08-12,,,,2026-08-03,office manager,ok,referral,no,no
+L0072,Eichenstudio GmbH & Co. KG,Germany,8,Seller E,no,lost,no answer,2026-02-19,,,,2026-03-05,owner,ok,partner,no,yes
+L0073,Lindenmarkt GmbH,Germany,25,Former owner 2,yes,lost,timing,2025-07-10,,,,2025-05-13,marketing,ok,referral,no,no
+L0074,Waldmarkt KG,Germany,25,Seller A,no,lost,,2025-06-08,,webinar,2026-04-11,2025-05-09,owner,ok,partner,no,no
+L0075,Lindenwerk GmbH,Germany,90,Seller B,yes,lost,price,2025-12-28,,,,2025-12-02,office manager,ok,event,no,no
+L0076,Klosterblick KG,Germany,60,Seller E,yes,lost,competitor,2025-05-09,,newsletter click,2026-01-18,2025-05-10,owner,ok,event,no,no
+L0077,Bergservice GmbH,Switzerland,60,Former owner 1,yes,lost,chain,2026-07-21,,,,2026-07-15,marketing,ok,outbound,no,no
+L0078,Sonnenblick AG,Germany,60,Seller B,yes,lost,,2025-03-22,,pricing page,2026-02-15,2025-02-06,office manager,ok,outbound,no,no
+L0079,Eichenstudio KG,United Kingdom,60,Seller E,no,lost,,2026-09-02,,,,2026-09-11,owner,ok,outbound,no,no
+L0080,Sonnenblick KG,United Kingdom,8,Seller E,no,lost,competitor,2025-02-17,,newsletter click,2026-07-09,2025-02-06,managing director,ok,referral,no,no
+L0081,Gartenservice KG,Switzerland,15,Former owner 1,no,unqualified,timing,2026-07-22,,case study,2026-03-06,2026-08-16,owner,invalid,partner,no,no
+L0082,Rosenservice GmbH,Austria,90,Seller B,no,lost,too small,2026-04-12,,,,2026-02-25,office manager,ok,inbound demo request,no,no
+L0083,Lindenwerk AG,Switzerland,90,Seller D,no,lost,,2025-01-27,,case study,2026-10-08,2025-01-27,office manager,ok,event,no,no
+L0084,Hafenpartner GmbH,Switzerland,150,Seller A,no,lost,,2025-01-15,,event stand,2026-02-15,2025-02-03,managing director,ok,inbound demo request,no,no
+L0085,Rosenblick GmbH,United Kingdom,150,Seller E,yes,lost,,2024-12-08,,pricing page,2026-07-11,2024-11-09,office manager,invalid,event,no,no
+L0086,Lindenpartner KG,Germany,60,Seller D,yes,lost,,2025-03-21,,webinar,2026-02-12,2025-03-12,office manager,ok,outbound,no,no
+L0087,Hafenblick GmbH & Co. KG,Switzerland,15,Former owner 1,yes,lost,timing,2025-12-25,,newsletter click,2026-05-28,2025-11-20,office manager,ok,event,no,no
+L0088,Flussstudio AG,Austria,8,Former owner 2,no,lost,,2026-06-04,,pricing page,2026-03-28,2026-05-24,owner,opted out,partner,no,no
+L0089,Rosenblick GmbH & Co. KG,Germany,40,Seller B,yes,lost,no answer,2025-04-26,,,,2025-04-02,office manager,ok,event,no,no
+L0090,Waldservice GmbH & Co. KG,Germany,15,Seller E,yes,lost,competitor,2025-12-21,2027-04-22,,,2026-01-07,owner,ok,inbound demo request,no,no
+L0091,Alpenservice GmbH,Switzerland,90,Seller B,no,lost,,2025-12-03,,,,2025-12-18,owner,ok,inbound demo request,no,no
+L0092,Stadtservice GmbH,Germany,40,Seller B,no,lost,price,2025-12-17,,,,2025-12-26,owner,ok,event,no,no
+L0093,Stadthof GmbH & Co. KG,Austria,8,Seller A,no,lost,,2025-03-17,,newsletter click,2026-09-07,2025-02-24,owner,ok,outbound,no,no
+L0094,Hafenstudio KG,Germany,150,Former owner 2,yes,lost,timing,2025-10-14,,newsletter click,2026-07-06,2025-08-23,office manager,ok,partner,no,no
+L0095,Alpenplus AG,Austria,8,Seller E,no,lost,,2026-08-17,,,,2026-07-19,office manager,ok,outbound,yes,no
+L0096,Gartenmarkt KG,Germany,25,Seller C,no,lost,not icp,2026-09-13,,case study,2026-06-11,2026-08-08,owner,ok,outbound,yes,no
+L0097,Eichenbau GmbH,Germany,150,Seller A,no,lost,,2025-10-28,,newsletter click,2026-03-21,2025-09-01,managing director,ok,event,no,no
+L0098,Hafenplus KG,Germany,25,Seller B,yes,lost,competitor,2025-09-24,,,,2025-07-26,managing director,ok,event,no,no
+L0099,Bergmarkt GmbH,Austria,8,Seller D,no,lost,too small,2025-05-30,,pricing page,2026-03-20,2025-04-26,office manager,ok,inbound demo request,no,no
+L0100,Flussstudio AG,Switzerland,90,Seller B,no,lost,no answer,2025-03-02,,,,2025-03-12,managing director,ok,outbound,no,no
+L0101,Eichenhof GmbH,Germany,90,Seller D,no,lost,,2026-05-21,,newsletter click,2026-03-26,2026-03-26,managing director,ok,event,no,no
+L0102,Alpenblick KG,Switzerland,150,Seller A,yes,lost,,2026-06-03,,,,2026-05-03,managing director,ok,referral,no,no
+L0103,Eichenmarkt AG,Italy,90,Former owner 2,yes,lost,,2025-08-13,,case study,2026-06-21,2025-07-05,owner,opted out,event,no,no
+L0104,Gartenmarkt GmbH & Co. KG,Germany,25,Seller E,yes,lost,no answer,2025-11-07,,pricing page,2026-03-19,2025-11-02,owner,ok,referral,no,no
+L0105,Sonnenbau GmbH,Germany,40,Seller B,yes,lost,timing,2025-11-22,,,,2025-12-05,managing director,invalid,outbound,no,no
+L0106,Gartenpartner GmbH,Germany,150,Seller B,yes,lost,,2024-12-01,,,,2024-11-30,office manager,ok,referral,no,no
+L0107,Flussbau GmbH,Germany,15,Seller D,no,unqualified,competitor,2025-10-02,2027-06-15,newsletter click,2026-04-06,2025-10-31,marketing,ok,event,no,no
+L0108,Stadtmarkt GmbH,Germany,8,Seller E,no,lost,not icp,2025-08-19,,,,2025-08-20,owner,ok,inbound demo request,no,no
+L0109,Waldservice KG,Germany,15,Seller C,yes,lost,timing,2024-12-04,,newsletter click,2026-07-09,2024-12-07,owner,ok,event,no,no
+L0110,Flussstudio GmbH,Austria,60,Seller A,yes,lost,price,2025-10-11,,webinar,2026-09-13,2025-09-20,owner,ok,partner,no,no
+L0111,Alpenhof KG,Austria,15,Former owner 2,yes,lost,,2026-06-16,,,,2026-05-14,office manager,opted out,event,no,no
+L0112,Stadtstudio AG,Italy,8,Seller D,no,lost,chain,2026-09-24,,case study,2026-04-16,2026-08-18,office manager,ok,partner,no,no
+L0113,Klosterservice GmbH & Co. KG,Switzerland,60,Seller E,no,unqualified,no opportunity,2025-09-06,,,,2025-10-02,marketing,ok,outbound,no,no
+L0114,Rosenwerk KG,Germany,90,Seller C,yes,lost,not icp,2025-11-02,,newsletter click,2026-02-11,2025-09-23,office manager,ok,event,no,no
+L0115,Bergblick AG,Germany,25,Seller E,no,unqualified,,2026-05-12,,case study,2026-09-20,2026-04-29,owner,ok,inbound demo request,no,no
+L0116,Stadtblick GmbH & Co. KG,Austria,15,Seller D,yes,lost,,2026-02-02,,pricing page,2026-09-03,2025-12-31,owner,opted out,partner,no,no
+L0117,Flussstudio AG,Austria,15,Former owner 1,yes,lost,timing,2025-10-15,,event stand,2026-03-25,2025-11-11,marketing,ok,outbound,no,no
+L0118,Lindenbau KG,Austria,8,Seller D,no,lost,,2026-03-17,,,,2026-01-17,owner,invalid,inbound demo request,no,no
+L0119,Lindenhof AG,Germany,25,Seller A,yes,lost,,2025-06-14,,pricing page,2026-04-09,2025-06-05,managing director,ok,referral,no,no
+L0120,Waldmarkt GmbH & Co. KG,Austria,25,Seller E,yes,lost,timing,2024-12-27,,newsletter click,2026-02-18,2025-01-09,marketing,ok,referral,no,no
+L0121,Lindenservice GmbH,Austria,15,Seller D,yes,lost,competitor,2026-07-16,,,,2026-06-24,marketing,ok,outbound,no,no
+L0122,Waldmarkt GmbH & Co. KG,Germany,40,Seller B,no,lost,competitor,2025-12-09,,pricing page,2026-06-03,2025-11-20,office manager,ok,inbound demo request,no,no
+L0123,Rosenhaus GmbH,Italy,90,Seller E,no,lost,competitor,2026-07-06,,pricing page,2026-09-28,2026-05-12,managing director,ok,referral,no,no
+L0124,Waldservice GmbH,Germany,8,Former owner 1,no,lost,timing,2025-08-26,,,,2025-07-04,office manager,opted out,event,no,no
+L0125,Hafenstudio AG,United Kingdom,25,Seller E,no,lost,timing,2026-07-11,,pricing page,2026-02-09,2026-07-26,office manager,ok,event,yes,no
+L0126,Alpenhaus KG,Germany,60,Seller A,yes,lost,,2025-04-06,,case study,2025-12-25,2025-04-21,owner,ok,event,no,no
+L0127,Gartenmarkt KG,Switzerland,40,Seller B,yes,lost,competitor,2026-01-25,,,,2026-02-03,marketing,ok,outbound,no,no
+L0128,Gartenhof AG,Austria,150,Seller A,no,unqualified,chain,2026-04-10,,,,2026-04-21,owner,ok,outbound,no,no
+L0129,Alpenpartner GmbH,Germany,15,Seller C,no,lost,,2024-12-15,,pricing page,2026-08-13,2024-10-22,office manager,ok,outbound,no,no
+L0130,Gartenhof GmbH,Germany,40,Seller C,yes,lost,price,2026-01-04,,,,2025-12-04,office manager,ok,outbound,no,no
+L0131,Sonnenbau GmbH,Italy,8,Seller B,yes,lost,price,2025-03-23,,newsletter click,2026-04-02,2025-04-18,owner,ok,outbound,no,no
+L0132,Gartenservice GmbH,Germany,25,Seller C,yes,lost,,2026-06-19,,pricing page,2026-04-04,2026-06-11,managing director,ok,partner,yes,no
+L0133,Bergbau KG,Italy,150,Seller D,yes,lost,timing,2026-02-28,,newsletter click,2026-04-01,2026-02-07,owner,ok,partner,no,no
+L0134,Lindenmarkt KG,Austria,8,Seller A,yes,lost,no answer,2026-04-28,,newsletter click,2026-03-21,2026-03-10,owner,ok,event,no,no
+L0135,Alpenplus AG,Germany,150,Seller A,no,lost,timing,2025-06-01,,,,2025-04-05,managing director,ok,outbound,no,no
+L0136,Hafenstudio GmbH,Austria,25,Seller A,no,lost,price,2024-11-21,,,,2024-09-29,marketing,ok,event,no,no
+L0137,Flusshaus AG,Germany,90,Former owner 2,no,lost,not icp,2025-08-13,,pricing page,2026-01-29,2025-07-11,office manager,ok,outbound,no,no
+L0138,Gartenhof KG,Switzerland,90,Seller E,yes,lost,price,2026-04-20,,,,2026-04-01,office manager,ok,partner,no,no
+L0139,Rosenhof GmbH & Co. KG,Italy,25,Seller B,no,lost,no opportunity,2025-11-03,,pricing page,2026-03-13,2025-09-21,owner,ok,referral,no,no
+L0140,Lindenblick GmbH & Co. KG,Austria,40,Former owner 2,no,lost,timing,2025-03-11,,webinar,2026-07-06,2025-01-21,owner,ok,inbound demo request,no,no
+L0141,Klosterstudio AG,Germany,8,Seller C,no,lost,price,2025-05-21,,case study,2026-07-22,2025-05-24,managing director,invalid,partner,no,no
+L0142,Flussblick AG,Switzerland,150,Seller C,no,lost,price,2025-11-06,,newsletter click,2026-05-27,2025-11-22,managing director,ok,referral,no,no
+L0143,Eichenmarkt KG,Germany,150,Seller A,yes,lost,no answer,2026-01-09,,,,2026-01-04,marketing,ok,outbound,no,no
+L0144,Flussplus GmbH,Italy,25,Seller E,no,lost,,2026-04-21,,,,2026-03-28,owner,ok,partner,no,no
+L0145,Waldstudio AG,Germany,60,Seller B,no,lost,too small,2025-12-31,,,,2025-11-07,owner,ok,referral,no,no
+L0146,Bergblick KG,Germany,40,Seller B,yes,lost,no answer,2026-08-03,,,,2026-06-21,managing director,ok,partner,no,no
+L0147,Eichenhof GmbH,Austria,15,Former owner 1,no,lost,price,2025-01-15,,,,2025-02-04,office manager,ok,partner,no,no
+L0148,Berghof KG,Austria,150,Former owner 1,yes,lost,competitor,2025-12-29,,,,2026-01-26,marketing,ok,partner,no,no
+L0149,Rosenstudio AG,Germany,8,Seller C,yes,lost,chain,2026-04-27,,pricing page,2026-03-11,2026-05-23,managing director,invalid,event,no,no
+L0150,Rosenhaus GmbH,Germany,25,Former owner 2,yes,lost,,2026-02-25,,,,2026-02-27,owner,ok,referral,no,no
+L0151,Alpenplus KG,Austria,15,Seller B,no,lost,price,2025-04-19,,,,2025-04-22,owner,ok,outbound,no,no
+L0152,Flussblick KG,Germany,15,Former owner 1,no,unqualified,,2026-01-16,,,,2025-12-12,owner,ok,event,no,no
+L0153,Gartenhaus GmbH,Switzerland,15,Seller D,no,lost,too small,2026-01-27,,,,2026-01-12,owner,ok,outbound,no,no
+L0154,Eichenblick KG,Austria,150,Seller A,no,lost,competitor,2025-09-11,,,,2025-10-05,office manager,ok,outbound,no,no
+L0155,Flusshof GmbH,Germany,150,Seller B,yes,lost,too small,2026-02-15,,newsletter click,2026-04-29,2026-03-12,managing director,ok,event,no,no
+L0156,Klosterservice KG,Germany,90,Former owner 1,yes,lost,no answer,2025-12-29,,case study,2026-04-15,2025-11-03,owner,ok,inbound demo request,no,no
+L0157,Sonnenbau GmbH & Co. KG,Germany,8,Seller B,no,lost,chain,2026-01-09,,pricing page,2026-01-25,2026-01-16,managing director,ok,partner,no,no
+L0158,Rosenservice KG,Italy,8,Seller D,no,lost,too small,2025-06-15,,pricing page,2026-03-18,2025-05-07,owner,ok,event,yes,no
+L0159,Lindenwerk GmbH,Germany,15,Seller D,yes,lost,,2025-05-11,,,,2025-04-28,owner,ok,inbound demo request,no,no
+L0160,Rosenbau KG,Switzerland,60,Seller E,no,lost,competitor,2025-01-04,,webinar,2026-01-06,2024-11-20,office manager,ok,inbound demo request,no,no
+L0161,Eichenplus AG,Germany,60,Former owner 2,no,lost,,2025-12-13,,webinar,2026-07-21,2025-10-15,owner,ok,referral,no,yes
+L0162,Hafenbau GmbH,Italy,40,Seller A,no,lost,,2025-04-26,,,,2025-03-24,marketing,invalid,partner,no,no
+L0163,Hafenservice GmbH,Germany,150,Seller A,no,unqualified,timing,2025-12-22,,,,2025-11-08,office manager,opted out,referral,no,no
+L0164,Gartenhaus GmbH & Co. KG,Germany,25,Former owner 1,yes,lost,timing,2026-07-22,,,,2026-05-28,marketing,ok,inbound demo request,no,no
+L0165,Klosterservice KG,Germany,150,Former owner 1,no,lost,no answer,2026-01-25,,newsletter click,2026-06-07,2026-02-19,owner,ok,inbound demo request,no,no
+L0166,Eichenpartner GmbH,Germany,25,Former owner 2,no,lost,no answer,2026-06-14,,newsletter click,2026-05-29,2026-04-15,marketing,ok,event,no,no
+L0167,Stadtpartner GmbH & Co. KG,Germany,40,Former owner 2,no,lost,timing,2025-03-01,,newsletter click,2026-09-19,2025-03-29,managing director,ok,event,no,no
+L0168,Berghof GmbH & Co. KG,Germany,25,Seller A,yes,lost,competitor,2026-03-27,2027-01-18,,,2026-04-20,owner,ok,partner,no,no
+L0169,Hafenwerk KG,Germany,40,Seller E,yes,lost,competitor,2025-04-17,,pricing page,2026-01-13,2025-04-16,owner,ok,partner,no,no
+L0170,Stadthaus KG,Germany,40,Former owner 2,yes,lost,price,2025-12-06,,,,2025-12-06,office manager,ok,referral,no,no
+L0171,Stadtbau KG,Germany,60,Seller B,no,lost,no opportunity,2026-09-22,,,,2026-08-04,owner,opted out,partner,no,no
+L0172,Eichenwerk GmbH,Germany,60,Seller C,no,unqualified,no opportunity,2026-06-17,,,,2026-06-13,office manager,ok,partner,no,no
+L0173,Stadtservice AG,Germany,8,Former owner 2,yes,lost,,2026-02-01,,,,2025-12-03,marketing,ok,event,yes,no
+L0174,Alpenpartner GmbH,United Kingdom,40,Seller B,no,lost,,2025-06-12,,,,2025-06-02,owner,ok,inbound demo request,yes,no
+L0175,Klosterbau GmbH & Co. KG,Italy,40,Seller C,no,lost,competitor,2026-01-14,2026-10-21,newsletter click,2026-03-01,2026-01-04,managing director,ok,referral,no,no
+L0176,Bergservice GmbH & Co. KG,Austria,90,Seller E,no,unqualified,,2025-06-26,,,,2025-06-27,owner,ok,partner,no,no
+L0177,Eichenservice GmbH & Co. KG,Switzerland,90,Seller E,yes,lost,price,2026-02-15,,,,2026-02-02,marketing,ok,outbound,yes,no
+L0178,Stadtmarkt GmbH,Germany,150,Seller E,no,lost,competitor,2025-08-23,2026-12-13,,,2025-07-01,office manager,ok,partner,no,no
+L0179,Waldstudio GmbH & Co. KG,Germany,150,Seller A,yes,lost,,2025-03-09,,,,2025-01-24,owner,opted out,partner,no,no
+L0180,Rosenstudio GmbH & Co. KG,Italy,15,Seller D,yes,lost,,2025-05-16,,,,2025-06-03,marketing,ok,outbound,no,no
+L0181,Hafenplus GmbH,Switzerland,90,Seller C,no,lost,price,2025-07-19,,pricing page,2026-04-06,2025-07-22,office manager,ok,inbound demo request,no,no
+L0182,Gartenwerk KG,Germany,15,Seller E,yes,lost,no opportunity,2026-05-05,,newsletter click,2026-07-10,2026-06-01,owner,ok,referral,no,no
+L0183,Hafenwerk GmbH,Germany,150,Seller C,no,lost,competitor,2025-10-31,2027-08-30,newsletter click,2026-05-02,2025-11-27,office manager,opted out,partner,no,no
+L0184,Waldblick AG,Austria,40,Former owner 2,no,lost,price,2026-05-04,,,,2026-05-11,marketing,ok,event,no,no
+L0185,Waldblick KG,United Kingdom,90,Seller A,no,unqualified,competitor,2025-06-01,2026-12-30,,,2025-04-05,marketing,ok,referral,no,no
+L0186,Waldservice GmbH & Co. KG,Switzerland,25,Former owner 1,yes,lost,timing,2025-08-03,,pricing page,2026-09-17,2025-06-09,managing director,ok,inbound demo request,yes,no
+L0187,Lindenbau GmbH,Germany,8,Former owner 2,yes,lost,price,2026-10-01,,event stand,2026-10-01,2026-08-28,owner,ok,partner,no,no
+L0188,Flusshaus GmbH & Co. KG,United Kingdom,90,Seller D,no,lost,competitor,2025-11-19,2027-11-28,,,2025-10-28,office manager,ok,partner,no,no
+L0189,Rosenbau AG,Switzerland,15,Seller C,yes,lost,competitor,2025-11-30,2027-08-01,pricing page,2026-04-04,2025-10-20,office manager,ok,inbound demo request,no,no
+L0190,Stadtbau AG,Germany,60,Seller E,no,lost,,2026-03-19,,pricing page,2025-12-29,2026-03-10,owner,invalid,inbound demo request,no,no
+L0191,Bergbau GmbH,Switzerland,40,Seller D,yes,lost,no answer,2025-09-01,,,,2025-07-18,marketing,ok,referral,no,no
+L0192,Hafenblick GmbH & Co. KG,Germany,15,Former owner 1,yes,lost,no opportunity,2024-12-06,,,,2024-10-13,managing director,ok,referral,no,no
+L0193,Flussbau GmbH,Germany,8,Seller A,no,lost,competitor,2026-01-09,2027-10-16,event stand,2026-07-30,2026-01-14,owner,ok,event,no,no
+L0194,Waldmarkt AG,Switzerland,25,Former owner 1,yes,lost,no answer,2025-01-13,,pricing page,2026-03-27,2024-11-20,owner,ok,event,no,no
+L0195,Alpenblick KG,Germany,150,Seller D,yes,lost,competitor,2024-11-13,2027-01-10,webinar,2026-08-09,2024-09-23,office manager,ok,inbound demo request,no,no
+L0196,Hafenplus GmbH & Co. KG,Austria,15,Seller C,yes,lost,competitor,2026-08-16,2027-03-07,,,2026-07-02,marketing,ok,event,no,no
+L0197,Eichenplus AG,Germany,15,Seller A,yes,lost,too small,2026-08-22,,pricing page,2026-03-27,2026-07-24,managing director,invalid,outbound,no,no
+L0198,Waldwerk KG,Germany,90,Seller A,no,lost,no answer,2025-12-25,,webinar,2026-08-26,2026-01-19,managing director,invalid,inbound demo request,no,no
+L0199,Alpenplus GmbH,Germany,8,Seller E,yes,lost,competitor,2026-03-23,2027-04-15,webinar,2026-07-15,2026-02-13,office manager,ok,event,no,no
+L0200,Bergpartner GmbH,Germany,40,Seller C,no,lost,timing,2025-01-13,,pricing page,2026-03-23,2025-01-06,marketing,ok,event,no,no
+L0201,Waldhaus GmbH,United Kingdom,90,Seller A,yes,lost,price,2025-12-09,,event stand,2026-07-06,2025-10-20,office manager,invalid,inbound demo request,no,no
+L0202,Bergpartner KG,Germany,150,Former owner 2,no,lost,,2025-02-21,,,,2025-02-17,marketing,ok,inbound demo request,no,no
+L0203,Flusswerk GmbH & Co. KG,Italy,150,Seller D,no,lost,competitor,2026-03-05,2027-07-11,,,2026-04-01,owner,ok,inbound demo request,no,no
+L0204,Gartenmarkt AG,Italy,25,Seller A,yes,lost,,2025-10-22,,pricing page,2026-05-22,2025-09-22,marketing,ok,referral,no,no
+L0205,Lindenservice AG,Austria,15,Seller E,no,lost,not icp,2024-11-15,,,,2024-10-17,marketing,ok,partner,no,no
+L0206,Lindenhof AG,Switzerland,90,Seller B,no,lost,no opportunity,2025-08-07,,webinar,2026-09-10,2025-07-21,owner,ok,event,no,no
+L0207,Eichenmarkt GmbH & Co. KG,Austria,15,Seller A,no,lost,price,2026-06-11,,pricing page,2026-07-19,2026-07-03,managing director,ok,inbound demo request,no,no
+L0208,Waldhaus KG,Germany,150,Seller E,no,unqualified,,2025-09-19,,,,2025-08-11,owner,ok,outbound,no,no
+L0209,Hafenblick GmbH,Germany,60,Seller C,yes,lost,competitor,2025-05-29,,,,2025-06-12,owner,ok,inbound demo request,no,no
+L0210,Klostermarkt GmbH,Austria,90,Seller D,no,lost,too small,2025-07-31,,newsletter click,2026-04-10,2025-08-20,owner,ok,outbound,no,no
+L0211,Flussservice AG,Italy,25,Seller D,no,lost,timing,2025-01-26,,event stand,2026-03-27,2025-01-29,owner,ok,event,no,no
+L0212,Flusshaus GmbH,Germany,25,Seller E,no,lost,no answer,2026-02-28,,newsletter click,2026-04-21,2025-12-30,managing director,ok,referral,no,no
+L0213,Eichenstudio GmbH & Co. KG,Austria,40,Former owner 1,yes,lost,,2026-03-07,,pricing page,2026-05-08,2026-02-26,office manager,ok,referral,no,no
+L0214,Hafenplus AG,Germany,150,Former owner 1,yes,lost,,2025-08-04,,pricing page,2026-01-03,2025-06-30,marketing,invalid,inbound demo request,no,no
+L0215,Waldhof KG,Austria,8,Former owner 1,no,lost,price,2024-11-13,,,,2024-12-01,managing director,ok,event,no,no
+L0216,Eichenservice KG,Germany,8,Former owner 1,yes,lost,timing,2026-04-07,,event stand,2026-01-24,2026-02-20,marketing,ok,partner,no,no
+L0217,Stadtpartner AG,Germany,40,Seller C,no,lost,price,2025-08-10,,newsletter click,2026-05-25,2025-06-13,managing director,invalid,inbound demo request,no,no
+L0218,Sonnenpartner KG,United Kingdom,15,Seller A,no,lost,,2026-04-10,,newsletter click,2026-01-11,2026-02-19,owner,ok,inbound demo request,no,no
+L0219,Berghaus KG,Germany,15,Seller D,no,lost,competitor,2025-12-11,,newsletter click,2026-04-26,2025-11-08,managing director,ok,referral,no,no
+L0220,Klosterplus GmbH,Switzerland,40,Seller A,yes,lost,not icp,2025-01-29,,,,2025-01-03,owner,ok,event,no,no
+L0221,Eichenplus GmbH,Switzerland,8,Seller A,yes,lost,,2024-12-29,,pricing page,2026-07-10,2024-12-07,marketing,ok,inbound demo request,no,no
+L0222,Sonnenhaus GmbH & Co. KG,Switzerland,60,Seller B,no,lost,not icp,2026-05-22,,newsletter click,2026-01-19,2026-03-25,marketing,ok,outbound,no,no
+L0223,Alpenhof KG,Italy,150,Seller C,yes,lost,no answer,2025-06-15,,webinar,2026-04-23,2025-07-02,owner,opted out,outbound,yes,no
+L0224,Bergblick GmbH,Austria,25,Seller B,yes,lost,,2024-11-20,,,,2024-10-15,managing director,ok,outbound,yes,no
+L0225,Hafenhaus AG,Germany,150,Seller A,no,lost,,2025-04-07,,,,2025-02-16,managing director,ok,outbound,no,no
+L0226,Hafenplus AG,Germany,40,Seller A,no,lost,price,2026-04-19,,,,2026-04-04,owner,ok,inbound demo request,no,no
+L0227,Waldpartner GmbH & Co. KG,Switzerland,90,Seller C,yes,lost,,2025-09-20,,,,2025-10-02,managing director,ok,partner,no,no
+L0228,Alpenbau GmbH,Germany,25,Seller C,no,lost,,2026-02-17,,newsletter click,2026-07-31,2026-03-12,marketing,ok,partner,no,no
+L0229,Bergstudio GmbH,Germany,15,Seller A,yes,lost,,2026-02-10,,webinar,2026-03-30,2026-01-31,office manager,opted out,referral,no,no
+L0230,Hafenservice KG,Switzerland,8,Former owner 2,yes,lost,timing,2026-01-09,,pricing page,2026-07-14,2025-12-28,managing director,opted out,event,no,no
+L0231,Hafenhaus KG,Germany,150,Seller C,yes,lost,no opportunity,2025-04-30,,pricing page,2026-03-09,2025-04-09,owner,ok,outbound,no,no
+L0232,Klosterplus KG,Switzerland,25,Seller C,yes,lost,too small,2026-08-01,,pricing page,2026-03-19,2026-06-20,marketing,ok,inbound demo request,yes,no
+L0233,Waldplus GmbH & Co. KG,Germany,15,Seller C,no,lost,timing,2026-01-01,,,,2026-01-28,office manager,ok,referral,no,no
+L0234,Alpenservice AG,Germany,40,Seller A,yes,lost,timing,2025-08-19,,,,2025-08-15,marketing,ok,event,no,no
+L0235,Gartenplus GmbH,Switzerland,40,Seller A,no,lost,,2025-04-03,,,,2025-05-03,marketing,ok,partner,no,no
+L0236,Hafenhaus KG,United Kingdom,150,Seller D,no,lost,no opportunity,2026-09-27,,newsletter click,2026-08-29,2026-08-22,office manager,ok,referral,no,no
+L0237,Bergwerk GmbH & Co. KG,Austria,8,Seller D,no,lost,price,2026-04-13,,case study,2026-08-06,2026-04-09,marketing,ok,partner,no,no
+L0238,Stadtbau GmbH & Co. KG,United Kingdom,15,Former owner 1,no,lost,no answer,2025-02-01,,newsletter click,2026-02-05,2024-12-16,owner,ok,inbound demo request,no,no
+L0239,Bergblick GmbH,Switzerland,8,Seller C,no,lost,timing,2026-01-29,,case study,2026-05-20,2025-12-16,office manager,ok,inbound demo request,no,no
+L0240,Sonnenbau KG,Germany,15,Former owner 1,no,lost,no answer,2026-05-07,,newsletter click,2026-08-11,2026-06-02,office manager,invalid,inbound demo request,no,no
+L0241,Klosterwerk GmbH,Italy,15,Former owner 2,yes,lost,too small,2025-05-23,,pricing page,2026-04-30,2025-03-26,office manager,ok,referral,no,no
+L0242,Stadtpartner GmbH & Co. KG,United Kingdom,8,Seller E,no,lost,no answer,2025-06-29,,,,2025-06-09,managing director,invalid,event,no,no
+L0243,Klosterplus AG,Switzerland,15,Seller C,no,lost,timing,2024-11-17,,,,2024-11-04,owner,ok,referral,no,no
+L0244,Alpenservice GmbH & Co. KG,Italy,15,Seller E,no,lost,not icp,2025-06-21,,pricing page,2026-04-05,2025-06-05,owner,ok,inbound demo request,no,no
+L0245,Rosenblick GmbH,Switzerland,25,Seller A,no,lost,competitor,2025-06-18,,,,2025-07-11,marketing,ok,inbound demo request,no,no
+L0246,Bergplus KG,Germany,150,Seller D,no,unqualified,,2026-05-30,,pricing page,2026-07-01,2026-04-17,marketing,ok,event,no,no
+L0247,Stadtmarkt KG,Germany,40,Seller C,no,lost,chain,2025-01-16,,newsletter click,2026-05-17,2024-11-18,marketing,ok,inbound demo request,no,no
+L0248,Flussblick GmbH,Switzerland,40,Former owner 1,no,lost,,2025-01-11,,webinar,2026-08-02,2024-12-23,owner,ok,inbound demo request,yes,no
+L0249,Bergwerk KG,Italy,60,Seller C,yes,lost,no answer,2025-11-29,,,,2025-12-03,owner,invalid,inbound demo request,no,no
+L0250,Bergservice GmbH,Switzerland,8,Seller E,no,lost,,2026-05-28,,event stand,2026-08-03,2026-06-20,office manager,invalid,outbound,no,no
+L0251,Sonnenwerk GmbH,Germany,90,Seller D,no,lost,,2026-06-07,,newsletter click,2026-08-06,2026-05-16,marketing,ok,inbound demo request,no,no
+L0252,Sonnenstudio GmbH,Germany,150,Former owner 1,no,lost,price,2026-03-09,,webinar,2026-02-02,2026-04-01,office manager,ok,referral,no,no
+L0253,Stadtmarkt KG,Austria,25,Seller D,yes,lost,competitor,2026-09-16,2026-09-18,webinar,2026-01-02,2026-09-03,owner,invalid,event,no,no
+L0254,Alpenstudio GmbH,Germany,25,Seller B,yes,lost,no answer,2026-02-08,,newsletter click,2026-07-22,2026-01-05,office manager,ok,event,no,no
+L0255,Waldblick GmbH,Germany,150,Former owner 2,yes,lost,,2026-08-22,,pricing page,2026-04-10,2026-09-16,managing director,ok,event,no,no
+L0256,Bergstudio KG,Germany,60,Seller A,yes,lost,no opportunity,2026-06-25,,newsletter click,2026-03-22,2026-06-22,owner,ok,partner,no,no
+L0257,Hafenhof GmbH & Co. KG,Switzerland,90,Seller A,yes,lost,competitor,2026-05-30,2027-01-26,event stand,2026-04-16,2026-05-07,owner,ok,referral,yes,no
+L0258,Hafenpartner AG,Germany,15,Seller A,yes,lost,,2025-06-30,,,,2025-05-31,owner,ok,partner,no,no
+L0259,Eichenwerk AG,Germany,60,Seller E,yes,lost,timing,2025-02-03,,newsletter click,2026-05-07,2025-01-07,managing director,ok,outbound,no,no
+L0260,Flussservice AG,Austria,150,Seller A,no,lost,,2026-02-25,,newsletter click,2026-02-27,2026-03-10,owner,ok,outbound,no,no
+L0261,Sonnenblick KG,Switzerland,60,Former owner 1,yes,lost,,2026-07-31,,,,2026-06-23,owner,ok,outbound,no,no
+L0262,Hafenblick GmbH,Switzerland,60,Seller A,no,lost,not icp,2025-05-06,,,,2025-05-18,office manager,ok,referral,no,no
+L0263,Eichenpartner GmbH,Germany,150,Former owner 1,yes,lost,timing,2025-01-18,,pricing page,2025-12-21,2024-11-29,marketing,ok,referral,no,no
+L0264,Klosterhof GmbH,Germany,40,Seller E,yes,lost,timing,2026-02-24,,,,2026-02-28,managing director,ok,outbound,yes,no
+L0265,Stadthof GmbH,Germany,90,Seller E,yes,lost,price,2026-01-25,,webinar,2025-12-26,2026-01-18,owner,opted out,event,no,no
+L0266,Eichenblick KG,Germany,90,Seller A,yes,lost,,2025-02-15,,pricing page,2026-08-12,2025-03-12,marketing,ok,event,no,no
+L0267,Eichenhof GmbH & Co. KG,Switzerland,60,Former owner 1,yes,lost,price,2026-10-03,,,,2026-09-12,marketing,ok,partner,no,no
+L0268,Rosenplus KG,Italy,8,Seller B,yes,lost,,2025-08-29,,webinar,2026-06-07,2025-08-13,owner,ok,event,no,no
+L0269,Gartenplus GmbH,Switzerland,40,Seller A,no,lost,,2025-03-18,,,,2025-04-04,owner,ok,partner,no,no
+L0270,Hafenhof GmbH,Germany,60,Seller A,no,lost,,2025-12-23,,webinar,2026-02-06,2025-11-23,marketing,ok,inbound demo request,no,no
+L0271,Gartenblick KG,Germany,25,Seller B,no,lost,,2025-12-02,,,,2025-11-07,office manager,ok,partner,no,no
+L0272,Gartenservice KG,Switzerland,150,Seller C,no,lost,price,2025-07-12,,pricing page,2026-06-14,2025-06-17,office manager,ok,partner,no,no
+L0273,Sonnenhaus GmbH,Germany,25,Seller E,yes,lost,,2025-05-30,,webinar,2026-07-17,2025-06-26,managing director,ok,event,no,no
+L0274,Sonnenhaus GmbH & Co. KG,Germany,40,Former owner 2,yes,lost,competitor,2025-07-02,2027-10-11,,,2025-06-26,owner,ok,partner,no,no
+L0275,Alpenplus GmbH & Co. KG,Germany,90,Seller E,yes,lost,,2025-12-31,,newsletter click,2026-06-10,2025-11-29,owner,ok,outbound,no,no
+L0276,Hafenblick GmbH & Co. KG,Germany,60,Seller B,yes,lost,competitor,2025-06-14,,,,2025-04-18,marketing,ok,inbound demo request,no,no
+L0277,Stadtservice KG,Austria,40,Former owner 2,no,lost,,2026-01-07,,,,2026-01-19,marketing,ok,outbound,no,no
+L0278,Klosterblick GmbH,Germany,150,Seller C,yes,lost,no answer,2026-09-19,,,,2026-09-21,office manager,ok,outbound,yes,no
+L0279,Alpenwerk GmbH & Co. KG,Switzerland,8,Seller B,yes,lost,too small,2025-01-11,,,,2025-02-06,marketing,ok,outbound,no,no
+L0280,Bergpartner GmbH & Co. KG,Germany,8,Seller E,no,lost,competitor,2026-04-25,2027-10-21,,,2026-05-18,managing director,ok,partner,no,no
+L0281,Alpenplus KG,Germany,60,Former owner 2,no,lost,timing,2025-10-28,,event stand,2026-06-03,2025-11-17,owner,invalid,referral,no,no
+L0282,Alpenblick KG,Switzerland,15,Seller E,no,lost,,2025-07-04,,newsletter click,2026-01-07,2025-07-09,office manager,opted out,partner,no,no
+L0283,Berghof GmbH,Austria,150,Seller C,no,lost,competitor,2025-01-03,,newsletter click,2026-02-20,2024-12-31,owner,ok,outbound,no,no
+L0284,Waldpartner KG,Austria,25,Seller A,yes,lost,price,2025-08-30,,event stand,2026-01-20,2025-09-11,office manager,ok,partner,no,no
+L0285,Lindenstudio GmbH & Co. KG,United Kingdom,8,Seller E,no,lost,,2025-07-26,,,,2025-06-09,owner,opted out,inbound demo request,no,no
+L0286,Bergstudio AG,Germany,60,Former owner 1,no,lost,no answer,2025-08-26,,event stand,2026-04-04,2025-09-24,office manager,ok,event,yes,no
+L0287,Bergservice AG,Switzerland,15,Seller E,yes,lost,too small,2026-02-07,,,,2026-01-01,marketing,ok,event,no,no
+L0288,Gartenplus GmbH & Co. KG,Austria,40,Seller D,no,lost,,2024-12-22,,,,2024-11-14,owner,ok,referral,no,no
+L0289,Klosterbau AG,Germany,60,Seller E,no,lost,timing,2024-11-27,,newsletter click,2026-04-12,2024-11-03,managing director,ok,inbound demo request,no,yes
+L0290,Flussstudio GmbH & Co. KG,Switzerland,150,Seller A,yes,lost,no opportunity,2026-07-28,,,,2026-06-14,office manager,ok,outbound,no,no
+L0291,Lindenmarkt GmbH & Co. KG,Germany,90,Seller A,yes,lost,,2025-04-20,,,,2025-03-21,marketing,opted out,event,no,no
+L0292,Bergmarkt GmbH,Switzerland,150,Seller E,no,lost,no answer,2026-07-26,,newsletter click,2026-01-24,2026-08-13,office manager,ok,outbound,no,no
+L0293,Eichenhof GmbH & Co. KG,Austria,40,Seller E,yes,lost,timing,2025-02-17,,,,2025-01-30,owner,ok,partner,no,no
+L0294,Sonnenbau GmbH,Austria,15,Former owner 2,no,lost,price,2025-05-16,,pricing page,2026-01-17,2025-03-27,managing director,invalid,partner,no,no
+L0295,Hafenblick GmbH & Co. KG,Germany,8,Seller C,yes,lost,,2025-02-17,,,,2025-01-29,owner,ok,partner,no,no
+L0296,Flussplus KG,Italy,40,Seller D,no,lost,competitor,2025-10-13,,event stand,2026-08-14,2025-10-24,owner,ok,inbound demo request,no,no
+L0297,Waldblick AG,Germany,90,Seller C,yes,lost,,2026-07-01,,newsletter click,2026-07-11,2026-06-07,managing director,ok,outbound,no,no
+L0298,Hafenpartner AG,Switzerland,25,Seller D,no,unqualified,timing,2026-09-06,,newsletter click,2026-02-01,2026-09-27,office manager,ok,outbound,no,no
+L0299,Berghof KG,Germany,25,Seller D,yes,lost,,2026-04-28,,,,2026-03-22,owner,invalid,inbound demo request,no,no
+L0300,Gartenhaus KG,Italy,15,Former owner 1,no,lost,,2025-05-15,,,,2025-05-16,managing director,ok,inbound demo request,no,no
+L0301,Eichenbau AG,Germany,25,Seller D,no,lost,,2025-05-26,,pricing page,2026-01-19,2025-04-22,marketing,ok,inbound demo request,no,no
+L0302,Alpenpartner AG,United Kingdom,8,Seller B,no,lost,timing,2024-12-03,,,,2024-11-30,office manager,ok,event,no,no
+L0303,Hafenhaus AG,Germany,60,Seller A,no,lost,not icp,2025-07-08,,,,2025-06-19,office manager,ok,inbound demo request,no,no
+L0304,Sonnenstudio GmbH & Co. KG,Switzerland,8,Seller C,no,lost,price,2026-08-04,,pricing page,2026-08-17,2026-06-22,office manager,opted out,partner,no,no
+L0305,Waldservice AG,United Kingdom,15,Seller A,no,lost,too small,2025-07-23,,event stand,2026-07-16,2025-06-23,marketing,ok,partner,no,no
+L0306,Stadtpartner GmbH & Co. KG,United Kingdom,90,Seller E,no,lost,no opportunity,2026-09-08,,,,2026-09-28,marketing,ok,outbound,no,no
+L0307,Rosenservice KG,Switzerland,8,Seller D,no,lost,no opportunity,2026-04-04,,newsletter click,2026-03-24,2026-02-10,managing director,ok,referral,no,no
+L0308,Hafenblick AG,Italy,15,Seller A,no,lost,too small,2026-03-28,,webinar,2026-03-07,2026-02-28,managing director,ok,partner,no,no
+L0309,Klostermarkt GmbH,Germany,8,Seller C,yes,lost,timing,2025-01-28,,pricing page,2026-07-09,2024-12-08,owner,ok,partner,no,no
+L0310,Stadthaus AG,Germany,150,Seller D,yes,lost,,2025-09-05,,webinar,2026-07-13,2025-08-26,owner,ok,event,no,no
+L0311,Hafenmarkt AG,Switzerland,90,Seller A,yes,lost,timing,2026-01-14,,case study,2025-12-24,2025-12-18,marketing,ok,referral,no,no
+L0312,Eichenstudio GmbH & Co. KG,Switzerland,40,Seller C,no,lost,competitor,2025-07-12,,newsletter click,2025-12-28,2025-06-05,managing director,ok,outbound,no,no
+L0313,Waldmarkt GmbH,Italy,25,Seller A,yes,lost,timing,2024-11-20,,case study,2026-02-15,2024-12-17,owner,ok,event,no,no
+L0314,Stadtwerk AG,Austria,60,Seller A,yes,lost,,2025-01-14,,,,2024-12-19,marketing,ok,inbound demo request,no,no
+L0315,Rosenservice KG,Germany,25,Seller D,yes,lost,,2024-11-13,,newsletter click,2026-06-27,2024-09-28,marketing,ok,outbound,no,no
+L0316,Sonnenstudio KG,Germany,90,Seller B,yes,lost,price,2025-01-01,,case study,2026-03-25,2024-11-25,marketing,ok,inbound demo request,no,no
+L0317,Lindenhaus GmbH & Co. KG,Austria,60,Seller C,no,lost,price,2025-02-21,,pricing page,2026-02-20,2025-03-13,owner,ok,referral,no,no
+L0318,Waldhaus GmbH,Germany,8,Seller E,no,lost,,2026-07-08,,,,2026-07-23,marketing,ok,event,no,no
+L0319,Flussplus AG,Germany,40,Seller E,no,lost,no opportunity,2025-07-19,,,,2025-08-03,owner,ok,outbound,no,no
+L0320,Rosenplus AG,Germany,60,Seller C,yes,lost,price,2026-05-14,,,,2026-04-13,owner,ok,outbound,no,no
+L0321,Rosenplus GmbH & Co. KG,Germany,25,Seller C,yes,lost,not icp,2026-05-10,,pricing page,2026-07-31,2026-04-20,marketing,ok,partner,no,no
+L0322,Sonnenpartner GmbH,Italy,8,Seller C,no,lost,,2025-07-02,,case study,2026-03-03,2025-07-04,office manager,ok,outbound,no,no
+L0323,Hafenhof KG,Germany,60,Seller B,no,unqualified,no answer,2025-02-24,,event stand,2026-08-03,2025-02-16,managing director,opted out,inbound demo request,no,no
+L0324,Gartenmarkt AG,Austria,8,Seller E,yes,lost,too small,2026-07-10,,newsletter click,2026-07-27,2026-07-05,managing director,ok,partner,no,yes
+L0325,Stadtpartner KG,Austria,60,Seller A,yes,lost,,2026-07-28,,event stand,2026-02-05,2026-07-18,managing director,ok,outbound,no,no
+L0326,Hafenstudio KG,Austria,40,Seller B,no,lost,price,2026-05-13,,case study,2026-09-24,2026-05-11,office manager,ok,referral,no,no
+L0327,Klosterstudio GmbH & Co. KG,Switzerland,25,Former owner 2,no,lost,,2025-06-05,,,,2025-05-28,managing director,ok,referral,no,no
+L0328,Klosterstudio GmbH & Co. KG,Germany,8,Seller D,yes,lost,competitor,2026-04-06,,,,2026-02-07,office manager,ok,referral,no,no
+L0329,Rosenhof KG,Germany,8,Seller A,no,lost,no opportunity,2026-01-11,,,,2025-11-27,managing director,ok,outbound,no,no
+L0330,Lindenplus GmbH,Germany,60,Seller D,yes,lost,timing,2025-12-10,,case study,2026-05-06,2025-12-01,managing director,opted out,event,no,no
+L0331,Eichenmarkt KG,Germany,25,Seller B,no,lost,,2025-12-22,,newsletter click,2026-04-27,2025-12-05,managing director,ok,referral,no,no
+L0332,Lindenhaus GmbH,Germany,90,Seller A,no,lost,price,2026-07-12,,,,2026-05-26,owner,ok,outbound,no,no
+L0333,Gartenhaus AG,Germany,60,Seller E,no,lost,not icp,2026-08-28,,event stand,2026-04-28,2026-07-01,owner,ok,referral,no,no
+L0334,Waldplus AG,Switzerland,60,Former owner 1,no,lost,timing,2024-12-13,,pricing page,2026-07-05,2024-10-28,marketing,invalid,event,no,no
+L0335,Hafenblick GmbH,Switzerland,15,Seller D,no,lost,competitor,2026-09-19,,newsletter click,2026-06-15,2026-08-08,office manager,ok,referral,no,no
+L0336,Bergplus GmbH & Co. KG,Switzerland,60,Seller D,yes,lost,chain,2025-04-12,,pricing page,2026-02-23,2025-02-18,office manager,ok,inbound demo request,no,no
+L0337,Waldwerk AG,Switzerland,150,Former owner 2,yes,lost,price,2025-07-31,,,,2025-08-02,office manager,ok,partner,no,no
+L0338,Hafenmarkt GmbH,Switzerland,40,Seller C,no,unqualified,competitor,2026-01-19,2026-09-18,newsletter click,2026-06-10,2026-01-16,managing director,opted out,event,no,no
+L0339,Flusswerk AG,Germany,8,Former owner 1,yes,lost,,2025-05-02,,,,2025-05-29,owner,ok,outbound,no,no
+L0340,Rosenhof GmbH,Germany,40,Former owner 1,no,lost,competitor,2025-08-09,2026-12-02,,,2025-08-08,owner,ok,inbound demo request,no,no
+L0341,Rosenblick GmbH,Germany,8,Former owner 1,yes,lost,no answer,2025-05-24,,newsletter click,2026-08-24,2025-06-19,managing director,ok,inbound demo request,no,no
+L0342,Eichenmarkt KG,Austria,60,Seller A,no,lost,,2025-05-12,,,,2025-05-20,owner,ok,inbound demo request,no,no
+L0343,Eichenwerk GmbH & Co. KG,Germany,40,Former owner 2,no,lost,not icp,2026-05-22,,pricing page,2026-08-06,2026-04-18,office manager,invalid,partner,no,no
+L0344,Hafenmarkt GmbH,Germany,40,Former owner 1,no,lost,competitor,2025-03-26,,newsletter click,2026-04-10,2025-02-21,office manager,ok,partner,no,no
+L0345,Waldstudio AG,Germany,8,Seller B,no,lost,timing,2025-02-28,,case study,2026-05-10,2025-02-25,owner,ok,outbound,no,no
+L0346,Bergpartner GmbH & Co. KG,Germany,40,Former owner 1,no,unqualified,price,2024-12-27,,pricing page,2026-01-27,2024-10-29,marketing,ok,event,no,no
+L0347,Klosterpartner GmbH,Germany,8,Former owner 1,no,lost,timing,2025-05-22,,case study,2026-08-29,2025-06-16,marketing,ok,inbound demo request,no,no
+L0348,Flusspartner AG,Switzerland,15,Former owner 1,yes,lost,timing,2025-10-26,,,,2025-10-04,owner,ok,referral,no,no
+L0349,Waldstudio GmbH,United Kingdom,25,Seller A,yes,lost,competitor,2025-05-05,,case study,2026-06-06,2025-04-20,marketing,ok,referral,no,no
+L0350,Stadtplus GmbH & Co. KG,Germany,8,Former owner 1,no,unqualified,price,2025-03-31,,newsletter click,2026-02-12,2025-03-24,marketing,ok,inbound demo request,no,no
+L0351,Stadtplus KG,Italy,90,Seller E,no,lost,price,2026-07-04,,newsletter click,2026-05-30,2026-05-12,owner,ok,event,no,no
+L0352,Flussservice AG,Italy,8,Seller E,no,unqualified,no answer,2025-12-08,,event stand,2026-04-08,2026-01-03,marketing,ok,inbound demo request,no,no
+L0353,Klosterhaus GmbH & Co. KG,Germany,150,Seller C,no,lost,price,2025-08-31,,newsletter click,2026-08-26,2025-07-29,owner,ok,outbound,no,no
+L0354,Eichenblick GmbH & Co. KG,Germany,40,Seller A,yes,lost,too small,2026-08-24,,pricing page,2026-08-09,2026-09-18,owner,ok,outbound,no,no
+L0355,Alpenhaus GmbH,Germany,90,Seller B,no,lost,,2026-05-18,,,,2026-03-26,office manager,opted out,partner,no,no
+L0356,Klosterbau KG,Switzerland,40,Seller D,no,lost,,2025-02-01,,,,2025-02-28,managing director,ok,inbound demo request,no,no
+L0357,Lindenwerk GmbH & Co. KG,Italy,25,Seller C,no,lost,no opportunity,2026-07-02,,case study,2026-08-06,2026-05-10,owner,ok,referral,no,no
+L0358,Gartenpartner GmbH,Germany,15,Seller A,no,lost,chain,2025-06-04,,,,2025-04-05,managing director,ok,event,no,no
+L0359,Flusshof KG,Germany,40,Seller A,no,lost,no answer,2025-06-02,,webinar,2026-01-01,2025-05-09,owner,ok,outbound,no,no
+L0360,Bergstudio GmbH,Germany,40,Seller A,no,lost,timing,2026-09-15,,newsletter click,2026-03-12,2026-10-05,marketing,invalid,outbound,no,no
+L0361,Alpenservice AG,Austria,8,Seller D,yes,lost,timing,2026-04-23,,pricing page,2026-03-26,2026-03-05,owner,invalid,event,no,no
+L0362,Waldpartner GmbH & Co. KG,Germany,60,Seller D,no,lost,timing,2026-06-29,,,,2026-06-19,office manager,ok,outbound,no,no
+L0363,Lindenservice AG,Germany,90,Former owner 2,yes,lost,competitor,2025-09-03,,,,2025-08-15,marketing,ok,partner,no,no
+L0364,Eichenhof AG,Germany,60,Seller A,yes,lost,,2025-02-14,,webinar,2026-01-31,2025-02-11,office manager,ok,event,no,no
+L0365,Flussservice KG,Austria,25,Seller D,no,lost,too small,2025-08-21,,pricing page,2026-07-17,2025-08-08,managing director,ok,partner,no,no
+L0366,Stadtbau KG,Germany,40,Seller E,no,lost,timing,2026-03-10,,,,2026-01-31,marketing,ok,partner,no,no
+L0367,Hafenblick GmbH & Co. KG,Germany,40,Former owner 1,yes,lost,timing,2026-01-06,,pricing page,2026-01-30,2025-12-26,marketing,ok,event,no,no
+L0368,Hafenwerk KG,Germany,8,Seller B,no,lost,,2025-03-16,,,,2025-04-12,marketing,invalid,outbound,no,no
+L0369,Sonnenhof GmbH,Switzerland,60,Former owner 2,yes,lost,price,2025-03-16,,webinar,2026-03-10,2025-03-02,managing director,opted out,outbound,no,no
+L0370,Stadtpartner GmbH & Co. KG,Switzerland,90,Seller E,no,lost,competitor,2025-05-31,2026-10-09,,,2025-04-09,owner,ok,partner,no,no
+L0371,Sonnenservice KG,Italy,8,Seller D,no,lost,,2025-04-05,,webinar,2026-09-18,2025-04-27,marketing,ok,event,no,no
+L0372,Sonnenhof GmbH,Switzerland,40,Former owner 1,no,lost,,2026-01-06,,,,2025-12-19,marketing,invalid,partner,no,no
+L0373,Bergservice GmbH,Switzerland,40,Former owner 2,yes,lost,timing,2026-07-12,,event stand,2026-02-12,2026-06-08,managing director,ok,inbound demo request,no,no
+L0374,Waldhof KG,Italy,25,Seller B,no,lost,,2025-07-09,,newsletter click,2025-12-21,2025-07-31,owner,ok,event,no,no
+L0375,Hafenwerk AG,Germany,25,Seller C,no,lost,price,2025-09-21,,event stand,2026-03-28,2025-09-25,owner,ok,outbound,no,no
+L0376,Waldbau GmbH,Italy,8,Seller B,no,lost,,2026-05-10,,case study,2026-03-10,2026-04-18,managing director,ok,partner,no,no
+L0377,Rosenhof GmbH,Austria,8,Seller A,yes,lost,no answer,2025-03-28,,,,2025-02-01,owner,ok,partner,no,no
+L0378,Stadthaus GmbH & Co. KG,Germany,90,Seller D,no,lost,competitor,2026-09-02,2027-11-17,newsletter click,2026-08-13,2026-08-17,office manager,invalid,referral,no,no
+L0379,Gartenwerk KG,Austria,90,Seller A,no,lost,price,2025-05-05,,,,2025-03-12,owner,ok,event,no,no
+L0380,Stadtmarkt GmbH,Germany,90,Seller E,no,lost,,2026-01-10,,newsletter click,2026-02-08,2025-11-25,office manager,ok,event,no,no
+L0381,Sonnenstudio GmbH,Germany,60,Seller A,no,lost,timing,2026-01-31,,newsletter click,2026-07-18,2026-02-19,managing director,invalid,partner,no,no
+L0382,Eichenmarkt GmbH & Co. KG,Italy,25,Seller A,no,lost,,2026-03-02,,,,2026-02-28,managing director,ok,partner,no,no
+L0383,Berghof GmbH,Switzerland,90,Seller D,no,lost,competitor,2025-03-20,2027-09-09,,,2025-02-19,owner,opted out,partner,no,no
+L0384,Eichenhaus AG,Germany,40,Seller A,no,lost,no opportunity,2026-09-30,,,,2026-09-16,owner,ok,partner,no,no
+L0385,Gartenwerk KG,Germany,25,Former owner 1,no,lost,timing,2026-01-01,,,,2025-11-08,office manager,ok,partner,no,no
+L0386,Sonnenbau KG,Germany,8,Former owner 1,yes,lost,timing,2025-11-27,,,,2025-12-04,managing director,ok,inbound demo request,no,no
+L0387,Gartenbau KG,Germany,150,Seller E,no,unqualified,timing,2026-01-15,,,,2025-11-29,marketing,ok,referral,no,no
+L0388,Rosenbau GmbH & Co. KG,United Kingdom,15,Seller A,no,lost,,2026-07-23,,newsletter click,2026-08-16,2026-07-12,managing director,opted out,referral,no,no
+L0389,Flussplus AG,Germany,15,Seller E,no,lost,,2024-12-05,,,,2024-11-24,marketing,ok,referral,no,no
+L0390,Klosterplus GmbH,Germany,60,Seller A,no,lost,timing,2025-01-23,,,,2025-01-22,owner,opted out,outbound,no,no
+L0391,Flussplus KG,Germany,40,Seller E,no,lost,competitor,2025-09-26,2027-10-31,,,2025-10-05,owner,ok,partner,no,no
+L0392,Flusshof KG,Germany,15,Seller B,no,lost,not icp,2025-05-03,,,,2025-03-17,office manager,ok,partner,no,no
+L0393,Gartenmarkt GmbH & Co. KG,Germany,150,Seller D,no,lost,competitor,2025-07-28,2026-10-16,pricing page,2026-03-29,2025-08-20,owner,opted out,outbound,no,no
+L0394,Waldstudio AG,United Kingdom,90,Seller E,yes,lost,price,2025-10-05,,pricing page,2026-08-19,2025-10-03,office manager,opted out,outbound,no,no
+L0395,Sonnenpartner KG,United Kingdom,15,Seller D,yes,lost,competitor,2025-06-29,2027-12-07,,,2025-05-07,office manager,ok,outbound,no,no
+L0396,Klostermarkt GmbH & Co. KG,United Kingdom,90,Former owner 2,yes,lost,timing,2024-11-17,,case study,2026-01-23,2024-09-19,managing director,ok,referral,no,no
+L0397,Bergwerk GmbH & Co. KG,Germany,150,Former owner 1,no,lost,no answer,2025-06-19,,case study,2026-04-07,2025-05-07,marketing,ok,inbound demo request,no,no
+L0398,Alpenhaus AG,Switzerland,40,Seller A,no,lost,no answer,2026-04-06,,case study,2026-06-16,2026-03-03,owner,ok,outbound,no,no
+L0399,Lindenplus KG,Germany,25,Seller A,yes,lost,price,2025-07-02,,newsletter click,2026-03-29,2025-07-03,office manager,opted out,inbound demo request,no,no
+L0400,Klosterblick GmbH,Germany,25,Seller C,no,lost,price,2026-04-16,,newsletter click,2026-02-28,2026-05-10,owner,ok,inbound demo request,yes,no
+L0401,Sonnenwerk AG,Germany,15,Seller E,yes,lost,price,2025-01-07,,newsletter click,2026-01-07,2024-11-24,managing director,invalid,inbound demo request,no,no
+L0402,Berghof GmbH & Co. KG,Switzerland,90,Seller E,no,lost,competitor,2025-09-28,2027-07-26,,,2025-09-16,marketing,ok,partner,no,no
+L0403,Rosenpartner GmbH & Co. KG,Germany,150,Former owner 2,no,lost,,2025-11-13,,,,2025-10-07,marketing,ok,referral,no,no
+L0404,Klosterplus GmbH,Austria,25,Seller A,yes,lost,price,2025-12-04,,newsletter click,2026-04-05,2025-10-19,office manager,ok,referral,no,no
+L0405,Eichenbau KG,Germany,150,Seller A,yes,lost,no opportunity,2024-12-27,,newsletter click,2026-06-15,2024-12-26,marketing,opted out,event,no,no
+L0406,Klosterwerk KG,Germany,150,Seller A,no,lost,,2025-06-29,,pricing page,2026-03-07,2025-05-24,office manager,ok,outbound,no,no
+L0407,Rosenstudio AG,Germany,15,Former owner 1,no,lost,too small,2026-02-22,,pricing page,2026-07-11,2026-02-14,owner,ok,event,no,no
+L0408,Sonnenservice GmbH,Germany,60,Former owner 2,no,lost,competitor,2025-01-08,2026-09-25,,,2024-12-05,office manager,invalid,event,no,no
+L0409,Eichenbau AG,Germany,15,Seller C,yes,lost,competitor,2025-10-14,,,,2025-10-10,managing director,ok,inbound demo request,no,no
+L0410,Waldbau KG,Germany,15,Seller C,no,lost,,2025-04-16,,webinar,2026-02-08,2025-04-27,office manager,ok,outbound,no,no
+L0411,Waldblick GmbH & Co. KG,Austria,60,Seller A,no,lost,,2026-09-01,,,,2026-09-28,managing director,ok,event,no,no
+L0412,Sonnenplus KG,Germany,90,Seller B,no,lost,price,2025-03-23,,,,2025-03-18,owner,ok,event,no,no
+L0413,Stadtpartner AG,Germany,8,Former owner 1,yes,lost,price,2026-06-20,,,,2026-05-14,marketing,ok,event,no,no
+L0414,Flusshaus GmbH,Germany,40,Seller A,yes,lost,,2025-07-18,,,,2025-06-11,owner,ok,event,no,no
+L0415,Alpenplus KG,Germany,90,Seller E,yes,lost,competitor,2025-05-11,2027-03-30,pricing page,2026-08-21,2025-03-31,owner,ok,referral,no,no
+L0416,Flussstudio GmbH & Co. KG,Germany,150,Seller B,yes,lost,,2025-06-16,,,,2025-04-27,owner,ok,partner,no,no
+L0417,Klostermarkt GmbH & Co. KG,Germany,15,Seller D,no,unqualified,,2025-06-21,,,,2025-06-28,marketing,ok,inbound demo request,no,no
+L0418,Stadthof KG,Austria,15,Seller A,no,lost,no opportunity,2026-05-21,,case study,2026-07-11,2026-06-11,marketing,ok,referral,no,no
+L0419,Eichenhaus KG,Germany,60,Seller B,no,lost,timing,2026-03-08,,,,2026-03-07,owner,ok,referral,no,no
+L0420,Stadtpartner GmbH,Germany,60,Seller A,no,lost,,2026-03-10,,case study,2026-03-10,2026-03-09,marketing,ok,partner,no,no
+L0421,Waldblick KG,Germany,40,Seller B,no,lost,timing,2025-07-13,,newsletter click,2026-05-01,2025-06-17,office manager,ok,outbound,no,no
+L0422,Gartenmarkt KG,Germany,8,Seller E,yes,lost,timing,2025-03-20,,event stand,2026-07-06,2025-03-14,marketing,invalid,inbound demo request,no,no
+L0423,Rosenblick AG,Germany,90,Seller D,yes,lost,competitor,2025-07-01,,pricing page,2026-10-01,2025-07-17,owner,ok,inbound demo request,no,no
+L0424,Eichenbau GmbH,Italy,15,Former owner 2,no,lost,,2026-05-05,,newsletter click,2026-10-05,2026-05-14,owner,ok,referral,no,no
+L0425,Klosterwerk KG,Germany,25,Former owner 1,no,lost,no opportunity,2026-02-02,,webinar,2026-08-30,2026-01-29,managing director,ok,event,no,no
+L0426,Gartenhaus KG,Germany,8,Former owner 2,yes,lost,price,2026-02-22,,,,2026-03-22,marketing,opted out,event,no,no
+L0427,Waldpartner AG,Germany,40,Seller B,no,lost,not icp,2026-08-01,,newsletter click,2026-05-23,2026-07-06,marketing,invalid,event,no,no
+L0428,Alpenhof AG,Italy,60,Seller E,yes,lost,not icp,2026-01-03,,event stand,2026-01-29,2025-12-17,managing director,ok,inbound demo request,yes,no
+L0429,Waldpartner AG,Germany,90,Seller E,yes,lost,,2025-10-26,,pricing page,2026-02-21,2025-10-07,marketing,ok,event,no,no
+L0430,Hafenblick GmbH,Germany,15,Seller B,yes,lost,no answer,2025-09-25,,newsletter click,2026-03-23,2025-10-24,office manager,ok,referral,no,no
+L0431,Hafenbau AG,Switzerland,15,Former owner 1,yes,lost,no answer,2025-06-21,,,,2025-05-21,owner,ok,partner,no,no
+L0432,Gartenhaus AG,Austria,90,Seller B,yes,lost,timing,2025-07-12,,case study,2026-10-03,2025-06-23,owner,ok,inbound demo request,no,no
+L0433,Hafenhaus KG,Germany,40,Seller D,no,lost,timing,2025-12-08,,webinar,2026-01-29,2025-12-22,owner,ok,referral,no,no
+L0434,Klosterplus KG,Austria,25,Seller D,yes,lost,,2025-05-15,,,,2025-05-06,office manager,ok,event,no,no
+L0435,Flusshaus GmbH & Co. KG,Switzerland,60,Seller C,yes,lost,no answer,2025-10-06,,pricing page,2026-09-27,2025-09-17,owner,ok,referral,no,no
+L0436,Rosenservice KG,United Kingdom,8,Seller A,yes,lost,too small,2026-06-05,,case study,2026-08-24,2026-06-12,owner,invalid,event,no,no
+L0437,Hafenhaus GmbH & Co. KG,Germany,90,Seller D,yes,lost,,2025-01-29,,newsletter click,2026-03-18,2025-02-18,owner,ok,inbound demo request,no,no
+L0438,Rosenbau GmbH & Co. KG,United Kingdom,25,Seller D,no,lost,timing,2025-09-19,,,,2025-09-21,marketing,ok,partner,yes,no
+L0439,Lindenblick KG,Switzerland,8,Seller C,yes,lost,,2025-12-30,,newsletter click,2026-04-01,2026-01-26,owner,ok,outbound,no,no
+L0440,Stadtmarkt GmbH,Italy,60,Seller E,no,lost,no opportunity,2026-08-09,,,,2026-08-30,owner,ok,event,no,no
+L0441,Rosenbau AG,Switzerland,40,Seller D,no,lost,competitor,2025-04-21,2027-01-03,newsletter click,2026-06-15,2025-05-04,owner,ok,event,no,no
+L0442,Alpenhaus AG,Germany,90,Seller E,no,lost,competitor,2026-10-01,2027-10-21,webinar,2026-05-20,2026-09-29,managing director,ok,referral,no,no
+L0443,Gartenhof KG,Austria,90,Seller E,yes,lost,competitor,2025-10-07,,pricing page,2026-08-20,2025-08-23,marketing,ok,outbound,no,no
+L0444,Stadtblick KG,Austria,40,Seller D,yes,lost,,2024-11-28,,,,2024-10-15,owner,opted out,partner,no,no
+L0445,Sonnenwerk GmbH,Switzerland,8,Seller D,no,lost,competitor,2024-12-09,2026-11-12,,,2024-10-28,owner,ok,outbound,no,no
+L0446,Stadtmarkt AG,Switzerland,60,Former owner 2,no,unqualified,no opportunity,2026-07-22,,pricing page,2026-03-24,2026-06-27,office manager,invalid,referral,no,no
+L0447,Flusswerk KG,Italy,150,Seller C,yes,lost,timing,2024-11-16,,,,2024-09-23,office manager,ok,event,no,no
+L0448,Flusswerk GmbH & Co. KG,Italy,60,Former owner 2,no,lost,competitor,2026-07-26,2027-06-07,pricing page,2026-02-26,2026-08-06,marketing,ok,inbound demo request,no,no
+L0449,Lindenpartner KG,United Kingdom,8,Former owner 1,no,unqualified,,2024-11-24,,pricing page,2026-08-27,2024-12-03,marketing,ok,referral,no,no
+L0450,Lindenservice AG,Switzerland,60,Seller B,no,lost,price,2025-05-26,,,,2025-06-07,owner,ok,referral,no,no
+L0451,Lindenservice GmbH,Germany,8,Seller B,no,lost,,2025-10-02,,event stand,2026-03-17,2025-10-03,owner,ok,outbound,no,no
+L0452,Stadtstudio GmbH,Italy,60,Seller B,yes,lost,,2025-10-30,,,,2025-09-09,office manager,ok,referral,no,no
+L0453,Gartenwerk AG,Germany,25,Seller B,no,unqualified,,2024-11-18,,webinar,2026-01-16,2024-10-28,marketing,ok,partner,no,no
+L0454,Hafenmarkt KG,Germany,15,Seller A,no,lost,no answer,2026-05-31,,webinar,2026-06-10,2026-05-12,owner,ok,inbound demo request,no,no
+L0455,Bergwerk AG,Germany,15,Seller B,no,lost,timing,2026-01-19,,,,2026-02-10,owner,ok,referral,no,no
+L0456,Sonnenhof AG,Italy,25,Seller D,yes,lost,competitor,2026-09-04,,case study,2025-12-28,2026-08-12,marketing,ok,partner,no,no
+L0457,Gartenblick AG,United Kingdom,8,Former owner 1,no,lost,timing,2025-03-16,,,,2025-02-14,office manager,ok,outbound,no,no
+L0458,Hafenpartner AG,Germany,15,Seller E,no,lost,not icp,2026-02-06,,pricing page,2026-02-24,2026-02-04,owner,ok,referral,no,no
+L0459,Sonnenstudio KG,Switzerland,8,Seller E,yes,lost,,2025-04-05,,,,2025-03-28,marketing,invalid,inbound demo request,no,no
+L0460,Gartenstudio GmbH,Germany,8,Former owner 1,yes,lost,timing,2026-08-16,,webinar,2026-07-15,2026-08-24,owner,ok,referral,no,no
+L0461,Stadthaus KG,Switzerland,90,Seller B,yes,lost,no opportunity,2026-03-27,,event stand,2025-12-20,2026-02-18,owner,ok,outbound,yes,no
+L0462,Eichenservice AG,Germany,8,Former owner 1,yes,lost,,2025-08-06,,,,2025-06-24,owner,ok,partner,no,no
+L0463,Waldmarkt KG,Austria,90,Seller C,yes,lost,competitor,2025-03-07,2026-11-01,,,2025-03-14,owner,ok,event,no,no
+L0464,Klosterwerk GmbH,United Kingdom,150,Seller D,yes,lost,timing,2026-08-03,,,,2026-07-26,marketing,ok,partner,no,no
+L0465,Hafenpartner GmbH,Germany,15,Former owner 2,no,lost,competitor,2026-06-02,,case study,2026-07-06,2026-05-04,owner,opted out,partner,no,no
+L0466,Klosterstudio KG,Germany,25,Former owner 2,no,unqualified,,2025-06-30,,,,2025-07-16,office manager,ok,inbound demo request,no,no
+L0467,Klosterstudio AG,Switzerland,150,Former owner 2,no,lost,no opportunity,2025-09-03,,case study,2026-01-06,2025-08-13,marketing,ok,inbound demo request,no,no
+L0468,Klosterhaus KG,Germany,15,Former owner 1,no,lost,not icp,2025-11-21,,,,2025-12-14,office manager,opted out,outbound,no,no
+L0469,Flusspartner GmbH,Switzerland,40,Seller E,yes,lost,price,2025-03-29,,pricing page,2026-04-16,2025-03-20,owner,ok,partner,no,no
+L0470,Klosterhof AG,Germany,25,Seller D,yes,lost,no opportunity,2026-09-29,,newsletter click,2026-08-21,2026-08-22,owner,ok,event,no,no
+L0471,Bergpartner AG,Austria,8,Seller E,yes,lost,price,2025-11-21,,case study,2026-03-30,2025-12-10,managing director,ok,referral,no,no
+L0472,Sonnenplus KG,Germany,150,Seller A,yes,lost,,2026-01-16,,,,2025-12-24,office manager,ok,partner,no,no
+L0473,Hafenblick AG,Germany,25,Seller E,yes,lost,,2025-01-15,,newsletter click,2026-07-04,2025-02-08,owner,ok,partner,no,no
+L0474,Sonnenmarkt KG,Switzerland,40,Seller B,no,lost,competitor,2026-05-11,2027-10-26,webinar,2025-12-22,2026-03-25,marketing,ok,partner,no,no
+L0475,Alpenbau AG,Germany,60,Seller A,no,lost,not icp,2026-02-13,,pricing page,2026-05-10,2025-12-18,owner,ok,event,no,no
+L0476,Rosenservice KG,Germany,25,Seller E,no,lost,competitor,2026-05-27,,newsletter click,2026-06-15,2026-06-19,managing director,invalid,inbound demo request,no,no
+L0477,Klosterplus AG,Austria,8,Seller D,yes,lost,,2026-08-02,,pricing page,2026-09-09,2026-06-15,managing director,ok,inbound demo request,no,no
+L0478,Stadtwerk AG,Germany,90,Seller E,no,lost,no opportunity,2025-07-15,,pricing page,2026-10-08,2025-07-02,owner,ok,outbound,no,no
+L0479,Eichenhaus GmbH,Switzerland,90,Seller E,yes,lost,no answer,2025-07-26,,,,2025-07-21,managing director,ok,event,no,no
+L0480,Hafenblick GmbH & Co. KG,Austria,150,Former owner 2,yes,lost,price,2025-12-20,,,,2026-01-08,marketing,invalid,outbound,no,no
+L0481,Lindenhaus AG,Germany,90,Former owner 2,no,lost,,2025-10-07,,newsletter click,2026-06-14,2025-10-25,marketing,opted out,inbound demo request,yes,no
+L0482,Stadtplus GmbH,Germany,15,Seller C,no,lost,price,2025-02-17,,,,2024-12-29,managing director,ok,event,no,no
+L0483,Gartenmarkt GmbH & Co. KG,Austria,15,Former owner 2,no,lost,too small,2025-09-25,,webinar,2026-01-19,2025-08-01,owner,ok,referral,no,no
+L0484,Sonnenmarkt KG,United Kingdom,60,Seller E,yes,lost,,2025-03-07,,,,2025-03-20,marketing,ok,outbound,yes,no
+L0485,Sonnenpartner GmbH & Co. KG,Germany,15,Seller D,yes,lost,timing,2024-12-19,,,,2024-12-22,office manager,opted out,event,no,no
+L0486,Gartenhaus KG,Austria,60,Seller E,yes,lost,,2025-12-30,,case study,2026-06-23,2025-12-13,office manager,invalid,inbound demo request,no,no
+L0487,Stadtservice AG,Italy,60,Seller E,yes,lost,,2025-11-28,,pricing page,2026-04-29,2025-10-05,owner,ok,outbound,no,no
+L0488,Rosenmarkt AG,Switzerland,25,Seller E,no,lost,competitor,2025-04-26,2026-10-13,,,2025-04-21,managing director,ok,inbound demo request,no,no
+L0489,Gartenblick KG,Switzerland,25,Seller D,no,lost,too small,2025-10-31,,newsletter click,2026-03-28,2025-10-29,owner,invalid,partner,no,no
+L0490,Waldbau KG,Germany,150,Seller D,no,lost,timing,2025-10-25,,,,2025-11-23,owner,ok,event,no,no
+L0491,Alpenbau GmbH,Austria,8,Seller A,yes,lost,,2025-04-01,,,,2025-04-23,owner,opted out,event,no,no
+L0492,Eichenservice GmbH & Co. KG,Switzerland,60,Seller E,yes,lost,,2026-04-16,,pricing page,2026-02-22,2026-03-01,office manager,ok,event,no,no
+L0493,Flusshof KG,Switzerland,90,Seller D,yes,lost,timing,2026-03-31,,,,2026-03-20,office manager,ok,event,no,no
+L0494,Waldservice GmbH & Co. KG,Austria,40,Seller D,yes,lost,timing,2026-05-05,,newsletter click,2026-05-25,2026-05-27,owner,ok,partner,no,no
+L0495,Eichenmarkt KG,Germany,8,Seller C,no,lost,,2025-09-25,,,,2025-08-28,managing director,invalid,partner,no,no
+L0496,Flusspartner GmbH,Switzerland,150,Seller B,no,lost,price,2026-05-26,,newsletter click,2026-10-08,2026-06-07,owner,opted out,referral,no,no
+L0497,Rosenwerk GmbH,Germany,150,Seller B,no,lost,competitor,2026-08-27,,,,2026-06-29,managing director,ok,event,no,yes
+L0498,Bergstudio KG,Germany,15,Seller A,yes,lost,no opportunity,2026-03-26,,,,2026-03-22,owner,ok,referral,no,no
+L0499,Waldservice GmbH & Co. KG,Switzerland,60,Former owner 2,no,lost,no opportunity,2025-08-10,,pricing page,2026-05-07,2025-07-07,office manager,ok,outbound,no,no
+L0500,Lindenpartner AG,Switzerland,60,Seller C,yes,lost,,2025-11-07,,webinar,2026-06-23,2025-10-11,office manager,ok,partner,no,no
+L0501,Stadtblick AG,Austria,15,Former owner 1,yes,lost,price,2026-03-07,,event stand,2026-01-19,2026-03-01,marketing,ok,event,no,no
+L0502,Sonnenhof KG,Germany,60,Seller A,yes,lost,too small,2025-10-27,,,,2025-10-10,managing director,ok,partner,no,no
+L0503,Waldstudio KG,Germany,8,Seller C,yes,lost,not icp,2025-09-01,,,,2025-07-16,owner,ok,partner,no,no
+L0504,Sonnenbau GmbH,Austria,25,Seller B,yes,lost,timing,2025-07-10,,,,2025-05-19,owner,ok,inbound demo request,no,no
+L0505,Bergwerk KG,Switzerland,15,Seller D,yes,lost,,2025-01-17,,newsletter click,2026-02-09,2025-01-21,owner,ok,referral,no,no
+L0506,Sonnenstudio GmbH & Co. KG,United Kingdom,90,Seller D,yes,lost,chain,2025-09-30,,case study,2026-02-10,2025-08-29,marketing,ok,event,no,no
+L0507,Klosterblick GmbH,Germany,8,Seller E,no,lost,,2026-05-23,,webinar,2026-03-26,2026-04-01,owner,ok,partner,no,no
+L0508,Gartenplus AG,Germany,8,Seller B,no,lost,,2025-05-17,,,,2025-04-05,office manager,ok,event,no,no
+L0509,Gartenwerk GmbH,United Kingdom,25,Seller C,no,lost,,2025-07-05,,newsletter click,2026-07-14,2025-06-04,managing director,ok,inbound demo request,no,no
+L0510,Bergpartner AG,Germany,150,Seller B,yes,lost,no answer,2025-05-17,,webinar,2026-05-11,2025-03-27,owner,ok,referral,no,no
+L0511,Eichenpartner GmbH & Co. KG,Austria,40,Seller B,yes,lost,competitor,2026-04-18,2027-08-11,pricing page,2026-04-12,2026-02-24,office manager,ok,outbound,no,no
+L0512,Sonnenpartner AG,Switzerland,60,Seller D,no,lost,no opportunity,2026-08-17,,newsletter click,2026-08-26,2026-06-23,managing director,ok,inbound demo request,no,no
+L0513,Lindenwerk GmbH & Co. KG,Germany,25,Seller B,no,lost,,2026-01-14,,,,2025-12-01,managing director,opted out,referral,no,no
+L0514,Lindenbau AG,Austria,15,Seller A,no,unqualified,,2025-12-12,,,,2025-10-18,office manager,ok,referral,no,no
+L0515,Klosterblick KG,Italy,150,Seller D,no,lost,competitor,2025-06-06,2027-04-22,,,2025-04-25,owner,ok,partner,no,no
+L0516,Eichenservice AG,Germany,60,Seller A,yes,lost,,2026-01-31,,,,2025-12-12,owner,ok,referral,yes,no
+L0517,Rosenblick GmbH,Germany,40,Former owner 1,no,lost,,2026-06-04,,case study,2026-10-09,2026-04-16,marketing,ok,partner,no,no
+L0518,Alpenhof GmbH & Co. KG,Italy,40,Former owner 2,no,lost,no answer,2026-09-27,,newsletter click,2026-02-23,2026-08-09,owner,ok,outbound,no,no
+L0519,Eichenwerk GmbH & Co. KG,Germany,90,Seller E,no,lost,,2025-09-24,,case study,2026-08-04,2025-10-23,marketing,ok,partner,no,no
+L0520,Gartenplus GmbH,Germany,150,Seller D,no,lost,chain,2025-11-04,,webinar,2026-05-22,2025-09-05,managing director,ok,partner,no,no
+L0521,Sonnenplus AG,Germany,15,Former owner 1,no,lost,no answer,2024-11-30,,,,2024-12-10,managing director,ok,inbound demo request,no,no
+L0522,Alpenblick GmbH,Switzerland,40,Seller C,no,lost,timing,2025-11-08,,case study,2026-07-06,2025-11-30,office manager,ok,partner,no,no
+L0523,Eichenmarkt AG,Switzerland,150,Seller D,yes,lost,competitor,2025-03-10,2027-07-02,,,2025-01-20,office manager,ok,partner,no,no
+L0524,Alpenhaus GmbH,Germany,8,Former owner 1,yes,lost,price,2025-02-25,,,,2025-02-18,marketing,ok,inbound demo request,no,no
+L0525,Rosenwerk GmbH,Italy,40,Seller B,no,lost,timing,2026-05-01,,,,2026-05-05,managing director,opted out,inbound demo request,no,no
+L0526,Rosenbau GmbH,United Kingdom,60,Former owner 2,no,lost,not icp,2025-02-22,,webinar,2026-04-14,2025-02-23,marketing,ok,referral,no,no
+L0527,Sonnenblick AG,United Kingdom,150,Seller D,yes,lost,competitor,2026-01-27,,event stand,2026-05-09,2026-01-23,owner,ok,event,no,no
+L0528,Sonnenplus AG,United Kingdom,40,Seller B,yes,lost,,2026-08-15,,,,2026-07-05,office manager,ok,partner,no,no
+L0529,Bergservice GmbH & Co. KG,Austria,25,Seller E,no,lost,timing,2025-05-23,,pricing page,2026-06-29,2025-05-09,marketing,ok,event,no,no
+L0530,Hafenhof AG,Germany,60,Seller B,yes,lost,competitor,2025-11-22,,case study,2026-08-18,2025-10-24,owner,ok,inbound demo request,no,no
+L0531,Rosenhaus GmbH,United Kingdom,40,Seller C,no,unqualified,,2025-08-31,,newsletter click,2026-07-28,2025-08-30,managing director,ok,outbound,no,no
+L0532,Waldmarkt GmbH,Germany,40,Seller E,no,lost,,2025-07-10,,,,2025-06-13,marketing,ok,referral,no,no
+L0533,Lindenhof GmbH & Co. KG,Austria,150,Seller B,yes,lost,price,2026-10-04,,webinar,2026-06-21,2026-08-27,office manager,ok,partner,yes,no
+L0534,Gartenhaus KG,Italy,40,Seller A,yes,lost,too small,2026-05-25,,event stand,2026-06-24,2026-05-31,office manager,ok,outbound,no,no
+L0535,Hafenservice GmbH,Austria,8,Former owner 2,yes,lost,competitor,2026-02-01,2026-11-12,,,2025-12-23,office manager,ok,referral,no,no
+L0536,Hafenwerk GmbH,United Kingdom,90,Seller C,no,unqualified,,2025-08-26,,,,2025-08-01,office manager,ok,outbound,no,no
+L0537,Stadtplus GmbH & Co. KG,Italy,150,Seller C,no,lost,,2026-03-07,,,,2026-03-19,marketing,opted out,event,no,no
+L0538,Bergpartner KG,Switzerland,150,Seller A,no,unqualified,no answer,2025-08-12,,,,2025-06-14,marketing,ok,partner,no,yes
+L0539,Waldhaus GmbH & Co. KG,Germany,15,Seller D,no,lost,no opportunity,2026-07-18,,case study,2026-05-30,2026-07-04,marketing,ok,partner,no,no
+L0540,Gartenmarkt AG,Germany,8,Seller E,yes,lost,timing,2025-11-12,,,,2025-10-30,office manager,opted out,inbound demo request,no,no
+L0541,Waldstudio AG,United Kingdom,150,Seller C,yes,lost,not icp,2026-01-28,,pricing page,2026-07-26,2026-01-22,office manager,ok,partner,no,yes
+L0542,Gartenmarkt GmbH & Co. KG,Austria,60,Former owner 1,no,lost,no opportunity,2025-09-04,,newsletter click,2026-08-14,2025-08-25,owner,ok,outbound,no,no
+L0543,Eichenstudio KG,Germany,60,Seller B,no,lost,competitor,2025-01-06,,case study,2026-08-31,2025-01-03,managing director,ok,partner,no,no
+L0544,Rosenblick GmbH,Italy,8,Former owner 1,no,unqualified,,2026-06-08,,,,2026-05-18,owner,ok,event,no,no
+L0545,Klosterservice GmbH,Switzerland,40,Seller E,yes,lost,price,2025-08-04,,webinar,2026-03-04,2025-07-14,managing director,ok,partner,no,no
+L0546,Lindenservice AG,Germany,25,Seller C,no,lost,competitor,2026-06-05,,,,2026-06-10,owner,opted out,event,no,no
+L0547,Gartenservice GmbH,Switzerland,150,Former owner 2,no,lost,price,2024-12-19,,,,2024-12-03,marketing,ok,outbound,no,no
+L0548,Bergplus KG,Germany,150,Seller B,no,lost,timing,2025-04-24,,,,2025-03-15,managing director,ok,partner,no,no
+L0549,Waldservice KG,United Kingdom,90,Seller B,yes,lost,,2025-05-22,,pricing page,2026-01-20,2025-06-17,office manager,invalid,partner,no,no
+L0550,Eichenservice GmbH & Co. KG,Italy,25,Seller A,yes,lost,,2026-01-25,,case study,2026-05-26,2025-12-14,managing director,invalid,referral,no,no
+L0551,Stadtstudio GmbH,Germany,8,Seller E,yes,lost,competitor,2026-03-01,,webinar,2026-03-14,2026-02-21,office manager,ok,partner,no,no
+L0552,Waldbau AG,Germany,25,Seller B,no,lost,,2025-04-27,,case study,2026-05-29,2025-03-21,managing director,ok,event,no,no
+L0553,Waldservice AG,Switzerland,15,Seller A,yes,lost,,2024-12-13,,,,2024-12-21,marketing,ok,event,no,no
+L0554,Sonnenplus GmbH & Co. KG,Germany,15,Seller E,no,lost,,2025-09-11,,pricing page,2026-03-09,2025-08-07,marketing,ok,event,no,no
+L0555,Klosterhof GmbH,Germany,60,Seller D,no,lost,competitor,2026-09-04,2027-09-09,newsletter click,2026-07-18,2026-09-20,managing director,ok,event,no,no
+L0556,Stadtstudio AG,United Kingdom,60,Seller E,yes,lost,competitor,2025-09-28,,webinar,2026-08-08,2025-08-09,marketing,opted out,referral,yes,no
+L0557,Sonnenblick AG,Germany,60,Seller E,yes,lost,timing,2025-01-26,,,,2025-02-12,marketing,ok,event,no,no
+L0558,Klosterhaus GmbH,Austria,8,Seller C,yes,lost,too small,2026-07-25,,,,2026-07-28,owner,ok,referral,no,no
+L0559,Sonnenhaus GmbH & Co. KG,Austria,15,Seller B,yes,lost,too small,2026-05-22,,,,2026-04-07,owner,invalid,inbound demo request,no,no
+L0560,Waldservice GmbH & Co. KG,Germany,90,Former owner 1,yes,lost,competitor,2026-01-10,2026-11-16,newsletter click,2026-08-18,2026-01-15,marketing,invalid,partner,yes,no
+L0561,Lindenhaus AG,Italy,15,Seller B,no,lost,too small,2025-04-17,,,,2025-03-29,office manager,ok,partner,no,no
+L0562,Klosterplus GmbH,Germany,60,Seller B,yes,lost,,2025-01-25,,,,2025-01-30,managing director,ok,outbound,no,no
+L0563,Klosterpartner AG,Switzerland,8,Seller E,yes,lost,,2026-02-23,,,,2026-01-07,office manager,ok,inbound demo request,yes,no
+L0564,Alpenbau KG,Austria,90,Seller D,no,unqualified,,2025-02-03,,webinar,2026-08-29,2025-02-21,marketing,ok,partner,no,no
+L0565,Klosterservice KG,Germany,8,Seller E,yes,lost,price,2025-10-01,,,,2025-09-02,managing director,ok,inbound demo request,no,no
+L0566,Sonnenmarkt GmbH,Germany,15,Seller C,yes,lost,price,2024-11-16,,,,2024-10-26,office manager,ok,outbound,no,no
+L0567,Sonnenhaus GmbH,United Kingdom,15,Seller B,yes,lost,,2026-08-02,,event stand,2026-01-26,2026-06-13,owner,ok,event,no,no
+L0568,Bergplus GmbH & Co. KG,Germany,150,Seller E,yes,lost,timing,2026-02-18,,newsletter click,2026-09-15,2026-02-07,office manager,ok,inbound demo request,no,no
+L0569,Stadtmarkt AG,Switzerland,150,Seller B,no,lost,,2025-11-08,,pricing page,2026-06-21,2025-12-02,office manager,ok,inbound demo request,no,no
+L0570,Klosterwerk GmbH,Germany,25,Seller C,no,lost,,2026-04-18,,webinar,2026-05-24,2026-04-29,office manager,ok,event,no,no
+L0571,Stadtservice GmbH & Co. KG,Germany,90,Former owner 1,yes,lost,competitor,2025-04-28,,newsletter click,2026-04-02,2025-03-03,owner,ok,partner,no,no
+L0572,Gartenhof KG,Switzerland,8,Seller D,no,lost,,2025-10-08,,newsletter click,2026-01-21,2025-08-25,marketing,ok,outbound,no,no
+L0573,Waldplus AG,Italy,90,Seller A,yes,lost,chain,2025-01-10,,,,2024-11-26,owner,ok,outbound,no,no
+L0574,Stadtmarkt GmbH & Co. KG,Germany,8,Seller D,no,lost,no answer,2026-06-29,,webinar,2026-01-27,2026-06-01,managing director,ok,event,no,no
+L0575,Alpenwerk AG,Germany,150,Seller C,yes,lost,no opportunity,2026-09-18,,case study,2026-02-15,2026-07-29,office manager,ok,inbound demo request,no,no
+L0576,Gartenhof AG,Austria,40,Seller D,no,lost,competitor,2025-10-21,2027-09-12,pricing page,2026-08-13,2025-11-19,marketing,ok,inbound demo request,no,yes
+L0577,Waldservice AG,Germany,60,Seller E,yes,lost,,2026-09-28,,webinar,2026-09-07,2026-09-12,owner,ok,referral,no,no
+L0578,Lindenstudio KG,Germany,60,Seller A,no,lost,no opportunity,2025-05-23,,newsletter click,2026-05-09,2025-06-15,owner,ok,outbound,no,no
+L0579,Rosenblick GmbH,Germany,40,Seller A,no,lost,competitor,2026-07-09,,case study,2026-06-24,2026-07-18,marketing,ok,referral,no,no
+L0580,Bergpartner KG,Austria,8,Seller B,yes,lost,,2026-05-04,,newsletter click,2025-12-24,2026-05-29,office manager,ok,referral,no,no
+L0581,Lindenhof GmbH,Germany,40,Seller A,yes,lost,,2026-02-24,,,,2025-12-29,office manager,ok,inbound demo request,no,no
+L0582,Rosenmarkt GmbH & Co. KG,Switzerland,40,Seller B,yes,lost,no opportunity,2025-10-01,,newsletter click,2026-06-12,2025-10-10,office manager,opted out,inbound demo request,no,no
+L0583,Sonnenhaus GmbH & Co. KG,Italy,150,Former owner 1,yes,lost,,2025-09-19,,newsletter click,2026-04-22,2025-08-05,owner,ok,partner,no,no
+L0584,Hafenwerk GmbH,Switzerland,60,Seller B,no,lost,,2026-07-25,,webinar,2026-04-01,2026-08-15,owner,invalid,partner,no,no
+L0585,Eichenwerk GmbH,Germany,8,Seller B,no,lost,price,2025-11-25,,,,2025-12-08,owner,opted out,outbound,no,no
+L0586,Gartenpartner GmbH,Austria,150,Former owner 1,no,lost,no opportunity,2025-06-17,,,,2025-04-19,owner,ok,partner,no,no
+L0587,Gartenwerk GmbH & Co. KG,Switzerland,25,Seller B,no,lost,,2025-04-24,,pricing page,2026-05-10,2025-03-09,office manager,ok,partner,yes,no
+L0588,Rosenservice AG,Austria,25,Seller A,yes,lost,,2025-08-11,,case study,2026-09-12,2025-09-08,owner,ok,outbound,no,no
+L0589,Flussmarkt GmbH,Germany,15,Seller C,no,lost,no opportunity,2025-11-02,,,,2025-11-27,marketing,ok,inbound demo request,no,no
+L0590,Hafenstudio GmbH,Austria,40,Seller A,no,lost,not icp,2025-02-28,,,,2025-02-24,owner,ok,event,no,no
+L0591,Gartenwerk GmbH,Austria,60,Seller A,yes,lost,price,2025-09-29,,,,2025-08-17,office manager,opted out,outbound,no,no
+L0592,Waldhaus GmbH,Germany,90,Seller B,no,lost,competitor,2025-11-19,,event stand,2026-09-24,2025-10-14,office manager,ok,inbound demo request,no,no
+L0593,Bergwerk GmbH & Co. KG,Germany,150,Seller B,no,lost,,2026-06-21,,newsletter click,2026-08-30,2026-07-01,managing director,ok,referral,yes,no
+L0594,Klosterstudio AG,Switzerland,90,Former owner 1,no,lost,price,2026-04-20,,,,2026-03-17,managing director,ok,partner,no,no
+L0595,Rosenservice KG,Italy,150,Seller D,no,lost,,2026-01-27,,,,2025-12-20,marketing,ok,outbound,no,no
+L0596,Stadthof KG,Switzerland,60,Seller B,no,lost,,2026-06-16,,newsletter click,2026-08-29,2026-04-26,owner,ok,inbound demo request,no,no
+L0597,Hafenbau GmbH & Co. KG,Austria,25,Seller D,yes,lost,not icp,2026-08-14,,event stand,2026-08-08,2026-08-17,owner,ok,referral,no,no
+L0598,Stadthof GmbH,Switzerland,40,Seller B,yes,lost,,2024-11-17,,pricing page,2026-05-30,2024-11-28,owner,ok,referral,no,no
+L0599,Eichenhaus AG,Switzerland,60,Former owner 2,yes,lost,no opportunity,2024-11-24,,newsletter click,2026-07-30,2024-10-02,owner,invalid,referral,no,no
+L0600,Stadtblick GmbH & Co. KG,Germany,25,Seller D,yes,lost,price,2025-05-10,,webinar,2026-01-16,2025-05-13,marketing,ok,outbound,no,no
+L0601,Lindenwerk KG,Austria,8,Seller A,yes,lost,,2025-05-27,,,,2025-05-30,office manager,ok,event,no,no
+L0602,Rosenpartner AG,Germany,8,Seller D,no,lost,competitor,2026-01-26,2027-10-12,,,2026-01-19,marketing,ok,referral,no,no
+L0603,Waldbau AG,Germany,8,Seller A,no,lost,timing,2025-10-07,,case study,2026-10-04,2025-08-25,office manager,ok,inbound demo request,yes,no
+L0604,Gartenhaus GmbH & Co. KG,Germany,25,Seller C,yes,lost,timing,2025-12-17,,pricing page,2026-02-07,2025-12-05,owner,invalid,inbound demo request,no,no
+L0605,Alpenplus GmbH & Co. KG,Austria,90,Seller D,yes,lost,competitor,2025-09-23,,,,2025-10-07,owner,ok,outbound,no,no
+L0606,Gartenservice KG,Switzerland,25,Seller E,yes,lost,no opportunity,2026-06-05,,,,2026-06-06,owner,ok,outbound,no,no
+L0607,Flusspartner AG,Germany,60,Seller C,yes,lost,timing,2025-04-06,,webinar,2026-09-13,2025-04-24,marketing,ok,referral,no,no
+L0608,Stadtblick AG,Austria,8,Seller C,no,unqualified,competitor,2026-09-23,2026-10-28,webinar,2026-03-16,2026-08-31,marketing,ok,partner,no,no
+L0609,Hafenservice AG,Switzerland,90,Seller A,yes,lost,not icp,2025-05-07,,,,2025-03-14,office manager,ok,partner,no,no
+L0610,Alpenplus GmbH,Germany,60,Seller C,no,lost,timing,2025-02-11,,newsletter click,2026-01-20,2025-02-27,office manager,ok,inbound demo request,no,no
+L0611,Gartenhof AG,Austria,15,Seller E,yes,lost,competitor,2026-01-18,2026-12-27,,,2025-11-26,marketing,opted out,referral,no,no
+L0612,Berghaus AG,Germany,90,Seller B,no,lost,,2025-01-15,,,,2024-12-17,owner,ok,inbound demo request,no,no
+L0613,Lindenservice AG,Austria,25,Seller E,yes,lost,,2026-02-07,,case study,2026-06-04,2026-02-03,owner,ok,referral,no,no
+L0614,Klosterplus AG,Germany,90,Seller D,no,lost,,2025-02-06,,case study,2026-03-13,2025-01-31,marketing,ok,partner,no,no
+L0615,Alpenblick GmbH & Co. KG,Austria,25,Former owner 1,no,lost,,2026-03-01,,,,2026-02-05,owner,ok,inbound demo request,no,no
+L0616,Sonnenstudio AG,Germany,25,Seller B,yes,lost,timing,2025-12-14,,,,2025-12-16,office manager,ok,referral,no,no
+L0617,Waldstudio GmbH,Germany,8,Seller A,yes,lost,price,2026-03-02,,pricing page,2026-02-18,2026-03-22,owner,ok,partner,yes,no
+L0618,Alpenstudio KG,Germany,15,Former owner 1,yes,lost,timing,2026-03-09,,pricing page,2026-08-01,2026-02-26,office manager,ok,referral,no,no
+L0619,Sonnenblick GmbH,Germany,8,Seller E,yes,lost,no opportunity,2025-07-03,,,,2025-05-26,managing director,ok,event,no,no
+L0620,Alpenwerk KG,Germany,60,Seller D,no,lost,no opportunity,2025-12-09,,case study,2026-04-22,2025-12-06,owner,ok,outbound,no,no
+L0621,Alpenblick GmbH,Germany,150,Former owner 1,no,lost,no answer,2025-08-16,,pricing page,2026-06-03,2025-07-11,owner,ok,partner,no,no
+L0622,Lindenbau AG,Germany,25,Seller B,no,lost,,2026-09-13,,,,2026-08-27,office manager,ok,partner,no,no
+L0623,Hafenhof AG,Germany,150,Seller B,no,lost,price,2026-02-17,,webinar,2026-01-31,2025-12-31,marketing,ok,outbound,no,no
+L0624,Lindenwerk GmbH,Germany,90,Seller E,yes,lost,,2025-02-28,,pricing page,2026-10-09,2025-02-04,marketing,ok,referral,no,no
+L0625,Flussstudio GmbH & Co. KG,Switzerland,25,Former owner 1,no,lost,no answer,2025-12-16,,newsletter click,2026-04-23,2025-11-16,owner,ok,referral,no,no
+L0626,Bergmarkt GmbH,Germany,90,Seller C,yes,lost,competitor,2025-10-20,2027-04-22,,,2025-08-31,owner,ok,inbound demo request,no,no
+L0627,Flussmarkt GmbH & Co. KG,Switzerland,90,Former owner 2,yes,lost,,2026-06-30,,,,2026-05-11,office manager,ok,partner,no,no
+L0628,Alpenstudio AG,Austria,40,Seller E,no,lost,,2025-03-10,,,,2025-02-28,office manager,ok,event,no,no
+L0629,Hafenbau GmbH & Co. KG,Germany,8,Seller D,no,unqualified,competitor,2025-06-12,,newsletter click,2026-05-14,2025-05-17,managing director,ok,referral,no,no
+L0630,Lindenblick KG,Switzerland,150,Seller B,yes,lost,price,2026-06-09,,case study,2026-03-31,2026-04-19,managing director,ok,partner,no,no
+L0631,Stadtmarkt GmbH,Germany,40,Seller A,yes,lost,competitor,2025-08-09,2027-07-16,webinar,2026-06-28,2025-07-14,owner,ok,event,no,no
+L0632,Stadtservice KG,Germany,8,Seller D,no,lost,no opportunity,2025-10-24,,,,2025-11-11,marketing,ok,event,no,no
+L0633,Alpenservice GmbH,Switzerland,8,Seller C,yes,lost,,2025-04-27,,newsletter click,2026-04-01,2025-03-03,office manager,ok,partner,no,no
+L0634,Lindenplus GmbH,Austria,150,Seller C,yes,lost,,2026-05-02,,newsletter click,2025-12-28,2026-05-05,owner,opted out,inbound demo request,no,no
+L0635,Bergstudio GmbH & Co. KG,United Kingdom,15,Seller B,yes,lost,competitor,2026-02-12,2026-11-13,event stand,2026-01-03,2026-02-11,owner,opted out,outbound,no,no
+L0636,Hafenmarkt GmbH,Switzerland,15,Seller C,no,lost,price,2025-05-08,,webinar,2026-05-26,2025-04-17,office manager,ok,outbound,no,no
+L0637,Waldplus KG,Germany,150,Seller A,no,lost,timing,2025-05-08,,,,2025-04-19,managing director,ok,event,no,no
+L0638,Hafenplus GmbH & Co. KG,Germany,90,Seller E,no,lost,no answer,2025-02-01,,,,2025-02-18,owner,ok,event,no,no
+L0639,Flusshaus GmbH & Co. KG,Germany,8,Seller C,yes,lost,no answer,2026-09-12,,,,2026-10-07,marketing,ok,inbound demo request,no,yes
+L0640,Eichenhof KG,Switzerland,90,Seller B,no,lost,competitor,2025-02-22,2027-09-24,newsletter click,2026-10-03,2025-02-10,managing director,ok,inbound demo request,no,no
+L0641,Lindenstudio AG,Germany,60,Seller E,yes,lost,not icp,2024-12-18,,webinar,2026-03-22,2025-01-01,marketing,ok,event,no,no
+L0642,Flussblick GmbH & Co. KG,Germany,40,Seller A,yes,lost,no answer,2026-08-17,,,,2026-07-23,managing director,ok,partner,no,no
+L0643,Flussservice AG,Switzerland,25,Former owner 1,yes,lost,timing,2025-11-27,,,,2025-11-17,owner,ok,inbound demo request,yes,no
+L0644,Rosenservice AG,Germany,8,Former owner 2,yes,lost,price,2024-11-27,,pricing page,2026-02-21,2024-09-28,managing director,ok,partner,no,no
+L0645,Flussplus GmbH & Co. KG,Switzerland,15,Seller C,yes,lost,chain,2026-07-05,,case study,2026-01-25,2026-05-23,owner,ok,partner,no,no
+L0646,Gartenhof KG,Germany,60,Former owner 1,no,lost,price,2026-05-24,,,,2026-03-29,marketing,ok,event,no,no
+L0647,Lindenbau AG,Austria,40,Seller E,no,lost,,2025-05-12,,,,2025-05-19,managing director,ok,inbound demo request,no,no
+L0648,Eichenmarkt AG,Germany,8,Seller C,yes,lost,,2025-01-24,,webinar,2026-07-29,2025-01-15,office manager,ok,referral,no,no
+L0649,Klosterplus AG,Germany,90,Seller D,no,lost,,2026-05-27,,newsletter click,2026-09-14,2026-06-10,marketing,ok,outbound,no,no
+L0650,Sonnenmarkt AG,Germany,40,Former owner 2,yes,lost,,2025-11-02,,,,2025-11-30,owner,ok,event,no,no
+L0651,Bergbau GmbH & Co. KG,Germany,40,Seller C,no,lost,chain,2025-06-27,,,,2025-06-07,owner,ok,event,no,no
+L0652,Rosenbau GmbH,Switzerland,8,Seller C,yes,lost,no answer,2026-08-08,,,,2026-08-06,managing director,ok,partner,no,no
+L0653,Alpenpartner AG,Germany,90,Former owner 1,yes,lost,no opportunity,2026-06-06,,pricing page,2026-01-28,2026-07-03,marketing,ok,event,no,no
+L0654,Eichenblick AG,Austria,150,Seller C,no,lost,,2025-05-27,,,,2025-04-26,office manager,invalid,event,no,no
+L0655,Gartenhof GmbH & Co. KG,Germany,150,Former owner 2,yes,lost,price,2025-10-12,,newsletter click,2026-09-23,2025-11-07,marketing,ok,referral,no,no
+L0656,Lindenhof GmbH & Co. KG,Switzerland,8,Seller C,no,lost,competitor,2025-12-20,2026-09-12,newsletter click,2026-02-13,2025-12-02,owner,ok,outbound,yes,no
+L0657,Sonnenplus GmbH,Austria,150,Seller B,yes,lost,,2025-04-09,,,,2025-04-28,office manager,ok,outbound,no,no
+L0658,Sonnenmarkt GmbH & Co. KG,Germany,8,Seller A,yes,lost,price,2025-03-29,,pricing page,2026-08-13,2025-03-06,owner,ok,outbound,no,no
+L0659,Eichenhaus AG,Germany,150,Seller D,yes,lost,no opportunity,2026-05-28,,webinar,2026-05-08,2026-06-24,office manager,ok,inbound demo request,no,no
+L0660,Bergstudio KG,Germany,15,Seller A,no,lost,no answer,2025-01-05,,event stand,2026-02-28,2025-01-23,office manager,ok,inbound demo request,no,no
+L0661,Flusswerk GmbH,Germany,60,Seller B,no,lost,,2026-03-18,,newsletter click,2026-05-20,2026-02-21,managing director,ok,event,no,no
+L0662,Rosenhof GmbH,Austria,90,Seller C,no,lost,timing,2025-08-15,,newsletter click,2026-09-23,2025-09-05,office manager,ok,referral,no,no
+L0663,Waldhaus KG,Germany,40,Seller A,yes,lost,,2026-01-08,,,,2026-01-28,office manager,ok,event,no,no
+L0664,Hafenstudio KG,Germany,8,Seller A,no,lost,,2026-02-21,,,,2026-02-06,managing director,ok,event,no,no
+L0665,Rosenblick GmbH,Germany,90,Seller A,no,unqualified,,2025-11-19,,,,2025-12-19,office manager,ok,event,no,no
+L0666,Stadtwerk KG,Austria,60,Seller D,no,lost,not icp,2025-07-11,,event stand,2026-09-26,2025-06-17,managing director,ok,referral,yes,no
+L0667,Gartenplus GmbH,Austria,40,Former owner 2,no,lost,competitor,2026-04-04,2027-10-12,webinar,2026-01-17,2026-03-28,marketing,ok,outbound,no,no
+L0668,Klosterbau KG,Austria,40,Former owner 1,yes,lost,,2025-12-10,,pricing page,2026-01-20,2025-11-12,owner,ok,outbound,no,no
+L0669,Waldwerk GmbH,Germany,150,Seller B,yes,lost,,2025-07-20,,,,2025-08-15,owner,ok,event,no,no
+L0670,Flusswerk AG,Italy,60,Seller C,yes,lost,no answer,2025-07-07,,pricing page,2026-04-15,2025-07-27,marketing,ok,event,no,no
+L0671,Lindenbau GmbH & Co. KG,Austria,15,Former owner 1,yes,lost,price,2025-05-19,,,,2025-05-13,owner,ok,referral,no,no
+L0672,Berghof GmbH,Austria,15,Former owner 2,yes,lost,price,2026-04-13,,newsletter click,2026-06-23,2026-03-13,office manager,ok,partner,no,no
+L0673,Lindenhaus AG,Germany,25,Seller B,yes,lost,chain,2025-11-06,,,,2025-12-01,managing director,ok,partner,no,no
+L0674,Waldmarkt GmbH & Co. KG,Germany,40,Seller C,no,lost,,2025-01-14,,newsletter click,2026-09-05,2024-11-30,marketing,ok,outbound,no,no
+L0675,Klosterwerk AG,Germany,25,Former owner 2,no,lost,no opportunity,2025-09-25,,,,2025-10-06,owner,ok,referral,no,no
+L0676,Alpenblick AG,Germany,40,Seller D,no,lost,,2026-05-02,,case study,2026-05-18,2026-03-26,owner,ok,inbound demo request,no,no
+L0677,Bergblick KG,Germany,25,Former owner 2,yes,lost,,2026-04-09,,webinar,2026-02-11,2026-04-10,owner,ok,referral,yes,no
+L0678,Lindenstudio KG,Germany,150,Seller D,no,lost,price,2026-09-07,,,,2026-08-03,marketing,ok,event,no,no
+L0679,Gartenservice GmbH,Germany,15,Seller A,no,lost,no answer,2024-12-15,,pricing page,2026-06-30,2024-11-23,marketing,ok,event,no,no
+L0680,Rosenmarkt AG,Germany,40,Seller D,yes,lost,no opportunity,2026-04-10,,case study,2026-06-02,2026-03-15,marketing,ok,referral,no,no
+L0681,Eichenservice GmbH,United Kingdom,90,Seller B,yes,lost,timing,2025-08-28,,pricing page,2026-03-10,2025-08-12,marketing,invalid,referral,yes,no
+L0682,Lindenwerk AG,Germany,90,Seller E,yes,lost,no opportunity,2026-05-16,,,,2026-05-30,owner,ok,partner,no,no
+L0683,Stadtstudio GmbH & Co. KG,Germany,8,Seller B,yes,lost,,2025-08-09,,,,2025-07-26,owner,ok,event,no,no
+L0684,Waldblick AG,Germany,8,Seller D,yes,lost,timing,2026-02-24,,,,2026-01-27,managing director,ok,outbound,no,no
+L0685,Flusswerk KG,Germany,8,Former owner 1,no,lost,,2025-11-13,,pricing page,2026-05-09,2025-09-18,office manager,ok,event,no,no
+L0686,Flusshaus GmbH & Co. KG,United Kingdom,8,Former owner 2,yes,lost,price,2024-11-20,,,,2024-10-03,marketing,ok,referral,yes,no
+L0687,Alpenstudio KG,Germany,90,Former owner 1,yes,lost,competitor,2026-07-23,2027-05-02,,,2026-08-17,owner,ok,partner,no,no
+L0688,Flusshof GmbH,United Kingdom,25,Former owner 2,yes,lost,price,2024-12-24,,pricing page,2026-09-23,2024-10-25,owner,ok,outbound,no,no
+L0689,Klosterpartner AG,Germany,40,Seller E,yes,lost,competitor,2025-07-17,2027-05-24,,,2025-05-24,marketing,ok,outbound,no,no
+L0690,Gartenwerk GmbH,Germany,15,Seller B,no,lost,timing,2025-04-24,,,,2025-04-06,office manager,ok,event,no,no
+L0691,Stadthaus GmbH & Co. KG,Germany,150,Seller E,no,lost,no opportunity,2024-12-29,,,,2024-11-09,owner,ok,event,no,no
+L0692,Rosenbau KG,Austria,150,Seller B,no,unqualified,,2026-06-11,,,,2026-04-25,managing director,ok,partner,no,no
+L0693,Bergservice GmbH & Co. KG,Germany,15,Seller D,yes,lost,price,2025-07-26,,pricing page,2026-01-14,2025-07-27,owner,ok,partner,no,no
+L0694,Stadtmarkt GmbH & Co. KG,Austria,8,Seller D,no,lost,,2025-09-17,,,,2025-10-08,owner,ok,event,no,no
+L0695,Rosenservice KG,United Kingdom,40,Seller C,no,lost,no answer,2025-02-25,,newsletter click,2026-02-14,2025-02-13,owner,opted out,referral,yes,no
+L0696,Waldblick AG,Germany,60,Seller B,no,lost,too small,2025-10-23,,,,2025-10-17,managing director,ok,event,no,no
+L0697,Rosenplus AG,Germany,15,Seller C,yes,lost,too small,2026-03-18,,newsletter click,2025-12-24,2026-03-14,owner,ok,outbound,yes,no
+L0698,Bergservice AG,Austria,25,Seller A,yes,lost,competitor,2026-03-26,,,,2026-03-04,owner,ok,referral,no,no
+L0699,Klosterservice GmbH,Germany,40,Former owner 2,no,lost,,2025-08-05,,,,2025-07-12,owner,ok,outbound,no,no
+L0700,Hafenwerk AG,Germany,90,Seller B,yes,lost,,2025-07-13,,,,2025-06-22,owner,ok,outbound,no,no
+L0701,Rosenblick Gmbh,Switzerland,25,Seller B,yes,lost,no answer,2026-01-08,,,,2025-12-20,marketing,opted out,referral,no,no
+L0702,Hafenmarkt AG,Germany,15,Seller A,yes,lost,price,2026-08-07,,newsletter click,2026-08-09,2026-09-04,office manager,ok,referral,no,no
+L0703,Gartenmarkt KG,Austria,25,Former owner 1,yes,lost,timing,2025-02-14,,newsletter click,2025-12-19,2025-01-31,owner,ok,event,no,no
+L0704,Lindenwerk Gmbh,Germany,90,Former owner 2,no,lost,,2026-08-09,,,,2026-06-21,marketing,ok,event,no,no
+L0705,Klosterservice AG,Germany,40,Seller D,no,lost,,2025-04-25,,event stand,2026-03-22,2025-05-15,owner,ok,inbound demo request,no,no
+L0706,Waldplus GmbH,Germany,60,Seller B,no,unqualified,competitor,2026-06-28,,,,2026-05-26,office manager,ok,inbound demo request,no,no
+L0707,Sonnenmarkt KG,United Kingdom,90,Seller C,yes,lost,price,2025-11-15,,,,2025-12-13,office manager,ok,partner,yes,no
+L0708,Gartenblick AG,Germany,8,Seller B,no,lost,,2024-11-13,,,,2024-10-08,marketing,ok,referral,no,no
+L0709,Waldbau GmbH & Co. KG,Germany,90,Seller E,no,lost,,2025-08-22,,pricing page,2026-06-17,2025-08-30,marketing,ok,referral,no,no
+L0710,Gartenhaus Gmbh,Switzerland,15,Seller D,no,lost,,2026-08-11,,case study,2026-04-15,2026-08-05,owner,opted out,outbound,no,no
+L0711,Klosterwerk GmbH & Co. KG,Switzerland,150,Seller C,no,lost,competitor,2026-09-28,,newsletter click,2026-01-17,2026-08-13,owner,ok,referral,yes,no
+L0712,Klosterhaus AG,Germany,60,Seller D,yes,lost,competitor,2026-06-04,2027-03-24,,,2026-05-10,managing director,ok,partner,no,no
+L0713,Stadtstudio GmbH & Co. KG,Austria,40,Seller D,no,unqualified,no opportunity,2026-02-09,,,,2025-12-28,owner,ok,partner,no,no
+L0714,Waldblick KG,Germany,25,Seller B,yes,lost,,2026-07-28,,pricing page,2026-04-10,2026-07-09,office manager,ok,event,no,no
+L0715,Rosenhof AG,Austria,15,Seller B,no,lost,,2025-04-18,,,,2025-04-14,office manager,ok,event,yes,no
+L0716,Klosterwerk GmbH,Germany,90,Former owner 2,no,lost,,2026-09-26,,webinar,2026-05-24,2026-09-06,office manager,ok,outbound,no,no
+L0717,Eichenbau AG,Germany,8,Seller D,no,lost,,2025-12-09,,,,2025-11-13,managing director,ok,event,no,no
+L0718,Waldblick AG,Germany,8,Seller B,no,lost,,2025-02-13,,webinar,2026-03-02,2024-12-15,owner,ok,partner,no,no
+L0719,Waldhaus KG,Germany,40,Seller D,no,lost,,2025-12-10,,,,2025-11-14,owner,ok,inbound demo request,no,no
+L0720,Lindenhof AG,Switzerland,15,Seller C,no,lost,price,2026-02-22,,pricing page,2025-12-22,2026-01-21,office manager,ok,outbound,no,no
+L0721,Alpenstudio AG,Germany,150,Seller C,no,lost,,2026-08-13,,case study,2026-06-18,2026-07-06,office manager,ok,inbound demo request,no,no
+L0722,Hafenstudio AG,Germany,8,Former owner 1,no,lost,,2025-04-22,,,,2025-03-29,office manager,ok,partner,no,no
+L0723,Alpenbau GmbH,Germany,150,Seller E,yes,lost,competitor,2024-12-25,2027-04-22,,,2024-12-06,owner,ok,event,no,no
+L0724,Klosterplus Gmbh,Germany,60,Seller E,no,lost,too small,2026-05-12,,pricing page,2026-08-10,2026-04-17,owner,invalid,referral,no,no
+L0725,Stadthof AG,Germany,8,Seller A,yes,lost,competitor,2026-07-08,,pricing page,2026-06-11,2026-07-21,managing director,ok,outbound,no,no
+L0726,Flusspartner AG,Germany,60,Seller E,no,lost,,2026-08-11,,,,2026-09-05,managing director,ok,partner,no,no
+L0727,Eichenpartner Gmbh,Switzerland,60,Seller C,yes,lost,timing,2025-10-25,,newsletter click,2026-01-15,2025-08-29,office manager,ok,referral,no,no
+L0728,Klosterpartner GmbH & Co. KG,Austria,25,Seller E,yes,lost,price,2025-04-28,,pricing page,2026-04-15,2025-03-05,managing director,ok,referral,no,no
+L0729,Klostermarkt Gmbh & Co. KG,Germany,15,Seller A,no,lost,timing,2025-02-14,,,,2025-01-06,owner,invalid,inbound demo request,no,no
+L0730,Sonnenwerk GmbH & Co. KG,Italy,90,Former owner 1,no,lost,,2025-10-24,,newsletter click,2026-08-07,2025-11-19,marketing,ok,event,no,no
+L0731,Berghof GmbH & Co. KG,United Kingdom,90,Seller B,yes,lost,chain,2024-12-07,,,,2024-11-09,owner,ok,inbound demo request,no,no
+L0732,Sonnenpartner KG,Italy,90,Seller B,no,lost,,2025-09-07,,,,2025-07-18,owner,ok,partner,no,no
+L0733,Alpenhof KG,Germany,60,Seller E,yes,lost,,2025-11-13,,newsletter click,2026-01-11,2025-10-23,office manager,ok,partner,no,no
+L0734,Hafenwerk GmbH,Germany,40,Seller B,yes,lost,timing,2026-03-18,,pricing page,2026-03-20,2026-04-13,owner,ok,partner,no,no
+L0735,Stadtbau AG,Switzerland,8,Seller C,no,lost,not icp,2025-04-19,,newsletter click,2026-03-23,2025-04-24,owner,ok,referral,no,no
+L0736,Flussblick KG,Germany,15,Seller D,no,lost,,2025-01-23,,pricing page,2026-09-08,2025-01-13,owner,ok,partner,no,no
+L0737,Eichenplus GmbH,Germany,60,Former owner 1,yes,lost,no opportunity,2026-02-04,,case study,2026-03-09,2026-02-14,marketing,ok,outbound,no,no
+L0738,Waldhaus Gmbh,Germany,25,Former owner 1,no,lost,competitor,2025-10-21,2027-10-14,event stand,2026-03-24,2025-09-30,owner,ok,referral,no,no
+L0739,Alpenpartner AG,Switzerland,8,Seller E,yes,lost,competitor,2025-01-18,2027-04-27,event stand,2026-01-09,2025-02-03,owner,ok,partner,no,no
+L0740,Hafenblick Gmbh & Co. KG,Germany,8,Seller A,no,lost,timing,2025-11-25,,newsletter click,2026-08-30,2025-10-12,owner,ok,event,no,no
+L0741,Waldplus KG,Austria,25,Seller A,no,lost,no opportunity,2024-12-21,,case study,2026-06-29,2025-01-07,office manager,ok,outbound,no,no
+L0742,Hafenmarkt GmbH,Italy,150,Seller B,no,lost,competitor,2025-11-10,2026-10-10,pricing page,2025-12-20,2025-11-13,marketing,ok,outbound,no,no
+L0743,Alpenblick GmbH,Italy,90,Seller E,no,lost,no opportunity,2026-08-28,,,,2026-09-21,owner,invalid,event,no,no
+L0744,Rosenplus Gmbh & Co. KG,Germany,25,Seller D,no,lost,competitor,2026-02-03,,,,2026-02-06,marketing,ok,inbound demo request,no,no
+L0745,Rosenpartner GmbH & Co. KG,Germany,8,Former owner 1,yes,lost,,2026-05-16,,case study,2026-07-07,2026-05-15,office manager,ok,partner,no,no
+L0746,Eichenblick AG,Germany,60,Seller A,yes,lost,,2026-08-09,,,,2026-07-14,owner,ok,referral,no,no
+L0747,Alpenpartner Gmbh,United Kingdom,40,Seller D,no,lost,competitor,2026-02-10,,,,2026-01-21,owner,ok,outbound,no,no
+L0748,Gartenmarkt GmbH,Germany,8,Seller A,no,lost,competitor,2025-12-06,,,,2025-12-30,marketing,ok,inbound demo request,no,no
+L0749,Rosenmarkt AG,Switzerland,25,Seller A,no,lost,no answer,2026-03-26,,newsletter click,2026-02-01,2026-04-23,owner,ok,event,no,no
+L0750,Berghaus GmbH,Germany,25,Seller A,no,lost,no answer,2026-09-04,,case study,2026-02-24,2026-07-30,marketing,ok,event,no,no
+L0751,Sonnenhaus Gmbh & Co. KG,Italy,150,Seller B,yes,lost,chain,2025-02-13,,pricing page,2026-04-21,2024-12-26,managing director,ok,event,no,no
+L0752,Waldhaus GmbH,Germany,15,Seller C,no,lost,,2025-08-28,,event stand,2026-01-26,2025-09-06,owner,opted out,partner,no,no
+L0753,Klostermarkt Gmbh & Co. KG,United Kingdom,90,Seller C,no,lost,,2025-02-06,,webinar,2026-01-04,2025-01-26,owner,ok,event,yes,no
+L0754,Stadtpartner Gmbh & Co. KG,Switzerland,90,Seller C,yes,lost,price,2025-05-27,,pricing page,2026-08-12,2025-06-01,owner,ok,outbound,no,no
+L0755,Bergbau GmbH,Switzerland,25,Seller E,no,unqualified,,2026-06-28,,case study,2026-01-30,2026-05-03,office manager,ok,outbound,no,no
+L0756,Klosterhaus GmbH & Co. KG,Switzerland,40,Former owner 2,no,lost,,2025-06-19,,pricing page,2026-01-20,2025-07-02,marketing,ok,outbound,no,no
+L0757,Eichenservice GmbH,Austria,150,Seller E,no,lost,timing,2026-05-05,,,,2026-05-15,owner,invalid,partner,no,no
+L0758,Eichenstudio KG,Germany,60,Seller E,yes,lost,,2026-08-08,,,,2026-09-07,marketing,opted out,event,no,no
+L0759,Bergblick KG,Italy,150,Seller E,yes,lost,timing,2025-07-09,,,,2025-05-29,managing director,ok,inbound demo request,no,no
+L0760,Gartenhaus KG,Italy,15,Seller D,yes,lost,,2025-08-28,,,,2025-07-03,owner,ok,inbound demo request,no,no

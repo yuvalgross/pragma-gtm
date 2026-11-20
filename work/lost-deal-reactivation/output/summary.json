@@ -1,0 +1,85 @@
+{
+  "accounts": 760,
+  "groups": {
+    "Call first: saw a demo, reason to talk": 119,
+    "Call first: no demo, reason to talk": 116,
+    "Call next: saw a demo, no reason yet": 85,
+    "Email first: no demo, no reason yet": 90,
+    "Wait: lost under 90 days ago": 39,
+    "Wait: competitor contract runs over 6 months": 23,
+    "Ask the seller": 27,
+    "Leave out": 261
+  },
+  "call_first": 235,
+  "reasons_in_call_first": {
+    "competitor contract ends recently": 4,
+    "lost on timing": 74,
+    "lost on no answer": 42,
+    "pricing page": 59,
+    "webinar": 35,
+    "case study": 36,
+    "event stand": 16,
+    "competitor contract ends soon": 14
+  },
+  "call_first_no_contact_11_months": 150,
+  "owner_left_reassigned": 47,
+  "top40": {
+    "sellers": {
+      "Seller A": 5,
+      "Seller B": 5,
+      "Seller C": 5,
+      "Seller D": 5,
+      "Seller E": 5
+    },
+    "appointment_setting": 15,
+    "decision_maker_contacts": 39
+  },
+  "probable_duplicate_groups": 45,
+  "email_first_sendable": 74,
+  "empty_lost_reason": 245,
+  "impact_quarter_1": {
+    "demos": [
+      18,
+      36
+    ],
+    "deals": [
+      6,
+      10
+    ],
+    "new_mrr_eur": [
+      8200,
+      16500
+    ],
+    "call_next": [
+      8,
+      3,
+      4000
+    ],
+    "assumed": {
+      "seller_demo_rate_low": 0.1,
+      "seller_demo_rate_high": 0.2,
+      "setting_demo_rate_low": 0.05,
+      "setting_demo_rate_high": 0.1,
+      "next_demo_rate": 0.1,
+      "win_rate": 0.3,
+      "mrr_per_deal": 1550
+    }
+  },
+  "checks": {
+    "one group per account": true,
+    "no account on two lists": true,
+    "no seller over 5": true,
+    "appointment setting at most 15": true,
+    "no excluded market, key account or customer": true,
+    "no clear no": true,
+    "sellers saw a demo, setters did not": true,
+    "no opted out or invalid contact on the email list": true,
+    "nobody from last week": true
+  },
+  "settings": {
+    "today": "2026-10-14",
+    "wait_days_after_loss": 90,
+    "contract_window_days": 183,
+    "interest_days": 365
+  }
+}
