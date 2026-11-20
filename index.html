@@ -4338,19 +4338,6 @@ html.legal-open { overflow: hidden; }
 }
 :root .logo-marquee .logo-item svg.logo-badge { width: 28px; height: 28px; flex-shrink: 0; }
 
-/* Stack grouped by layer */
-.stack-layers{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.stack-layer{background:var(--paper);border:1px solid var(--border);border-radius:16px;padding:1rem 1.1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem}
-.stack-layer-head{display:flex;align-items:baseline;gap:.6rem}
-.stack-layer-n{font-size:.72rem;font-weight:600;letter-spacing:.14em;color:var(--accent-dark)}
-.stack-layer-title{margin:0;font-family:var(--font-display);font-weight:400;font-size:1.35rem;line-height:1.15;color:var(--ink)}
-.stack-layer-sub{margin:0 0 .4rem;font-size:.88rem;color:var(--ink-muted)}
-.stack-layer-tools{display:flex;flex-wrap:wrap;gap:6px}
-.stack-layer-tools .logo-item{margin:0;padding:.4rem .7rem;border-radius:10px;gap:7px;cursor:pointer;text-decoration:none}
-.stack-layer-tools .logo-item img,.stack-layer-tools .logo-item svg{width:20px;height:20px}
-.stack-layer-tools .logo-item-name{font-size:.82rem}
-@media (max-width:900px){.stack-layers{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:600px){.stack-layers{grid-template-columns:1fr;padding:0 1rem}}
 
 .work-own{margin:.1rem 0 .2rem;display:grid;gap:.25rem;font-size:.8rem;line-height:1.4;color:var(--ink-muted)}
 .work-own b{display:block;font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dark)}
@@ -4953,65 +4940,22 @@ html.legal-open { overflow: hidden; }
   </div>
 </div>
 
-<div class="logo-grid-section stack-layers-section" id="stack-layers">
-  <div class="logo-grid-label">The stack, by layer: tools I have built with</div>
-  <div class="stack-layers">
-  <div class="stack-layer">
-    <div class="stack-layer-head"><span class="stack-layer-n">01</span><h3 class="stack-layer-title">Signals and data</h3></div>
-    <p class="stack-layer-sub">Find the account at the right moment</p>
-    <div class="stack-layer-tools">
-      <a class="logo-item" href="https://theirstack.com/" target="_blank" rel="noopener noreferrer" data-tool="TheirStack" data-tip="Hiring and technology signals." aria-label="TheirStack: Hiring and technology signals. Opens in a new tab.">
-        <img decoding="async" src="/logos/theirstack.png" alt="TheirStack logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">TheirStack</span>
+<div class="logo-grid-section">
+  <div class="logo-grid-label">The full stack: tools I have built with</div>
+  <div class="logo-marquee-wrap">
+    <div class="logo-marquee">
+      <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-label="HubSpot: The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified. Opens in a new tab.">
+        <img decoding="async" src="/logos/hubspot.png" alt="HubSpot logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HubSpot</span>
       </a>
-      <a class="logo-item" href="https://crustdata.com/" target="_blank" rel="noopener noreferrer" data-tool="Crustdata" data-tip="Company and people data, hiring and job signals." aria-label="Crustdata: Company and people data, hiring and job signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1d4ed8"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Cd</text></svg>
-        <span class="logo-item-name">Crustdata</span>
+      <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-label="Salesforce: The CRM I sold in as an enterprise rep at CoachHub. Opens in a new tab.">
+        <img decoding="async" src="/logos/salesforce.png" alt="Salesforce logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Salesforce</span>
       </a>
-      <a class="logo-item" href="https://www.firecrawl.dev/" target="_blank" rel="noopener noreferrer" data-tool="Firecrawl" data-tip="Scrapes company pages and job boards for signals." aria-label="Firecrawl: Scrapes company pages and job boards for signals. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#ea580c"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Fc</text></svg>
-        <span class="logo-item-name">Firecrawl</span>
-      </a>
-      <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-label="RB2B: Website visitor identification: shows which people and companies visit a site. Opens in a new tab.">
-        <img decoding="async" src="/logos/rb2b.png" alt="RB2B logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">RB2B</span>
-      </a>
-      <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-label="LinkedIn: Sales Navigator for account and lead search, and a core outreach channel. Opens in a new tab.">
-        <img decoding="async" src="/logos/linkedin.png" alt="LinkedIn logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">LinkedIn</span>
-      </a>
-      <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-label="Apollo: Contact data and sequencing, part of my prospecting and enrichment stack. Opens in a new tab.">
-        <img decoding="async" src="/logos/apollo.png" alt="Apollo logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">Apollo</span>
-      </a>
-    </div>
-  </div>
-  <div class="stack-layer">
-    <div class="stack-layer-head"><span class="stack-layer-n">02</span><h3 class="stack-layer-title">Enrichment and scoring</h3></div>
-    <p class="stack-layer-sub">Fill the record, then score it</p>
-    <div class="stack-layer-tools">
       <a class="logo-item" href="https://www.clay.com/" target="_blank" rel="noopener noreferrer" data-tool="Clay" data-tip="Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table." aria-label="Clay: Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table. Opens in a new tab.">
         <img decoding="async" src="/logos/clay.png" alt="Clay logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Clay</span>
       </a>
-      <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-label="Prospeo: Finds verified business emails and mobile numbers for outreach. Opens in a new tab.">
-        <img decoding="async" src="/logos/prospeo.png" alt="Prospeo logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">Prospeo</span>
-      </a>
-      <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-label="Claude: Claude API and MCPs for account research, signal led openers and connecting tools. Opens in a new tab.">
-        <img decoding="async" src="/logos/claude.png" alt="Claude logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">Claude</span>
-      </a>
-      <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-label="OpenAI: OpenAI API and ChatGPT for LLM workflows and drafting. Opens in a new tab.">
-        <img decoding="async" src="/logos/openai.png" alt="OpenAI logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">OpenAI</span>
-      </a>
-    </div>
-  </div>
-  <div class="stack-layer">
-    <div class="stack-layer-head"><span class="stack-layer-n">03</span><h3 class="stack-layer-title">Orchestration</h3></div>
-    <p class="stack-layer-sub">Move it, check it, ask a person</p>
-    <div class="stack-layer-tools">
       <a class="logo-item" href="https://n8n.io/" target="_blank" rel="noopener noreferrer" data-tool="n8n" data-tip="Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach." aria-label="n8n: Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach. Opens in a new tab.">
         <img decoding="async" src="/logos/n8n.svg" alt="n8n logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">n8n</span>
@@ -5024,64 +4968,50 @@ html.legal-open { overflow: hidden; }
         <img decoding="async" src="/logos/zapier.png" alt="Zapier logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Zapier</span>
       </a>
+      <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-label="Claude: Claude API and MCPs for account research, signal led openers and connecting tools. Opens in a new tab.">
+        <img decoding="async" src="/logos/claude.png" alt="Claude logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude</span>
+      </a>
       <a class="logo-item" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer" data-tool="Claude Code" data-tip="Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations." aria-label="Claude Code: Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations. Opens in a new tab.">
         <img decoding="async" src="/logos/claude-code.png" alt="Claude Code logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Claude Code</span>
       </a>
-      <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-label="Slack: Where my engine posts drafted openers for human review before anything sends. Opens in a new tab.">
-        <img decoding="async" src="/logos/slack.png" alt="Slack logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">Slack</span>
+      <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-label="OpenAI: OpenAI API and ChatGPT for LLM workflows and drafting. Opens in a new tab.">
+        <img decoding="async" src="/logos/openai.png" alt="OpenAI logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">OpenAI</span>
       </a>
-    </div>
-  </div>
-  <div class="stack-layer">
-    <div class="stack-layer-head"><span class="stack-layer-n">04</span><h3 class="stack-layer-title">Outreach</h3></div>
-    <p class="stack-layer-sub">Write from the signal and land it</p>
-    <div class="stack-layer-tools">
+      <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-label="Apollo: Contact data and sequencing, part of my prospecting and enrichment stack. Opens in a new tab.">
+        <img decoding="async" src="/logos/apollo.png" alt="Apollo logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Apollo</span>
+      </a>
       <a class="logo-item" href="https://www.smartlead.ai/" target="_blank" rel="noopener noreferrer" data-tool="Smartlead" data-tip="Cold email sequencing and inbox management. Home of my 45 day sequences." aria-label="Smartlead: Cold email sequencing and inbox management. Home of my 45 day sequences. Opens in a new tab.">
         <img decoding="async" src="/logos/smartlead.png" alt="Smartlead logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Smartlead</span>
-      </a>
-      <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-label="HeyReach: LinkedIn outreach automation across multiple senders. Opens in a new tab.">
-        <img decoding="async" src="/logos/heyreach.jpg" alt="HeyReach logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">HeyReach</span>
       </a>
       <a class="logo-item" href="https://instantly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Instantly" data-tip="Cold email sending and sequencing at scale." aria-label="Instantly: Cold email sending and sequencing at scale. Opens in a new tab.">
         <img decoding="async" src="/logos/instantly.png" alt="Instantly logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Instantly</span>
       </a>
-      <a class="logo-item" href="https://missioninbox.com/" target="_blank" rel="noopener noreferrer" data-tool="Mission Inbox" data-tip="Sending domains and inboxes so cold email lands." aria-label="Mission Inbox: Sending domains and inboxes so cold email lands. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#4338ca"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">MI</text></svg>
-        <span class="logo-item-name">Mission Inbox</span>
-      </a>
-    </div>
-  </div>
-  <div class="stack-layer">
-    <div class="stack-layer-head"><span class="stack-layer-n">05</span><h3 class="stack-layer-title">CRM and reporting</h3></div>
-    <p class="stack-layer-sub">One record, tracked to revenue</p>
-    <div class="stack-layer-tools">
-      <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-label="HubSpot: The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified. Opens in a new tab.">
-        <img decoding="async" src="/logos/hubspot.png" alt="HubSpot logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">HubSpot</span>
-      </a>
-      <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-label="Salesforce: The CRM I sold in as an enterprise rep at CoachHub. Opens in a new tab.">
-        <img decoding="async" src="/logos/salesforce.png" alt="Salesforce logo" width="28" height="28" onerror="this.style.display='none'">
-        <span class="logo-item-name">Salesforce</span>
+      <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-label="HeyReach: LinkedIn outreach automation across multiple senders. Opens in a new tab.">
+        <img decoding="async" src="/logos/heyreach.jpg" alt="HeyReach logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HeyReach</span>
       </a>
       <a class="logo-item" href="https://www.gong.io/" target="_blank" rel="noopener noreferrer" data-tool="Gong" data-tip="Call recording and conversation intelligence for deal reviews." aria-label="Gong: Call recording and conversation intelligence for deal reviews. Opens in a new tab.">
         <img decoding="async" src="/logos/gong.png" alt="Gong logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Gong</span>
       </a>
+      <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-label="LinkedIn: Sales Navigator for account and lead search, and a core outreach channel. Opens in a new tab.">
+        <img decoding="async" src="/logos/linkedin.png" alt="LinkedIn logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">LinkedIn</span>
+      </a>
+      <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-label="Slack: Where my engine posts drafted openers for human review before anything sends. Opens in a new tab.">
+        <img decoding="async" src="/logos/slack.png" alt="Slack logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Slack</span>
+      </a>
       <a class="logo-item" href="https://tagmanager.google.com/" target="_blank" rel="noopener noreferrer" data-tool="Google Tag Manager" data-tip="Conversion tracking with HubSpot forms, set up for clients." aria-label="Google Tag Manager: Conversion tracking with HubSpot forms, set up for clients. Opens in a new tab.">
         <img decoding="async" src="/logos/google-tag-manager.png" alt="Google Tag Manager logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Google Tag Manager</span>
       </a>
-    </div>
-  </div>
-  <div class="stack-layer">
-    <div class="stack-layer-head"><span class="stack-layer-n">06</span><h3 class="stack-layer-title">Build and ship</h3></div>
-    <p class="stack-layer-sub">Small apps and pages around the stack</p>
-    <div class="stack-layer-tools">
       <a class="logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-tool="GitHub" data-tip="Where my code and this site live." aria-label="GitHub: Where my code and this site live. Opens in a new tab.">
         <img decoding="async" src="/logos/github.png" alt="GitHub logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">GitHub</span>
@@ -5090,12 +5020,419 @@ html.legal-open { overflow: hidden; }
         <img decoding="async" src="/logos/vercel.png" alt="Vercel logo" width="28" height="28" onerror="this.style.display='none'">
         <span class="logo-item-name">Vercel</span>
       </a>
-      <a class="logo-item" href="https://supabase.com/" target="_blank" rel="noopener noreferrer" data-tool="Supabase" data-tip="Postgres, auth and storage for small apps." aria-label="Supabase: Postgres, auth and storage for small apps. Opens in a new tab.">
-        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#15803d"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Sb</text></svg>
-        <span class="logo-item-name">Supabase</span>
+      <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-label="Prospeo: Finds verified business emails and mobile numbers for outreach. Opens in a new tab.">
+        <img decoding="async" src="/logos/prospeo.png" alt="Prospeo logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Prospeo</span>
+      </a>
+      <a class="logo-item" href="https://ai-ark.com/" target="_blank" rel="noopener noreferrer" data-tool="AI Ark" data-tip="AI search for building lead and company lists that match an ICP." aria-label="AI Ark: AI search for building lead and company lists that match an ICP. Opens in a new tab.">
+        <img decoding="async" src="/logos/ai-ark.png" alt="AI Ark logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">AI Ark</span>
+      </a>
+      <a class="logo-item" href="https://www.hypertide.io/" target="_blank" rel="noopener noreferrer" data-tool="Hypertide" data-tip="Cold email infrastructure: sending domains and inboxes set up for deliverability." aria-label="Hypertide: Cold email infrastructure: sending domains and inboxes set up for deliverability. Opens in a new tab.">
+        <img decoding="async" src="/logos/hypertide.png" alt="Hypertide logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Hypertide</span>
+      </a>
+      <a class="logo-item" href="https://www.trellus.ai/" target="_blank" rel="noopener noreferrer" data-tool="Trellus" data-tip="AI auto dialer that runs calls inside the CRM or sales engagement tool." aria-label="Trellus: AI auto dialer that runs calls inside the CRM or sales engagement tool. Opens in a new tab.">
+        <img decoding="async" src="/logos/trellus.png" alt="Trellus logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Trellus</span>
+      </a>
+      <a class="logo-item" href="https://www.getwhitewhale.com/" target="_blank" rel="noopener noreferrer" data-tool="WhiteWhale" data-tip="Custom buying signals on target accounts, from news, filings and job posts, each with a source." aria-label="WhiteWhale: Custom buying signals on target accounts, from news, filings and job posts, each with a source. Opens in a new tab.">
+        <img decoding="async" src="/logos/whitewhale.png" alt="WhiteWhale logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">WhiteWhale</span>
+      </a>
+      <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-label="RB2B: Website visitor identification: shows which people and companies visit a site. Opens in a new tab.">
+        <img decoding="async" src="/logos/rb2b.png" alt="RB2B logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">RB2B</span>
+      </a>
+      <a class="logo-item" href="https://intentsify.com/" target="_blank" rel="noopener noreferrer" data-tool="Intentsify" data-tip="B2B intent data." aria-label="Intentsify: B2B intent data. Opens in a new tab.">
+        <img decoding="async" src="/logos/intentsify.png" alt="Intentsify logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Intentsify</span>
+      </a>
+      <a class="logo-item" href="https://www.leadfeeder.com/" target="_blank" rel="noopener noreferrer" data-tool="Leadfeeder" data-tip="Identifies companies visiting a website." aria-label="Leadfeeder: Identifies companies visiting a website. Opens in a new tab.">
+        <img decoding="async" src="/logos/leadfeeder.png" alt="Leadfeeder logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Leadfeeder</span>
+      </a>
+      <a class="logo-item" href="https://www.modash.io/" target="_blank" rel="noopener noreferrer" data-tool="Modash" data-tip="Creator and influencer data." aria-label="Modash: Creator and influencer data. Opens in a new tab.">
+        <img decoding="async" src="/logos/modash.png" alt="Modash logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Modash</span>
+      </a>
+      <a class="logo-item" href="https://www.foreplay.co/" target="_blank" rel="noopener noreferrer" data-tool="Foreplay Technologies" data-tip="Ad library and creative research." aria-label="Foreplay Technologies: Ad library and creative research. Opens in a new tab.">
+        <img decoding="async" src="/logos/foreplay.png" alt="Foreplay Technologies logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Foreplay Technologies</span>
+      </a>
+      <a class="logo-item" href="https://attio.com/" target="_blank" rel="noopener noreferrer" data-tool="Attio" data-tip="CRM." aria-label="Attio: CRM. Opens in a new tab.">
+        <img decoding="async" src="/logos/attio.png" alt="Attio logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Attio</span>
+      </a>
+      <a class="logo-item" href="https://www.lusha.com/" target="_blank" rel="noopener noreferrer" data-tool="Lusha" data-tip="Contact data: emails and phone numbers." aria-label="Lusha: Contact data: emails and phone numbers. Opens in a new tab.">
+        <img decoding="async" src="/logos/lusha.png" alt="Lusha logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Lusha</span>
+      </a>
+      <a class="logo-item" href="https://bombora.com/" target="_blank" rel="noopener noreferrer" data-tool="Bombora" data-tip="B2B intent data." aria-label="Bombora: B2B intent data. Opens in a new tab.">
+        <img decoding="async" src="/logos/bombora.png" alt="Bombora logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Bombora</span>
+      </a>
+      <a class="logo-item" href="https://www.airtable.com/" target="_blank" rel="noopener noreferrer" data-tool="Airtable" data-tip="Database and workflow tool." aria-label="Airtable: Database and workflow tool. Opens in a new tab.">
+        <img decoding="async" src="/logos/airtable.svg" alt="Airtable logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Airtable</span>
+      </a>
+      <a class="logo-item" href="https://www.warmly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Warmly" data-tip="Website visitor signals and outreach." aria-label="Warmly: Website visitor signals and outreach. Opens in a new tab.">
+        <img decoding="async" src="/logos/warmly.png" alt="Warmly logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Warmly</span>
+      </a>
+      <a class="logo-item" href="https://intellizence.com/" target="_blank" rel="noopener noreferrer" data-tool="Intellizence" data-tip="Company news and event signals." aria-label="Intellizence: Company news and event signals. Opens in a new tab.">
+        <img decoding="async" src="/logos/intellizence.png" alt="Intellizence logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Intellizence</span>
+      </a>
+      <a class="logo-item" href="https://www.outreach.io/" target="_blank" rel="noopener noreferrer" data-tool="Outreach" data-tip="Sales engagement platform." aria-label="Outreach: Sales engagement platform. Opens in a new tab.">
+        <img decoding="async" src="/logos/outreach.png" alt="Outreach logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Outreach</span>
+      </a>
+      <a class="logo-item" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" data-tool="Google Maps" data-tip="Local business data." aria-label="Google Maps: Local business data. Opens in a new tab.">
+        <img decoding="async" src="/logos/google-maps.svg" alt="Google Maps logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Google Maps</span>
+      </a>
+      <a class="logo-item" href="https://www.delivr.ai/" target="_blank" rel="noopener noreferrer" data-tool="Delivr.ai" data-tip="Visitor identification and intent signals." aria-label="Delivr.ai: Visitor identification and intent signals. Opens in a new tab.">
+        <img decoding="async" src="/logos/delivr-ai.png" alt="Delivr.ai logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Delivr.ai</span>
+      </a>
+      <a class="logo-item" href="https://dynamics.microsoft.com/" target="_blank" rel="noopener noreferrer" data-tool="Dynamics 365 CRM" data-tip="Microsoft CRM." aria-label="Dynamics 365 CRM: Microsoft CRM. Opens in a new tab.">
+        <img decoding="async" src="/logos/dynamics-365.png" alt="Dynamics 365 CRM logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Dynamics 365 CRM</span>
+      </a>
+      <a class="logo-item" href="https://www.trustradius.com/" target="_blank" rel="noopener noreferrer" data-tool="TrustRadius" data-tip="Software reviews and buyer intent." aria-label="TrustRadius: Software reviews and buyer intent. Opens in a new tab.">
+        <img decoding="async" src="/logos/trustradius.png" alt="TrustRadius logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">TrustRadius</span>
+      </a>
+      <a class="logo-item" href="https://www.definitivehc.com/" target="_blank" rel="noopener noreferrer" data-tool="Definitive Healthcare" data-tip="Healthcare company and provider data." aria-label="Definitive Healthcare: Healthcare company and provider data. Opens in a new tab.">
+        <img decoding="async" src="/logos/definitive-healthcare.png" alt="Definitive Healthcare logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Definitive Healthcare</span>
+      </a>
+      <a class="logo-item" href="https://www.typeform.com/" target="_blank" rel="noopener noreferrer" data-tool="Typeform" data-tip="Forms and surveys." aria-label="Typeform: Forms and surveys. Opens in a new tab.">
+        <img decoding="async" src="/logos/typeform.png" alt="Typeform logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Typeform</span>
+      </a>
+      <a class="logo-item" href="https://www.pursuit.us/" target="_blank" rel="noopener noreferrer" data-tool="Pursuit Markets" data-tip="Early government buying signals." aria-label="Pursuit Markets: Early government buying signals. Opens in a new tab.">
+        <img decoding="async" src="/logos/pursuit-markets.png" alt="Pursuit Markets logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Pursuit Markets</span>
+      </a>
+      <a class="logo-item" href="https://theirstack.com/" target="_blank" rel="noopener noreferrer" data-tool="TheirStack" data-tip="Hiring and technology signals." aria-label="TheirStack: Hiring and technology signals. Opens in a new tab.">
+        <img decoding="async" src="/logos/theirstack.png" alt="TheirStack logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">TheirStack</span>
+      </a>
+      <a class="logo-item" href="https://pubrio.com/" target="_blank" rel="noopener noreferrer" data-tool="Pubrio" data-tip="B2B company and people data." aria-label="Pubrio: B2B company and people data. Opens in a new tab.">
+        <img decoding="async" src="/logos/pubrio.png" alt="Pubrio logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Pubrio</span>
+      </a>
+      <a class="logo-item" href="https://www.crossbeam.com/" target="_blank" rel="noopener noreferrer" data-tool="Crossbeam" data-tip="Partner account overlap." aria-label="Crossbeam: Partner account overlap. Opens in a new tab.">
+        <img decoding="async" src="/logos/crossbeam.png" alt="Crossbeam logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Crossbeam</span>
+      </a>
+      <a class="logo-item" href="https://apify.com/" target="_blank" rel="noopener noreferrer" data-tool="Apify" data-tip="Web scraping and data extraction." aria-label="Apify: Web scraping and data extraction. Opens in a new tab.">
+        <img decoding="async" src="/logos/apify.png" alt="Apify logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Apify</span>
+      </a>
+      <a class="logo-item" href="https://govspend.com/" target="_blank" rel="noopener noreferrer" data-tool="GovSpend" data-tip="Government spending data." aria-label="GovSpend: Government spending data. Opens in a new tab.">
+        <img decoding="async" src="/logos/govspend.png" alt="GovSpend logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">GovSpend</span>
+      </a>
+      <a class="logo-item" href="https://adbeat.com/" target="_blank" rel="noopener noreferrer" data-tool="Adbeat" data-tip="Display ad intelligence." aria-label="Adbeat: Display ad intelligence. Opens in a new tab.">
+        <img decoding="async" src="/logos/adbeat.png" alt="Adbeat logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Adbeat</span>
+      </a>
+      <a class="logo-item" href="https://mixpanel.com/" target="_blank" rel="noopener noreferrer" data-tool="Mixpanel" data-tip="Product analytics." aria-label="Mixpanel: Product analytics. Opens in a new tab.">
+        <img decoding="async" src="/logos/mixpanel.png" alt="Mixpanel logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Mixpanel</span>
+      </a>
+      <a class="logo-item" href="https://phantombuster.com/" target="_blank" rel="noopener noreferrer" data-tool="PhantomBuster" data-tip="LinkedIn and web automation." aria-label="PhantomBuster: LinkedIn and web automation. Opens in a new tab.">
+        <img decoding="async" src="/logos/phantombuster.png" alt="PhantomBuster logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">PhantomBuster</span>
+      </a>
+      <a class="logo-item" href="https://theorg.com/" target="_blank" rel="noopener noreferrer" data-tool="The Org" data-tip="Org charts and reporting lines." aria-label="The Org: Org charts and reporting lines. Opens in a new tab.">
+        <img decoding="async" src="/logos/the-org.png" alt="The Org logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">The Org</span>
+      </a>
+      <a class="logo-item" data-tool="RSS Feeds" data-tip="News and blog feeds as a signal source." aria-label="RSS Feeds: News and blog feeds as a signal source.">
+        <img decoding="async" src="/logos/rss.svg" alt="RSS Feeds logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">RSS Feeds</span>
+      </a>
+      <a class="logo-item" href="https://storeleads.app/" target="_blank" rel="noopener noreferrer" data-tool="Store Leads" data-tip="Ecommerce store data." aria-label="Store Leads: Ecommerce store data. Opens in a new tab.">
+        <img decoding="async" src="/logos/store-leads.png" alt="Store Leads logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Store Leads</span>
+      </a>
+      <a class="logo-item" href="https://www.g2.com/" target="_blank" rel="noopener noreferrer" data-tool="G2" data-tip="Software reviews and buyer intent." aria-label="G2: Software reviews and buyer intent. Opens in a new tab.">
+        <img decoding="async" src="/logos/g2.png" alt="G2 logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">G2</span>
+      </a>
+      <a class="logo-item" href="https://www.buyercaddy.com/" target="_blank" rel="noopener noreferrer" data-tool="BuyerCaddy" data-tip="B2B buying signals." aria-label="BuyerCaddy: B2B buying signals. Opens in a new tab.">
+        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Bu</text></svg>
+        <span class="logo-item-name">BuyerCaddy</span>
+      </a>
+      <a class="logo-item" href="https://www.trigify.io/" target="_blank" rel="noopener noreferrer" data-tool="Trigify" data-tip="Social and LinkedIn signals." aria-label="Trigify: Social and LinkedIn signals. Opens in a new tab.">
+        <img decoding="async" src="/logos/trigify.png" alt="Trigify logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Trigify</span>
+      </a>
+      <a class="logo-item" href="https://www.upfluence.com/" target="_blank" rel="noopener noreferrer" data-tool="Upfluence" data-tip="Influencer data." aria-label="Upfluence: Influencer data. Opens in a new tab.">
+        <img decoding="async" src="/logos/upfluence.png" alt="Upfluence logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Upfluence</span>
+      </a>
+      <a class="logo-item" href="https://pitchbook.com/" target="_blank" rel="noopener noreferrer" data-tool="PitchBook" data-tip="Funding and investor data." aria-label="PitchBook: Funding and investor data. Opens in a new tab.">
+        <img decoding="async" src="/logos/pitchbook.png" alt="PitchBook logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">PitchBook</span>
+      </a>
+      <a class="logo-item" href="https://hginsights.com/" target="_blank" rel="noopener noreferrer" data-tool="HG Insights" data-tip="Technology usage data." aria-label="HG Insights: Technology usage data. Opens in a new tab.">
+        <img decoding="async" src="/logos/hg-insights.png" alt="HG Insights logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HG Insights</span>
+      </a>
+      <a class="logo-item" href="https://www.close.com/" target="_blank" rel="noopener noreferrer" data-tool="Close" data-tip="CRM." aria-label="Close: CRM. Opens in a new tab.">
+        <img decoding="async" src="/logos/close.png" alt="Close logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Close</span>
+      </a>
+      <a class="logo-item" href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer" data-tool="HubSpot" data-tip="The CRM I administer and architect: properties, lifecycle stages, workflows and dashboards. HubSpot Architect certified." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/hubspot.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HubSpot</span>
+      </a>
+      <a class="logo-item" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer" data-tool="Salesforce" data-tip="The CRM I sold in as an enterprise rep at CoachHub." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/salesforce.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Salesforce</span>
+      </a>
+      <a class="logo-item" href="https://www.clay.com/" target="_blank" rel="noopener noreferrer" data-tool="Clay" data-tip="Data enrichment and workflow builder. I use it to pull company and contact data from many providers into one scored table." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/clay.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Clay</span>
+      </a>
+      <a class="logo-item" href="https://n8n.io/" target="_blank" rel="noopener noreferrer" data-tool="n8n" data-tip="Workflow automation that connects tools through APIs and webhooks. The glue between signals, CRM and outreach." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/n8n.svg" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">n8n</span>
+      </a>
+      <a class="logo-item" href="https://www.make.com/" target="_blank" rel="noopener noreferrer" data-tool="Make" data-tip="Visual workflow automation, the second builder next to n8n." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/make.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Make</span>
+      </a>
+      <a class="logo-item" href="https://zapier.com/" target="_blank" rel="noopener noreferrer" data-tool="Zapier" data-tip="Quick app to app automations where a full workflow is not needed." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/zapier.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Zapier</span>
+      </a>
+      <a class="logo-item" href="https://claude.com/" target="_blank" rel="noopener noreferrer" data-tool="Claude" data-tip="Claude API and MCPs for account research, signal led openers and connecting tools." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/claude.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude</span>
+      </a>
+      <a class="logo-item" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener noreferrer" data-tool="Claude Code" data-tip="Anthropic&#x27;s agentic coding tool. I use it to build scripts, workflows and integrations." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/claude-code.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Claude Code</span>
+      </a>
+      <a class="logo-item" href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" data-tool="OpenAI" data-tip="OpenAI API and ChatGPT for LLM workflows and drafting." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/openai.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">OpenAI</span>
+      </a>
+      <a class="logo-item" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer" data-tool="Apollo" data-tip="Contact data and sequencing, part of my prospecting and enrichment stack." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/apollo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Apollo</span>
+      </a>
+      <a class="logo-item" href="https://www.smartlead.ai/" target="_blank" rel="noopener noreferrer" data-tool="Smartlead" data-tip="Cold email sequencing and inbox management. Home of my 45 day sequences." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/smartlead.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Smartlead</span>
+      </a>
+      <a class="logo-item" href="https://instantly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Instantly" data-tip="Cold email sending and sequencing at scale." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/instantly.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Instantly</span>
+      </a>
+      <a class="logo-item" href="https://www.heyreach.io/" target="_blank" rel="noopener noreferrer" data-tool="HeyReach" data-tip="LinkedIn outreach automation across multiple senders." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/heyreach.jpg" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HeyReach</span>
+      </a>
+      <a class="logo-item" href="https://www.gong.io/" target="_blank" rel="noopener noreferrer" data-tool="Gong" data-tip="Call recording and conversation intelligence for deal reviews." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/gong.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Gong</span>
+      </a>
+      <a class="logo-item" href="https://business.linkedin.com/sales-solutions/sales-navigator" target="_blank" rel="noopener noreferrer" data-tool="LinkedIn" data-tip="Sales Navigator for account and lead search, and a core outreach channel." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/linkedin.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">LinkedIn</span>
+      </a>
+      <a class="logo-item" href="https://slack.com/" target="_blank" rel="noopener noreferrer" data-tool="Slack" data-tip="Where my engine posts drafted openers for human review before anything sends." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/slack.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Slack</span>
+      </a>
+      <a class="logo-item" href="https://tagmanager.google.com/" target="_blank" rel="noopener noreferrer" data-tool="Google Tag Manager" data-tip="Conversion tracking with HubSpot forms, set up for clients." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/google-tag-manager.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Google Tag Manager</span>
+      </a>
+      <a class="logo-item" href="https://github.com/" target="_blank" rel="noopener noreferrer" data-tool="GitHub" data-tip="Where my code and this site live." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/github.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">GitHub</span>
+      </a>
+      <a class="logo-item" href="https://vercel.com/" target="_blank" rel="noopener noreferrer" data-tool="Vercel" data-tip="Hosts this site, deployed from GitHub." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/vercel.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Vercel</span>
+      </a>
+      <a class="logo-item" href="https://prospeo.io/" target="_blank" rel="noopener noreferrer" data-tool="Prospeo" data-tip="Finds verified business emails and mobile numbers for outreach." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/prospeo.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Prospeo</span>
+      </a>
+      <a class="logo-item" href="https://ai-ark.com/" target="_blank" rel="noopener noreferrer" data-tool="AI Ark" data-tip="AI search for building lead and company lists that match an ICP." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/ai-ark.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">AI Ark</span>
+      </a>
+      <a class="logo-item" href="https://www.hypertide.io/" target="_blank" rel="noopener noreferrer" data-tool="Hypertide" data-tip="Cold email infrastructure: sending domains and inboxes set up for deliverability." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/hypertide.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Hypertide</span>
+      </a>
+      <a class="logo-item" href="https://www.trellus.ai/" target="_blank" rel="noopener noreferrer" data-tool="Trellus" data-tip="AI auto dialer that runs calls inside the CRM or sales engagement tool." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/trellus.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Trellus</span>
+      </a>
+      <a class="logo-item" href="https://www.getwhitewhale.com/" target="_blank" rel="noopener noreferrer" data-tool="WhiteWhale" data-tip="Custom buying signals on target accounts, from news, filings and job posts, each with a source." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/whitewhale.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">WhiteWhale</span>
+      </a>
+      <a class="logo-item" href="https://www.rb2b.com/" target="_blank" rel="noopener noreferrer" data-tool="RB2B" data-tip="Website visitor identification: shows which people and companies visit a site." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/rb2b.png" alt="" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">RB2B</span>
+      </a>
+      <a class="logo-item" href="https://intentsify.com/" target="_blank" rel="noopener noreferrer" data-tool="Intentsify" data-tip="B2B intent data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/intentsify.png" alt="Intentsify logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Intentsify</span>
+      </a>
+      <a class="logo-item" href="https://www.leadfeeder.com/" target="_blank" rel="noopener noreferrer" data-tool="Leadfeeder" data-tip="Identifies companies visiting a website." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/leadfeeder.png" alt="Leadfeeder logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Leadfeeder</span>
+      </a>
+      <a class="logo-item" href="https://www.modash.io/" target="_blank" rel="noopener noreferrer" data-tool="Modash" data-tip="Creator and influencer data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/modash.png" alt="Modash logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Modash</span>
+      </a>
+      <a class="logo-item" href="https://www.foreplay.co/" target="_blank" rel="noopener noreferrer" data-tool="Foreplay Technologies" data-tip="Ad library and creative research." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/foreplay.png" alt="Foreplay Technologies logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Foreplay Technologies</span>
+      </a>
+      <a class="logo-item" href="https://attio.com/" target="_blank" rel="noopener noreferrer" data-tool="Attio" data-tip="CRM." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/attio.png" alt="Attio logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Attio</span>
+      </a>
+      <a class="logo-item" href="https://www.lusha.com/" target="_blank" rel="noopener noreferrer" data-tool="Lusha" data-tip="Contact data: emails and phone numbers." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/lusha.png" alt="Lusha logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Lusha</span>
+      </a>
+      <a class="logo-item" href="https://bombora.com/" target="_blank" rel="noopener noreferrer" data-tool="Bombora" data-tip="B2B intent data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/bombora.png" alt="Bombora logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Bombora</span>
+      </a>
+      <a class="logo-item" href="https://www.airtable.com/" target="_blank" rel="noopener noreferrer" data-tool="Airtable" data-tip="Database and workflow tool." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/airtable.svg" alt="Airtable logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Airtable</span>
+      </a>
+      <a class="logo-item" href="https://www.warmly.ai/" target="_blank" rel="noopener noreferrer" data-tool="Warmly" data-tip="Website visitor signals and outreach." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/warmly.png" alt="Warmly logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Warmly</span>
+      </a>
+      <a class="logo-item" href="https://intellizence.com/" target="_blank" rel="noopener noreferrer" data-tool="Intellizence" data-tip="Company news and event signals." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/intellizence.png" alt="Intellizence logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Intellizence</span>
+      </a>
+      <a class="logo-item" href="https://www.outreach.io/" target="_blank" rel="noopener noreferrer" data-tool="Outreach" data-tip="Sales engagement platform." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/outreach.png" alt="Outreach logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Outreach</span>
+      </a>
+      <a class="logo-item" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" data-tool="Google Maps" data-tip="Local business data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/google-maps.svg" alt="Google Maps logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Google Maps</span>
+      </a>
+      <a class="logo-item" href="https://www.delivr.ai/" target="_blank" rel="noopener noreferrer" data-tool="Delivr.ai" data-tip="Visitor identification and intent signals." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/delivr-ai.png" alt="Delivr.ai logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Delivr.ai</span>
+      </a>
+      <a class="logo-item" href="https://dynamics.microsoft.com/" target="_blank" rel="noopener noreferrer" data-tool="Dynamics 365 CRM" data-tip="Microsoft CRM." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/dynamics-365.png" alt="Dynamics 365 CRM logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Dynamics 365 CRM</span>
+      </a>
+      <a class="logo-item" href="https://www.trustradius.com/" target="_blank" rel="noopener noreferrer" data-tool="TrustRadius" data-tip="Software reviews and buyer intent." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/trustradius.png" alt="TrustRadius logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">TrustRadius</span>
+      </a>
+      <a class="logo-item" href="https://www.definitivehc.com/" target="_blank" rel="noopener noreferrer" data-tool="Definitive Healthcare" data-tip="Healthcare company and provider data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/definitive-healthcare.png" alt="Definitive Healthcare logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Definitive Healthcare</span>
+      </a>
+      <a class="logo-item" href="https://www.typeform.com/" target="_blank" rel="noopener noreferrer" data-tool="Typeform" data-tip="Forms and surveys." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/typeform.png" alt="Typeform logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Typeform</span>
+      </a>
+      <a class="logo-item" href="https://www.pursuit.us/" target="_blank" rel="noopener noreferrer" data-tool="Pursuit Markets" data-tip="Early government buying signals." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/pursuit-markets.png" alt="Pursuit Markets logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Pursuit Markets</span>
+      </a>
+      <a class="logo-item" href="https://theirstack.com/" target="_blank" rel="noopener noreferrer" data-tool="TheirStack" data-tip="Hiring and technology signals." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/theirstack.png" alt="TheirStack logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">TheirStack</span>
+      </a>
+      <a class="logo-item" href="https://pubrio.com/" target="_blank" rel="noopener noreferrer" data-tool="Pubrio" data-tip="B2B company and people data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/pubrio.png" alt="Pubrio logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Pubrio</span>
+      </a>
+      <a class="logo-item" href="https://www.crossbeam.com/" target="_blank" rel="noopener noreferrer" data-tool="Crossbeam" data-tip="Partner account overlap." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/crossbeam.png" alt="Crossbeam logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Crossbeam</span>
+      </a>
+      <a class="logo-item" href="https://apify.com/" target="_blank" rel="noopener noreferrer" data-tool="Apify" data-tip="Web scraping and data extraction." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/apify.png" alt="Apify logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Apify</span>
+      </a>
+      <a class="logo-item" href="https://govspend.com/" target="_blank" rel="noopener noreferrer" data-tool="GovSpend" data-tip="Government spending data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/govspend.png" alt="GovSpend logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">GovSpend</span>
+      </a>
+      <a class="logo-item" href="https://adbeat.com/" target="_blank" rel="noopener noreferrer" data-tool="Adbeat" data-tip="Display ad intelligence." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/adbeat.png" alt="Adbeat logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Adbeat</span>
+      </a>
+      <a class="logo-item" href="https://mixpanel.com/" target="_blank" rel="noopener noreferrer" data-tool="Mixpanel" data-tip="Product analytics." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/mixpanel.png" alt="Mixpanel logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Mixpanel</span>
+      </a>
+      <a class="logo-item" href="https://phantombuster.com/" target="_blank" rel="noopener noreferrer" data-tool="PhantomBuster" data-tip="LinkedIn and web automation." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/phantombuster.png" alt="PhantomBuster logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">PhantomBuster</span>
+      </a>
+      <a class="logo-item" href="https://theorg.com/" target="_blank" rel="noopener noreferrer" data-tool="The Org" data-tip="Org charts and reporting lines." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/the-org.png" alt="The Org logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">The Org</span>
+      </a>
+      <a class="logo-item" data-tool="RSS Feeds" data-tip="News and blog feeds as a signal source." aria-hidden="true">
+        <img decoding="async" src="/logos/rss.svg" alt="RSS Feeds logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">RSS Feeds</span>
+      </a>
+      <a class="logo-item" href="https://storeleads.app/" target="_blank" rel="noopener noreferrer" data-tool="Store Leads" data-tip="Ecommerce store data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/store-leads.png" alt="Store Leads logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Store Leads</span>
+      </a>
+      <a class="logo-item" href="https://www.g2.com/" target="_blank" rel="noopener noreferrer" data-tool="G2" data-tip="Software reviews and buyer intent." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/g2.png" alt="G2 logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">G2</span>
+      </a>
+      <a class="logo-item" href="https://www.buyercaddy.com/" target="_blank" rel="noopener noreferrer" data-tool="BuyerCaddy" data-tip="B2B buying signals." aria-hidden="true" tabindex="-1">
+        <svg class="logo-badge" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f766e"/><text x="16" y="21" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="Arial,sans-serif">Bu</text></svg>
+        <span class="logo-item-name">BuyerCaddy</span>
+      </a>
+      <a class="logo-item" href="https://www.trigify.io/" target="_blank" rel="noopener noreferrer" data-tool="Trigify" data-tip="Social and LinkedIn signals." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/trigify.png" alt="Trigify logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Trigify</span>
+      </a>
+      <a class="logo-item" href="https://www.upfluence.com/" target="_blank" rel="noopener noreferrer" data-tool="Upfluence" data-tip="Influencer data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/upfluence.png" alt="Upfluence logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Upfluence</span>
+      </a>
+      <a class="logo-item" href="https://pitchbook.com/" target="_blank" rel="noopener noreferrer" data-tool="PitchBook" data-tip="Funding and investor data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/pitchbook.png" alt="PitchBook logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">PitchBook</span>
+      </a>
+      <a class="logo-item" href="https://hginsights.com/" target="_blank" rel="noopener noreferrer" data-tool="HG Insights" data-tip="Technology usage data." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/hg-insights.png" alt="HG Insights logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">HG Insights</span>
+      </a>
+      <a class="logo-item" href="https://www.close.com/" target="_blank" rel="noopener noreferrer" data-tool="Close" data-tip="CRM." aria-hidden="true" tabindex="-1">
+        <img decoding="async" src="/logos/close.png" alt="Close logo" width="28" height="28" onerror="this.style.display='none'">
+        <span class="logo-item-name">Close</span>
       </a>
     </div>
-  </div>
   </div>
 </div>
 </div>
