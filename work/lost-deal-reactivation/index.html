@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lost deal reactivation · Yuval Gross</title>
+<meta name="description" content="A weekly play that ranks 760 lost hotels in HubSpot, picks the 175 worth a second call, routes them to sellers or appointment setting and measures the result. Rules and results on the page.">
+<meta property="og:title" content="Lost deal reactivation · Yuval Gross">
+<meta property="og:description" content="Which lost deals are worth a second call this week, who makes it and with what reason.">
+<meta property="og:url" content="https://pragma-gtm.com/work/lost-deal-reactivation/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/lost-deal-reactivation/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+<style>
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:6px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); padding:14px 16px; }
+  .kpi strong { display:block; font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.1; color:var(--accent); }
+  .kpi span { font-size:14.5px; color:var(--muted); }
+  ul.plain { margin:0 0 14px; padding-left:20px; max-width:66ch; } ul.plain li { margin-bottom:8px; }
+  ol.plain { margin:0 0 14px; padding-left:22px; max-width:66ch; } ol.plain li { margin-bottom:8px; }
+  .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
+  .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Lost deal reactivation: which of 760 lost hotels are worth <em>a second call.</em></h1>
+    <p class="lead">A weekly play for a hotel software company. It reads a HubSpot export of every hotel that did not buy, decides which are worth another try now, who calls them and with what reason, and hands each of five sellers and the appointment setting team a short list every Monday.</p>
+  </header>
+
+  <section aria-labelledby="answer">
+    <h2 id="answer">The answer</h2>
+    <p>175 of the 760 hotels are worth a second try now. Each has a reason to talk: 78 have a competitor contract ending or a deal that stalled on timing, and 97 showed interest this year. Half of the 175 have had no contact for 11 months.</p>
+    <div class="kpis">
+      <div class="kpi"><strong>175</strong><span>hotels to call first, out of 760</span></div>
+      <div class="kpi"><strong>182</strong><span>left out, each with the reason</span></div>
+      <div class="kpi"><strong>40</strong><span>calls handed out this week</span></div>
+      <div class="kpi"><strong>4 to 8</strong><span>new customers in the first quarter</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="groups">
+    <h2 id="groups">Where every hotel goes</h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Reactivation groups, scrolls sideways on small screens">
+<table style="min-width:640px">
+<thead><tr><th>Group</th><th class="n">Hotels</th><th>Who, and when</th></tr></thead>
+<tbody>
+<tr class="hot"><td>Call first: saw a demo, has a reason to talk</td><td class="n">92</td><td>Seller, weeks 1 to 4</td></tr>
+<tr class="hot"><td>Call first: no demo, has a reason to talk</td><td class="n">83</td><td>Appointment setting, weeks 1 to 6</td></tr>
+<tr><td>Call next: saw a demo, no reason yet</td><td class="n">102</td><td>Seller, weeks 5 to 8, only if weeks 1 to 4 pay off</td></tr>
+<tr><td>Email first: no demo, no reason yet</td><td class="n">200</td><td>One HubSpot email. A click moves the hotel up</td></tr>
+<tr><td>Wait: lost under 90 days ago</td><td class="n">55</td><td>Same rules once the wait ends</td></tr>
+<tr><td>Wait: competitor contract runs over 6 months</td><td class="n">15</td><td>Back 6 months before it ends</td></tr>
+<tr><td>Ask the seller</td><td class="n">31</td><td>The seller who marked them unqualified, week 1</td></tr>
+<tr><td>Leave out</td><td class="n">182</td><td>Nobody</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px"><strong>Who calls.</strong> A hotel that saw a demo goes to a seller. A hotel that never saw one goes to appointment setting. Never both. Hotels owned by people no longer on the sales team go to the seller with the shortest list.</p>
+  </section>
+
+  <section aria-labelledby="reason">
+    <h2 id="reason">What counts as <em>a reason to talk</em></h2>
+    <ul class="plain">
+      <li><strong>A competitor contract that ends within 6 months.</strong> 32 hotels.</li>
+      <li><strong>A loss on timing or no answer.</strong> 46 hotels.</li>
+      <li><strong>Interest this year:</strong> pricing page, case study, webinar or event stand. 112 hotels.</li>
+    </ul>
+    <p>The first two rank ahead of the third. Inside a group, hotels where the team knows the owner or general manager go first, then core ICP, then the best lead sources.</p>
+    <p><strong>What is cut.</strong> Hotels outside the target markets, key accounts with their own seller, and current customers. 64 have a clear no on file: no opportunity, not ICP, too small or a chain. Nothing outweighs a clear no, not even a contract ending. Size and stars cut nobody.</p>
+  </section>
+
+  <section aria-labelledby="rules">
+    <h2 id="rules">Four rules <em>I chose</em></h2>
+    <p>Each is one setting. Change it, run again, and the list shows what moved.</p>
+    <ul class="plain">
+      <li><strong>Wait 90 days after a loss.</strong> Of 67 hotels lost in the first months of the year, 20 came back to the marketing on their own, only 1 within 30 days, and half took 98 days or more.</li>
+      <li><strong>A 6 month window for competitor contracts.</strong> A hotel decides on renewal before the end date. Six months is my judgement; there are too few contract dates to test it yet.</li>
+      <li><strong>A newsletter click alone is not a reason to call.</strong> It shows the hotel reads the emails, not that it is buying. It only breaks a tie.</li>
+      <li><strong>A person reviews the 38 probable duplicates.</strong> The match is on name, country, rooms and stars because the export has no website field. That is not proof, and a wrong merge could put a customer on a call list.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="proto">
+    <h2 id="proto">The prototype</h2>
+    <p>One Python script reads the export and writes this week's top 40: 5 hotels for each seller and 15 for appointment setting, each with the reason, a suggested angle and the caller. All 40 have a contract or timing reason, and every contact is an owner or general manager. Same input gives the same output, with no AI call or paid tool inside the run. A second week run gives 40 new hotels with no repeats.</p>
+    <p>It also runs as a Claude skill: attach the export and ask for the reactivation play. A dashboard page shows the management view, each seller's calls, all 760 hotels with search, and a Decisions tab where a rule can be changed to see the effect at once.</p>
+    <p><strong>Nine checks on every run.</strong> The run fails loudly if any breaks: one decision per hotel, no hotel on two lists, no seller over 5, appointment setting at most 15, no excluded market, key account or customer in the top 40, no clear no, seller hotels saw a demo and setting hotels did not, and no opted out or invalid contact on the email list.</p>
+  </section>
+
+  <section aria-labelledby="hubspot">
+    <h2 id="hubspot">Running it every week <em>in HubSpot</em></h2>
+    <p>Every Monday the ranking runs on a fresh export and writes its result to each hotel through a private app. If a run fails or a check breaks, nothing is written and last week's lists stay.</p>
+    <ol class="plain">
+      <li><strong>Hand out the week.</strong> Sets the owner and creates one call task with reason, angle and fit score.</li>
+      <li><strong>German sequence.</strong> For hotels whose competitor contract is ending, the seller calls first and three German mails follow. It stops on a reply or a booked demo.</li>
+      <li><strong>Email first.</strong> One mail. A click on pricing or the case study moves the hotel to call first.</li>
+      <li><strong>End of wait.</strong> After 90 days, or 6 months before a contract ends, the hotel is ranked again.</li>
+      <li><strong>Ask the seller.</strong> One task per unqualified hotel: still unqualified, yes or no, and why.</li>
+      <li><strong>Demo booked.</strong> Creates the deal, stamps the source and hands a setter's hotel to a seller.</li>
+      <li><strong>Stop.</strong> A new deal, a new customer or an opt out removes the hotel from every list.</li>
+    </ol>
+    <p><strong>Clean data.</strong> The lost reason was empty on 242 of 460 lost deals, so it becomes a required dropdown with a clear no as a value. The website domain becomes required so HubSpot catches most new duplicates.</p>
+  </section>
+
+  <section aria-labelledby="impact">
+    <h2 id="impact">What it is worth <em>per quarter</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Impact estimate, scrolls sideways on small screens">
+<table style="min-width:560px">
+<thead><tr><th>Group</th><th class="n">Demos</th><th class="n">New customers</th><th class="n">New MRR</th></tr></thead>
+<tbody>
+<tr class="hot"><td>The 175, call first, weeks 1 to 6</td><td class="n">13 to 27</td><td class="n">4 to 8</td><td class="n total">&euro;6,200 to &euro;12,400</td></tr>
+<tr><td>The 102, call next, weeks 5 to 8</td><td class="n">10</td><td class="n">3</td><td class="n">&euro;4,900</td></tr>
+<tr><td>Newly lost hotels, each later quarter</td><td class="n">5 to 8</td><td class="n">2</td><td class="n">&euro;2,300 to &euro;3,600</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">The low case uses the team's own rate of 1 demo per 10 hotels reached. The high case assumes 1 in 5 for hotels that already saw a demo (assumed). Both are generous: the win rates come from first time demos, and most of these hotels already said no once.</p>
+    <p class="decide"><strong>How I will know.</strong> After four weeks the sellers have called the first 92 hotels. If fewer than 1 in 10 took a demo, I stop and the 102 are not called. If 1 in 5 did, the high numbers hold. One weekly dashboard by group, reason and seller shows hotels handed out, reached, demos, deals and new MRR.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>I did</dt><dd>The groups, the reasons, the cuts, the four rules above, the routing and the stop rule after week 4. I checked every number on this page against the output.</dd>
+      <dt>AI did</dt><dd>Claude Code wrote the ranking script, the dashboard and the skill from those rules. Claude drafts the researched first line for each call, and a seller approves it before it is used.</dd>
+      <dt>Not built</dt><dd>The private app that writes back to HubSpot, the workflows and the sequence. Specified, not running.</dd>
+    </dl>
+    <p class="note">Built on a sample dataset that is not mine to share, so this page shows the rules and the results, not the rows or the code.</p>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>

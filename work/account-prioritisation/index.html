@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account prioritisation · Yuval Gross</title>
+<meta name="description" content="A weekly scoring and routing run for an outbound SDR team: gate, signal and fit scoring, territory routing, and a control file for leadership. Rules and results on the page.">
+<meta property="og:title" content="Account prioritisation · Yuval Gross">
+<meta property="og:description" content="Which 80 accounts get a call this week, and what happens when the buying signals run out.">
+<meta property="og:url" content="https://pragma-gtm.com/work/account-prioritisation/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/account-prioritisation/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%231c1a14'/><path d='M4,46 L4,6 L18,26 Z' fill='%2392400e'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #f2ede0; --page-2: #f9f6ee; --ink: #1c1a14; --muted: #5f5b4d; --panel: #fffdf7; --line: #e6dfc9;
+    --accent: #92400e; --accent-soft: #fef3c7; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0e0d09; --page-2: #1e1b15; --ink: #f0ece0; --muted: #a8a090; --panel: #161410; --line: #2c281f;
+    --accent: #fbbf24; --accent-soft: rgba(251,191,36,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+<style>
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-top:6px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); padding:14px 16px; }
+  .kpi strong { display:block; font-family:var(--serif); font-weight:500; font-size:30px; line-height:1.1; color:var(--accent); }
+  .kpi span { font-size:14.5px; color:var(--muted); }
+  ul.plain { margin:0 0 14px; padding-left:20px; max-width:66ch; } ul.plain li { margin-bottom:8px; }
+  ol.plain { margin:0 0 14px; padding-left:22px; max-width:66ch; } ol.plain li { margin-bottom:8px; }
+  .decide { border-left:3px solid var(--accent); background:var(--panel); padding:14px 18px; max-width:none; }
+  .formula { font-family:var(--mono); font-size:15px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; display:inline-block; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Account prioritisation: which 80 accounts get a call this week, and <em>what happens when the signals run out.</em></h1>
+    <p class="lead">A weekly run for an outbound team of four SDRs selling IoT connectivity. It reads 500 accounts and their buying signals, decides who a rep may call, scores the rest, routes them by territory and capacity, and gives every rep a Monday list with the reason to call, who to call and a first step. Leadership changes the rules in one control file, never in the code.</p>
+  </header>
+
+  <section aria-labelledby="answer">
+    <h2 id="answer">The answer: <em>the limit is signals, not reps</em></h2>
+    <p>Picking 80 accounts a week was the easy part. The run shows that the accounts with a real buying signal are used up in about two weeks. Adding SDR hours does not fix that. More signal sources do, and so does putting capacity where the signals are.</p>
+    <div class="kpis">
+      <div class="kpi"><strong>80 of 80</strong><span>week 1 accounts with a live signal, 18 in tier 1</span></div>
+      <div class="kpi"><strong>61</strong><span>week 2 accounts with a signal, none in tier 1</span></div>
+      <div class="kpi"><strong>35.2 to 9.9</strong><span>average signal points, week 1 to week 2</span></div>
+      <div class="kpi"><strong>8</strong><span>signal accounts left after week 2, all in EMEA</span></div>
+    </div>
+    <p class="note">At the rate new signals arrived (6 accounts in the week before week 2), more than 60 of the 80 slots in week 3 would go to accounts with no reason to call now.</p>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="flow">
+      <div class="step"><b>Clean</b><span>Fix the data before trusting it and log every fix. Each fix becomes a check on every weekly load.</span></div>
+      <div class="step"><b>Gate</b><span>May a rep call it? Yes or no rules before any scoring: AE owned, no territory owner, touched in the last 21 days, lost in the last 120.</span></div>
+      <div class="step"><b>Score</b><span>Is it worth calling this week? Signal points plus fit points, times a leadership boost.</span></div>
+      <div class="step"><b>Route</b><span>Territory first, then each rep's capacity for new accounts, then language.</span></div>
+      <div class="step"><b>Output</b><span>One list per rep, best first, with why now, who to call and a first step from the strongest signal.</span></div>
+    </div>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="How 497 accounts became 80, scrolls sideways on small screens">
+<table style="min-width:560px">
+<thead><tr><th>Rule, in the order the run applies it</th><th class="n">Taken out</th><th class="n">Left</th></tr></thead>
+<tbody>
+<tr><td>Start, after merging 3 duplicate companies</td><td class="n"></td><td class="n">497</td></tr>
+<tr><td>Owned by an AE: customers, open deals, other AE accounts</td><td class="n">106</td><td class="n">391</td></tr>
+<tr><td>Region with no rep to cover it</td><td class="n">37</td><td class="n">354</td></tr>
+<tr><td>Touched in the last 21 days, or lost less than 120 days ago</td><td class="n">16</td><td class="n">338</td></tr>
+<tr><td>No buying signal in the last 90 days</td><td class="n">175</td><td class="n">163</td></tr>
+<tr><td>Signal too weak, score under 15</td><td class="n">17</td><td class="n">146</td></tr>
+<tr class="hot"><td>No room left in the rep's territory this week</td><td class="n">66</td><td class="n total">80</td></tr>
+</tbody>
+</table>
+</div>
+  </section>
+
+  <section aria-labelledby="data">
+    <h2 id="data">What the data <em>was hiding</em></h2>
+    <p>Each of these would have put a wrong list in front of a rep without any error message.</p>
+    <ul class="plain">
+      <li><strong>A third of the list disappears on load.</strong> The region code NA (North America) reads as an empty value in pandas by default. That would have dropped 177 accounts. The run reads it as text and logs it.</li>
+      <li><strong>Signal labels are wrong.</strong> 34 single blog visits are filed as pricing visits. The score reads what a signal says, not the type it was filed under.</li>
+      <li><strong>Some competitor renewals are the seller's own.</strong> 4 customers carry a competitor renewal signal while their current provider is the seller. That is a retention alert for the AE, not an SDR call.</li>
+      <li><strong>The same company twice.</strong> 3 companies sit under two records with different spellings. One copy has sales history, the other looks brand new, so the same company landed on one rep's list twice. The run merges each pair into the record with history and logs it so a person can undo it.</li>
+      <li><strong>Demand sits where nobody sells.</strong> 17 accounts in a region with no rep show a signal, and the best of them outscores everything on the reps' lists.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="score">
+    <h2 id="score">How an account <em>is scored</em></h2>
+    <p class="formula">Score = (signal points + fit points) &times; leadership boost</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Signal points, scrolls sideways on small screens">
+<table style="min-width:640px">
+<thead><tr><th>Level</th><th class="n">Points</th><th>Examples</th></tr></thead>
+<tbody>
+<tr class="hot"><td>High: close to a decision</td><td class="n">18 to 30</td><td>Contract renewal due, three pricing visits, unhappy with current provider, API docs</td></tr>
+<tr><td>Medium: something is changing around their devices</td><td class="n">10 to 22</td><td>Hiring an IoT connectivity engineer, new tracker launch, new head of procurement, funding</td></tr>
+<tr><td>Low: weak or early</td><td class="n">8 to 10</td><td>Platform release, new VP Engineering, webinar, whitepaper</td></tr>
+<tr><td>Ignored</td><td class="n">0</td><td>A single blog visit</td></tr>
+</tbody>
+</table>
+</div>
+    <ul class="plain" style="margin-top:14px">
+      <li><strong>Signals fade.</strong> Half the points every 21 days, nothing after 90.</li>
+      <li><strong>Renewals work the other way.</strong> Full points while the date is 1 to 6 months away, half in the final month, nothing once it has passed.</li>
+      <li><strong>One per type, plus a bonus for variety.</strong> Ten docs visits count as one. Each extra type of signal adds 6 points.</li>
+      <li><strong>Funding counts double next to a device signal.</strong> Money on its own says nothing about a SIM decision. Money within 60 days of a hardware job post says it is going into devices.</li>
+      <li><strong>Fit, up to 29 points.</strong> Devices in the field, current provider (a local operator or several providers scores highest) and industry. A missing value scores a small default, not zero, so a gap does not knock an account out.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="control">
+    <h2 id="control">How leadership <em>stays in control</em></h2>
+    <p>Leadership edits one file and reruns. The logic never changes.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Control file tabs, scrolls sideways on small screens">
+<table style="min-width:520px">
+<thead><tr><th>Tab</th><th>What it changes</th></tr></thead>
+<tbody>
+<tr><td>Signals</td><td>Points for each signal, or switch one off</td></tr>
+<tr><td>Settings</td><td>How fast signals fade, the cool down, the minimum score, routing switches</td></tr>
+<tr><td>Boosts</td><td>Push a segment up or down, for example fleet telematics &times; 1.5</td></tr>
+<tr><td>Accounts</td><td>Take an account off the list, or pin it to the top</td></tr>
+<tr><td>SDRs</td><td>A rep's capacity this week, or out of office</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">I tested both kinds of change. Excluding a rep's number one takes it off the list. Boosting fleet telematics by 1.5 takes fleet accounts in week 1 from 4 to 6. A boost only reorders accounts inside a territory; to move effort between territories, change capacity.</p>
+  </section>
+
+  <section aria-labelledby="decide">
+    <h2 id="decide">What I would <em>decide</em></h2>
+    <p>I tried each option by changing the control file and rerunning.</p>
+    <ul class="plain">
+      <li>Moving 8 weekly slots from LATAM to EMEA brings fit only accounts in week 2 from 19 to 12, and 148 signal accounts get worked over two weeks instead of 141.</li>
+      <li>No setting gets past about 150, because that is every signal account there is.</li>
+      <li>At 60 new accounts a week instead of 80, fit only work disappears and 20 slots a week are free for follow ups, AE alerts and the region with no rep.</li>
+    </ul>
+    <p class="decide"><strong>My call:</strong> move rep time to EMEA now, make new signal sources the first build, and set the weekly pace once week 2 replies are in. The sources I would add first suit a connectivity sale better than another intent feed: new device certifications, 2G and 3G network switch offs by country, and product sign ups matched to named accounts.</p>
+  </section>
+
+  <section aria-labelledby="prod">
+    <h2 id="prod">From prototype <em>to production</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Prototype against production, scrolls sideways on small screens">
+<table style="min-width:760px">
+<thead><tr><th>Layer</th><th>In the prototype</th><th>In production</th></tr></thead>
+<tbody>
+<tr><td>Accounts, owners, stages</td><td>Excel</td><td>Salesforce as the system of record, read live every Monday</td></tr>
+<tr><td>Signals</td><td>Excel</td><td>One signal record per event, keyed on account, type and date, so nothing lands twice</td></tr>
+<tr><td>Signal sources</td><td>Given</td><td>Website and marketing data, plus job posts, funding and launches through Clay, paid for only on accounts that pass the fit gate</td></tr>
+<tr><td>Weekly run</td><td>Python script</td><td>n8n every Monday at 06:00, writing score, tier and reason onto the account, with a duplicate check before each write and a Slack alert on failure</td></tr>
+<tr><td>What the rep sees</td><td>A workbook tab</td><td>A Slack message at 07:00 and the same list in Salesforce</td></tr>
+<tr><td>Outcomes</td><td>Assumed</td><td>Replies and meetings read back from Salesforce and the sequencer</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">How I would know it works: share of each list with a live signal, meetings per 100 accounts worked and pipeline per SDR hour, split by signal type, against a small group of accounts left unprioritised.</p>
+  </section>
+
+  <section aria-labelledby="built">
+    <h2 id="built">How it was built</h2>
+    <dl>
+      <dt>I did</dt><dd>Every decision: which signals count and how much, the gate, the routing rules, the assumptions and the recommendation. I checked every number on this page against the output.</dd>
+      <dt>AI did</dt><dd>Claude Code wrote the Python from those decisions. No model classifies signals during the run: 77 signal values map to 28 readable rules, and a check confirms every value lands on one.</dd>
+      <dt>Checks</dt><dd>A separate script confirms what must never break: 80 accounts a week, every rep at capacity, no signal dated on or after its Monday, no customer or AE account on a list, no account on both weeks' lists, no company listed twice.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment, the n8n writes into Salesforce and the Slack message. Designed, not running.</dd>
+    </dl>
+    <p class="note">Built on a sample dataset that is not mine to share, so this page shows the rules and the results, not the rows or the code.</p>
+  </section>
+
+  <footer>
+    <a href="/">Back to pragma-gtm.com</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+  </footer>
+</main>
+</body>
+</html>
