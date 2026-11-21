@@ -141,6 +141,58 @@
 </style>
 <style>.ws-own{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.ws-own>div{background:var(--panel);border:1px solid var(--line);padding:10px 14px;font-size:14.5px;color:var(--muted)}.ws-own b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:2px}@media(max-width:760px){.ws-own{grid-template-columns:1fr}}</style>
 <style>.ws-tags{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 4px}.ws-tags span{font-size:13px;color:var(--accent);background:var(--accent-soft);border:1px solid var(--line);padding:3px 10px;border-radius:999px}</style>
+<style id="n8n-css">
+.n8n-wrap{margin:1.2rem 0 .6rem;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+.n8n-bar{display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;border-bottom:1px solid var(--line);font:500 .8rem var(--sans);color:var(--muted)}
+.n8n-bar b{color:var(--ink);font-weight:600}
+.n8n-bar .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 3px rgba(22,163,74,.15)}
+.n8n-bar .pill{margin-left:auto;border:1px solid var(--line);border-radius:999px;padding:.1rem .55rem;font-size:.72rem}
+.n8n-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.n8n-canvas{display:block;width:100%;min-width:720px;height:auto;background:var(--page)}
+.n8n-dot{fill:var(--line)}
+.n8n-edge{fill:none;stroke:var(--muted);stroke-width:2;opacity:.55}
+.n8n-arrow{fill:none;stroke:var(--muted);stroke-width:2;opacity:.55}
+.n8n-port{fill:var(--panel);stroke:var(--muted);stroke-width:1.5;opacity:.8}
+.n8n-node{fill:var(--panel);stroke:var(--line);stroke-width:2}
+.n8n-main{stroke:var(--accent);stroke-width:2.5}
+.n8n-icon{fill:none;stroke:var(--accent);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.n8n-label{font:600 13px var(--sans);fill:var(--ink);text-anchor:middle}
+.n8n-sub{font:400 11px var(--sans);fill:var(--muted);text-anchor:middle}
+.n8n-count{fill:var(--panel);stroke:var(--line)}
+.n8n-count-t{font:500 11px var(--sans);fill:var(--muted);text-anchor:middle}
+.n8n-status{color:var(--muted)}
+.n8n-replay{margin-left:auto;font:600 .74rem var(--sans);color:var(--accent);background:none;border:1px solid var(--line);border-radius:999px;padding:.15rem .65rem;cursor:pointer}
+.n8n-replay[hidden]{display:none}
+.n8n-flow{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-dasharray:.08 1;stroke-dashoffset:1;opacity:0}
+.n8n-ok{opacity:0}
+.n8n-ok circle{fill:#16a34a}
+.n8n-ok path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.n8n-wrap:not(.n8n-anim) .n8n-ok{opacity:1}
+/* animated run: everything starts quiet, then follows the execution order */
+.n8n-anim .n8n-n{opacity:.35;transition:opacity .25s}
+.n8n-anim .n8n-e .n8n-edge,.n8n-anim .n8n-e .n8n-arrow{opacity:.18}
+.n8n-anim .n8n-lbl{opacity:0}
+.n8n-anim.run .n8n-n{animation:n8n-on .5s var(--d) both}
+.n8n-anim.run .n8n-n .n8n-node{animation:n8n-ring .9s var(--d) both}
+.n8n-anim.run .n8n-n .n8n-ok{animation:n8n-pop .3s calc(var(--d) + .4s) both}
+.n8n-anim.run .n8n-e .n8n-edge,.n8n-anim.run .n8n-e .n8n-arrow{animation:n8n-edge .3s var(--d) both}
+.n8n-anim.run .n8n-e .n8n-flow{animation:n8n-flow .6s var(--d) both}
+.n8n-anim.run .n8n-lbl{animation:n8n-lbl .3s var(--d) both}
+.n8n-anim.done .n8n-n,.n8n-anim.done .n8n-lbl{opacity:1}
+.n8n-anim.done .n8n-ok{opacity:1}
+.n8n-anim.done .n8n-e .n8n-edge,.n8n-anim.done .n8n-e .n8n-arrow{opacity:.55}
+.n8n-wrap.n8n-anim.run:not(.done) .dot{background:var(--accent);animation:n8n-blink 1s infinite}
+@keyframes n8n-lbl{from{opacity:0;transform:translateY(3px)}to{opacity:1}}
+@keyframes n8n-on{from{opacity:.35}to{opacity:1}}
+@keyframes n8n-ring{0%{stroke:var(--line)}40%{stroke:var(--accent);stroke-width:4}100%{stroke:inherit}}
+@keyframes n8n-pop{from{opacity:0;transform:scale(.3)}to{opacity:1}}
+@keyframes n8n-edge{from{opacity:.18}to{opacity:.55}}
+@keyframes n8n-flow{0%{opacity:0;stroke-dashoffset:1}6%{opacity:1}90%{opacity:1}100%{opacity:0;stroke-dashoffset:.08}}
+@keyframes n8n-blink{50%{opacity:.3}}
+.n8n-cap{padding:.6rem .9rem .8rem;font:400 .86rem/1.5 var(--sans);color:var(--muted);border-top:1px solid var(--line)}
+.n8n-bar .swipe{display:none;margin-left:auto;font-size:.72rem}
+@media (max-width:760px){.n8n-bar .pill{display:none}.n8n-bar .swipe{display:inline}.n8n-status{display:none}}
+</style>
 </head>
 <body>
 <main>
@@ -242,12 +294,109 @@ Yuval</pre></div></div>
     <p>How I would judge it: positive reply rate and meetings booked per 100 contacts, split by signal type, against a small held out group. After two weeks, a signal type that does not beat the held out group loses its weight.</p></div></details><!--/fold-->
   </section>
 
+  <!--n8n-section--><section aria-labelledby="n8n" class="n8n-section">
+    <h2 id="n8n">Run it in <em>n8n</em></h2>
+    <div class="n8n-wrap" data-n8n data-total="3.15">
+      <div class="n8n-bar"><span class="dot"></span><b>Signal outreach</b><span class="n8n-status" data-idle="10 nodes · runs every Monday" data-run="Running on the sample data" data-done="Run finished · 10 nodes">10 nodes · runs every Monday</span><button class="n8n-replay" type="button" hidden>Run again</button><span class="swipe">swipe to see it all</span></div>
+      <div class="n8n-scroll"><svg class="n8n-canvas" viewBox="-40 50 1070 660" role="img" aria-label="n8n workflow: Signal outreach: write the first email from the freshest buying signal, or send nothing" xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="n8n-dots-signal-outreach" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" class="n8n-dot"/></pattern></defs>
+<rect x="-40" y="50" width="1070" height="660" fill="url(#n8n-dots-signal-outreach)"/>
+<g class="n8n-e" style="--d:0.25s"><path class="n8n-edge" d="M80,340.0 C150.0,340.0 150.0,340.0 220,340.0"/><path class="n8n-flow" pathLength="1" d="M80,340.0 C150.0,340.0 150.0,340.0 220,340.0"/><circle class="n8n-port" cx="80" cy="340.0" r="4"/><path class="n8n-arrow" d="M212,335.0 L220,340.0 L212,345.0"/></g>
+<g class="n8n-e" style="--d:0.80s"><path class="n8n-edge" d="M300,340.0 C370.0,340.0 370.0,340.0 440,340.0"/><path class="n8n-flow" pathLength="1" d="M300,340.0 C370.0,340.0 370.0,340.0 440,340.0"/><circle class="n8n-port" cx="300" cy="340.0" r="4"/><path class="n8n-arrow" d="M432,335.0 L440,340.0 L432,345.0"/></g>
+<g class="n8n-e" style="--d:1.35s"><path class="n8n-edge" d="M520,340.0 C600.0,340.0 600.0,120.0 680,120.0"/><path class="n8n-flow" pathLength="1" d="M520,340.0 C600.0,340.0 600.0,120.0 680,120.0"/><circle class="n8n-port" cx="520" cy="340.0" r="4"/><path class="n8n-arrow" d="M672,115.0 L680,120.0 L672,125.0"/></g>
+<g class="n8n-e" style="--d:1.35s"><path class="n8n-edge" d="M520,340.0 C600.0,340.0 600.0,280.0 680,280.0"/><path class="n8n-flow" pathLength="1" d="M520,340.0 C600.0,340.0 600.0,280.0 680,280.0"/><circle class="n8n-port" cx="520" cy="340.0" r="4"/><path class="n8n-arrow" d="M672,275.0 L680,280.0 L672,285.0"/></g>
+<g class="n8n-e" style="--d:1.35s"><path class="n8n-edge" d="M520,340.0 C600.0,340.0 600.0,440.0 680,440.0"/><path class="n8n-flow" pathLength="1" d="M520,340.0 C600.0,340.0 600.0,440.0 680,440.0"/><circle class="n8n-port" cx="520" cy="340.0" r="4"/><path class="n8n-arrow" d="M672,435.0 L680,440.0 L672,445.0"/></g>
+<g class="n8n-e" style="--d:1.35s"><path class="n8n-edge" d="M520,340.0 C600.0,340.0 600.0,600.0 680,600.0"/><path class="n8n-flow" pathLength="1" d="M520,340.0 C600.0,340.0 600.0,600.0 680,600.0"/><circle class="n8n-port" cx="520" cy="340.0" r="4"/><path class="n8n-arrow" d="M672,595.0 L680,600.0 L672,605.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M760,120.0 C830.0,120.0 830.0,120.0 900,120.0"/><path class="n8n-flow" pathLength="1" d="M760,120.0 C830.0,120.0 830.0,120.0 900,120.0"/><circle class="n8n-port" cx="760" cy="120.0" r="4"/><path class="n8n-arrow" d="M892,115.0 L900,120.0 L892,125.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M760,280.0 C830.0,280.0 830.0,280.0 900,280.0"/><path class="n8n-flow" pathLength="1" d="M760,280.0 C830.0,280.0 830.0,280.0 900,280.0"/><circle class="n8n-port" cx="760" cy="280.0" r="4"/><path class="n8n-arrow" d="M892,275.0 L900,280.0 L892,285.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M760,440.0 C830.0,440.0 830.0,440.0 900,440.0"/><path class="n8n-flow" pathLength="1" d="M760,440.0 C830.0,440.0 830.0,440.0 900,440.0"/><circle class="n8n-port" cx="760" cy="440.0" r="4"/><path class="n8n-arrow" d="M892,435.0 L900,440.0 L892,445.0"/></g>
+<g class="n8n-n" style="--d:0.00s">
+<path class="n8n-node" d="M40.0,300 H70 Q80,300 80,310 V370 Q80,380 70,380 H40.0 A40.0,40.0 0 0 1 40.0,300 Z"/>
+<g class="n8n-icon" transform="translate(22.0,322.0) scale(1.5)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
+<g class="n8n-ok" transform="translate(76,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="40.0" y="397">Every Monday</text>
+<text class="n8n-sub" x="40.0" y="413">Mon 07:00</text>
+</g>
+<g class="n8n-n" style="--d:0.55s">
+<rect class="n8n-node" x="220" y="300" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(242.0,322.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(296,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="260.0" y="397">Read contacts</text>
+<text class="n8n-sub" x="260.0" y="413">Google Sheets, read</text>
+</g>
+<g class="n8n-n" style="--d:1.10s">
+<rect class="n8n-node n8n-main" x="440" y="300" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(462.0,322.0) scale(1.5)"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4M13 6l-2 12"/></g>
+<g class="n8n-ok" transform="translate(516,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="480.0" y="397">Run the</text>
+<text class="n8n-label" x="480.0" y="412">playbook</text>
+<text class="n8n-sub" x="480.0" y="428">JavaScript, tested</text>
+</g>
+<g class="n8n-n" style="--d:1.65s">
+<rect class="n8n-node" x="680" y="80" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(702.0,102.0) scale(1.5)"><path d="M5 12h5M10 12l4-5h5M10 12l4 5h5"/><circle cx="19" cy="7" r="1"/><circle cx="19" cy="17" r="1"/></g>
+<g class="n8n-ok" transform="translate(756,84)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="720.0" y="177">Rows: ready</text>
+<text class="n8n-sub" x="720.0" y="193">split out</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="80" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,102.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(976,84)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="177">Write ready</text>
+<text class="n8n-sub" x="940.0" y="193">Google Sheets, append</text>
+</g>
+<g class="n8n-n" style="--d:1.65s">
+<rect class="n8n-node" x="680" y="240" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(702.0,262.0) scale(1.5)"><path d="M5 12h5M10 12l4-5h5M10 12l4 5h5"/><circle cx="19" cy="7" r="1"/><circle cx="19" cy="17" r="1"/></g>
+<g class="n8n-ok" transform="translate(756,244)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="720.0" y="337">Rows: review</text>
+<text class="n8n-sub" x="720.0" y="353">split out</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="240" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,262.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(976,244)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="337">Write review</text>
+<text class="n8n-sub" x="940.0" y="353">Google Sheets, append</text>
+</g>
+<g class="n8n-n" style="--d:1.65s">
+<rect class="n8n-node" x="680" y="400" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(702.0,422.0) scale(1.5)"><path d="M5 12h5M10 12l4-5h5M10 12l4 5h5"/><circle cx="19" cy="7" r="1"/><circle cx="19" cy="17" r="1"/></g>
+<g class="n8n-ok" transform="translate(756,404)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="720.0" y="497">Rows: held</text>
+<text class="n8n-sub" x="720.0" y="513">split out</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="400" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,422.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(976,404)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="497">Write held</text>
+<text class="n8n-sub" x="940.0" y="513">Google Sheets, append</text>
+</g>
+<g class="n8n-n" style="--d:1.65s">
+<rect class="n8n-node" x="680" y="560" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(702.0,582.0) scale(1.5)"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></g>
+<g class="n8n-ok" transform="translate(756,564)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="720.0" y="657">Post to Slack</text>
+<text class="n8n-sub" x="720.0" y="673">Slack, #revops</text>
+</g>
+<g class="n8n-lbl" style="--d:1.07s"><rect class="n8n-count" x="335.0" y="330.0" width="70" height="20" rx="10"/><text class="n8n-count-t" x="370.0" y="344.0">119 rows</text></g>
+<g class="n8n-lbl" style="--d:1.62s"><rect class="n8n-count" x="595.5" y="590.0" width="77" height="20" rx="10"/><text class="n8n-count-t" x="634" y="604.0">1 message</text></g>
+<g class="n8n-lbl" style="--d:2.17s"><rect class="n8n-count" x="795.0" y="110.0" width="70" height="20" rx="10"/><text class="n8n-count-t" x="830.0" y="124.0">38 ready</text></g>
+<g class="n8n-lbl" style="--d:2.17s"><rect class="n8n-count" x="784.5" y="270.0" width="91" height="20" rx="10"/><text class="n8n-count-t" x="830.0" y="284.0">3 to review</text></g>
+<g class="n8n-lbl" style="--d:2.17s"><rect class="n8n-count" x="798.5" y="430.0" width="63" height="20" rx="10"/><text class="n8n-count-t" x="830.0" y="444.0">78 held</text></g>
+</svg></div>
+      <p class="n8n-cap">Every Monday at 07:00 it reads the enriched contacts, picks one signal per contact, writes the ready, review and held tabs, and posts the funnel to Slack. Held covers everyone kept back, each with the reason: 2 in cleaning, 43 at the gate, 33 to nurture. Nothing is sent from n8n. The code inside gives the same rows as the Python sample on the same data and date, checked row by row, and the workflow imports and runs in n8n. Counts on the lines are from the sample run.</p>
+    </div>
+  </section><!--/n8n-section-->
+
   <section aria-labelledby="built">
     <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote the scripts, the tests and a first draft of the email lines.</dd>
       <dt>I did</dt><dd>Set the gate rules, signal weights, freshness window and copy limits, and read every email in <code>ready.csv</code> against its input row.</dd>
-      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the Audiences and CLI reads below, the n8n step that pushes <code>ready.csv</code> into a sequencer, and reply handling. All of it is designed, none of it is running.</dd>
+      <dt>Not built</dt><dd>The Clay enrichment (those columns are generated for this run), the Audiences and CLI reads below, the step that pushes the ready list into a sequencer, and reply handling. Designed, not running. The n8n workflow above is built: it reads the contacts from Google Sheets, writes the ready, review and held tabs and posts to Slack. Nothing is sent from it.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_contacts.py</code>, then <code>python3 signal_outreach.py data/contacts_synthetic.csv --out output</code>, then <code>python3 -m unittest test_signal_outreach.py</code>. Standard library only.</dd>
     </dl></div></details><!--/fold-->
   </section>
@@ -768,6 +917,28 @@ document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener
     }, { rootMargin: '-30% 0px -65% 0px' });
     Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
   }
+})();
+</script>
+<script id="n8n-js">
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-n8n]').forEach(function(w){
+    var st = w.querySelector('.n8n-status'), btn = w.querySelector('.n8n-replay');
+    var total = parseFloat(w.getAttribute('data-total')) * 1000, timer;
+    if (reduce || !('IntersectionObserver' in window)) { st.textContent = st.dataset.done; return; }
+    w.classList.add('n8n-anim');
+    function run(){
+      clearTimeout(timer);
+      w.classList.remove('run','done'); void w.offsetWidth;
+      w.classList.add('run'); st.textContent = st.dataset.run; btn.hidden = true;
+      timer = setTimeout(function(){ w.classList.add('done'); st.textContent = st.dataset.done; btn.hidden = false; }, total);
+    }
+    btn.addEventListener('click', run);
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { run(); io.disconnect(); } });
+    }, {threshold: .35});
+    io.observe(w);
+  });
 })();
 </script>
 </body>

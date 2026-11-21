@@ -145,6 +145,58 @@
 </style>
 <style>.ws-own{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.ws-own>div{background:var(--panel);border:1px solid var(--line);padding:10px 14px;font-size:14.5px;color:var(--muted)}.ws-own b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:2px}@media(max-width:760px){.ws-own{grid-template-columns:1fr}}</style>
 <style>.ws-tags{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 4px}.ws-tags span{font-size:13px;color:var(--accent);background:var(--accent-soft);border:1px solid var(--line);padding:3px 10px;border-radius:999px}</style>
+<style id="n8n-css">
+.n8n-wrap{margin:1.2rem 0 .6rem;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+.n8n-bar{display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;border-bottom:1px solid var(--line);font:500 .8rem var(--sans);color:var(--muted)}
+.n8n-bar b{color:var(--ink);font-weight:600}
+.n8n-bar .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 3px rgba(22,163,74,.15)}
+.n8n-bar .pill{margin-left:auto;border:1px solid var(--line);border-radius:999px;padding:.1rem .55rem;font-size:.72rem}
+.n8n-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.n8n-canvas{display:block;width:100%;min-width:720px;height:auto;background:var(--page)}
+.n8n-dot{fill:var(--line)}
+.n8n-edge{fill:none;stroke:var(--muted);stroke-width:2;opacity:.55}
+.n8n-arrow{fill:none;stroke:var(--muted);stroke-width:2;opacity:.55}
+.n8n-port{fill:var(--panel);stroke:var(--muted);stroke-width:1.5;opacity:.8}
+.n8n-node{fill:var(--panel);stroke:var(--line);stroke-width:2}
+.n8n-main{stroke:var(--accent);stroke-width:2.5}
+.n8n-icon{fill:none;stroke:var(--accent);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.n8n-label{font:600 13px var(--sans);fill:var(--ink);text-anchor:middle}
+.n8n-sub{font:400 11px var(--sans);fill:var(--muted);text-anchor:middle}
+.n8n-count{fill:var(--panel);stroke:var(--line)}
+.n8n-count-t{font:500 11px var(--sans);fill:var(--muted);text-anchor:middle}
+.n8n-status{color:var(--muted)}
+.n8n-replay{margin-left:auto;font:600 .74rem var(--sans);color:var(--accent);background:none;border:1px solid var(--line);border-radius:999px;padding:.15rem .65rem;cursor:pointer}
+.n8n-replay[hidden]{display:none}
+.n8n-flow{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-dasharray:.08 1;stroke-dashoffset:1;opacity:0}
+.n8n-ok{opacity:0}
+.n8n-ok circle{fill:#16a34a}
+.n8n-ok path{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.n8n-wrap:not(.n8n-anim) .n8n-ok{opacity:1}
+/* animated run: everything starts quiet, then follows the execution order */
+.n8n-anim .n8n-n{opacity:.35;transition:opacity .25s}
+.n8n-anim .n8n-e .n8n-edge,.n8n-anim .n8n-e .n8n-arrow{opacity:.18}
+.n8n-anim .n8n-lbl{opacity:0}
+.n8n-anim.run .n8n-n{animation:n8n-on .5s var(--d) both}
+.n8n-anim.run .n8n-n .n8n-node{animation:n8n-ring .9s var(--d) both}
+.n8n-anim.run .n8n-n .n8n-ok{animation:n8n-pop .3s calc(var(--d) + .4s) both}
+.n8n-anim.run .n8n-e .n8n-edge,.n8n-anim.run .n8n-e .n8n-arrow{animation:n8n-edge .3s var(--d) both}
+.n8n-anim.run .n8n-e .n8n-flow{animation:n8n-flow .6s var(--d) both}
+.n8n-anim.run .n8n-lbl{animation:n8n-lbl .3s var(--d) both}
+.n8n-anim.done .n8n-n,.n8n-anim.done .n8n-lbl{opacity:1}
+.n8n-anim.done .n8n-ok{opacity:1}
+.n8n-anim.done .n8n-e .n8n-edge,.n8n-anim.done .n8n-e .n8n-arrow{opacity:.55}
+.n8n-wrap.n8n-anim.run:not(.done) .dot{background:var(--accent);animation:n8n-blink 1s infinite}
+@keyframes n8n-lbl{from{opacity:0;transform:translateY(3px)}to{opacity:1}}
+@keyframes n8n-on{from{opacity:.35}to{opacity:1}}
+@keyframes n8n-ring{0%{stroke:var(--line)}40%{stroke:var(--accent);stroke-width:4}100%{stroke:inherit}}
+@keyframes n8n-pop{from{opacity:0;transform:scale(.3)}to{opacity:1}}
+@keyframes n8n-edge{from{opacity:.18}to{opacity:.55}}
+@keyframes n8n-flow{0%{opacity:0;stroke-dashoffset:1}6%{opacity:1}90%{opacity:1}100%{opacity:0;stroke-dashoffset:.08}}
+@keyframes n8n-blink{50%{opacity:.3}}
+.n8n-cap{padding:.6rem .9rem .8rem;font:400 .86rem/1.5 var(--sans);color:var(--muted);border-top:1px solid var(--line)}
+.n8n-bar .swipe{display:none;margin-left:auto;font-size:.72rem}
+@media (max-width:760px){.n8n-bar .pill{display:none}.n8n-bar .swipe{display:inline}.n8n-status{display:none}}
+</style>
 </head>
 <body>
 <main>
@@ -249,12 +301,124 @@
     <p class="decide"><strong>How I will know.</strong> After four weeks the sellers have called the first 119. If fewer than 1 in 10 took a demo, I stop and the 85 are not called. If 1 in 5 did, the high case holds. One weekly dashboard by group, reason and seller shows accounts handed out, reached, demos, deals and new MRR.</p>
   </section>
 
+  <!--n8n-section--><section aria-labelledby="n8n" class="n8n-section">
+    <h2 id="n8n">Run it in <em>n8n</em></h2>
+    <div class="n8n-wrap" data-n8n data-total="3.70">
+      <div class="n8n-bar"><span class="dot"></span><b>Lost deal reactivation</b><span class="n8n-status" data-idle="11 nodes · runs every Monday" data-run="Running on the sample data" data-done="Run finished · 11 nodes">11 nodes · runs every Monday</span><button class="n8n-replay" type="button" hidden>Run again</button><span class="swipe">swipe to see it all</span></div>
+      <div class="n8n-scroll"><svg class="n8n-canvas" viewBox="-40 50 1290 660" role="img" aria-label="n8n workflow: Lost deal reactivation: which lost accounts deserve a second call" xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="n8n-dots-lost-deal-reactivation" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" class="n8n-dot"/></pattern></defs>
+<rect x="-40" y="50" width="1290" height="660" fill="url(#n8n-dots-lost-deal-reactivation)"/>
+<g class="n8n-e" style="--d:0.25s"><path class="n8n-edge" d="M80,340.0 C150.0,340.0 150.0,340.0 220,340.0"/><path class="n8n-flow" pathLength="1" d="M80,340.0 C150.0,340.0 150.0,340.0 220,340.0"/><circle class="n8n-port" cx="80" cy="340.0" r="4"/><path class="n8n-arrow" d="M212,335.0 L220,340.0 L212,345.0"/></g>
+<g class="n8n-e" style="--d:0.80s"><path class="n8n-edge" d="M300,340.0 C370.0,340.0 370.0,340.0 440,340.0"/><path class="n8n-flow" pathLength="1" d="M300,340.0 C370.0,340.0 370.0,340.0 440,340.0"/><circle class="n8n-port" cx="300" cy="340.0" r="4"/><path class="n8n-arrow" d="M432,335.0 L440,340.0 L432,345.0"/></g>
+<g class="n8n-e" style="--d:1.35s"><path class="n8n-edge" d="M520,340.0 C590.0,340.0 590.0,340.0 660,340.0"/><path class="n8n-flow" pathLength="1" d="M520,340.0 C590.0,340.0 590.0,340.0 660,340.0"/><circle class="n8n-port" cx="520" cy="340.0" r="4"/><path class="n8n-arrow" d="M652,335.0 L660,340.0 L652,345.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M740,340.0 C820.0,340.0 820.0,120.0 900,120.0"/><path class="n8n-flow" pathLength="1" d="M740,340.0 C820.0,340.0 820.0,120.0 900,120.0"/><circle class="n8n-port" cx="740" cy="340.0" r="4"/><path class="n8n-arrow" d="M892,115.0 L900,120.0 L892,125.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M740,340.0 C820.0,340.0 820.0,280.0 900,280.0"/><path class="n8n-flow" pathLength="1" d="M740,340.0 C820.0,340.0 820.0,280.0 900,280.0"/><circle class="n8n-port" cx="740" cy="340.0" r="4"/><path class="n8n-arrow" d="M892,275.0 L900,280.0 L892,285.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M740,340.0 C820.0,340.0 820.0,440.0 900,440.0"/><path class="n8n-flow" pathLength="1" d="M740,340.0 C820.0,340.0 820.0,440.0 900,440.0"/><circle class="n8n-port" cx="740" cy="340.0" r="4"/><path class="n8n-arrow" d="M892,435.0 L900,440.0 L892,445.0"/></g>
+<g class="n8n-e" style="--d:1.90s"><path class="n8n-edge" d="M740,340.0 C820.0,340.0 820.0,600.0 900,600.0"/><path class="n8n-flow" pathLength="1" d="M740,340.0 C820.0,340.0 820.0,600.0 900,600.0"/><circle class="n8n-port" cx="740" cy="340.0" r="4"/><path class="n8n-arrow" d="M892,595.0 L900,600.0 L892,605.0"/></g>
+<g class="n8n-e" style="--d:2.45s"><path class="n8n-edge" d="M980,120.0 C1050.0,120.0 1050.0,120.0 1120,120.0"/><path class="n8n-flow" pathLength="1" d="M980,120.0 C1050.0,120.0 1050.0,120.0 1120,120.0"/><circle class="n8n-port" cx="980" cy="120.0" r="4"/><path class="n8n-arrow" d="M1112,115.0 L1120,120.0 L1112,125.0"/></g>
+<g class="n8n-e" style="--d:2.45s"><path class="n8n-edge" d="M980,280.0 C1050.0,280.0 1050.0,280.0 1120,280.0"/><path class="n8n-flow" pathLength="1" d="M980,280.0 C1050.0,280.0 1050.0,280.0 1120,280.0"/><circle class="n8n-port" cx="980" cy="280.0" r="4"/><path class="n8n-arrow" d="M1112,275.0 L1120,280.0 L1112,285.0"/></g>
+<g class="n8n-e" style="--d:2.45s"><path class="n8n-edge" d="M980,440.0 C1050.0,440.0 1050.0,440.0 1120,440.0"/><path class="n8n-flow" pathLength="1" d="M980,440.0 C1050.0,440.0 1050.0,440.0 1120,440.0"/><circle class="n8n-port" cx="980" cy="440.0" r="4"/><path class="n8n-arrow" d="M1112,435.0 L1120,440.0 L1112,445.0"/></g>
+<g class="n8n-n" style="--d:0.00s">
+<path class="n8n-node" d="M40.0,300 H70 Q80,300 80,310 V370 Q80,380 70,380 H40.0 A40.0,40.0 0 0 1 40.0,300 Z"/>
+<g class="n8n-icon" transform="translate(22.0,322.0) scale(1.5)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
+<g class="n8n-ok" transform="translate(76,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="40.0" y="397">Every Monday</text>
+<text class="n8n-sub" x="40.0" y="413">Mon 07:00</text>
+</g>
+<g class="n8n-n" style="--d:0.55s">
+<rect class="n8n-node" x="220" y="300" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(242.0,322.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(296,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="260.0" y="397">Read lost</text>
+<text class="n8n-label" x="260.0" y="412">accounts</text>
+<text class="n8n-sub" x="260.0" y="428">Google Sheets, read</text>
+</g>
+<g class="n8n-n" style="--d:1.10s">
+<rect class="n8n-node" x="440" y="300" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(462.0,322.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(516,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="480.0" y="397">Read last call</text>
+<text class="n8n-label" x="480.0" y="412">list</text>
+<text class="n8n-sub" x="480.0" y="428">Google Sheets, read</text>
+</g>
+<g class="n8n-n" style="--d:1.65s">
+<rect class="n8n-node n8n-main" x="660" y="300" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(682.0,322.0) scale(1.5)"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4M13 6l-2 12"/></g>
+<g class="n8n-ok" transform="translate(736,304)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="700.0" y="397">Run the</text>
+<text class="n8n-label" x="700.0" y="412">playbook</text>
+<text class="n8n-sub" x="700.0" y="428">JavaScript, tested</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="80" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,102.0) scale(1.5)"><path d="M5 12h5M10 12l4-5h5M10 12l4 5h5"/><circle cx="19" cy="7" r="1"/><circle cx="19" cy="17" r="1"/></g>
+<g class="n8n-ok" transform="translate(976,84)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="177">Rows: call_list</text>
+<text class="n8n-sub" x="940.0" y="193">split out</text>
+</g>
+<g class="n8n-n" style="--d:2.75s">
+<rect class="n8n-node" x="1120" y="80" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(1142.0,102.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(1196,84)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="1160.0" y="177">Write call_list</text>
+<text class="n8n-sub" x="1160.0" y="193">Google Sheets, append</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="240" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,262.0) scale(1.5)"><path d="M5 12h5M10 12l4-5h5M10 12l4 5h5"/><circle cx="19" cy="7" r="1"/><circle cx="19" cy="17" r="1"/></g>
+<g class="n8n-ok" transform="translate(976,244)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="337">Rows:</text>
+<text class="n8n-label" x="940.0" y="352">email_first</text>
+<text class="n8n-sub" x="940.0" y="368">split out</text>
+</g>
+<g class="n8n-n" style="--d:2.75s">
+<rect class="n8n-node" x="1120" y="240" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(1142.0,262.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(1196,244)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="1160.0" y="337">Write</text>
+<text class="n8n-label" x="1160.0" y="352">email_first</text>
+<text class="n8n-sub" x="1160.0" y="368">Google Sheets, append</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="400" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,422.0) scale(1.5)"><path d="M5 12h5M10 12l4-5h5M10 12l4 5h5"/><circle cx="19" cy="7" r="1"/><circle cx="19" cy="17" r="1"/></g>
+<g class="n8n-ok" transform="translate(976,404)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="497">Rows:</text>
+<text class="n8n-label" x="940.0" y="512">duplicates</text>
+<text class="n8n-sub" x="940.0" y="528">split out</text>
+</g>
+<g class="n8n-n" style="--d:2.75s">
+<rect class="n8n-node" x="1120" y="400" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(1142.0,422.0) scale(1.5)"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></g>
+<g class="n8n-ok" transform="translate(1196,404)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="1160.0" y="497">Write</text>
+<text class="n8n-label" x="1160.0" y="512">duplicates</text>
+<text class="n8n-sub" x="1160.0" y="528">Google Sheets, append</text>
+</g>
+<g class="n8n-n" style="--d:2.20s">
+<rect class="n8n-node" x="900" y="560" width="80" height="80" rx="10"/>
+<g class="n8n-icon" transform="translate(922.0,582.0) scale(1.5)"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></g>
+<g class="n8n-ok" transform="translate(976,564)"><circle r="9"/><path d="M-4,0 l3,3 l5,-6"/></g>
+<text class="n8n-label" x="940.0" y="657">Post to Slack</text>
+<text class="n8n-sub" x="940.0" y="673">Slack, #revops</text>
+</g>
+<g class="n8n-lbl" style="--d:1.07s"><rect class="n8n-count" x="335.0" y="330.0" width="70" height="20" rx="10"/><text class="n8n-count-t" x="370.0" y="344.0">760 rows</text></g>
+<g class="n8n-lbl" style="--d:1.62s"><rect class="n8n-count" x="551.5" y="330.0" width="77" height="20" rx="10"/><text class="n8n-count-t" x="590.0" y="344.0">last week</text></g>
+<g class="n8n-lbl" style="--d:2.17s"><rect class="n8n-count" x="815.5" y="590.0" width="77" height="20" rx="10"/><text class="n8n-count-t" x="854" y="604.0">1 message</text></g>
+<g class="n8n-lbl" style="--d:2.72s"><rect class="n8n-count" x="1008.0" y="110.0" width="84" height="20" rx="10"/><text class="n8n-count-t" x="1050.0" y="124.0">40 to call</text></g>
+<g class="n8n-lbl" style="--d:2.72s"><rect class="n8n-count" x="1004.5" y="270.0" width="91" height="20" rx="10"/><text class="n8n-count-t" x="1050.0" y="284.0">74 sendable</text></g>
+<g class="n8n-lbl" style="--d:2.72s"><rect class="n8n-count" x="1011.5" y="430.0" width="77" height="20" rx="10"/><text class="n8n-count-t" x="1050.0" y="444.0">45 groups</text></g>
+</svg></div>
+      <p class="n8n-cap">Every Monday at 07:00 it reads every lost account and last week&#x27;s list, writes this week&#x27;s call list, the email first list (the 74 of 90 with a usable email) and the 45 groups of probable duplicates, and posts each seller&#x27;s list to Slack. The code inside gives the same rows as the Python sample on the same data and date, checked row by row, and the workflow imports and runs in n8n. Counts on the lines are from the sample run.</p>
+    </div>
+  </section><!--/n8n-section-->
+
   <section aria-labelledby="built">
     <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
     <dl>
       <dt>I did</dt><dd>The groups, the reasons, the cuts, the four rules above, the routing and the stop rule after week 4. I checked every number on this page against the output.</dd>
       <dt>AI did</dt><dd>Claude Code wrote both scripts from those rules. In production Claude drafts a researched first line for each call, and a seller approves it before it is used.</dd>
-      <dt>Not built</dt><dd>The private app that writes back to HubSpot, the workflows and the sequence. Specified, not running.</dd>
+      <dt>Not built</dt><dd>The private app that writes back to HubSpot, the workflows and the sequence. Specified, not running. The n8n workflow above is built: it reads the lost accounts and last week's list from Google Sheets, writes this week's lists and posts each seller's list to Slack.</dd>
       <dt>Run it</dt><dd><code>python3 make_synthetic_lost.py</code> then <code>python3 reactivate.py data/lost_accounts.csv --out output</code>. Standard library only.</dd>
     </dl>
     <p class="note">Synthetic input. Every account and owner is invented to exercise the rules and says nothing about real companies.</p></div></details><!--/fold-->
@@ -589,6 +753,28 @@ document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener
     }, { rootMargin: '-30% 0px -65% 0px' });
     Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
   }
+})();
+</script>
+<script id="n8n-js">
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-n8n]').forEach(function(w){
+    var st = w.querySelector('.n8n-status'), btn = w.querySelector('.n8n-replay');
+    var total = parseFloat(w.getAttribute('data-total')) * 1000, timer;
+    if (reduce || !('IntersectionObserver' in window)) { st.textContent = st.dataset.done; return; }
+    w.classList.add('n8n-anim');
+    function run(){
+      clearTimeout(timer);
+      w.classList.remove('run','done'); void w.offsetWidth;
+      w.classList.add('run'); st.textContent = st.dataset.run; btn.hidden = true;
+      timer = setTimeout(function(){ w.classList.add('done'); st.textContent = st.dataset.done; btn.hidden = false; }, total);
+    }
+    btn.addEventListener('click', run);
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { run(); io.disconnect(); } });
+    }, {threshold: .35});
+    io.observe(w);
+  });
 })();
 </script>
 </body>
