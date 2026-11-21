@@ -208,7 +208,7 @@
 
     <div class="ws-own"><div><b>Designed and built</b><span>Gate, signal scoring, three step emails, copy check, tests. Rules are mine; Claude Code wrote the code from them.</span></div><div><b>Designed, not running</b><span>Clay enrichment, sequencer push via n8n, reply handling.</span></div></div><!--/ws-own-->
   </header>
-  <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#run">Output</a><a href="#change" class="folded">Next changes</a><a href="#n8n">n8n</a><a href="#built" class="folded">How it was built</a><a href="#clay" class="folded">Clay</a><a href="#files" class="folded">Code</a></nav>
+  <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#n8n">n8n</a><a href="#run">Output</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#clay" class="folded">Clay</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
@@ -220,78 +220,6 @@
       <div class="step"><b>Check</b><span>Step 1 under 90 words, short subject, no leftover placeholders, banned phrases, spam words or extra links. Risky emails too. Failures go to a person.</span></div>
       <div class="step"><b>Schedule</b><span>Strongest and freshest first, one new contact per company per day, 20 per mailbox per day, weekdays at 08:30 local time.</span></div>
     </div>
-  </section>
-
-  <section aria-labelledby="run">
-    <h2 id="run">Run output</h2>
-    <p>A list of 119 contacts across 93 companies, built to look like a real CRM export joined with enrichment. 38 sequences (32% of the list) are ready to import. The daily cap of 20 pushed the rest to Tuesday, and the one company rule moved a second contact to Wednesday.</p>
-    <div class="tablewrap funnel" tabindex="0" role="region" aria-label="Funnel, scrolls sideways on small screens">
-    <table>
-      <thead><tr><th>Stage</th><th class="n">Contacts</th><th class="n">Share</th><th></th><th>Why</th></tr></thead>
-      <tbody>
-<tr><td>Contacts in</td><td class="n total">119</td><td class="n">100%</td><td class="bar"><span class="b" style="width:100.0%"></span></td><td></td></tr>
-<tr><td>Removed in cleaning</td><td class="n total">2</td><td class="n">2%</td><td class="bar"><span class="b" style="width:1.7%"></span></td><td>one exact duplicate, one row with unreadable signal data</td></tr>
-<tr><td>Held at the gate</td><td class="n total">43</td><td class="n">36%</td><td class="bar"><span class="b" style="width:36.1%"></span></td><td>11 contacted in the last 30 days, 9 opted out, 8 title matches no persona, check by hand, 4 existing customer, 3 email status invalid, 3 open deal, owned by an AE, 3 partner, 1 email status unknown, 1 personal email</td></tr>
-<tr><td>Nurture, no usable signal</td><td class="n total">33</td><td class="n">28%</td><td class="bar"><span class="b" style="width:27.7%"></span></td><td>24 no signal in the last 45 days, 9 signal score below 2</td></tr>
-<tr><td>Stopped by the copy check</td><td class="n total">3</td><td class="n">3%</td><td class="bar"><span class="b" style="width:2.5%"></span></td><td>2 spam word &#x27;free&#x27;, 1 email is risky (catch all), confirm before sending</td></tr>
-<tr><td>Ready to import</td><td class="n total">38</td><td class="n">32%</td><td class="bar"><span class="b" style="width:31.9%"></span></td><td>first emails: 20 on 02.11, 17 on 03.11, 1 on 04.11</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p style="margin-top:16px">The ready 38 split by signal: 11 event, 9 hiring, 7 funding, 6 tech change, 5 content. By persona: 15 revops, 10 sales leader, 8 marketing leader, 5 founder. The largest single loss is 24 contacts with no signal at all in the last 45 days. In a real list that number measures enrichment coverage as much as buyer intent, so it is the first one I would watch.</p>
-    <p class="mailhead" style="margin-top:22px">Top 10 of 38 ready contacts. The full list with all three emails is in ready.csv.</p>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="Ready contacts, scrolls sideways on small screens">
-    <table>
-      <thead><tr><th>Contact</th><th>Signal used</th><th class="n">Score</th><th>Subject</th><th>Step 1 goes out</th></tr></thead>
-      <tbody>
-<tr><td class="acct">Nora, Synthetic Company Q2<span class="sub">sales leader</span></td><td>hiring: a first RevOps analyst (10 days)</td><td class="n total">5</td><td>your hiring plan</td><td>Monday 08:30 Europe/Brussels</td></tr>
-<tr><td class="acct">Hanna, Synthetic Company O3<span class="sub">founder</span></td><td>hiring: three account executives (6 days)</td><td class="n total">4</td><td>your hiring plan</td><td>Monday 08:30 Europe/Brussels</td></tr>
-<tr><td class="acct">Felix, Synthetic Company V2<span class="sub">marketing leader</span></td><td>tech_change: added a scheduling tool to their demo page (19 days)</td><td class="n total">4</td><td>routing after the switch</td><td>Monday 08:30 Europe/Berlin</td></tr>
-<tr><td class="acct">Noah, Synthetic Company R3<span class="sub">founder</span></td><td>hiring: a sales ops analyst (21 days)</td><td class="n total">4</td><td>your hiring plan</td><td>Monday 08:30 Europe/Berlin</td></tr>
-<tr><td class="acct">Tim, Synthetic Company S<span class="sub">revops</span></td><td>hiring: a sales ops analyst (1 days)</td><td class="n total">3</td><td>your hiring plan</td><td>Monday 08:30 Europe/Zurich</td></tr>
-<tr><td class="acct">Tom, Synthetic Company V<span class="sub">sales leader</span></td><td>event: the speaker list for a RevOps meetup (1 days)</td><td class="n total">3</td><td>leads from the event</td><td>Monday 08:30 Europe/Vienna</td></tr>
-<tr><td class="acct">Mia, Synthetic Company S3<span class="sub">sales leader</span></td><td>event: the exhibitor list for a Berlin SaaS conference (2 days)</td><td class="n total">3</td><td>leads from the event</td><td>Monday 08:30 Europe/Warsaw</td></tr>
-<tr><td class="acct">Nina, Synthetic Company C2<span class="sub">revops</span></td><td>hiring: two SDRs (3 days)</td><td class="n total">3</td><td>your hiring plan</td><td>Monday 08:30 Europe/Dublin</td></tr>
-<tr><td class="acct">Ali, Synthetic Company V3<span class="sub">revops</span></td><td>hiring: two SDRs (3 days)</td><td class="n total">3</td><td>your hiring plan</td><td>Monday 08:30 Europe/Berlin</td></tr>
-<tr><td class="acct">Sara, Synthetic Company Y2<span class="sub">revops</span></td><td>funding: seed round (5 days)</td><td class="n total">3</td><td>after the round</td><td>Monday 08:30 Europe/Zurich</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <h3 class="mailhead" style="font-size:15px;margin-top:26px">Emails exactly as the script wrote them</h3>
-    <div class="mails"><div><p class="mailhead">To nora@company-q2.example · step 1 · subject: your hiring plan</p><pre class="mail">Hi Nora,
-
-Saw Synthetic Company Q2 is hiring a first RevOps analyst. New hires usually spend their first month working out who owns which lead.
-
-We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval</pre></div><div><p class="mailhead">To felix@company-v2.example · step 1 · subject: routing after the switch</p><pre class="mail">Hi Felix,
-
-Noticed Synthetic Company V2 added a scheduling tool to their demo page. A change in the sales stack is often when routing rules quietly break.
-
-We help marketing teams make sure the leads they paid for reach a rep the same hour.
-
-Worth a short call next week, or should I send a two minute walkthrough instead?
-
-Yuval</pre></div></div>
-    <div class="mails"><div><p class="mailhead">To nora@company-q2.example · step 2, three business days later · subject: your hiring plan</p><pre class="mail">Hi Nora,
-
-A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team&#x27;s time, and I can send the checklist we use without a call.
-
-Want it?
-
-Yuval</pre></div></div>
-    <p class="mailhead" style="margin-top:22px">Stopped by the copy check, sent to a person</p>
-    <ul class="plain"><li><code>sara@company-z2.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>rhea@company-z8.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>ugo@company-z7.example</code>: email is risky (catch all), confirm before sending</li></ul>
-    <p class="note">Synthetic input, generated from a fixed seed so every run gives the same rows. Every domain ends in <code>.example</code> except the personal email row that tests the gate. The gate rates are inputs set to look like a mixed export, not measurements. The offer in the emails, lead routing, is a placeholder product so the copy reads like a real sequence.</p>
-  </section>
-
-  <section aria-labelledby="change">
-    <details class="fold"><summary><h2 id="change">What I changed after the first version, and <em>what is next</em></h2></summary><div class="fold-body">
-    <p>The first version gave a point for every extra signal, so a 30 day old CRM change could lift a contact above someone with one fresh signal, and the email was not even written from it. Extra signals now count only while they are fresh, and ties go to the fresher signal. Reading all 38 openers also caught a line that said "a CRM move" when the signal was a new scheduling tool or chat widget. It now says "a change in the sales stack", and a test stops that line from naming the CRM again. I also added duplicate and bad data handling, persona specific follow ups, and the funnel counts.</p>
-    <p>Next: persona matching is still keyword based. "Head of Growth" lands in marketing, which is right at some companies and wrong at others. The step 2 and step 3 lines are where a model written sentence would add most, kept behind the same copy check and review queue and never sent unread.</p>
-    <p>How I would judge it: positive reply rate and meetings booked per 100 contacts, split by signal type, against a small held out group. After two weeks, a signal type that does not beat the held out group loses its weight.</p></div></details><!--/fold-->
   </section>
 
   <!--n8n-section--><section aria-labelledby="n8n" class="n8n-section">
@@ -390,6 +318,78 @@ Yuval</pre></div></div>
       <p class="n8n-cap">Every Monday at 07:00 it reads the enriched contacts, picks one signal per contact, writes the ready, review and held tabs, and posts the funnel to Slack. Held covers everyone kept back, each with the reason: 2 in cleaning, 43 at the gate, 33 to nurture. Nothing is sent from n8n. The code inside gives the same rows as the Python sample on the same data and date, checked row by row, and the workflow imports and runs in n8n. Counts on the lines are from the sample run.</p>
     </div>
   </section><!--/n8n-section-->
+
+  <section aria-labelledby="run">
+    <h2 id="run">Run output</h2>
+    <p>A list of 119 contacts across 93 companies, built to look like a real CRM export joined with enrichment. 38 sequences (32% of the list) are ready to import. The daily cap of 20 pushed the rest to Tuesday, and the one company rule moved a second contact to Wednesday.</p>
+    <div class="tablewrap funnel" tabindex="0" role="region" aria-label="Funnel, scrolls sideways on small screens">
+    <table>
+      <thead><tr><th>Stage</th><th class="n">Contacts</th><th class="n">Share</th><th></th><th>Why</th></tr></thead>
+      <tbody>
+<tr><td>Contacts in</td><td class="n total">119</td><td class="n">100%</td><td class="bar"><span class="b" style="width:100.0%"></span></td><td></td></tr>
+<tr><td>Removed in cleaning</td><td class="n total">2</td><td class="n">2%</td><td class="bar"><span class="b" style="width:1.7%"></span></td><td>one exact duplicate, one row with unreadable signal data</td></tr>
+<tr><td>Held at the gate</td><td class="n total">43</td><td class="n">36%</td><td class="bar"><span class="b" style="width:36.1%"></span></td><td>11 contacted in the last 30 days, 9 opted out, 8 title matches no persona, check by hand, 4 existing customer, 3 email status invalid, 3 open deal, owned by an AE, 3 partner, 1 email status unknown, 1 personal email</td></tr>
+<tr><td>Nurture, no usable signal</td><td class="n total">33</td><td class="n">28%</td><td class="bar"><span class="b" style="width:27.7%"></span></td><td>24 no signal in the last 45 days, 9 signal score below 2</td></tr>
+<tr><td>Stopped by the copy check</td><td class="n total">3</td><td class="n">3%</td><td class="bar"><span class="b" style="width:2.5%"></span></td><td>2 spam word &#x27;free&#x27;, 1 email is risky (catch all), confirm before sending</td></tr>
+<tr><td>Ready to import</td><td class="n total">38</td><td class="n">32%</td><td class="bar"><span class="b" style="width:31.9%"></span></td><td>first emails: 20 on 02.11, 17 on 03.11, 1 on 04.11</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:16px">The ready 38 split by signal: 11 event, 9 hiring, 7 funding, 6 tech change, 5 content. By persona: 15 revops, 10 sales leader, 8 marketing leader, 5 founder. The largest single loss is 24 contacts with no signal at all in the last 45 days. In a real list that number measures enrichment coverage as much as buyer intent, so it is the first one I would watch.</p>
+    <p class="mailhead" style="margin-top:22px">Top 10 of 38 ready contacts. The full list with all three emails is in ready.csv.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Ready contacts, scrolls sideways on small screens">
+    <table>
+      <thead><tr><th>Contact</th><th>Signal used</th><th class="n">Score</th><th>Subject</th><th>Step 1 goes out</th></tr></thead>
+      <tbody>
+<tr><td class="acct">Nora, Synthetic Company Q2<span class="sub">sales leader</span></td><td>hiring: a first RevOps analyst (10 days)</td><td class="n total">5</td><td>your hiring plan</td><td>Monday 08:30 Europe/Brussels</td></tr>
+<tr><td class="acct">Hanna, Synthetic Company O3<span class="sub">founder</span></td><td>hiring: three account executives (6 days)</td><td class="n total">4</td><td>your hiring plan</td><td>Monday 08:30 Europe/Brussels</td></tr>
+<tr><td class="acct">Felix, Synthetic Company V2<span class="sub">marketing leader</span></td><td>tech_change: added a scheduling tool to their demo page (19 days)</td><td class="n total">4</td><td>routing after the switch</td><td>Monday 08:30 Europe/Berlin</td></tr>
+<tr><td class="acct">Noah, Synthetic Company R3<span class="sub">founder</span></td><td>hiring: a sales ops analyst (21 days)</td><td class="n total">4</td><td>your hiring plan</td><td>Monday 08:30 Europe/Berlin</td></tr>
+<tr><td class="acct">Tim, Synthetic Company S<span class="sub">revops</span></td><td>hiring: a sales ops analyst (1 days)</td><td class="n total">3</td><td>your hiring plan</td><td>Monday 08:30 Europe/Zurich</td></tr>
+<tr><td class="acct">Tom, Synthetic Company V<span class="sub">sales leader</span></td><td>event: the speaker list for a RevOps meetup (1 days)</td><td class="n total">3</td><td>leads from the event</td><td>Monday 08:30 Europe/Vienna</td></tr>
+<tr><td class="acct">Mia, Synthetic Company S3<span class="sub">sales leader</span></td><td>event: the exhibitor list for a Berlin SaaS conference (2 days)</td><td class="n total">3</td><td>leads from the event</td><td>Monday 08:30 Europe/Warsaw</td></tr>
+<tr><td class="acct">Nina, Synthetic Company C2<span class="sub">revops</span></td><td>hiring: two SDRs (3 days)</td><td class="n total">3</td><td>your hiring plan</td><td>Monday 08:30 Europe/Dublin</td></tr>
+<tr><td class="acct">Ali, Synthetic Company V3<span class="sub">revops</span></td><td>hiring: two SDRs (3 days)</td><td class="n total">3</td><td>your hiring plan</td><td>Monday 08:30 Europe/Berlin</td></tr>
+<tr><td class="acct">Sara, Synthetic Company Y2<span class="sub">revops</span></td><td>funding: seed round (5 days)</td><td class="n total">3</td><td>after the round</td><td>Monday 08:30 Europe/Zurich</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <h3 class="mailhead" style="font-size:15px;margin-top:26px">Emails exactly as the script wrote them</h3>
+    <div class="mails"><div><p class="mailhead">To nora@company-q2.example · step 1 · subject: your hiring plan</p><pre class="mail">Hi Nora,
+
+Saw Synthetic Company Q2 is hiring a first RevOps analyst. New hires usually spend their first month working out who owns which lead.
+
+We help sales leaders get every inbound lead in front of the right rep within a minute, so nothing waits overnight.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval</pre></div><div><p class="mailhead">To felix@company-v2.example · step 1 · subject: routing after the switch</p><pre class="mail">Hi Felix,
+
+Noticed Synthetic Company V2 added a scheduling tool to their demo page. A change in the sales stack is often when routing rules quietly break.
+
+We help marketing teams make sure the leads they paid for reach a rep the same hour.
+
+Worth a short call next week, or should I send a two minute walkthrough instead?
+
+Yuval</pre></div></div>
+    <div class="mails"><div><p class="mailhead">To nora@company-q2.example · step 2, three business days later · subject: your hiring plan</p><pre class="mail">Hi Nora,
+
+A short follow up. Most sales leaders start with a one week audit of how long inbound leads wait before a rep picks them up. It takes about 30 minutes of your team&#x27;s time, and I can send the checklist we use without a call.
+
+Want it?
+
+Yuval</pre></div></div>
+    <p class="mailhead" style="margin-top:22px">Stopped by the copy check, sent to a person</p>
+    <ul class="plain"><li><code>sara@company-z2.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>rhea@company-z8.example</code>: step1: spam word &#x27;free&#x27;</li><li><code>ugo@company-z7.example</code>: email is risky (catch all), confirm before sending</li></ul>
+    <p class="note">Synthetic input, generated from a fixed seed so every run gives the same rows. Every domain ends in <code>.example</code> except the personal email row that tests the gate. The gate rates are inputs set to look like a mixed export, not measurements. The offer in the emails, lead routing, is a placeholder product so the copy reads like a real sequence.</p>
+  </section>
+
+  <section aria-labelledby="change">
+    <details class="fold"><summary><h2 id="change">What I changed after the first version, and <em>what is next</em></h2></summary><div class="fold-body">
+    <p>The first version gave a point for every extra signal, so a 30 day old CRM change could lift a contact above someone with one fresh signal, and the email was not even written from it. Extra signals now count only while they are fresh, and ties go to the fresher signal. Reading all 38 openers also caught a line that said "a CRM move" when the signal was a new scheduling tool or chat widget. It now says "a change in the sales stack", and a test stops that line from naming the CRM again. I also added duplicate and bad data handling, persona specific follow ups, and the funnel counts.</p>
+    <p>Next: persona matching is still keyword based. "Head of Growth" lands in marketing, which is right at some companies and wrong at others. The step 2 and step 3 lines are where a model written sentence would add most, kept behind the same copy check and review queue and never sent unread.</p>
+    <p>How I would judge it: positive reply rate and meetings booked per 100 contacts, split by signal type, against a small held out group. After two weeks, a signal type that does not beat the held out group loses its weight.</p></div></details><!--/fold-->
+  </section>
 
   <section aria-labelledby="built">
     <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">

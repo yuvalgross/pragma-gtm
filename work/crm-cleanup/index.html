@@ -206,7 +206,7 @@
 
     <div class="ws-own"><div><b>Designed and built</b><span>Duplicate, field and owner agents, the customer call list, 8 tests. Rules are mine; Claude Code wrote the code from them.</span></div><div><b>Designed, not running</b><span>Claude judging steps, Clay enrichment, Slack approval, API writes.</span></div></div><!--/ws-own-->
   </header>
-  <nav class="ws-nav" aria-label="On this page"><a href="#why" class="folded">Why the CRM</a><a href="#how">How it works</a><a href="#run">Output</a><a href="#split">AI or human</a><a href="#money">Revenue</a><a href="#rollout" class="folded">Rollout</a><a href="#change" class="folded">Next changes</a><a href="#n8n">n8n</a><a href="#built" class="folded">How it was built</a><a href="#clay" class="folded">Clay</a><a href="#files" class="folded">Code</a></nav>
+  <nav class="ws-nav" aria-label="On this page"><a href="#why" class="folded">Why the CRM</a><a href="#how">How it works</a><a href="#n8n">n8n</a><a href="#run">Output</a><a href="#split">AI or human</a><a href="#money">Revenue</a><a href="#rollout" class="folded">Rollout</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#clay" class="folded">Clay</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="why">
     <details class="fold"><summary><h2 id="why">Why start <em>inside</em> the CRM</h2></summary><div class="fold-body">
@@ -225,103 +225,6 @@
       <div class="step"><b>Book</b><span>Every customer gets a tier by ARR and a signal from usage, seats, renewal date and the last time a human spoke to them. Tier and signal decide human or AI.</span></div>
     </div>
     <p style="margin-top:16px">Every change carries a tier. <code>auto</code> is reversible and logs the old value. <code>approve</code> is one batch sign off by the RevOps owner, used for merges (they cannot be undone) and owner changes (they move someone's book). <code>review</code> is one by one. <code>owner_task</code> goes to the deal owner. <code>enrich</code> goes to the Clay enrichment queue. The script writes the change log and the HubSpot API calls; it never sends them.</p>
-  </section>
-
-  <section aria-labelledby="run">
-    <h2 id="run">Run output</h2>
-    <p>33 companies, 24 contacts and 22 deals in. The agents proposed 47 changes: 9 auto, 21 for batch approval, 3 for a person to decide, 8 tasks for deal owners and 6 for the enrichment queue.</p>
-    <div class="figs">
-      <div class="fig"><strong>€190,000</strong><span>open pipeline past its close date by more than 30 days</span></div>
-      <div class="fig"><strong>€539,200</strong><span>customer ARR owned by someone who left, or by nobody</span></div>
-      <div class="fig"><strong>€15,000</strong><span>ARR on a duplicate record; the account reports at €60,000 and is €75,000</span></div>
-      <div class="fig"><strong>8 of 17</strong><span>customers get a human this week; 9 are handled by AI or automation</span></div>
-    </div>
-
-    <h2 style="margin-top:34px">Who a human calls next</h2>
-    <p>Ranked by signal, risk first, then by ARR. Three accounts worth €575,000 together show a risk signal, and all three renew within 70 days. Four show room to grow.</p>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="Call list, scrolls sideways on small screens">
-    <table>
-      <thead><tr><th class="n">#</th><th>Account</th><th class="n">ARR</th><th>Signal</th><th>Evidence</th><th>Action</th></tr></thead>
-      <tbody>
-<tr class="hot"><td class="n">1</td><td class="acct">Synthetic Fleet Systems GmbH<span class="sub">strategic</span></td><td class="n">€320,000</td><td>risk</td><td>usage down 29% in three months; renews in 70 days, last human contact 127 days ago</td><td>Owner call this week, then a written save plan</td></tr>
-<tr class="hot"><td class="n">2</td><td class="acct">Synthetic Rail Data Ltd<span class="sub">strategic</span></td><td class="n">€180,000</td><td>risk</td><td>renews in 44 days, last human contact 158 days ago</td><td>Owner call this week, then a written save plan</td></tr>
-<tr class="hot"><td class="n">3</td><td class="acct">Synthetic Smart Meter Oy<span class="sub">core</span></td><td class="n">€75,000</td><td>risk</td><td>usage down 35% in three months; renews in 55 days, last human contact 176 days ago; Engineering Manager email bounces</td><td>Owner call this week</td></tr>
-<tr><td class="n">4</td><td class="acct">Synthetic Grid Energy AG<span class="sub">strategic</span></td><td class="n">€420,000</td><td>expansion</td><td>usage up 47% in three months; 470 of 500 seats used</td><td>Owner call this week to scope the next tier</td></tr>
-<tr><td class="n">5</td><td class="acct">Synthetic Cold Chain BV<span class="sub">strategic</span></td><td class="n">€120,000</td><td>expansion</td><td>usage up 48% in three months; 95 of 100 seats used</td><td>Owner call this week to scope the next tier</td></tr>
-<tr><td class="n">6</td><td class="acct">Synthetic Agri Track SAS<span class="sub">core</span></td><td class="n">€40,000</td><td>expansion</td><td>usage up 65% in three months; 38 of 40 seats used</td><td>Owner call to scope the upgrade</td></tr>
-<tr><td class="n">7</td><td class="acct">Synthetic Vending Ltd<span class="sub">core</span></td><td class="n">€15,000</td><td>expansion</td><td>usage up 100% in three months; 18 of 20 seats used</td><td>Owner call to scope the upgrade</td></tr>
-<tr><td class="n">8</td><td class="acct">Synthetic Bike Share GmbH<span class="sub">core</span></td><td class="n">€28,000</td><td>quiet</td><td>no human contact for 248 days</td><td>Owner check in call</td></tr>
-      </tbody>
-    </table>
-    </div>
-
-    <h2 style="margin-top:34px">What the AI looks after</h2>
-    <p>The long tail gets served instead of ignored. Small accounts with a signal get an AI written email that asks one question, and any reply goes to a human. Steady ones get a monthly usage summary.</p>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="AI handled accounts, scrolls sideways on small screens">
-    <table class="narrow">
-      <thead><tr><th>Account</th><th class="n">ARR</th><th>Signal</th><th>Evidence</th><th>Action</th></tr></thead>
-      <tbody>
-<tr><td class="acct">Synthetic Parking ApS<span class="sub">long tail</span></td><td class="n">€9,000</td><td>risk</td><td>usage down 44% in three months; renews in 86 days, no human contact on record; CTO email bounces</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
-<tr><td class="acct">Synthetic Water Sensor SL<span class="sub">long tail</span></td><td class="n">€4,800</td><td>risk</td><td>usage down 50% in three months</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
-<tr><td class="acct">Synthetic Garden Pump BV<span class="sub">long tail</span></td><td class="n">€3,600</td><td>risk</td><td>renews in 34 days, no human contact on record</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
-<tr><td class="acct">Synthetic Beehive Monitor<span class="sub">long tail</span></td><td class="n">€2,400</td><td>risk</td><td>renews in 88 days, no human contact on record; usage up 120% in three months; 1 of 1 seats used</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
-<tr><td class="acct">Synthetic Kiosk Display<span class="sub">long tail</span></td><td class="n">€1,800</td><td>risk</td><td>usage down 20% in three months</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
-<tr><td class="acct">Synthetic Hobby Drone<span class="sub">long tail</span></td><td class="n">€1,200</td><td>risk</td><td>usage down 100% in three months; renews in 24 days, no human contact on record</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
-<tr><td class="acct">Synthetic Pet Tracker GmbH<span class="sub">long tail</span></td><td class="n">€6,000</td><td>expansion</td><td>usage up 133% in three months; 10 of 10 seats used</td><td>AI upgrade offer, a human picks up any reply</td></tr>
-<tr><td class="acct">Harbor Sensors B.V.<span class="sub">core</span></td><td class="n">€75,000</td><td>steady</td><td>ARR €75,000 after merging the duplicate record (was €60,000)</td><td>AI drafted check in, owner approves before it goes</td></tr>
-<tr><td class="acct">Synthetic Alarm Box Ltd<span class="sub">long tail</span></td><td class="n">€3,000</td><td>steady</td><td>no signal</td><td>Monthly usage summary email, no human</td></tr>
-      </tbody>
-    </table>
-    </div>
-
-    <h2 style="margin-top:34px">What it held back</h2>
-    <p>Three changes need a person. Two company pairs share a name but not a domain: one has no domain at all, and the other sits on two different domains, which can mean two legal entities. A third company says customer but has no won deal and no ARR; that is either a churned account or one that never closed, and only someone who knows the history can say which.</p>
-    <p class="note">Synthetic input. Every domain ends in <code>.example</code>. Company names, ARR, usage and dates are invented to exercise the rules and say nothing about real companies. Owner names are placeholders.</p>
-  </section>
-
-  <section aria-labelledby="split">
-    <h2 id="split">What gets AI and what <em>gets a human</em></h2>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="Human or AI rules">
-    <table class="narrow">
-      <thead><tr><th>Tier</th><th>ARR</th><th>With a risk or growth signal</th><th>With no signal</th></tr></thead>
-      <tbody>
-        <tr><td>Strategic</td><td>€100,000 and up</td><td>Owner call this week</td><td>Quarterly review, AI prepares the brief</td></tr>
-        <tr><td>Core</td><td>€10,000 to €100,000</td><td>Owner call this week</td><td>AI drafts a check in, the owner approves it; a human calls if nobody has spoken to them in 180 days</td></tr>
-        <tr><td>Long tail</td><td>under €10,000</td><td>AI email with one question, a human picks up any reply</td><td>Monthly usage summary, no human</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p style="margin-top:14px">Risk means usage down 20% or more over three months, a renewal inside 90 days with no human contact for 60 days, or a contact whose email now bounces. Growth means usage up 30% or more, or 90% of seats in use while usage holds. The line between human and AI is money at stake, not how loud the customer is.</p>
-  </section>
-
-  <section aria-labelledby="money">
-    <h2 id="money">Where this moves <em>revenue</em></h2>
-    <dl>
-      <dt>Forecast</dt><dd>Stale deals leave the pipeline or get a real date. The forecast drops on paper and becomes something leadership can plan on.</dd>
-      <dt>Renewals</dt><dd>Risk shows up 60 to 90 days before the renewal, while there is still time for a call and a save plan, not on the day the customer gives notice.</dd>
-      <dt>Expansion</dt><dd>Accounts near their seat limit with rising usage get an owner call before they hit the ceiling. Across the book the run finds €150,250 of upsell, assuming an upsell adds a quarter of current ARR.</dd>
-      <dt>Long tail</dt><dd>Accounts nobody had time for get a regular touch at almost no cost, and the ones that answer reach a human.</dd>
-      <dt>Rep time</dt><dd>Reps stop cleaning data and looking things up. Each call arrives with the evidence written out, so the time goes to the conversation.</dd>
-    </dl>
-    <p style="margin-top:14px">How I would measure it: duplicates per 1,000 records, share of customer ARR with an active owner, share of strategic and core ARR with a human conversation in the last 90 days, and, the one that matters, renewal and expansion revenue from accounts that came off this list, compared with accounts of the same size that did not.</p>
-  </section>
-
-  <section aria-labelledby="rollout">
-    <details class="fold"><summary><h2 id="rollout">How I would roll it out in a <em>real</em> CRM</h2></summary><div class="fold-body">
-    <dl>
-      <dt>Week 1</dt><dd>Read only. Run every agent, share the change log and the money figures with RevOps and sales leads, and agree the tiers and thresholds.</dd>
-      <dt>Week 2</dt><dd>Switch on the <code>auto</code> tier. Keep a copy of every old value so any change can be put back.</dd>
-      <dt>Week 3</dt><dd>First batch approval for merges and owner changes, reviewed in a 30 minute call. Name only matches start going through the Claude check, still with a person deciding.</dd>
-      <dt>Week 4</dt><dd>Connect HubSpot to Clay Audiences, build the tier segments, switch on the job change signal and auto enrich for new records. The enrich queue goes through the CLI, so the agent decides what spends credits.</dd>
-      <dt>Then</dt><dd>The book agent reads the segments every Monday and posts the call list to each owner in Slack, with the evidence. The long tail emails start once the owners have read a week of drafts.</dd>
-      <dt>Salesforce</dt><dd>The same four agents work on Accounts, Contacts and Opportunities. Only the last step, the API calls, changes.</dd>
-    </dl></div></details><!--/fold-->
-  </section>
-
-  <section aria-labelledby="change">
-    <details class="fold"><summary><h2 id="change">What I would change <em>first</em></h2></summary><div class="fold-body">
-    <p>One small account renews in 88 days with no contact on record, so it lands as a risk, but its usage is up 120% and its only seat is full. The email it gets asks what changed, when it should offer the next plan. Risk should not win automatically when growth is this clear. A second account sits on the 20% usage drop line exactly, which says the line needs a band, not a single number.</p>
-    <p>After a merge, the ARR field needs a check by hand: the two records held €60,000 and €15,000, and the tool counts €75,000, but which value HubSpot keeps depends on the property. And the 25% upsell figure is my assumption, not data; the first real run should replace it with the company's own expansion history.</p></div></details><!--/fold-->
   </section>
 
   <!--n8n-section--><section aria-labelledby="n8n" class="n8n-section">
@@ -468,6 +371,103 @@
       <p class="n8n-cap">Every Monday at 06:30 it reads the HubSpot export, writes the change log, the customer book, the enrichment queue and the HubSpot calls, and posts who a human calls. It never writes to HubSpot itself. The code inside gives the same rows as the Python sample on the same data and date, checked row by row, and the workflow imports and runs in n8n. Counts on the lines are from the sample run.</p>
     </div>
   </section><!--/n8n-section-->
+
+  <section aria-labelledby="run">
+    <h2 id="run">Run output</h2>
+    <p>33 companies, 24 contacts and 22 deals in. The agents proposed 47 changes: 9 auto, 21 for batch approval, 3 for a person to decide, 8 tasks for deal owners and 6 for the enrichment queue.</p>
+    <div class="figs">
+      <div class="fig"><strong>€190,000</strong><span>open pipeline past its close date by more than 30 days</span></div>
+      <div class="fig"><strong>€539,200</strong><span>customer ARR owned by someone who left, or by nobody</span></div>
+      <div class="fig"><strong>€15,000</strong><span>ARR on a duplicate record; the account reports at €60,000 and is €75,000</span></div>
+      <div class="fig"><strong>8 of 17</strong><span>customers get a human this week; 9 are handled by AI or automation</span></div>
+    </div>
+
+    <h2 style="margin-top:34px">Who a human calls next</h2>
+    <p>Ranked by signal, risk first, then by ARR. Three accounts worth €575,000 together show a risk signal, and all three renew within 70 days. Four show room to grow.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Call list, scrolls sideways on small screens">
+    <table>
+      <thead><tr><th class="n">#</th><th>Account</th><th class="n">ARR</th><th>Signal</th><th>Evidence</th><th>Action</th></tr></thead>
+      <tbody>
+<tr class="hot"><td class="n">1</td><td class="acct">Synthetic Fleet Systems GmbH<span class="sub">strategic</span></td><td class="n">€320,000</td><td>risk</td><td>usage down 29% in three months; renews in 70 days, last human contact 127 days ago</td><td>Owner call this week, then a written save plan</td></tr>
+<tr class="hot"><td class="n">2</td><td class="acct">Synthetic Rail Data Ltd<span class="sub">strategic</span></td><td class="n">€180,000</td><td>risk</td><td>renews in 44 days, last human contact 158 days ago</td><td>Owner call this week, then a written save plan</td></tr>
+<tr class="hot"><td class="n">3</td><td class="acct">Synthetic Smart Meter Oy<span class="sub">core</span></td><td class="n">€75,000</td><td>risk</td><td>usage down 35% in three months; renews in 55 days, last human contact 176 days ago; Engineering Manager email bounces</td><td>Owner call this week</td></tr>
+<tr><td class="n">4</td><td class="acct">Synthetic Grid Energy AG<span class="sub">strategic</span></td><td class="n">€420,000</td><td>expansion</td><td>usage up 47% in three months; 470 of 500 seats used</td><td>Owner call this week to scope the next tier</td></tr>
+<tr><td class="n">5</td><td class="acct">Synthetic Cold Chain BV<span class="sub">strategic</span></td><td class="n">€120,000</td><td>expansion</td><td>usage up 48% in three months; 95 of 100 seats used</td><td>Owner call this week to scope the next tier</td></tr>
+<tr><td class="n">6</td><td class="acct">Synthetic Agri Track SAS<span class="sub">core</span></td><td class="n">€40,000</td><td>expansion</td><td>usage up 65% in three months; 38 of 40 seats used</td><td>Owner call to scope the upgrade</td></tr>
+<tr><td class="n">7</td><td class="acct">Synthetic Vending Ltd<span class="sub">core</span></td><td class="n">€15,000</td><td>expansion</td><td>usage up 100% in three months; 18 of 20 seats used</td><td>Owner call to scope the upgrade</td></tr>
+<tr><td class="n">8</td><td class="acct">Synthetic Bike Share GmbH<span class="sub">core</span></td><td class="n">€28,000</td><td>quiet</td><td>no human contact for 248 days</td><td>Owner check in call</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 style="margin-top:34px">What the AI looks after</h2>
+    <p>The long tail gets served instead of ignored. Small accounts with a signal get an AI written email that asks one question, and any reply goes to a human. Steady ones get a monthly usage summary.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="AI handled accounts, scrolls sideways on small screens">
+    <table class="narrow">
+      <thead><tr><th>Account</th><th class="n">ARR</th><th>Signal</th><th>Evidence</th><th>Action</th></tr></thead>
+      <tbody>
+<tr><td class="acct">Synthetic Parking ApS<span class="sub">long tail</span></td><td class="n">€9,000</td><td>risk</td><td>usage down 44% in three months; renews in 86 days, no human contact on record; CTO email bounces</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Water Sensor SL<span class="sub">long tail</span></td><td class="n">€4,800</td><td>risk</td><td>usage down 50% in three months</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Garden Pump BV<span class="sub">long tail</span></td><td class="n">€3,600</td><td>risk</td><td>renews in 34 days, no human contact on record</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Beehive Monitor<span class="sub">long tail</span></td><td class="n">€2,400</td><td>risk</td><td>renews in 88 days, no human contact on record; usage up 120% in three months; 1 of 1 seats used</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Kiosk Display<span class="sub">long tail</span></td><td class="n">€1,800</td><td>risk</td><td>usage down 20% in three months</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Hobby Drone<span class="sub">long tail</span></td><td class="n">€1,200</td><td>risk</td><td>usage down 100% in three months; renews in 24 days, no human contact on record</td><td>AI check in asking what changed, a human picks up any reply</td></tr>
+<tr><td class="acct">Synthetic Pet Tracker GmbH<span class="sub">long tail</span></td><td class="n">€6,000</td><td>expansion</td><td>usage up 133% in three months; 10 of 10 seats used</td><td>AI upgrade offer, a human picks up any reply</td></tr>
+<tr><td class="acct">Harbor Sensors B.V.<span class="sub">core</span></td><td class="n">€75,000</td><td>steady</td><td>ARR €75,000 after merging the duplicate record (was €60,000)</td><td>AI drafted check in, owner approves before it goes</td></tr>
+<tr><td class="acct">Synthetic Alarm Box Ltd<span class="sub">long tail</span></td><td class="n">€3,000</td><td>steady</td><td>no signal</td><td>Monthly usage summary email, no human</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 style="margin-top:34px">What it held back</h2>
+    <p>Three changes need a person. Two company pairs share a name but not a domain: one has no domain at all, and the other sits on two different domains, which can mean two legal entities. A third company says customer but has no won deal and no ARR; that is either a churned account or one that never closed, and only someone who knows the history can say which.</p>
+    <p class="note">Synthetic input. Every domain ends in <code>.example</code>. Company names, ARR, usage and dates are invented to exercise the rules and say nothing about real companies. Owner names are placeholders.</p>
+  </section>
+
+  <section aria-labelledby="split">
+    <h2 id="split">What gets AI and what <em>gets a human</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Human or AI rules">
+    <table class="narrow">
+      <thead><tr><th>Tier</th><th>ARR</th><th>With a risk or growth signal</th><th>With no signal</th></tr></thead>
+      <tbody>
+        <tr><td>Strategic</td><td>€100,000 and up</td><td>Owner call this week</td><td>Quarterly review, AI prepares the brief</td></tr>
+        <tr><td>Core</td><td>€10,000 to €100,000</td><td>Owner call this week</td><td>AI drafts a check in, the owner approves it; a human calls if nobody has spoken to them in 180 days</td></tr>
+        <tr><td>Long tail</td><td>under €10,000</td><td>AI email with one question, a human picks up any reply</td><td>Monthly usage summary, no human</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="margin-top:14px">Risk means usage down 20% or more over three months, a renewal inside 90 days with no human contact for 60 days, or a contact whose email now bounces. Growth means usage up 30% or more, or 90% of seats in use while usage holds. The line between human and AI is money at stake, not how loud the customer is.</p>
+  </section>
+
+  <section aria-labelledby="money">
+    <h2 id="money">Where this moves <em>revenue</em></h2>
+    <dl>
+      <dt>Forecast</dt><dd>Stale deals leave the pipeline or get a real date. The forecast drops on paper and becomes something leadership can plan on.</dd>
+      <dt>Renewals</dt><dd>Risk shows up 60 to 90 days before the renewal, while there is still time for a call and a save plan, not on the day the customer gives notice.</dd>
+      <dt>Expansion</dt><dd>Accounts near their seat limit with rising usage get an owner call before they hit the ceiling. Across the book the run finds €150,250 of upsell, assuming an upsell adds a quarter of current ARR.</dd>
+      <dt>Long tail</dt><dd>Accounts nobody had time for get a regular touch at almost no cost, and the ones that answer reach a human.</dd>
+      <dt>Rep time</dt><dd>Reps stop cleaning data and looking things up. Each call arrives with the evidence written out, so the time goes to the conversation.</dd>
+    </dl>
+    <p style="margin-top:14px">How I would measure it: duplicates per 1,000 records, share of customer ARR with an active owner, share of strategic and core ARR with a human conversation in the last 90 days, and, the one that matters, renewal and expansion revenue from accounts that came off this list, compared with accounts of the same size that did not.</p>
+  </section>
+
+  <section aria-labelledby="rollout">
+    <details class="fold"><summary><h2 id="rollout">How I would roll it out in a <em>real</em> CRM</h2></summary><div class="fold-body">
+    <dl>
+      <dt>Week 1</dt><dd>Read only. Run every agent, share the change log and the money figures with RevOps and sales leads, and agree the tiers and thresholds.</dd>
+      <dt>Week 2</dt><dd>Switch on the <code>auto</code> tier. Keep a copy of every old value so any change can be put back.</dd>
+      <dt>Week 3</dt><dd>First batch approval for merges and owner changes, reviewed in a 30 minute call. Name only matches start going through the Claude check, still with a person deciding.</dd>
+      <dt>Week 4</dt><dd>Connect HubSpot to Clay Audiences, build the tier segments, switch on the job change signal and auto enrich for new records. The enrich queue goes through the CLI, so the agent decides what spends credits.</dd>
+      <dt>Then</dt><dd>The book agent reads the segments every Monday and posts the call list to each owner in Slack, with the evidence. The long tail emails start once the owners have read a week of drafts.</dd>
+      <dt>Salesforce</dt><dd>The same four agents work on Accounts, Contacts and Opportunities. Only the last step, the API calls, changes.</dd>
+    </dl></div></details><!--/fold-->
+  </section>
+
+  <section aria-labelledby="change">
+    <details class="fold"><summary><h2 id="change">What I would change <em>first</em></h2></summary><div class="fold-body">
+    <p>One small account renews in 88 days with no contact on record, so it lands as a risk, but its usage is up 120% and its only seat is full. The email it gets asks what changed, when it should offer the next plan. Risk should not win automatically when growth is this clear. A second account sits on the 20% usage drop line exactly, which says the line needs a band, not a single number.</p>
+    <p>After a merge, the ARR field needs a check by hand: the two records held €60,000 and €15,000, and the tool counts €75,000, but which value HubSpot keeps depends on the property. And the 25% upsell figure is my assumption, not data; the first real run should replace it with the company's own expansion history.</p></div></details><!--/fold-->
+  </section>
 
   <section aria-labelledby="built">
     <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">

@@ -210,7 +210,7 @@
 
     <div class="ws-own"><div><b>Designed and built</b><span>Groups, reasons to talk, routing, nine checks per run. Rules are mine; Claude Code wrote the code from them.</span></div><div><b>Designed, not running</b><span>HubSpot write back, workflows, sequence.</span></div></div><!--/ws-own-->
   </header>
-  <nav class="ws-nav" aria-label="On this page"><a href="#answer">Result</a><a href="#groups">Groups</a><a href="#reason">Reasons to talk</a><a href="#rules" class="folded">Rules</a><a href="#proto">Top 40</a><a href="#hubspot" class="folded">In HubSpot</a><a href="#impact">Impact</a><a href="#n8n">n8n</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
+  <nav class="ws-nav" aria-label="On this page"><a href="#answer">Result</a><a href="#groups">Groups</a><a href="#n8n">n8n</a><a href="#reason">Reasons to talk</a><a href="#rules" class="folded">Rules</a><a href="#proto">Top 40</a><a href="#hubspot" class="folded">In HubSpot</a><a href="#impact">Impact</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="answer">
     <h2 id="answer">The answer</h2>
@@ -241,64 +241,6 @@
 </table>
 </div>
     <p style="margin-top:14px"><strong>Who calls.</strong> An account that saw a demo goes to a seller. One that never saw one goes to appointment setting. Never both. 47 callable accounts belong to owners who left the sales team; they go to the seller with the shortest list.</p>
-  </section>
-
-  <section aria-labelledby="reason">
-    <h2 id="reason">What counts as <em>a reason to talk</em></h2>
-    <ul class="plain">
-      <li><strong>A competitor contract that ends within 6 months, or ended in the last 2.</strong> 18 accounts.</li>
-      <li><strong>A loss on timing or no answer.</strong> 116 accounts.</li>
-      <li><strong>Interest this year:</strong> pricing page, case study, webinar or event stand. 146 accounts, 45 of them with a second reason too.</li>
-    </ul>
-    <p>Contract and timing reasons rank ahead of interest. Inside a group, accounts where the contact is the owner or managing director go first, then the best lead sources.</p>
-    <p><strong>What is cut.</strong> 113 are outside the target markets, 33 are key accounts with their own seller and 9 are customers today. 106 have a clear no on file: no opportunity, not ICP, too small or a chain. Nothing outweighs a clear no, not even a contract ending. Size cuts nobody.</p>
-  </section>
-
-  <section aria-labelledby="rules">
-    <details class="fold"><summary><h2 id="rules">Four rules <em>I chose</em></h2></summary><div class="fold-body">
-    <p>Each is one setting. Change it with <code>--set</code>, run again, and the list shows what moved.</p>
-    <ul class="plain">
-      <li><strong>Wait 90 days after a loss.</strong> An account that just said no should not get a call the next week. 90 is my judgement; with real history I would set it from how long lost accounts take to come back on their own.</li>
-      <li><strong>A 6 month window for competitor contracts.</strong> Renewal is decided before the end date, so the call has to come before it too.</li>
-      <li><strong>A newsletter click alone is not a reason to call.</strong> It shows the account reads the emails, not that it is buying.</li>
-      <li><strong>A person reviews probable duplicates.</strong> With no website field, the match is on name, country and size. It flags 45 groups, and several are clearly different companies with a common name. That is why nothing merges automatically: a wrong merge could put a customer on a call list.</li>
-    </ul></div></details><!--/fold-->
-  </section>
-
-  <section aria-labelledby="proto">
-    <h2 id="proto">This week's top 40</h2>
-    <p>5 accounts for each of the five sellers and 15 for appointment setting, each with the reason, an angle and the caller. All 40 come from the call first groups and 39 of the contacts are an owner or managing director. Same input gives the same output, with no AI call or paid tool inside the run. Running it again with last week's list gives 40 new accounts and no repeats.</p>
-    <p><strong>Nine checks on every run.</strong> The run stops if any breaks: one group per account, no account on two lists, no seller over 5, appointment setting at most 15, no excluded market, key account or customer, no clear no, seller accounts saw a demo and setter accounts did not, no opted out or invalid contact on the email list, and nobody from last week.</p>
-  </section>
-
-  <section aria-labelledby="hubspot">
-    <details class="fold"><summary><h2 id="hubspot">Running it every week <em>in HubSpot</em></h2></summary><div class="fold-body">
-    <p>Every Monday the ranking runs on a fresh export and writes its result to each account through a private app. If a run fails or a check breaks, nothing is written and last week's lists stay.</p>
-    <ol class="plain">
-      <li><strong>Hand out the week.</strong> Sets the owner and creates one call task with reason, angle and fit.</li>
-      <li><strong>German sequence.</strong> For accounts whose competitor contract is ending, the seller calls first and three German mails follow. It stops on a reply or a booked demo.</li>
-      <li><strong>Email first.</strong> One mail. A click on pricing or a case study moves the account to call first.</li>
-      <li><strong>End of wait.</strong> After 90 days, or 6 months before a contract ends, the account is ranked again.</li>
-      <li><strong>Ask the seller.</strong> One task per unqualified account: still unqualified, yes or no, and why.</li>
-      <li><strong>Demo booked.</strong> Creates the deal, stamps the source and hands a setter's account to a seller.</li>
-      <li><strong>Stop.</strong> A new deal, a new customer or an opt out removes the account from every list.</li>
-    </ol>
-    <p><strong>Clean data.</strong> The lost reason is empty on 245 of 760 accounts, so it becomes a required dropdown with a clear no as a value. The website domain becomes required so the CRM catches most new duplicates.</p></div></details><!--/fold-->
-  </section>
-
-  <section aria-labelledby="impact">
-    <h2 id="impact">What it could be worth <em>per quarter</em></h2>
-    <div class="tablewrap" tabindex="0" role="region" aria-label="Impact estimate, scrolls sideways on small screens">
-<table style="min-width:560px">
-<thead><tr><th>Group</th><th class="n">Demos</th><th class="n">New customers</th><th class="n">New MRR</th></tr></thead>
-<tbody>
-<tr class="hot"><td>The 235, call first</td><td class="n">18 to 36</td><td class="n">4 to 9</td><td class="n total">&euro;6,800 to &euro;13,700</td></tr>
-<tr><td>The 85, call next, weeks 5 to 8</td><td class="n">8</td><td class="n">2</td><td class="n">&euro;3,300</td></tr>
-</tbody>
-</table>
-</div>
-    <p style="margin-top:14px">Every rate here is assumed, because the sample has no history: 1 in 10 to 1 in 5 seller accounts take a demo, 1 in 20 to 1 in 10 setter accounts, 1 in 4 demos close, &euro;1,550 MRR per deal. Each is a setting at the top of the script. These accounts already said no once, so the real rate is likely lower than for a first demo.</p>
-    <p class="decide"><strong>How I will know.</strong> After four weeks the sellers have called the first 119. If fewer than 1 in 10 took a demo, I stop and the 85 are not called. If 1 in 5 did, the high case holds. One weekly dashboard by group, reason and seller shows accounts handed out, reached, demos, deals and new MRR.</p>
   </section>
 
   <!--n8n-section--><section aria-labelledby="n8n" class="n8n-section">
@@ -412,6 +354,64 @@
       <p class="n8n-cap">Every Monday at 07:00 it reads every lost account and last week&#x27;s list, writes this week&#x27;s call list, the email first list (the 74 of 90 with a usable email) and the 45 groups of probable duplicates, and posts each seller&#x27;s list to Slack. The code inside gives the same rows as the Python sample on the same data and date, checked row by row, and the workflow imports and runs in n8n. Counts on the lines are from the sample run.</p>
     </div>
   </section><!--/n8n-section-->
+
+  <section aria-labelledby="reason">
+    <h2 id="reason">What counts as <em>a reason to talk</em></h2>
+    <ul class="plain">
+      <li><strong>A competitor contract that ends within 6 months, or ended in the last 2.</strong> 18 accounts.</li>
+      <li><strong>A loss on timing or no answer.</strong> 116 accounts.</li>
+      <li><strong>Interest this year:</strong> pricing page, case study, webinar or event stand. 146 accounts, 45 of them with a second reason too.</li>
+    </ul>
+    <p>Contract and timing reasons rank ahead of interest. Inside a group, accounts where the contact is the owner or managing director go first, then the best lead sources.</p>
+    <p><strong>What is cut.</strong> 113 are outside the target markets, 33 are key accounts with their own seller and 9 are customers today. 106 have a clear no on file: no opportunity, not ICP, too small or a chain. Nothing outweighs a clear no, not even a contract ending. Size cuts nobody.</p>
+  </section>
+
+  <section aria-labelledby="rules">
+    <details class="fold"><summary><h2 id="rules">Four rules <em>I chose</em></h2></summary><div class="fold-body">
+    <p>Each is one setting. Change it with <code>--set</code>, run again, and the list shows what moved.</p>
+    <ul class="plain">
+      <li><strong>Wait 90 days after a loss.</strong> An account that just said no should not get a call the next week. 90 is my judgement; with real history I would set it from how long lost accounts take to come back on their own.</li>
+      <li><strong>A 6 month window for competitor contracts.</strong> Renewal is decided before the end date, so the call has to come before it too.</li>
+      <li><strong>A newsletter click alone is not a reason to call.</strong> It shows the account reads the emails, not that it is buying.</li>
+      <li><strong>A person reviews probable duplicates.</strong> With no website field, the match is on name, country and size. It flags 45 groups, and several are clearly different companies with a common name. That is why nothing merges automatically: a wrong merge could put a customer on a call list.</li>
+    </ul></div></details><!--/fold-->
+  </section>
+
+  <section aria-labelledby="proto">
+    <h2 id="proto">This week's top 40</h2>
+    <p>5 accounts for each of the five sellers and 15 for appointment setting, each with the reason, an angle and the caller. All 40 come from the call first groups and 39 of the contacts are an owner or managing director. Same input gives the same output, with no AI call or paid tool inside the run. Running it again with last week's list gives 40 new accounts and no repeats.</p>
+    <p><strong>Nine checks on every run.</strong> The run stops if any breaks: one group per account, no account on two lists, no seller over 5, appointment setting at most 15, no excluded market, key account or customer, no clear no, seller accounts saw a demo and setter accounts did not, no opted out or invalid contact on the email list, and nobody from last week.</p>
+  </section>
+
+  <section aria-labelledby="hubspot">
+    <details class="fold"><summary><h2 id="hubspot">Running it every week <em>in HubSpot</em></h2></summary><div class="fold-body">
+    <p>Every Monday the ranking runs on a fresh export and writes its result to each account through a private app. If a run fails or a check breaks, nothing is written and last week's lists stay.</p>
+    <ol class="plain">
+      <li><strong>Hand out the week.</strong> Sets the owner and creates one call task with reason, angle and fit.</li>
+      <li><strong>German sequence.</strong> For accounts whose competitor contract is ending, the seller calls first and three German mails follow. It stops on a reply or a booked demo.</li>
+      <li><strong>Email first.</strong> One mail. A click on pricing or a case study moves the account to call first.</li>
+      <li><strong>End of wait.</strong> After 90 days, or 6 months before a contract ends, the account is ranked again.</li>
+      <li><strong>Ask the seller.</strong> One task per unqualified account: still unqualified, yes or no, and why.</li>
+      <li><strong>Demo booked.</strong> Creates the deal, stamps the source and hands a setter's account to a seller.</li>
+      <li><strong>Stop.</strong> A new deal, a new customer or an opt out removes the account from every list.</li>
+    </ol>
+    <p><strong>Clean data.</strong> The lost reason is empty on 245 of 760 accounts, so it becomes a required dropdown with a clear no as a value. The website domain becomes required so the CRM catches most new duplicates.</p></div></details><!--/fold-->
+  </section>
+
+  <section aria-labelledby="impact">
+    <h2 id="impact">What it could be worth <em>per quarter</em></h2>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Impact estimate, scrolls sideways on small screens">
+<table style="min-width:560px">
+<thead><tr><th>Group</th><th class="n">Demos</th><th class="n">New customers</th><th class="n">New MRR</th></tr></thead>
+<tbody>
+<tr class="hot"><td>The 235, call first</td><td class="n">18 to 36</td><td class="n">4 to 9</td><td class="n total">&euro;6,800 to &euro;13,700</td></tr>
+<tr><td>The 85, call next, weeks 5 to 8</td><td class="n">8</td><td class="n">2</td><td class="n">&euro;3,300</td></tr>
+</tbody>
+</table>
+</div>
+    <p style="margin-top:14px">Every rate here is assumed, because the sample has no history: 1 in 10 to 1 in 5 seller accounts take a demo, 1 in 20 to 1 in 10 setter accounts, 1 in 4 demos close, &euro;1,550 MRR per deal. Each is a setting at the top of the script. These accounts already said no once, so the real rate is likely lower than for a first demo.</p>
+    <p class="decide"><strong>How I will know.</strong> After four weeks the sellers have called the first 119. If fewer than 1 in 10 took a demo, I stop and the 85 are not called. If 1 in 5 did, the high case holds. One weekly dashboard by group, reason and seller shows accounts handed out, reached, demos, deals and new MRR.</p>
+  </section>
 
   <section aria-labelledby="built">
     <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
