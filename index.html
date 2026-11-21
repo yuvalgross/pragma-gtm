@@ -2642,18 +2642,6 @@ to {
   }
 
   }
-/* Philosophy: natural sand band in light mode, lifted charcoal in dark */
-:root:not([data-theme="dark"]) .philosophy-section{background:var(--paper-deep)}
-:root:not([data-theme="dark"]) .philosophy-section h2{color:var(--ink)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-intro{color:var(--ink-soft)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-intro strong,:root:not([data-theme="dark"]) .philosophy-section .phil-stat-num{color:var(--accent-dark)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-card{background:rgba(255,255,255,.5);border-color:var(--border)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-card:hover{border-color:var(--border-gold)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-title{color:var(--ink)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-desc{color:var(--ink-soft)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-stat{border-top-color:var(--border)}
-:root:not([data-theme="dark"]) .philosophy-section .phil-stat-label{color:var(--ink-muted)}
-:root[data-theme="dark"] .philosophy-section{background:#1c1912}
 .philosophy-section {
     background: var(--philosophy-bg);
     padding: 4rem var(--sp-section-h);
@@ -4110,6 +4098,28 @@ to {
 .arch-divider .arch-path .sys-sub::after{display:none}
 .arch-divider .arch-path .sys-board{max-width:none}
 .arch-divider .arch-path .sys-art-m .sx-disc{fill:var(--paper)}
+/* How I think: one merged section (intro, architecture, path, sizes, CRM proof) */
+.how-all{padding:0;overflow:hidden}
+.how-all .how-head{padding:var(--sp-section) var(--sp-section-h) 0}
+.how-all .how-head .phil-intro{color:var(--ink-soft);max-width:640px;margin:0}
+.how-all .arch-divider{background:transparent;border-bottom:none}
+.how-all .how-ladder{padding:1rem var(--sp-section-h) var(--sp-section)}
+.how-sub{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.25rem);font-weight:var(--fw-light);line-height:1.2;letter-spacing:-.01em;color:var(--ink);margin:0 0 1rem}
+.how-sub em{font-style:italic;color:var(--accent)}
+/* Expertise: tool strip sits at the foot of the section, full width */
+#expertise{--eh:var(--sp-section-h);padding-bottom:0}
+#expertise .logo-grid-section{margin:3.5rem calc(var(--eh) * -1) 0}
+@media (max-width:768px){
+  #expertise{--eh:1.25rem}
+  .how-all .how-head{padding:3.5rem 1.25rem 0}
+  .how-all .how-ladder{padding:.5rem 1.25rem 3.5rem}
+  #expertise .logo-grid-section{margin-top:2.5rem}
+}
+@media (max-width:480px){
+  #expertise{--eh:1rem}
+  .how-all .how-head{padding:2.75rem 1rem 0}
+  .how-all .how-ladder{padding:.5rem 1rem 2.75rem}
+}
 @media (max-width:768px){.arch-divider{padding:2.5rem 1rem 2.75rem}.arch-divider .arch-path{margin-top:0}.arch-divider .arch-path .sys-sub{font-size:.7rem}}
 
 /* ═══════════════════════════════════════════════
@@ -4385,10 +4395,9 @@ html.legal-open { overflow: hidden; }
   </a>
   <div class="nav-right">
     <ul class="nav-links" role="list">
-      <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="#how">The system</a></li>
-      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#how">How I think</a></li>
       <li><a href="#samples">Samples</a></li>
+      <li><a href="#expertise">Expertise</a></li>
       <li><a href="#stack">CV</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -4408,10 +4417,9 @@ html.legal-open { overflow: hidden; }
 
 <!-- Mobile nav drawer -->
 <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
-  <a href="#philosophy" onclick="closeMenu()">Philosophy</a>
-  <a href="#how" onclick="closeMenu()">The system</a>
-  <a href="#expertise" onclick="closeMenu()">Expertise</a>
+  <a href="#how" onclick="closeMenu()">How I think</a>
   <a href="#samples" onclick="closeMenu()">Samples</a>
+  <a href="#expertise" onclick="closeMenu()">Expertise</a>
   <a href="#stack" onclick="closeMenu()">CV</a>
   <a href="#contact" onclick="closeMenu()" class="mobile-nav-cta">Contact</a>
 </div>
@@ -4833,7 +4841,15 @@ html.legal-open { overflow: hidden; }
   </div>
 </section>
 
-<!-- GTM ARCHITECTURE AT A GLANCE -->
+<!-- HOW I THINK: philosophy intro, architecture, path, sizes, CRM proof -->
+<section class="how how-all" id="how" aria-labelledby="how-heading">
+  <div class="container how-head">
+    <div class="section-label">How I think</div>
+    <h2 id="how-heading">Less stack. <em>More revenue.</em></h2>
+    <p class="phil-intro">Most revenue teams don't have a tool problem. They have a process problem: stages nobody agrees on, records nobody trusts, handoffs nobody owns. I fix the process first, then automate what is left.</p>
+  </div>
+
+  <!-- GTM ARCHITECTURE AT A GLANCE -->
 <div class="arch-divider">
   <div class="container">
     <div class="arch-label">The GTM architecture at a glance: signal to closed deal</div>
@@ -4940,6 +4956,233 @@ html.legal-open { overflow: hidden; }
     </div>
   </div>
 </div>
+
+  <div class="container how-ladder">
+    <h3 class="how-sub" id="system-heading">Start with a workflow. <em>End with a system.</em></h3>
+    <p class="section-intro how-sub-intro">I build revenue automation in three sizes. Every size runs the same four steps, so a workflow can grow into an engine, and an engine into a system. Reps spend their time on conversations, not on copying data between tools.</p>
+
+    <ol class="lad" aria-label="Three sizes of scope">
+      <li class="lad-card lad-1">
+        <div class="lad-head"><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l1i0" d="M16 26 L108 76"/><path id="l1i1" d="M16 51 L108 76"/><path id="l1i2" d="M16 76 L108 76"/><path id="l1i3" d="M16 101 L108 76"/><path id="l1i4" d="M16 126 L108 76"/></defs><path class="sx-wire" d="M16 26 L108 76"/><path class="sx-wire" d="M16 51 L108 76"/><path class="sx-wire" d="M16 76 L108 76"/><path class="sx-wire" d="M16 101 L108 76"/><path class="sx-wire" d="M16 126 L108 76"/><path class="sx-wire" data-o="0" d="M132 76 C178 76 162 28 204 28 L222 28"/><path class="sx-wire" data-o="1" d="M132 76 C178 76 162 76 204 76 L222 76"/><path class="sx-wire" data-o="2" d="M132 76 C178 76 162 124 204 124 L222 124"/><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.28s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.28s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.56s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.56s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i3"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="1.12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i4"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="1.12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle id="wfDot" class="ld-dot ld-acc" r="5" opacity="0"/><g class="sx-st" transform="translate(108 76)" style="--d:2.60s"><circle r="24" class="sx-halo"/><circle r="24" class="sx-disc"/><g class="sx-ic" transform="scale(0.85)" style="stroke-width:2.47"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st out" transform="translate(222 28)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><g class="sx-st out" transform="translate(222 76)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-14" y="-8" width="28" height="22" rx="5"/><path d="M0 -8V-16M-5 3v.01M5 3v.01M-6 9h12"/></g></g><g class="sx-st out" transform="translate(222 124)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-12" y="-16" width="24" height="32" rx="3"/><path d="M-6 -7h12M-6 0h12M-6 7h7"/></g></g><text class="ld-t ld-s" x="248" y="32">A person</text><text class="ld-t ld-s" x="248" y="80">AI SDR</text><text class="ld-t ld-s" x="248" y="123">Typeform</text><text class="ld-t ld-s2" x="248" y="135">asks more info</text><text class="ld-t" x="4" y="146" text-anchor="start">318 signups</text><text class="ld-t" x="108" y="146" text-anchor="middle">0 to 100</text></svg>
+        <h3 class="lad-title">Workflow</h3>
+        <p class="lad-sub">One automation, one job.</p>
+        <a class="lad-link" href="/work/signup-router/">Example: Signup router &rarr;</a>
+      </li>
+      <li class="lad-card lad-2">
+        <div class="lad-head"><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l2p" d="M30 62 L290 62"/></defs><path class="sx-wire" d="M51 62 L74 62"/><path class="sx-wire" d="M116 62 L139 62"/><path class="sx-wire" d="M181 62 L204 62"/><path class="sx-wire" d="M246 62 L269 62"/><path class="sx-wire ld-loop" d="M290 112 C290 148 30 148 30 112"/><path class="sx-arrow" d="M25 119 L30 111 L35 119"/><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.743;1"><mpath href="#l2p"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.739;0.779;1"/></circle><g class="sx-st" transform="translate(30 62)" style="--d:0.10s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(95 62)" style="--d:1.33s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><g class="sx-st" transform="translate(160 62)" style="--d:2.55s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><rect x="-15" y="-10" width="30" height="20" rx="3"/><path d="M-15 -7l15 11 15-11"/></g></g><g class="sx-st" transform="translate(225 62)" style="--d:3.77s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-14 1l9 9 19-19"/></g></g><g class="sx-st" transform="translate(290 62)" style="--d:5.00s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-16 0H14M3 -11L14 0 3 11"/></g></g><text class="ld-t" x="30" y="100" text-anchor="middle">Clean</text><text class="ld-t" x="95" y="100" text-anchor="middle">Signal</text><text class="ld-t" x="160" y="100" text-anchor="middle">Write</text><text class="ld-t" x="225" y="100" text-anchor="middle">Check</text><text class="ld-t" x="290" y="100" text-anchor="middle">Send</text></svg>
+        <h3 class="lad-title">Engine</h3>
+        <p class="lad-sub">Several workflows, one revenue motion.</p>
+        <a class="lad-link" href="/work/signal-outreach/">Example: Signal outreach &rarr;</a>
+      </li>
+      <li class="lad-card lad-3">
+        <div class="lad-head"><span class="lad-badge">Design, CRM live</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l3i0" d="M26 36 L64 36 C110 36 118 76 146 76"/><path id="l3i1" d="M26 76 L64 76 C110 76 118 76 146 76"/><path id="l3i2" d="M26 116 L64 116 C110 116 118 76 146 76"/><path id="l3o" d="M206 76 L258 76"/></defs><rect class="ld-rules" x="4" y="12" width="312" height="134" rx="16"/><path class="sx-wire" d="M26 36 L64 36 C110 36 118 76 146 76"/><path class="sx-wire" d="M26 76 L64 76 C110 76 118 76 146 76"/><path class="sx-wire" d="M26 116 L64 116 C110 116 118 76 146 76"/><path class="sx-wire" d="M206 76 L258 76"/><circle r="4" class="ld-dot ld-ob"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><circle r="4" class="ld-dot ld-in"><animateMotion dur="7.0s" begin="0.1s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.1s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><circle r="4" class="ld-dot ld-crm"><animateMotion dur="7.0s" begin="0.2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.660;1"><mpath href="#l3o"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.400;0.640;0.680;1"/></circle><g class="sx-em sx-ob" transform="translate(20 36)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 36)" style="--d:0.65s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><g class="sx-em sx-in" transform="translate(20 76)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 76)" style="--d:0.77s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g><g class="sx-em sx-crm" transform="translate(20 116)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 116)" style="--d:0.89s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-13 -9h26M-13 0h26M-13 9h16"/></g></g><g class="sx-st" transform="translate(176 76)" style="--d:2.10s"><circle r="30" class="sx-halo"/><circle r="30" class="sx-disc"/><g class="sx-ic" transform="scale(1.0)" style="stroke-width:2.10"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(284 76)" style="--d:4.60s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.8)" style="stroke-width:2.62"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><text class="ld-t ld-rt" x="160" y="16" text-anchor="middle">same checks on every step</text></svg>
+        <h3 class="lad-title">System</h3>
+        <p class="lad-sub">The operating system.</p>
+        <a class="lad-link" href="#crmProofTitle">See the CRM foundation &darr;</a>
+      </li>
+    </ol>
+
+    <!-- CRM FOUNDATION PROOF -->
+    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
+      <div class="crm-proof-head">
+        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, live</div>
+        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
+      </div>
+      <p>I built on an existing HubSpot setup and found what was quietly breaking it: stage criteria that didn't hold, fields wired to the wrong places, missing connections and duplicate records. Reps were making up for it by copy-pasting data that was often wrong. I fixed the stages and fields, cleared out the duplicates and automated the upkeep. Now nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The signal engine dashboards and the weekly forecast leadership uses both run on that clean data.</p>
+      <ul class="crm-proof-facts" aria-label="CRM foundation results">
+        <li><strong>3 hours</strong><span>a week saved</span></li>
+        <li><strong>8%</strong><span>lower churn</span></li>
+        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
+        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WORK SAMPLES -->
+<section class="work" id="samples" aria-labelledby="samplesHeading">
+  <div class="container">
+    <div class="section-label">Work samples</div>
+    <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
+    <p class="work-intro">Six tools, end to end. Each page has the data, the rules, the limits and the code.</p>
+    <div class="work-grid">
+    <article class="work-card fade-up">
+      <h3>CRM clean up</h3>
+      <p class="work-sub">Fix the records, then find who a human should call.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>47</strong><span>changes proposed</span></li>
+        <li><strong>&euro;539k</strong><span>ARR with no owner</span></li>
+        <li><strong>8 of 17</strong><span>customers to a human</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Duplicate, field and owner agents, the customer call list, 8 tests</span><span><b>Designed</b> Claude judging steps, Clay enrichment, Slack approval, API writes</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Four agents clean a HubSpot export (duplicates, broken fields, orphaned owners), then decide which customers get a person this week. Nothing is written until someone approves.</p>
+        <div class="exp-tags"><span class="exp-tag">HubSpot</span><span class="exp-tag">Agents</span><span class="exp-tag">Deduplication</span><span class="exp-tag">Data hygiene</span><span class="exp-tag">Owner routing</span><span class="exp-tag">Churn risk</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Claude</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/crm-cleanup/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/crm-cleanup" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <h3>Signup router</h3>
+      <p class="work-sub">Who gets a human this week, and what they do first.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>318</strong><span>signups in a week</span></li>
+        <li><strong>91</strong><span>stopped by the gate</span></li>
+        <li><strong>23</strong><span>get a person</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Gate, scoring and routing</span><span><b>Designed</b> Clay enrichment, HubSpot tasks via n8n</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Drops customers, partners and personal emails, scores every trial signup 0 to 100 on usage, fit, integration path and pain, and gives each one next action.</p>
+        <div class="exp-tags"><span class="exp-tag">PLG</span><span class="exp-tag">Inbound</span><span class="exp-tag">Gate rules</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing</span><span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Python</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/signup-router/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signup-router" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <h3>Signal outreach</h3>
+      <p class="work-sub">First emails written from the freshest buying signal.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>119</strong><span>contacts in</span></li>
+        <li><strong>38</strong><span>sequences ready</span></li>
+        <li><strong>3</strong><span>stopped by the copy check</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Gate, signal scoring, three step emails, copy check, tests</span><span><b>Designed</b> Clay enrichment, sequencer push via n8n, reply handling</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Turns an enriched list into a three step sequence built on each contact's newest signal, and holds back everyone who should not get it, with the reason.</p>
+        <div class="exp-tags"><span class="exp-tag">Outbound</span><span class="exp-tag">Buying signals</span><span class="exp-tag">Clay</span><span class="exp-tag">Sequences</span><span class="exp-tag">Copy rules</span><span class="exp-tag">Send caps</span><span class="exp-tag">n8n</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/signal-outreach/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signal-outreach" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <h3>Account prioritisation</h3>
+      <p class="work-sub">Which 80 accounts get a call, and when signals run out.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>500</strong><span>accounts in</span></li>
+        <li><strong>80 to 59</strong><span>with a signal, week 1 to 2</span></li>
+        <li><strong>173</strong><span>a load bug would drop</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Gate, scoring, territory and capacity routing, run checks</span><span><b>Designed</b> Clay enrichment, Salesforce writes, Slack message</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Gates, scores and routes 500 accounts across four SDRs by territory and capacity. The finding: signal accounts run out in two weeks, so the next build is signal sources.</p>
+        <div class="exp-tags"><span class="exp-tag">Salesforce</span><span class="exp-tag">Account scoring</span><span class="exp-tag">Territories</span><span class="exp-tag">Capacity</span><span class="exp-tag">Routing</span><span class="exp-tag">Data quality</span><span class="exp-tag">Signals</span><span class="exp-tag">Python</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/account-prioritisation/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/account-prioritisation" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <h3>Lost deal reactivation</h3>
+      <p class="work-sub">Which lost deals are worth a second call.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>235</strong><span>of 760 worth a call</span></li>
+        <li><strong>40</strong><span>calls this week</span></li>
+        <li><strong>9</strong><span>checks per run</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Groups, reasons to talk, routing, nine checks per run</span><span><b>Designed</b> HubSpot write back, workflows, sequence</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Sorts 760 lost accounts into groups, keeps out every clear no, and hands five sellers and the setters a Monday list with the reason and the angle. Nine checks guard every run.</p>
+        <div class="exp-tags"><span class="exp-tag">Closed lost</span><span class="exp-tag">Win back</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Routing</span><span class="exp-tag">Sellers and setters</span><span class="exp-tag">Impact model</span><span class="exp-tag">Claude skill</span><span class="exp-tag">Python</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/lost-deal-reactivation/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/lost-deal-reactivation" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <h3>Job search engine</h3>
+      <p class="work-sub">A daily scan and the board it feeds, for any job title.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>422</strong><span>board copies read</span></li>
+        <li><strong>28</strong><span>dropped by a gate</span></li>
+        <li><strong>4 of 47</strong><span>worth a CV</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Daily scan, gates, fit line, board, CV check</span><span><b>Designed</b> Live sources and paid data tools</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Proves every role on the company's own list, drops what can never work with the reason, scores the rest with a readable fit line and feeds a job hunt board. Shown for Customer Success and Data Analyst searches.</p>
+        <div class="exp-tags"><span class="exp-tag">Daily scan</span><span class="exp-tag">Dedupe</span><span class="exp-tag">Proof on ATS</span><span class="exp-tag">Gates</span><span class="exp-tag">Fit scoring</span><span class="exp-tag">Job board</span><span class="exp-tag">CV checks</span><span class="exp-tag">Python</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/job-search-engine/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/job-search-engine" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-label">Expertise</div>
+    <h2>Build. Run.<br><em>Sell.</em></h2>
+    <p class="section-intro">8+ years in B2B revenue, plus the technical skills to wire the stack behind it.</p>
+
+    <div class="expertise-grid">
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div class="exp-cat">Build: GTM engineering</div>
+        </div>
+        <p class="exp-lead">Turn buying signals into booked meetings.</p>
+        <div class="exp-skills">
+          <div class="exp-skill"><span class="exp-skill-name">Signal based pipeline design, ICP scoring, enrichment waterfalls</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Clay · n8n · Make.com · Zapier</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">AI outreach at scale: Claude API, OpenAI API, MCPs, prompt design</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Apollo · Smartlead · HeyReach · Sales Navigator, with deliverability set up</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Claude Code · GitHub · APIs · webhooks. Reads and adjusts Python and JavaScript</span></div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div class="exp-cat">Run: CRM, RevOps and analytics</div>
+        </div>
+        <p class="exp-lead">Keep the data clean enough that the forecast gets trusted.</p>
+        <div class="exp-skills">
+          <div class="exp-skill"><span class="exp-skill-name">HubSpot and Salesforce architecture and automation</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Pipeline design · lead routing · lead scoring</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Data quality · deduplication · CRM hygiene</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Conversion tracking and attribution: Google Tag Manager, HubSpot forms</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Forecasting · pipeline coverage · MQL and funnel reporting · Gong</span></div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <div class="exp-cat">Sell: field sales and enablement</div>
+        </div>
+        <p class="exp-lead">I have run the deals these systems are built for.</p>
+        <div class="exp-skills">
+          <div class="exp-skill"><span class="exp-skill-name">Full cycle enterprise B2B, C level and procurement</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">MEDDPICC · SPICED · discovery · multi stakeholder deals</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Champion navigation · GDPR and InfoSec reviews</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">Sales playbooks and battlecards</span></div>
+          <div class="exp-skill"><span class="exp-skill-name">SDR to AE handoffs and onboarding</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 <div class="logo-grid-section">
   <div class="logo-grid-label">The full stack: tools I have built with</div>
@@ -5436,301 +5679,7 @@ html.legal-open { overflow: hidden; }
     </div>
   </div>
 </div>
-</div>
-</div>
-
-
-<!-- PHILOSOPHY -->
-<section class="philosophy-section" id="philosophy">
-  <div class="container">
-    <div class="section-label">The philosophy</div>
-    <h2>Less stack.<br><em>More revenue.</em></h2>
-    <p class="phil-intro">Most revenue teams don't have a tool problem. They have a process problem: stages nobody agrees on, records nobody trusts, handoffs nobody owns. Another tool makes it worse. I fix the revenue process first, then automate what is left. Eight years in B2B sales taught me where it breaks.</p>
-
-    <div class="philosophy-grid">
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">Fix the process first</div>
-        <p class="phil-desc">Map the funnel, the stage definitions and the handoffs before adding anything. Most of the stack turns out to be covering for a gap in the process.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">9 → 5</span>
-          <span class="phil-stat-label">Tools after the audit</span>
-        </div>
-      </div>
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">One source of truth</div>
-        <p class="phil-desc">One record per account, one owner, one definition of each stage. Forecasts and dashboards are only as good as the data under them.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">−8%</span>
-          <span class="phil-stat-label">Churn after the CRM foundation</span>
-        </div>
-      </div>
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">AI where it earns its place</div>
-        <p class="phil-desc">AI for enrichment, scoring and first drafts, with a person approving anything a customer sees. It stays only where it moves a stage.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">+42%</span>
-          <span class="phil-stat-label">MQL increase</span>
-        </div>
-      </div>
-
-      <div class="phil-card fade-up">
-        <div class="phil-title">Measured by stage</div>
-        <p class="phil-desc">Every signal cohort is tracked against the rest of the pipeline, stage by stage, so the plan follows the data.</p>
-        <div class="phil-stat">
-          <span class="phil-stat-num">40% vs 12%</span>
-          <span class="phil-stat-label">Close rate, signal cohorts vs the rest</span>
-        </div>
-      </div>
-
-    </div>
-    </div>
-
 </section>
-
-<!-- GTM FUNNEL -->
-<section class="how" id="how" aria-labelledby="system-heading">
-  <div class="container">
-    <div class="section-label">The system</div>
-    <h2 id="system-heading">Start with a workflow. <em>End with a system.</em></h2>
-    <p class="section-intro">I build revenue automation in three sizes. Every size runs the same four steps, so a workflow can grow into an engine, and an engine into a system. Reps spend their time on conversations, not on copying data between tools.</p>
-
-    <ol class="lad" aria-label="Three sizes of scope">
-      <li class="lad-card lad-1">
-        <div class="lad-head"><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
-        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l1i0" d="M16 26 L108 76"/><path id="l1i1" d="M16 51 L108 76"/><path id="l1i2" d="M16 76 L108 76"/><path id="l1i3" d="M16 101 L108 76"/><path id="l1i4" d="M16 126 L108 76"/></defs><path class="sx-wire" d="M16 26 L108 76"/><path class="sx-wire" d="M16 51 L108 76"/><path class="sx-wire" d="M16 76 L108 76"/><path class="sx-wire" d="M16 101 L108 76"/><path class="sx-wire" d="M16 126 L108 76"/><path class="sx-wire" data-o="0" d="M132 76 C178 76 162 28 204 28 L222 28"/><path class="sx-wire" data-o="1" d="M132 76 C178 76 162 76 204 76 L222 76"/><path class="sx-wire" data-o="2" d="M132 76 C178 76 162 124 204 124 L222 124"/><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.28s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.28s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.56s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.56s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i3"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.8400000000000001s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle r="3.6" class="ld-dot ld-mute"><animateMotion dur="7.0s" begin="1.12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.300;1"><mpath href="#l1i4"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="1.12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.260;0.300;1"/></circle><circle id="wfDot" class="ld-dot ld-acc" r="5" opacity="0"/><g class="sx-st" transform="translate(108 76)" style="--d:2.60s"><circle r="24" class="sx-halo"/><circle r="24" class="sx-disc"/><g class="sx-ic" transform="scale(0.85)" style="stroke-width:2.47"><circle r="17" class="sx-track"/><circle r="17" class="sx-arc" transform="rotate(-90)"/><path class="sx-star" d="M0 -7l2.2 4.8 5 .6-3.7 3.4 1 5-4.5-2.6-4.5 2.6 1-5-3.7-3.4 5-.6z"/></g></g><g class="sx-st out" transform="translate(222 28)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><g class="sx-st out" transform="translate(222 76)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-14" y="-8" width="28" height="22" rx="5"/><path d="M0 -8V-16M-5 3v.01M5 3v.01M-6 9h12"/></g></g><g class="sx-st out" transform="translate(222 124)" style="--d:4.90s"><circle r="18" class="sx-halo"/><circle r="18" class="sx-disc"/><g class="sx-ic" transform="scale(0.6)" style="stroke-width:3.50"><rect x="-12" y="-16" width="24" height="32" rx="3"/><path d="M-6 -7h12M-6 0h12M-6 7h7"/></g></g><text class="ld-t ld-s" x="248" y="32">A person</text><text class="ld-t ld-s" x="248" y="80">AI SDR</text><text class="ld-t ld-s" x="248" y="123">Typeform</text><text class="ld-t ld-s2" x="248" y="135">asks more info</text><text class="ld-t" x="4" y="146" text-anchor="start">318 signups</text><text class="ld-t" x="108" y="146" text-anchor="middle">0 to 100</text></svg>
-        <h3 class="lad-title">Workflow</h3>
-        <p class="lad-sub">One automation, one job.</p>
-        <a class="lad-link" href="/work/signup-router/">Example: Signup router &rarr;</a>
-      </li>
-      <li class="lad-card lad-2">
-        <div class="lad-head"><span class="lad-badge">Synthetic data</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
-        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l2p" d="M30 62 L290 62"/></defs><path class="sx-wire" d="M51 62 L74 62"/><path class="sx-wire" d="M116 62 L139 62"/><path class="sx-wire" d="M181 62 L204 62"/><path class="sx-wire" d="M246 62 L269 62"/><path class="sx-wire ld-loop" d="M290 112 C290 148 30 148 30 112"/><path class="sx-arrow" d="M25 119 L30 111 L35 119"/><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.743;1"><mpath href="#l2p"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.739;0.779;1"/></circle><g class="sx-st" transform="translate(30 62)" style="--d:0.10s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(95 62)" style="--d:1.33s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><g class="sx-st" transform="translate(160 62)" style="--d:2.55s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><rect x="-15" y="-10" width="30" height="20" rx="3"/><path d="M-15 -7l15 11 15-11"/></g></g><g class="sx-st" transform="translate(225 62)" style="--d:3.77s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-14 1l9 9 19-19"/></g></g><g class="sx-st" transform="translate(290 62)" style="--d:5.00s"><circle r="21" class="sx-halo"/><circle r="21" class="sx-disc"/><g class="sx-ic" transform="scale(0.62)" style="stroke-width:3.39"><path d="M-16 0H14M3 -11L14 0 3 11"/></g></g><text class="ld-t" x="30" y="100" text-anchor="middle">Clean</text><text class="ld-t" x="95" y="100" text-anchor="middle">Signal</text><text class="ld-t" x="160" y="100" text-anchor="middle">Write</text><text class="ld-t" x="225" y="100" text-anchor="middle">Check</text><text class="ld-t" x="290" y="100" text-anchor="middle">Send</text></svg>
-        <h3 class="lad-title">Engine</h3>
-        <p class="lad-sub">Several workflows, one revenue motion.</p>
-        <a class="lad-link" href="/work/signal-outreach/">Example: Signal outreach &rarr;</a>
-      </li>
-      <li class="lad-card lad-3">
-        <div class="lad-head"><span class="lad-badge">Design, CRM live</span><span class="lad-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>
-        <svg class="lad-art" viewBox="0 0 320 150" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><path id="l3i0" d="M26 36 L64 36 C110 36 118 76 146 76"/><path id="l3i1" d="M26 76 L64 76 C110 76 118 76 146 76"/><path id="l3i2" d="M26 116 L64 116 C110 116 118 76 146 76"/><path id="l3o" d="M206 76 L258 76"/></defs><rect class="ld-rules" x="4" y="12" width="312" height="134" rx="16"/><path class="sx-wire" d="M26 36 L64 36 C110 36 118 76 146 76"/><path class="sx-wire" d="M26 76 L64 76 C110 76 118 76 146 76"/><path class="sx-wire" d="M26 116 L64 116 C110 116 118 76 146 76"/><path class="sx-wire" d="M206 76 L258 76"/><circle r="4" class="ld-dot ld-ob"><animateMotion dur="7.0s" begin="0.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i0"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><circle r="4" class="ld-dot ld-in"><animateMotion dur="7.0s" begin="0.1s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i1"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.1s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><circle r="4" class="ld-dot ld-crm"><animateMotion dur="7.0s" begin="0.2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.320;1"><mpath href="#l3i2"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0.2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.020;0.280;0.320;1"/></circle><circle r="5" class="ld-dot ld-acc"><animateMotion dur="7.0s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.660;1"><mpath href="#l3o"/></animateMotion><animate attributeName="opacity" dur="7.0s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.400;0.640;0.680;1"/></circle><g class="sx-em sx-ob" transform="translate(20 36)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 36)" style="--d:0.65s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M4 -17L-9 3h9l-4 14 13-20h-9z"/></g></g><g class="sx-em sx-in" transform="translate(20 76)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 76)" style="--d:0.77s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-15 6v11h30V6M0 -17v22M-8 -3l8 8 8-8"/></g></g><g class="sx-em sx-crm" transform="translate(20 116)"><circle r="8" class="sx-emc"/><circle r="2.6" fill="#fff"/></g><g class="sx-st" transform="translate(82 116)" style="--d:0.89s"><circle r="15" class="sx-halo"/><circle r="15" class="sx-disc"/><g class="sx-ic" transform="scale(0.5)" style="stroke-width:4.20"><path d="M-13 -9h26M-13 0h26M-13 9h16"/></g></g><g class="sx-st" transform="translate(176 76)" style="--d:2.10s"><circle r="30" class="sx-halo"/><circle r="30" class="sx-disc"/><g class="sx-ic" transform="scale(1.0)" style="stroke-width:2.10"><ellipse cx="0" cy="-11" rx="15" ry="6"/><path d="M-15 -11v22c0 3.5 6.7 6 15 6s15-2.5 15-6v-22M-15 0c0 3.5 6.7 6 15 6s15-2.5 15-6"/></g></g><g class="sx-st" transform="translate(284 76)" style="--d:4.60s"><circle r="26" class="sx-halo"/><circle r="26" class="sx-disc"/><g class="sx-ic" transform="scale(0.8)" style="stroke-width:2.62"><circle cx="-3" cy="-9" r="7"/><path d="M-18 17c0-8 7-13 15-13s15 5 15 13"/><circle cx="16" cy="-14" r="9" class="sx-badge"/><path class="sx-check" d="M11.5 -14l3.3 3.3 6-6.6"/></g></g><text class="ld-t ld-rt" x="160" y="16" text-anchor="middle">same checks on every step</text></svg>
-        <h3 class="lad-title">System</h3>
-        <p class="lad-sub">The operating system.</p>
-        <a class="lad-link" href="#crmProofTitle">See the CRM foundation &darr;</a>
-      </li>
-    </ol>
-
-    <!-- CRM FOUNDATION PROOF -->
-    <div class="crm-proof fade-up" aria-labelledby="crmProofTitle">
-      <div class="crm-proof-head">
-        <div class="section-label" style="margin-bottom:0.6rem">CRM foundation, live</div>
-        <h3 id="crmProofTitle">Fix the record before you <em>automate it.</em></h3>
-      </div>
-      <p>I built on an existing HubSpot setup and found what was quietly breaking it: stage criteria that didn't hold, fields wired to the wrong places, missing connections and duplicate records. Reps were making up for it by copy-pasting data that was often wrong. I fixed the stages and fields, cleared out the duplicates and automated the upkeep. Now nothing writes to HubSpot without a duplicate check, and a failed write sends an alert. The signal engine dashboards and the weekly forecast leadership uses both run on that clean data.</p>
-      <ul class="crm-proof-facts" aria-label="CRM foundation results">
-        <li><strong>3 hours</strong><span>a week saved</span></li>
-        <li><strong>8%</strong><span>lower churn</span></li>
-        <li><strong>Every</strong><span>CRM write checked for duplicates, with a failure alert</span></li>
-        <li><strong>Weekly</strong><span>forecast leadership uses, on the clean data</span></li>
-      </ul>
-    </div>
-
-
-  </div>
-</section>
-
-<!-- EXPERTISE -->
-<section id="expertise">
-  <div class="container">
-    <div class="section-label">Expertise</div>
-    <h2>Build. Run.<br><em>Sell.</em></h2>
-    <p class="section-intro">8+ years in B2B revenue, plus the technical skills to wire the stack behind it.</p>
-
-    <div class="expertise-grid">
-
-      <div class="exp-card">
-        <div class="exp-card-header">
-          <div class="exp-cat">Build: GTM engineering</div>
-        </div>
-        <p class="exp-lead">Turn buying signals into booked meetings.</p>
-        <div class="exp-skills">
-          <div class="exp-skill"><span class="exp-skill-name">Signal based pipeline design, ICP scoring, enrichment waterfalls</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Clay · n8n · Make.com · Zapier</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">AI outreach at scale: Claude API, OpenAI API, MCPs, prompt design</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Apollo · Smartlead · HeyReach · Sales Navigator, with deliverability set up</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Claude Code · GitHub · APIs · webhooks. Reads and adjusts Python and JavaScript</span></div>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-card-header">
-          <div class="exp-cat">Run: CRM, RevOps and analytics</div>
-        </div>
-        <p class="exp-lead">Keep the data clean enough that the forecast gets trusted.</p>
-        <div class="exp-skills">
-          <div class="exp-skill"><span class="exp-skill-name">HubSpot and Salesforce architecture and automation</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Pipeline design · lead routing · lead scoring</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Data quality · deduplication · CRM hygiene</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Conversion tracking and attribution: Google Tag Manager, HubSpot forms</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Forecasting · pipeline coverage · MQL and funnel reporting · Gong</span></div>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-card-header">
-          <div class="exp-cat">Sell: field sales and enablement</div>
-        </div>
-        <p class="exp-lead">I have run the deals these systems are built for.</p>
-        <div class="exp-skills">
-          <div class="exp-skill"><span class="exp-skill-name">Full cycle enterprise B2B, C level and procurement</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">MEDDPICC · SPICED · discovery · multi stakeholder deals</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Champion navigation · GDPR and InfoSec reviews</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">Sales playbooks and battlecards</span></div>
-          <div class="exp-skill"><span class="exp-skill-name">SDR to AE handoffs and onboarding</span></div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="exp-languages">
-      <div class="exp-lang-label">Languages</div>
-      <div class="exp-lang-list">
-        <div class="exp-lang-item"><span class="exp-lang-name">English</span><span class="exp-lang-level">C2, native fluency</span></div>
-        <div class="exp-lang-item"><span class="exp-lang-name">German</span><span class="exp-lang-level">B2, working proficiency</span></div>
-        <div class="exp-lang-item"><span class="exp-lang-name">Hebrew</span><span class="exp-lang-level">C2, native</span></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- WORK SAMPLES -->
-<section class="work" id="samples" aria-labelledby="samplesHeading">
-  <div class="container">
-    <div class="section-label">Work samples</div>
-    <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
-    <p class="work-intro">Six tools, end to end. Each page has the data, the rules, the limits and the code.</p>
-    <div class="work-grid">
-    <article class="work-card fade-up">
-      <h3>CRM clean up</h3>
-      <p class="work-sub">Fix the records, then find who a human should call.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>47</strong><span>changes proposed</span></li>
-        <li><strong>&euro;539k</strong><span>ARR with no owner</span></li>
-        <li><strong>8 of 17</strong><span>customers to a human</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Duplicate, field and owner agents, the customer call list, 8 tests</span><span><b>Designed</b> Claude judging steps, Clay enrichment, Slack approval, API writes</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Four agents clean a HubSpot export (duplicates, broken fields, orphaned owners), then decide which customers get a person this week. Nothing is written until someone approves.</p>
-        <div class="exp-tags"><span class="exp-tag">HubSpot</span><span class="exp-tag">Agents</span><span class="exp-tag">Deduplication</span><span class="exp-tag">Data hygiene</span><span class="exp-tag">Owner routing</span><span class="exp-tag">Churn risk</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Claude</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/crm-cleanup/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/crm-cleanup" target="_blank" rel="noopener">GitHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Signup router</h3>
-      <p class="work-sub">Who gets a human this week, and what they do first.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>318</strong><span>signups in a week</span></li>
-        <li><strong>91</strong><span>stopped by the gate</span></li>
-        <li><strong>23</strong><span>get a person</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Gate, scoring and routing</span><span><b>Designed</b> Clay enrichment, HubSpot tasks via n8n</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Drops customers, partners and personal emails, scores every trial signup 0 to 100 on usage, fit, integration path and pain, and gives each one next action.</p>
-        <div class="exp-tags"><span class="exp-tag">PLG</span><span class="exp-tag">Inbound</span><span class="exp-tag">Gate rules</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing</span><span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Python</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/signup-router/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signup-router" target="_blank" rel="noopener">GitHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Signal outreach</h3>
-      <p class="work-sub">First emails written from the freshest buying signal.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>119</strong><span>contacts in</span></li>
-        <li><strong>38</strong><span>sequences ready</span></li>
-        <li><strong>3</strong><span>stopped by the copy check</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Gate, signal scoring, three step emails, copy check, tests</span><span><b>Designed</b> Clay enrichment, sequencer push via n8n, reply handling</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Turns an enriched list into a three step sequence built on each contact's newest signal, and holds back everyone who should not get it, with the reason.</p>
-        <div class="exp-tags"><span class="exp-tag">Outbound</span><span class="exp-tag">Buying signals</span><span class="exp-tag">Clay</span><span class="exp-tag">Sequences</span><span class="exp-tag">Copy rules</span><span class="exp-tag">Send caps</span><span class="exp-tag">n8n</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/signal-outreach/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signal-outreach" target="_blank" rel="noopener">GitHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Account prioritisation</h3>
-      <p class="work-sub">Which 80 accounts get a call, and when signals run out.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>500</strong><span>accounts in</span></li>
-        <li><strong>80 to 59</strong><span>with a signal, week 1 to 2</span></li>
-        <li><strong>173</strong><span>a load bug would drop</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Gate, scoring, territory and capacity routing, run checks</span><span><b>Designed</b> Clay enrichment, Salesforce writes, Slack message</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Gates, scores and routes 500 accounts across four SDRs by territory and capacity. The finding: signal accounts run out in two weeks, so the next build is signal sources.</p>
-        <div class="exp-tags"><span class="exp-tag">Salesforce</span><span class="exp-tag">Account scoring</span><span class="exp-tag">Territories</span><span class="exp-tag">Capacity</span><span class="exp-tag">Routing</span><span class="exp-tag">Data quality</span><span class="exp-tag">Signals</span><span class="exp-tag">Python</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/account-prioritisation/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/account-prioritisation" target="_blank" rel="noopener">GitHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Lost deal reactivation</h3>
-      <p class="work-sub">Which lost deals are worth a second call.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>235</strong><span>of 760 worth a call</span></li>
-        <li><strong>40</strong><span>calls this week</span></li>
-        <li><strong>9</strong><span>checks per run</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Groups, reasons to talk, routing, nine checks per run</span><span><b>Designed</b> HubSpot write back, workflows, sequence</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Sorts 760 lost accounts into groups, keeps out every clear no, and hands five sellers and the setters a Monday list with the reason and the angle. Nine checks guard every run.</p>
-        <div class="exp-tags"><span class="exp-tag">Closed lost</span><span class="exp-tag">Win back</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Routing</span><span class="exp-tag">Sellers and setters</span><span class="exp-tag">Impact model</span><span class="exp-tag">Claude skill</span><span class="exp-tag">Python</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/lost-deal-reactivation/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/lost-deal-reactivation" target="_blank" rel="noopener">GitHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Job search engine</h3>
-      <p class="work-sub">A daily scan and the board it feeds, for any job title.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>422</strong><span>board copies read</span></li>
-        <li><strong>28</strong><span>dropped by a gate</span></li>
-        <li><strong>4 of 47</strong><span>worth a CV</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Daily scan, gates, fit line, board, CV check</span><span><b>Designed</b> Live sources and paid data tools</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Proves every role on the company's own list, drops what can never work with the reason, scores the rest with a readable fit line and feeds a job hunt board. Shown for Customer Success and Data Analyst searches.</p>
-        <div class="exp-tags"><span class="exp-tag">Daily scan</span><span class="exp-tag">Dedupe</span><span class="exp-tag">Proof on ATS</span><span class="exp-tag">Gates</span><span class="exp-tag">Fit scoring</span><span class="exp-tag">Job board</span><span class="exp-tag">CV checks</span><span class="exp-tag">Python</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/job-search-engine/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/job-search-engine" target="_blank" rel="noopener">GitHub &rarr;</a>
-      </div>
-    </article>
-    </div>
-
-  </div>
-</section>
-
 
 <!-- CV SECTION -->
 <section id="stack">
@@ -5905,10 +5854,9 @@ html.legal-open { overflow: hidden; }
     <span class="footer-logo-text">Pragma<em>GTM</em></span>
   </a>
   <ul class="footer-links">
-    <li><a href="#philosophy">Philosophy</a></li>
-    <li><a href="#how">The system</a></li>
-    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#how">How I think</a></li>
     <li><a href="#samples">Samples</a></li>
+    <li><a href="#expertise">Expertise</a></li>
     <li><a href="#stack">CV</a></li>
     <li><a href="#contact" class="footer-cta">Contact</a></li>
   </ul>
@@ -6110,7 +6058,7 @@ html.legal-open { overflow: hidden; }
     const orbs = [
       { sel: '.hero',               color: 'rgba(217,119,6,0.07)', size: '60vw', x: '75%', y: '40%' },
       { sel: '#services',           color: 'rgba(217,119,6,0.05)', size: '50vw', x: '20%', y: '60%' },
-      { sel: '.philosophy-section', color: 'rgba(194,98,42,0.06)', size: '55vw', x: '80%', y: '30%' },
+      { sel: '.how-all', color: 'rgba(194,98,42,0.06)', size: '55vw', x: '80%', y: '12%' },
     ];
     orbs.forEach(({ sel, color, size, x, y }) => {
       const s = document.querySelector(sel);
