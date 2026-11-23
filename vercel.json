@@ -377,6 +377,24 @@
           "value": "frame-ancestors 'self'"
         }
       ]
+    },
+    {
+      "source": "/work/pipeline-dashboard/queries.sql",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/work/pipeline-dashboard/README.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ]
 }

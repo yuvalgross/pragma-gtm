@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipeline dashboard · Yuval Gross</title>
+<meta name="description" content="A revenue dashboard on Supabase and Hex: won revenue, close rate by lead source and MQL rate, 12 months before and after a signal based outbound engine. Synthetic data calibrated to real results.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pipeline dashboard · Yuval Gross">
+<meta property="og:description" content="What changed when outbound started from signals: €295k to €390k won, 40% vs 12% close rate, MQL rate up 42%. Supabase, SQL and Hex.">
+<meta property="og:url" content="https://pragma-gtm.com/work/pipeline-dashboard/">
+<meta property="og:image" content="https://pragma-gtm.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://pragma-gtm.com/work/pipeline-dashboard/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'><rect width='52' height='52' rx='10' fill='%2316211b'/><path d='M4,46 L4,6 L18,26 Z' fill='%239a3412'/></svg>">
+<link rel="preload" href="/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* self-hosted fonts (OFL-1.1), latin subset */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/dm-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+<script>
+(function () {
+  function apply() {
+    var t = null;
+    try { t = localStorage.getItem('pragma-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  }
+  apply();
+  window.addEventListener('storage', function (e) { if (e.key === 'pragma-theme') apply(); });
+  if (window.matchMedia) { var mq = window.matchMedia('(prefers-color-scheme: dark)'); if (mq.addEventListener) mq.addEventListener('change', apply); }
+})();
+</script>
+<style>
+  :root {
+    --page: #ebf0ec; --page-2: #f5f7f5; --ink: #16211b; --muted: #5f6f65; --panel: #fbfcfb; --line: #d9e2db;
+    --accent: #9a3412; --accent-soft: #ffedd5; --warn-bg: #f6efd9; --warn-ink: #6b4a0b;
+    --serif: "Cormorant Garamond", Georgia, serif; --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --page: #0b100d; --page-2: #1c251f; --ink: #e8efe9; --muted: #9aaa9f; --panel: #131a15; --line: #26332b;
+    --accent: #fb923c; --accent-soft: rgba(251,146,60,.12); --warn-bg: #2a2412; --warn-ink: #e8c987;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; background: var(--page); }
+  body { margin: 0; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--ink);
+    background: var(--page) radial-gradient(circle at 20% 0%, var(--page-2), var(--page) 60%) no-repeat;
+    padding: 40px 16px 72px; }
+  main { max-width: 880px; margin: 0 auto; display: grid; gap: 44px; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .back { font-size: 15px; text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; }
+  .eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--accent); }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  section { min-width: 0; }
+  .lead { font-size: 19px; }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 6px; }
+  .step { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; min-width: 0; }
+  .step b { display: block; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .step span { font-size: 15.5px; color: var(--muted); }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; min-width: 900px; }
+  td.acct { min-width: 220px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.total { font-weight: 500; color: var(--accent); }
+  tr.hot td { background: var(--accent-soft); }
+  .sub { display: block; color: var(--muted); font-size: 13.5px; }
+  .note { background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--line); padding: 12px 16px; font-size: 15px; max-width: none; margin-top: 12px; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 22px; margin: 6px 0 0; }
+  dt { color: var(--muted); } dd { margin: 0; max-width: 62ch; }
+  .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 24px; margin-top: 6px; }
+  .files a { font-family: var(--mono); font-size: 14px; }
+  .files small { display: block; color: var(--muted); font-size: 14px; }
+  details { border: 1px solid var(--line); background: var(--panel); margin-top: 10px; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 500; }
+  pre { margin: 0; padding: 16px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.55; border-top: 1px solid var(--line); tab-size: 4; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--accent-soft); padding: 1px 5px; }
+  footer { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 22px; border-top: 1px solid var(--line); padding-top: 18px; }
+  pre.cli { border: 1px solid var(--line); background: var(--panel); margin: 12px 0 14px; max-width: 100%; }
+  @media (max-width: 560px) { pre.cli { white-space: pre-wrap; overflow-wrap: anywhere; } }
+  @media (max-width: 560px) { body { font-size: 16px; } dl { grid-template-columns: 1fr; gap: 2px; } dd { margin-bottom: 10px; } h2 { font-size: 27px; } }
+</style>
+
+
+<style id="ws-layout">
+  main { gap: 34px; }
+  header { display: grid; gap: 0; }
+  .ws-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+  .ws-kpis .kpi, .kpis .kpi { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--accent); padding: 14px 16px; }
+  .ws-kpis .kpi strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.05; color: var(--accent); }
+  .ws-kpis .kpi span { font-size: 14px; line-height: 1.4; color: var(--muted); display: block; margin-top: 4px; }
+  .ws-nav { position: sticky; top: 0; z-index: 20; margin: -14px 0 0; padding: 10px 0; display: flex; gap: 8px; overflow-x: auto;
+    scrollbar-width: none; background: color-mix(in srgb, var(--page) 88%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+  .ws-nav::-webkit-scrollbar { display: none; }
+  .ws-nav a { flex: none; font-size: 13.5px; text-decoration: none; color: var(--muted); border: 1px solid var(--line); background: var(--panel);
+    padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+  .ws-nav a:hover, .ws-nav a.on { color: var(--accent); border-color: var(--accent); }
+  .ws-nav a.folded::after { content: " +"; opacity: .6; }
+  section { scroll-margin-top: 64px; }
+  h2[id] { scroll-margin-top: 64px; }
+  details.fold { background: transparent; border: 0; border-top: 1px solid var(--line); margin: 0; }
+  details.fold > summary { list-style: none; padding: 16px 0 6px; display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  details.fold > summary::-webkit-details-marker { display: none; }
+  details.fold > summary h2 { margin: 0; font-size: 26px; }
+  details.fold > summary::after { content: "Open"; flex: none; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 500; }
+  details.fold[open] > summary::after { content: "Close"; }
+  details.fold > .fold-body { padding: 8px 0 4px; }
+  .flow { counter-reset: step; }
+  .flow .step { position: relative; counter-increment: step; padding-top: 14px; }
+  .flow .step b::before { content: counter(step); display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--accent); color: var(--panel); font-size: 12px; letter-spacing: 0; margin-right: 8px; vertical-align: 1px; }
+  .rows-more { margin-top: 8px; font: 500 14px var(--sans); color: var(--accent); background: var(--panel); border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer; border-radius: 999px; }
+  tr.rows-hidden { display: none; }
+  @media (max-width: 760px) {
+    .ws-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lead { font-size: 16.5px; line-height: 1.55; }
+    h1 { font-size: 32px; }
+    .ws-kpis .kpi strong { font-size: 27px; }
+    .flow { grid-template-columns: 1fr; gap: 8px; }
+    .flow .step { padding: 12px 14px; }
+    details.fold > summary h2 { font-size: 23px; }
+  }
+</style>
+<style>.ws-own{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.ws-own>div{background:var(--panel);border:1px solid var(--line);padding:10px 14px;font-size:14.5px;color:var(--muted)}.ws-own b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:2px}@media(max-width:760px){.ws-own{grid-template-columns:1fr}}</style>
+<style>.ws-tags{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 4px}.ws-tags span{font-size:13px;color:var(--accent);background:var(--accent-soft);border:1px solid var(--line);padding:3px 10px;border-radius:999px}</style>
+<style id="dash-css">
+  .chartbox { background: var(--panel); border: 1px solid var(--line); padding: 18px 18px 10px; margin-top: 12px; }
+  .chartbox h3 { font-family: var(--sans); font-size: 15px; font-weight: 500; margin: 0 0 2px; }
+  .chartbox .cap { font-size: 14px; color: var(--muted); margin: 0 0 8px; max-width: none; }
+  .chart { display: block; width: 100%; height: auto; overflow: visible; }
+  .chart text { font-family: var(--sans); }
+  .c-grid { stroke: var(--line); stroke-width: 1; }
+  .c-tick { fill: var(--muted); font-size: 12px; }
+  .c-cat { fill: var(--ink); font-size: 14px; }
+  .c-cat.muted, .c-lab.muted { fill: var(--muted); }
+  .c-lab { fill: var(--ink); font-size: 13.5px; font-weight: 500; }
+  .c-val { fill: var(--ink); font-size: 13.5px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .c-sub { fill: var(--muted); font-weight: 400; font-size: 12.5px; }
+  .c-bar { fill: var(--accent); }
+  .c-bar.base { fill: var(--muted); opacity: .38; }
+  .c-bar:hover { opacity: .8; }
+  .c-divider { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 4; }
+  .cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 500; text-decoration: none;
+    color: var(--panel); background: var(--accent); padding: 10px 18px; border-radius: 999px; }
+  .cta:hover { opacity: .9; }
+  .cta-note { display: inline-block; margin-left: 12px; font-size: 14px; color: var(--muted); }
+  @media (max-width: 560px) { .chartbox { padding: 14px 10px 6px; overflow-x: auto; } .chart { min-width: 640px; } .cta-note { display: block; margin: 8px 0 0; } }
+</style>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="cwbj0yF0og2TQQIF3Nlw0g" async></script>
+<style>.more{font-size:15px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 16px}.more span{width:100%}</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/#samples" data-back>pragma-gtm.com</a>
+
+  <header>
+    <p class="eyebrow">Work sample</p>
+    <h1>Pipeline dashboard: what changed when outbound <em>started from signals.</em></h1>
+    <p class="lead">A revenue dashboard that puts the 12 months before a signal based outbound engine next to the 12 months after. Deals and contacts live in a Supabase analytics schema, Hex reads them through its own locked down database user, and the app is public with the code hidden.</p>
+    <div class="ws-tags"><span>Dashboards</span><span>Supabase</span><span>Postgres</span><span>SQL</span><span>Hex</span><span>Data modelling</span><span>Access control</span><span>Apollo</span><span>Python</span></div><!--/ws-tags-->
+    <div class="ws-kpis kpis-band"><div class="kpi"><strong>€390k</strong><span>won in 12 months, up from €295k</span></div><div class="kpi"><strong>40% vs 12%</strong><span>close rate, signal led vs generic outreach</span></div><div class="kpi"><strong>+42%</strong><span>MQL rate, 20.0% to 28.4% of leads</span></div><div class="kpi"><strong>36 vs 57</strong><span>days to win, signal led vs generic</span></div></div><!--/ws-kpis-->
+
+    <div class="ws-own"><div><b>Designed and built</b><span>The analytics schema, the Hex database user, every query, the charts and the public app. Claude Code wrote the SQL and chart code from my spec.</span></div><div><b>Designed, not running</b><span>A nightly HubSpot sync into the schema through n8n, so the numbers refresh on their own.</span></div></div><!--/ws-own-->
+    <p class="note">The deals, contacts and companies are synthetic, calibrated to mirror results I delivered (see the numbers on <a href="/">pragma-gtm.com</a>). Every deal, company and person is made up. The outreach section is real, aggregate Apollo data with the sequence names anonymized.</p>
+    <p><a class="cta" href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">Open the live dashboard in Hex &rarr;</a><span class="cta-note">Public link, view only, no sign in</span></p>
+  </header>
+  <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#charts">The charts</a><a href="#outreach">Outreach</a><a href="#data">The data</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="flow">
+      <div class="step"><b>Model</b><span>One <code>analytics</code> schema in Supabase Postgres: deals, contacts, companies and outreach sequences. Every deal carries its lead source, period, stage path, amount and days to close.</span></div>
+      <div class="step"><b>Lock down</b><span>Hex logs in as its own database user. It sees the analytics schema and nothing else, so the app's tables with personal data stay out of reach.</span></div>
+      <div class="step"><b>Query</b><span>Five SQL queries: headline numbers, revenue by month, close rate by source, the funnel and outreach. Months only count once they are complete.</span></div>
+      <div class="step"><b>Publish</b><span>A Hex app with the code hidden and a public view only link. Hex's agent can answer new questions on the same tables.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="charts">
+    <h2 id="charts">The charts, <em>and what they say</em></h2>
+    <p>Signal led deals close at 40%, generic outreach at 12%. Generic outreach still brings in the most money because it runs at the biggest volume: 325 closed deals against 50. The move is not to stop it, but to feed more of the pipeline from signals, where every closed deal is worth more effort.</p>
+    <div class="chartbox">
+      <h3>Won revenue by month</h3>
+      <p class="cap">Grey: the 12 months before. Orange: the 12 months after the signal engine went live. Hover a bar for the month. On a phone, swipe sideways.</p>
+<svg class="chart" viewBox="0 0 880 320" role="img" aria-labelledby="c1t c1d" xmlns="http://www.w3.org/2000/svg">
+<title id="c1t">Won revenue by month, 12 months before and 12 months after the signal engine</title>
+<desc id="c1d">Monthly won revenue in euros. Before: 295 thousand euros over 12 months. After: 390 thousand euros over 12 months.</desc>
+<line class="c-grid" x1="52" x2="868" y1="286.0" y2="286.0"/>
+<text class="c-tick" x="44" y="290.0" text-anchor="end">€0</text>
+<line class="c-grid" x1="52" x2="868" y1="209.3" y2="209.3"/>
+<text class="c-tick" x="44" y="213.3" text-anchor="end">€20k</text>
+<line class="c-grid" x1="52" x2="868" y1="132.7" y2="132.7"/>
+<text class="c-tick" x="44" y="136.7" text-anchor="end">€40k</text>
+<line class="c-grid" x1="52" x2="868" y1="56.0" y2="56.0"/>
+<text class="c-tick" x="44" y="60.0" text-anchor="end">€60k</text>
+<path class="c-bar base" d="M55.0,286.0 V93.7 Q55.0,89.7 59.0,89.7 H79.0 Q83.0,89.7 83.0,93.7 V286.0 Z"><title>Nov 2024: €51k won, 6 deals</title></path>
+<text class="c-tick" x="69.0" y="306" text-anchor="middle">Nov 24</text>
+<path class="c-bar base" d="M89.0,286.0 V151.6 Q89.0,147.6 93.0,147.6 H113.0 Q117.0,147.6 117.0,151.6 V286.0 Z"><title>Dec 2024: €36k won, 6 deals</title></path>
+<path class="c-bar base" d="M123.0,286.0 V223.7 Q123.0,219.7 127.0,219.7 H147.0 Q151.0,219.7 151.0,223.7 V286.0 Z"><title>Jan 2025: €17k won, 3 deals</title></path>
+<path class="c-bar base" d="M157.0,286.0 V212.2 Q157.0,208.2 161.0,208.2 H181.0 Q185.0,208.2 185.0,212.2 V286.0 Z"><title>Feb 2025: €20k won, 2 deals</title></path>
+<text class="c-tick" x="171.0" y="306" text-anchor="middle">Feb 25</text>
+<path class="c-bar base" d="M191.0,286.0 V263.2 Q191.0,259.2 195.0,259.2 H215.0 Q219.0,259.2 219.0,263.2 V286.0 Z"><title>Mar 2025: €7k won, 2 deals</title></path>
+<path class="c-bar base" d="M225.0,286.0 V155.8 Q225.0,151.8 229.0,151.8 H249.0 Q253.0,151.8 253.0,155.8 V286.0 Z"><title>Apr 2025: €35k won, 4 deals</title></path>
+<path class="c-bar base" d="M259.0,286.0 V239.8 Q259.0,235.8 263.0,235.8 H283.0 Q287.0,235.8 287.0,239.8 V286.0 Z"><title>May 2025: €13k won, 2 deals</title></path>
+<text class="c-tick" x="273.0" y="306" text-anchor="middle">May 25</text>
+<path class="c-bar base" d="M293.0,286.0 V137.4 Q293.0,133.4 297.0,133.4 H317.0 Q321.0,133.4 321.0,137.4 V286.0 Z"><title>Jun 2025: €40k won, 5 deals</title></path>
+<path class="c-bar base" d="M327.0,286.0 V221.4 Q327.0,217.4 331.0,217.4 H351.0 Q355.0,217.4 355.0,221.4 V286.0 Z"><title>Jul 2025: €18k won, 3 deals</title></path>
+<path class="c-bar base" d="M361.0,286.0 V249.4 Q361.0,245.4 365.0,245.4 H385.0 Q389.0,245.4 389.0,249.4 V286.0 Z"><title>Aug 2025: €11k won, 2 deals</title></path>
+<text class="c-tick" x="375.0" y="306" text-anchor="middle">Aug 25</text>
+<path class="c-bar base" d="M395.0,286.0 V153.9 Q395.0,149.9 399.0,149.9 H419.0 Q423.0,149.9 423.0,153.9 V286.0 Z"><title>Sep 2025: €36k won, 3 deals</title></path>
+<path class="c-bar base" d="M429.0,286.0 V247.1 Q429.0,243.1 433.0,243.1 H453.0 Q457.0,243.1 457.0,247.1 V286.0 Z"><title>Oct 2025: €11k won, 1 deals</title></path>
+<path class="c-bar" d="M463.0,286.0 V62.7 Q463.0,58.7 467.0,58.7 H487.0 Q491.0,58.7 491.0,62.7 V286.0 Z"><title>Nov 2025: €59k won, 4 deals</title></path>
+<text class="c-tick" x="477.0" y="306" text-anchor="middle">Nov 25</text>
+<path class="c-bar" d="M497.0,286.0 V180.0 Q497.0,176.0 501.0,176.0 H521.0 Q525.0,176.0 525.0,180.0 V286.0 Z"><title>Dec 2025: €29k won, 3 deals</title></path>
+<path class="c-bar" d="M531.0,286.0 V259.3 Q531.0,255.3 535.0,255.3 H555.0 Q559.0,255.3 559.0,259.3 V286.0 Z"><title>Jan 2026: €8k won, 2 deals</title></path>
+<path class="c-bar" d="M565.0,286.0 V226.4 Q565.0,222.4 569.0,222.4 H589.0 Q593.0,222.4 593.0,226.4 V286.0 Z"><title>Feb 2026: €17k won, 3 deals</title></path>
+<text class="c-tick" x="579.0" y="306" text-anchor="middle">Feb 26</text>
+<path class="c-bar" d="M599.0,286.0 V89.1 Q599.0,85.1 603.0,85.1 H623.0 Q627.0,85.1 627.0,89.1 V286.0 Z"><title>Mar 2026: €52k won, 7 deals</title></path>
+<path class="c-bar" d="M633.0,286.0 V277.0 Q633.0,273.0 637.0,273.0 H657.0 Q661.0,273.0 661.0,277.0 V286.0 Z"><title>Apr 2026: €3k won, 1 deals</title></path>
+<path class="c-bar" d="M667.0,286.0 V145.9 Q667.0,141.9 671.0,141.9 H691.0 Q695.0,141.9 695.0,145.9 V286.0 Z"><title>May 2026: €38k won, 4 deals</title></path>
+<text class="c-tick" x="681.0" y="306" text-anchor="middle">May 26</text>
+<path class="c-bar" d="M701.0,286.0 V121.3 Q701.0,117.3 705.0,117.3 H725.0 Q729.0,117.3 729.0,121.3 V286.0 Z"><title>Jun 2026: €44k won, 6 deals</title></path>
+<path class="c-bar" d="M735.0,286.0 V153.5 Q735.0,149.5 739.0,149.5 H759.0 Q763.0,149.5 763.0,153.5 V286.0 Z"><title>Jul 2026: €36k won, 3 deals</title></path>
+<path class="c-bar" d="M769.0,286.0 V137.8 Q769.0,133.8 773.0,133.8 H793.0 Q797.0,133.8 797.0,137.8 V286.0 Z"><title>Aug 2026: €40k won, 5 deals</title></path>
+<text class="c-tick" x="783.0" y="306" text-anchor="middle">Aug 26</text>
+<path class="c-bar" d="M803.0,286.0 V158.9 Q803.0,154.9 807.0,154.9 H827.0 Q831.0,154.9 831.0,158.9 V286.0 Z"><title>Sep 2026: €34k won, 6 deals</title></path>
+<path class="c-bar" d="M837.0,286.0 V173.1 Q837.0,169.1 841.0,169.1 H861.0 Q865.0,169.1 865.0,173.1 V286.0 Z"><title>Oct 2026: €30k won, 6 deals</title></path>
+<line class="c-divider" x1="460.0" x2="460.0" y1="22" y2="286"/>
+<text class="c-lab muted" x="450.0" y="36" text-anchor="end">Before · €295k in 12 months</text>
+<text class="c-lab" x="470.0" y="36">Signal engine live · €390k in 12 months</text>
+</svg>
+    </div>
+    <div class="chartbox">
+      <h3>Close rate by lead source</h3>
+      <p class="cap">All closed deals. Referral closes best, as it usually does, but there are only 22 of them. Signal led matches it at more than twice the volume.</p>
+<svg class="chart" viewBox="0 0 880 224" role="img" aria-labelledby="c2t c2d" xmlns="http://www.w3.org/2000/svg">
+<title id="c2t">Close rate by lead source, closed deals</title>
+<desc id="c2d">Referral 41 percent, signal-led 40 percent, inbound 25 percent, generic outbound 12 percent.</desc>
+<line class="c-grid" x1="150.0" x2="150.0" y1="10" y2="194"/>
+<text class="c-tick" x="150.0" y="214" text-anchor="middle">0%</text>
+<line class="c-grid" x1="268.0" x2="268.0" y1="10" y2="194"/>
+<text class="c-tick" x="268.0" y="214" text-anchor="middle">10%</text>
+<line class="c-grid" x1="386.0" x2="386.0" y1="10" y2="194"/>
+<text class="c-tick" x="386.0" y="214" text-anchor="middle">20%</text>
+<line class="c-grid" x1="504.0" x2="504.0" y1="10" y2="194"/>
+<text class="c-tick" x="504.0" y="214" text-anchor="middle">30%</text>
+<line class="c-grid" x1="622.0" x2="622.0" y1="10" y2="194"/>
+<text class="c-tick" x="622.0" y="214" text-anchor="middle">40%</text>
+<line class="c-grid" x1="740.0" x2="740.0" y1="10" y2="194"/>
+<text class="c-tick" x="740.0" y="214" text-anchor="middle">50%</text>
+<text class="c-cat muted" x="138" y="38.0" text-anchor="end">Referral</text>
+<path class="c-bar base" d="M150.0,19.0 H628.6 Q632.6,19.0 632.6,23.0 V43.0 Q632.6,47.0 628.6,47.0 H150.0 Z"><title>Referral: 40.9% close rate, 9 of 22 closed deals won, €48k won, 57 days to win</title></path>
+<text class="c-val" x="640.6" y="38.0">41%<tspan class="c-sub" dx="8">9 of 22 won</tspan></text>
+<text class="c-cat" x="138" y="84.0" text-anchor="end">Signal-led</text>
+<path class="c-bar" d="M150.0,65.0 H618.0 Q622.0,65.0 622.0,69.0 V89.0 Q622.0,93.0 618.0,93.0 H150.0 Z"><title>Signal-led: 40.0% close rate, 20 of 50 closed deals won, €147k won, 36 days to win</title></path>
+<text class="c-val" x="630.0" y="84.0">40%<tspan class="c-sub" dx="8">20 of 50 won</tspan></text>
+<text class="c-cat muted" x="138" y="130.0" text-anchor="end">Inbound</text>
+<path class="c-bar base" d="M150.0,111.0 H437.5 Q441.5,111.0 441.5,115.0 V135.0 Q441.5,139.0 437.5,139.0 H150.0 Z"><title>Inbound: 24.7% close rate, 21 of 85 closed deals won, €144k won, 66 days to win</title></path>
+<text class="c-val" x="449.5" y="130.0">25%<tspan class="c-sub" dx="8">21 of 85 won</tspan></text>
+<text class="c-cat" x="138" y="176.0" text-anchor="end">Generic outbound</text>
+<path class="c-bar" d="M150.0,157.0 H287.6 Q291.6,157.0 291.6,161.0 V181.0 Q291.6,185.0 287.6,185.0 H150.0 Z"><title>Generic outbound: 12.0% close rate, 39 of 325 closed deals won, €345k won, 57 days to win</title></path>
+<text class="c-val" x="299.6" y="176.0">12%<tspan class="c-sub" dx="8">39 of 325 won</tspan></text>
+</svg>
+    </div>
+    <div class="chartbox">
+      <h3>Before vs after</h3>
+      <p class="cap">Two panels, one scale each. Revenue grew 32% on 39 to 50 won deals. The share of leads that became MQLs grew 42%.</p>
+<svg class="chart" viewBox="0 0 880 280" role="img" aria-labelledby="c3t c3d" xmlns="http://www.w3.org/2000/svg">
+<title id="c3t">Before and after the signal engine: won revenue and MQL rate</title>
+<desc id="c3d">Won revenue rose from 295 to 390 thousand euros, plus 32 percent. MQL rate rose from 20.0 to 28.4 percent of leads, plus 42 percent.</desc>
+<text class="c-lab" x="0" y="26">Won revenue, 12 months · +32%</text>
+<line class="c-grid" x1="44" x2="410" y1="246.0" y2="246.0"/>
+<text class="c-tick" x="36" y="250.0" text-anchor="end">€0</text>
+<line class="c-grid" x1="44" x2="410" y1="181.3" y2="181.3"/>
+<text class="c-tick" x="36" y="185.3" text-anchor="end">€150k</text>
+<line class="c-grid" x1="44" x2="410" y1="116.7" y2="116.7"/>
+<text class="c-tick" x="36" y="120.7" text-anchor="end">€300k</text>
+<line class="c-grid" x1="44" x2="410" y1="52.0" y2="52.0"/>
+<text class="c-tick" x="36" y="56.0" text-anchor="end">€450k</text>
+<path class="c-bar base" d="M110.0,246.0 V122.8 Q110.0,118.8 114.0,118.8 H190.0 Q194.0,118.8 194.0,122.8 V246.0 Z"><title>Before: €295k won</title></path>
+<text class="c-val" x="152.0" y="110.8" text-anchor="middle">€295k</text>
+<text class="c-tick" x="152.0" y="266" text-anchor="middle">Before</text>
+<path class="c-bar" d="M260.0,246.0 V81.9 Q260.0,77.9 264.0,77.9 H340.0 Q344.0,77.9 344.0,81.9 V246.0 Z"><title>After: €390k won</title></path>
+<text class="c-val" x="302.0" y="69.9" text-anchor="middle">€390k</text>
+<text class="c-tick" x="302.0" y="266" text-anchor="middle">After</text>
+<text class="c-lab" x="470" y="26">MQL rate, share of leads · +42%</text>
+<line class="c-grid" x1="514" x2="880" y1="246.0" y2="246.0"/>
+<text class="c-tick" x="506" y="250.0" text-anchor="end">0%</text>
+<line class="c-grid" x1="514" x2="880" y1="181.3" y2="181.3"/>
+<text class="c-tick" x="506" y="185.3" text-anchor="end">12%</text>
+<line class="c-grid" x1="514" x2="880" y1="116.7" y2="116.7"/>
+<text class="c-tick" x="506" y="120.7" text-anchor="end">24%</text>
+<line class="c-grid" x1="514" x2="880" y1="52.0" y2="52.0"/>
+<text class="c-tick" x="506" y="56.0" text-anchor="end">36%</text>
+<path class="c-bar base" d="M580.0,246.0 V142.2 Q580.0,138.2 584.0,138.2 H660.0 Q664.0,138.2 664.0,142.2 V246.0 Z"><title>Before: 20.0% of leads became MQLs</title></path>
+<text class="c-val" x="622.0" y="130.2" text-anchor="middle">20.0%</text>
+<text class="c-tick" x="622.0" y="266" text-anchor="middle">Before</text>
+<path class="c-bar" d="M730.0,246.0 V97.0 Q730.0,93.0 734.0,93.0 H810.0 Q814.0,93.0 814.0,97.0 V246.0 Z"><title>After: 28.4% of leads became MQLs</title></path>
+<text class="c-val" x="772.0" y="85.0" text-anchor="middle">28.4%</text>
+<text class="c-tick" x="772.0" y="266" text-anchor="middle">After</text>
+</svg>
+    </div>
+  </section>
+
+  <section aria-labelledby="outreach">
+    <h2 id="outreach">Outreach: which sequences <em>get replies</em></h2>
+    <p>Real Apollo numbers, aggregate only, sequence names anonymized. Sequences with at least 50 delivered emails. The multichannel sequence aimed at decision makers replies at 13.6%, more than three times the next best, while the open rate leaders reply far less. Opens are a weak signal; replies are the one to manage.</p>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Outreach sequences, scrolls sideways on small screens">
+    <table style="min-width:620px">
+      <thead><tr><th>Sequence</th><th class="n">Delivered</th><th class="n">Replies</th><th class="n">Reply rate</th></tr></thead>
+      <tbody>
+<tr class="hot"><td>Decision-makers · email + LinkedIn (10 steps)</td><td class="n">390</td><td class="n">53</td><td class="n total">13.6%</td></tr>
+<tr><td>Marketing buyers · manual-first v2 (6 steps)</td><td class="n">239</td><td class="n">9</td><td class="n total">3.8%</td></tr>
+<tr><td>Sales leaders · AI-written (7 steps)</td><td class="n">260</td><td class="n">6</td><td class="n total">2.3%</td></tr>
+<tr><td>Marketing buyers · manual-first v1 (5 steps)</td><td class="n">63</td><td class="n">1</td><td class="n total">1.6%</td></tr>
+<tr><td>High-intent prospects · email only (3 steps)</td><td class="n">131</td><td class="n">2</td><td class="n total">1.5%</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="data">
+    <h2 id="data">The data</h2>
+    <dl>
+      <dt>Deals</dt><dd>482 closed deals over 24 months plus 28 open ones. Exact closed and won counts per period and source, so the close rates are 40% and 12% by construction. Won amounts are scaled so each 12 month period totals exactly €295k and €390k.</dd>
+      <dt>Contacts</dt><dd>1,000 leads, 500 per period. 100 MQLs before, 142 after: 20.0% to 28.4%, a 42% uplift.</dd>
+      <dt>Companies</dt><dd>300 invented companies with industry, size, region and ICP tier.</dd>
+      <dt>Outreach</dt><dd>Nine real Apollo sequences, aggregate counts only. Names replaced with a description of the audience and the steps.</dd>
+      <dt>Not in it</dt><dd>No real company, person or deal. No figure from a current employer's CRM.</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="change">
+    <details class="fold"><summary><h2 id="change">What I would change <em>first</em></h2></summary><div class="fold-body">
+    <p>Replace the synthetic tables with a nightly sync from the CRM. An n8n workflow would pull closed and open deals from HubSpot into the same schema, so every chart and query stays as it is and the numbers refresh on their own.</p>
+    <p>Split signal led by signal type. Funding, hiring and job changes probably do not close at the same rate, and the next budget decision is which signal source to pay for. The same chart answers it with one more column.</p>
+    <p>How I would judge it: the sales lead opens it on Monday instead of asking for a spreadsheet. If nobody opens it for two weeks, it answers the wrong question.</p></div></details><!--/fold-->
+  </section>
+
+  <section aria-labelledby="built">
+    <details class="fold"><summary><h2 id="built">How it was built</h2></summary><div class="fold-body">
+    <dl>
+      <dt>AI did</dt><dd>Claude Code wrote the SQL, the data generator and the chart code from my spec, and set up the Hex project through Hex's connector.</dd>
+      <dt>I did</dt><dd>Chose the story and the targets, decided what is real and what is synthetic, set the access rule that keeps the app tables out of Hex, anonymized the outreach data, and checked every number against the source tables.</dd>
+      <dt>Not built</dt><dd>The live CRM sync and a refresh schedule. The data is a snapshot from November 2026.</dd>
+      <dt>Stack</dt><dd>Supabase Postgres, SQL, Hex (notebook, app builder, agent), Plotly in Hex, inline SVG on this page.</dd>
+    </dl></div></details><!--/fold-->
+  </section>
+
+  <section aria-labelledby="files">
+    <details class="fold"><summary><h2 id="files">Files</h2></summary><div class="fold-body">
+    <p><a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/pipeline-dashboard">The whole folder on GitHub</a>.</p>
+    <p><a href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">The live dashboard in Hex</a>: view only, the same numbers as this page.</p>
+    <div class="files">
+      <div><a href="queries.sql">queries.sql</a><small>Every query behind the dashboard, and the database user Hex logs in with.</small></div>
+      <div><a href="data/dashboard.json">dashboard.json</a><small>The aggregates the charts on this page are drawn from.</small></div>
+      <div><a href="README.md">README.md</a><small>What is real, what is synthetic, and how it fits together.</small></div>
+    </div></div></details><!--/fold-->
+  </section>
+
+  <nav class="more" aria-label="More work samples"><span>More work samples</span><a href="/work/signal-outreach/">Signal outreach</a><a href="/work/account-prioritisation/">Account prioritisation</a><a href="/work/lost-deal-reactivation/">Lost deal reactivation</a><a href="/work/crm-cleanup/">CRM clean-up</a><a href="/work/signup-router/">Signup router</a><a href="/work/job-search-engine/">Job search engine</a></nav>
+  <footer>
+    <a href="/#samples" data-back>Back to work samples</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/pipeline-dashboard">Code on GitHub</a>
+    <a href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">Live dashboard in Hex</a>
+  </footer>
+</main>
+<script>
+/* Back to the work samples: if you came from the homepage, go back in history so it keeps its place; otherwise open it at the samples section. */
+document.querySelectorAll('a[data-back]').forEach(function(a){a.addEventListener('click',function(e){try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.origin===location.origin&&r.pathname==='/'&&history.length>1){e.preventDefault();history.back();}}catch(_){}});});
+</script>
+
+
+<script id="ws-layout-js">
+(function () {
+  var nav = document.querySelector('.ws-nav');
+  function openFor(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var d = el.closest('details.fold');
+    if (d && !d.open) d.open = true;
+  }
+  if (nav) nav.addEventListener('click', function (e) {
+    var a = e.target.closest('a'); if (!a) return;
+    openFor(a.getAttribute('href').slice(1));
+  });
+  if (location.hash) openFor(location.hash.slice(1));
+  window.addEventListener('hashchange', function () { openFor(location.hash.slice(1)); });
+  document.querySelectorAll('.tablewrap table').forEach(function (t) {
+    var rows = t.tBodies[0] ? Array.prototype.slice.call(t.tBodies[0].rows) : [];
+    if (rows.length <= 12) return;
+    rows.slice(10).forEach(function (r) { r.classList.add('rows-hidden'); });
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'rows-more';
+    b.textContent = 'Show all ' + rows.length + ' rows';
+    b.addEventListener('click', function () {
+      var hidden = rows[10].classList.contains('rows-hidden');
+      rows.slice(10).forEach(function (r) { r.classList.toggle('rows-hidden', !hidden); });
+      b.textContent = hidden ? 'Show the top 10' : 'Show all ' + rows.length + ' rows';
+    });
+    t.closest('.tablewrap').insertAdjacentElement('afterend', b);
+  });
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}; nav.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle('on', k === en.target.id); });
+        var a = links[en.target.id];
+        if (a) nav.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    Object.keys(links).forEach(function (k) { var h = document.getElementById(k); if (h) io.observe(h); });
+  }
+})();
+</script>
+</body>
+</html>
