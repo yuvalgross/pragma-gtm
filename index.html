@@ -1340,6 +1340,15 @@ h1 em {
     line-height: 1.4;
     font-weight: var(--fw-regular);
   }
+.hero-card-link {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent, #c2410c);
+    text-decoration: none;
+    margin: -0.25rem 0 1rem;
+  }
+.hero-card-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .hero-card-tag {
     display: inline-flex;
     align-items: center;
@@ -1680,6 +1689,7 @@ h2 em {
 .work-link.gh { opacity: .8; }
 .work-link.mh { opacity: .8; }
 .work-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: auto; padding-top: 0.2rem; align-items: center; }
+.work-card-wide { grid-column: 1 / -1; }
 .work-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1690,7 +1700,7 @@ h2 em {
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
-  /* phones: all six stacked and compact; the description opens on tap */
+  /* phones: all seven stacked and compact; the description opens on tap */
   .work-grid { grid-template-columns: 1fr; gap: 0.8rem; }
   .work-card { padding: 1.1rem 1.1rem 1rem; gap: 0.7rem; }
   .work-card h3 { font-size: 1.35rem; }
@@ -4610,6 +4620,7 @@ html.legal-open { overflow: hidden; }
             <span class="stat-label">close rate on signal led deals, vs 12% generic</span>
           </div>
         </div>
+        <a class="hero-card-link" href="/work/pipeline-dashboard/">See these numbers as a dashboard &rarr;</a>
         <div class="hero-card-tag">
           <div class="dot-live"></div>
           Open to GTM Engineer roles
@@ -5009,8 +5020,28 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="section-label">Work samples</div>
     <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
-    <p class="work-intro">Six tools, end to end. Each page has the data, the rules, the limits and the code.</p>
+    <p class="work-intro">Seven builds, end to end. Each page has the data, the rules, the limits and the code.</p>
     <div class="work-grid">
+    <article class="work-card work-card-wide fade-up">
+      <h3>Pipeline dashboard</h3>
+      <p class="work-sub">What changed when outbound started from signals.</p>
+      <ul class="work-facts" aria-label="What the dashboard shows">
+        <li><strong>&euro;295k &rarr; &euro;390k</strong><span>won in 12 months</span></li>
+        <li><strong>40% vs 12%</strong><span>close rate, signal led vs generic</span></li>
+        <li><strong>+42%</strong><span>MQL rate</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Supabase analytics schema, locked down Hex user, SQL, public Hex app</span><span><b>Designed</b> Nightly HubSpot sync via n8n</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Deals and leads from the 12 months before and after a signal engine, modelled in Supabase and published as a live Hex dashboard. Synthetic data calibrated to my real results; outreach stats are real Apollo data, anonymized.</p>
+        <div class="exp-tags"><span class="exp-tag">Dashboards</span><span class="exp-tag">Supabase</span><span class="exp-tag">Postgres</span><span class="exp-tag">SQL</span><span class="exp-tag">Hex</span><span class="exp-tag">Access control</span><span class="exp-tag">Apollo</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/pipeline-dashboard/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">Live dashboard &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/pipeline-dashboard" target="_blank" rel="noopener">GitHub &rarr;</a>
+      </div>
+    </article>
     <article class="work-card fade-up">
       <h3>CRM clean up</h3>
       <p class="work-sub">Fix the records, then find who a human should call.</p>
