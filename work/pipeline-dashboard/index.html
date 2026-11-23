@@ -169,20 +169,21 @@
   <header>
     <p class="eyebrow">Work sample</p>
     <h1>Pipeline dashboard: what changed when outbound <em>started from signals.</em></h1>
-    <p class="lead">A revenue dashboard that puts the 12 months before a signal based outbound engine next to the 12 months after. Deals and contacts live in a Supabase analytics schema, Hex reads them through its own locked down database user, and the app is public with the code hidden.</p>
-    <div class="ws-tags"><span>Dashboards</span><span>Supabase</span><span>Postgres</span><span>SQL</span><span>Hex</span><span>Data modelling</span><span>Access control</span><span>Apollo</span><span>Python</span></div><!--/ws-tags-->
+    <p class="lead">A revenue dashboard that puts the 12 months before a signal based outbound engine next to the 12 months after. Live buying signals come from Clay, deals and contacts live in a Supabase analytics schema, Hex reads them through its own locked down database user, and the app is public with the code hidden.</p>
+    <div class="ws-tags"><span>Dashboards</span><span>Supabase</span><span>Postgres</span><span>SQL</span><span>Hex</span><span>Data modelling</span><span>Access control</span><span>Clay</span><span>Apollo</span><span>Python</span></div><!--/ws-tags-->
     <div class="ws-kpis kpis-band"><div class="kpi"><strong>€390k</strong><span>won in 12 months, up from €295k</span></div><div class="kpi"><strong>40% vs 12%</strong><span>close rate, signal led vs generic outreach</span></div><div class="kpi"><strong>+42%</strong><span>MQL rate, 20.0% to 28.4% of leads</span></div><div class="kpi"><strong>36 vs 57</strong><span>days to win, signal led vs generic</span></div></div><!--/ws-kpis-->
 
-    <div class="ws-own"><div><b>Designed and built</b><span>The analytics schema, the Hex database user, every query, the charts and the public app. Claude Code wrote the SQL and chart code from my spec.</span></div><div><b>Designed, not running</b><span>A nightly HubSpot sync into the schema through n8n, so the numbers refresh on their own.</span></div></div><!--/ws-own-->
-    <p class="note">The deals, contacts and companies are synthetic, calibrated to mirror results I delivered (see the numbers on <a href="/">pragma-gtm.com</a>). Every deal, company and person is made up. The outreach section is real, aggregate Apollo data with the sequence names anonymized.</p>
+    <div class="ws-own"><div><b>Designed and built</b><span>The analytics schema, the Hex database user, the Clay signal searches, every query, the charts and the public app. Claude Code wrote the SQL and chart code from my spec.</span></div><div><b>Designed, not running</b><span>A nightly HubSpot sync into the schema through n8n, so the numbers refresh on their own.</span></div></div><!--/ws-own-->
+    <p class="note">The deals, contacts and companies are synthetic, calibrated to mirror results I delivered (see the numbers on <a href="/">pragma-gtm.com</a>). Every deal, company and person is made up. The outreach section is real, aggregate Apollo data with the sequence names anonymized. The Clay signals are real companies from public company data, with no people or contact data.</p>
     <p><a class="cta" href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">Open the live dashboard in Hex &rarr;</a><span class="cta-note">Public link, view only, no sign in</span></p>
   </header>
-  <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#charts">The charts</a><a href="#outreach">Outreach</a><a href="#data">The data</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
+  <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#charts">The charts</a><a href="#signals">Clay signals</a><a href="#outreach">Outreach</a><a href="#data">The data</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
     <div class="flow">
-      <div class="step"><b>Model</b><span>One <code>analytics</code> schema in Supabase Postgres: deals, contacts, companies and outreach sequences. Every deal carries its lead source, period, stage path, amount and days to close.</span></div>
+      <div class="step"><b>Find signals</b><span>Three Clay company searches on the ICP: hiring for sales, fast headcount growth and a new sales leader. A company with two or more signals goes on the call list.</span></div>
+      <div class="step"><b>Model</b><span>One <code>analytics</code> schema in Supabase Postgres: Clay signals, deals, contacts, companies and outreach sequences. Every deal carries its lead source, period, stage path, amount and days to close.</span></div>
       <div class="step"><b>Lock down</b><span>Hex logs in as its own database user. It sees the analytics schema and nothing else, so the app's tables with personal data stay out of reach.</span></div>
       <div class="step"><b>Query</b><span>Five SQL queries: headline numbers, revenue by month, close rate by source, the funnel and outreach. Months only count once they are complete.</span></div>
       <div class="step"><b>Publish</b><span>A Hex app with the code hidden and a public view only link. Hex's agent can answer new questions on the same tables.</span></div>
@@ -315,6 +316,48 @@
     </div>
   </section>
 
+  <section aria-labelledby="signals">
+    <h2 id="signals">Where signal led pipeline <em>comes from</em></h2>
+    <p>The 40% close rate only matters if there are enough signals to act on. Three Clay company searches on the ICP (software and e-learning companies with 51 to 500 staff, headquartered in Germany, Austria or Switzerland) each returned 20 companies: open sales or RevOps roles posted in the last 30 days, headcount up 20% or more in six months, and a new VP Sales, Head of Sales or CRO in the last three months. 52 companies in total. Most show one signal; six show two or three at once, and those go on the call list.</p>
+    <div class="chartbox">
+      <h3>Companies by number of signals</h3>
+      <p class="cap">Real companies, public company data, captured 23 November 2026. Each search was capped at 20 companies.</p>
+<svg class="chart" viewBox="0 0 880 250" role="img" aria-labelledby="c4t c4d" xmlns="http://www.w3.org/2000/svg">
+<title id="c4t">Clay: companies by number of signals they show at once</title>
+<desc id="c4d">46 companies show one signal, 4 show two, 2 show all three.</desc>
+<line class="c-grid" x1="40" x2="868" y1="216.0" y2="216.0"/>
+<text class="c-tick" x="32" y="220.0" text-anchor="end">0</text>
+<line class="c-grid" x1="40" x2="868" y1="118.0" y2="118.0"/>
+<text class="c-tick" x="32" y="122.0" text-anchor="end">25</text>
+<line class="c-grid" x1="40" x2="868" y1="20.0" y2="20.0"/>
+<text class="c-tick" x="32" y="24.0" text-anchor="end">50</text>
+<path class="c-bar base" d="M134.5,216.0 V39.7 Q134.5,35.7 138.5,35.7 H280.5 Q284.5,35.7 284.5,39.7 V216.0 Z"><title>1 signal: 46 companies</title></path>
+<text class="c-val" x="209.5" y="27.7" text-anchor="middle">46 companies</text>
+<text class="c-tick" x="209.5" y="236" text-anchor="middle">1 signal</text>
+<path class="c-bar" d="M379.0,216.0 V204.3 Q379.0,200.3 383.0,200.3 H525.0 Q529.0,200.3 529.0,204.3 V216.0 Z"><title>2 signals: 4 companies</title></path>
+<text class="c-val" x="454.0" y="192.3" text-anchor="middle">4 companies</text>
+<text class="c-tick" x="454.0" y="236" text-anchor="middle">2 signals</text>
+<path class="c-bar" d="M623.5,216.0 V212.2 Q623.5,208.2 627.5,208.2 H769.5 Q773.5,208.2 773.5,212.2 V216.0 Z"><title>3 signals: 2 companies</title></path>
+<text class="c-val" x="698.5" y="200.2" text-anchor="middle">2 companies</text>
+<text class="c-tick" x="698.5" y="236" text-anchor="middle">3 signals</text>
+</svg>
+    </div>
+    <div class="tablewrap" tabindex="0" role="region" aria-label="Call list from stacked signals, scrolls sideways on small screens">
+    <table style="min-width:620px">
+      <thead><tr><th>Call this week</th><th>Signals</th><th class="n">Staff</th></tr></thead>
+      <tbody>
+<tr class="hot"><td class="acct">Neural Concept<span class="sub">Lausanne, Switzerland</span></td><td>Headcount growth + Hiring for sales + New sales leader</td><td class="n">153</td></tr>
+<tr class="hot"><td class="acct">Peec AI<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales + New sales leader</td><td class="n">119</td></tr>
+<tr><td class="acct">n8n<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales</td><td class="n">1,389</td></tr>
+<tr><td class="acct">Parloa<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales</td><td class="n">646</td></tr>
+<tr><td class="acct">Adjust<span class="sub">Berlin, Germany</span></td><td>Hiring for sales + New sales leader</td><td class="n">475</td></tr>
+<tr><td class="acct">Langdock<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales</td><td class="n">74</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">These are prospects found from public signals, not customers or deals. No people or contact data was pulled. The next step, designed but not running, pushes this list into HubSpot as companies with the signals attached.</p>
+  </section>
+
   <section aria-labelledby="outreach">
     <h2 id="outreach">Outreach: which sequences <em>get replies</em></h2>
     <p>Real Apollo numbers, aggregate only, sequence names anonymized. Sequences with at least 50 delivered emails. The multichannel sequence aimed at decision makers replies at 13.6%, more than three times the next best, while the open rate leaders reply far less. Opens are a weak signal; replies are the one to manage.</p>
@@ -338,8 +381,9 @@
       <dt>Deals</dt><dd>482 closed deals over 24 months plus 28 open ones. Exact closed and won counts per period and source, so the close rates are 40% and 12% by construction. Won amounts are scaled so each 12 month period totals exactly €295k and €390k.</dd>
       <dt>Contacts</dt><dd>1,000 leads, 500 per period. 100 MQLs before, 142 after: 20.0% to 28.4%, a 42% uplift.</dd>
       <dt>Companies</dt><dd>300 invented companies with industry, size, region and ICP tier.</dd>
+      <dt>Clay signals</dt><dd>52 real companies with 60 signals from Clay company search, captured 23 November 2026. Public company data only: name, domain, location, size. No people, no contact data.</dd>
       <dt>Outreach</dt><dd>Nine real Apollo sequences, aggregate counts only. Names replaced with a description of the audience and the steps.</dd>
-      <dt>Not in it</dt><dd>No real company, person or deal. No figure from a current employer's CRM.</dd>
+      <dt>Not in it</dt><dd>No real person or deal. The only real companies are the Clay signal accounts, and they appear as prospects, not customers. No figure from a current employer's CRM.</dd>
     </dl>
   </section>
 
@@ -355,8 +399,8 @@
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote the SQL, the data generator and the chart code from my spec, and set up the Hex project through Hex's connector.</dd>
       <dt>I did</dt><dd>Chose the story and the targets, decided what is real and what is synthetic, set the access rule that keeps the app tables out of Hex, anonymized the outreach data, and checked every number against the source tables.</dd>
-      <dt>Not built</dt><dd>The live CRM sync and a refresh schedule. The data is a snapshot from November 2026.</dd>
-      <dt>Stack</dt><dd>Supabase Postgres, SQL, Hex (notebook, app builder, agent), Plotly in Hex, inline SVG on this page.</dd>
+      <dt>Not built</dt><dd>The CRM step: pushing the call list into HubSpot as companies with the signals attached, and a nightly refresh of the Clay searches. The data is a snapshot from November 2026.</dd>
+      <dt>Stack</dt><dd>Clay (company search), Supabase Postgres, SQL, Hex (notebook, app builder, agent), Plotly in Hex, inline SVG on this page.</dd>
     </dl></div></details><!--/fold-->
   </section>
 
