@@ -21,4 +21,4 @@ Run any of them:
     python3 make_synthetic_*.py
     python3 <tool>.py ...   # the exact command is in each README
 
-All data in this folder is invented. Nothing here describes a real company or person.
+All data in this folder is invented, except the pipeline dashboard's Clay signal accounts: real companies from public company data, shown as prospects. Nothing here describes a real person.

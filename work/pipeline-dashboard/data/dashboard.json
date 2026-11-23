@@ -1,36 +1,291 @@
 {
-  "note": "Aggregates queried from the Supabase analytics schema on 2026-11-23. Deals, contacts and companies are synthetic, calibrated to mirror published results (won revenue 295k to 390k EUR, 40% vs 12% close rate, +42% MQL rate). Outreach sequences are real Apollo aggregates with anonymized names.",
+  "note": "Aggregates queried from the Supabase analytics schema on 2026-11-23. Deals, contacts and companies are synthetic, calibrated to mirror published results (won revenue 295k to 390k EUR, 40% vs 12% close rate, +42% MQL rate). Outreach sequences are real Apollo aggregates with anonymized names. clay_signals are real companies from Clay company search (public company data, no people), captured 2026-11-23.",
   "monthly": [
-    {"mon":"2024-11","won_eur":51200,"deals":6},{"mon":"2024-12","won_eur":36100,"deals":6},{"mon":"2025-01","won_eur":17300,"deals":3},
-    {"mon":"2025-02","won_eur":20300,"deals":2},{"mon":"2025-03","won_eur":7000,"deals":2},{"mon":"2025-04","won_eur":35000,"deals":4},
-    {"mon":"2025-05","won_eur":13100,"deals":2},{"mon":"2025-06","won_eur":39800,"deals":5},{"mon":"2025-07","won_eur":17900,"deals":3},
-    {"mon":"2025-08","won_eur":10600,"deals":2},{"mon":"2025-09","won_eur":35500,"deals":3},{"mon":"2025-10","won_eur":11200,"deals":1},
-    {"mon":"2025-11","won_eur":59300,"deals":4},{"mon":"2025-12","won_eur":28700,"deals":3},{"mon":"2026-01","won_eur":8000,"deals":2},
-    {"mon":"2026-02","won_eur":16600,"deals":3},{"mon":"2026-03","won_eur":52400,"deals":7},{"mon":"2026-04","won_eur":3400,"deals":1},
-    {"mon":"2026-05","won_eur":37600,"deals":4},{"mon":"2026-06","won_eur":44000,"deals":6},{"mon":"2026-07","won_eur":35600,"deals":3},
-    {"mon":"2026-08","won_eur":39700,"deals":5},{"mon":"2026-09","won_eur":34200,"deals":6},{"mon":"2026-10","won_eur":30500,"deals":6}
+    {
+      "mon": "2024-11",
+      "won_eur": 51200,
+      "deals": 6
+    },
+    {
+      "mon": "2024-12",
+      "won_eur": 36100,
+      "deals": 6
+    },
+    {
+      "mon": "2025-01",
+      "won_eur": 17300,
+      "deals": 3
+    },
+    {
+      "mon": "2025-02",
+      "won_eur": 20300,
+      "deals": 2
+    },
+    {
+      "mon": "2025-03",
+      "won_eur": 7000,
+      "deals": 2
+    },
+    {
+      "mon": "2025-04",
+      "won_eur": 35000,
+      "deals": 4
+    },
+    {
+      "mon": "2025-05",
+      "won_eur": 13100,
+      "deals": 2
+    },
+    {
+      "mon": "2025-06",
+      "won_eur": 39800,
+      "deals": 5
+    },
+    {
+      "mon": "2025-07",
+      "won_eur": 17900,
+      "deals": 3
+    },
+    {
+      "mon": "2025-08",
+      "won_eur": 10600,
+      "deals": 2
+    },
+    {
+      "mon": "2025-09",
+      "won_eur": 35500,
+      "deals": 3
+    },
+    {
+      "mon": "2025-10",
+      "won_eur": 11200,
+      "deals": 1
+    },
+    {
+      "mon": "2025-11",
+      "won_eur": 59300,
+      "deals": 4
+    },
+    {
+      "mon": "2025-12",
+      "won_eur": 28700,
+      "deals": 3
+    },
+    {
+      "mon": "2026-01",
+      "won_eur": 8000,
+      "deals": 2
+    },
+    {
+      "mon": "2026-02",
+      "won_eur": 16600,
+      "deals": 3
+    },
+    {
+      "mon": "2026-03",
+      "won_eur": 52400,
+      "deals": 7
+    },
+    {
+      "mon": "2026-04",
+      "won_eur": 3400,
+      "deals": 1
+    },
+    {
+      "mon": "2026-05",
+      "won_eur": 37600,
+      "deals": 4
+    },
+    {
+      "mon": "2026-06",
+      "won_eur": 44000,
+      "deals": 6
+    },
+    {
+      "mon": "2026-07",
+      "won_eur": 35600,
+      "deals": 3
+    },
+    {
+      "mon": "2026-08",
+      "won_eur": 39700,
+      "deals": 5
+    },
+    {
+      "mon": "2026-09",
+      "won_eur": 34200,
+      "deals": 6
+    },
+    {
+      "mon": "2026-10",
+      "won_eur": 30500,
+      "deals": 6
+    }
   ],
   "sources": [
-    {"lead_source":"Referral","closed":22,"won":9,"win_rate":40.9,"won_eur":48500,"days":57},
-    {"lead_source":"Signal-led","closed":50,"won":20,"win_rate":40.0,"won_eur":147400,"days":36},
-    {"lead_source":"Inbound","closed":85,"won":21,"win_rate":24.7,"won_eur":144100,"days":66},
-    {"lead_source":"Generic outbound","closed":325,"won":39,"win_rate":12.0,"won_eur":345000,"days":57}
+    {
+      "lead_source": "Referral",
+      "closed": 22,
+      "won": 9,
+      "win_rate": 40.9,
+      "won_eur": 48500,
+      "days": 57
+    },
+    {
+      "lead_source": "Signal-led",
+      "closed": 50,
+      "won": 20,
+      "win_rate": 40.0,
+      "won_eur": 147400,
+      "days": 36
+    },
+    {
+      "lead_source": "Inbound",
+      "closed": 85,
+      "won": 21,
+      "win_rate": 24.7,
+      "won_eur": 144100,
+      "days": 66
+    },
+    {
+      "lead_source": "Generic outbound",
+      "closed": 325,
+      "won": 39,
+      "win_rate": 12.0,
+      "won_eur": 345000,
+      "days": 57
+    }
   ],
-  "funnel_after": {"discovery":227,"demo":146,"proposal":105,"negotiation":71,"won":50},
+  "funnel_after": {
+    "discovery": 227,
+    "demo": 146,
+    "proposal": 105,
+    "negotiation": 71,
+    "won": 50
+  },
   "periods": [
-    {"period":"Before signals","won_eur":295000,"won_deals":39,"closed":255},
-    {"period":"After signals","won_eur":390000,"won_deals":50,"closed":227}
+    {
+      "period": "Before signals",
+      "won_eur": 295000,
+      "won_deals": 39,
+      "closed": 255
+    },
+    {
+      "period": "After signals",
+      "won_eur": 390000,
+      "won_deals": 50,
+      "closed": 227
+    }
   ],
   "mql": [
-    {"period":"Before signals","leads":500,"mqls":100},
-    {"period":"After signals","leads":500,"mqls":142}
+    {
+      "period": "Before signals",
+      "leads": 500,
+      "mqls": 100
+    },
+    {
+      "period": "After signals",
+      "leads": 500,
+      "mqls": 142
+    }
   ],
-  "open_pipeline": {"deals":28,"eur":305300},
+  "open_pipeline": {
+    "deals": 28,
+    "eur": 305300
+  },
   "sequences": [
-    {"label":"Decision-makers · email + LinkedIn (10 steps)","delivered":390,"replied":53,"reply_rate":0.1359},
-    {"label":"Marketing buyers · manual-first v2 (6 steps)","delivered":239,"replied":9,"reply_rate":0.0377},
-    {"label":"Sales leaders · AI-written (7 steps)","delivered":260,"replied":6,"reply_rate":0.0231},
-    {"label":"Marketing buyers · manual-first v1 (5 steps)","delivered":63,"replied":1,"reply_rate":0.0159},
-    {"label":"High-intent prospects · email only (3 steps)","delivered":131,"replied":2,"reply_rate":0.0153}
-  ]
+    {
+      "label": "Decision-makers · email + LinkedIn (10 steps)",
+      "delivered": 390,
+      "replied": 53,
+      "reply_rate": 0.1359
+    },
+    {
+      "label": "Marketing buyers · manual-first v2 (6 steps)",
+      "delivered": 239,
+      "replied": 9,
+      "reply_rate": 0.0377
+    },
+    {
+      "label": "Sales leaders · AI-written (7 steps)",
+      "delivered": 260,
+      "replied": 6,
+      "reply_rate": 0.0231
+    },
+    {
+      "label": "Marketing buyers · manual-first v1 (5 steps)",
+      "delivered": 63,
+      "replied": 1,
+      "reply_rate": 0.0159
+    },
+    {
+      "label": "High-intent prospects · email only (3 steps)",
+      "delivered": 131,
+      "replied": 2,
+      "reply_rate": 0.0153
+    }
+  ],
+  "clay": {
+    "icp": "Software and e-learning companies, 51 to 500 staff, HQ in Germany, Austria or Switzerland",
+    "signals": [
+      {
+        "type": "Hiring for sales",
+        "rule": "Open AE, SDR, Head of Sales or RevOps role posted in the last 30 days",
+        "companies": 20
+      },
+      {
+        "type": "Headcount growth",
+        "rule": "Headcount up 20% or more in the last 6 months",
+        "companies": 20
+      },
+      {
+        "type": "New sales leader",
+        "rule": "VP Sales, Head of Sales or CRO started in the last 3 months",
+        "companies": 20
+      }
+    ],
+    "companies_by_signal_count": {
+      "1": 46,
+      "2": 4,
+      "3": 2
+    },
+    "stacked": [
+      {
+        "company": "Neural Concept",
+        "place": "Lausanne, Switzerland",
+        "staff": 153,
+        "signals": "Headcount growth + Hiring for sales + New sales leader"
+      },
+      {
+        "company": "Peec AI",
+        "place": "Berlin, Germany",
+        "staff": 119,
+        "signals": "Headcount growth + Hiring for sales + New sales leader"
+      },
+      {
+        "company": "n8n",
+        "place": "Berlin, Germany",
+        "staff": 1389,
+        "signals": "Headcount growth + Hiring for sales"
+      },
+      {
+        "company": "Parloa",
+        "place": "Berlin, Germany",
+        "staff": 646,
+        "signals": "Headcount growth + Hiring for sales"
+      },
+      {
+        "company": "Adjust",
+        "place": "Berlin, Germany",
+        "staff": 475,
+        "signals": "Hiring for sales + New sales leader"
+      },
+      {
+        "company": "Langdock",
+        "place": "Berlin, Germany",
+        "staff": 74,
+        "signals": "Headcount growth + Hiring for sales"
+      }
+    ]
+  }
 }

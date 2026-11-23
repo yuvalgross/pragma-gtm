@@ -67,3 +67,17 @@ order by reply_rate desc;
 --   grant select, insert, update, delete on all tables in schema analytics to hex_readonly;
 --   alter role hex_readonly set statement_timeout = '120s';
 --   (password set by hand in the Supabase SQL editor, never in code)
+
+-- 7. Clay signals: companies by how many signals they show at once ---------------------
+-- clay_signals holds REAL companies from Clay company search (public company data, no people).
+-- One row per company and signal: Hiring for sales, Headcount growth, New sales leader.
+create view analytics.clay_signal_accounts as
+select domain, min(company_name) as company_name, min(country) as country, min(city) as city,
+       max(employee_count) as employee_count,
+       count(*) as signal_count,
+       string_agg(signal_type, ' + ' order by signal_type) as signals,
+       case when count(*) >= 2 then 'Call this week' else 'Sequence' end as next_action
+from analytics.clay_signals group by domain;
+
+select signal_count, count(*) as companies
+from analytics.clay_signal_accounts group by 1 order by 1;
