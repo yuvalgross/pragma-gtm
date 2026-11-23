@@ -182,7 +182,7 @@
   <section aria-labelledby="how">
     <h2 id="how">How it works</h2>
     <div class="flow">
-      <div class="step"><b>Find signals</b><span>Three Clay company searches on the ICP: hiring for sales, fast headcount growth and a new sales leader. A company with two or more signals goes on the call list.</span></div>
+      <div class="step"><b>Find signals</b><span>Three Clay company searches on the ICP: hiring for sales, headcount growth and a new sales leader. A company with two or more signals goes on the call list.</span></div>
       <div class="step"><b>Model</b><span>One <code>analytics</code> schema in Supabase Postgres: Clay signals, deals, contacts, companies and outreach sequences. Every deal carries its lead source, period, stage path, amount and days to close.</span></div>
       <div class="step"><b>Lock down</b><span>Hex logs in as its own database user. It sees the analytics schema and nothing else, so the app's tables with personal data stay out of reach.</span></div>
       <div class="step"><b>Query</b><span>Five SQL queries: headline numbers, revenue by month, close rate by source, the funnel and outreach. Months only count once they are complete.</span></div>
@@ -318,27 +318,26 @@
 
   <section aria-labelledby="signals">
     <h2 id="signals">Where signal led pipeline <em>comes from</em></h2>
-    <p>The 40% close rate only matters if there are enough signals to act on. Three Clay company searches on the ICP (software and e-learning companies with 51 to 500 staff, headquartered in Germany, Austria or Switzerland) each returned 20 companies: open sales or RevOps roles posted in the last 30 days, headcount up 20% or more in six months, and a new VP Sales, Head of Sales or CRO in the last three months. 52 companies in total. Most show one signal; six show two or three at once, and those go on the call list.</p>
+    <p>The 40% close rate only matters if there are enough signals to act on. The ICP here is the market I sold into: corporate learning, L&amp;D and HR tech companies that sell to businesses, with 51 to 1,000 staff, headquartered in DACH, Benelux, the UK, the Nordics, France or Spain. Three Clay company searches ran on it: an open sales or RevOps role posted in the last 30 days, headcount up 5% or more in six months, and a new VP Sales, Head of Sales, Sales Director or CRO in the last six months. Recruiters, staffing agencies, schools and public bodies were filtered out, which left 24 companies with 31 signals. Most show one signal; seven show two at once, and those go on the call list.</p>
     <div class="chartbox">
       <h3>Companies by number of signals</h3>
-      <p class="cap">Real companies, public company data, captured 23 November 2026. Each search was capped at 20 companies.</p>
+      <p class="cap">Real companies, public company data, captured 23 November 2026. Each search was capped at 20 companies before the ICP filter.</p>
 <svg class="chart" viewBox="0 0 880 250" role="img" aria-labelledby="c4t c4d" xmlns="http://www.w3.org/2000/svg">
 <title id="c4t">Clay: companies by number of signals they show at once</title>
-<desc id="c4d">46 companies show one signal, 4 show two, 2 show all three.</desc>
+<desc id="c4d">17 companies show one signal, 7 show two, none shows all three.</desc>
 <line class="c-grid" x1="40" x2="868" y1="216.0" y2="216.0"/>
 <text class="c-tick" x="32" y="220.0" text-anchor="end">0</text>
 <line class="c-grid" x1="40" x2="868" y1="118.0" y2="118.0"/>
-<text class="c-tick" x="32" y="122.0" text-anchor="end">25</text>
+<text class="c-tick" x="32" y="122.0" text-anchor="end">10</text>
 <line class="c-grid" x1="40" x2="868" y1="20.0" y2="20.0"/>
-<text class="c-tick" x="32" y="24.0" text-anchor="end">50</text>
-<path class="c-bar base" d="M134.5,216.0 V39.7 Q134.5,35.7 138.5,35.7 H280.5 Q284.5,35.7 284.5,39.7 V216.0 Z"><title>1 signal: 46 companies</title></path>
-<text class="c-val" x="209.5" y="27.7" text-anchor="middle">46 companies</text>
+<text class="c-tick" x="32" y="24.0" text-anchor="end">20</text>
+<path class="c-bar base" d="M134.5,216.0 V53.4 Q134.5,49.4 138.5,49.4 H280.5 Q284.5,49.4 284.5,53.4 V216.0 Z"><title>1 signal: 17 companies</title></path>
+<text class="c-val" x="209.5" y="41.4" text-anchor="middle">17 companies</text>
 <text class="c-tick" x="209.5" y="236" text-anchor="middle">1 signal</text>
-<path class="c-bar" d="M379.0,216.0 V204.3 Q379.0,200.3 383.0,200.3 H525.0 Q529.0,200.3 529.0,204.3 V216.0 Z"><title>2 signals: 4 companies</title></path>
-<text class="c-val" x="454.0" y="192.3" text-anchor="middle">4 companies</text>
+<path class="c-bar" d="M379.0,216.0 V151.4 Q379.0,147.4 383.0,147.4 H525.0 Q529.0,147.4 529.0,151.4 V216.0 Z"><title>2 signals: 7 companies</title></path>
+<text class="c-val" x="454.0" y="139.4" text-anchor="middle">7 companies</text>
 <text class="c-tick" x="454.0" y="236" text-anchor="middle">2 signals</text>
-<path class="c-bar" d="M623.5,216.0 V212.2 Q623.5,208.2 627.5,208.2 H769.5 Q773.5,208.2 773.5,212.2 V216.0 Z"><title>3 signals: 2 companies</title></path>
-<text class="c-val" x="698.5" y="200.2" text-anchor="middle">2 companies</text>
+<text class="c-val" x="698.5" y="208.0" text-anchor="middle">0 companies</text>
 <text class="c-tick" x="698.5" y="236" text-anchor="middle">3 signals</text>
 </svg>
     </div>
@@ -346,12 +345,13 @@
     <table style="min-width:620px">
       <thead><tr><th>Call this week</th><th>Signals</th><th class="n">Staff</th></tr></thead>
       <tbody>
-<tr class="hot"><td class="acct">Neural Concept<span class="sub">Lausanne, Switzerland</span></td><td>Headcount growth + Hiring for sales + New sales leader</td><td class="n">153</td></tr>
-<tr class="hot"><td class="acct">Peec AI<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales + New sales leader</td><td class="n">119</td></tr>
-<tr><td class="acct">n8n<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales</td><td class="n">1,389</td></tr>
-<tr><td class="acct">Parloa<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales</td><td class="n">646</td></tr>
-<tr><td class="acct">Adjust<span class="sub">Berlin, Germany</span></td><td>Hiring for sales + New sales leader</td><td class="n">475</td></tr>
-<tr><td class="acct">Langdock<span class="sub">Berlin, Germany</span></td><td>Headcount growth + Hiring for sales</td><td class="n">74</td></tr>
+<tr><td class="acct">Cezanne HR<span class="sub">London, United Kingdom</span></td><td>Headcount growth + New sales leader</td><td class="n">180</td></tr>
+<tr><td class="acct">Clasing<span class="sub">Madrid, Spain</span></td><td>Headcount growth + Hiring for sales</td><td class="n">110</td></tr>
+<tr><td class="acct">PINKTUM<span class="sub">Munich, Germany</span></td><td>Hiring for sales + New sales leader</td><td class="n">106</td></tr>
+<tr><td class="acct">PerchPeek<span class="sub">London, United Kingdom</span></td><td>Headcount growth + Hiring for sales</td><td class="n">72</td></tr>
+<tr><td class="acct">Tack TMI<span class="sub">London, United Kingdom</span></td><td>Headcount growth + New sales leader</td><td class="n">428</td></tr>
+<tr><td class="acct">Thomas<span class="sub">Marlow, United Kingdom</span></td><td>Hiring for sales + New sales leader</td><td class="n">522</td></tr>
+<tr><td class="acct">WorkMotion<span class="sub">Berlin, Germany</span></td><td>Hiring for sales + New sales leader</td><td class="n">219</td></tr>
       </tbody>
     </table>
     </div>
@@ -381,7 +381,7 @@
       <dt>Deals</dt><dd>482 closed deals over 24 months plus 28 open ones. Exact closed and won counts per period and source, so the close rates are 40% and 12% by construction. Won amounts are scaled so each 12 month period totals exactly €295k and €390k.</dd>
       <dt>Contacts</dt><dd>1,000 leads, 500 per period. 100 MQLs before, 142 after: 20.0% to 28.4%, a 42% uplift.</dd>
       <dt>Companies</dt><dd>300 invented companies with industry, size, region and ICP tier.</dd>
-      <dt>Clay signals</dt><dd>52 real companies with 60 signals from Clay company search, captured 23 November 2026. Public company data only: name, domain, location, size. No people, no contact data.</dd>
+      <dt>Clay signals</dt><dd>24 real companies with 31 signals from Clay company search, captured 23 November 2026. Public company data only: name, domain, location, size. No people, no contact data.</dd>
       <dt>Outreach</dt><dd>Nine real Apollo sequences, aggregate counts only. Names replaced with a description of the audience and the steps.</dd>
       <dt>Not in it</dt><dd>No real person or deal. The only real companies are the Clay signal accounts, and they appear as prospects, not customers. No figure from a current employer's CRM.</dd>
     </dl>

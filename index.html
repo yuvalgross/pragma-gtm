@@ -1689,6 +1689,27 @@ h2 em {
 .work-link.gh { opacity: .8; }
 .work-link.mh { opacity: .8; }
 .work-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: auto; padding-top: 0.2rem; align-items: center; }
+.work-stage {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin: 0 0 -0.5rem;
+  }
+@media (min-width: 1101px) {
+  /* featured card: numbers on the left, how it works on the right */
+  .work-card-wide { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 2.6rem; row-gap: 0.85rem; align-content: start;
+    grid-template-areas: "stage more" "title more" "sub more" "facts more" "own links"; grid-template-rows: auto auto auto auto 1fr; }
+  .work-card-wide .work-stage { grid-area: stage; }
+  .work-card-wide h3 { grid-area: title; }
+  .work-card-wide .work-sub { grid-area: sub; }
+  .work-card-wide .work-facts { grid-area: facts; }
+  .work-card-wide .work-own { grid-area: own; }
+  .work-card-wide .work-more { grid-area: more; padding-left: 2.6rem; border-left: 1px solid var(--border-soft); }
+  .work-card-wide .work-links { grid-area: links; align-self: end; padding-left: 2.6rem; }
+}
 .work-card-wide { grid-column: 1 / -1; }
 .work-grid {
     display: grid;
@@ -1700,7 +1721,7 @@ h2 em {
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
-  /* phones: all seven stacked and compact; the description opens on tap */
+  /* phones: all seven stacked in the same order and compact; the description opens on tap */
   .work-grid { grid-template-columns: 1fr; gap: 0.8rem; }
   .work-card { padding: 1.1rem 1.1rem 1rem; gap: 0.7rem; }
   .work-card h3 { font-size: 1.35rem; }
@@ -5020,9 +5041,10 @@ html.legal-open { overflow: hidden; }
   <div class="container">
     <div class="section-label">Work samples</div>
     <h2 id="samplesHeading">Built, and <em>open to read.</em></h2>
-    <p class="work-intro">Seven builds, end to end. Each page has the data, the rules, the limits and the code.</p>
+    <p class="work-intro">Seven builds, end to end. The results first, then the builds in the order pipeline moves: find the accounts, reach them, route inbound, win back the lost ones, keep the CRM clean. Each page has the data, the rules, the limits and the code.</p>
     <div class="work-grid">
     <article class="work-card work-card-wide fade-up">
+      <p class="work-stage">Results</p>
       <h3>Pipeline dashboard</h3>
       <p class="work-sub">What changed when outbound started from signals.</p>
       <ul class="work-facts" aria-label="What the dashboard shows">
@@ -5043,66 +5065,7 @@ html.legal-open { overflow: hidden; }
       </div>
     </article>
     <article class="work-card fade-up">
-      <h3>CRM clean up</h3>
-      <p class="work-sub">Fix the records, then find who a human should call.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>47</strong><span>changes proposed</span></li>
-        <li><strong>&euro;539k</strong><span>ARR with no owner</span></li>
-        <li><strong>8 of 17</strong><span>customers to a human</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Duplicate, field and owner agents, the customer call list, 8 tests</span><span><b>Designed</b> Claude judging steps, Clay enrichment, Slack approval, API writes</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Four agents clean a HubSpot export (duplicates, broken fields, orphaned owners), then decide which customers get a person this week. Nothing is written until someone approves.</p>
-        <div class="exp-tags"><span class="exp-tag">HubSpot</span><span class="exp-tag">Agents</span><span class="exp-tag">Deduplication</span><span class="exp-tag">Data hygiene</span><span class="exp-tag">Owner routing</span><span class="exp-tag">Churn risk</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Claude</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/crm-cleanup/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/crm-cleanup" target="_blank" rel="noopener">GitHub &rarr;</a>
-        <a class="work-link mh" href="https://modlethub.com/workflows/crm-clean-up-fix-the-records-then-find-the-money-already-in-them-3dbec2?utm_source=cr4" target="_blank" rel="noopener">Playbook on ModletHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Signup router</h3>
-      <p class="work-sub">Who gets a human this week, and what they do first.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>318</strong><span>signups in a week</span></li>
-        <li><strong>91</strong><span>stopped by the gate</span></li>
-        <li><strong>23</strong><span>get a person</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Gate, scoring and routing</span><span><b>Designed</b> Clay enrichment, HubSpot tasks via n8n</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Drops customers, partners and personal emails, scores every trial signup 0 to 100 on usage, fit, integration path and pain, and gives each one next action.</p>
-        <div class="exp-tags"><span class="exp-tag">PLG</span><span class="exp-tag">Inbound</span><span class="exp-tag">Gate rules</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing</span><span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Python</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/signup-router/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signup-router" target="_blank" rel="noopener">GitHub &rarr;</a>
-        <a class="work-link mh" href="https://modlethub.com/workflows/signup-router-decide-which-trial-signups-get-a-person-this-week-e0c735?utm_source=cr4" target="_blank" rel="noopener">Playbook on ModletHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
-      <h3>Signal outreach</h3>
-      <p class="work-sub">First emails written from the freshest buying signal.</p>
-      <ul class="work-facts" aria-label="Result of the run">
-        <li><strong>119</strong><span>contacts in</span></li>
-        <li><strong>38</strong><span>sequences ready</span></li>
-        <li><strong>3</strong><span>stopped by the copy check</span></li>
-      </ul>
-      <p class="work-own"><span><b>Built</b> Gate, signal scoring, three step emails, copy check, tests</span><span><b>Designed</b> Clay enrichment, sequencer push via n8n, reply handling</span></p>
-      <details class="work-more" open>
-        <summary>How it works</summary>
-        <p class="work-desc">Turns an enriched list into a three step sequence built on each contact's newest signal, and holds back everyone who should not get it, with the reason.</p>
-        <div class="exp-tags"><span class="exp-tag">Outbound</span><span class="exp-tag">Buying signals</span><span class="exp-tag">Clay</span><span class="exp-tag">Sequences</span><span class="exp-tag">Copy rules</span><span class="exp-tag">Send caps</span><span class="exp-tag">n8n</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
-      </details>
-      <div class="work-links">
-        <a class="work-link" href="/work/signal-outreach/">See the sample &rarr;</a>
-        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signal-outreach" target="_blank" rel="noopener">GitHub &rarr;</a>
-        <a class="work-link mh" href="https://modlethub.com/workflows/signal-outreach-write-the-first-email-from-the-freshest-buying-signal-or-send-nothing-989615?utm_source=cr4" target="_blank" rel="noopener">Playbook on ModletHub &rarr;</a>
-      </div>
-    </article>
-    <article class="work-card fade-up">
+      <p class="work-stage">Find</p>
       <h3>Account prioritisation</h3>
       <p class="work-sub">Which 80 accounts get a call, and when signals run out.</p>
       <ul class="work-facts" aria-label="Result of the run">
@@ -5123,6 +5086,49 @@ html.legal-open { overflow: hidden; }
       </div>
     </article>
     <article class="work-card fade-up">
+      <p class="work-stage">Reach</p>
+      <h3>Signal outreach</h3>
+      <p class="work-sub">First emails written from the freshest buying signal.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>119</strong><span>contacts in</span></li>
+        <li><strong>38</strong><span>sequences ready</span></li>
+        <li><strong>3</strong><span>stopped by the copy check</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Gate, signal scoring, three step emails, copy check, tests</span><span><b>Designed</b> Clay enrichment, sequencer push via n8n, reply handling</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Turns an enriched list into a three step sequence built on each contact's newest signal, and holds back everyone who should not get it, with the reason.</p>
+        <div class="exp-tags"><span class="exp-tag">Outbound</span><span class="exp-tag">Buying signals</span><span class="exp-tag">Clay</span><span class="exp-tag">Sequences</span><span class="exp-tag">Copy rules</span><span class="exp-tag">Send caps</span><span class="exp-tag">n8n</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/signal-outreach/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signal-outreach" target="_blank" rel="noopener">GitHub &rarr;</a>
+        <a class="work-link mh" href="https://modlethub.com/workflows/signal-outreach-write-the-first-email-from-the-freshest-buying-signal-or-send-nothing-989615?utm_source=cr4" target="_blank" rel="noopener">Playbook on ModletHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <p class="work-stage">Inbound</p>
+      <h3>Signup router</h3>
+      <p class="work-sub">Who gets a human this week, and what they do first.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>318</strong><span>signups in a week</span></li>
+        <li><strong>91</strong><span>stopped by the gate</span></li>
+        <li><strong>23</strong><span>get a person</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Gate, scoring and routing</span><span><b>Designed</b> Clay enrichment, HubSpot tasks via n8n</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Drops customers, partners and personal emails, scores every trial signup 0 to 100 on usage, fit, integration path and pain, and gives each one next action.</p>
+        <div class="exp-tags"><span class="exp-tag">PLG</span><span class="exp-tag">Inbound</span><span class="exp-tag">Gate rules</span><span class="exp-tag">Lead scoring</span><span class="exp-tag">Routing</span><span class="exp-tag">Clay</span><span class="exp-tag">n8n</span><span class="exp-tag">HubSpot</span><span class="exp-tag">Python</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/signup-router/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/signup-router" target="_blank" rel="noopener">GitHub &rarr;</a>
+        <a class="work-link mh" href="https://modlethub.com/workflows/signup-router-decide-which-trial-signups-get-a-person-this-week-e0c735?utm_source=cr4" target="_blank" rel="noopener">Playbook on ModletHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <p class="work-stage">Win back</p>
       <h3>Lost deal reactivation</h3>
       <p class="work-sub">Which lost deals are worth a second call.</p>
       <ul class="work-facts" aria-label="Result of the run">
@@ -5143,6 +5149,28 @@ html.legal-open { overflow: hidden; }
       </div>
     </article>
     <article class="work-card fade-up">
+      <p class="work-stage">Keep</p>
+      <h3>CRM clean up</h3>
+      <p class="work-sub">Fix the records, then find who a human should call.</p>
+      <ul class="work-facts" aria-label="Result of the run">
+        <li><strong>47</strong><span>changes proposed</span></li>
+        <li><strong>&euro;539k</strong><span>ARR with no owner</span></li>
+        <li><strong>8 of 17</strong><span>customers to a human</span></li>
+      </ul>
+      <p class="work-own"><span><b>Built</b> Duplicate, field and owner agents, the customer call list, 8 tests</span><span><b>Designed</b> Claude judging steps, Clay enrichment, Slack approval, API writes</span></p>
+      <details class="work-more" open>
+        <summary>How it works</summary>
+        <p class="work-desc">Four agents clean a HubSpot export (duplicates, broken fields, orphaned owners), then decide which customers get a person this week. Nothing is written until someone approves.</p>
+        <div class="exp-tags"><span class="exp-tag">HubSpot</span><span class="exp-tag">Agents</span><span class="exp-tag">Deduplication</span><span class="exp-tag">Data hygiene</span><span class="exp-tag">Owner routing</span><span class="exp-tag">Churn risk</span><span class="exp-tag">Clay Audiences</span><span class="exp-tag">Claude</span><span class="exp-tag">Python</span><span class="exp-tag">Tests</span></div>
+      </details>
+      <div class="work-links">
+        <a class="work-link" href="/work/crm-cleanup/">See the sample &rarr;</a>
+        <a class="work-link gh" href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/crm-cleanup" target="_blank" rel="noopener">GitHub &rarr;</a>
+        <a class="work-link mh" href="https://modlethub.com/workflows/crm-clean-up-fix-the-records-then-find-the-money-already-in-them-3dbec2?utm_source=cr4" target="_blank" rel="noopener">Playbook on ModletHub &rarr;</a>
+      </div>
+    </article>
+    <article class="work-card fade-up">
+      <p class="work-stage">Beyond sales</p>
       <h3>Job search engine</h3>
       <p class="work-sub">A daily scan and the board it feeds, for any job title.</p>
       <ul class="work-facts" aria-label="Result of the run">

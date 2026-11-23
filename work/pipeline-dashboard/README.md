@@ -16,7 +16,7 @@ A revenue dashboard that puts the 12 months before a signal based outbound engin
 
 ## How it fits together
 
-0. **Clay company search** finds live buying signals on the ICP: hiring for sales, headcount growth, a new sales leader. Saved as `clay_signals` (52 real companies, public company data, no people).
+0. **Clay company search** finds live buying signals on the ICP: hiring for sales, headcount growth, a new sales leader. Saved as `clay_signals` (24 real companies in corporate learning and HR tech, public company data, no people).
 1. **Supabase Postgres**, schema `analytics`: `clay_signals`, `demo_deals`, `demo_contacts`, `demo_companies`, `apollo_sequences`.
 2. **A dedicated database user for Hex** that sees the `analytics` schema only. The app's own tables, which hold personal data, are out of its reach.
 3. **Hex**: five SQL cells, Plotly charts, a public app with the code hidden.

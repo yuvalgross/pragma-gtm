@@ -226,65 +226,73 @@
     }
   ],
   "clay": {
-    "icp": "Software and e-learning companies, 51 to 500 staff, HQ in Germany, Austria or Switzerland",
+    "icp": "Corporate learning, L&D and HR tech companies selling to businesses, 51 to 1,000 staff, HQ in DACH, Benelux, the UK, the Nordics, France or Spain",
     "signals": [
       {
         "type": "Hiring for sales",
         "rule": "Open AE, SDR, Head of Sales or RevOps role posted in the last 30 days",
-        "companies": 20
+        "companies": 10
       },
       {
         "type": "Headcount growth",
-        "rule": "Headcount up 20% or more in the last 6 months",
-        "companies": 20
+        "rule": "Headcount up 5% or more in the last 6 months",
+        "companies": 9
       },
       {
         "type": "New sales leader",
-        "rule": "VP Sales, Head of Sales or CRO started in the last 3 months",
-        "companies": 20
+        "rule": "VP Sales, Head of Sales, Sales Director or CRO started in the last 6 months",
+        "companies": 12
       }
     ],
+    "companies": 24,
+    "signal_rows": 31,
     "companies_by_signal_count": {
-      "1": 46,
-      "2": 4,
-      "3": 2
+      "1": 17,
+      "2": 7,
+      "3": 0
     },
     "stacked": [
       {
-        "company": "Neural Concept",
-        "place": "Lausanne, Switzerland",
-        "staff": 153,
-        "signals": "Headcount growth + Hiring for sales + New sales leader"
+        "company": "Cezanne HR",
+        "place": "London, United Kingdom",
+        "staff": 180,
+        "signals": "Headcount growth + New sales leader"
       },
       {
-        "company": "Peec AI",
-        "place": "Berlin, Germany",
-        "staff": 119,
-        "signals": "Headcount growth + Hiring for sales + New sales leader"
-      },
-      {
-        "company": "n8n",
-        "place": "Berlin, Germany",
-        "staff": 1389,
+        "company": "Clasing",
+        "place": "Madrid, Spain",
+        "staff": 110,
         "signals": "Headcount growth + Hiring for sales"
       },
       {
-        "company": "Parloa",
-        "place": "Berlin, Germany",
-        "staff": 646,
-        "signals": "Headcount growth + Hiring for sales"
-      },
-      {
-        "company": "Adjust",
-        "place": "Berlin, Germany",
-        "staff": 475,
+        "company": "PINKTUM",
+        "place": "Munich, Germany",
+        "staff": 106,
         "signals": "Hiring for sales + New sales leader"
       },
       {
-        "company": "Langdock",
-        "place": "Berlin, Germany",
-        "staff": 74,
+        "company": "PerchPeek",
+        "place": "London, United Kingdom",
+        "staff": 72,
         "signals": "Headcount growth + Hiring for sales"
+      },
+      {
+        "company": "Tack TMI",
+        "place": "London, United Kingdom",
+        "staff": 428,
+        "signals": "Headcount growth + New sales leader"
+      },
+      {
+        "company": "Thomas",
+        "place": "Marlow, United Kingdom",
+        "staff": 522,
+        "signals": "Hiring for sales + New sales leader"
+      },
+      {
+        "company": "WorkMotion",
+        "place": "Berlin, Germany",
+        "staff": 219,
+        "signals": "Hiring for sales + New sales leader"
       }
     ]
   }
