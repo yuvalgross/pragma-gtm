@@ -70,6 +70,7 @@ order by reply_rate desc;
 
 -- 7. Clay signals: companies by how many signals they show at once ---------------------
 -- clay_signals holds REAL companies from Clay company search (public company data, no people).
+-- ICP: corporate learning, L&D and HR tech selling to businesses, 51-1,000 staff, HQ in DACH, Benelux, UK, Nordics, France or Spain.
 -- One row per company and signal: Hiring for sales, Headcount growth, New sales leader.
 create view analytics.clay_signal_accounts as
 select domain, min(company_name) as company_name, min(country) as country, min(city) as city,
