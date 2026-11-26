@@ -1641,9 +1641,8 @@ h2 em {
     border-top: 1px solid var(--border-soft);
     border-bottom: 1px solid var(--border-soft);
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
-    overflow-wrap: anywhere;
   }
 .work-facts strong {
     display: block;
@@ -2885,9 +2884,6 @@ to {
 .hero-inner {
     grid-template-columns: 1fr;
   }
-.hero-card {
-    display: none;
-  }
 .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2990,9 +2986,6 @@ nav {
   }
 .hero-inner {
     grid-template-columns: 1fr; gap: 0;
-  }
-.hero-card {
-    display: none;
   }
 .hero-eyebrow {
     font-size: 0.75rem; flex-wrap: wrap; gap: 6px;
@@ -4131,6 +4124,21 @@ to {
 .arch-divider .arch-path .sys-sub::after{display:none}
 .arch-divider .arch-path .sys-board{max-width:none}
 .arch-divider .arch-path .sys-art-m .sx-disc{fill:var(--paper)}
+/* Mobile and tablet: keep the numbers card under the hero text */
+@media (max-width:1024px){
+  .hero-card{margin-top:2.25rem;padding:1.5rem 1.25rem}
+  .hero-card .stat-num{font-size:2.1rem}
+}
+@media (max-width:480px){
+  .hero-card{padding:1.25rem 1rem;border-radius:16px}
+  .hero-card .stat-num{font-size:1.85rem}
+  .hero-card .stat-item{padding:.65rem .4rem}
+  .work-facts strong{font-size:1.2rem}
+}
+@media (max-width:360px){
+  .work-facts{gap:.35rem}
+  .work-facts strong{font-size:1.05rem}
+}
 /* How I think: one merged section (intro, architecture, path, sizes, CRM proof) */
 .how-all{padding:0;overflow:hidden}
 .how-all .how-head{padding:var(--sp-section) var(--sp-section-h) 0}
