@@ -1641,8 +1641,9 @@ h2 em {
     border-top: 1px solid var(--border-soft);
     border-bottom: 1px solid var(--border-soft);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.6rem;
+    overflow-wrap: anywhere;
   }
 .work-facts strong {
     display: block;
@@ -5929,10 +5930,10 @@ html.legal-open { overflow: hidden; }
   <div class="footer-meta">© 2026 PragmaGTM · Berlin · Last updated November 2026 · <button type="button" class="footer-link-btn" data-legal="privacy">Privacy</button> · <button type="button" class="footer-link-btn" data-legal="imprint">Imprint</button> · <button type="button" class="footer-link-btn" data-consent-open>Cookie settings</button></div>
 </footer>
 
-<!-- CONSENT BANNER — Apollo visitor tracking stays off until the visitor accepts -->
+<!-- CONSENT BANNER — RB2B visitor identification stays off until the visitor accepts -->
 <div class="consent" id="consent" role="region" aria-labelledby="consentTitle" tabindex="-1" hidden>
   <h2 class="consent-title" id="consentTitle">Optional analytics</h2>
-  <p class="consent-text">Basic visit counting always runs. If you allow it, I also use a service that shows which companies visit this site. That part stays off unless you accept.</p>
+  <p class="consent-text">Basic visit counting always runs. If you allow it, I also use RB2B to see which companies, and for visitors in the US sometimes which people, visit this site. That part stays off unless you accept.</p>
   <p class="consent-state" id="consentState" hidden></p>
   <button type="button" class="consent-more" data-legal="privacy">What gets collected</button>
   <div class="consent-actions">
@@ -5960,10 +5961,9 @@ html.legal-open { overflow: hidden; }
       <li><strong>Email.</strong> If you write to me, I use your message and address to reply. Legal basis: Art. 6(1)(b) or (f) GDPR.</li>
     </ul>
 
-    <h3>Optional: company-level visitor analytics (only if you accept)</h3>
-    <p>If you press Accept on the banner, the site loads a script from Apollo.io, Inc. (USA). The script can set cookies or similar identifiers and sends Apollo your IP address, the pages you view, your referrer, and browser and device details with timestamps.</p>
-    <p>Purpose: to recognise which company a visit comes from, so I can see whether a team has looked at my work during a job search and follow up. I have switched off Apollo's individual (contact-level) identification for this domain, so the aim is company-level insight, not profiling you as a person. Apollo acts as my processor under its data processing addendum and, in some cases, as an independent controller under its own <a href="https://www.apollo.io/privacy-policy" target="_blank" rel="noopener noreferrer">privacy policy</a>. Transfers to the USA rely on Apollo's certification under the EU-US Data Privacy Framework, with Standard Contractual Clauses as a fallback. Apollo keeps the data for as long as my Apollo account exists and deletes it within 90 days after the account is closed.</p>
-    <p>Legal basis: your consent under Art. 6(1)(a) GDPR and § 25(1) TDDDG. If you decline or ignore the banner, the script is never loaded. You can change your mind at any time through <em>Cookie settings</em> in the footer. Withdrawing does not affect processing that already happened. Your choice is remembered for 180 days, then the banner asks again.</p>
+    <h3>Optional: visitor identification with RB2B (only if you accept)</h3>
+    <p>If you press Accept on the banner, the site loads a script from RB2B (USA). The script can set cookies and sends RB2B your IP address, the pages you view, your referrer, and browser and device details. RB2B matches this against its own data to work out which company a visit comes from. For visitors in the US it can also match a visit to a named person, such as a business profile. For visitors outside the US, RB2B says it limits this to company-level information.</p>
+    <p>Purpose: to see whether a team or a person has looked at my work during a job search, so I can follow up. Legal basis: your consent under Art. 6(1)(a) GDPR and § 25(1) TDDDG. If you decline or ignore the banner, the script is never loaded. You can change your mind at any time through <em>Cookie settings</em> in the footer. Withdrawing does not affect processing that already happened. Your choice is remembered for 180 days, then the banner asks again. You can also opt out of RB2B's data collection directly at <a href="https://www.rb2b.com/rb2b-gdpr-opt-out" target="_blank" rel="noopener noreferrer">rb2b.com/rb2b-gdpr-opt-out</a>; see RB2B's own privacy policy for how it handles data.</p>
 
     <h3>Your rights</h3>
     <p>You can ask me for access to your data, correction, deletion, restriction, a portable copy, and you can object to processing based on legitimate interest. You can also complain to a data protection authority; for Berlin that is the Berliner Beauftragte für Datenschutz und Informationsfreiheit.</p>
@@ -6439,16 +6439,15 @@ html.legal-open { overflow: hidden; }
 
 
 <script>
-/* Consent gate — Apollo is injected only after an explicit Accept.
+/* Consent gate — RB2B is injected only after an explicit Accept.
    Choice lives in localStorage (key pragma-consent), expires after 180 days. */
 (function () {
   var KEY = 'pragma-consent', VER = 1, MAX_AGE = 180 * 24 * 60 * 60 * 1000;
-  var APOLLO_APP_ID = '691dbf579fda850015107e37';
   var banner = document.getElementById('consent');
   var legal  = document.getElementById('legal');
   if (!banner) return;
 
-  var apolloLoaded = false, memory = null;
+  var trackerLoaded = false, memory = null;
 
   function stored() {
     try {
@@ -6463,16 +6462,10 @@ html.legal-open { overflow: hidden; }
     try { localStorage.setItem(KEY, JSON.stringify(memory)); } catch (e) {}
   }
 
-  function loadApollo() {
-    if (apolloLoaded) return;
-    apolloLoaded = true;
-    var s = document.createElement('script');
-    s.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=' + Math.random().toString(36).substring(7);
-    s.async = true; s.defer = true;
-    s.onload = function () {
-      try { window.trackingFunctions.onLoad({ appId: APOLLO_APP_ID }); } catch (e) {}
-    };
-    document.head.appendChild(s);
+  function loadTracker() {
+    if (trackerLoaded) return;
+    trackerLoaded = true;
+    !function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("GOYPYH4ZX7OX");
   }
 
   /* The site sets no cookies of its own, so on decline every first-party cookie can go. */
@@ -6504,10 +6497,10 @@ html.legal-open { overflow: hidden; }
     var prev = current();
     save(accept);
     banner.hidden = true;
-    if (accept) { loadApollo(); return; }
+    if (accept) { loadTracker(); return; }
     clearCookies();
     /* a script that already ran cannot be unloaded, so a reload is the only clean stop */
-    if (prev && prev.analytics && apolloLoaded) location.reload();
+    if (prev && prev.analytics && trackerLoaded) location.reload();
   }
 
   document.getElementById('consentAccept').addEventListener('click', function () { decide(true); });
@@ -6517,7 +6510,7 @@ html.legal-open { overflow: hidden; }
   });
 
   var c0 = current();
-  if (c0) { if (c0.analytics) loadApollo(); } else { show(false); }
+  if (c0) { if (c0.analytics) loadTracker(); } else { show(false); }
 
   /* ── privacy / imprint dialog ── */
   if (!legal || typeof legal.showModal !== 'function') return;
