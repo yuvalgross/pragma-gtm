@@ -26,6 +26,7 @@ A revenue dashboard that puts the 12 months before a signal based outbound engin
 
 - `demo_deals`, `demo_contacts`, `demo_companies`: **synthetic**. Calibrated to mirror results published on pragma-gtm.com: exact closed and won counts per period and lead source, won amounts scaled to total exactly €295k and €390k, and an MQL count that gives exactly +42%. Every deal, company and person is invented.
 - `clay_signals`: **real** companies from Clay company search, captured 23 Nov 2026. Public company data only (name, domain, location, size), no people or contact data. Shown as prospects, not customers.
+- `source_economics` in `data/dashboard.json`: average deal size comes from the synthetic deals. Cost per closed deal (€400 referral, €1,200 signal led, €900 inbound, €600 generic) is a **modelled input**, not a measured cost.
 - `apollo_sequences`: **real**, aggregate Apollo sequence stats (delivered, opened, replied, demoed). Sequence names are replaced with a description of the audience and the steps. No contacts, no company names.
 
 ## Files
@@ -34,6 +35,7 @@ A revenue dashboard that puts the 12 months before a signal based outbound engin
 | --- | --- |
 | `queries.sql` | Every query behind the dashboard, and the grants for the Hex database user |
 | `data/dashboard.json` | The aggregates the page charts are drawn from (snapshot, November 2026) |
+| `n8n/hubspot-to-supabase.json` | Nightly HubSpot to Supabase sync workflow. Built, not yet run against a CRM (see `n8n/README.md`) |
 | `index.html` | The work sample page |
 
 All deals, contacts and demo companies in this folder are invented. The only real companies are the Clay signal accounts, shown as prospects from public data. Nothing here describes a real person.

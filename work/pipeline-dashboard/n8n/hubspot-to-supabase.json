@@ -1,0 +1,250 @@
+{
+  "name": "HubSpot deals to Supabase analytics (nightly)",
+  "nodes": [
+    {
+      "id": "n1",
+      "name": "Every night 02:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 2 * * *"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "n2",
+      "name": "HubSpot: all deals",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "resource": "deal",
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "propertiesCollection": {
+            "propertiesValues": {
+              "properties": [
+                "dealname",
+                "amount",
+                "dealstage",
+                "createdate",
+                "closedate",
+                "lead_source"
+              ]
+            }
+          }
+        }
+      },
+      "credentials": {
+        "hubspotAppToken": {
+          "id": "REPLACE",
+          "name": "HubSpot sandbox"
+        }
+      }
+    },
+    {
+      "id": "n3",
+      "name": "Map to analytics.deals",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "jsCode": "// HubSpot deal -> analytics.deals row. Same columns as demo_deals so every query keeps working.\nconst GO_LIVE = '2025-11-01'; // the month the signal engine went live\nconst SOURCES = { REFERRAL: 'Referral', SIGNAL: 'Signal-led', INBOUND: 'Inbound', GENERIC: 'Generic outbound' };\nconst rows = [];\nfor (const item of $input.all()) {\n  const p = item.json.properties || item.json;\n  const stage = (p.dealstage || '').toLowerCase();\n  const isWon = stage === 'closedwon';\n  const isClosed = isWon || stage === 'closedlost';\n  const created = new Date(p.createdate), closed = p.closedate ? new Date(p.closedate) : null;\n  const src = SOURCES[(p.lead_source || '').toUpperCase()] || 'Generic outbound';\n  rows.push({\n    hubspot_id: String(item.json.dealId || item.json.id),\n    lead_source: src,\n    is_closed: isClosed,\n    is_won: isWon,\n    amount_eur: Number(p.amount || 0),\n    days_to_close: isClosed && closed ? Math.round((closed - created) / 86400000) : null,\n    period: (closed || created).toISOString().slice(0, 10) < GO_LIVE ? 'Before signals' : 'After signals',\n    synced_at: new Date().toISOString()\n  });\n}\nreturn [{ json: { rows, count: rows.length } }];"
+      }
+    },
+    {
+      "id": "n4",
+      "name": "Upsert into Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/deals?on_conflict=hubspot_id",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_KEY }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_KEY }}"
+            },
+            {
+              "name": "Content-Profile",
+              "value": "analytics"
+            },
+            {
+              "name": "Prefer",
+              "value": "resolution=merge-duplicates,return=minimal"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.rows) }}",
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true,
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "n5",
+      "name": "Check the write",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        960,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.statusCode ?? 201 }}",
+              "rightValue": 300,
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "n6",
+      "name": "Alert: sync failed",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        1200,
+        120
+      ],
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "#revops-alerts"
+        },
+        "text": "HubSpot to Supabase sync failed. Dashboard numbers are stale until it is fixed."
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "REPLACE",
+          "name": "Slack"
+        }
+      }
+    },
+    {
+      "id": "n7",
+      "name": "Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -180
+      ],
+      "parameters": {
+        "width": 720,
+        "height": 140,
+        "content": "Pulls every deal from HubSpot each night, maps it to the analytics.deals columns and upserts on hubspot_id, so reruns never duplicate. A failed write posts to Slack. Built, not yet run against a HubSpot account."
+      }
+    }
+  ],
+  "connections": {
+    "Every night 02:00": {
+      "main": [
+        [
+          {
+            "node": "HubSpot: all deals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HubSpot: all deals": {
+      "main": [
+        [
+          {
+            "node": "Map to analytics.deals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map to analytics.deals": {
+      "main": [
+        [
+          {
+            "node": "Upsert into Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upsert into Supabase": {
+      "main": [
+        [
+          {
+            "node": "Check the write",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check the write": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Alert: sync failed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pipeline dashboard · Yuval Gross</title>
-<meta name="description" content="A revenue dashboard on Supabase and Hex: won revenue, close rate by lead source and MQL rate, 12 months before and after a signal based outbound engine. Synthetic data calibrated to real results.">
+<meta name="description" content="Which lead source deserves the next €10k? Close rate, deal size and modelled cost per won deal by source, on Supabase and Hex. Synthetic data, real code.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pipeline dashboard · Yuval Gross">
-<meta property="og:description" content="What changed when outbound started from signals: €295k to €390k won, 40% vs 12% close rate, MQL rate up 42%. Supabase, SQL and Hex.">
+<meta property="og:title" content="Which lead source deserves the next €10k? · Yuval Gross">
+<meta property="og:description" content="Close rate, deal size and modelled cost per won deal by lead source, with €295k to €390k won before and after a signal engine. Supabase, SQL and Hex.">
 <meta property="og:url" content="https://pragma-gtm.com/work/pipeline-dashboard/">
 <meta property="og:image" content="https://pragma-gtm.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -168,12 +168,12 @@
 
   <header>
     <p class="eyebrow">Work sample</p>
-    <h1>Pipeline dashboard: what changed when outbound <em>started from signals.</em></h1>
-    <p class="lead">A revenue dashboard that puts the 12 months before a signal based outbound engine next to the 12 months after. Live buying signals come from Clay, deals and contacts live in a Supabase analytics schema, Hex reads them through its own locked down database user, and the app is public with the code hidden.</p>
+    <h1>Which lead source deserves <em>the next €10k?</em></h1>
+    <p class="lead">Short answer: signal led outreach, as long as a worked deal stays under about €1,670 (modelled). The dashboard behind it puts the 12 months before a signal based outbound engine next to the 12 months after. Live buying signals come from Clay, deals and contacts live in a Supabase analytics schema, Hex reads them through its own locked down database user, and the app is public with the code hidden.</p>
     <div class="ws-tags"><span>Dashboards</span><span>Supabase</span><span>Postgres</span><span>SQL</span><span>Hex</span><span>Data modelling</span><span>Access control</span><span>Clay</span><span>Apollo</span><span>Python</span></div><!--/ws-tags-->
     <div class="ws-kpis kpis-band"><div class="kpi"><strong>€390k</strong><span>won in 12 months, up from €295k</span></div><div class="kpi"><strong>40% vs 12%</strong><span>close rate, signal led vs generic outreach</span></div><div class="kpi"><strong>+42%</strong><span>MQL rate, 20.0% to 28.4% of leads</span></div><div class="kpi"><strong>36 vs 57</strong><span>days to win, signal led vs generic</span></div></div><!--/ws-kpis-->
 
-    <div class="ws-own"><div><b>Designed and built</b><span>The analytics schema, the Hex database user, the Clay signal searches, every query, the charts and the public app. Claude Code wrote the SQL and chart code from my spec.</span></div><div><b>Designed, not running</b><span>A nightly HubSpot sync into the schema through n8n, so the numbers refresh on their own.</span></div></div><!--/ws-own-->
+    <div class="ws-own"><div><b>Designed and built</b><span>The analytics schema, the Hex database user, the Clay signal searches, every query, the charts and the public app. Claude Code wrote the SQL and chart code from my spec.</span></div><div><b>Built, not yet run</b><span>A nightly HubSpot sync into the schema through n8n, so the numbers refresh on their own. The workflow file is in the repo; it has not run against a CRM yet.</span></div></div><!--/ws-own-->
     <p class="note">The deals, contacts and companies are synthetic, calibrated to mirror results I delivered (see the numbers on <a href="/">pragma-gtm.com</a>). Every deal, company and person is made up. The outreach section is real, aggregate Apollo data with the sequence names anonymized. The Clay signals are real companies from public company data, with no people or contact data.</p>
     <p><a class="cta" href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">Open the live dashboard in Hex &rarr;</a><span class="cta-note">Public link, view only, no sign in</span></p>
   </header>
@@ -277,6 +277,22 @@
 </svg>
     </div>
     <div class="chartbox">
+      <h3>Which source deserves the next €10k?</h3>
+      <p class="cap">Average deal size comes from the deal data. The costs are modelled: my planning inputs for what it costs to work one deal to a decision (data, tools, rep time), not measured spend. Change them and the table follows.</p>
+      <div class="tablewrap" tabindex="0" role="region" aria-label="Deal size and modelled cost per won deal by lead source, scrolls sideways on small screens">
+      <table style="min-width:620px">
+        <thead><tr><th>Lead source</th><th class="n">Avg deal</th><th class="n">Cost per closed deal (modelled)</th><th class="n">Cost per won deal (modelled)</th><th class="n">Won revenue per €10k (modelled)</th></tr></thead>
+        <tbody>
+<tr><td>Referral</td><td class="n">€5,389</td><td class="n">€400</td><td class="n">€978</td><td class="n">€55,100</td></tr>
+<tr><td>Signal-led</td><td class="n">€7,370</td><td class="n">€1,200</td><td class="n">€3,000</td><td class="n">€24,600</td></tr>
+<tr><td>Inbound</td><td class="n">€6,862</td><td class="n">€900</td><td class="n">€3,643</td><td class="n">€18,800</td></tr>
+<tr><td>Generic outbound</td><td class="n">€8,846</td><td class="n">€600</td><td class="n">€5,000</td><td class="n">€17,700</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="cap">Referral returns most per euro but cannot be bought: there are only 22 closed referral deals. Of the sources you can scale, signal led wins the next €10k. It stays ahead of generic outbound until a signal led deal costs about €1,670 to work, close to 2.8x the €600 modelled for generic. Past that, the money goes back to generic.</p>
+    </div>
+    <div class="chartbox">
       <h3>Before vs after</h3>
       <p class="cap">Two panels, one scale each. Revenue grew 32% on 39 to 50 won deals. The share of leads that became MQLs grew 42%.</p>
 <svg class="chart" viewBox="0 0 880 280" role="img" aria-labelledby="c3t c3d" xmlns="http://www.w3.org/2000/svg">
@@ -355,7 +371,7 @@
       </tbody>
     </table>
     </div>
-    <p class="note">These are prospects found from public signals, not customers or deals. No people or contact data was pulled. The next step, designed but not running, pushes this list into HubSpot as companies with the signals attached.</p>
+    <p class="note">These are prospects found from public signals, not customers or deals. No people or contact data was pulled. The next step, not built yet, pushes this list into HubSpot as companies with the signals attached.</p>
   </section>
 
   <section aria-labelledby="outreach">
@@ -389,7 +405,7 @@
 
   <section aria-labelledby="change">
     <details class="fold"><summary><h2 id="change">What I would change <em>first</em></h2></summary><div class="fold-body">
-    <p>Replace the synthetic tables with a nightly sync from the CRM. An n8n workflow would pull closed and open deals from HubSpot into the same schema, so every chart and query stays as it is and the numbers refresh on their own.</p>
+    <p>Replace the synthetic tables with a nightly sync from the CRM. The n8n workflow for it is written (<a href="https://github.com/yuvalgross/pragma-gtm/tree/main/work/pipeline-dashboard/n8n">in the repo</a>): it pulls closed and open deals from HubSpot into the same schema, so every chart and query stays as it is. It has not run against a real HubSpot account yet, so the page still reads synthetic deals.</p>
     <p>Split signal led by signal type. Funding, hiring and job changes probably do not close at the same rate, and the next budget decision is which signal source to pay for. The same chart answers it with one more column.</p>
     <p>How I would judge it: the sales lead opens it on Monday instead of asking for a spreadsheet. If nobody opens it for two weeks, it answers the wrong question.</p></div></details><!--/fold-->
   </section>
@@ -399,7 +415,7 @@
     <dl>
       <dt>AI did</dt><dd>Claude Code wrote the SQL, the data generator and the chart code from my spec, and set up the Hex project through Hex's connector.</dd>
       <dt>I did</dt><dd>Chose the story and the targets, decided what is real and what is synthetic, set the access rule that keeps the app tables out of Hex, anonymized the outreach data, and checked every number against the source tables.</dd>
-      <dt>Not built</dt><dd>The CRM step: pushing the call list into HubSpot as companies with the signals attached, and a nightly refresh of the Clay searches. The data is a snapshot from November 2026.</dd>
+      <dt>Not built</dt><dd>Running the HubSpot sync on a real account, pushing the call list into HubSpot as companies with the signals attached, and a nightly refresh of the Clay searches. The data is a snapshot from November 2026.</dd>
       <dt>Stack</dt><dd>Clay (company search), Supabase Postgres, SQL, Hex (notebook, app builder, agent), Plotly in Hex, inline SVG on this page.</dd>
     </dl></div></details><!--/fold-->
   </section>
