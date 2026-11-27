@@ -80,18 +80,12 @@
       ],
       "parameters": {
         "method": "POST",
-        "url": "={{ $env.SUPABASE_URL }}/rest/v1/deals?on_conflict=hubspot_id",
+        "url": "https://YOUR-PROJECT-REF.supabase.co/rest/v1/deals?on_conflict=hubspot_id",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
-            {
-              "name": "apikey",
-              "value": "={{ $env.SUPABASE_SERVICE_KEY }}"
-            },
-            {
-              "name": "Authorization",
-              "value": "=Bearer {{ $env.SUPABASE_SERVICE_KEY }}"
-            },
             {
               "name": "Content-Profile",
               "value": "analytics"
@@ -104,44 +98,13 @@
         },
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={{ JSON.stringify($json.rows) }}",
-        "options": {
-          "response": {
-            "response": {
-              "neverError": true,
-              "fullResponse": true
-            }
-          }
-        }
+        "jsonBody": "={{ JSON.stringify($json.rows) }}"
       },
-      "onError": "continueRegularOutput"
-    },
-    {
-      "id": "n5",
-      "name": "Check the write",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2,
-      "position": [
-        960,
-        0
-      ],
-      "parameters": {
-        "conditions": {
-          "options": {
-            "version": 2
-          },
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "c1",
-              "leftValue": "={{ $json.statusCode ?? 201 }}",
-              "rightValue": 300,
-              "operator": {
-                "type": "number",
-                "operation": "lt"
-              }
-            }
-          ]
+      "onError": "continueErrorOutput",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "REPLACE",
+          "name": "Supabase secret key (header apikey)"
         }
       }
     },
@@ -151,8 +114,8 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.3,
       "position": [
-        1200,
-        120
+        960,
+        140
       ],
       "parameters": {
         "select": "channel",
@@ -182,7 +145,7 @@
       "parameters": {
         "width": 720,
         "height": 140,
-        "content": "Pulls every deal from HubSpot each night, maps it to the analytics.deals columns and upserts on hubspot_id, so reruns never duplicate. A failed write posts to Slack. Built, not yet run against a HubSpot account."
+        "content": "Pulls every deal from HubSpot each night, maps it to the analytics.deals columns and upserts on hubspot_id, so reruns never duplicate. If the write fails, the error output posts to Slack. Tested locally in n8n against sample deals and a mock Supabase; not yet run against a real HubSpot account."
       }
     }
   ],
@@ -221,17 +184,6 @@
       ]
     },
     "Upsert into Supabase": {
-      "main": [
-        [
-          {
-            "node": "Check the write",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Check the write": {
       "main": [
         [],
         [

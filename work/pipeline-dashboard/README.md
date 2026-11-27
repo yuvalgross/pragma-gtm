@@ -35,7 +35,7 @@ A revenue dashboard that puts the 12 months before a signal based outbound engin
 | --- | --- |
 | `queries.sql` | Every query behind the dashboard, and the grants for the Hex database user |
 | `data/dashboard.json` | The aggregates the page charts are drawn from (snapshot, November 2026) |
-| `n8n/hubspot-to-supabase.json` | Nightly HubSpot to Supabase sync workflow. Built, not yet run against a CRM (see `n8n/README.md`) |
+| `n8n/hubspot-to-supabase.json` | Nightly HubSpot to Supabase sync workflow. Tested locally on sample deals, not yet run against a real CRM (see `n8n/README.md`) |
 | `index.html` | The work sample page |
 
 All deals, contacts and demo companies in this folder are invented. The only real companies are the Clay signal accounts, shown as prospects from public data. Nothing here describes a real person.

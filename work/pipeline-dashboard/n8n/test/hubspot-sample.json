@@ -1,0 +1,46 @@
+[
+ {
+  "id": "101",
+  "properties": {
+   "dealname": "A",
+   "amount": "8000",
+   "dealstage": "closedwon",
+   "createdate": "2025-12-01T09:00:00Z",
+   "closedate": "2026-01-10T09:00:00Z",
+   "lead_source": "SIGNAL"
+  }
+ },
+ {
+  "id": "102",
+  "properties": {
+   "dealname": "B",
+   "amount": "5000",
+   "dealstage": "closedlost",
+   "createdate": "2025-03-01T09:00:00Z",
+   "closedate": "2025-04-20T09:00:00Z",
+   "lead_source": "GENERIC"
+  }
+ },
+ {
+  "id": "103",
+  "properties": {
+   "dealname": "C",
+   "amount": null,
+   "dealstage": "appointmentscheduled",
+   "createdate": "2026-02-01T09:00:00Z",
+   "closedate": null,
+   "lead_source": "INBOUND"
+  }
+ },
+ {
+  "id": "104",
+  "properties": {
+   "dealname": "D",
+   "amount": "4200",
+   "dealstage": "closedwon",
+   "createdate": "2025-05-02T09:00:00Z",
+   "closedate": "2025-06-01T09:00:00Z",
+   "lead_source": null
+  }
+ }
+]
