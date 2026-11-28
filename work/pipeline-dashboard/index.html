@@ -136,7 +136,7 @@
 </style>
 <style>.ws-own{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.ws-own>div{background:var(--panel);border:1px solid var(--line);padding:10px 14px;font-size:14.5px;color:var(--muted)}.ws-own b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:2px}@media(max-width:760px){.ws-own{grid-template-columns:1fr}}</style>
 <style>.ws-tags{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 4px}.ws-tags span{font-size:13px;color:var(--accent);background:var(--accent-soft);border:1px solid var(--line);padding:3px 10px;border-radius:999px}</style>
-<style>.ws-status{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}.ws-status span{font-size:13px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}.ws-status .s-real{color:var(--accent);background:var(--accent-soft)}.ws-status .s-todo{border-style:dashed}#real{margin-top:14px}</style>
+<style>.lead-sub{font-size:16px;color:var(--muted);margin:6px 0 0}.kpi-cap{font-size:13px;color:var(--muted);margin:16px 0 0;letter-spacing:.02em}.ws-status{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}.ws-status span{font-size:13px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}.ws-status .s-real{color:var(--accent);background:var(--accent-soft)}.ws-status .s-todo{border-style:dashed}#real{margin-top:14px}</style>
 <style id="dash-css">
   .chartbox { background: var(--panel); border: 1px solid var(--line); padding: 18px 18px 10px; margin-top: 12px; }
   .chartbox h3 { font-family: var(--sans); font-size: 15px; font-weight: 500; margin: 0 0 2px; }
@@ -168,14 +168,16 @@
   <a class="back" href="/#samples" data-back>pragma-gtm.com</a>
 
   <header>
-    <p class="eyebrow">Work sample</p>
+    <p class="eyebrow">Work sample · revenue analytics</p>
     <h1>Which lead source deserves <em>the next €10k?</em></h1>
-    <p class="lead">Signal led outreach, as long as a worked deal costs under about €1,670. That limit is modelled: the deals are synthetic and the costs are my assumptions. The real parts are the Clay signals and the Apollo sequence stats.</p>
-    <div class="ws-status" aria-label="What is real on this page"><span class="s-real">Real: Clay signals, Apollo stats</span><span class="s-syn">Synthetic: deals</span><span class="s-mod">Modelled: costs</span><span class="s-todo">Sync tested on samples, not live</span></div>
+    <p class="lead">The question: if a sales team has €10k more to spend on winning deals, which lead source should get it? My answer: signal-led outreach, where I contact companies that have just shown a buying signal, like hiring for sales or a new sales leader.</p>
+    <p class="lead-sub">It beats generic outbound as long as pursuing one signal-led deal costs under about €1,670. That limit is modelled: the deals are made up and the costs are my assumptions.</p>
+    <div class="ws-status" aria-label="What is real on this page"><span class="s-real">Real: company signals, email stats</span><span class="s-syn">Made up: the deals</span><span class="s-mod">Assumed: the costs</span><span class="s-todo">Not live yet: CRM sync</span></div>
     <p><a class="cta" href="https://app.hex.tech/01a205b9-5be0-766a-881e-3b8017cffaa9/app/01a205d2-2e2e-75bc-879d-a85607f2d561/latest" target="_blank" rel="noopener">Open the live dashboard in Hex &rarr;</a><span class="cta-note">Public link, view only, no sign in</span></p>
-    <div class="ws-kpis kpis-band"><div class="kpi"><strong>€390k</strong><span>won in 12 months, up from €295k</span></div><div class="kpi"><strong>40% vs 12%</strong><span>close rate, signal led vs generic outreach</span></div><div class="kpi"><strong>+42%</strong><span>MQL rate, 20.0% to 28.4% of leads</span></div><div class="kpi"><strong>36 vs 57</strong><span>days to win, signal led vs generic</span></div></div><!--/ws-kpis-->
+    <p class="kpi-cap">What the made-up deals show, 12 months before vs 12 months after the signal engine</p>
+    <div class="ws-kpis kpis-band"><div class="kpi"><strong>€390k</strong><span>won revenue, up from €295k</span></div><div class="kpi"><strong>40% vs 12%</strong><span>of closed deals won: signal-led vs generic</span></div><div class="kpi"><strong>+42%</strong><span>of leads became MQLs (marketing-qualified), up from 20.0% to 28.4%</span></div><div class="kpi"><strong>36 vs 57</strong><span>days to win a deal: signal-led vs generic</span></div></div><!--/ws-kpis-->
     <details class="fold" id="real"><summary><h2 style="font-size:1rem;margin:0">What is real, what is built, what is not</h2></summary><div class="fold-body">
-    <p>The dashboard puts the 12 months before a signal based outbound engine next to the 12 months after. Live buying signals come from Clay, deals and contacts live in a Supabase analytics schema, Hex reads them through its own locked down database user, and the app is public with the code hidden.</p>
+    <p>In short: Clay finds companies showing buying signals, the deals and contacts sit in a Supabase database, and a Hex dashboard reads them through a restricted database user. The dashboard is public and the code is hidden. The 40% and 12% close rates are set in the made-up data on purpose, so the page shows how I would analyse and present them, not a discovery.</p>
     <div class="ws-tags"><span>Dashboards</span><span>Supabase</span><span>Postgres</span><span>SQL</span><span>Hex</span><span>Data modelling</span><span>Access control</span><span>Clay</span><span>Apollo</span><span>Python</span></div><!--/ws-tags-->
     <div class="ws-own"><div><b>Designed and built</b><span>The analytics schema, the Hex database user, the Clay signal searches, every query, the charts and the public app. Claude Code wrote the SQL and chart code from my spec.</span></div><div><b>Tested, not live</b><span>A nightly HubSpot sync into the schema through n8n, so the numbers refresh on their own. I ran it end to end in n8n with sample deals and a mock database. It has not touched a real HubSpot account yet.</span></div></div><!--/ws-own-->
     <p class="note">The deals, contacts and companies are synthetic, calibrated to mirror results I delivered (see the numbers on <a href="/">pragma-gtm.com</a>). Every deal, company and person is made up. The outreach section is real, aggregate Apollo data with the sequence names anonymized. The Clay signals are real companies from public company data, with no people or contact data.</p>
@@ -184,11 +186,11 @@
   <nav class="ws-nav" aria-label="On this page"><a href="#how">How it works</a><a href="#charts">The charts</a><a href="#signals">Clay signals</a><a href="#outreach">Outreach</a><a href="#data">The data</a><a href="#change" class="folded">Next changes</a><a href="#built" class="folded">How it was built</a><a href="#files" class="folded">Code</a></nav>
 
   <section aria-labelledby="how">
-    <h2 id="how">How it works</h2>
+    <h2 id="how">How it is put together</h2>
     <div class="flow">
       <div class="step"><b>Find signals</b><span>Three Clay company searches on the ICP: hiring for sales, headcount growth and a new sales leader. A company with two or more signals goes on the call list.</span></div>
       <div class="step"><b>Model</b><span>One <code>analytics</code> schema in Supabase Postgres: Clay signals, deals, contacts, companies and outreach sequences. Every deal carries its lead source, period, stage path, amount and days to close.</span></div>
-      <div class="step"><b>Lock down</b><span>Hex logs in as its own database user. It sees the analytics schema and nothing else, so the app's tables with personal data stay out of reach.</span></div>
+      <div class="step"><b>Keep it safe</b><span>The dashboard tool (Hex) connects as its own database user. That user sees the analytics data and nothing else, so tables with personal data stay out of reach.</span></div>
       <div class="step"><b>Query</b><span>Five SQL queries: headline numbers, revenue by month, close rate by source, the funnel and outreach. Months only count once they are complete.</span></div>
       <div class="step"><b>Publish</b><span>A Hex app with the code hidden and a public view only link. Hex's agent can answer new questions on the same tables.</span></div>
     </div>
@@ -196,7 +198,7 @@
 
   <section aria-labelledby="charts">
     <h2 id="charts">The charts, <em>and what they say</em></h2>
-    <p>Signal led deals close at 40%, generic outreach at 12%. Generic outreach still brings in the most money because it runs at the biggest volume: 325 closed deals against 50. The move is not to stop it, but to feed more of the pipeline from signals, where every closed deal is worth more effort.</p>
+    <p>Signal-led deals close at 40%, generic outreach at 12%. Generic still brings in the most revenue because it runs at far higher volume: 325 closed deals against 50. So the move is not to stop generic outreach. It is to feed more of the pipeline from signals, where each deal is worth more effort.</p>
     <div class="chartbox">
       <h3>Won revenue by month</h3>
       <p class="cap">Grey: the 12 months before. Orange: the 12 months after the signal engine went live. Hover a bar for the month. On a phone, swipe sideways.</p>
@@ -250,7 +252,7 @@
     </div>
     <div class="chartbox">
       <h3>Close rate by lead source</h3>
-      <p class="cap">All closed deals. Referral closes best, as it usually does, but there are only 22 of them. Signal led matches it at more than twice the volume.</p>
+      <p class="cap">All closed deals. Referral closes best, as it usually does, but there are only 22 of them. Signal-led matches it at more than twice the volume.</p>
 <svg class="chart" viewBox="0 0 880 224" role="img" aria-labelledby="c2t c2d" xmlns="http://www.w3.org/2000/svg">
 <title id="c2t">Close rate by lead source, closed deals</title>
 <desc id="c2d">Referral 41 percent, signal-led 40 percent, inbound 25 percent, generic outbound 12 percent.</desc>
@@ -282,7 +284,7 @@
     </div>
     <div class="chartbox">
       <h3>Which source deserves the next €10k?</h3>
-      <p class="cap">Average deal size comes from the deal data. The costs are modelled: my planning inputs for what it costs to work one deal to a decision (data, tools, rep time), not measured spend. Change them and the table follows.</p>
+      <p class="cap">Average deal size comes from the deal data. The costs are modelled: my planning inputs for what it costs to pursue one deal to a yes or no (data, tools, rep time), not measured spend. Change them and the table follows.</p>
       <div class="tablewrap" tabindex="0" role="region" aria-label="Deal size and modelled cost per won deal by lead source, scrolls sideways on small screens">
       <table style="min-width:620px">
         <thead><tr><th>Lead source</th><th class="n">Avg deal</th><th class="n">Cost per closed deal (modelled)</th><th class="n">Cost per won deal (modelled)</th><th class="n">Won revenue per €10k (modelled)</th></tr></thead>
@@ -294,11 +296,11 @@
         </tbody>
       </table>
       </div>
-      <p class="cap">Referral returns most per euro but cannot be bought: there are only 22 closed referral deals. Of the sources you can scale, signal led wins the next €10k. It stays ahead of generic outbound until a signal led deal costs about €1,670 to work, close to 2.8x the €600 modelled for generic. Past that, the money goes back to generic.</p>
+      <p class="cap">Referral returns most per euro but cannot be bought: there are only 22 closed referral deals. Of the sources you can scale, signal led wins the next €10k. It stays ahead of generic outbound until a signal led deal costs about €1,670 to pursue, close to 2.8x the €600 modelled for generic. Past that, the money goes back to generic.</p>
     </div>
     <div class="chartbox">
       <h3>Before vs after</h3>
-      <p class="cap">Two panels, one scale each. Revenue grew 32% on 39 to 50 won deals. The share of leads that became MQLs grew 42%.</p>
+      <p class="cap">Two panels, one scale each. Won revenue grew 32%, on 39 to 50 won deals. The share of leads that became MQLs (marketing-qualified leads) grew 42%.</p>
 <svg class="chart" viewBox="0 0 880 280" role="img" aria-labelledby="c3t c3d" xmlns="http://www.w3.org/2000/svg">
 <title id="c3t">Before and after the signal engine: won revenue and MQL rate</title>
 <desc id="c3d">Won revenue rose from 295 to 390 thousand euros, plus 32 percent. MQL rate rose from 20.0 to 28.4 percent of leads, plus 42 percent.</desc>
@@ -338,7 +340,8 @@
 
   <section aria-labelledby="signals">
     <h2 id="signals">Where signal led pipeline <em>comes from</em></h2>
-    <p>The 40% close rate only matters if there are enough signals to act on. The ICP here is the market I sold into: corporate learning, L&amp;D and HR tech companies that sell to businesses, with 51 to 1,000 staff, headquartered in DACH, Benelux, the UK, the Nordics, France or Spain. Three Clay company searches ran on it: an open sales or RevOps role posted in the last 30 days, headcount up 5% or more in six months, and a new VP Sales, Head of Sales, Sales Director or CRO in the last six months. Recruiters, staffing agencies, schools and public bodies were filtered out, which left 24 companies with 31 signals. Most show one signal; seven show two at once, and those go on the call list.</p>
+    <p>A 40% close rate only helps if there are enough signals to act on, so I went looking for them. The target is my ideal customer profile (ICP): corporate learning, L&amp;D and HR tech companies that sell to other businesses, with 51 to 1,000 staff, based in DACH, Benelux, the UK, the Nordics, France or Spain.</p>
+    <p>Three Clay company searches looked for a buying signal: an open sales or RevOps role posted in the last 30 days, headcount up 5% or more in six months, or a new VP Sales, Head of Sales, Sales Director or CRO in the last six months. After removing recruiters, staffing agencies, schools and public bodies, 24 companies with 31 signals were left. Most show one signal. Seven show two at once, and those make this week's call list.</p>
     <div class="chartbox">
       <h3>Companies by number of signals</h3>
       <p class="cap">Real companies, public company data, captured 23 November 2026. Each search was capped at 20 companies before the ICP filter.</p>
@@ -398,7 +401,7 @@
   <section aria-labelledby="data">
     <h2 id="data">The data</h2>
     <dl>
-      <dt>Deals</dt><dd>482 closed deals over 24 months plus 28 open ones. Exact closed and won counts per period and source, so the close rates are 40% and 12% by construction. Won amounts are scaled so each 12 month period totals exactly €295k and €390k.</dd>
+      <dt>Deals</dt><dd>482 closed deals over 24 months plus 28 open ones. Exact closed and won counts per period and source, so the 40% and 12% close rates are set by design, not discovered. Won amounts are scaled so each 12 month period totals exactly €295k and €390k.</dd>
       <dt>Contacts</dt><dd>1,000 leads, 500 per period. 100 MQLs before, 142 after: 20.0% to 28.4%, a 42% uplift.</dd>
       <dt>Companies</dt><dd>300 invented companies with industry, size, region and ICP tier.</dd>
       <dt>Clay signals</dt><dd>24 real companies with 31 signals from Clay company search, captured 23 November 2026. Public company data only: name, domain, location, size. No people, no contact data.</dd>
